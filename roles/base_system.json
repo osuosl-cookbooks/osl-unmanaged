@@ -3,6 +3,12 @@
   "description": "base packages for all systems",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "ntp": {
+      "servers": [
+        "time.oregonstate.edu",
+        "pool.ntp.org"
+      ]
+    }
   },
   "override_attributes": {
   },
@@ -11,9 +17,10 @@
     "recipe[yum::yum]",
     "recipe[yum::epel]",
     "recipe[yum::ius]",
+    "recipe[chef-client]",
     "recipe[networking_basic]",
     "recipe[aliases]",
-    "recipe[chef-client]"
+    "recipe[ntp]"
   ],
   "env_run_lists": {
   }
