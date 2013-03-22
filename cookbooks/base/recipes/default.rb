@@ -10,3 +10,5 @@
 node['base']['packages'].each do |basepkg|
   package basepkg
 end
+
+chef_gem "chef-handler-mail", "~> 0.1.2"

@@ -14,6 +14,7 @@
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[chef_handler]",
     "recipe[yum::yum]",
     "recipe[yum::epel]",
     "recipe[yum::ius]",
