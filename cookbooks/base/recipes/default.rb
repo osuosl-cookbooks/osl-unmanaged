@@ -16,7 +16,7 @@ end
 chef_gem "chef-handler-mail" do
   action :install
 end
-require 'chef-handler-mail'
+gem 'chef-handler-mail'
 
 # Send email to root
 chef_handler "MailHandler" do
