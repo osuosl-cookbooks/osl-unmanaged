@@ -18,6 +18,7 @@
     "recipe[yum::epel]",
     "recipe[yum::ius]",
     "recipe[chef-client]",
+    "recipe[firewall]",
     "recipe[networking_basic]",
     "recipe[aliases]",
     "recipe[ntp]"

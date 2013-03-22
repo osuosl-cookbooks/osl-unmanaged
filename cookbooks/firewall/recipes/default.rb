@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe 'simple_iptables'
+
 # Reject packets other than those explicitly allowed
 simple_iptables_policy "INPUT" do
   policy "DROP"
