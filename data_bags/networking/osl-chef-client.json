@@ -1,0 +1,18 @@
+{
+  "id": "osl-chef-client",
+  "interfaces": {
+    "supercell-static": {
+      "device": "eth0",
+      "bootproto": "static",
+      "inet_addr": "10.20.0.201",
+      "bcast": "10.20.7.255",
+      "mask": "255.255.248.0",
+      "onboot": "yes"
+    }
+  },
+  "routes": {
+    "default": {
+      "network": "0.0.0.0/0",
+      "gateway": "10.20.0.1"
+  }
+}
