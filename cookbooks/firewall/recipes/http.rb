@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Allow SSH
+# Allow HTTP/HTTPS
 simple_iptables_rule "http" do
   rule [ "--proto tcp --dport 80",
          "--proto tcp --dport 443" ]

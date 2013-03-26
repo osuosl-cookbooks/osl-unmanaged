@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Allow SSH
+# Allow MySQL
 simple_iptables_rule "mysql" do
   rule "--proto tcp --dport 3306"
   jump "ACCEPT"

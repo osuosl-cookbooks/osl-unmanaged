@@ -38,7 +38,7 @@ simple_iptables_rule "system" do
 end
 
 # Allow ICMP pings and time exceeded messages
-simple_iptables_rule "system" do 
+simple_iptables_rule "system" do
   rule [ "--proto icmp -s 0/0 --icmp-type echo-request",
          "--proto icmp -s 0/0 --icmp-type time-exceeded" ]
   jump "ACCEPT"
