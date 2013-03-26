@@ -1,6 +1,6 @@
 {
   "name": "base_system",
-  "description": "base packages for all systems",
+  "description": "base role for all systems",
   "json_class": "Chef::Role",
   "default_attributes": {
     "ntp": {
