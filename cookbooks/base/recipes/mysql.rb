@@ -23,12 +23,8 @@ yum_repository "percona" do
 end
 
 # Remove these packages if they exist
-package "mysql" do
-  action :remove
-end
-package "mysql-libs" do
-  action :remove
-end
-package "mysql55-libs" do
-  action :remove
+%w{mysql mysql-libs mysql55-libs}.each do |pkg|
+  package pkg do
+    action :remove
+  end
 end
