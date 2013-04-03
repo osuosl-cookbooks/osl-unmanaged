@@ -25,7 +25,7 @@
   },
   "chef_type": "role",
   "run_list": [
-    "role[base_system]",
+    "role[base]",
     "recipe[firewall::mysql]",
     "recipe[base::mysql]",
     "recipe[mysql::server]"

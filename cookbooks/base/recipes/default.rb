@@ -24,7 +24,7 @@ gem 'chef-handler-mail'
 # Send email to root
 chef_handler "MailHandler" do
   source 'chef/handler/mail'
-  arguments :to_address => "root"
+  arguments :to_address => "root@osuosl.org"
   action :nothing
 end.run_action(:enable)
 

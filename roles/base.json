@@ -1,5 +1,5 @@
 {
-  "name": "base_system",
+  "name": "base",
   "description": "base role for all systems",
   "json_class": "Chef::Role",
   "default_attributes": {
@@ -8,12 +8,17 @@
         "time.oregonstate.edu",
         "pool.ntp.org"
       ]
-    },
-    "yum": {
-      "ius_release": "ius-release-1.0-11.ius.centos6"
     }
   },
   "override_attributes": {
+    "postfix": {
+      "mail_relay_networks":
+        "127.0.0.0/8, 10.0.0.0/23, 10.0.1.0/24, 128.193.0.128/25, 140.211.15.0/24, 140.211.18.32/27, 140.211.166.0/24, 140.211.167.0/24",
+      "mailtype": "client",
+      "mydomain": "osuosl.org",
+      "myorigin": "osuosl.org",
+      "relayhost": "osuosl.org"
+    }
   },
   "chef_type": "role",
   "run_list": [
@@ -25,7 +30,8 @@
     "recipe[base]",
     "recipe[networking_basic]",
     "recipe[aliases]",
-    "recipe[ntp]"
+    "recipe[ntp]",
+    "recipe[postfix::client]"
   ],
   "env_run_lists": {
   }
