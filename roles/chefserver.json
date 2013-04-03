@@ -9,8 +9,7 @@
   "chef_type": "role",
   "run_list": [
     "role[base_system]",
-    "recipe[firewall::http]",
-    "recipe[base::chefserver]"
+    "recipe[firewall::http]"
   ],
   "env_run_lists": {
   }
