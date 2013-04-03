@@ -3,7 +3,7 @@ user_email  = `git config --get user.email`
 home_dir    = ENV['HOME'] || ENV['HOMEDRIVE']
 org         = ENV['chef_org'] || 'my_org'
 
-chef_server_url          'https://osl-chef.osuosl.test'
+chef_server_url          'https://chef.osuosl.org'
 log_level                :info
 log_location             STDOUT
 
