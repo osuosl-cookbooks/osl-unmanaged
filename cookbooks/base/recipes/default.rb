@@ -37,5 +37,6 @@ end
 service "iptables" do
   service_name 'iptables'
   supports :status => true, :restart => true, :save => true
+  action :start
   action :enable
 end
