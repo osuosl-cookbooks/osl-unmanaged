@@ -8,6 +8,9 @@
         "time.oregonstate.edu",
         "pool.ntp.org"
       ]
+    },
+    "yum": {
+      "ius_release": "ius-release-1.0-11.ius.centos6"
     }
   },
   "override_attributes": {
@@ -17,7 +20,6 @@
     "recipe[chef_handler]",
     "recipe[yum::yum]",
     "recipe[yum::epel]",
-    "recipe[yum::ius]",
     "recipe[chef-client]",
     "recipe[firewall]",
     "recipe[base]",

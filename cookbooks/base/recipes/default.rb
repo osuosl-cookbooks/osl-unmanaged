@@ -12,7 +12,6 @@ yum_repository "osl" do
   repo_name "osl"
   description "OSL repo $releasever - $basearch"
   url "http://packages.osuosl.org/repositories/centos-$releasever/osl/$basearch"
-  key "RPM-GPG-KEY-zenoss"
   action :add
 end
 
