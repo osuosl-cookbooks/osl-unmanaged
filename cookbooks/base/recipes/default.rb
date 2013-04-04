@@ -26,6 +26,7 @@ chef_handler "MailHandler" do
   source 'chef/handler/mail'
   arguments :to_address => "root@osuosl.org"
   action :nothing
+  supports :exception => true, :report => false
 end.run_action(:enable)
 
 # Install the base packages
