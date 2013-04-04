@@ -7,14 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Configure the OSL yum repository
-yum_repository "osl" do
-  repo_name "osl"
-  description "OSL repo $releasever - $basearch"
-  url "http://packages.osuosl.org/repositories/centos-$releasever/osl/$basearch"
-  action :add
-end
-
 # Install and require the mail handler gem
 chef_gem "chef-handler-mail" do
   action :install
@@ -28,16 +20,3 @@ chef_handler "MailHandler" do
   action :nothing
   supports :exception => true, :report => false
 end.run_action(:enable)
-
-# Install the base packages
-node['base']['packages'].each do |basepkg|
-  package basepkg
-end
-
-# Enable services
-service "iptables" do
-  service_name 'iptables'
-  supports :status => true, :restart => true, :save => true
-  action :start
-  action :enable
-end
