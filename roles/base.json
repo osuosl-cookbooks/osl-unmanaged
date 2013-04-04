@@ -3,12 +3,6 @@
   "description": "base role for all systems",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "ntp": {
-      "servers": [
-        "time.oregonstate.edu",
-        "pool.ntp.org"
-      ]
-    }
   },
   "override_attributes": {
     "postfix": {
@@ -18,6 +12,12 @@
       "mydomain": "osuosl.org",
       "myorigin": "osuosl.org",
       "relayhost": "osuosl.org"
+    },
+    "ntp": {
+      "servers": [
+        "time.oregonstate.edu",
+        "pool.ntp.org"
+      ]
     }
   },
   "chef_type": "role",
