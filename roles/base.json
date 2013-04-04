@@ -34,6 +34,7 @@
     "recipe[chef-client]",
     "recipe[firewall]",
     "recipe[base::iptables]",
+    "recipe[base::users]",
     "recipe[base::packages]",
     "recipe[networking_basic]",
     "recipe[aliases]",

@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: base
-# Recipe:: default
+# Recipe:: iptables
 #
 # Copyright 2013, OSU Open Source Lab
 #
