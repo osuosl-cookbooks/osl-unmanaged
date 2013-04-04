@@ -18,6 +18,11 @@
         "time.oregonstate.edu",
         "pool.ntp.org"
       ]
+    },
+    "openssh": {
+      "server": {
+        "password_authentication": "no"
+      }
     }
   },
   "chef_type": "role",
@@ -33,7 +38,8 @@
     "recipe[networking_basic]",
     "recipe[aliases]",
     "recipe[ntp]",
-    "recipe[postfix::client]"
+    "recipe[postfix::client]",
+    "recipe[openssh]"
   ],
   "env_run_lists": {
   }
