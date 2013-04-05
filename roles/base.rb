@@ -42,15 +42,20 @@ default_attributes(
 )
 override_attributes(
   "postfix" => {
-    "mail_relay_networks" => 
-      "127.0.0.0/8, 10.0.0.0/23, 10.0.1.0/24, 
-       128.193.0.128/25, 140.211.15.0/24,
-       140.211.18.32/27, 140.211.166.0/24,
-       140.211.167.0/24",
-    "mailtype"            => "client",
-    "mydomain"            => "osuosl.org",
-    "myorigin"            => "osuosl.org",
-    "relayhost"           => "osuosl.org"
+    "mail_relay_networks" => [
+      "127.0.0.0/8", 
+      "10.0.0.0/23",
+      "10.0.1.0/24", 
+      "128.193.0.128/25",
+      "140.211.15.0/24",
+      "140.211.18.32/27",
+      "140.211.166.0/24",
+      "140.211.167.0/24"
+    ],
+    "mailtype"  => "client",
+    "mydomain"  => "osuosl.org",
+    "myorigin"  => "osuosl.org",
+    "relayhost" => "osuosl.org"
   },
   "ntp" => {
     "servers" => [
