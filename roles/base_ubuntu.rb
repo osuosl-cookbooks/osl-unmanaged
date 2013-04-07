@@ -13,7 +13,10 @@ run_list(
   "recipe[ntp]",
   "recipe[postfix::client]",
   "recipe[openssh]",
-  "recipe[sudo]"
+  "recipe[firewall::nrpe]",
+  "recipe[sudo]",
+  "recipe[firewall::nrpe]",
+  "recipe[nagios::client]"
 )
 default_attributes(
   "authorization" => {

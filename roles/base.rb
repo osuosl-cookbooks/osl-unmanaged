@@ -16,6 +16,7 @@ run_list(
   "recipe[postfix::client]",
   "recipe[openssh]",
   "recipe[sudo]",
+  "recipe[firewall::nrpe]",
   "recipe[nagios::client]"
 )
 default_attributes(
