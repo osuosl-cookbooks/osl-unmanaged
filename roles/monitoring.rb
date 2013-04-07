@@ -1,17 +1,17 @@
 name "monitoring"
 description "monitoring server role"
 run_list(
-  "role[base]",
-  "recipe[nagios::server]",
-  "recipe[firewall::http]"
+  "recipe[nagios::server]"
 )
 default_attributes(
   "nagios" => {
     "server" => {
-      "install_method" => "package"
+#      "install_method" => "package",
+#      "web_server"     => "apache"
     },
-    "server_auth_method" => "ldap",
-    "ldap_bind_dn" => "cn=nagios,ou=web,ou=Group,dc=osuosl,dc=org",
-    "ldap_url" => "ldaps://ldap1.osuosl.org:636/ou=People,dc=osuosl,dc=org?uid?sub?(objectClass=*)"
+    "server_auth_method" => "htpasswd"
+#    "ldap_bind_dn" => "cn=nagios,ou=web,ou=Group,dc=osuosl,dc=org",
+#    "ldap_url" => "ldaps://ldap1.osuosl.org:636/ou=People,dc=osuosl,dc=org?uid?sub?(objectClass=*)",
+#    "ldap_authoritative" => "on"
   }
 )

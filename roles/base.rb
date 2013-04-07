@@ -1,5 +1,5 @@
 name "base"
-description "base role for all systems"
+description "base role for all redhat systems"
 run_list(
   "recipe[base]",
   "recipe[yum::yum]",
@@ -15,14 +15,14 @@ run_list(
   "recipe[ntp]",
   "recipe[postfix::client]",
   "recipe[openssh]",
-  "recipe[sudo]"
+  "recipe[sudo]",
+  "recipe[nagios::client]"
 )
 default_attributes(
   "authorization" => {
     "sudo" => {
       "users" => [
-        "osuadmin",
-        "vagrant"
+        "osuadmin"
       ],
       "passwordless" => "true",
       "sudoers_defaults" => [
@@ -66,6 +66,26 @@ override_attributes(
   "openssh" => {
     "server" => {
       "password_authentication" => "no"
+    }
+  },
+  "nagios" => {
+    "client" => {
+      "install_method" => "package"
+    },
+    "nrpe" => {
+      "packages" => [
+        "nrpe",
+        "nagios-plugins",
+        "nagios-plugins-disk",
+        "nagios-plugins-dummy",
+        "nagios-plugins-linux_raid",
+        "nagios-plugins-load",
+        "nagios-plugins-mailq",
+        "nagios-plugins-ntp",
+        "nagios-plugins-procs",
+        "nagios-plugins-swap",
+        "nagios-plugins-users"
+      ]
     }
   }
 )
