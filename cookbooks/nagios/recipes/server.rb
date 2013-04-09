@@ -77,6 +77,7 @@ when "cas"
 when "ldap"
   if(web_srv == :apache)
     include_recipe "apache2::mod_authnz_ldap"
+    include_recipe "apache2::mod_ldap"
   else
     Chef::Log.fatal("LDAP authentication for Nagios is not supported on NGINX")
     Chef::Log.fatal("Set node['nagios']['server_auth_method'] attribute in your role: #{node['nagios']['server_role']}")
@@ -143,6 +144,7 @@ end
 
 nagios_bags = NagiosDataBags.new
 services = nagios_bags.get('nagios_services')
+servicegroups = nagios_bags.get('nagios_servicegroups')
 templates = nagios_bags.get('nagios_templates')
 eventhandlers = nagios_bags.get('nagios_eventhandlers')
 unmanaged_hosts = nagios_bags.get('nagios_unmanagedhosts')
@@ -252,7 +254,12 @@ end
 nagios_conf "services" do
   variables(:service_hosts => service_hosts,
             :services => services,
+            :search_hostgroups => hostgroup_list,
             :hostgroups => hostgroups)
+end
+
+nagios_conf "servicegroups" do
+  variables(:servicegroups => servicegroups)
 end
 
 nagios_conf "contacts" do
