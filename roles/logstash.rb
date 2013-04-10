@@ -3,7 +3,7 @@ description "Attributes and run_lists specific to FAO's logstash instance"
 default_attributes(
   :logstash => {
     :server => {
-      :enable_embedded_es => false,
+      :enable_embedded_es => true,
       :inputs => [
         :syslog => {
           :type => "syslog",
@@ -26,7 +26,7 @@ default_attributes(
   }
 )
 run_list(
-  "role[elasticsearch_server]",
+  "role[base]",
   "recipe[logstash::server]",
   "recipe[php::module_curl]",
   "recipe[logstash::kibana]"
