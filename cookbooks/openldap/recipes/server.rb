@@ -20,9 +20,13 @@ include_recipe "openldap::client"
 
 case node['platform']
 when "ubuntu"
-    package "db4.8-util" do
-      action :upgrade
-    end
+  package "db4.8-util" do
+    action :upgrade
+  end
+  directory "/var/cache/local/preseeding" do
+    action :create
+    recursive true
+  end
   cookbook_file "/var/cache/local/preseeding/slapd.seed" do
     source "slapd.seed"
     mode 00600

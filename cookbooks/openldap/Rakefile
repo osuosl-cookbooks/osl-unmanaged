@@ -4,18 +4,18 @@
 
 require 'tempfile'
 
-COMPANY_NAME = "Company"
+COMPANY_NAME = "OSUOSL"
 SSL_COUNTRY_NAME = "US"
-SSL_STATE_NAME = "State"
-SSL_LOCALITY_NAME = "City"
+SSL_STATE_NAME = "Oregon"
+SSL_LOCALITY_NAME = "Corvallis"
 SSL_ORGANIZATIONAL_UNIT_NAME = "Operations"
-SSL_EMAIL_ADDRESS = "operations@example.com"
+SSL_EMAIL_ADDRESS = "root@osuosl.org"
 CADIR = File.expand_path(File.join(File.dirname(__FILE__), "files", "default", "ssl"))
 
-desc "Create a new self-signed SSL certificate for FQDN=foo.example.com"
+desc "Create a new self-signed SSL certificate for FQDN=ldap.osuosl.org"
 task :ssl_cert do
   $expect_verbose = true
-  fqdn = ENV["FQDN"]
+  fqdn = "ldap.osuosl.org"
   fqdn =~ /^(.+?)\.(.+)$/
   hostname = $1
   domain = $2
