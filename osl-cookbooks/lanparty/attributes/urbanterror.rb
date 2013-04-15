@@ -7,10 +7,24 @@
 # All rights reserved - Do Not Redistribute
 #
 
-default['lanparty']['urbanterror']['version']   = 'UrbanTerror42_full_009.zip'
-default['lanparty']['urbanterror']['base_url']  = 'http://staff.osuosl.org/~basic'
-default['lanparty']['urbanterror']['game_dir']  = 'UrbanTerror42'
-default['lanparty']['urbanterror']['mapcycle']  = [
+# Game install settings
+default['lanparty']['urbanterror']['version']       = 'UrbanTerror42_full_009.zip'
+default['lanparty']['urbanterror']['base_url']      = 'http://staff.osuosl.org/~basic'
+default['lanparty']['urbanterror']['game_dir']      = 'UrbanTerror42'
+
+# Game configuration settings
+default['lanparty']['urbanterror']['admin_name']    = "#{node['lanparty']['game_user']}"
+default['lanparty']['urbanterror']['admin_email']   = node.has_key?(:domain) ? "urt-admin@#{domain}" : 'urt-admin'
+default['lanparty']['urbanterror']['rconpassword']  = nil
+default['lanparty']['urbanterror']['g_password']    = nil
+#set timelimit "20" //time in minutes before map is over, 0=never
+#set fraglimit "10" //amount of points to be scored before map is over, 0=never
+#set capturelimit "4" //amount of flagcaps before map is over, 0=never
+#set g_warmup "15" //time in seconds before game starts when changed to a new map. Gives slower computers time to load before game starts
+
+
+# Map list becomes an array that can be easily overridden.
+default['lanparty']['urbanterror']['mapcycle']      = [
   'ut4_casa',
   'ut4_bohemia',
   'ut4_kingdom',

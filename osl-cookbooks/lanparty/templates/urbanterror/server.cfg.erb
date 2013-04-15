@@ -2,8 +2,8 @@
 //Try to keep cvar-values as short as possible. Otherwise you might get "info string length exceeded" errors on your server
 
 //*** Administrator Info, shows in some gamebrowsers ***
-sets " Admin" "Rudy" //Uses a space in front so it shows up at the top of the properties list
-sets " Email" "rudy@osuosl.org"
+sets " Admin" "<%= #{node['lanparty']['urbanterror']['admin_name']} %>" //Uses a space in front so it shows up at the top of the properties list
+sets " Email" "<%= #{node['lanparty']['urbanterror']['admin_email']} %>"
 
 //*** Server Name and Daily Message ***
 set sv_hostname "Open Source Lab UT" //Your servername here
@@ -18,9 +18,9 @@ set g_gametype "7" //0=FreeForAll, 1=Last Man Standing, 3=TeamDeathMatch, 4=Team
 sets sv_dlURL "urbanterror.info" //Sets the address for auto-downloading. Auto-download only works on ioUrbanTerror-clients, not quake3-clients. The client will try to download <sv_dlURL>/q3ut4/mapname.pk3. So if your server is running ut4_coolmap and sv_dlURL is set to 'yoursite.com/maps', make sure the maps is hosted at http://www.yoursite.com/maps/q3ut4/ut4_coolmap.pk3. Leaving this set 'urbanterror.info' will make it use a map mirror with the most common maps on it. If you got your own hosting, please us that though, to save bandwith.
 
 //*** Passwords ***
-set rconpassword "meanpinball" //Password to control the server remotely using rcon.
+set rconpassword "<%= #{node['lanparty']['urbanterror']['rconpassword']} %>" //Password to control the server remotely using rcon.
 set sv_privatePassword "" //password for private slots
-set g_password "" //password for the server. Nothing = public
+set g_password "<%= #{node['lanparty']['urbanterror']['g_password']} %>" //password for the server. Nothing = public
 
 //*** Limits/times ***
 set timelimit "20" //time in minutes before map is over, 0=never
