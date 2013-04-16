@@ -1,0 +1,15 @@
+{
+  "g_password": {
+    "cipher": "aes-256-cbc",
+    "encrypted_data": "N7U4jhhlg2BYN+7R/L6RaqlTXUxE9iOYEjaIhTQ5ni8=\n",
+    "version": 1,
+    "iv": "wwLYIlm23Ao/GUKrQtl+4g==\n"
+  },
+  "rcon_password": {
+    "cipher": "aes-256-cbc",
+    "encrypted_data": "AX+pqft+8DP06FrxQpAv1MwagSwQ5ZbOCRLNd8iO86c=\n",
+    "version": 1,
+    "iv": "uXgSpOfsqR4QfdHUdvpT0g==\n"
+  },
+  "id": "urbanterror"
+}

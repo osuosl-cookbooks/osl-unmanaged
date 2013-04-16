@@ -44,12 +44,12 @@ end
 
 # Allow incoming Urban Terror traffic
 simple_iptables_rule "urbanterror" do
-  rule [ "--proto udp --dport 27960",
-         "--proto tcp --dport 27960" ]
+  rule [ "--proto udp --dport #{node['lanparty']['urbanterror']['net_port']}",
+         "--proto tcp --dport #{node['lanparty']['urbanterror']['net_port']}" ]
   jump "ACCEPT"
 end
 
 # Add server launch alias
 magic_shell_alias 'urt-server' do
-  command "#{node['lanparty']['urbanterror']['full_game_dir']}/Quake3-UrT-Ded.x86_64 +set dedicated 2 +set net_port 27960 +set com_hunkmegs 128 +exec server.cfg"
+  command "#{node['lanparty']['urbanterror']['full_game_dir']}/Quake3-UrT-Ded.x86_64 +set dedicated 2 +set net_port #{node['lanparty']['urbanterror']['net_port']} +set com_hunkmegs 128 +exec server.cfg"
 end

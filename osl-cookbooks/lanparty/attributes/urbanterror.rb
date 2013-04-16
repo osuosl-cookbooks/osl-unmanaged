@@ -7,6 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
+
 # Game install settings
 default['lanparty']['urbanterror']['version']       = 'UrbanTerror42_full_009.zip'
 default['lanparty']['urbanterror']['base_url']      = 'http://staff.osuosl.org/~basic'
@@ -14,6 +15,7 @@ default['lanparty']['urbanterror']['game_dir']      = 'UrbanTerror42'
 default['lanparty']['urbanterror']['full_game_dir'] = "#{node['lanparty']['game_dir']}/#{node['lanparty']['urbanterror']['game_dir']}"
 
 # Game configuration settings
+default['lanparty']['urbanterror']['net_port']      = "27960"
 default['lanparty']['urbanterror']['admin_name']    = "#{node['lanparty']['game_user']}"
 default['lanparty']['urbanterror']['admin_email']   = node.has_key?(:domain) ? "#{node['lanparty']['game_user']}@#{domain}" : "#{node['lanparty']['game_user']}" 
 default['lanparty']['urbanterror']['sv_hostname']   = node.has_key?(:domain) ? "#{domain} Urban Terror" : "#{node['lanparty']['game_user']} Urban Terror Server" 
@@ -22,8 +24,17 @@ default['lanparty']['urbanterror']['sv_maxclients'] = "12"
 # 0=FreeForAll, 1=Last Man Standing, 3=TeamDeathMatch, 4=Team Survivor,
 # 5=Follow the Leader, 6=Capture and Hold, 7=Capture The Flag, 8=Bombmode
 default['lanparty']['urbanterror']['g_gametype']    = "7"
-default['lanparty']['urbanterror']['rconpassword']  = nil
-default['lanparty']['urbanterror']['g_password']    = nil
+
+# Load encrypted passwords if they exist
+if Chef::EncryptedDataBagItem.load("lanparty", "urbanterror")
+  urbanterror_creds = Chef::EncryptedDataBagItem.load("lanparty", "urbanterror")
+  default['lanparty']['urbanterror']['rconpassword']= urbanterror_creds['rcon_password']
+  default['lanparty']['urbanterror']['g_password']  = urbanterror_creds['g_password']
+else
+  default['lanparty']['urbanterror']['rconpassword']= nil
+  default['lanparty']['urbanterror']['g_password']  = nil
+end
+
 default['lanparty']['urbanterror']['timelimit']     = "20"
 default['lanparty']['urbanterror']['fraglimit']     = "10"
 default['lanparty']['urbanterror']['capturelimit']  = "4"

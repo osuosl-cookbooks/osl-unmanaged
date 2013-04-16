@@ -24,3 +24,4 @@ cookbook_license        "none"
 cookbook_email          "#{user_email}"
 role_path               ["#{base_path}/roles"]
 data_bag_path           ["#{base_path}/data_bags"]
+encrypted_data_bag_secret "#{home_dir}/.chef/encrypted_data_bag_secret"
