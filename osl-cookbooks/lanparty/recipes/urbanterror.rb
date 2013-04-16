@@ -22,14 +22,14 @@ bash "unzip-urt42" do
 end
 
 template "#{node['lanparty']['urbanterror']['full_game_dir']}/q3ut4/server.cfg" do
-  source "server.cfg.erb"
+  source "urbanterror/server.cfg.erb"
   mode 00644
   owner node['lanparty']['game_user']
   group node['lanparty']['game_group']
 end
 
 template "#{node['lanparty']['urbanterror']['full_game_dir']}/q3ut4/mapcycle.txt" do
-  source "mapcycle.txt.erb"
+  source "urbanterror/mapcycle.txt.erb"
   mode 00644
   owner node['lanparty']['game_user']
   group node['lanparty']['game_group']
@@ -39,5 +39,5 @@ directory node['lanparty']['urbanterror']['full_game_dir'] do
   mode 00755
   owner node['lanparty']['game_user']
   group node['lanparty']['game_group']
-  recrusive true
+  recursive true
 end

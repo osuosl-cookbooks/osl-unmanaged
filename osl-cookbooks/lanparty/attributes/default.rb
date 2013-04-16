@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-default['lanparty']['game_user']  = 'osuadmin'
+default['lanparty']['game_user']  = 'games'
 default['lanparty']['password']   = nil
 default['lanparty']['game_group'] = node['lanparty']['game_user']
 default['lanparty']['game_dir']   = '/opt'

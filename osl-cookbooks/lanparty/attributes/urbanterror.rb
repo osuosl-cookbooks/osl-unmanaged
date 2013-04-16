@@ -16,6 +16,12 @@ default['lanparty']['urbanterror']['full_game_dir'] = "#{node['lanparty']['game_
 # Game configuration settings
 default['lanparty']['urbanterror']['admin_name']    = "#{node['lanparty']['game_user']}"
 default['lanparty']['urbanterror']['admin_email']   = node.has_key?(:domain) ? "#{node['lanparty']['game_user']}@#{domain}" : "#{node['lanparty']['game_user']}" 
+default['lanparty']['urbanterror']['sv_hostname']   = node.has_key?(:domain) ? "#{domain} Urban Terror" : "#{node['lanparty']['game_user']} Urban Terror Server" 
+default['lanparty']['urbanterror']['sv_maxclients'] = "12"
+# g_gametype 
+# 0=FreeForAll, 1=Last Man Standing, 3=TeamDeathMatch, 4=Team Survivor,
+# 5=Follow the Leader, 6=Capture and Hold, 7=Capture The Flag, 8=Bombmode
+default['lanparty']['urbanterror']['g_gametype']    = "7"
 default['lanparty']['urbanterror']['rconpassword']  = nil
 default['lanparty']['urbanterror']['g_password']    = nil
 default['lanparty']['urbanterror']['timelimit']     = "20"
