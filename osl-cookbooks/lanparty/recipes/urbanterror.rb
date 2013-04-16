@@ -16,24 +16,28 @@ bash "unzip-urt42" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
     unzip #{node['lanparty']['urbanterror']['version']}
-    mv UrbanTerror42 "#{node['lanparty']['game_dir']}/#{node['lanparty']['urbanterror']['game_dir']}"
+    mv UrbanTerror42 "#{node['lanparty']['urbanterror']['full_game_dir']}"
   EOH
   creates "#{node['lanparty']['game_dir']}/#{node['lanparty']['urbanterror']['game_dir']}"
 end
 
-
-
-template "#{node['lanparty']['game_dir']}/#{node['lanparty']['urbanterror']['game_dir']}/q3ut4/server.cfg" do
+template "#{node['lanparty']['urbanterror']['full_game_dir']}/q3ut4/server.cfg" do
   source "server.cfg.erb"
   mode 00644
+  owner node['lanparty']['game_user']
+  group node['lanparty']['game_group']
 end
 
-template "#{node['lanparty']['game_dir']}/#{node['lanparty']['urbanterror']['game_dir']}/q3ut4/mapcycle.txt" do
+template "#{node['lanparty']['urbanterror']['full_game_dir']}/q3ut4/mapcycle.txt" do
   source "mapcycle.txt.erb"
   mode 00644
-  owner "#{node['lanparty']['game_user']}"
-  group "#{node['lanparty']['game_group']}"
-  variables({
-    :mapcycle => node[:lanparty][:urbanterror][:mapcycle]
-  })
+  owner node['lanparty']['game_user']
+  group node['lanparty']['game_group']
+end
+
+directory node['lanparty']['urbanterror']['full_game_dir'] do
+  mode 00755
+  owner node['lanparty']['game_user']
+  group node['lanparty']['game_group']
+  recrusive true
 end
