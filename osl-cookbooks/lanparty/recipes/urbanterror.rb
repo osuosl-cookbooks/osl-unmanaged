@@ -41,3 +41,15 @@ directory node['lanparty']['urbanterror']['full_game_dir'] do
   group node['lanparty']['game_group']
   recursive true
 end
+
+# Allow incoming Urban Terror traffic
+simple_iptables_rule "urbanterror" do
+  rule [ "--proto udp --dport 27960",
+         "--proto tcp --dport 27960" ]
+  jump "ACCEPT"
+end
+
+# Add server launch alias
+magic_shell_alias 'urt-server' do
+  command "#{node['lanparty']['urbanterror']['full_game_dir']}/Quake3-UrT-Ded.x86_64 +set dedicated 2 +set net_port 27960 +set com_hunkmegs 128 +exec server.cfg"
+end
