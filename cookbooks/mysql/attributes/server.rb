@@ -40,12 +40,12 @@ when "debian"
 when "rhel", "fedora"
   if node["mysql"]["version"].to_f >= 5.5
     default['mysql']['service_name']            = "mysql"
-    default['mysql']['pid_file']                    = "/var/run/mysql/mysql.pid"
+    default['mysql']['pid_file']                = "/var/run/mysql/mysql.pid"
   else
     default['mysql']['service_name']            = "mysqld"
-    default['mysql']['pid_file']                    = "/var/run/mysqld/mysqld.pid"
+    default['mysql']['pid_file']                = "/var/run/mysqld/mysqld.pid"
   end
-  default['mysql']['server']['packages']      = %w{mysql-server}
+  default['mysql']['server']['packages']      = %w{Percona-Server-shared-55 Percona-Server-server-55 percona-toolkit percona-xtrabackup}
   default['mysql']['basedir']                 = "/usr"
   default['mysql']['data_dir']                = "/var/lib/mysql"
   default['mysql']['root_group']              = "root"
@@ -55,10 +55,9 @@ when "rhel", "fedora"
   default['mysql']['conf_dir']                    = '/etc'
   default['mysql']['confd_dir']                   = '/etc/mysql/conf.d'
   default['mysql']['socket']                      = "/var/lib/mysql/mysql.sock"
-  default['mysql']['old_passwords']               = 1
+  default['mysql']['old_passwords']               = 0
   default['mysql']['grants_path']                 = "/etc/mysql_grants.sql"
-  # RHEL/CentOS mysql package does not support this option.
-  default['mysql']['tunable']['innodb_adaptive_flushing'] = false
+  default['mysql']['tunable']['innodb_adaptive_flushing'] = true
 when "suse"
   default['mysql']['service_name']            = "mysql"
   default['mysql']['server']['packages']      = %w{mysql-community-server}
@@ -146,6 +145,8 @@ default['mysql']['allow_remote_root']               = false
 default['mysql']['remove_anonymous_users']          = false
 default['mysql']['remove_test_database']            = false
 default['mysql']['root_network_acl']                = nil
+default['mysql']['tunable']['sysdate_is_now']       = true
+default['mysql']['tunable']['innodb']               = "FORCE"
 default['mysql']['tunable']['character-set-server'] = "utf8"
 default['mysql']['tunable']['collation-server']     = "utf8_general_ci"
 default['mysql']['tunable']['lower_case_table_names']  = nil
@@ -202,7 +203,7 @@ default['mysql']['tunable']['log_queries_not_using_index']     = true
 default['mysql']['tunable']['log_bin_trust_function_creators'] = false
 
 default['mysql']['tunable']['innodb_log_file_size']            = "5M"
-default['mysql']['tunable']['innodb_buffer_pool_size']         = "128M"
+default['mysql']['tunable']['innodb_buffer_pool_size']         = "#{(Integer((node['memory']['total']).split("kB")[0].to_i / 1024)) * 0.9}M"
 default['mysql']['tunable']['innodb_buffer_pool_instances']    = "4"
 default['mysql']['tunable']['innodb_additional_mem_pool_size'] = "8M"
 default['mysql']['tunable']['innodb_data_file_path']           = "ibdata1:10M:autoextend"
@@ -216,13 +217,12 @@ if node['cpu'].nil? or node['cpu']['total'].nil?
   default['mysql']['tunable']['innodb_thread_concurrency']       = "8"
   default['mysql']['tunable']['innodb_commit_concurrency']       = "8"
   default['mysql']['tunable']['innodb_read_io_threads']          = "8"
-  default['mysql']['tunable']['innodb_flush_log_at_trx_commit']  = "8"
 else
   default['mysql']['tunable']['innodb_thread_concurrency']       = "#{(Integer(node['cpu']['total'])) * 2}"
   default['mysql']['tunable']['innodb_commit_concurrency']       = "#{(Integer(node['cpu']['total'])) * 2}"
   default['mysql']['tunable']['innodb_read_io_threads']          = "#{(Integer(node['cpu']['total'])) * 2}"
-  default['mysql']['tunable']['innodb_flush_log_at_trx_commit']  = "#{(Integer(node['cpu']['total'])) * 2}"
 end
+default['mysql']['tunable']['innodb_flush_log_at_trx_commit']  = "2"
 default['mysql']['tunable']['innodb_support_xa']               = true
 default['mysql']['tunable']['innodb_table_locks']              = true
 default['mysql']['tunable']['skip-innodb-doublewrite']         = false
