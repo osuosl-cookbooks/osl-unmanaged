@@ -4,6 +4,7 @@ run_list(
   "role[base]",
   "recipe[firewall::mysql]",
   "recipe[base::mysql]",
+  "recipe[mysql::percona_repo]",
   "recipe[mysql::server]"
 )
 default_attributes(
