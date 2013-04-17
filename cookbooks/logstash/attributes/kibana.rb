@@ -6,7 +6,7 @@ default['logstash']['kibana']['log_dir'] = '/var/log/kibana'
 default['logstash']['kibana']['pid_dir'] = '/var/run/kibana'
 default['logstash']['kibana']['home'] = "#{node['logstash']['kibana']['basedir']}/current"
 default['logstash']['kibana']['config'] = 'kibana-config.php.erb'
-default['logstash']['kibana']['server_name'] = node['ipaddress']
+default['logstash']['kibana']['server_name'] = node['fqdn']
 default['logstash']['kibana']['http_port'] = 80
 default['logstash']['kibana']['auth']['enabled'] = false
 default['logstash']['kibana']['auth']['user'] = 'admin'
@@ -14,6 +14,6 @@ default['logstash']['kibana']['auth']['password'] = 'unauthorized'
 default['apache']['default_site_enabled'] = false
 
 #Smart_index_pattern = 'logstash-%Y.%m.%d'
-default['logstash']['kibana']['smart_index_pattern'] = 'logstash-%Y.%m.%d' 
-default['logstash']['kibana']['language'] = "ruby" 
+default['logstash']['kibana']['smart_index_pattern'] = 'logstash-%Y.%m.%d'
+default['logstash']['kibana']['language'] = "ruby"
 

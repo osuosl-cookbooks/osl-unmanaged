@@ -2,11 +2,15 @@ name "logstash_server"
 description "Attributes and run_lists specific to FAO's logstash instance"
 default_attributes(
   :logstash => {
+    :kibana => {
+        :http_port => "8080",
+    },
     :server => {
       :enable_embedded_es => true,
       :inputs => [
         :syslog => {
           :type => "syslog",
+          :port => "5000"
         }
       ],
       :filters => [
