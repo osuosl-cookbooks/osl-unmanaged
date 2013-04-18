@@ -30,7 +30,7 @@ default_attributes(
   }
 )
 run_list(
-  "role[base]",
+  "role[base_managed]",
   "recipe[logstash::server]",
   "recipe[php::module_curl]",
   "recipe[logstash::kibana]"

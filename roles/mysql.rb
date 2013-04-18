@@ -3,7 +3,7 @@ description "mysql server role"
 run_list(
   "recipe[mysql::percona_repo]",
   "recipe[mysql::server]",
-  "role[base]",
+  "role[base_managed]",
   "recipe[firewall::mysql]",
   "recipe[base::mysql]",
   "recipe[monitoring::mysql]"

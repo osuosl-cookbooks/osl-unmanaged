@@ -2,7 +2,7 @@ name "monitoring"
 description "monitoring server role"
 run_list(
   "recipe[nagios::server]",
-  "role[base]",
+  "role[base_managed]",
   "recipe[firewall::http]"
 )
 default_attributes(

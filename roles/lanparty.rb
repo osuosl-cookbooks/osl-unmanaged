@@ -1,7 +1,7 @@
 name "lanparty"
 description "ermahgerd lanparty role"
 run_list(
-  "role[base]",
+  "role[base_managed]",
   "recipe[lanparty]",
   "recipe[lanparty::urbanterror]",
   "recipe[firewall::lanparty]"
