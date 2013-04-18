@@ -1,5 +1,5 @@
 {
   "id": "mysql_pidfile",
   "hostgroup_name": "mysql",
-  "use_existing_command": "pmp-check-mysql-pidfile"
+  "command_line": "$USER1$/check_nrpe -H $HOSTADDRESS$ -c pmp-check-mysql-pidfile"
 }

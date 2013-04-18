@@ -10,7 +10,7 @@ default_attributes(
   "authorization" => {
     "sudo" => {
       "users" => [
-        "osuadmin"
+        "games"
       ],
       "passwordless" => "true",
     }

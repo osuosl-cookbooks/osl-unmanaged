@@ -17,7 +17,8 @@ run_list(
   "recipe[openssh]",
   "recipe[sudo]",
   "recipe[firewall::nrpe]",
-  "recipe[nagios::client]"
+  "recipe[nagios::client]",
+  "recipe[monitoring]"
 )
 default_attributes(
   "authorization" => {
@@ -73,6 +74,8 @@ override_attributes(
     "client" => {
       "install_method" => "package"
     },
+    "user" => "nrpe",
+    "group" => "nrpe",
     "nrpe" => {
       "packages" => [
         "nrpe",
