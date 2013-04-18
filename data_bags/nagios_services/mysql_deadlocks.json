@@ -1,5 +1,5 @@
 {
-  "id": "mysql-deadlocks",
+  "id": "mysql_deadlocks",
   "hostgroup_name": "mysql",
-  "command_line": "$USER1$/check_nrpe -H $HOSTADDRESS$ -c pmp-check-mysql-deadlocks"
+  "use_existing_command": "pmp-check-mysql-deadlocks"
 }

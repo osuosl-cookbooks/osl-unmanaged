@@ -1,5 +1,5 @@
 {
-  "id": "mysql-file-privs",
+  "id": "mysql_file_privs",
   "hostgroup_name": "mysql",
-  "command_line": "$USER1$/check_nrpe -H $HOSTADDRESS$ -c pmp-check-mysql-file-privs"
+  "use_existing_command": "pmp-check-mysql-file-privs"
 }

@@ -1,5 +1,5 @@
 {
-  "id": "mysql-processlist",
+  "id": "mysql_processlist",
   "hostgroup_name": "mysql",
-  "command_line": "$USER1$/check_nrpe -H $HOSTADDRESS$ -c pmp-check-mysql-processlist"
+  "use_existing_command": "pmp-check-mysql-processlist"
 }
