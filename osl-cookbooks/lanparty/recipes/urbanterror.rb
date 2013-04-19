@@ -51,5 +51,5 @@ end
 
 # Add server launch alias
 magic_shell_alias 'urt-server' do
-  command "#{node['lanparty']['urbanterror']['full_game_dir']}/Quake3-UrT-Ded.x86_64 +set dedicated 2 +set net_port #{node['lanparty']['urbanterror']['net_port']} +set com_hunkmegs 128 +exec server.cfg"
+  command "#{node['lanparty']['urbanterror']['full_game_dir']}/Quake3-UrT-Ded.x86_64 +set dedicated 1 +set net_port #{node['lanparty']['urbanterror']['net_port']} +set com_hunkmegs 128 +exec server.cfg"
 end

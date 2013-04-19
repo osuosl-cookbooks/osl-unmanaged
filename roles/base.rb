@@ -11,7 +11,7 @@ run_list(
   "recipe[aliases]",
   "recipe[ntp]",
   "recipe[openssh]",
-  "recipe[sudo]",
+  "recipe[sudo]"
 )
 default_attributes(
   "authorization" => {

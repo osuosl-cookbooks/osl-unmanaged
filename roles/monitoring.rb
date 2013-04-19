@@ -16,3 +16,9 @@ default_attributes(
     #"ldap_authoritative" => "on"
   }
 )
+override_attributes(
+  "nagios" => {
+    "user" => "nagios",
+    "group" => "nagios"
+  }
+)
