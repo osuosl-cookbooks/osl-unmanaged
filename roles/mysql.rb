@@ -1,29 +1,18 @@
 name "mysql"
 description "mysql server role"
 run_list(
-  "role[base]",
+  "recipe[mysql::percona_repo]",
+  "recipe[mysql::server]",
+  "role[base_managed]",
   "recipe[firewall::mysql]",
   "recipe[base::mysql]",
-  "recipe[mysql::server]"
+  "recipe[monitoring::mysql]"
 )
 default_attributes(
 )
 override_attributes(
   "mysql" => {
-    "server" => {
-      "packages" => [
-        "Percona-Server-shared-55",
-        "Percona-Server-server-55",
-        "percona-toolkit",
-        "percona-xtrabackup"
-      ]
-    },
-    "client" => {
-      "packages" => [
-        "Percona-Server-client-55",
-        "Percona-Server-shared-compat"
-      ]
-    },
+    "version" => "5.5",
     "service_name" => "mysql",
     "bind_address" => "0.0.0.0",
     "old_passwords" => "0",
@@ -53,5 +42,12 @@ override_attributes(
       "innodb_file_per_table" => "1",
       "connect_timeout" => "28880",
     },
+  },
+  "nagios" => {
+    "nrpe" => {
+      "packages" => [
+        "percona-nagios-plugins"
+      ]
+    }
   }
 )

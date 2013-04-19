@@ -1,7 +1,7 @@
 name "lanparty"
 description "ermahgerd lanparty role"
 run_list(
-  "role[base]",
+  "role[base_managed]",
   "recipe[lanparty]",
   "recipe[lanparty::urbanterror]",
   "recipe[firewall::lanparty]"
@@ -10,7 +10,7 @@ default_attributes(
   "authorization" => {
     "sudo" => {
       "users" => [
-        "osuadmin"
+        "games"
       ],
       "passwordless" => "true",
     }
