@@ -35,4 +35,3 @@ run_list(
   "recipe[php::module_curl]",
   "recipe[logstash::kibana]"
 )
-
