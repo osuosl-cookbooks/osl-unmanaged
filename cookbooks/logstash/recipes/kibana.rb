@@ -214,5 +214,6 @@ when "php"
   simple_iptables_rule "http" do
     rule [ "--proto tcp --dport #{node['logstash']['kibana']['http_port']}",
            "--proto tcp --sport #{node['logstash']['kibana']['http_port']}" ]
+    end
 
 end
