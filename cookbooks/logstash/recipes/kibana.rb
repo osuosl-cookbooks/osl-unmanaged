@@ -39,7 +39,7 @@ when "ruby"
     home "/home/kibana"
     shell "/bin/bash"
   end
-  
+
   node.set[:rbenv][:group_users] = [ "kibana" ]
 
   [ kibana_pid_dir, kibana_log_dir ].each do |dir|
@@ -63,7 +63,7 @@ when "ruby"
     path  "#{node['logstash']['kibana']['basedir']}/#{node['logstash']['kibana']['sha']}/Gemfile.lock"
     action :delete
   end
-  
+
   git "#{node['logstash']['kibana']['basedir']}/#{node['logstash']['kibana']['sha']}" do
     repository node['logstash']['kibana']['repo']
     branch "kibana-ruby"
@@ -211,9 +211,11 @@ when "php"
     end
   end
   service "apache2"
+
   simple_iptables_rule "http" do
     rule [ "--proto tcp --dport #{node['logstash']['kibana']['http_port']}",
            "--proto tcp --sport #{node['logstash']['kibana']['http_port']}" ]
+    jump "ACCEPT"
     end
 
 end
