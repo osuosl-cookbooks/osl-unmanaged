@@ -1,6 +1,6 @@
 include_recipe "git"
 include_recipe "logrotate"
-
+include_recipe "simple_iptables"
 kibana_base = node['logstash']['kibana']['basedir']
 kibana_home = node['logstash']['kibana']['home']
 kibana_log_dir = node['logstash']['kibana']['log_dir']
@@ -212,7 +212,7 @@ when "php"
   end
   service "apache2"
 
-  simple_iptables_rule "http" do
+  simple_iptables_rule "http-kibana" do
     rule [ "--proto tcp --dport #{node['logstash']['kibana']['http_port']}",
            "--proto tcp --sport #{node['logstash']['kibana']['http_port']}" ]
     jump "ACCEPT"
