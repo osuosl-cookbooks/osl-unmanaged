@@ -11,9 +11,7 @@
 case node["platform_family"]
 when "rhel"
   service "iptables" do
-    service_name 'iptables'
     supports :status => true, :restart => true, :save => true
-    action :start
-    action :enable
+    action [:enable, :start]
   end
 end
