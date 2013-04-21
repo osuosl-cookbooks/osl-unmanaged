@@ -3,8 +3,7 @@ description "ermahgerd lanparty role"
 run_list(
   "role[base_managed]",
   "recipe[lanparty]",
-  "recipe[lanparty::urbanterror]",
-  "recipe[firewall::lanparty]"
+  "recipe[lanparty::urbanterror]"
 )
 default_attributes(
   "authorization" => {
