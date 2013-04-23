@@ -7,9 +7,6 @@ run_list(
 )
 default_attributes(
   "nagios" => {
-    "server" => {
-      "install_method" => "source",
-    },
     "server_auth_method" => "htpasswd"
     #"ldap_bind_dn" => "cn=nagios,ou=web,ou=Group,dc=osuosl,dc=org",
     #"ldap_url" => "ldaps://ldap1.osuosl.org:636/ou=People,dc=osuosl,dc=org?uid?sub?(objectClass=*)",
@@ -19,6 +16,9 @@ default_attributes(
 override_attributes(
   "nagios" => {
     "user" => "nagios",
-    "group" => "nagios"
+    "group" => "nagios",
+    "server" => {
+      "install_method" => "source",
+    }
   }
 )

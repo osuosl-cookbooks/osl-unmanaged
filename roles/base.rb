@@ -1,5 +1,5 @@
 name "base"
-description "base role for all redhat systems"
+description "base role for all systems"
 run_list(
   "recipe[base]",
   "recipe[yum::yum]",
