@@ -21,18 +21,6 @@ nagios_nrpecheck "pmp-check-mysql-processlist" do
   action :add
 end
 
-# Check mysql privileges 
-nagios_nrpecheck "pmp-check-mysql-file-privs" do
-  command "#{node['nagios']['plugin_dir']}/pmp-check-mysql-file-privs"
-  action :add
-end
-
-# Check mysql deadlocks 
-nagios_nrpecheck "pmp-check-mysql-deadlocks" do
-  command "#{node['nagios']['plugin_dir']}/pmp-check-mysql-deadlocks"
-  action :add
-end
-
 # Check mysql problems inside innodb 
 nagios_nrpecheck "pmp-check-mysql-innodb" do
   command "#{node['nagios']['plugin_dir']}/pmp-check-mysql-innodb"
