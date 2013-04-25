@@ -76,17 +76,22 @@ end
 unless platform_family?(%w{mac_os_x})
 
   unless platform?(%w{windows})
+    group "mysql" do
+      action :create
+      gid 400
+    end
+
     user "mysql" do
-      :create
-      uid 498
+      action :create
+      uid 400
+      gid "mysql"
       home "/var/lib/mysql"
-      shell "/usr/sbin/nologin"
+      shell "/bin/bash"
     end
   end
 
   [File.dirname(node['mysql']['pid_file']),
     File.dirname(node['mysql']['tunable']['slow_query_log']),
-    node['mysql']['conf_dir'],
     node['mysql']['confd_dir'],
     node['mysql']['log_dir'],
     node['mysql']['data_dir']].each do |directory_path|
