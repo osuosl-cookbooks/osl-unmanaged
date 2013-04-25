@@ -74,6 +74,21 @@ if platform_family?(%w{debian})
 end
 
 unless platform_family?(%w{mac_os_x})
+
+  [File.dirname(node['mysql']['pid_file']),
+    File.dirname(node['mysql']['tunable']['slow_query_log']),
+    node['mysql']['conf_dir'],
+    node['mysql']['confd_dir'],
+    node['mysql']['log_dir'],
+    node['mysql']['data_dir']].each do |directory_path|
+    directory directory_path do
+      owner "mysql" unless platform? 'windows'
+      group "mysql" unless platform? 'windows'
+      action :create
+      recursive true
+    end
+  end
+
   if platform_family? 'windows'
     require 'win32/service'
 
@@ -135,22 +150,6 @@ node['mysql']['server']['packages'].each do |package_name|
   package package_name do
     action :install
     notifies :start, "service[mysql]", :immediately
-  end
-end
-
-unless platform_family?(%w{mac_os_x})
-  [File.dirname(node['mysql']['pid_file']),
-    File.dirname(node['mysql']['tunable']['slow_query_log']),
-    node['mysql']['conf_dir'],
-    node['mysql']['confd_dir'],
-    node['mysql']['log_dir'],
-    node['mysql']['data_dir']].each do |directory_path|
-    directory directory_path do
-      owner "mysql" unless platform? 'windows'
-      group "mysql" unless platform? 'windows'
-      action :create
-      recursive true
-    end
   end
 end
 
