@@ -82,8 +82,8 @@ unless platform_family?(%w{mac_os_x})
     node['mysql']['log_dir'],
     node['mysql']['data_dir']].each do |directory_path|
     directory directory_path do
-      owner "mysql" unless platform? 'windows'
-      group "mysql" unless platform? 'windows'
+      owner "root"
+      group node['mysql']['root_group']
       action :create
       recursive true
     end
