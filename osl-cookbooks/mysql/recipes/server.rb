@@ -79,7 +79,6 @@ unless platform_family?(%w{mac_os_x})
     user "mysql" do
       :create
       uid 498
-      gid 498
       home "/var/lib/mysql"
       shell "/usr/sbin/nologin"
     end
