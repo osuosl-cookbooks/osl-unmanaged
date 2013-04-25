@@ -75,6 +75,16 @@ end
 
 unless platform_family?(%w{mac_os_x})
 
+  unless platform?(%w{windows})
+    user "mysql" do
+      :create
+      uid 498
+      gid 498
+      home "/var/lib/mysql"
+      shell "/usr/sbin/nologin"
+    end
+  end
+
   [File.dirname(node['mysql']['pid_file']),
     File.dirname(node['mysql']['tunable']['slow_query_log']),
     node['mysql']['conf_dir'],
