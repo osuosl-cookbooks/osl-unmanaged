@@ -5,6 +5,7 @@ run_list(
   "recipe[selinux::permissive]",
   "recipe[firewall]",
   "recipe[base::iptables]",
+  "recipe[base::issue]",
   "recipe[base::users]",
   "recipe[postfix::client]",
   "recipe[firewall::nrpe]",
