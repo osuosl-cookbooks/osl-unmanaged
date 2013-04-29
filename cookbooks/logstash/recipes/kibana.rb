@@ -217,5 +217,4 @@ when "php"
            "--proto tcp --sport #{node['logstash']['kibana']['http_port']}" ]
     jump "ACCEPT"
     end
-
 end
