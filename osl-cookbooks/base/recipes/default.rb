@@ -20,3 +20,12 @@ chef_handler "MailHandler" do
   action :nothing
   supports :exception => true, :report => false
 end.run_action(:enable)
+
+template "/etc/nsswitch.conf" do
+  source "nsswitch.conf.erb"
+  mode 0644
+  owner "root"
+  group "root"
+  variables(:settings => node['nsswitch'])
+end
+

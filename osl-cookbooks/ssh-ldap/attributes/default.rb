@@ -20,9 +20,18 @@
 # Uncomment the ones you need, or set attributes in a role.
 #
 
+# OpenSSH config
 default['openssh']['server']['authorized_keys_command'] = "/usr/libexec/openssh/ssh-ldap-wrapper"
 default['openssh']['server']['authorized_keys_command_run_as'] = "nobody"
 
+# nsswitch config
+default['nsswitch']['passwd'] = "files ldap"
+default['nsswitch']['shadow'] = "files ldap"
+default['nsswitch']['group'] = "files ldap"
+default['nsswitch']['netgroup'] = "files ldap"
+default['nsswitch']['automount'] = "files ldap"
+
+# LDAP client config
 default['ldap']['uri'] = nil
 default['ldap']['base'] = nil
 default['ldap']['timelimit'] = "3"
@@ -33,7 +42,9 @@ default['ldap']['pam_check_host_attr'] = "yes"
 default['ldap']['pam_member_attribute'] = "memberuid"
 default['ldap']['pam_password'] = "exop"
 default['ldap']['nss_initgroups_ignoreusers'] = "root,ldap,named,avahi,haldaemon,apache"
-default['ldap']['base_passwd'] = "ou=People,#{node['ldap']['base']}"
-default['ldap']['base_shadow'] = "ou=People,#{node['ldap']['base']}"
-default['ldap']['base_group'] = "ou=Group,#{node['ldap']['base']}"
+default['ldap']['base_passwd'] = "ou=People,#{ldap['base']}"
+default['ldap']['base_shadow'] = "ou=People,#{ldap['base']}"
+default['ldap']['base_group'] = "ou=Group,#{ldap['base']}"
 default['ldap']['tls_cacertfile'] = "/etc/ssl/certs/ca-bundle.crt"
+default['ldap']['nslcd']['user'] = "nslcd"
+default['ldap']['nslcd']['group'] = "ldap"

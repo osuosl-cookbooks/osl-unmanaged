@@ -9,7 +9,7 @@
 include_recipe "openssh"
 
 # Manage ldap configuration
-%w{openssh-ldap pam_ldap nss-pam-ldapd openldap-clients}.each do |pkg|
+%w{openssh-ldap pam_ldap nss-pam-ldapd openldap-clients nscd}.each do |pkg|
   package pkg do
     action :install
   end
@@ -37,3 +37,10 @@ template "/etc/ssh/ldap.conf" do
   notifies :restart, "service[ssh]"
 end
 
+service "nscd" do
+  action [:start,:enable]
+end
+
+service "nslcd" do
+  action [:start,:enable]
+end
