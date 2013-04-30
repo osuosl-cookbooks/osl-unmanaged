@@ -23,9 +23,17 @@
 default['openssh']['server']['authorized_keys_command'] = "/usr/libexec/openssh/ssh-ldap-wrapper"
 default['openssh']['server']['authorized_keys_command_run_as'] = "nobody"
 
-default['openssh']['ldap']['uri'] = nil
-default['openssh']['ldap']['base'] = nil
-default['openssh']['ldap']['timelimit'] = "3"
-default['openssh']['ldap']['bind_timelimit'] = "3"
-default['openssh']['ldap']['ssl'] = "on"
-default['openssh']['ldap']['tls_cacertfile'] = "/etc/ssl/certs/ca-bundle.crt"
+default['ldap']['uri'] = nil
+default['ldap']['base'] = nil
+default['ldap']['timelimit'] = "3"
+default['ldap']['bind_timelimit'] = "3"
+default['ldap']['ssl'] = "on"
+default['ldap']['scope'] = "one"
+default['ldap']['pam_check_host_attr'] = "yes"
+default['ldap']['pam_member_attribute'] = "memberuid"
+default['ldap']['pam_password'] = "exop"
+default['ldap']['nss_initgroups_ignoreusers'] = "root,ldap,named,avahi,haldaemon,apache"
+default['ldap']['base_passwd'] = "ou=People,#{node['ldap']['base']}"
+default['ldap']['base_shadow'] = "ou=People,#{node['ldap']['base']}"
+default['ldap']['base_group'] = "ou=Group,#{node['ldap']['base']}"
+default['ldap']['tls_cacertfile'] = "/etc/ssl/certs/ca-bundle.crt"

@@ -8,9 +8,25 @@
 #
 include_recipe "openssh"
 
-# Manage ssh ldap configuration
-package "openssh-ldap" do
-  action :install
+# Manage ldap configuration
+%w{openssh-ldap pam_ldap nss-pam-ldapd openldap-clients}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
+template "/etc/pam_ldap.conf" do
+  source "pam_ldap.conf.erb"
+  mode 0644
+  owner "root"
+  group "root"
+end
+
+template "/etc/nslcd.conf" do
+  source "nslcd.conf.erb"
+  mode 0644
+  owner "root"
+  group "root"
 end
 
 template "/etc/ssh/ldap.conf" do
