@@ -20,10 +20,19 @@ template "/etc/pam_ldap.conf" do
   mode 0644
   owner "root"
   group "root"
+  notifies :restart, "service[nscd]"
 end
 
 template "/etc/nslcd.conf" do
   source "nslcd.conf.erb"
+  mode 0644
+  owner "root"
+  group "root"
+  notifies :restart, "service[nslcd]"
+end
+
+template "/etc/openldap/ldap.conf" do
+  source "openldap.conf.erb"
   mode 0644
   owner "root"
   group "root"
@@ -35,6 +44,8 @@ template "/etc/ssh/ldap.conf" do
   owner "root"
   group "root"
   notifies :restart, "service[ssh]"
+  notifies :restart, "service[nscd]"
+  notifies :restart, "service[nslcd]"
 end
 
 service "nscd" do

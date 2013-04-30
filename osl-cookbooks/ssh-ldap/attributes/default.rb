@@ -45,6 +45,8 @@ default['ldap']['nss_initgroups_ignoreusers'] = "root,ldap,named,avahi,haldaemon
 default['ldap']['base_passwd'] = "ou=People,#{ldap['base']}"
 default['ldap']['base_shadow'] = "ou=People,#{ldap['base']}"
 default['ldap']['base_group'] = "ou=Group,#{ldap['base']}"
+default['ldap']['tls_reqcert'] = "allow"
 default['ldap']['tls_cacertfile'] = "/etc/ssl/certs/ca-bundle.crt"
+default['ldap']['tls_cacertdir'] = "/etc/openldap/cacerts"
 default['ldap']['nslcd']['user'] = "nslcd"
 default['ldap']['nslcd']['group'] = "ldap"
