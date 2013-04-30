@@ -41,6 +41,10 @@ override_attributes(
   "openssh" => {
     "server" => {
       "password_authentication" => "no"
+    },
+    "ldap" => {
+      "uri" => "ldaps://ldap1.osuosl.org/ ldaps://ldap2.osuosl.org/",
+      "base" => "dc=osuosl,dc=org"
     }
   },
   "nagios" => {
