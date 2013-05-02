@@ -1,0 +1,11 @@
+server {
+  listen 80;
+  server_name <%= node['orvsdweb']['static']['server_name'] %>;
+
+  location / {
+    root <%= node['orvsdweb']['static']['root'] %>;
+  }
+
+  access_log <%= node['nginx']['log_dir'] %>/media.access.log;
+  error_log <%= node['nginx']['log_dir'] %>/media.error.log warn;
+}
