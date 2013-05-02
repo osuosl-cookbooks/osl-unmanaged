@@ -7,7 +7,8 @@ run_list(
 override_attributes(
   "orvsdweb" => {
     "static" => {
-      "root" => "/data/breitenbush/media.orvsd.org",
+      "server_name" => "media.orvsd.org",
+      "root" => "/data/breitenbush/media.orvsd.org"
     }
   }
 )
