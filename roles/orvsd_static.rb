@@ -7,6 +7,8 @@ run_list(
 override_attributes(
   "orvsdweb" => {
     "static" => {
+      "glusterpath" => "/data",
+      "glustervol" => "fs1.orvsd.bak:/media",
       "server_name" => "media.orvsd.org",
       "root" => "/data/breitenbush/media.orvsd.org"
     }
