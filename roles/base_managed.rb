@@ -7,6 +7,7 @@ run_list(
   "recipe[base::iptables]",
   "recipe[base::issue]",
   "recipe[base::users]",
+  "recipe[base::ifconfig]",
   "recipe[postfix::client]",
   "recipe[firewall::nrpe]",
   "recipe[nagios::client]",
