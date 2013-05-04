@@ -19,15 +19,14 @@ if node['orvsdweb']['static']['glusterpath']
   end
 end
 
-template "#{node['nginx']['dir']}/sites-available/#{node['orvsdweb']['static']['server_name']}.conf" do
-  source "#{node['orvsdweb']['static']['server_name']}.conf.erb"
+server_name = node['orvsdweb']['static']['server_name']
+template "#{node['nginx']['dir']}/sites-available/#{server_name}.conf" do
+  source "#{server_name}.conf.erb"
   owner "root"
   group "root"
   mode 00644
 end
 
-nginx_site "#{node['orvsdweb']['static']['server_name']}.conf" do
+nginx_site "#{server_name}.conf" do
   :enable
 end
-
-node['nagios']['check_vhost']['server_name'] = node['orvsdweb']['static']['server_name']
