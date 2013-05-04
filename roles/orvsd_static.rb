@@ -12,5 +12,10 @@ override_attributes(
       "server_name" => "media.orvsd.org",
       "root" => "/data/breitenbush/media.orvsd.org"
     }
+  },
+  "nagios" => {
+    "check_vhost" => {
+      "server_name" => "media.orvsd.org"
+    }
   }
 )
