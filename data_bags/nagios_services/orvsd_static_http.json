@@ -1,0 +1,5 @@
+{
+  "id": "orvsd_static_http",
+  "hostgroup_name": "orvsd_static",
+  "command_line": "$USER1$/check_nrpe -H $HOSTADDRESS$ -c check_http"
+}

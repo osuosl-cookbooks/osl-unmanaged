@@ -30,3 +30,4 @@ nginx_site "#{node['orvsdweb']['static']['server_name']}.conf" do
   :enable
 end
 
+node['nagios']['check_vhost']['server_name'] = node['orvsdweb']['static']['server_name']

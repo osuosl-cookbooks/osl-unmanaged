@@ -8,3 +8,4 @@
 
 include_recipe "base::glusterfs"
 include_recipe "firewall::http"
+include_recipe "monitoring::http"
