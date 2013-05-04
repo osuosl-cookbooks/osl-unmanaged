@@ -3,7 +3,8 @@ description "monitoring server role"
 run_list(
   "recipe[nagios::server]",
   "role[base_managed]",
-  "recipe[firewall::http]"
+  "recipe[firewall::http]",
+  "recipe[ssh-ldap]"
 )
 default_attributes(
   "nagios" => {
