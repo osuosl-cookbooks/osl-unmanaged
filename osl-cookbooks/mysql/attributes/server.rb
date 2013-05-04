@@ -52,7 +52,6 @@ when "rhel", "fedora"
   default['mysql']['socket']                      = "/var/lib/mysql/mysql.sock"
   default['mysql']['old_passwords']               = 0
   default['mysql']['grants_path']                 = "/etc/mysql_grants.sql"
-  default['mysql']['tunable']['innodb_adaptive_flushing'] = true
 when "suse"
   default['mysql']['service_name']            = "mysql"
   default['mysql']['server']['packages']      = %w{mysql-community-server}

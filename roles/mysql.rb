@@ -40,6 +40,8 @@ override_attributes(
       "innodb_log_file_size" => "512M",
       "innodb_flush_log_at_trx_commit" => "2",
       "innodb_file_per_table" => "1",
+      "innodb_adaptive_flushing" => "true",
+      "innodb_adaptive_flushing_method" => "keep_average",
       "connect_timeout" => "28880",
     },
   },

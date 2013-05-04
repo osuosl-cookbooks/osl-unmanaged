@@ -197,7 +197,7 @@ end
 execute "assign-root-password" do
   command "\"#{node['mysql']['mysqladmin_bin']}\" -u root password \"#{node['mysql']['server_root_password']}\""
   action :run
-  only_if "\"#{node['mysql']['mysql_bin']}\" -u root -e 'show databases;'"
+  only_if "\"#{node['mysql']['mysql_bin']}\" -u root --password='' -e 'show databases;'"
 end
 
 unless platform_family?(%w{mac_os_x})

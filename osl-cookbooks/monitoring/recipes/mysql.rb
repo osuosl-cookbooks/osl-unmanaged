@@ -33,3 +33,9 @@ nagios_nrpecheck "pmp-check-mysql-pidfile" do
   action :add
 end
 
+# Check replication
+nagios_nrpecheck "pmp-check-mysql-replication-delay" do
+  command "#{node['nagios']['plugin_dir']}/pmp-check-mysql-replication-delay"
+  action :add
+end
+
