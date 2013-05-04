@@ -18,6 +18,7 @@ override_attributes(
   "nagios" => {
     "user" => "nagios",
     "group" => "nagios",
+    "notifications_enabled" => "1",
     "server" => {
       "install_method" => "source",
     }

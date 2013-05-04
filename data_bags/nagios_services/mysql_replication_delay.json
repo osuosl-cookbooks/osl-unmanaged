@@ -1,5 +1,0 @@
-{
-  "id": "mysql_replication_delay",
-  "hostgroup_name": "mysql",
-  "command_line": "$USER1$/check_nrpe -H $HOSTADDRESS$ -c pmp-check-mysql-replication-delay"
-}

@@ -1,5 +1,0 @@
-{
-  "id": "all_disks",
-  "hostgroup_name": "base",
-  "command_line": "$USER1$/check_nrpe -H $HOSTADDRESS$ -c check_all_disks -t 20"
-}
