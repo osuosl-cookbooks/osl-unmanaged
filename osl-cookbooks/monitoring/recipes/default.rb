@@ -20,7 +20,7 @@ nagios_nrpecheck "check_all_disks" do
   command "#{node['nagios']['plugin_dir']}/check_disk"
   warning_condition "8%"
   critical_condition "5%"
-  parameters "-A -x /dev/shm -X nfs -X glusterfs -i /boot"
+  parameters "-A -x /dev/shm -X nfs -X fuse.glusterfs -i /boot"
   action :add
 end
 
