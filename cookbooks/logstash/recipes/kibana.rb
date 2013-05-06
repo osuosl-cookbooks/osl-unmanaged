@@ -211,10 +211,4 @@ when "php"
     end
   end
   service "apache2"
-
-  simple_iptables_rule "http" do
-    rule [ "--proto tcp --dport #{node['logstash']['kibana']['http_port']}",
-           "--proto tcp --sport #{node['logstash']['kibana']['http_port']}" ]
-    jump "ACCEPT"
-    end
 end

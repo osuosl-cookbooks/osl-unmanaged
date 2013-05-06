@@ -34,5 +34,5 @@ run_list(
   "recipe[logstash::server]",
   "recipe[php::module_curl]",
   "recipe[logstash::kibana]",
-  "recipe[simple_iptables]"
+  "recipe[firewall::kibana]"
 )
