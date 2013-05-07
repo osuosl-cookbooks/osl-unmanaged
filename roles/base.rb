@@ -5,8 +5,8 @@ run_list(
   "recipe[yum::yum]",
   "recipe[yum::epel]",
   "recipe[base::oslrepo]",
-  "recipe[chef-client]",
   "recipe[base::packages]",
+  "recipe[chef-client::cron]",
   "recipe[networking_basic]",
   "recipe[aliases]",
   "recipe[ntp]",
@@ -38,5 +38,14 @@ override_attributes(
       "time.oregonstate.edu",
       "pool.ntp.org"
     ]
+  },
+  "chef_client" => {
+    "init_style" => "none",
+    "cron" => {
+      "minute" => "*/30",
+      "hour" => "*",
+      "use_cron_d" => "true",
+      "log_file" => "/var/log/chef/client.log"
+    }
   }
 )
