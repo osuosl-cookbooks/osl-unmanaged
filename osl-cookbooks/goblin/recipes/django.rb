@@ -11,16 +11,16 @@
 node.set_unless['goblin']['db_password'] = secure_password
 
 application "goblin" do
-  path "/srv/goblin"
-  owner "goblin"
-  group "goblin"
+  path "/var/www/goblin"
+  owner "root"
+  group "www-data"
   repository "https://github.com/osuosl/Goblin.git"
   revision "master"
   migrate true
-  packages ["libpq-dev", "git-core"]
+  packages ["libpq-dev", "git-core", "libsasl2-dev", "libldap2-dev",
+    "python2.6-dev", "libapache2-mod-auth-cache"]
 
   django do
-    packages ["redis"]
     requirements "requirements/requirements.txt"
     settings_template "settings.py.erb"
     debug true
