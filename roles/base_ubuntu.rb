@@ -1,7 +1,7 @@
 name "base_ubuntu"
 description "base role for all ubuntu systems"
 run_list(
-  "recipe[base]",
+  "role[base]",
   "recipe[apt]",
   "recipe[chef-client]",
   "recipe[firewall]",
@@ -9,14 +9,10 @@ run_list(
   "recipe[base::packages]",
   "recipe[base::users]",
   "recipe[networking_basic]",
-  "recipe[aliases]",
-  "recipe[ntp]",
   "recipe[postfix::client]",
-  "recipe[openssh]",
   "recipe[firewall::nrpe]",
-  "recipe[sudo]",
-  "recipe[firewall::nrpe]",
-  "recipe[nagios::client]"
+  "recipe[nagios::client]",
+  "recipe[monitoring]"
 )
 default_attributes(
   "authorization" => {

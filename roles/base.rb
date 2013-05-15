@@ -2,12 +2,7 @@ name "base"
 description "base role for all systems"
 run_list(
   "recipe[base]",
-  "recipe[yum::yum]",
-  "recipe[yum::epel]",
-  "recipe[base::oslrepo]",
-  "recipe[base::packages]",
   "recipe[chef-client::cron]",
-  "recipe[networking_basic]",
   "recipe[aliases]",
   "recipe[ntp]",
   "recipe[openssh]",

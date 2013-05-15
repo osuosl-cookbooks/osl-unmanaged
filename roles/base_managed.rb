@@ -2,6 +2,11 @@ name "base_managed"
 description "base role for all managed redhat systems"
 run_list(
   "role[base]",
+  "recipe[yum::yum]",
+  "recipe[yum::epel]",
+  "recipe[base::oslrepo]",
+  "recipe[base::packages]",
+  "recipe[networking_basic]",
   "recipe[selinux::permissive]",
   "recipe[firewall]",
   "recipe[base::iptables]",
