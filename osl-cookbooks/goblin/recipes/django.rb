@@ -7,9 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
-node.set_unless['goblin']['db_password'] = secure_password
-
 application "goblin" do
   path "/var/www/goblin"
   owner "root"
@@ -18,20 +15,17 @@ application "goblin" do
   revision "master"
   migrate true
   packages ["libpq-dev", "git-core", "libsasl2-dev", "libldap2-dev",
-    "python2.6-dev", "libapache2-mod-auth-cache"]
+    "python2.6-dev", "libapache2-mod-auth-cas"]
 
   django do
     requirements "requirements/requirements.txt"
     settings_template "settings.py.erb"
     debug true
-    collectstatic "build_static --noinput"
     database do
       database "goblin"
-      engine "postgresql_psycopg2"
-      username "goblin"
-      password node['goblin']['db_password']
+      engine "sqlite3"
     end
-    database_master_role "goblin_database_master"
+    #database_master_role "goblin_database_master"
   end
 end
 
