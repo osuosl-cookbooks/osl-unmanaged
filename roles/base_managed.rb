@@ -46,27 +46,5 @@ override_attributes(
   "ldap" => {
     "uri" => "ldaps://ldap1.osuosl.org/ ldaps://ldap2.osuosl.org/",
     "base" => "dc=osuosl,dc=org"
-  },
-  "nagios" => {
-    "client" => {
-      "install_method" => "package"
-    },
-    "user" => "nrpe",
-    "group" => "nrpe",
-    "nrpe" => {
-      "packages" => [
-        "nrpe",
-        "nagios-plugins",
-        "nagios-plugins-disk",
-        "nagios-plugins-dummy",
-        "nagios-plugins-linux_raid",
-        "nagios-plugins-load",
-        "nagios-plugins-mailq",
-        "nagios-plugins-ntp",
-        "nagios-plugins-procs",
-        "nagios-plugins-swap",
-        "nagios-plugins-users"
-      ]
-    }
   }
 )
