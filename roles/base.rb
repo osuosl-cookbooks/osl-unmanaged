@@ -2,6 +2,8 @@ name "base"
 description "base role for all systems"
 run_list(
   "recipe[base]",
+  "recipe[base::packages]",
+  "recipe[networking_basic]",
   "recipe[chef-client::cron]",
   "recipe[aliases]",
   "recipe[ntp]",

@@ -29,7 +29,7 @@ application "goblin" do
   end
 end
 
-git "/var/www/goblin/shared/env/lib/python2.6/site-packages/google-imap" do
+git "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
   repository "git://github.com/osuosl/google-imap.git"
   reference "master"
   action :sync
