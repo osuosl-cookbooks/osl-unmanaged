@@ -8,9 +8,10 @@
 #
 
 include_recipe "supervisor"
+include_recipe "goblin"
 
-ruby supervisor_service "celery" do
-  action :enable
+supervisor_service "celery" do
+  action [:enable,:start]
   autostart true
   user "nobody"
 end

@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe "goblin"
+
 application "goblin" do
   path "/var/www/goblin"
   owner "root"
