@@ -10,6 +10,3 @@
 include_recipe "postgresql"
 include_recipe "rabbitmq"
 include_recipe "goblin"
-
-# Configure postgres for webapp
-node['postgresql']['config_pgtune']['db_type'] = "web"
