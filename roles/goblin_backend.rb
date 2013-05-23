@@ -11,7 +11,7 @@ override_attributes(
     "config_pgtune" => {
       "db_type" => "web"
     }
-  }
+  },
    "openssh" => {
     "server" => {
       "password_authentication" => "yes"
