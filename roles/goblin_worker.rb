@@ -9,7 +9,7 @@ default_attributes(
 override_attributes(
 "openssh" => {
     "server" => {
-      "password_authentication" => "no"
+      "password_authentication" => "yes"
     }
   },
 )
