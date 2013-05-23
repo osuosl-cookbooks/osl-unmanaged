@@ -12,4 +12,9 @@ override_attributes(
       "db_type" => "web"
     }
   }
+   "openssh" => {
+    "server" => {
+      "password_authentication" => "yes"
+    }
+  },
 )
