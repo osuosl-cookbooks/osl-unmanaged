@@ -13,5 +13,10 @@ include_recipe "goblin"
 supervisor_service "celery" do
   action [:enable,:start]
   autostart true
+  autorestart true
   user "nobody"
+  startsecs 10
+  stopwaitsecs 600
+  command "/var/www/goblin/shared/env/bin/celeryd -l info"
+  directory "/var/www/goblin"
 end

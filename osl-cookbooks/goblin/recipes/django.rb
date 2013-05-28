@@ -27,7 +27,7 @@ application "goblin" do
       database "goblin"
       engine "sqlite3"
     end
-    #database_master_role "goblin_database_master"
+    database_master_role "goblin_backend"
   end
 end
 
