@@ -9,10 +9,19 @@
 include_recipe "orvsd-web::default"
 include_recipe "nginx::default"
 
+case node['hostname']
+when "static1"
+  volserver = node['orvsdweb']['static']['glustervol'][0]
+  backupvol = node['orvsdweb']['static']['glustervol'][1]
+when "static2"
+  volserver = node['orvsdweb']['static']['glustervol'][1]
+  backupvol = node['orvsdweb']['static']['glustervol'][0]
+end
+
 if node['orvsdweb']['static']['glusterpath']
   directory node['orvsdweb']['static']['glusterpath']
   mount node['orvsdweb']['static']['glusterpath'] do
-    device node['orvsdweb']['static']['glustervol']
+    device volserver
     fstype "glusterfs"
     options "defaults,_netdev"
     action [:mount, :enable]
