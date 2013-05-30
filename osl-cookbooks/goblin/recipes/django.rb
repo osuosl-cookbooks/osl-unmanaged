@@ -41,4 +41,4 @@ web_app "goblin" do
   server_name node['hostname']
   template "apache.erb"
 end
- 
+
