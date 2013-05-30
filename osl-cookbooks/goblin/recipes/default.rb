@@ -46,3 +46,10 @@ git "/opt/google-imap" do
   reference "master"
   action :sync
 end
+
+user_account 'optin' do
+   system_user 'true'
+   home    '/none'
+   shell   '/bin/false'
+end
+
