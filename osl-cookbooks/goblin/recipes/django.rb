@@ -8,6 +8,7 @@
 #
 
 include_recipe "goblin::default"
+include_recipe "apache2::mod_wsgi"
 
 web_app "goblin" do
   server_name node['hostname']
