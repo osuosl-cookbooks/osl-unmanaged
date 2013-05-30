@@ -37,3 +37,8 @@ git "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
   action :sync
 end
 
+web_app "goblin" do
+  server_name node['hostname']
+  template "apache.erb"
+end
+ 
