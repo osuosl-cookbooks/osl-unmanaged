@@ -1,10 +1,8 @@
 name "goblin_backend"
 description "goblin backend server role"
 run_list(
-  "role[base_managed]",
+  "role[base]",
   "recipe[goblin::backend]"
-)
-default_attributes(
 )
 override_attributes(
   "postgresql" => {
@@ -16,5 +14,5 @@ override_attributes(
     "server" => {
       "password_authentication" => "yes"
     }
-  },
+  }
 )
