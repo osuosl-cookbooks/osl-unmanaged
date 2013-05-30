@@ -48,7 +48,7 @@ git "/opt/google-imap" do
 end
 
 user_account 'optin' do
-   system_user 'true'
+   system_user true
    home    '/none'
    shell   '/bin/false'
 end
