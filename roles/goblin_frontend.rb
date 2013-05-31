@@ -6,7 +6,7 @@ run_list(
   "recipe[goblin::apache]"
 )
 override_attributes(
-"openssh" => {
+  "openssh" => {
     "server" => {
       "password_authentication" => "yes"
     }
