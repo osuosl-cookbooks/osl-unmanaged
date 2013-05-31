@@ -41,6 +41,7 @@ rabbitmq_user "optin" do
 end
 
 node.default['postgresql']['config']['listen_addresses'] = '*'
+
 node.default['postgresql']['pg_hba'] = {
       :comment => "Goblin user",
       :type => "host",
@@ -50,3 +51,10 @@ node.default['postgresql']['pg_hba'] = {
       :method => "md5"
     }
 
+node.default['postgresql']['config']['listen_address'] = nil
+node.default['postgresql']['pg_hba']['comment'] = "Goblin user"
+node.default['postgresql']['pg_hba']['type'] = "host"
+node.default['postgresql']['pg_hba']['db'] = "all"
+node.default['postgresql']['pg_hba']['user'] = "goblin"
+node.default['postgresql']['pg_hba']['addr'] = "128.192.4.0/24"
+node.default['postgresql']['pg_hba']['method'] = "md5"
