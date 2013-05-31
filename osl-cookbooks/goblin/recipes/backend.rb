@@ -40,7 +40,7 @@ rabbitmq_user "optin" do
   action [:set_tags]
 end
 
-node.default['postgresql']['config']['listen_address'] = '*'
+node.default['postgresql']['config']['listen_addresses'] = '*'
 node.default['postgresql']['pg_hba'] = {
       :comment => "Goblin user",
       :type => "host",
