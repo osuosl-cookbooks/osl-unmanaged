@@ -8,7 +8,7 @@
 #
 
 include_recipe "supervisor"
-include_recipe "goblin"
+include_recipe "goblin::default"
 
 supervisor_service "celery" do
   action [:enable,:start]
