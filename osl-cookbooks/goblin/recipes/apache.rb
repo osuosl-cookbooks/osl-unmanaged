@@ -14,7 +14,8 @@ include_recipe "apache2::mod_wsgi"
 # Allow HTTP/HTTPS
 simple_iptables_rule "http" do
   rule [ "--proto tcp --dport 80",
-         "--proto tcp --dport 443" ]
+         "--proto tcp --dport 443",
+         "--proto tcp --dport 8000" ]
   jump "ACCEPT"
 end
 
