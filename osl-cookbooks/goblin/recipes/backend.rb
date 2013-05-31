@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node['postgresql']['config']['listen_address'] = '*'
+node.default['postgresql']['config']['listen_address'] = '*'
 
 include_recipe "postgresql"
 include_recipe "rabbitmq"
