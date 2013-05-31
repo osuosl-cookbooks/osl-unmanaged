@@ -23,8 +23,10 @@ application "goblin" do
     settings_template "settings.py.erb"
     debug true
     database do
-      database "goblin"
-      engine "sqlite3"
+      database "django"
+      engine "postgresql_psycopg2"
+      username "goblin"
+      password node['goblin']['django']['password']
     end
     database_master_role "goblin_backend"
   end
