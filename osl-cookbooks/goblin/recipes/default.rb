@@ -26,7 +26,7 @@ application "goblin" do
       database "django"
       engine "postgresql_psycopg2"
       username "goblin"
-      password node['goblin']['django']['password']
+      password Chef::EncryptedDataBagItem.load("goblin","credentials")["goblinpg"]
     end
     database_master_role "goblin_backend"
   end
