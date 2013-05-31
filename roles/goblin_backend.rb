@@ -3,8 +3,7 @@ description "goblin backend server role"
 run_list(
   "role[base]",
   "recipe[firewall]",
-  "recipe[goblin::backend]",
-  "recipe[postgresql::config_pgtune]"
+  "recipe[goblin::backend]"
 )
 override_attributes(
   "postgresql" => {
