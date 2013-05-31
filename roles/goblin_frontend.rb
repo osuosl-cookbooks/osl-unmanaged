@@ -3,7 +3,7 @@ description "goblin front end role"
 run_list(
   "role[base]",
   "recipe[firewall]",
-  "recipe[goblin::django]"
+  "recipe[goblin::apache]"
 )
 override_attributes(
 "openssh" => {

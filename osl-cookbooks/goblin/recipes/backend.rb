@@ -9,7 +9,6 @@
 
 include_recipe "postgresql::server"
 include_recipe "rabbitmq"
-include_recipe "goblin::default"
 
 # Allow PostgreSQL
 simple_iptables_rule "postgres" do

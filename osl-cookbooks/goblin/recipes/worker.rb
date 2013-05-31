@@ -9,6 +9,7 @@
 
 include_recipe "supervisor"
 include_recipe "goblin::default"
+include_recipe "goblin::django"
 
 supervisor_service "celery" do
   action [:enable,:start]
