@@ -10,6 +10,9 @@
 include_recipe "goblin::default"
 include_recipe "goblin::django"
 include_recipe "apache2::mod_wsgi"
+include_recipe "memcached"
+
+memcached_instance "goblin"
 
 # Allow HTTP/HTTPS
 simple_iptables_rule "http" do
