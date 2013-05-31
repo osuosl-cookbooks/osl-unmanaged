@@ -7,6 +7,9 @@ run_list(
 )
 override_attributes(
   "postgresql" => {
+    "config" => {
+      "listen_address" => "*"
+    },
     "config_pgtune" => {
       "db_type" => "web"
     }

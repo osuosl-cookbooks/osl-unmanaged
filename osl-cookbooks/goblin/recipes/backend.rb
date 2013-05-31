@@ -7,9 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node.default['postgresql']['config']['listen_address'] = '*'
-
-include_recipe "postgresql"
+include_recipe "postgresql::server"
 include_recipe "rabbitmq"
 include_recipe "goblin::default"
 
@@ -41,3 +39,14 @@ rabbitmq_user "optin" do
   tag "goblin"
   action [:set_tags]
 end
+
+node.default['postgresql']['config']['listen_address'] = '*'
+node.default['postgresql']['pg_hba'] = {
+      :comment => "Goblin user",
+      :type => "host",
+      :db => "all",
+      :user => "goblin",
+      :addr => "128.192.4.0/24",
+      :method => "md5"
+    }
+
