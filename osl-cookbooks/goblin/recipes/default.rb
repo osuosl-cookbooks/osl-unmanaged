@@ -7,6 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe "simple_iptables"
+
+
 # Django goblin application is installed by default on all nodes.
 application "goblin" do
   path "/var/www/goblin"

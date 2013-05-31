@@ -9,8 +9,19 @@
 
 include_recipe "postgresql"
 include_recipe "rabbitmq"
-include_recipe "goblin"
+include_recipe "goblin::default"
 
+# Allow PostgreSQL
+simple_iptables_rule "postgres" do
+  rule "--proto tcp --dport 5432"
+  jump "ACCEPT"
+end
+
+# Allow RabbitMQ
+simple_iptables_rule "rabbitmq" do
+  rule "--proto tcp --dport 5672"
+  jump "ACCEPT"
+end
 rabbitmq_vhost "/optin" do
   action :add
 end
