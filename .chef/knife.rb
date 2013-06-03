@@ -9,7 +9,7 @@ log_location            STDOUT
 
 # USERNAME is UPPERCASE in Windows, but lowercase in the Chef server,
 # so `downcase` it.
-node_name               ( ENV['USER'] || ENV['USERNAME'] ).downcase
+node_name               ( ENV['KNIFE_USER'] || ENV['USER'] || ENV['USERNAME'] ).downcase
 client_key              "#{home_dir}/.chef/#{node_name}.pem"
 validation_client_name  'chef-validator'
 validation_key          "#{home_dir}/.chef/#{validation_client_name}.pem"
