@@ -4,7 +4,7 @@ imap.login = cNMXbBZs6Zo
 imap.password = p+m0UYNHbxqYRdkXnLpYfg
 
 ldap.read.host = ldap://ldap.onid.orst.edu
-ldap.write.host = ldap.onid.oregonstate.edu
+ldap.write.host = ldap://ldap.onid.oregonstate.edu
 ldap.login = <%= node['goblin']['ldap']['username'] %>
 ldap.password = <%= node['goblin']['ldap']['password'] %>
 local.mail.host = cyrus.psumail.pdx.edu
@@ -15,9 +15,9 @@ google.email = QQ+dY4mBUd5ceglf+x1znw==
 google.domain = pdx.edu
 google.password = HORRZOGGuOlr2K83ShIyLw==
 
-memcache.url = imapsync-mc.oit.pdx.edu:11211
+memcache.url = test-migfe.onid.oregonstate.edu:11211
 
-rabbitmq.host = imapsync-mq.oit.pdx.edu
+rabbitmq.host = test-migbe.onid.oregonstate.edu
 rabbitmq.login = optinpresync
 rabbitmq.password = ZKt3WBYJUI6TRz7f4sAtlw==
 
