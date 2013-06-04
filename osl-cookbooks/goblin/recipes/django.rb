@@ -22,6 +22,7 @@ application "goblin" do
     requirements "requirements/requirements.txt"
     settings_template "settings.py.erb"
     debug true
+    collectstatic true
     database do
       database "django"
       engine "postgresql_psycopg2"
