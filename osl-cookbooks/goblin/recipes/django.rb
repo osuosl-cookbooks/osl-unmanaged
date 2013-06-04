@@ -35,6 +35,6 @@ end
 template "/var/www/goblin/current/etc/logging.conf" do
   source "logging.conf.erb"
   mode 00644
-  owner root
-  group www-data
+  owner "root"
+  group "www-data"
 end
