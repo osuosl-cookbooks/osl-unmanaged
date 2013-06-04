@@ -15,7 +15,7 @@ supervisor_service "celery" do
   action [:enable,:start]
   autostart true
   autorestart true
-  user "nobody"
+  user "optin"
   startsecs 10
   stopwaitsecs 600
   command "/var/www/goblin/shared/env/bin/celeryd -l info"

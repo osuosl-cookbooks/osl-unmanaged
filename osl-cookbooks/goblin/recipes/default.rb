@@ -29,6 +29,7 @@ end
 user_account 'optin' do
    system_user true
    home    '/none'
+   groups  ['www-data']
    shell   '/bin/false'
 end
 
