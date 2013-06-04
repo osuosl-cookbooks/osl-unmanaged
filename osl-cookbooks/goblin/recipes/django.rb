@@ -31,3 +31,10 @@ application "goblin" do
     database_master_role "goblin_backend"
   end
 end
+
+template "/var/www/goblin/current/etc/logging.conf" do
+  source "logging.conf.erb"
+  mode 00644
+  owner root
+  group www-data
+end
