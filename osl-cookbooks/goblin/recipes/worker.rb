@@ -19,5 +19,5 @@ supervisor_service "celery" do
   startsecs 10
   stopwaitsecs 600
   command "/var/www/goblin/shared/env/bin/celeryd -l info"
-  directory "/var/www/goblin"
+  directory "/var/www/goblin/current"
 end
