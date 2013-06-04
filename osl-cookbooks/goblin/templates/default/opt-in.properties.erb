@@ -5,8 +5,8 @@ imap.password = p+m0UYNHbxqYRdkXnLpYfg
 
 ldap.read.host = ldap://ldap.onid.orst.edu
 ldap.write.host = ldap.onid.oregonstate.edu
-ldap.login = <% node['ldap']['login']%>
-ldap.password = <% node['ldap']['password']%>
+ldap.login = <%= node['ldap']['login'] %>
+ldap.password = <%= node['ldap']['password'] %>
 local.mail.host = cyrus.psumail.pdx.edu
 
 google.key.prod = Z/uAFhQ71V4
