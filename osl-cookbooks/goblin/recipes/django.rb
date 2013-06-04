@@ -33,7 +33,7 @@ application "goblin" do
 end
 
 template "/var/www/goblin/current/etc/opt-in.properties" do
-  source "opt-in.properties"
+  source "opt-in.properties.erb"
   mode 00644
   owner "root"
   group "www-data"
