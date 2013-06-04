@@ -10,5 +10,9 @@ override_attributes(
     "server" => {
       "password_authentication" => "yes"
     }
+  },
+  "memcached" => {
+    "user" => "nobody",
+    "group" => "nogroup"
   }
 )
