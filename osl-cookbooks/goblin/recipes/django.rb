@@ -32,8 +32,8 @@ application "goblin" do
   end
 end
 
-template "/var/www/goblin/current/etc/logging.conf" do
-  source "logging.conf.erb"
+template "/var/www/goblin/current/etc/opt-in.properties" do
+  source "opt-in.properties"
   mode 00644
   owner "root"
   group "www-data"
