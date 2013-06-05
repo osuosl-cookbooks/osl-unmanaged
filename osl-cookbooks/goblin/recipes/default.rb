@@ -29,7 +29,12 @@ end
 user_account 'optin' do
    system_user true
    home    '/none'
-   groups  ['www-data']
    shell   '/bin/false'
+end
+
+group "www-data" do
+  action :modify
+  members "optin"
+  append true
 end
 
