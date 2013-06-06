@@ -1,7 +1,7 @@
 
 imap.host= T7GDyNzQwr2Qd4h7Vo0pprbqv+CURfzz
-imap.login = cNMXbBZs6Zo
-imap.password = p+m0UYNHbxqYRdkXnLpYfg
+imap.login = templateme
+imap.password = templateme
 
 ldap.read.host = ldap://ldap.onid.orst.edu
 ldap.write.host = ldap://ldap.onid.oregonstate.edu
@@ -10,16 +10,16 @@ ldap.password = <%= node['goblin']['ldap']['password'] %>
 local.mail.host = cyrus.psumail.pdx.edu
 
 google.key.prod = Z/uAFhQ71V4
-google.oauth.password = ptDSZeF5GdEjDig0UcsuiP3esi8rnMrN/pw3fxaHpU8=
-google.email = QQ+dY4mBUd5ceglf+x1znw==
+google.oauth.password = templateme
+google.email = templateme
 google.domain = pdx.edu
-google.password = HORRZOGGuOlr2K83ShIyLw==
+google.password = templateme
 
 memcache.url = test-migfe.onid.oregonstate.edu:11211
 
 rabbitmq.host = test-migbe.onid.oregonstate.edu
-rabbitmq.login = optinpresync
-rabbitmq.password = ZKt3WBYJUI6TRz7f4sAtlw==
+rabbitmq.login = optin
+rabbitmq.password = templateme
 
 deny.users = ['ccoleman', 'ceaz', 'cedr', 'cfpc', 'cvue', 'devittd', 'dgarrett', 'faaleava', 'farrg', 'felipek', 'friesenb', 'gibsoncm', 'gildera', 'harterd', 'heilmair', 'hxpb', 'iamn', 'jbelter', 'jnicola', 'johnsod', 'jthacher', 'karint', 'kaysink', 'kmukobi', 'ksam', 'ksm', 'lagola', 'lilian', 'lindsw', 'lornat', 'lriven', 'markf', 'maryjane', 'mcclear', 'mekia', 'mercerr', 'mhines', 'mitchkr', 'mlorence', 'motaylor', 'mslewand', 'myeonwoo', 'nallen', 'nhenry', 'ni', 'nissen', 'packarw', 'pklee', 'pphelps', 'pricea', 'rjlittle', 'rootd', 'ruderb', 'sanchezk', 'sergiop', 'sestakb', 'sevillaj', 'shinnc', 'skipp', 'smithgw', 'solr', 'springa', 'sysyng', 'sytsmam', 'tamarak', 'tjbrain', 'todell', 'wrigglek', 'youngc']
 
