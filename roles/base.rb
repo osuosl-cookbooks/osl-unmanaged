@@ -9,7 +9,8 @@ run_list(
   "recipe[aliases]",
   "recipe[ntp]",
   "recipe[openssh]",
-  "recipe[sudo]"
+  "recipe[sudo]",
+  "recipe[chef-client::delete_validation]"
 )
 default_attributes(
   "authorization" => {

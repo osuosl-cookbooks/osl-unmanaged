@@ -10,11 +10,11 @@ override_attributes(
     "static" => {
       "glusterpath" => "/data",
       "glustervol" => [
-        "fs1.orvsd.bak:/media",
-        "fs2.orvsd.bak:/media"
+        "fs1.orvsd.bak:/static-media",
+        "fs2.orvsd.bak:/static-media"
       ],
       "server_name" => "media.orvsd.org",
-      "root" => "/data/breitenbush/media.orvsd.org"
+      "root" => "/data/media.orvsd.org"
     }
   },
   "nagios" => {
