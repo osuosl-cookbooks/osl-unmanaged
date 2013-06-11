@@ -1,27 +1,26 @@
-
 imap.host= T7GDyNzQwr2Qd4h7Vo0pprbqv+CURfzz
-imap.login = templateme
-imap.password = templateme
+imap.login = <%= node['goblin']['cyrus']['login'] %>
+imap.password = <%= node['goblin']['cyrus']['password'] %>
 
 ldap.read.host = ldap://ldap.onid.orst.edu
 ldap.write.host = ldap://ldap.onid.oregonstate.edu
 ldap.login = <%= node['goblin']['ldap']['username'] %>
 ldap.password = <%= node['goblin']['ldap']['password'] %>
-local.mail.host = cyrus.psumail.pdx.edu
+local.mail.host = test-cyrus-fe.onid.oregonstate.edu
 
 google.key.prod = Z/uAFhQ71V4
-google.oauth.password = templateme
-google.email = templateme
-google.domain = pdx.edu
-google.password = templateme
+google.oauth.password = <% node['goblin']['google']['secret']%>
+google.email = <%= node['goblin']['google']['login'] %>
+google.domain = gtest.onid.oregonstate.edu
+google.password = <%= node['goblin']['google']['key'] %>
 
 memcache.url = test-migfe.onid.oregonstate.edu:11211
 
 rabbitmq.host = test-migbe.onid.oregonstate.edu
 rabbitmq.login = optin
-rabbitmq.password = templateme
+rabbitmq.password = <%= node['goblin']['rabbitmq'] %>
 
-deny.users = ['ccoleman', 'ceaz', 'cedr', 'cfpc', 'cvue', 'devittd', 'dgarrett', 'faaleava', 'farrg', 'felipek', 'friesenb', 'gibsoncm', 'gildera', 'harterd', 'heilmair', 'hxpb', 'iamn', 'jbelter', 'jnicola', 'johnsod', 'jthacher', 'karint', 'kaysink', 'kmukobi', 'ksam', 'ksm', 'lagola', 'lilian', 'lindsw', 'lornat', 'lriven', 'markf', 'maryjane', 'mcclear', 'mekia', 'mercerr', 'mhines', 'mitchkr', 'mlorence', 'motaylor', 'mslewand', 'myeonwoo', 'nallen', 'nhenry', 'ni', 'nissen', 'packarw', 'pklee', 'pphelps', 'pricea', 'rjlittle', 'rootd', 'ruderb', 'sanchezk', 'sergiop', 'sestakb', 'sevillaj', 'shinnc', 'skipp', 'smithgw', 'solr', 'springa', 'sysyng', 'sytsmam', 'tamarak', 'tjbrain', 'todell', 'wrigglek', 'youngc']
+deny.users = ['ducksfan123',]
 
 web.suspended = False
 
