@@ -9,7 +9,7 @@ ldap.password = <%= node['goblin']['ldap']['password'] %>
 local.mail.host = test-cyrus-fe.onid.oregonstate.edu
 
 google.key.prod = Z/uAFhQ71V4
-google.oauth.password = <% node['goblin']['google']['secret']%>
+google.oauth.password = <% node['goblin']['google']['secret'] %>
 google.email = <%= node['goblin']['google']['login'] %>
 google.domain = gtest.onid.oregonstate.edu
 google.password = <%= node['goblin']['google']['key'] %>
