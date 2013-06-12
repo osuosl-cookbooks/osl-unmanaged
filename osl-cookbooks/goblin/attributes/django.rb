@@ -13,6 +13,7 @@ default['goblin']['ldap']['username'] = "uid=onid_googlesync,ou=specials,o=orst.
 default['goblin']['google']['secret'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["google"]["secret"]
 default['goblin']['google']['login'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["google"]["login"]
 default['goblin']['google']['key'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["google"]["key"]
+default['goblin']['google']['password'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["google"]["password"]
 default['goblin']['rabbitmq'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["rabbitmq"]
 default['goblin']['cyrus']['username'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["cyrus"]["login"]
 default['goblin']['cyrus']['password'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["cyrus"]["password"]
