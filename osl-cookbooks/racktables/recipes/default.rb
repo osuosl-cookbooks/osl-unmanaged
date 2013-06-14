@@ -37,14 +37,14 @@ directory extract_path do
   owner node['apache']['user']
   group node['apache']['group']
   recursive true
-  mode 0644
+  mode 0755
   action :create
 end
 
 # vhost
 web_app "racktables" do
-  server_name "inventory2"
-  server_aliases ["inventory2.osuosl.org"]
+  server_name "inventory2.osuosl.org"
+  server_aliases ["inventory2"]
   docroot app_config['dir']
 end
 
