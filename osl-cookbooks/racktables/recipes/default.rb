@@ -62,7 +62,7 @@ bash 'extract_module' do
   cwd ::File.dirname(src_filepath)
   code <<-EOH
     tar xzf #{src_filepath}
-    sudo cp -r #{tmp_path}/wwwroot #{extract_path}
+    sudo cp -r #{tmp_path}/wwwroot/* #{extract_path}
     EOH
   #not_if { ::File.exists?(extract_path) }
 end
