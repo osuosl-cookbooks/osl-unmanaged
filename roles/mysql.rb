@@ -21,6 +21,7 @@ override_attributes(
     "allow_remote_root" => false,
     "remove_test_database" => true,
     "tunable" => {
+      "binlog_format" => "mixed",
       "key_buffer_size" => "32M",
       "myisam_recover" => "FORCE,BACKUP",
       "max_allowed_packet" => "128M",
