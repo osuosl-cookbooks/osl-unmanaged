@@ -21,3 +21,17 @@ supervisor_service "celery" do
   command "/var/www/goblin/shared/env/bin/celeryd -l info"
   directory "/var/www/goblin/current"
 end
+
+template "/opt/google-imap/cyrus.pf" do
+  source "cyrus.pf.erb"
+  mode 00644
+  owner "root"
+  group "www-data"
+end
+
+template "/opt/google-imap/google-prod.pf" do
+  source "google-prod.pf.erb"
+  mode 00644
+  owner "root"
+  group "www-data"
+end
