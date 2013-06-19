@@ -1,8 +1,22 @@
+WSGIPythonHome /var/www/goblin/shared/env
+
+<VirtualHost *:80>
 WSGIDaemonProcess goblin user=optin processes=1 threads=10
 WSGIProcessGroup goblin
-WSGIPythonHome /var/www/goblin/shared/env
 WSGIScriptAlias / /var/www/goblin/current/wsgi/django.wsgi
+
+CASCookiePath /var/cache/apache2/mod_auth_cas/
+CASLoginURL https://login.oregonstate.edu/cas/login
+CASValidateURL https://login.oregonstate.edu/cas/serviceValidate
+
+<Location />
+	Authtype CAS
+	require valid-user
+</Location>
 
 Alias /static/ /var/www/goblin/current/static/
 Alias /css/ /var/www/goblin/current/static/css/
 Alias /images/ /var/www/goblin/current/static/images/
+
+</VirtualHost>
+
