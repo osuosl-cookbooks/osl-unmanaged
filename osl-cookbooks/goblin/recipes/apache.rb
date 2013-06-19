@@ -10,6 +10,7 @@
 include_recipe "goblin::default"
 include_recipe "goblin::django"
 include_recipe "apache2::mod_wsgi"
+include_recipe "apache2::mod_auth_cas"
 include_recipe "memcached"
 
 memcached_instance "goblin"
