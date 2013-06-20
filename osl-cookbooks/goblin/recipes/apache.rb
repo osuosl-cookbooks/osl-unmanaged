@@ -27,3 +27,9 @@ web_app "goblin" do
   server_name node['hostname']
   template "apache.erb"
 end
+
+directory "/var/cache/apache2/mod_auth_cas" do
+  owner "www-data"
+  group "www-data"
+  mode 0770
+end
