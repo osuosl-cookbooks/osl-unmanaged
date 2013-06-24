@@ -9,14 +9,14 @@
 
 include_recipe "simple_iptables"
 
+%w{git moreutils libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|
+  package pkg
+end
+
 git "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
   repository "git://github.com/osuosl/google-imap.git"
   reference "master"
   action :sync
-end
-
-%w{git moreutils libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|
-  package pkg
 end
 
 # Clone google-imap scripts
