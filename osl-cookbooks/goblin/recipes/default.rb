@@ -12,6 +12,7 @@ include_recipe "simple_iptables"
 directory "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
    owner "root"
    group "www-data"
+   recursive true
    mode 0755
 end
 
