@@ -9,6 +9,12 @@
 
 include_recipe "simple_iptables"
 
+directory "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
+   owner "root"
+   group "www-data"
+   mode 0755
+end
+
 %w{git moreutils libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|
   package pkg
 end
