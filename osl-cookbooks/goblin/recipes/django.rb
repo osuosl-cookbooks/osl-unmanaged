@@ -13,7 +13,7 @@ application "goblin" do
   owner "root"
   group "www-data"
   repository "https://github.com/osuosl/Goblin.git"
-  revision "master"
+  revision "bug/13683_mstep_form"
   migrate true
   packages ["libpq-dev", "git-core", "libsasl2-dev", "libldap2-dev",
     "python2.6-dev", "libapache2-mod-auth-cas"]
