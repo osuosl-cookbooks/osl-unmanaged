@@ -15,7 +15,7 @@ git "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
   action :sync
 end
 
-%w{moreutils libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|
+%w{git moreutils libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|
   package pkg
 end
 
