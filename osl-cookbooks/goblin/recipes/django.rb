@@ -9,7 +9,7 @@
 
 # Django goblin application is installed by default on all nodes.
 case node['hostname'] 
-  when "mig-fe1","mig-fe2"
+  when "mig-fe1","mig-fe2","mig-w1","mig-w2","mig-w3"
     application "goblin" do
       path "/var/www/goblin"
       owner "root"
