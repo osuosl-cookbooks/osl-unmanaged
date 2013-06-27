@@ -1,4 +1,4 @@
-imap.host = test-cyrus-fe.onid.oregonstate.edu
+imap.host = <%= node['goblin']['cyrus']['host'] %>
 imap.login = <%= node['goblin']['cyrus']['username'] %>
 imap.password = <%= node['goblin']['cyrus']['password'] %>
 
@@ -6,17 +6,17 @@ ldap.read.host = ldap://ldap.onid.orst.edu
 ldap.write.host = ldap://ldap.onid.oregonstate.edu
 ldap.login = <%= node['goblin']['ldap']['username'] %>
 ldap.password = <%= node['goblin']['ldap']['password'] %>
-local.mail.host = test-cyrus-fe.onid.oregonstate.edu
+local.mail.host = <%= node['goblin']['cyrus']['host'] %>
 
 google.key.prod = Z/uAFhQ71V4
 google.oauth.password = <%= node['goblin']['google']['secret'] %>
 google.email = <%= node['goblin']['google']['login'] %>
-google.domain = gtest.onid.oregonstate.edu
+google.domain = <% node['goblin']['google']['domain']%>
 google.password = <%= node['goblin']['google']['password'] %>
 
-memcache.url = test-migfe.onid.oregonstate.edu:11211
+memcache.url = <%= node['goblin']['memcache']['host'] %>
 
-rabbitmq.host = test-migbe.onid.oregonstate.edu
+rabbitmq.host = <%= node['goblin']['rabbitmq']['host'] %>
 rabbitmq.login = optin
 rabbitmq.password = <%= node['goblin']['rabbitmq'] %>
 
