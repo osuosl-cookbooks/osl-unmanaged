@@ -68,3 +68,11 @@ template "/var/www/goblin/current/etc/opt-in.properties" do
   owner "root"
   group "www-data"
 end
+
+template "/var/www/goblin/current/celeryconfig.py" do
+  source "celeryconfig.py.erb"
+  mode 00644
+  owner "root"
+  group "www-data"
+end
+
