@@ -10,6 +10,9 @@ override_attributes(
     },
     "memcache" => {
       "host" => "mig-fe.onid.oregonstate.edu:11211",
-    }
+    },
+    "rabbitmq" => {
+      "host" => "mig-be.onid.oregonstate.edu",
+    },
   },
 )
