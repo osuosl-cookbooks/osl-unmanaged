@@ -11,7 +11,7 @@ local.mail.host = <%= node['goblin']['cyrus']['host'] %>
 google.key.prod = Z/uAFhQ71V4
 google.oauth.password = <%= node['goblin']['google']['secret'] %>
 google.email = <%= node['goblin']['google']['login'] %>
-google.domain = <% node['goblin']['google']['domain']%>
+google.domain = <%= node['goblin']['google']['domain']%>
 google.password = <%= node['goblin']['google']['password'] %>
 
 memcache.url = <%= node['goblin']['memcache']['host'] %>
