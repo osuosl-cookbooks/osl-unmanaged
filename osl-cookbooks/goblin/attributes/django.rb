@@ -19,7 +19,7 @@ default['goblin']['google']['password'] = Chef::EncryptedDataBagItem.load("gobli
 default['goblin']['google']['domain'] = "gtest.onid.oregonstate.edu"
 
 default['goblin']['rabbitmq']['host'] = "test-migbe.onid.oregonstate.edu"
-default['goblin']['rabbitmq'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["rabbitmq"]
+default['goblin']['rabbitmq']['password'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["rabbitmq"]
 
 default['goblin']['cyrus']['username'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["cyrus"]["login"]
 default['goblin']['cyrus']['password'] = Chef::EncryptedDataBagItem.load("goblin","credentials")["cyrus"]["password"]

@@ -18,7 +18,7 @@ memcache.url = <%= node['goblin']['memcache']['host'] %>
 
 rabbitmq.host = <%= node['goblin']['rabbitmq']['host'] %>
 rabbitmq.login = optin
-rabbitmq.password = <%= node['goblin']['rabbitmq'] %>
+rabbitmq.password = <%= node['goblin']['rabbitmq']['password'] %>
 
 deny.users = ['ducksfan123',]
 
