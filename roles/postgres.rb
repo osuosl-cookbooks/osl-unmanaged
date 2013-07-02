@@ -29,8 +29,6 @@ override_attributes(
     },
     "config" => {
       "listen_addresses" => "*",
-      "max_connections" => "600",
-      "shared_buffers" => "1024MB",
       "log_filename" => "postgresql-%Y-%m-%d.log"
     }
   }
