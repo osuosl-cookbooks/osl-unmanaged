@@ -1,4 +1,4 @@
-name "goblin production settings"
+name "goblin_production"
 description "overrides urls to point at production locations"
 override_attributes(
   "goblin" => {
