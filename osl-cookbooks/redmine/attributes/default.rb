@@ -1,36 +1,47 @@
-# Cookbook Name:: redmine
-# Attributes:: redmine
-#
-# Copyright 2009, Opscode, Inc
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# generic attribs
+default["redmine"]["env"]       = 'production'
+default["redmine"]["repo"]      = 'git://github.com/redmine/redmine.git'
+default["redmine"]["revision"]  = '2.2.4'
+default["redmine"]["deploy_to"] = '/opt/redmine'
+default["redmine"]["path"]      = '/var/www/redmine'
+default["redmine"]["install_method"] = "source"
+default["redmine"]["install_rmagick"] = true
 
-require 'openssl'
+# databases
+default["redmine"]["databases"]["production"]["adapter"]  = 'mysql'
+default["redmine"]["databases"]["production"]["database"] = 'redmine'
+default["redmine"]["databases"]["production"]["username"] = 'redmine'
+default["redmine"]["databases"]["production"]["password"] = 'password'
 
-pw = String.new
-
-while pw.length < 20
-  pw << OpenSSL::Random.random_bytes(1).gsub(/\W/, '')
+# packages
+# packages are separated to better tracking
+case platform
+when "redhat","centos","amazon","scientific","fedora","suse"
+  default["redmine"]["packages"] = {
+    "ruby"    => %w{ ruby-devel },
+    "apache"  => %w{
+      zlib-devel curl-devel openssl-devel httpd-devel apr-devel apr-util-devel
+      mod_passenger
+    },
+    "rmagick" => %w{ ImageMagick ImageMagick-devel },
+    "mysql"   => %w{ mysql-devel },
+    "postgresql" => [],
+    #TODO: SCM packages should be installed only if they are goin to be used
+    #NOTE: git will be installed with a recipe because is needed for the deploy resource
+    "scm"     => %w{ subversion bzr mercurial darcs cvs }
+  }
+when "debian","ubuntu"
+  default["redmine"]["packages"] = {
+    "ruby"    => %w{ ruby rubygems libruby ruby-dev },
+    "apache"  => %w{
+      libapr1-dev libaprutil1-dev libcurl4-openssl-dev
+      libapache2-mod-passenger
+    },
+    "rmagick" => %w{ libmagickcore-dev libmagickwand-dev librmagick-ruby },
+    "mysql"   => %w{ libmysqlclient-dev },
+    "postgresql" => %w{ ruby-pg libpq-dev },
+    #TODO: SCM packages should be installed only if they are goin to be used
+    #NOTE: git will be installed with a recipe because is needed for the deploy resource
+    "scm"     => %w{ subversion bzr mercurial darcs cvs }
+  }
 end
-
-#database_server = search(:node, "database_master:true").map {|n| n['fqdn']}.first
-
-set[:redmine][:dir] = "/srv/redmine-#{redmine[:version]}"
-
-default[:redmine][:dl_id]   = "56909"
-default[:redmine][:version] = "0.8.4"
-
-default[:redmine][:db][:type]     = "sqlite"
-default[:redmine][:db][:user]     = "redmine"
-default[:redmine][:db][:password] = pw
-default[:redmine][:db][:hostname] = "localhost"

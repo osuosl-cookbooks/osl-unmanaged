@@ -1,15 +1,18 @@
-maintainer        "Opscode, Inc."
-maintainer_email  "cookbooks@opscode.com"
-license           "Apache 2.0"
-description       "Installs and configures redmine as a Rails app in passenger+apache2"
-version           "0.10.3"
+name             "redmine"
+maintainer       "Juanje Ojeda"
+maintainer_email "juanje.ojeda@gmail.com"
+license          "Apache 2.0"
+description      "Install Redmine from Github"
+version          "0.1.0"
 
-recipe "redmine", "Installs and configures redmine under passenger + apache2"
+recipe "redmine", "Install the Redmine application from the source"
+recipe "redmine::source", "Install the Redmine application from the source"
+recipe "redmine::package", "Install the Redmine application from packages"
 
-%w{ apache2 rails passenger_apache2 mysql sqlite }.each do |cb|
-  depends cb
+%w{ git apache2 passenger_apache2 mysql postgresql apt yum database}.each do |dep|
+  depends dep
 end
 
-%w{ ubuntu debian }.each do |os|
-  supports os
+%w{ debian ubuntu centos redhat amazon scientific fedora suse }.each do |os|
+    supports os
 end
