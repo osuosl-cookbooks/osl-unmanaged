@@ -3,6 +3,7 @@ description "postgresql server role"
 run_list(
     "role[base_managed]",
     "recipe[postgresql::server]",
+    "recipe[postgresql::config_pgtune]",
     "recipe[firewall::postgres]"
 )
 default_attributes(
@@ -21,6 +22,10 @@ override_attributes(
     },
     "contrib" => {
       "packages" => ["postgresql92-contrib"]
+    },
+    "config_pgtune" => {
+      "db_type" => "web",
+      "max_connections" => "300",
     },
     "config" => {
       "listen_addresses" => "*",
