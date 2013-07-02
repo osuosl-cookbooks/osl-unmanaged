@@ -54,7 +54,7 @@ when "ubuntu"
 
   default['postgresql']['dir'] = "/etc/postgresql/#{node['postgresql']['version']}/main"
   case
-  when node['platform_version'].to_f <= 10.04
+  when (node['platform_version'].to_f <= 10.04) && (! node['postgresql']['enable_pgdg_apt'])
     default['postgresql']['server']['service_name'] = "postgresql-#{node['postgresql']['version']}"
   else
     default['postgresql']['server']['service_name'] = "postgresql"
@@ -181,7 +181,13 @@ default['postgresql']['pg_hba'] = [
 
 default['postgresql']['password'] = Hash.new
 
-default['postgresql']['enable_pitti_ppa'] = false
+default['postgresql']['enable_pgdg_apt'] = false
+
+case node['platform_family']
+when 'debian'
+  default['postgresql']['pgdg']['release_apt_codename'] = node['lsb']['codename']
+end
+
 default['postgresql']['enable_pgdg_yum'] = false
 
 # The PostgreSQL RPM Building Project built repository RPMs for easy
