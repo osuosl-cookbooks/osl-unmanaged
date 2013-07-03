@@ -26,6 +26,9 @@ git "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
   action :sync
 end
 
+# URI::Escape is not packaged in Debian
+cpan_module "URI::Escape"
+
 # Clone google-imap scripts
 git "/opt/google-imap" do
   repository "git://github.com/osuosl/google-imap.git"
