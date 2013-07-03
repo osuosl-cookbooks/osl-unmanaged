@@ -8,6 +8,7 @@
 #
 
 include_recipe "simple_iptables"
+include_recipe "perl"
 
 directory "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
    owner "root"
