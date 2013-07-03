@@ -28,7 +28,8 @@ when "redhat","centos","amazon","scientific","fedora","suse"
     "postgresql" => [],
     #TODO: SCM packages should be installed only if they are goin to be used
     #NOTE: git will be installed with a recipe because is needed for the deploy resource
-    "scm"     => %w{ subversion bzr mercurial darcs cvs }
+    "scm"     => %w{ }
+    #"scm"     => %w{ subversion bzr mercurial darcs cvs }
   }
 when "debian","ubuntu"
   default["redmine"]["packages"] = {
@@ -42,6 +43,7 @@ when "debian","ubuntu"
     "postgresql" => %w{ ruby-pg libpq-dev },
     #TODO: SCM packages should be installed only if they are goin to be used
     #NOTE: git will be installed with a recipe because is needed for the deploy resource
-    "scm"     => %w{ subversion bzr mercurial darcs cvs }
+    "scm"     => %w{ }
+    #"scm"     => %w{ subversion bzr mercurial darcs cvs }
   }
 end

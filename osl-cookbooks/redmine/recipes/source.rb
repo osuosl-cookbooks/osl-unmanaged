@@ -29,6 +29,8 @@ when "redhat","centos","amazon","scientific","fedora","suse"
   include_recipe "yum::epel"
 end
 
+include_recipe "build-essential"
+
 #Install redmine required dependencies
 node['redmine']['packages']['ruby'].each do |pkg|
   package pkg
