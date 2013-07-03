@@ -40,7 +40,7 @@ case node['hostname']
       owner "root"
       group "www-data"
       repository "https://github.com/osuosl/Goblin.git"
-      revision "bug/13683_mstep_form"
+      revision "bug/13149_theme"
       #revision "master"
       migrate true
       packages ["libpq-dev", "git-core", "libsasl2-dev", "libldap2-dev",
