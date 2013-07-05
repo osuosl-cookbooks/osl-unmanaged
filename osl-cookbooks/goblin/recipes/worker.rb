@@ -16,6 +16,7 @@ supervisor_service "celery" do
   autostart true
   autorestart true
   user "optin"
+  numprocs 20
   startsecs 10
   stopwaitsecs 600
   command "/var/www/goblin/shared/env/bin/celeryd -l info"
