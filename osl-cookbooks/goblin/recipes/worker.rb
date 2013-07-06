@@ -19,7 +19,7 @@ supervisor_service "celery" do
   numprocs 20
   startsecs 10
   stopwaitsecs 600
-  command "/var/www/goblin/shared/env/bin/celeryd -l info"
+  command "source /var/www/goblin/shared/env/bin/activate && /var/www/goblin/bin/celeryd start"
   directory "/var/www/goblin/current"
 end
 
