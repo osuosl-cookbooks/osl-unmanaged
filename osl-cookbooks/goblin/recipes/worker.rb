@@ -16,6 +16,7 @@ supervisor_service "celery" do
   autostart true
   autorestart true
   user "optin"
+  process_name "%(program_name)-%(process_num)s"
   numprocs 20
   startsecs 10
   stopwaitsecs 600
