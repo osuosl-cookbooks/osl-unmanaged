@@ -19,6 +19,7 @@ end
 
 directory "'/var/www/goblin/shared" do
    mode 0775
+   recursive true
 end
 
 %w{git moreutils libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|

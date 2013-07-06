@@ -16,11 +16,11 @@ supervisor_service "celery" do
   autostart true
   autorestart true
   user "optin"
-  process_name "%(program_name)-%(process_num)s"
-  numprocs 20
+  process_name "%(program_name)s"
+  numprocs 1
   startsecs 10
   stopwaitsecs 600
-  command "/bin/bash /var/www/goblin/shared/env/bin/activate && /var/www/goblin/current/bin/celeryd start"
+  command "/bin/bash /var/www/goblin/current/bin/wrapper.sh"
   directory "/var/www/goblin/current"
 end
 
