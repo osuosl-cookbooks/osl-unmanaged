@@ -21,6 +21,8 @@ default['goblin']['google']['key'] = databag["google"]["key"]
 default['goblin']['google']['password'] = databag["google"]["password"]
 default['goblin']['google']['domain'] = "gtest.onid.oregonstate.edu"
 
+default['goblin']['celery']['concurrency'] = 20
+
 default['goblin']['rabbitmq']['host'] = "test-migbe.onid.oregonstate.edu"
 default['goblin']['rabbitmq']['password'] = databag["rabbitmq"]
 
