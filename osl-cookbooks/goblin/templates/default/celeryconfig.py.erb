@@ -4,7 +4,7 @@ BROKER_PORT = 5672
 BROKER_USER = 'optin'
 BROKER_PASSWORD = 'CbXVtHJHFmwgE'
 BROKER_VHOST = '/optin'
-CELERY_CONCURRENCY = <%= node['goblin']['celery']['concurrency'] %>
+CELERYD_CONCURRENCY = <%= node['goblin']['celery']['concurrency'] %>
 CELERY_RESULT_BACKEND = "amqp"
 CELERY_IMPORTS = ("tasks", )
 CELERYD_LOG_FILE = '/var/www/goblin/shared/celery.log'
