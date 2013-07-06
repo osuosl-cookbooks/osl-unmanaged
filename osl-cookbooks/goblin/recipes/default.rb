@@ -17,9 +17,13 @@ directory "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
    mode 0755
 end
 
-directory "'/var/www/goblin/shared" do
+directory "/var/www/goblin/shared" do
    mode 0775
    recursive true
+end
+
+file "/var/www/goblin/shared/celeryd@celery.pid" do
+   mode "0775"
 end
 
 %w{git moreutils libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|
