@@ -5,6 +5,9 @@ override_attributes(
     "google" => {
       "domain" => "onid.oregonstate.edu",
     },
+    "celery" => {
+      "concurrency" => "20",
+    },
     "cyrus" => {
       "host" => "imap.onid.oregonstate.edu",
     },
