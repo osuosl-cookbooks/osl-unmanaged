@@ -56,23 +56,23 @@ case adapter
 when "mysql"
   include_recipe "mysql::server"
 when "postgresql"
-  include_recipe "postgresql::server"
+  include_recipe "postgresql::client"
 end
 
-case adapter
-when "mysql"
-  connection_info = {
-    :host => "localhost",
-    :username => 'root',
-    :password => node['mysql']['server_root_password'].empty? ? '' : node['mysql']['server_root_password']
-  }
-when "postgresql"
-  connection_info = {
-    :host => "localhost",
-    :username => 'postgres',
-    :password => node['postgresql']['password']['postgres'].empty? ? '' : node['postgresql']['password']['postgres']
-  }
-end
+#case adapter
+#when "mysql"
+#  connection_info = {
+#    :host => "localhost",
+#    :username => 'root',
+#    :password => node['mysql']['server_root_password'].empty? ? '' : node['mysql']['server_root_password']
+#  }
+#when "postgresql"
+#  connection_info = {
+#    :host => "localhost",
+#    :username => 'postgres',
+#    :password => node['postgresql']['password']['postgres'].empty? ? '' : node['postgresql']['password']['postgres']
+#  }
+#end
 
 
 
@@ -145,7 +145,7 @@ deploy_revision node['redmine']['deploy_to'] do
       group node['apache']['group']
       mode "644"
       variables(
-        :host => 'mysql1-vip.osuosl.org',
+        :host => 'pg2.osuosl.org',
         :db   => node['redmine']['databases'][environment],
         :rails_env => environment
       )
