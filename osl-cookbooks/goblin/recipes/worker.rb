@@ -37,3 +37,9 @@ template "/opt/google-imap/google-prod.pf" do
   owner "root"
   group "www-data"
 end
+
+simple_iptables_rule "munin" do
+  rule "--proto tcp --dport 4949"
+  jump "ACCEPT"
+end
+
