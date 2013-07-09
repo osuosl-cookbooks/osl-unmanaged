@@ -26,7 +26,7 @@ file "/var/www/goblin/shared/celeryd@celery.pid" do
    mode "0775"
 end
 
-%w{git moreutils libnet-managesieve-perl libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|
+%w{git moreutils libcyrus-imap-perl22 libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|
   package pkg
 end
 
