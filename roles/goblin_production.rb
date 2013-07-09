@@ -1,5 +1,8 @@
 name "goblin_production"
 description "overrides urls to point at production locations"
+run_list(
+  "recipe[munin::client]",
+)
 override_attributes(
   "goblin" => {
     "google" => {
