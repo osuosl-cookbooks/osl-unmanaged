@@ -17,4 +17,21 @@
 # limitations under the License.
 #
 
-include recipe "yum::epel"
+include_recipe "yum::epel"
+
+#Install redmine required dependencies
+node['redmine']['packages']['ruby'].each do |pkg|
+  package pkg
+end
+node['redmine']['packages']['apache'].each do |pkg|
+  package pkg
+end
+if node['redmine']['install_rmagick']
+  node['redmine']['packages']['rmagick'].each do |pkg|
+    package pkg
+  end
+end
+
+include_recipe "postgresql::client"
+include_recipe "database::postgresql"
+include_recipe "build-essential"
