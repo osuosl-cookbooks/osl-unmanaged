@@ -1,15 +1,12 @@
 name "goblin_production"
 description "overrides urls to point at production locations"
-run_list(
-  "recipe[munin::client]",
-)
 override_attributes(
   "goblin" => {
     "google" => {
       "domain" => "onid.oregonstate.edu",
     },
     "celery" => {
-      "concurrency" => "20",
+      "concurrency" => "30",
     },
     "cyrus" => {
       "host" => "imap.onid.oregonstate.edu",
