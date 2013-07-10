@@ -17,6 +17,11 @@
 # limitations under the License.
 #
 
+# Some handy vars
+environment = node['redmine']['env']
+adapter = node["redmine"]["databases"][environment]["adapter"]
+
+# Package manager stuff
 include_recipe "yum::epel"
 
 #Install redmine required dependencies
@@ -32,15 +37,28 @@ if node['redmine']['install_rmagick']
   end
 end
 
-include_recipe "postgresql::client"
-include_recipe "database::postgresql"
+# Apache
+include_recipe "apache2"
+
+case adapter
+when "mysql"
+  include_recipe "mysql::client"
+  include_recipe "database::mysql"
+when "postgresql"
+  include_recipe "postgresql::client"
+  include_recipe "database::postgresql"
+end
+
+# Needed for ruby gem stuff
 include_recipe "build-essential"
 
+# Needed to get from the git repo
+include_recipe "git"
 #case adapter
 #when "mysql"
 #  connection_info = {
 #      :host => "mysql1-vip.osuosl.org",
-#      :username => 'root',
+#      :username => 'user',
 #      :password => node['mysql']['server_root_password'].empty? ? '' : node['mysql']['server_root_password']
 #  }
 #when "postgresql"
@@ -50,3 +68,9 @@ include_recipe "build-essential"
 #      :password => node['postgresql']['password']['postgres'].empty? ? '' : node['postgresql']['password']['postgres']
 #  }
 #end
+
+# Setup Apache
+apache_site "000-default" do
+  enable false
+  notifies :restart, "service[apache2]"
+end

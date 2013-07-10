@@ -15,7 +15,7 @@ default["redmine"]["databases"]["production"]["password"]   = 'password'
 
 default["redmine"]["packages"] = {
   "ruby"    => %w{ ruby-devel },
-    "apache"  => %w{ zlib-devel curl-devel openssl-devel httpd-devel apr-devel 
+  "apache"  => %w{ zlib-devel curl-devel openssl-devel httpd-devel apr-devel 
           apr-util-devel mod_passenger },
-    "rmagick" => %w{ ImageMagick ImageMagick-devel }
+  "rmagick" => %w{ ImageMagick ImageMagick-devel }
 }
