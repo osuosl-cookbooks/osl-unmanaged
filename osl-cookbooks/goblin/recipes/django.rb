@@ -76,3 +76,9 @@ template "/var/www/goblin/current/celeryconfig.py" do
   group "www-data"
 end
 
+template "/var/www/goblin/current/etc/imap_fwd.cfg" do
+  source "imap_fwd.erb"
+  mode 00644
+  owner "root"
+  group "www-data"
+end
