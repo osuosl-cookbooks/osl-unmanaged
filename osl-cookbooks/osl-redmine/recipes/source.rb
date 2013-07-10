@@ -32,21 +32,21 @@ if node['redmine']['install_rmagick']
   end
 end
 
-#include_recipe "postgresql::client" #<--- stupid chef says these can't be found right now, moved them to the node file instead
-#include_recipe "database::postgresql" #<--- same as above
+include_recipe "postgresql::client"
+include_recipe "database::postgresql"
 include_recipe "build-essential"
 
-case adapter
-when "mysql"
-  connection_info = {
-      :host => "mysql1-vip.osuosl.org",
-      :username => 'root',
-      :password => node['mysql']['server_root_password'].empty? ? '' : node['mysql']['server_root_password']
-  }
-when "postgresql"
-  connection_info = {
-      :host => "pg2.osuosl.org",
-      :username => 'postgres',
-      :password => node['postgresql']['password']['postgres'].empty? ? '' : node['postgresql']['password']['postgres']
-  }
-end
+#case adapter
+#when "mysql"
+#  connection_info = {
+#      :host => "mysql1-vip.osuosl.org",
+#      :username => 'root',
+#      :password => node['mysql']['server_root_password'].empty? ? '' : node['mysql']['server_root_password']
+#  }
+#when "postgresql"
+#  connection_info = {
+#      :host => "pg2.osuosl.org",
+#      :username => 'postgres',
+#      :password => node['postgresql']['password']['postgres'].empty? ? '' : node['postgresql']['password']['postgres']
+#  }
+#end
