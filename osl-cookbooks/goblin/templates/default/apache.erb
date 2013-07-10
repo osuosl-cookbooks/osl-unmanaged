@@ -1,23 +1,40 @@
+SSLCertificateFile /etc/ssl/private/g-opt-in.onid.oregonstate.edu.crt
+SSLCertificateKeyFile /etc/ssl/private/g-opt-in.onid.oregonstate.edu.key
+SSLCertificateChainFile /etc/ssl/private/InCommon_Server_CA.pem
+
 WSGIPythonHome /var/www/goblin/shared/env
 
 <VirtualHost *:80>
-WSGIDaemonProcess goblin user=optin processes=1 threads=10
-WSGIProcessGroup goblin
-WSGIScriptAlias / /var/www/goblin/current/wsgi/django.wsgi
+        ServerName g-opt-in.onid.oregonstate.edu
+        ServerAlias mig-fe1.onid.oregonstate.edu
+        ServerAlias mig-fe2.onid.oregonstate.edu
 
-CASCookiePath /var/cache/apache2/mod_auth_cas/
-CASLoginURL https://login.oregonstate.edu/cas/login
-CASValidateURL https://login.oregonstate.edu/cas/serviceValidate
-CASValidateServer Off
+        RewriteEngine on
+        RewriteRule ^/ https://g-opt-in.onid.oregonstate.edu/
+</VirtualHost>
 
-<Location />
-	Authtype CAS
-	require valid-user
-</Location>
+<VirtualHost *:443>
+        ServerName g-opt-in.onid.oregonstate.edu
+        ServerAlias mig-fe1.onid.oregonstate.edu
+        ServerAlias mig-fe2.onid.oregonstate.edu
 
-Alias /static/ /var/www/goblin/current/static/
-Alias /css/ /var/www/goblin/current/static/css/
-Alias /images/ /var/www/goblin/current/static/images/
+        WSGIDaemonProcess goblin user=optin processes=1 threads=10
+        WSGIProcessGroup goblin
+        WSGIScriptAlias / /var/www/goblin/current/wsgi/django.wsgi
+
+        CASCookiePath /var/cache/apache2/mod_auth_cas/
+        CASLoginURL https://login.oregonstate.edu/cas/login
+        CASValidateURL https://login.oregonstate.edu/cas/serviceValidate
+        CASValidateServer Off
+
+        <Location />
+                Authtype CAS
+                require valid-user
+        </Location>
+
+        Alias /static/ /var/www/goblin/current/static/
+        Alias /css/ /var/www/goblin/current/static/css/
+        Alias /images/ /var/www/goblin/current/static/images/
 
 </VirtualHost>
 
