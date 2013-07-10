@@ -21,5 +21,5 @@
 # Sanity check, set way to install redmine
 case node['platform']
 when "redhat","centos","amazon","scientific","fedora","suse"
-  include_recipe "redmine2::source"
+  include_recipe "osl-redmine::source"
 end

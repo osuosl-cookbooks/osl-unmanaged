@@ -32,6 +32,6 @@ if node['redmine']['install_rmagick']
   end
 end
 
-include_recipe "postgresql::client"
-include_recipe "database::postgresql"
+#include_recipe "postgresql::client"
+#include_recipe "database::postgresql"
 include_recipe "build-essential"
