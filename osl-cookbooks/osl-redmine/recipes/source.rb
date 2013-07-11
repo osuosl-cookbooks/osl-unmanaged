@@ -112,3 +112,12 @@ end
 gem_package "bundler" do
   action :install
 end
+
+# Get the redmine file from the git repo
+deploy_revision node['redmine']['deploy_to'] do
+  repo node['redmine']['repo']
+  revision node['redmine']['revision']
+  user node['apache']['user']
+  group node['apache']['group']
+  environment "RAILS_ENV" => environment
+end
