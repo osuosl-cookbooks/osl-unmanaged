@@ -22,15 +22,18 @@ environment = node['redmine']['env']
 adapter = node["redmine"]["databases"][environment]["adapter"]
 
 # All the required recipes for this
+Chef::Log.info('including recipes')
 include_recipe "yum::epel"
 include_recipe "apache2"
 include_recipe "git"
 include_recipe "build-essential" # needed for ruby gems building
 case adapter # use  a db reciped depending on the desired db
 when "mysql"
+  Chef::Log.info('including mysql stuff')
   include_recipe "mysql::client"
   include_recipe "database::mysql"
 when "postgresql"
+  Chef::Log.info('including postgres stuff')
   include_recipe "postgresql::client"
   include_recipe "database::postgresql"
 end
@@ -52,12 +55,14 @@ end
 
 #case adapter
 #when "mysql" # These should be overridden in editing the node!
+#  Chef::Log.info('setting postgres connection info')
 #  connection_info = {
 #      :host => "localhost",
 #      :username => 'root',
 #      :password => node['mysql']['server_root_password'].empty? ? '' : node['mysql']['server_root_password']
 #  }
 #when "postgresql"
+#  Chef::Log.info('setting postgres connection info')
 #  connection_info = {
 #      :host => "localhost",
 #      :username => 'postgres',
@@ -71,8 +76,10 @@ end
 #  password node["redmine"]["databases"][environment]["password"]
 #  case adapter
 #  when "mysql"
+#    Chef::Log.info('setting mysql user info')
 #    provider Chef::Provider::Database::MysqlUser
 #  when "postgresql"
+#    Chef::Log.info('setting postgres user info')
 #    provider Chef::Provider::Database::PostgresqlUser
 #  end
 #  action :create
@@ -85,8 +92,10 @@ end
 #  password node["redmine"]["databases"][environment]["password"]
 #  case adapter
 #  when "mysql"
+#    Chef::Log.info('setting mysql user rights')
 #    provider Chef::Provider::Database::MysqlUser
 #  when "postgresql"
+#    Chef::Log.info('setting postgres user rights')
 #    provider Chef::Provider::Database::PostgresqlUser
 #  end
 #  privileges [:all]
@@ -94,12 +103,14 @@ end
 #end
 
 # Setup Apache
+Chef::Log.info('setting apache')
 apache_site "000-default" do
   enable false
   notifies :restart, "service[apache2]"
 end
 
 web_app "redmine" do
+  Chef::Log.info('setting outside redmine configuration')
   docroot ::File.join(node['redmine']['path'], 'public')
   template "redmine.conf.erb"
   server_name "redmine.#{node['domain']}"
@@ -109,11 +120,13 @@ end
 
 
 # Install Bundler
+Chef::Log.info('Installing bundler')
 gem_package "bundler" do
   action :install
 end
 
 # Get redmine from git
+Chef::Log.info('Sourcing redmine from git')
 deploy_revision node['redmine']['deploy_to'] do
   repo node['redmine']['repo']
   revision node['redmine']['revision']
@@ -131,6 +144,7 @@ deploy_revision node['redmine']['deploy_to'] do
       end
     end
 
+    Chef::Log.info('setting redmine databas config')
     template "#{node['redmine']['deploy_to']}/shared/config/database.yml" do
       source "database.yml.erb"
       owner node['apache']['user']
@@ -145,10 +159,12 @@ deploy_revision node['redmine']['deploy_to'] do
 
     case adapter
     when "mysql"
+      Chef::Log.info('bundle install with mysql')
       execute "bundle install --without development test postgresql sqlite" do
         cwd release_path
       end
     when "postgresql"
+      Chef::Log.info('bundle install with postgres')
       execute "bundle install --without development test mysql sqlite" do
         cwd release_path
       end
