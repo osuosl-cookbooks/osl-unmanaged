@@ -21,8 +21,20 @@
 environment = node['redmine']['env']
 adapter = node["redmine"]["databases"][environment]["adapter"]
 
-# Package manager stuff
+# All the required recipes for this
 include_recipe "yum::epel"
+include_recipe "apache2"
+include_recipe "git"
+include_recipe "build-essential" # needed for ruby gems building
+case adapter # use  a db reciped depending on the desired db
+when "mysql"
+  include_recipe "mysql::client"
+  include_recipe "database::mysql"
+when "postgresql"
+  include_recipe "postgresql::client"
+  include_recipe "database::postgresql"
+end
+
 
 #Install redmine required dependencies
 node['redmine']['packages']['ruby'].each do |pkg|
@@ -37,40 +49,42 @@ if node['redmine']['install_rmagick']
   end
 end
 
-# Apache
-include_recipe "apache2"
 
-case adapter
-when "mysql"
-  include_recipe "mysql::client"
-  include_recipe "database::mysql"
-when "postgresql"
-  include_recipe "postgresql::client"
-  include_recipe "database::postgresql"
-end
-
-# Needed for ruby gem stuff
-include_recipe "build-essential"
-
-# Needed to get from the git repo
-include_recipe "git"
 #case adapter
-#when "mysql"
+#when "mysql" # These should be overridden in editing the node!
 #  connection_info = {
-#      :host => "mysql1-vip.osuosl.org",
-#      :username => 'user',
+#      :host => "localhost",
+#      :username => 'root',
 #      :password => node['mysql']['server_root_password'].empty? ? '' : node['mysql']['server_root_password']
 #  }
 #when "postgresql"
 #  connection_info = {
-#      :host => "pg2.osuosl.org",
+#      :host => "localhost",
 #      :username => 'postgres',
 #      :password => node['postgresql']['password']['postgres'].empty? ? '' : node['postgresql']['password']['postgres']
 #  }
 #end
 
+# Setup DB User
+
+# Setup DB User Permissions
+
 # Setup Apache
 apache_site "000-default" do
   enable false
   notifies :restart, "service[apache2]"
+end
+
+web_app "redmine" do
+  docroot ::File.join(node['redmine']['path'], 'public')
+  template "redmine.conf.erb"
+  server_name "redmine.#{node['domain']}"
+  server_aliases [ "redmine", node['hostname'] ]
+  rails_env environment
+end
+
+
+# Install Bundler
+gem_package "bundler" do
+  action :install
 end
