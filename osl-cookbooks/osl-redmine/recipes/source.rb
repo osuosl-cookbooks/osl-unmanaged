@@ -66,8 +66,32 @@ end
 #end
 
 # Setup DB User
+#database_user node["redmine"]["databases"][environment]["username"] do
+#  connection connection_info
+#  password node["redmine"]["databases"][environment]["password"]
+#  case adapter
+#  when "mysql"
+#    provider Chef::Provider::Database::MysqlUser
+#  when "postgresql"
+#    provider Chef::Provider::Database::PostgresqlUser
+#  end
+#  action :create
+#end
 
 # Setup DB User Permissions
+#database_user node["redmine"]["databases"][environment]["username"] do
+#  connection connection_info
+#  database_name node["redmine"]["databases"][environment]["database"]
+#  password node["redmine"]["databases"][environment]["password"]
+#  case adapter
+#  when "mysql"
+#    provider Chef::Provider::Database::MysqlUser
+#  when "postgresql"
+#    provider Chef::Provider::Database::PostgresqlUser
+#  end
+#  privileges [:all]
+#  action :grant
+#end
 
 # Setup Apache
 apache_site "000-default" do
