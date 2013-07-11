@@ -8,10 +8,10 @@ default["redmine"]["install_method"]    = "source"
 default["redmine"]["install_rmagick"]   = true
 
 # databases
-default["redmine"]["databases"]["production"]["adapter"]    = 'postgresql'
-default["redmine"]["databases"]["production"]["database"]   = 'redmine'
-default["redmine"]["databases"]["production"]["username"]   = 'redmine'
-default["redmine"]["databases"]["production"]["password"]   = 'password'
+default["redmine"]["databases"]["production"]["adapter"]    = 'pg2.osuosl.org'
+default["redmine"]["databases"]["production"]["database"]   = 'fsslgy_redmine'
+default["redmine"]["databases"]["production"]["username"]   = 'fsslgy_redmine'
+default["redmine"]["databases"]["production"]["password"]   = 'test'
 
 default["redmine"]["packages"] = {
   "ruby"    => %w{ ruby-devel },
