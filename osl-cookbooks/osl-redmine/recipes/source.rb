@@ -113,11 +113,72 @@ gem_package "bundler" do
   action :install
 end
 
-# Get the redmine file from the git repo
+# Get redmine from git
 deploy_revision node['redmine']['deploy_to'] do
   repo node['redmine']['repo']
   revision node['redmine']['revision']
   user node['apache']['user']
   group node['apache']['group']
   environment "RAILS_ENV" => environment
+
+  before_migrate do
+    %w{config log system pids}.each do |dir|
+      directory "#{node['redmine']['deploy_to']}/shared/#{dir}" do
+        owner node['apache']['user']
+        group node['apache']['group']
+        mode '0755'
+        recursive true
+      end
+    end
+
+    template "#{node['redmine']['deploy_to']}/shared/config/database.yml" do
+      source "database.yml.erb"
+      owner node['apache']['user']
+      group node['apache']['group']
+      mode "644"
+      variables(
+        :host => 'localhost',
+        :db => node['redmine']['databases'][environment],
+        :rails_env => environment
+      )
+    end
+
+    case adapter
+    when "mysql"
+      execute "bundle install --without development test postgresql sqlite" do
+        cwd release_path
+      end
+    when "postgresql"
+      execute "bundle install --without development test mysql sqlite" do
+        cwd release_path
+      end
+    end
+
+#    if Gem::Version.new(node['redmine']['revision']) < Gem::Version.new('2.0.0')
+#      execute 'rake generate_session_store' do
+#        cwd release_path
+#        not_if { ::File.exists?("#{release_path}/db/schema.rb") }
+#      end
+#    else
+#      execute 'rake generate_secret_token' do
+#        cwd release_path
+#        not_if { ::File.exists?("#{release_path}/config/initializers/secret_token.rb") }
+#      end
+#    end
+
+  end
+
+#  migrate true
+#  migration_command 'rake db:migrate'
+
+  create_dirs_before_symlink %w{tmp public config tmp/pdf public/plugin_assets}
+
+  before_restart do
+    link node['redmine']['path'] do
+      to release_path
+    end
+  end
+
+  action :deploy
+  notifies :restart, "service[apache2]"
 end
