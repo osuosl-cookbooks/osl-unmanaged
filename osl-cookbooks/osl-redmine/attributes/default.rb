@@ -9,6 +9,7 @@ default["redmine"]["install_rmagick"] = true
 
 # databases
 default["redmine"]["databases"]["production"]["adapter"]  = 'postgresql'
+default["redmine"]["databases"]["production"]["host"]  = 'pg2.osuosl.org'
 default["redmine"]["databases"]["production"]["database"] = 'fsslgy_redmine'
 default["redmine"]["databases"]["production"]["username"] = 'fsslgy_redmine'
 default["redmine"]["databases"]["production"]["password"] = 'test'

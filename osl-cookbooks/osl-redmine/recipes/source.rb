@@ -56,7 +56,7 @@ when "mysql"
   include_recipe "mysql::server"
   include_recipe "database::mysql"
 when "postgresql"
-  include_recipe "postgresql::server"
+  include_recipe "postgresql::client"
   include_recipe "database::postgresql"
 end
 
@@ -75,42 +75,42 @@ when "postgresql"
   }
 end
 
-database node["redmine"]["databases"][environment]["database"] do
-  connection connection_info
-  case adapter
-  when "mysql"
-    provider Chef::Provider::Database::Mysql
-  when "postgresql"
-    provider Chef::Provider::Database::Postgresql
-  end
-  action :create
-end
+#database node["redmine"]["databases"][environment]["database"] do
+#  connection connection_info
+#  case adapter
+#  when "mysql"
+#    provider Chef::Provider::Database::Mysql
+#  when "postgresql"
+#    provider Chef::Provider::Database::Postgresql
+#  end
+#  action :create
+#end
 
-database_user node["redmine"]["databases"][environment]["username"] do
-  connection connection_info
-  password   node["redmine"]["databases"][environment]["password"]
-  case adapter
-  when "mysql"
-    provider Chef::Provider::Database::MysqlUser
-  when "postgresql"
-    provider Chef::Provider::Database::PostgresqlUser
-  end
-  action :create
-end
+#database_user node["redmine"]["databases"][environment]["username"] do
+#  connection connection_info
+#  password   node["redmine"]["databases"][environment]["password"]
+#  case adapter
+#  when "mysql"
+#    provider Chef::Provider::Database::MysqlUser
+#  when "postgresql"
+#    provider Chef::Provider::Database::PostgresqlUser
+#  end
+#  action :create
+#end
 
-database_user node["redmine"]["databases"][environment]["username"] do
-  connection    connection_info
-  database_name node["redmine"]["databases"][environment]["database"]
-  password node["redmine"]["databases"][environment]["password"]
-  case adapter
-  when "mysql"
-    provider Chef::Provider::Database::MysqlUser
-  when "postgresql"
-    provider Chef::Provider::Database::PostgresqlUser
-  end
-  privileges [:all]
-  action :grant
-end
+#database_user node["redmine"]["databases"][environment]["username"] do
+#  connection    connection_info
+#  database_name node["redmine"]["databases"][environment]["database"]
+#  password node["redmine"]["databases"][environment]["password"]
+#  case adapter
+#  when "mysql"
+#    provider Chef::Provider::Database::MysqlUser
+#  when "postgresql"
+#    provider Chef::Provider::Database::PostgresqlUser
+#  end
+#  privileges [:all]
+#  action :grant
+#end
 
 #Setup Apache
 include_recipe "apache2"
