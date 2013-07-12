@@ -69,8 +69,8 @@ when "mysql"
   }
 when "postgresql"
   connection_info = {
-    :host => "localhost",
-    :username => 'postgres',
+    :host => "pg2.osuosl.org",
+    :username => 'fsslgy_redmine',
     :password => node['postgresql']['password']['postgres'].empty? ? '' : node['postgresql']['password']['postgres']
   }
 end
@@ -122,7 +122,7 @@ end
 web_app "redmine" do
   docroot        ::File.join(node['redmine']['path'], 'public')
   template       "redmine.conf.erb"
-  server_name    "redmine.#{node['domain']}"
+  server_name    "#{node['fqdn']}"
   server_aliases [ "redmine", node['hostname'] ]
   rails_env      environment
 end
