@@ -196,6 +196,9 @@ deploy_revision node['redmine']['deploy_to'] do
       execute "bundle install --without development test mysql sqlite" do
         cwd release_path
       end
+      gem_package "pg" do   # this is a safety because it seems bundler may not install the postgres gem
+        action :install
+      end
     end
 
     if Gem::Version.new(node['redmine']['revision']) < Gem::Version.new('2.0.0')
