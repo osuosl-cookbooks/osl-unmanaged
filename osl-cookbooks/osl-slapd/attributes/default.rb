@@ -1,0 +1,8 @@
+default['osl-slapd']['server_role'] = "openldap"
+default['osl-slapd']['dir'] = "/etc/openldap"
+default['osl-slapd']['TLSCertficateFile'] = "/etc/openldap/certs/ldap.pem"
+default['osl-slapd']['TLSCertficateKeyFile'] = "/etc/openldap/certs/ldap.key"
+default['osl-slapd']['TLSCACertficateFile'] = "/etc/openldap/certs/ldap-bundle.crt"
+default['osl-slapd']['suffix'] = "dc=example,dc=com"
+default['osl-slapd']['rootdn'] = "cn=manager,#{node['osl-slapd']['suffix']}"
+default['osl-slapd']['rootpw'] = ""
