@@ -63,7 +63,7 @@ end
 case adapter
 when "mysql"
   connection_info = {
-    :host => "localhost",
+    :host => "mysql1-vip.osuosl.org",
     :username => 'root',
     :password => node['mysql']['server_root_password'].empty? ? '' : node['mysql']['server_root_password']
   }
@@ -122,7 +122,7 @@ end
 web_app "redmine" do
   docroot        ::File.join(node['redmine']['path'], 'public')
   template       "redmine.conf.erb"
-  server_name    "redmine.#{node['domain']}"
+  server_name    "#{node['fqdn']}"
   server_aliases [ "redmine", node['hostname'] ]
   rails_env      environment
 end
@@ -181,7 +181,7 @@ deploy_revision node['redmine']['deploy_to'] do
       group node['apache']['group']
       mode "644"
       variables(
-        :host => 'localhost',
+        :host => node['redmine']['databases'][environment]['host'],
         :db   => node['redmine']['databases'][environment],
         :rails_env => environment
       )
