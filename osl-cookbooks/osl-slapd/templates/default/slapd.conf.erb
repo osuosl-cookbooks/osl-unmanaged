@@ -148,7 +148,6 @@ index uidNumber,gidNumber,loginShell    eq,pres
 index uid,memberUid                     eq,pres,sub
 index nisMapName,nisMapEntry            eq,pres,sub
 
-
 <% unless node['osl-slapd']['replica'].nil? -%>
 <%   node['osl-slapd']['replica'].each do |item| -%>
 <%=    item %>
@@ -165,24 +164,3 @@ index nisMapName,nisMapEntry            eq,pres,sub
 <%=    item %>
 <%   end -%>
 <% end -%>
-
-# ldap passwords
-#access to attrs=userPassword
-#    by group.exact="cn=Admin,dc=osuosl,dc=org" write
-#    by dn="uid=syncuser,dc=osuosl,dc=org" read
-#    by anonymous auth
-#    by self write
-#    by * none
-#
-# user-editable attributes
-#access to attrs=mail,telephoneNumber,facsimileTelephoneNumber,mobile,sshPublicKey
-#    by group.exact="cn=Admin,dc=osuosl,dc=org" write
-#    by dn="uid=syncuser,dc=osuosl,dc=org" read
-#    by self write
-#    by * read
-#
-# everything else
-#access to *
-#    by group.exact="cn=Admin,dc=osuosl,dc=org" write
-#    by dn="uid=syncuser,dc=osuosl,dc=org" read
-#    by * read
