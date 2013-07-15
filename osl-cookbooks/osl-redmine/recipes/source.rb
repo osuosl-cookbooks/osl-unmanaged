@@ -53,7 +53,7 @@ node['redmine']['packages'][adapter].each do |pkg|
 end
 case adapter
 when "mysql"
-  include_recipe "mysql::server"
+  include_recipe "mysql::client"
   include_recipe "database::mysql"
 when "postgresql"
   include_recipe "postgresql::server"
