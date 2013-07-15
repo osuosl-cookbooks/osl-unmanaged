@@ -2,6 +2,7 @@ name "base_managed"
 description "base role for all managed systems"
 run_list(
   "role[base]",
+  "recipe[mysql::percona_repo]",
   "recipe[firewall]",
   "recipe[base::iptables]",
   "recipe[base::issue]",
@@ -63,6 +64,9 @@ override_attributes(
       "time.oregonstate.edu",
       "pool.ntp.org"
     ]
+  },
+  "mysql" => {
+    "version" => "5.5"
   },
   "ldap" => {
     "uri" => "ldaps://ldap1.osuosl.org/ ldaps://ldap2.osuosl.org/",
