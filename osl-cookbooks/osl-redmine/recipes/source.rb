@@ -56,7 +56,7 @@ when "mysql"
   include_recipe "mysql::server"
   include_recipe "database::mysql"
 when "postgresql"
-  include_recipe "postgresql::client"
+  include_recipe "postgresql::server"
   include_recipe "database::postgresql"
 end
 
@@ -150,7 +150,7 @@ if platform?("debian","ubuntu")
     end
   end
 else
-  gem_package "bundler" do
+  gem_package "pg" do
     action :install
   end
 end
