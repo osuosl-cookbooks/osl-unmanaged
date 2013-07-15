@@ -32,6 +32,20 @@ end
   end
 end
 
+directory "/var/lib/ldap" do
+  owner "ldap"
+  group "ldap"
+  recursive true
+  mode 00700
+end
+
+cookbook_file "/var/lib/ldap/DB_CONFIG" do
+  source "DB_CONFIG"
+  owner "ldap"
+  group "ldap"
+  mode 00600
+end
+
 cookbook_file "/etc/sysconfig/ldap" do
   source "ldap"
   owner "root"
@@ -85,4 +99,3 @@ end
 service "slapd" do
   action [:enable, :start]
 end
-

@@ -1,7 +1,9 @@
 name "openldap"
 description "ldap server role"
 run_list(
-  "recipe[osl-slapd]"
+  "role[base_managed]",
+  "recipe[osl-slapd]",
+  "recipe[firewall::openldap]"
 )
 override_attributes(
   "osl-slapd" => {
