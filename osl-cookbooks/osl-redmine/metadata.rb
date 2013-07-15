@@ -16,3 +16,5 @@ end
 %w{ debian ubuntu centos redhat amazon scientific fedora suse }.each do |os|
     supports os
 end
+
+depends "build-essential"
