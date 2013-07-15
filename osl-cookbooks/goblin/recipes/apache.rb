@@ -12,7 +12,7 @@ include_recipe "goblin::django"
 include_recipe "apache2::mod_wsgi"
 include_recipe "apache2::mod_auth_cas"
 include_recipe "memcached"
-include_recipe "certificate"
+include_recipe "certificate::manage_by_attributes"
 
 memcached_instance "goblin"
 
@@ -24,11 +24,10 @@ simple_iptables_rule "http" do
   jump "ACCEPT"
 end
 
-certificate_manage "apachessl" do
-   data_bag "ssl_key"
-   cert_path "/etc/ssl/private"
-   key_file "g-opt-in.onid.oregonstate.edu.crt"
-   cert_file "g-opt-in.onid.oregonstate.edu.key"
+certificate_manage "goblin" do
+   cert_path "/etc/ssl"
+   key_file "g-opt-in.onid.oregonstate.edu.key"
+   cert_file "g-opt-in.onid.oregonstate.edu.crt"
    chain_file "InCommon_Server_CA.pem"
    group "www-data"
 end
