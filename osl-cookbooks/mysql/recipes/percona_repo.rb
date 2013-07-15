@@ -43,6 +43,7 @@ when "centos", "amazon", "redhat"
     description "Percona Repo"
     url "http://repo.percona.com/centos/#{pversion}/os/#{arch}/"
     key "RPM-GPG-KEY-percona"
+    includepkgs "Percona*#{node['mysql']['version'].delete '.'} percona-xtrabackup percona-playback percona-nagios-plugins percona-toolkit percona-cacti-templates Percona-Server-shared-compat"
     action :add
   end
 end
