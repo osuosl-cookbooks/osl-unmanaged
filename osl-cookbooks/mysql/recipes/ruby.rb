@@ -20,6 +20,7 @@
 # limitations under the License.
 #
 
+include_recipe 'mysql::percona_repo'
 execute "apt-get update" do
   ignore_failure true
   action :nothing
