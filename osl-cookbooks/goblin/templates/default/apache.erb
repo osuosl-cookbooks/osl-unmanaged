@@ -1,18 +1,43 @@
+<% case node['hostname']
+      when "mig-fe1","mig-fe2""mig-w1","mig-w2","mig-w3" %>
 SSLCertificateFile /etc/ssl/private/g-opt-in.onid.oregonstate.edu.crt
 SSLCertificateKeyFile /etc/ssl/private/g-opt-in.onid.oregonstate.edu.key
 SSLCertificateChainFile /etc/ssl/private/InCommon_Server_CA.pem
+<% end %>
 
 WSGIPythonHome /var/www/goblin/shared/env
 
 <VirtualHost *:80>
+        ServerAlias <%= node['fqdn'] %>
+<% case node['hostname'] 
+      when "mig-fe1","mig-fe2""mig-w1","mig-w2","mig-w3" %>
         ServerName g-opt-in.onid.oregonstate.edu
-        ServerAlias mig-fe1.onid.oregonstate.edu
-        ServerAlias mig-fe2.onid.oregonstate.edu
-
         RewriteEngine on
         RewriteRule ^/ https://g-opt-in.onid.oregonstate.edu/
+  <% else %>
+       WSGIDaemonProcess goblin user=optin processes=1 threads=10
+        WSGIProcessGroup goblin
+        WSGIScriptAlias / /var/www/goblin/current/wsgi/django.wsgi
+
+        CASCookiePath /var/cache/apache2/mod_auth_cas/
+        CASLoginURL https://login.oregonstate.edu/cas/login
+        CASValidateURL https://login.oregonstate.edu/cas/serviceValidate
+        CASValidateServer Off
+
+        <Location />
+                Authtype CAS
+                require valid-user
+        </Location>
+
+        Alias /static/ /var/www/goblin/current/static/
+        Alias /css/ /var/www/goblin/current/static/css/
+        Alias /images/ /var/www/goblin/current/static/images/
+
+<% end %>
 </VirtualHost>
 
+<% case node['hostname'] 
+      when "mig-fe1","mig-fe2""mig-w1","mig-w2","mig-w3" %>
 <VirtualHost *:443>
         ServerName g-opt-in.onid.oregonstate.edu
         ServerAlias mig-fe1.onid.oregonstate.edu
@@ -37,4 +62,4 @@ WSGIPythonHome /var/www/goblin/shared/env
         Alias /images/ /var/www/goblin/current/static/images/
 
 </VirtualHost>
-
+<% end %>
