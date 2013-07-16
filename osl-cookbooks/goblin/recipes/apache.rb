@@ -10,6 +10,7 @@
 include_recipe "goblin::default"
 include_recipe "goblin::django"
 include_recipe "apache2::mod_wsgi"
+include_recipe "apache2::mod_ssl"
 include_recipe "apache2::mod_auth_cas"
 include_recipe "memcached"
 include_recipe "certificate::manage_by_attributes"
