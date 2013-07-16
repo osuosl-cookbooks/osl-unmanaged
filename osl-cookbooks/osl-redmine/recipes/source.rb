@@ -36,9 +36,6 @@ end
 node['redmine']['packages']['apache'].each do |pkg|
   package pkg
 end
-#node['redmine']['packages']['scm'].each do |pkg|
-#  package pkg
-#end
 
 if node['redmine']['install_rmagick']
   node['redmine']['packages']['rmagick'].each do |pkg|
@@ -54,7 +51,7 @@ case adapter
 when "mysql"
   include_recipe "mysql::client"
 when "postgresql"
-  include_recipe "postgresql::server"
+  include_recipe "postgresql::client"
 end
 
 #Setup Apache

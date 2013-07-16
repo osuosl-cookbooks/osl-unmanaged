@@ -26,10 +26,7 @@ when "redhat","centos","amazon","scientific","fedora","suse"
     },
     "rmagick" => %w{ ImageMagick ImageMagick-devel },
     "mysql"   => %w{ Percona-Server-devel-55 },
-    "postgresql" => [],
-    #TODO: SCM packages should be installed only if they are goin to be used
-    #NOTE: git will be installed with a recipe because is needed for the deploy resource
-#    "scm"     => %w{ subversion bzr mercurial darcs cvs }
+    "postgresql" => %w{ postgresql-devel postgresql-libs },
   }
 when "debian","ubuntu"
   default["redmine"]["packages"] = {
