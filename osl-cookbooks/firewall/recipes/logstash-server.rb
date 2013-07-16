@@ -7,9 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Allow Logstash
-simple_iptables_rule "logstash" do
-  rule "--proto tcp --dport 5000"
-  jump "ACCEPT"
+node['logstash']['server']['allowed_ip_ranges'].each do |iprange|
+  # Allow Logstash
+    simple_iptables_rule "logstash" do
+      rule "--proto tcp --source #{iprange} --dport 5000"
+      jump "ACCEPT"
+    end
 end
-

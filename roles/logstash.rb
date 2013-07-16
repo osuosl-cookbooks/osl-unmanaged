@@ -13,6 +13,11 @@ default_attributes(
           :port => "5000"
         }
       ],
+      :allowed_ip_ranges => [
+        "140.211.166.0/23",
+        "10.1.0.0/24",
+        "140.211.15.0/24"
+      ],
       :filters => [
         :grok => {
           :type => "syslog",
@@ -28,11 +33,13 @@ default_attributes(
       ]
     }
   }
+
 )
 run_list(
   "role[base_managed]",
   "recipe[logstash::server]",
   "recipe[php::module_curl]",
   "recipe[logstash::kibana]",
-  "recipe[firewall::kibana]"
+  "recipe[firewall::kibana]",
+  "recipe[firewall::logstash-server]"
 )
