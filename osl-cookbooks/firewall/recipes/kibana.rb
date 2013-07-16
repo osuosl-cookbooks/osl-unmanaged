@@ -8,9 +8,10 @@
 #
 
 # Allow Kibana
-simple_iptables_rule "http-kibana" do
-  rule [ "--proto tcp --dport 8080",
-         "--proto tcp --sport 8080" ]
-  jump "ACCEPT"
+node['logstash']['server']['allowed_ip_ranges'].each do |iprange|
+  # Allow Logstash
+    simple_iptables_rule "http-kibana" do
+        rule [ "--proto tcp --source #{iprange} --dport 8080",
+               "--proto tcp --source #{iprange} --sport 8080" ]
+        jump "ACCEPT"
 end
-
