@@ -135,6 +135,7 @@ deploy_revision node['redmine']['deploy_to'] do
     case adapter
     when "mysql"
       gem_package "mysql" do
+        version "~> 2.8.1"
         action :install
       end
       execute "bundle install --without development test postgresql sqlite" do
@@ -142,6 +143,7 @@ deploy_revision node['redmine']['deploy_to'] do
       end
     when "postgresql"
       gem_package "pg" do
+        version ">= 0.11.0"
         action :install
       end
       execute "bundle install --without development test mysql sqlite" do
