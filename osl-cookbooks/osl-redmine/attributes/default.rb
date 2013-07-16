@@ -7,12 +7,13 @@ default["redmine"]["path"]      = '/var/www/redmine'
 default["redmine"]["install_method"] = "source"
 default["redmine"]["install_rmagick"] = true
 
+
 # databases
 default["redmine"]["databases"]["production"]["adapter"]  = 'mysql'
-default["redmine"]["databases"]["production"]["host"]  = 'mysql1-vip.osuosl.org'
-default["redmine"]["databases"]["production"]["database"] = 'fsslgy_redmine'
-default["redmine"]["databases"]["production"]["username"] = 'fsslgy_redmine'
-default["redmine"]["databases"]["production"]["password"] = 'test'
+default["redmine"]["databases"]["production"]["host"]  = 'localhost'
+default["redmine"]["databases"]["production"]["database"] = 'redmine'
+default["redmine"]["databases"]["production"]["username"] = 'redmine'
+default["redmine"]["databases"]["production"]["password"] = 'password'
 
 # packages
 # packages are separated to better tracking

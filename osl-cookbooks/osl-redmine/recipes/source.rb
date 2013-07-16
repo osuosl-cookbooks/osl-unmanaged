@@ -20,6 +20,13 @@
 # Some handy vars
 environment = node['redmine']['env']
 adapter = node["redmine"]["databases"][environment]["adapter"]
+redmine_settings = data_bag_item('redmine', node['hostname'])
+
+
+node.default['redmine']['databases'][environment]['host'] = redmine_settings['host']
+node.default['redmine']['databases'][environment]['username'] = redmine_settings['user']
+node.default['redmine']['databases'][environment]['database'] = redmine_settings['database']
+node.default['redmine']['databases'][environment]['password'] = redmine_settings['password']
 
 #Setup system package manager
 case node['platform']
@@ -164,7 +171,6 @@ deploy_revision node['redmine']['deploy_to'] do
 
   migrate true
   migration_command 'rake db:migrate'
-
   create_dirs_before_symlink %w{tmp public config tmp/pdf public/plugin_assets}
 
   before_restart do
