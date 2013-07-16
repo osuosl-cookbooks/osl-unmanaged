@@ -38,12 +38,18 @@ when "centos", "amazon", "redhat"
   arch = node['kernel']['machine']
   arch = "i386" unless arch == "x86_64"
   pversion = node['platform_version'].split('.').first
+  case node['mysql']['version']
+  when '5.5'
+    perconav = '55'
+  else
+    perconav = '55'
+  end
   yum_repository "percona" do
     repo_name "Percona"
     description "Percona Repo"
     url "http://repo.percona.com/centos/#{pversion}/os/#{arch}/"
     key "RPM-GPG-KEY-percona"
-    includepkgs "Percona*#{node['mysql']['version'].delete '.'} percona-xtrabackup percona-playback percona-nagios-plugins percona-toolkit percona-cacti-templates Percona-Server-shared-compat"
+    includepkgs "Percona*#{perconav} percona-xtrabackup percona-playback percona-nagios-plugins percona-toolkit percona-cacti-templates Percona-Server-shared-compat"
     action :add
   end
 end

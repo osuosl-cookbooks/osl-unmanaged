@@ -25,7 +25,7 @@ when "redhat","centos","amazon","scientific","fedora","suse"
       mod_passenger
     },
     "rmagick" => %w{ ImageMagick ImageMagick-devel },
-    "mysql"   => %w{ mysql-devel },
+    "mysql"   => %w{ Percona-Server-devel-55 },
     "postgresql" => [],
     #TODO: SCM packages should be installed only if they are goin to be used
     #NOTE: git will be installed with a recipe because is needed for the deploy resource

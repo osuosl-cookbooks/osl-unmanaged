@@ -20,12 +20,6 @@
 # set through recipes the base system
 case node['platform']
 when "redhat","centos","amazon","scientific","fedora","suse"
+  include_recipe "build-essential"
   include_recipe "osl-redmine::source"
-when "debian","ubuntu"
-  case node["redmine"]["install_method"]
-  when "source"
-    include_recipe "osl-redmine::source"
-  when "package"
-    include_recipe "osl-redmine::package"
-  end
 end
