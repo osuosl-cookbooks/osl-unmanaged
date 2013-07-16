@@ -13,7 +13,8 @@ run_list(
   "recipe[nagios::client]",
   "recipe[ntp]",
   "recipe[sudo]",
-  "recipe[monitoring]"
+  "recipe[monitoring]",
+  "recipe[rsyslog::client]"
 )
 default_attributes(
   "authorization" => {
@@ -71,5 +72,10 @@ override_attributes(
   "ldap" => {
     "uri" => "ldaps://ldap1.osuosl.org/ ldaps://ldap2.osuosl.org/",
     "base" => "dc=osuosl,dc=org"
+  },
+  "rsyslog" => {
+    "server_search" => "role:logstash_server",
+    "port" => "5000",
+    "preserve_fqdn" => "on"
   }
 )
