@@ -134,10 +134,16 @@ deploy_revision node['redmine']['deploy_to'] do
 
     case adapter
     when "mysql"
+      gem_package "mysql" do
+        action :install
+      end
       execute "bundle install --without development test postgresql sqlite" do
         cwd release_path
       end
     when "postgresql"
+      gem_package "pg" do
+        action :install
+      end
       execute "bundle install --without development test mysql sqlite" do
         cwd release_path
       end
