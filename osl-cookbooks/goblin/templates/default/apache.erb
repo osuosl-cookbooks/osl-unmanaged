@@ -42,7 +42,8 @@ WSGIPythonHome /var/www/goblin/shared/env
         ServerName g-opt-in.onid.oregonstate.edu
         ServerAlias mig-fe1.onid.oregonstate.edu
         ServerAlias mig-fe2.onid.oregonstate.edu
-
+	
+	SSLEngine On
         WSGIDaemonProcess goblin user=optin processes=1 threads=10
         WSGIProcessGroup goblin
         WSGIScriptAlias / /var/www/goblin/current/wsgi/django.wsgi
