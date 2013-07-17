@@ -1,4 +1,3 @@
-#BROKER_HOST = 'sync.oit.pdx.edu'
 BROKER_HOST = '<%=  node['goblin']['rabbitmq']['host'] %>'
 BROKER_PORT = 5672
 BROKER_USER = 'optin'
@@ -10,5 +9,5 @@ CELERY_IMPORTS = ("tasks", )
 CELERYD_LOG_FILE = '/var/www/goblin/shared/celery.log'
 CELERYD_LOG_LEVEL = 'INFO'
 CELERY_ROUTES = {"tasks.copy_email_task": {"queue": "optin"}}
-
+ROOT = os.path.dirname(os.path.dirname(__file__))
 
