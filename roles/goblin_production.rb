@@ -4,6 +4,7 @@ override_attributes(
   "goblin" => {
     "google" => {
       "domain" => "onid.oregonstate.edu",
+      "login" => "admin_googlemig@oregonstate.edu",
     },
     "celery" => {
       "concurrency" => "30",

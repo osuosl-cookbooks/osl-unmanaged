@@ -16,7 +16,7 @@ default['goblin']['ldap']['password'] = databag["ldap"]["password"]
 default['goblin']['ldap']['username'] = "uid=onid_googlesync,ou=specials,o=orst.edu"
 
 default['goblin']['google']['secret'] = databag["google"]["secret"]
-default['goblin']['google']['login'] = databag["google"]["login"]
+default['goblin']['google']['login'] = "admin_googlemig@gtest.onid.oregonstate.edu"
 default['goblin']['google']['key'] = databag["google"]["key"]
 default['goblin']['google']['password'] = databag["google"]["password"]
 default['goblin']['google']['domain'] = "gtest.onid.oregonstate.edu"
