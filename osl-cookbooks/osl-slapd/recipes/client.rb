@@ -2,6 +2,10 @@ package "openldap-clients" do
   action :install
 end
 
+directory "#{node['osl-slapd']['dir']}" do
+  action :create
+end
+
 ldap_hosts = ''
 if Chef::Config[:solo]
     Chef::Log.warn("This recipe uses search. Chef Solo does not support search.")

@@ -4,142 +4,82 @@
 # This file should NOT be world readable.
 #
 
-include		/etc/openldap/schema/corba.schema
-include		/etc/openldap/schema/core.schema
-include		/etc/openldap/schema/cosine.schema
-include		/etc/openldap/schema/duaconf.schema
-include		/etc/openldap/schema/dyngroup.schema
-include		/etc/openldap/schema/inetorgperson.schema
-include		/etc/openldap/schema/java.schema
-include		/etc/openldap/schema/misc.schema
-include		/etc/openldap/schema/nis.schema
-include		/etc/openldap/schema/openldap.schema
-include		/etc/openldap/schema/ppolicy.schema
-include		/etc/openldap/schema/collective.schema
+include  /etc/openldap/schema/corba.schema
+include  /etc/openldap/schema/core.schema
+include  /etc/openldap/schema/cosine.schema
+include  /etc/openldap/schema/duaconf.schema
+include  /etc/openldap/schema/dyngroup.schema
+include  /etc/openldap/schema/inetorgperson.schema
+include  /etc/openldap/schema/java.schema
+include  /etc/openldap/schema/misc.schema
+include  /etc/openldap/schema/nis.schema
+include  /etc/openldap/schema/openldap.schema
+include  /etc/openldap/schema/ppolicy.schema
+include  /etc/openldap/schema/collective.schema
 
-include		/etc/openldap/schema/samba.schema
-include		/etc/openldap/schema/ldapns.schema
-include		/etc/openldap/schema/openssh-lpk.schema
+include  /etc/openldap/schema/samba.schema
+include  /etc/openldap/schema/ldapns.schema
+include  /etc/openldap/schema/openssh-lpk.schema
 
-sizelimit	unlimited
+sizelimit  unlimited
 
 # Allow LDAPv2 client connections.  This is NOT the default.
 allow bind_v2
 
-# Do not enable referrals until AFTER you have a working directory
-# service AND an understanding of referrals.
-#referral	ldap://root.openldap.org
-
-pidfile		/var/run/openldap/slapd.pid
-argsfile	/var/run/openldap/slapd.args
-
-# Load dynamic backend modules
-# - modulepath is architecture dependent value (32/64-bit system)
-# - back_sql.la overlay requires openldap-server-sql package
-# - dyngroup.la and dynlist.la cannot be used at the same time
-
-# modulepath /usr/lib/openldap
-# modulepath /usr/lib64/openldap
-
-# moduleload accesslog.la
-# moduleload auditlog.la
-# moduleload back_sql.la
-# moduleload chain.la
-# moduleload collect.la
-# moduleload constraint.la
-# moduleload dds.la
-# moduleload deref.la
-# moduleload dyngroup.la
-# moduleload dynlist.la
-# moduleload memberof.la
-# moduleload pbind.la
-# moduleload pcache.la
-# moduleload ppolicy.la
-# moduleload refint.la
-# moduleload retcode.la
-# moduleload rwm.la
-# moduleload seqmod.la
-# moduleload smbk5pwd.la
-# moduleload sssvlv.la
-# moduleload syncprov.la
-# moduleload translucent.la
-# moduleload unique.la
-# moduleload valsort.la
+pidfile  /var/run/openldap/slapd.pid
+argsfile /var/run/openldap/slapd.args
 
 # The next three lines allow use of TLS for encrypting connections using a
 # dummy test certificate which you can generate by running
 # /usr/libexec/openldap/generate-server-cert.sh. Your client software may balk
 # at self-signed certificates, however.
-#TLSCertificateFile	/etc/openldap/certs/_.osuosl.org.crt
-#TLSCertificateKeyFile	/etc/openldap/certs/myserver.key
-#TLSCACertificateFile	/etc/openldap/certs/gd_intermediate_bundle.crt
-
 TLSCertificateFile <%= node['osl-slapd']['TLSCertficateFile'] %>
-TLSCertificateKeyFile	<%= node['osl-slapd']['TLSCertficateKeyFile'] %>
+TLSCertificateKeyFile <%= node['osl-slapd']['TLSCertficateKeyFile'] %>
 TLSCACertificateFile <%= node['osl-slapd']['TLSCACertficateFile'] %>
 
 # Sample security restrictions
-#	Require integrity protection (prevent hijacking)
-#	Require 112-bit (3DES or better) encryption for updates
-#	Require 63-bit encryption for simple bind
+#  Require integrity protection (prevent hijacking)
+#  Require 112-bit (3DES or better) encryption for updates
+#  Require 63-bit encryption for simple bind
 security ssf=1 update_ssf=112 simple_bind=64
-
-# Sample access control policy:
-#	Root DSE: allow anyone to read it
-#	Subschema (sub)entry DSE: allow anyone to read it
-#	Other DSEs:
-#		Allow self write access
-#		Allow authenticated users read access
-#		Allow anonymous users to authenticate
-#	Directives needed to implement policy:
-# access to dn.base="" by * read
-# access to dn.base="cn=Subschema" by * read
-# access to *
-#	by self write
-#	by users read
-#	by anonymous auth
-#
-# if no access controls are present, the default policy
-# allows anyone and everyone to read anything but restricts
-# updates to rootdn.  (e.g., "access to * by * read")
-#
-# rootdn can always read and write EVERYTHING!
 
 # enable on-the-fly configuration (cn=config)
 database config
 access to *
-	by dn.exact="gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth" manage
-	by * none
+  by dn.exact="gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth" manage
+  by * none
 
 # enable server status monitoring (cn=monitor)
 database monitor
 access to *
-	by dn.exact="gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth" read
-        by dn.exact="cn=Manager,dc=osuosl,dc=org" read
-        by * none
+  by dn.exact="gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth" read
+  by dn.exact="<%= node['osl-slapd']['rootdn'] %>" read
+  by * none
 
 #######################################################################
 # database definitions
 #######################################################################
 
-database	bdb
-suffix    <%= node['osl-slapd']['suffix'] %>
-#suffix		"dc=osuosl,dc=org"
-checkpoint	1024 15
-rootdn    <%= node['osl-slapd']['rootdn'] %>
-#rootdn		"cn=manager,dc=osuosl,dc=org"
-# Cleartext passwords, especially for the rootdn, should
-# be avoided.  See slappasswd(8) and slapd.conf(5) for details.
-# Use of strong authentication encouraged.
-# rootpw		secret
-# rootpw		{crypt}ijFYNcSNctBYg
-#rootpw			{SSHA}5NwuRIGBC2cx9406Ob57nlZdDAfHmn0a
-rootpw    <%= node['osl-slapd']['rootpw'] %>
+database  bdb
+suffix    "<%= node['osl-slapd']['suffix'] %>"
+checkpoint  1024 15
+rootdn    "<%= node['osl-slapd']['rootdn'] %>"
+rootpw    "<%= node['osl-slapd']['rootpw'] %>"
 
 # The database directory MUST exist prior to running slapd AND 
 # should only be accessible by the slapd and slap tools.
 # Mode 700 recommended.
-directory	/var/lib/ldap
+directory /var/lib/ldap
+
+dbconfig set_cachesize 0 31457280 0
+
+# Number of objects that can be locked at the same time.
+dbconfig set_lk_max_objects 1500
+# Number of locks (both requested and granted)
+dbconfig set_lk_max_locks 1500
+# Number of lockers
+dbconfig set_lk_max_lockers 1500
+
 
 # Indices to maintain for this database
 index objectClass                       eq,pres
@@ -148,17 +88,58 @@ index uidNumber,gidNumber,loginShell    eq,pres
 index uid,memberUid                     eq,pres,sub
 index nisMapName,nisMapEntry            eq,pres,sub
 
-<% unless node['osl-slapd']['replica'].nil? -%>
-<%   node['osl-slapd']['replica'].each do |item| -%>
-<%=    item %>
-<%   end -%>
+<% case node['osl-slapd']['slapd_type'] -%>
+<% when "master" -%>
+moduleload syncprov.la
+overlay syncprov
+syncprov-checkpoint 100 10
+syncprov-sessionlog 100
+<% when "slave" -%>
+syncrepl rid=<%= node['osl-slapd']['slapd_rid'] %>
+  provider=ldaps://<%= node['osl-slapd']['slapd_master'] %>:636
+  type=refreshAndPersist
+  interval=01:00:00:00
+  searchbase="<%= node['osl-slapd']['suffix'] %>"
+  filter="(objectClass=*)"
+  scope=sub
+  schemachecking=off
+  bindmethod=simple
+  binddn="cn=syncuser,<%= node['osl-slapd']['suffix'] %>"
+  starttls=yes
+  credentials="<%= node['osl-slapd']['slapd_replpw'] %>"
 <% end -%>
-# Replicas of this database
-#replogfile /var/lib/ldap/openldap-master-replog
-#replica host=ldap-1.example.com:389 starttls=critical
-#     bindmethod=sasl saslmech=GSSAPI
-#     authcId=host/ldap-master.example.com@EXAMPLE.COM
 
+# The userPassword by default can be changed
+# by the entry owning it if they are authenticated.
+# Others should not be able to see it, except the
+# admin entry below
+# These access lines apply to database #1 only
+access to attrs=userPassword,shadowLastChange
+        by group.exact="<%= node['osl-slapd']['rootgroupdn'] %>" write
+        by dn="cn=syncuser,<%= node['osl-slapd']['suffix'] %>" read
+        by anonymous auth
+        by self write
+        by * none
+
+# Ensure read access to the base for things like
+# supportedSASLMechanisms.  Without this you may
+# have problems with SASL not knowing what
+# mechanisms are available and the like.
+# Note that this is covered by the 'access to *'
+# ACL below too but if you change that as people
+# are wont to do you'll still need this if you
+# want SASL (and possible other things) to work
+# happily.
+access to dn.base="" by * read
+
+# The admin dn has full write access, everyone else
+# can read everything.
+access to *
+        by group.exact="<%= node['osl-slapd']['rootgroupdn'] %>" write
+        by dn="cn=syncuser,<%= node['osl-slapd']['suffix'] %>" read
+        by * read
+
+# Custom access configuration
 <% unless node['osl-slapd']['access'].nil? -%>
 <%   node['osl-slapd']['access'].each do |item| -%>
 <%=    item %>
