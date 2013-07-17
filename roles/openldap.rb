@@ -3,6 +3,7 @@ description "ldap server role"
 run_list(
   "role[base_managed]",
   "recipe[osl-slapd::server]",
+  "recipe[osl-slapd::client]",
   "recipe[firewall::openldap]"
 )
 override_attributes(

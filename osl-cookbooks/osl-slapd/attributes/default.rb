@@ -11,9 +11,4 @@ default['osl-slapd']['rootgroup'] = "cn=Admin"
 default['osl-slapd']['rootgroupdn'] = "#{node['osl-slapd']['rootgroup']},#{node['osl-slapd']['suffix']}"
 default['osl-slapd']['rootpw'] = ""
 
-default['osl-slapd']['slapd_type'] = nil
-
-if node['osl-slapd']['slapd_type'] == "slave"
-  default['osl-slapd']['slapd_replpw'] = nil
-  default['osl-slapd']['slapd_rid']    = 102
-end
+default['osl-slapd']['slapd_rid'] = "102"

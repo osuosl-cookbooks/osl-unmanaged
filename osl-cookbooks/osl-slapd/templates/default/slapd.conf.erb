@@ -4,24 +4,17 @@
 # This file should NOT be world readable.
 #
 
-include  /etc/openldap/schema/corba.schema
 include  /etc/openldap/schema/core.schema
 include  /etc/openldap/schema/cosine.schema
-include  /etc/openldap/schema/duaconf.schema
-include  /etc/openldap/schema/dyngroup.schema
 include  /etc/openldap/schema/inetorgperson.schema
-include  /etc/openldap/schema/java.schema
-include  /etc/openldap/schema/misc.schema
 include  /etc/openldap/schema/nis.schema
-include  /etc/openldap/schema/openldap.schema
-include  /etc/openldap/schema/ppolicy.schema
-include  /etc/openldap/schema/collective.schema
 
 include  /etc/openldap/schema/samba.schema
 include  /etc/openldap/schema/ldapns.schema
 include  /etc/openldap/schema/openssh-lpk.schema
 
 sizelimit  unlimited
+loglevel   stats sync
 
 # Allow LDAPv2 client connections.  This is NOT the default.
 allow bind_v2
@@ -104,8 +97,7 @@ syncrepl rid=<%= node['osl-slapd']['slapd_rid'] %>
   scope=sub
   schemachecking=off
   bindmethod=simple
-  binddn="cn=syncuser,<%= node['osl-slapd']['suffix'] %>"
-  starttls=yes
+  binddn="uid=syncuser,<%= node['osl-slapd']['suffix'] %>"
   credentials="<%= node['osl-slapd']['slapd_replpw'] %>"
 <% end -%>
 
@@ -116,7 +108,7 @@ syncrepl rid=<%= node['osl-slapd']['slapd_rid'] %>
 # These access lines apply to database #1 only
 access to attrs=userPassword,shadowLastChange
         by group.exact="<%= node['osl-slapd']['rootgroupdn'] %>" write
-        by dn="cn=syncuser,<%= node['osl-slapd']['suffix'] %>" read
+        by dn="uid=syncuser,<%= node['osl-slapd']['suffix'] %>" read
         by anonymous auth
         by self write
         by * none
@@ -136,7 +128,7 @@ access to dn.base="" by * read
 # can read everything.
 access to *
         by group.exact="<%= node['osl-slapd']['rootgroupdn'] %>" write
-        by dn="cn=syncuser,<%= node['osl-slapd']['suffix'] %>" read
+        by dn="uid=syncuser,<%= node['osl-slapd']['suffix'] %>" read
         by * read
 
 # Custom access configuration

@@ -5,7 +5,7 @@ if Chef::Config[:solo]
 else
   ::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
   node.default['osl-slapd']['slapd_replpw'] = secure_password
-  node.default['osl-slapd']['slapd_master'] = search(:nodes, 'osl-slapd_slapd_type:master').map {|n| n['osl-slapd']['server']}.first
+  node.default['osl-slapd']['slapd_master'] = search(:node, 'osl-slapd_slapd_type:master').map {|n| n['fqdn']}.first
   node.save
 end
 
