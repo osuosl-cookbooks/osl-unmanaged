@@ -14,17 +14,17 @@ include_recipe "goblin::django"
 
 file "/var/www/goblin/current/conversion_email_psu" do
   mode 0755
-  :action touch
+  action :touch
 end
 
 file "/var/www/goblin/current/conversion_email_google" do
   mode 0755
-  :action touch
+  action :touch
 end
 
 file "/var/www/goblin/current/conversion_email_in_progress" do
   mode 0755
-  :action touch
+  action :touch
 end
 
 supervisor_service "celery" do
