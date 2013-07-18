@@ -11,6 +11,22 @@ include_recipe "supervisor"
 include_recipe "goblin::default"
 include_recipe "goblin::django"
 
+
+file "/var/www/goblin/current/conversion_email_psu" do
+  mode 0755
+  :action touch
+end
+
+file "/var/www/goblin/current/conversion_email_google" do
+  mode 0755
+  :action touch
+end
+
+file "/var/www/goblin/current/conversion_email_in_progress" do
+  mode 0755
+  :action touch
+end
+
 supervisor_service "celery" do
   action [:enable,:start]
   autostart true

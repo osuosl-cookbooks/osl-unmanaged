@@ -6,15 +6,18 @@
 #
 #
 
-databag = Chef::EncryptedDataBagItem.load("goblin","credentials")
+if node['hostname'] =~ /"mig-"/
+   databag = Chef::EncryptedDataBagItem.load("goblin","credentials")
+else
+   databag = Chef::EncryptedDataBagItem.load("goblin","staging-credentials")
+end
 
 default['goblin']['django']['adminname'] = "OSL Admin"
 default['goblin']['django']['adminmail'] = "root@osuosl.org"
 default['goblin']['django']['password'] = databag["ldap"]["login"]
 
 default['goblin']['ldap']['password'] = databag["ldap"]["password"]
-default['goblin']['ldap']['username'] = "uid=onid_googlesync,ou=specials,o=orst.edu"
-
+default['goblin']['ldap']['username'] = "uid=onid_googlesync,ou=specials,o=orst.edu" 
 default['goblin']['google']['secret'] = databag["google"]["secret"]
 default['goblin']['google']['login'] = "admin_googlemig@gtest.onid.oregonstate.edu"
 default['goblin']['google']['key'] = databag["google"]["key"]
