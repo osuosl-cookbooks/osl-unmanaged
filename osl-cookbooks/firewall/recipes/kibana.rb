@@ -9,7 +9,7 @@
 
 # Allow Kibana
 node['firewall']['range']['workstations'].each do |iprange|
-    simple_iptables_rule "http-kibana" do
+    simple_iptables_rule "kibana" do
       rule "--proto tcp --source #{iprange} --dport 8080"
       jump "ACCEPT"
     end
