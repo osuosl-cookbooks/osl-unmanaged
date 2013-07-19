@@ -12,17 +12,7 @@ include_recipe "goblin::default"
 include_recipe "goblin::django"
 
 
-file "/var/www/goblin/current/conversion_email_psu" do
-  mode 0755
-  action :touch
-end
-
-file "/var/www/goblin/current/conversion_email_google" do
-  mode 0755
-  action :touch
-end
-
-file "/var/www/goblin/current/conversion_email_in_progress" do
+%w{/var/www/goblin/current/conversion_email_in_progress /var/www/goblin/current/conversion_email_google /var/www/goblin/current/conversion_email_psu}.each do |conv|
   mode 0755
   action :touch
 end
