@@ -3,7 +3,8 @@ description "leeroy!"
 run_list(
   "role[base_managed]",
   "recipe[jenkins::server]",
-  "recipe[jenkins::proxy_apache2]"
+  "recipe[jenkins::proxy_apache2]",
+  "recipe[certificate::wildcard]"
 )
 override_attributes(
   "jenkins" => {
