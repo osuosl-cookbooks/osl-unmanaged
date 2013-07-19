@@ -4,6 +4,7 @@ run_list(
   "role[base]",
   "recipe[mysql::percona_repo]",
   "recipe[firewall]",
+  "recipe[base::security]",
   "recipe[base::iptables]",
   "recipe[base::issue]",
   "recipe[base::users]",
