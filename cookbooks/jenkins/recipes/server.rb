@@ -114,6 +114,7 @@ remote_file File.join(home_dir, "jenkins.war") do
   group node['jenkins']['server']['group']
   notifies :restart, "runit_service[jenkins]"
   notifies :create, "ruby_block[block_until_operational]"
+  not_if "test -f /var/lib/jenkins/jenkins.war"
 end
 
 # Only restart if plugins were added
