@@ -20,8 +20,8 @@ cookbook_path [
                         "#{base_path}/osl-cookbooks"
               ]
 cookbook_copyright      "OSU Open Source Lab"
-cookbook_license        "none"
-cookbook_email          "#{user_email}"
+cookbook_license        "apachev2"
+cookbook_email          "systems@osuosl.org"
 role_path               ["#{base_path}/roles"]
 data_bag_path           ["#{base_path}/data_bags"]
 encrypted_data_bag_secret "#{home_dir}/.chef/encrypted_data_bag_secret"
