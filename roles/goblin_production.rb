@@ -7,7 +7,7 @@ override_attributes(
       "login" => "admin_googlemig@oregonstate.edu",
     },
     "celery" => {
-      "concurrency" => "30",
+      "concurrency" => "1",
     },
     "cyrus" => {
       "host" => "imap.onid.oregonstate.edu",
