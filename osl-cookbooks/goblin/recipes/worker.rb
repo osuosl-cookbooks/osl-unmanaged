@@ -49,3 +49,8 @@ simple_iptables_rule "munin" do
   jump "ACCEPT"
 end
 
+directory "/var/log/imapsync" do
+  owner "root"
+  group "www-data"
+  mode 0770
+end
