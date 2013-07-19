@@ -84,7 +84,7 @@ template "#{node['osl-slapd']['dir']}/slapd.conf" do
   mode 00640
   owner "ldap"
   group "ldap"
-  notifies :run, resources(:execute => "slapd-config-convert"), :delayed
+  notifies :run, "execute[slapd-config-convert]", :delayed
 end
 
 # Initial configuration is done, install the package and start the service
@@ -93,7 +93,7 @@ package "openldap-servers" do
   # We re-create the slapd.conf here because the initial install will read
   # slapd.conf and rename it to slapd.conf.bak after converting the
   # configuration to the newer slapd.d format
-  notifies :create, resources(:template => "#{node['osl-slapd']['dir']}/slapd.conf")
+  notifies :create, "template[#{node['osl-slapd']['dir']}/slapd.conf]"
 end
 
 service "slapd" do

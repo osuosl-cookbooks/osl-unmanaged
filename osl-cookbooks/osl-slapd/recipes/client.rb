@@ -2,7 +2,7 @@ package "openldap-clients" do
   action :install
 end
 
-directory "#{node['osl-slapd']['dir']}" do
+directory node['osl-slapd']['dir'] do
   action :create
 end
 
