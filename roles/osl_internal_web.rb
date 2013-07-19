@@ -2,6 +2,7 @@ name "osl_internal_web"
 description "ermahgerd internal web services"
 run_list(
   "role[base_managed]",
+  "recipe[osl-slapd::client]",
   "recipe[firewall::http]",
   "recipe[apache2]",
   "recipe[apache2::mod_ssl]",
