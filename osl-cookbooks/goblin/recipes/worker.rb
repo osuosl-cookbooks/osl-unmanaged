@@ -13,8 +13,10 @@ include_recipe "goblin::django"
 
 
 %w{/var/www/goblin/current/conversion_email_in_progress /var/www/goblin/current/conversion_email_google /var/www/goblin/current/conversion_email_psu}.each do |conv|
-  mode 0755
-  action :touch
+  file conv do
+    mode 0755
+    action :touch
+  end
 end
 
 supervisor_service "celery" do
