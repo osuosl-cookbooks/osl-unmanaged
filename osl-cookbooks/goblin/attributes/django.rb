@@ -6,7 +6,7 @@
 #
 #
 
-if node['hostname'] =~ /"mig-"/
+if node['hostname'] =~ /mig-/
    databag = Chef::EncryptedDataBagItem.load("goblin","credentials")
 else
    databag = Chef::EncryptedDataBagItem.load("goblin","staging-credentials")
