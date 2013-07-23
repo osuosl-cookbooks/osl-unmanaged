@@ -50,11 +50,9 @@ web_app "racktables" do
   server_name "inventory2.osuosl.org"
   server_aliases ["inventory2"]
   docroot app_config['dir']
-  variables(
-    :redirect_http    => node['racktables']['redirect_http'],
-    :ssl_enabled      => node['racktables']['ssl_enabled'],
-    :ssl_listen_ports => node['racktables']['ssl_listen_ports']
-  )
+  redirect_http node['racktables']['redirect_http']
+  ssl_enabled node['racktables']['ssl_enabled']
+  ssl_listen_ports node['racktables']['ssl_listen_ports']
 end
 
 

@@ -1,5 +1,5 @@
-<% if @ssl_enabled -%>
-<VirtualHost *:<%= @ssl_listen_ports.join ' *:' %>>
+<% if @params[:ssl_enabled] -%>
+<VirtualHost *:<%= @params[:ssl_listen_ports].join ' *:' %>>
   SSLEngine on
   SSLCertificateFile <%= node['racktables']['cert_path'] %>
   SSLCertificateKeyFile <%= node['racktables']['key_path'] %>
@@ -19,20 +19,6 @@
     Allow from all
   </Directory>
 
-  <Directory />
-    Options FollowSymLinks
-    AllowOverride None
-  </Directory>
-
-  <Location /server-status>
-    SetHandler server-status
-
-    Order Deny,Allow
-    Deny from all
-    Allow from 127.0.0.1
-  </Location>
-
-  LogLevel info
   ErrorLog <%= node['apache']['log_dir'] %>/<%= @params[:name] %>-error.log
   CustomLog <%= node['apache']['log_dir'] %>/<%= @params[:name] %>-access.log combined
 
@@ -40,15 +26,12 @@
   DirectoryIndex <%= [@params[:directory_index]].flatten.join " " %>
   <% end -%>
 
-  RewriteLog <%= node['apache']['log_dir'] %>/<%= @application_name %>-rewrite.log
-  RewriteLogLevel 0
-
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteCond %{SCRIPT_FILENAME} !maintenance.html
   RewriteRule ^.*$ /system/maintenance.html [L]
 </VirtualHost>
 
-<% if @redirect_http -%>
+<% if @params[:redirect_http] -%>
 <VirtualHost *:80>
   ServerName <%= @params[:server_name] %>
 
