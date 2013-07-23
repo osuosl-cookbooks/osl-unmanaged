@@ -9,8 +9,9 @@
 
 include_recipe "apache2"
 include_recipe "apache2::mod_php5"
-include_recipe "apache2::mod_ssl"
-
+if node['racktables']['ssl_enabled']
+  include_recipe "apache2::mod_ssl"
+end
 
 app_name = 'racktables'
 app_config = node[app_name]
@@ -49,6 +50,11 @@ web_app "racktables" do
   server_name "inventory2.osuosl.org"
   server_aliases ["inventory2"]
   docroot app_config['dir']
+  variables (
+    :redirect_http    => node['racktables']['redirect_http'],
+    :ssl_enabled      => node['racktables']['ssl_enabled'],
+    :ssl_listen_ports => node['racktables']['ssl_listen_ports']
+  )
 end
 
 

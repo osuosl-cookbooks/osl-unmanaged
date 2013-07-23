@@ -1,4 +1,11 @@
+<% if @ssl_enabled -%>
+<VirtualHost *:<%= @ssl_listen_ports.join ' *:' %>>
+  SSLEngine on
+  SSLCertificateFile <%= node['racktables']['cert_path'] %>
+  SSLCertificateKeyFile <%= node['racktables']['key_path'] %>
+<% else -%>
 <VirtualHost *:80>
+<% end -%>
   ServerName <%= @params[:server_name] %>
   ServerAlias <% @params[:server_aliases].each do |a| %><%= a %> <% end %>
   DocumentRoot <%= @params[:docroot] %>
@@ -36,20 +43,18 @@
   RewriteLog <%= node['apache']['log_dir'] %>/<%= @application_name %>-rewrite.log
   RewriteLogLevel 0
 
-  # Canonical host, <%= @params[:server_name] %>
-  RewriteCond %{HTTP_HOST}   !^<%= @params[:server_name] %> [NC]
-  RewriteCond %{HTTP_HOST}   !^$
-  RewriteRule ^/(.*)$        http://<%= @params[:server_name] %>/$1 [L,R=301]
-
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteCond %{SCRIPT_FILENAME} !maintenance.html
   RewriteRule ^.*$ /system/maintenance.html [L]
 </VirtualHost>
 
-# No rewrite yet, SSL isn't configured properly.
-#<VirtualHost *:80>
-#    ServerName <%= @params[:server_name] %>
-#
-#    RewriteEngine On
-#    RewriteRule /(.*) https://<%= @params[:server_name] %>/$1
-#</VirtualHost>
+<% if @redirect_http -%>
+<VirtualHost *:80>
+  ServerName <%= @params[:server_name] %>
+
+  RewriteEngine On
+  # rewrite non ssl -> ssl
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</VirtualHost>
+<% end -%>
