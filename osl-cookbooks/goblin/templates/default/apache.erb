@@ -10,7 +10,7 @@ WSGIPythonHome /var/www/goblin/shared/env
 <VirtualHost *:80>
         ServerAlias <%= node['fqdn'] %>
 <% case node['hostname'] 
-      when "mig-fe1","mig-fe2""mig-w1","mig-w2","mig-w3" %>
+      when "mig-fe1","mig-fe2","mig-w1","mig-w2","mig-w3" %>
         ServerName g-opt-in.onid.oregonstate.edu
         RewriteEngine on
         RewriteRule ^/ https://g-opt-in.onid.oregonstate.edu/
@@ -37,7 +37,7 @@ WSGIPythonHome /var/www/goblin/shared/env
 </VirtualHost>
 
 <% case node['hostname'] 
-      when "mig-fe1","mig-fe2""mig-w1","mig-w2","mig-w3" %>
+      when "mig-fe1","mig-fe2","mig-w1","mig-w2","mig-w3" %>
 <VirtualHost *:443>
         ServerName g-opt-in.onid.oregonstate.edu
         ServerAlias mig-fe1.onid.oregonstate.edu
