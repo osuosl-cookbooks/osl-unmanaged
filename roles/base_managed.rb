@@ -9,6 +9,7 @@ run_list(
   "recipe[base::issue]",
   "recipe[base::users]",
   "recipe[base::ifconfig]",
+  "recipe[sysctl]",
   "recipe[postfix::client]",
   "recipe[firewall::nrpe]",
   "recipe[nagios::client]",
@@ -52,7 +53,7 @@ default_attributes(
           "tcp_wmem" => "4096 65536 16777216",
           "tcp_no_metrics_save" => "1",
           "netfilter" => {
-            "ip_conntrack_tcp_timeout_established" => "14400"
+            "nf_conntrack_tcp_timeout_established" => "14400"
           }
         },
         "core" => {
