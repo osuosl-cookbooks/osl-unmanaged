@@ -37,6 +37,30 @@ default_attributes(
         "secure_path = /sbin:/bin:/usr/sbin:/usr/bin"
       ]
     }
+  },
+  "sysctl" => {
+    "params" => {
+      "kernel" => {
+        "msgmnb" => "65536",
+        "msgmax" => "65536",
+        "shmmax" => "68719476736",
+        "shmall" => "4294967296"
+      },
+      "net" => {
+        "ipv4" => {
+          "tcp_rmem" => "4096 87380 16777216",
+          "tcp_wmem" => "4096 65536 16777216",
+          "tcp_no_metrics_save" => "1",
+          "netfilter" => {
+            "ip_conntrack_tcp_timeout_established" => "14400"
+          }
+        },
+        "core" => {
+          "rmem_max" => "16777216",
+          "wmem_max" => "16777216"
+        }
+      }
+    }
   }
 )
 override_attributes(
