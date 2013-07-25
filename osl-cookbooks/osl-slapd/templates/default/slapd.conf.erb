@@ -91,6 +91,7 @@ syncprov-sessionlog 100
 syncrepl rid=<%= node['osl-slapd']['slapd_rid'] %>
   provider=ldaps://<%= node['osl-slapd']['slapd_master'] %>:636
   type=refreshAndPersist
+  retry="60 +"
   interval=01:00:00:00
   searchbase="<%= node['osl-slapd']['suffix'] %>"
   filter="(objectClass=*)"
