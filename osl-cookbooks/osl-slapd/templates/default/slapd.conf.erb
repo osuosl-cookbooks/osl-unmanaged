@@ -75,6 +75,8 @@ dbconfig set_lk_max_lockers 1500
 
 
 # Indices to maintain for this database
+index default                           eq
+index uniqueMember                      eq
 index objectClass                       eq,pres
 index ou,cn,mail,surname,givenname      eq,pres,sub
 index uidNumber,gidNumber,loginShell    eq,pres
