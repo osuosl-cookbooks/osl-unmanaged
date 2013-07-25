@@ -9,14 +9,13 @@ run_list(
   "recipe[base::issue]",
   "recipe[base::users]",
   "recipe[base::ifconfig]",
-  "recipe[sysctl]",
   "recipe[postfix::client]",
   "recipe[firewall::nrpe]",
   "recipe[nagios::client]",
   "recipe[ntp]",
   "recipe[sudo]",
   "recipe[monitoring]",
-  "recipe[rsyslog]"
+  "recipe[rsyslog::client]"
 )
 default_attributes(
   "authorization" => {
@@ -53,7 +52,7 @@ default_attributes(
           "tcp_wmem" => "4096 65536 16777216",
           "tcp_no_metrics_save" => "1",
           "netfilter" => {
-            "nf_conntrack_tcp_timeout_established" => "14400"
+            "ip_conntrack_tcp_timeout_established" => "14400"
           }
         },
         "core" => {
@@ -99,10 +98,9 @@ override_attributes(
     "uri" => "ldaps://ldap1.osuosl.org/ ldaps://ldap2.osuosl.org/",
     "base" => "dc=osuosl,dc=org"
   },
-  "osl-slapd" => {
-    "uri" => "ldaps://ldap1.osuosl.org/ ldaps://ldap2.osuosl.org/"
-  },
   "rsyslog" => {
+    "server_search" => "role:logstash_server",
+    "port" => "5000",
     "preserve_fqdn" => "on"
   }
 )
