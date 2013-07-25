@@ -27,6 +27,7 @@ default["rsyslog"]["remote_logs"]      = true
 default["rsyslog"]["per_host_dir"]     = "%$YEAR%/%$MONTH%/%$DAY%/%HOSTNAME%"
 default["rsyslog"]["max_message_size"] = "2k"
 default["rsyslog"]["preserve_fqdn"]    = "off"
+default["rsyslog"]["action_queue"]["max_disk_space"] = "1g"
 
 # The most likely platform-specific attributes
 default["rsyslog"]["service_name"]     = "rsyslog"
