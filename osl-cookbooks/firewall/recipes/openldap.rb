@@ -9,8 +9,8 @@
 
 # Allow OpenLDAP
 simple_iptables_rule "openldap" do
-  rule "--proto tcp --dport 636"
-  rule "--proto tcp --dport 389"
+  rule [ "--proto tcp --dport 636",
+         "--proto tcp --dport 389" ]
   jump "ACCEPT"
 end
 
