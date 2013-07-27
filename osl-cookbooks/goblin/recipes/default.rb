@@ -26,6 +26,12 @@ file "/var/www/goblin/shared/celeryd@celery.pid" do
    mode "0775"
 end
 
+file "/var/log/goblin.conf" do
+   mode "0775"
+   owner "root"
+   group "www-data"
+end
+
 %w{git moreutils libconfig-simple-perl libcyrus-imap-perl22 libsasl2-dev libldap2-dev python2.6-dev ldap-utils libnet-oauth-perl libmail-imapclient-perl}.each do |pkg|
   package pkg
 end
