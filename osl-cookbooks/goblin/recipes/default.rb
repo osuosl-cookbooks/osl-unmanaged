@@ -26,7 +26,7 @@ file "/var/www/goblin/shared/celeryd@celery.pid" do
    mode "0775"
 end
 
-file "/var/log/goblin.conf" do
+file "/var/log/goblin.log" do
    mode "0775"
    owner "root"
    group "www-data"
