@@ -19,6 +19,7 @@ override_attributes(
     "user" => "nagios",
     "group" => "nagios",
     "notifications_enabled" => "1",
+    "host_name_attribute" => "fqdn",
     "default_contact_groups" => %w{osl_pager},
     "server" => {
       "install_method" => "source",
