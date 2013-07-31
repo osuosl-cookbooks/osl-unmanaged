@@ -8,7 +8,6 @@ default["redmine"]["install_method"] = "source"
 default["redmine"]["install_rmagick"] = true
 
 # ssl
-default["redmine"]["redirect_http"] = false
 default["redmine"]["ssl_enabled"] = false
 default["redmine"]["ssl_listen_ports"] = [ 443 ]
 default["redmine"]["cert_path"] = "/etc/pki/tls/certs/wildcard.pem"
