@@ -22,7 +22,7 @@
 
 case node['platform_family']
 when "rhel", "fedora"
-  default['mysql']['client']['packages'] = %w{Percona-Server-client-55 Percona-Server-shared-compat}
+  default['mysql']['client']['packages'] = %w{mysql mysql-libs mysql-devel}
 when "suse"
   default['mysql']['client']['packages'] = %w{mysql-community-server-client libmysqlclient-devel}
 when "debian"

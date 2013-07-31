@@ -19,6 +19,14 @@
 
 ::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
 
+mysql_pack = node['mysql']['client']['packages']
+node.default['mysql']['client']['packages'] = %w{Percona-Server-client-55 Percona-Server-shared-compat}
+include_recipe "mysql::percona_repo"
+mysql_pack.each do |stock_mysql|
+  package stock_mysql do
+    action :remove
+  end
+end
 include_recipe "mysql::client"
 
 if Chef::Config[:solo]

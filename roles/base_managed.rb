@@ -2,7 +2,6 @@ name "base_managed"
 description "base role for all managed systems"
 run_list(
   "role[base]",
-  "recipe[mysql::percona_repo]",
   "recipe[firewall]",
   "recipe[base::security]",
   "recipe[base::iptables]",
