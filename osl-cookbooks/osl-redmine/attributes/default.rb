@@ -7,6 +7,12 @@ default["redmine"]["path"]      = '/var/www/redmine'
 default["redmine"]["install_method"] = "source"
 default["redmine"]["install_rmagick"] = true
 
+# ssl
+default["redmine"]["redirect_http"] = false
+default["redmine"]["ssl_enabled"] = false
+default["redmine"]["ssl_listen_ports"] = [ 443 ]
+default["redmine"]["cert_path"] = "/etc/pki/tls/certs/wildcard.pem"
+default["redmine"]["key_path"] = "/etc/pki/tls/private/wildcard.key"
 
 # databases
 default["redmine"]["databases"]["production"]["adapter"]  = 'mysql'

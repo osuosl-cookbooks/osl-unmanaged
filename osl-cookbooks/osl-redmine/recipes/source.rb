@@ -74,6 +74,9 @@ web_app "redmine" do
   server_name    "#{node['fqdn']}"
   server_aliases [ "redmine", node['hostname'] ]
   rails_env      environment
+  redirect_http node['redmine']['redirect_http']
+  ssl_enabled node['redmine']['ssl_enabled']
+  ssl_listen_ports node['redmine']['ssl_listen_ports']
 end
 
 #Install Bundler

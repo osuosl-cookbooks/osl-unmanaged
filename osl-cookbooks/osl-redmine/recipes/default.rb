@@ -23,3 +23,7 @@ when "redhat","centos","amazon","scientific","fedora","suse"
   include_recipe "build-essential"
   include_recipe "osl-redmine::source"
 end
+
+if node['redmine']['ssl_enabled']
+  include_recipe "apache2::mod_ssl"
+end
