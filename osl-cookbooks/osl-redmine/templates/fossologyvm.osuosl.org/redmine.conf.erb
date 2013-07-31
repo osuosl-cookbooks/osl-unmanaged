@@ -1,0 +1,175 @@
+<VirtualHost *:80>
+  ServerName <%= @params[:server_name] %>
+  ServerAlias <% @params[:server_aliases].each do |a| %><%= a %> <% end %>
+  DocumentRoot <%= @params[:docroot] %>
+
+  RailsEnv <%= @params[:rails_env] %>
+
+<%- if @params[:install_method].nil? %>
+  RailsBaseURI <%= @params[:docroot] %>
+
+  <Directory <%= @params[:docroot] %>>
+    Options FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+<%- elsif @params[:install_method] == 'dpkg' %>
+  PassengerAppRoot /var/lib/redmine/<%= @params[:instance] %>/passenger
+  SetEnv X_DEBIAN_SITEID "<%= @params[:instance] %>"
+  Alias "/plugin_assets/" /var/cache/redmine/<%= @params[:instance] %>/plugin_assets/
+
+  <Directory "/usr/share/redmine/public">
+    Order allow,deny
+    Allow from all
+  </Directory>
+<%- end %>
+
+  Alias /debian       /var/www/fossology.org/htdocs/debian
+  Alias /rpms         /var/www/fossology.org/htdocs/rpms
+  Alias /dokuwiki     /usr/share/dokuwiki
+  Alias /docs         /usr/share/dokuwiki
+  Alias /old/images   /var/www/fossology.org/htdocs/images
+  Alias /video        /var/www/fossology.org/htdocs/video
+  Alias /old          /var/www/fossology.org/htdocs/old
+  Alias /releases     /var/www/fossology.org/htdocs/releases
+  Alias /testdata     /var/www/fossology.org/htdocs/testdata
+  Alias /bobg         /home/bobg/public_html/
+
+  # Rewrite www.fossology.org to the fossology project
+  RewriteEngine on
+  RewriteRule ^/$ http://www.fossology.org/projects/fossology [R]
+
+  <Location /(dokuwiki|old|docs).*>
+    PassengerEnabled off
+  </Location>
+
+  <Directory "/home/bobg/public_html/">
+    PassengerEnabled off
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order Allow,Deny
+    Allow from All
+  </Directory>
+
+  <Directory "/var/www/fossology.org/htdocs/debian/">
+    PassengerEnabled off
+    Options Indexes FollowSymLinks
+  </Directory>
+
+  <Directory "/var/www/fossology.org/htdocs/rpms/">
+    PassengerEnabled off
+    Options Indexes FollowSymLinks
+  </Directory>
+
+  <Directory "/var/www/fossology.org/htdocs">
+    AllowOverride All
+    Order Allow,Deny
+    Allow from All
+  </Directory>
+
+  <Directory "/var/www/fossology.org/htdocs/releases">
+    PassengerEnabled off
+    AllowOverride All
+    Options Indexes FollowSymLinks
+    Order Allow,Deny
+    Allow from All
+  </Directory>
+
+  #allow directory indexes for test data
+  <Directory "/var/www/fossology.org/htdocs/testdata">
+    PassengerEnabled off
+    AllowOverride All
+    Options Indexes
+    Order Allow,Deny
+    Allow from All
+  </Directory>
+
+  <Directory "/var/www/fossology.org/htdocs/old">
+    AllowOverride All
+    Order Allow,Deny
+    Allow from All
+    AuthUserFile "/var/www/fossology.org/htpasswd"
+    AuthName "Fossology old site"
+    AuthType Basic
+    Require valid-user
+    DirectoryIndex index.php
+  </Directory>
+
+  <Directory "/usr/share/dokuwiki/">
+    AllowOverride All
+    Order Allow,Deny
+    Allow from All
+    AuthUserFile "/var/www/fossology.org/htpasswd"
+    AuthName "Fossology old site"
+    AuthType Basic
+    Require valid-user
+
+    # danger:  the following lines are copied from the Dokuwiki .htaccess file and turned on
+    #          for fossology.org
+
+    ## Uncomment these rules if you want to have nice URLs using
+    ## $conf['userewrite'] = 1 - not needed for rewrite mode 2
+    RewriteEngine on
+
+    ## Not all installations will require the following line.  If you do,
+    ## change "/dokuwiki" to the path to your dokuwiki directory relative
+    ## to your document root.
+    RewriteBase /dokuwiki
+
+    ## If you enable DokuWikis XML-RPC interface, you should consider to
+    ## restrict access to it over HTTPS only! Uncomment the following two
+    ## rules if your server setup allows HTTPS.
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^lib/exe/xmlrpc.php$      https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
+    RewriteRule ^_media/(.*)              lib/exe/fetch.php?media=$1  [QSA,L]
+    RewriteRule ^_detail/(.*)             lib/exe/detail.php?media=$1  [QSA,L]
+    RewriteRule ^_export/([^/]+)/(.*)     doku.php?do=export_$1&id=$2  [QSA,L]
+    RewriteRule ^$                        doku.php  [L]
+    RewriteCond %{REQUEST_FILENAME}       !-f
+    RewriteCond %{REQUEST_FILENAME}       !-d
+    RewriteRule (.*)                      doku.php?id=$1  [QSA,L]
+    RewriteRule ^index.php$               doku.php
+  </Directory>
+
+  # Display maintenance page if we're doing some work on the site
+  RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
+  RewriteRule ^.*$ /maintenance.html
+
+  # Redirect requests for old web site to new web site
+  Redirect permanent /about_us http://www.fossology.org/projects/fossology/wiki/Introduction_to_FOSSology
+  Redirect permanent /contact_us http://www.fossology.org/projects/fossology/wiki/Contact_Us
+  Redirect permanent /contributing http://www.fossology.org/projects/fossology/wiki/Contributing
+  Redirect permanent /debian_install http://www.fossology.org/projects/fossology/wiki/Debian_Install_2_0
+  Redirect permanent /download http://www.fossology.org/projects/fossology/wiki/Subversion_Download
+  Redirect permanent /feed.php http://www.fossology.org/projects/fossology/activity.atom
+  Redirect permanent /foss-scheduler http://www.fossology.org/projects/fossology/wiki/Foss-scheduler_Pre-20
+  Redirect permanent /frequently_asked_questions http://www.fossology.org/projects/fossology/wiki/Frequently_Asked_Questions
+  Redirect permanent /home http://www.fossology.org/projects/fossology
+  Redirect permanent /how_to_browse_the_data-base http://www.fossology.org/projects/fossology/wiki/How_to_Browse_the_Data-Base
+  Redirect permanent /how_to_create_a_new_release http://www.fossology.org/projects/fossology/wiki/How_to_create_a_new_release
+  Redirect permanent /how_to_create_an_agent http://www.fossology.org/projects/fossology/wiki/How_To_Create_An_Agent
+  Redirect permanent /i18n http://www.fossology.org/projects/fossology/wiki/I18n
+  Redirect permanent /install http://www.fossology.org/projects/fossology/wiki/Install_2_0
+  Redirect permanent /legal_info http://www.fossology.org/projects/fossology/wiki/Legal_Info
+  Redirect permanent /links_-_related_projects http://www.fossology.org/projects/fossology/wiki/Links_-_Related_Projects
+  Redirect permanent /nomos_liclist http://www.fossology.org/projects/fossology/wiki/Nomos
+  Redirect permanent /overview_of_the_user_interface http://www.fossology.org/projects/fossology/wiki/Overview_of_the_User_Interface
+  Redirect permanent /project_team http://www.fossology.org/projects/fossology/wiki/Project_Team
+  Redirect permanent /release_notes http://www.fossology.org/projects/fossology/wiki/Release_Notes
+  Redirect permanent /rest_api http://www.fossology.org/projects/fossology/wiki/REST_API
+  Redirect permanent /roadmap http://www.fossology.org/projects/fossology/roadmap
+  Redirect permanent /symbolic_alignment_matrix http://www.fossology.org/projects/fossology/wiki/Symbolic_Alignment_Matrix
+  Redirect permanent /sysadmin_documentation http://www.fossology.org/projects/fossology/wiki/Sysadmin_Documentation
+  Redirect permanent /task_list http://www.fossology.org/projects/fossology/wiki/Task_List
+  Redirect permanent /ubuntu_install http://www.fossology.org/projects/fossology/wiki/Ubuntu_Install_2_0
+  Redirect permanent /unit_test_guidelines http://www.fossology.org/projects/fossology/wiki/Testing_FOSSology
+  Redirect permanent /user_documentation http://www.fossology.org/projects/fossology/wiki/User_Documentation
+  Redirect permanent /v2.0 http://www.fossology.org/versions/show/3
+
+
+  RewriteEngine On
+  LogLevel info
+  ErrorLog <%= node[:apache][:log_dir] %>/<%= @params[:name] %>-error.log
+  CustomLog <%= node[:apache][:log_dir] %>/<%= @params[:name] %>-access.log combined
+</VirtualHost>
