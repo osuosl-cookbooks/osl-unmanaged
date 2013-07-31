@@ -38,7 +38,12 @@ end
 
 git "/var/www/goblin/shared/env/lib/python2.6/site-packages/googleimap" do
   repository "git://github.com/osuosl/google-imap.git"
-  reference "master"
+  case node['hostname']
+    when "mig-fe1","mig-fe2","mig-w1","mig-w2","mig-w3"
+      reference "master"
+    else 
+      reference "imap_parsing"
+    end
   action :sync
 end
 
@@ -48,7 +53,12 @@ cpan_module "URI::Escape"
 # Clone google-imap scripts
 git "/opt/google-imap" do
   repository "git://github.com/osuosl/google-imap.git"
-  reference "master"
+  case node['hostname']
+    when "mig-fe1","mig-fe2","mig-w1","mig-w2","mig-w3"
+      reference "master"
+    else
+      reference "imap_parsing"
+  end
   action :sync
 end
 
