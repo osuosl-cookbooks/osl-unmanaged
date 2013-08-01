@@ -31,7 +31,7 @@ when "redhat","centos","amazon","scientific","fedora","suse"
       mod_passenger
     },
     "rmagick" => %w{ ImageMagick ImageMagick-devel },
-    "mysql"   => %w{ Percona-Server-devel-55 },
+    "mysql"   => %w{ },
     "postgresql" => %w{ postgresql-devel postgresql-libs },
   }
 when "debian","ubuntu"
