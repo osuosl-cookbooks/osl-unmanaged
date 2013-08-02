@@ -4,6 +4,7 @@ run_list(
   "role[base_managed]",
   "recipe[lanparty]",
   "recipe[lanparty::urbanterror]",
+  "recipe[lanparty::teeworlds]",
   "recipe[rsyslog::client]"
 )
 default_attributes(
