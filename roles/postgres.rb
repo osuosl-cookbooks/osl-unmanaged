@@ -4,6 +4,7 @@ run_list(
     "role[base_managed]",
     "recipe[postgresql::server]",
     "recipe[postgresql::config_pgtune]",
+    "recipe[postgrespl::contrib]",
     "recipe[firewall::postgres]"
 )
 default_attributes(
