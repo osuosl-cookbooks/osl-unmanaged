@@ -1,0 +1,19 @@
+{
+  "name": "dev",
+  "description": "The development environment",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "users": [
+          "vagrant"
+        ]
+      }
+    }
+  },
+  "override_attributes": {
+  }
+}
