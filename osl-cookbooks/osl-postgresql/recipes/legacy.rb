@@ -7,6 +7,19 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# Copy the dblist for bigleaf trac sites
+directory "#{node['postgresql']['dir']}/dblist" do
+  action :create
+end
+
+cookbook_file "#{node['postgresql']['dir']}/dblist/bigleaf_rw" do
+  source "bigleaf_rw"
+  mode 00600
+  owner "postgres"
+  group "postgres"
+end
+
+# Set legacy HBA entries from pg1 and other manually created databases
 hba_data = [
   node.default['postgresql']['pg_hba'],
   {:type => 'host', :db => 'fsslgy_redmine', :user => 'fsslgy_redmine', :addr => '140.211.15.250/32', :method => 'md5'},
