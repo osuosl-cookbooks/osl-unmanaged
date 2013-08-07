@@ -1,6 +1,6 @@
-default["racktables"]["source"] = "http://sourceforge.net/projects/racktables/files/RackTables-0.20.4.tar.gz/download"
-default["racktables"]["checksum"] = "173a164f4"
-default["racktables"]["dir"] = "/var/www/racktables"
+default["racktables"]["source"] = "http://sourceforge.net/projects/racktables/files/latest/download"
+default["racktables"]["extension"] = "http://www.mogilowski.net/wp-content/plugins/download-monitor/download.php?id=18"
+default["racktables"]["dir"] = "/var/www/"
 default["racktables"]["redirect_http"] = true
 default["racktables"]["ssl_enabled"] = true
 default["racktables"]["ssl_listen_ports"] = [ 443 ]
