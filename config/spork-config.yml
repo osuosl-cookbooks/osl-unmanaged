@@ -1,3 +1,8 @@
+default_environments:
+  - dev
+  - _default
+version_change_threshold: 2
+environment_path: "environments"
 plugins:
   git:
     enabled: true
