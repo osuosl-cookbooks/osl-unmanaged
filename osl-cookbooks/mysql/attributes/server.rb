@@ -201,9 +201,9 @@ default['mysql']['tunable']['innodb_log_file_size']            = "5M"
 # Calculate the innodb buffer pool size and buffer pool instances
 total_memory = node['memory']['total']
 # Ohai reports node[:memory][:total] in kB, as in "921756kB"
-mem = (total_memory.split("kB")[0].to_i / 1024) / 1024 # in GB
-default['mysql']['tunable']['innodb_buffer_pool_size']         = "#{(Integer(mem * 0.88))}G"
-default['mysql']['tunable']['innodb_buffer_pool_instances']    = "#{(mem * 0.2).ceil}"
+mem = (total_memory.split("kB")[0].to_i / 1024) # in MB
+default['mysql']['tunable']['innodb_buffer_pool_size']         = "#{(Integer(mem * 0.8))}M"
+default['mysql']['tunable']['innodb_buffer_pool_instances']    = (mem * 0.2).ceil
 
 default['mysql']['tunable']['innodb_additional_mem_pool_size'] = "8M"
 default['mysql']['tunable']['innodb_data_file_path']           = "ibdata1:10M:autoextend"
@@ -218,9 +218,9 @@ if node['cpu'].nil? or node['cpu']['total'].nil?
   default['mysql']['tunable']['innodb_commit_concurrency']       = "8"
   default['mysql']['tunable']['innodb_read_io_threads']          = "8"
 else
-  default['mysql']['tunable']['innodb_thread_concurrency']       = "#{(Integer(node['cpu']['total'])) * 2}"
-  default['mysql']['tunable']['innodb_commit_concurrency']       = "#{(Integer(node['cpu']['total'])) * 2}"
-  default['mysql']['tunable']['innodb_read_io_threads']          = "#{(Integer(node['cpu']['total'])) * 2}"
+  default['mysql']['tunable']['innodb_thread_concurrency']       = (Integer(node['cpu']['total'])) * 2
+  default['mysql']['tunable']['innodb_commit_concurrency']       = (Integer(node['cpu']['total'])) * 2
+  default['mysql']['tunable']['innodb_read_io_threads']          = (Integer(node['cpu']['total'])) * 2
 end
 default['mysql']['tunable']['innodb_flush_log_at_trx_commit']  = "2"
 default['mysql']['tunable']['innodb_support_xa']               = true

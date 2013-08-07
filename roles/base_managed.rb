@@ -14,6 +14,7 @@ run_list(
   "recipe[ntp]",
   "recipe[sudo]",
   "recipe[monitoring]",
+  "recipe[sysctl]",
   "recipe[rsyslog::client]"
 )
 default_attributes(

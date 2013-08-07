@@ -52,5 +52,12 @@ override_attributes(
         "percona-nagios-plugins"
       ]
     }
+  },
+  "sysctl" => {
+    "params" => {
+      "vm" => {
+        "swappiness" => "0"
+      }
+    }
   }
 )
