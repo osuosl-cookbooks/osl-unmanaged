@@ -8,7 +8,7 @@
 #
 
 # Allow Puppet Master traffic
-none['firewall']['range']['osl_managed'].each do |iprange|
+node['firewall']['range']['osl_managed'].each do |iprange|
     simple_iptables_rule "puppetmaster" do
       rule [ "--proto tcp --source #{iprange} --dport 8140" ]
       jump "ACCEPT"
