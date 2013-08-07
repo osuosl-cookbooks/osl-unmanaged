@@ -1,11 +1,10 @@
 default_environments:
   - dev
-  - _default
+  - production
 version_change_threshold: 2
-environment_path: "environments"
 plugins:
   git:
     enabled: true
-foodcritic:
-  enabled: true
-  fail_tags: [any]
+  foodcritic:
+    enabled: true
+    fail_tags: [any]
