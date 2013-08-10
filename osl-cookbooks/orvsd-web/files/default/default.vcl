@@ -32,12 +32,13 @@ director default_director round-robin {
 sub vcl_recv {
   set req.backend = default_director;
 
-  # Set this properly
-  if (req.http.X-Real-IP) {
-    set req.http.X-Forwarded-For = req.http.X-Real-IP;
-  } else {
-    remove req.http.X-Forwarded-For;
-    set req.http.X-Forwarded-For = client.ip;
+  # Set this properly from haproxy, for nginx
+  if (req.restarts == 0) {
+    if (req.http.x-real-ip) {
+      set req.http.X-Forwarded-For = req.http.X-Real-IP;
+    } else {
+      set req.http.X-Forwarded-For = client.ip;
+    }
   }
 
   # Use anonymous, cached pages if all backends are down.
