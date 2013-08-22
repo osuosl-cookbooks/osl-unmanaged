@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "osl-postgresql": "= 0.1.4",
     "aliases": "= 0.1.0",
-    "base": "= 0.1.1",
+    "base": "= 0.1.2",
     "firewall": "= 0.1.0",
     "fossology-sites-enabled": "= 0.1.0",
     "goblin": "= 0.1.0",
@@ -16,8 +16,9 @@
     "osl-redmine": "= 0.0.1",
     "osl-slapd": "= 0.1.0",
     "racktables": "= 0.1.0",
-    "rdiff-backup": "= 0.1.0",
-    "ssh-ldap": "= 0.1.0"
+    "rdiff-backup": "= 0.1.1",
+    "ssh-ldap": "= 0.1.0",
+    "osl-packstack": "= 0.0.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
