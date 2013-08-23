@@ -18,7 +18,7 @@
     "racktables": "= 0.1.0",
     "rdiff-backup": "= 0.1.1",
     "ssh-ldap": "= 0.1.0",
-    "osl-packstack": "= 0.0.0"
+    "osl-packstack": "= 0.0.2"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
