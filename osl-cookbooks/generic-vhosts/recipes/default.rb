@@ -17,4 +17,10 @@
 # limitations under the License.
 #
 include_recipe 'apache2'
+include_recipe 'apache2::mod_rewrite'
 
+remote_directory "sites-available" do
+	path "#{node['apache']['dir']}/sites-available"
+	source "sites-available" 
+    action :create
+end
