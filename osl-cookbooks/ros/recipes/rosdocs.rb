@@ -28,7 +28,9 @@ node.set['ros-docs']['glustervol'] = 'fs3.osuosl.bak:/ros-docs'
 # Apache configuration
 node.set['ros-docs']['server_name'] = 'docs.ros.org'
 node.set['ros-docs']['server_aliases'] = [
-  'docs.ros.osuosl.org'
+  'doc.ros.org',
+  'docs.ros.osuosl.org',
+  'doc.ros.osuosl.org'
 ]
 
 # Include the relevant recipes
