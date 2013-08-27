@@ -40,8 +40,7 @@ case node['hostname']
       owner "root"
       group "www-data"
       repository "https://github.com/osuosl/Goblin.git"
-      revision "feature/14757_presync_sleep_config"
-      #revision "master"
+      revision "develop"
       migrate true
       packages ["libpq-dev", "git-core", "libsasl2-dev", "libldap2-dev",
         "python2.6-dev", "libapache2-mod-auth-cas"]
