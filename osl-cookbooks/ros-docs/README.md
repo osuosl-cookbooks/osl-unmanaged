@@ -84,6 +84,12 @@ Attributes
     <td>The Apache DocumentRoot for the docs vhost.</td>
     <td><tt>node['ros-docs']['glusterpath']/docs</tt></td>
   </tr>
+  <tr>
+    <td><tt>['ros-docs']['logs_dir']</tt></td>
+    <td>String</td>
+    <td>The Apache log directory for the docs vhost.</td>
+    <td><tt>/var/log/httpd/node['ros-docs']['server_name']</tt></td>
+  </tr>
 </table>
 
 Usage

@@ -20,10 +20,17 @@
 include_recipe 'firewall::http'
 include_recipe 'apache2'
 
+directory node['ros-docs']['logs_dir'] do
+  action :create
+  owner "apache"
+  group "apache"
+end
+
 web_app node['ros-docs']['server_name'] do
   server_name node['ros-docs']['server_name']
   unless node['ros-docs']['server_aliases'].nil?
     server_aliases node['ros-docs']['server_aliases']
   end
   docroot node['ros-docs']['docroot']
+  logs_dir node['ros-docs']['logs_dir']
 end

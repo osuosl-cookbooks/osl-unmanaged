@@ -14,6 +14,6 @@
     Allow From All
   </Directory>
 
-  CustomLog "/var/log/httpd/<%= @params[:server_name] %>.transfer.log" combined
-  ErrorLog "/var/log/httpd/<%= @params[:server_name] %>.error.log"
+  CustomLog "<%= @params[:logs_dir] %>/transfer.log" combined
+  ErrorLog "<%= @params[:logs_dir] %>/error.log"
 </VirtualHost>

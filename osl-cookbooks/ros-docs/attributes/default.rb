@@ -11,3 +11,4 @@ default['ros-docs']['glusterpath'] = "/data"
 default['ros-docs']['server_name'] = node['fqdn']
 default['ros-docs']['server_aliases'] = nil
 default['ros-docs']['docroot'] = "#{node['ros-docs']['glusterpath']}/docs"
+default['ros-docs']['logs_dir'] = "/var/log/httpd/#{node['ros-docs']['server_name']}"
