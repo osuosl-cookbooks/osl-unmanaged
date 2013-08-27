@@ -18,6 +18,9 @@
 #
 include_recipe 'apache2'
 include_recipe 'apache2::mod_rewrite'
+include_recipe 'apache2::mod_php5'
+include_recipe 'apache2::mod_ssl'
+include_recipe 'php::module_mysql'
 
 remote_directory "sites-available" do
 	path "#{node['apache']['dir']}/sites-available"
