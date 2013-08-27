@@ -1,6 +1,6 @@
 #
-# Cookbook Name:: ros
-# Recipe:: default
+# Cookbook Name:: ros-docs
+# Recipe:: apache
 #
 # Copyright 2013, OSU Open Source Lab
 #
@@ -15,17 +15,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-directory "/var/www/planet.ros.org/htdocs" do
-	mode 0775
-	recursive true
-	group "root"
-	owner "root"
-end
+include_recipe 'firewall::http'
+include_recipe 'apache2'
 
-template "/etc/httpd/vhosts.d/" do
-	source "planet.ros.org.conf.erb"
-	mode 00644
-	owner "root"
-	group "root"
+web_app node['ros-docs']['server_name'] do
+  server_name node['ros-docs']['server_name']
+  unless node['ros-docs']['server_aliases'].nil?
+    server_aliases node['ros-docs']['server_aliases']
+  end
+  docroot node['ros-docs']['docroot']
 end

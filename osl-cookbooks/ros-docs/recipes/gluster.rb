@@ -1,6 +1,6 @@
 #
-# Cookbook Name:: ros
-# Recipe:: default
+# Cookbook Name:: ros-docs
+# Recipe:: gluster
 #
 # Copyright 2013, OSU Open Source Lab
 #
@@ -15,17 +15,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-directory "/var/www/planet.ros.org/htdocs" do
-	mode 0775
-	recursive true
-	group "root"
-	owner "root"
-end
+include_recipe 'base::glusterfs'
 
-template "/etc/httpd/vhosts.d/" do
-	source "planet.ros.org.conf.erb"
-	mode 00644
-	owner "root"
-	group "root"
+# Ensure this is defined
+glustervol = node['ros-docs']['glustervol']
+
+if glustervol
+  glusterpath = node['ros-docs']['glusterpath']
+  directory glusterpath
+  mount glusterpath do
+    device glustervol
+    fstype "glusterfs"
+    options "defaults,_netdev"
+    action [:mount,:enable]
+  end
 end

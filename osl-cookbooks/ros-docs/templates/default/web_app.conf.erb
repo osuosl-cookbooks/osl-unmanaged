@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+  ServerName <%= @params[:server_name] %>
+  <% unless @params[:server_aliases].nil? -%>
+    <% @params[:server_aliases].each do |a| -%>
+      ServerAlias <%= a %>
+    <% end -%>
+  <% end -%>
+  DocumentRoot <%= @params[:docroot] %>
+
+  <Directory <%= @params[:docroot] %>>
+    Options FollowSymlinks
+    AllowOverride All
+    Order Allow,Deny
+    Allow From All
+  </Directory>
+
+  CustomLog "/var/log/httpd/<%= @params[:server_name] %>.transfer.log" combined
+  ErrorLog "/var/log/httpd/<%= @params[:server_name] %>.error.log"
+</VirtualHost>
