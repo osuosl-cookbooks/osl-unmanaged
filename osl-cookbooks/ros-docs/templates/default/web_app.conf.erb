@@ -2,7 +2,7 @@
   ServerName <%= @params[:server_name] %>
   <% unless @params[:server_aliases].nil? -%>
     <% @params[:server_aliases].each do |a| -%>
-      ServerAlias <%= a %>
+  ServerAlias <%= a %>
     <% end -%>
   <% end -%>
   DocumentRoot <%= @params[:docroot] %>

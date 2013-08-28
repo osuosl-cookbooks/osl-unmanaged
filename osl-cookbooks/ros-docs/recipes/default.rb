@@ -18,4 +18,4 @@
 #
 include_recipe 'ros-docs::user'
 include_recipe 'ros-docs::gluster'
-include_recipe 'ros-docs::apache2'
+include_recipe 'ros-docs::apache'

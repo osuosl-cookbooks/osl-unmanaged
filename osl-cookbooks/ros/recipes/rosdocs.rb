@@ -34,6 +34,4 @@ node.set['ros-docs']['server_aliases'] = [
 ]
 
 # Include the relevant recipes
-include_recipe 'ros-docs::user'
-include_recipe 'ros-docs::gluster'
-include_recipe 'ros-docs::apache'
+include_recipe 'ros-docs'
