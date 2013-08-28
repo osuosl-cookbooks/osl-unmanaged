@@ -26,6 +26,7 @@ end
 # install yaml using pear LWRP
 # required for ros/browse/list.php
 include_recipe "php"
+include_recipe "build-essential"
 php_pear "yaml" do
   action :install
 end
