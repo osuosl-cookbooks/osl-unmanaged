@@ -23,9 +23,8 @@ directory "/var/www/planet.ros.org/htdocs" do
 	owner "root"
 end
 
-template "/etc/httpd/vhosts.d/" do
-	source "planet.ros.org.conf.erb"
-	mode 00644
-	owner "root"
-	group "root"
+# install yaml using pear LWRP
+include_recipe "php"
+php_pear "yaml" do
+  action :install
 end
