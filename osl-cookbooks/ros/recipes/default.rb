@@ -19,11 +19,12 @@
 directory "/var/www/planet.ros.org/htdocs" do
 	mode 0775
 	recursive true
-	group "root"
-	owner "root"
+	group "alfred"
+	owner "alfred"
 end
 
 # install yaml using pear LWRP
+# required for ros/browse/list.php
 include_recipe "php"
 php_pear "yaml" do
   action :install
