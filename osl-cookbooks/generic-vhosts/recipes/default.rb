@@ -26,4 +26,5 @@ remote_directory "sites-available" do
 	path "#{node['apache']['dir']}/sites-available"
 	source "sites-available" 
     action :create
+    notifies :reload, "service[apache2]"
 end
