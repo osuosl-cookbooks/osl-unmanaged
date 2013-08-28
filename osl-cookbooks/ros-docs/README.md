@@ -95,9 +95,7 @@ Attributes
 Usage
 -----
 #### ros-docs::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `ros-docs` in your node's `run_list`:
 
 ```json

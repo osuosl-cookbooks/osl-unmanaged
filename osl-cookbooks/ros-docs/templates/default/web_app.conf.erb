@@ -8,7 +8,8 @@
   DocumentRoot <%= @params[:docroot] %>
 
   <Directory <%= @params[:docroot] %>>
-    Options FollowSymlinks
+    Options FollowSymlinks Indexes
+    IndexOptions FancyIndexing
     AllowOverride All
     Order Allow,Deny
     Allow From All
