@@ -32,9 +32,11 @@ php_pear "yaml" do
   action :install
 end
 
+# Gives the ROS user the ability to reload apache with sudo
+node.default['authorization']['sudo']['include_sudoers_d'] = true
 sudo 'ros' do
   user      'ros'
   runas     'root'
   nopasswd  true
-  commands  ['service httpd reload']
+  commands  ['/sbin/service httpd reload']
 end
