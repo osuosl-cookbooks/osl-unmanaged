@@ -31,3 +31,9 @@ package "libyaml-devel"
 php_pear "yaml" do
   action :install
 end
+
+sudo 'ros' do
+  user      "ros"
+  runas     'root'
+  commands  ['service httpd reload']
+end
