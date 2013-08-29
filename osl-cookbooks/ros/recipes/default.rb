@@ -40,3 +40,10 @@ sudo 'ros' do
   nopasswd  true
   commands  ['/sbin/service httpd reload']
 end
+
+cron_d "dump_wiki" do
+	minute 13
+	hour 12
+	weekday 6
+	command "/var/www/wiki.ros.org/dump_wiki > /dev/null 2> /dev/null"
+end

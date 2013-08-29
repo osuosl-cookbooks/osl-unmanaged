@@ -5,10 +5,10 @@ license          'Apache 2.0'
 description      'Installs/Configures ros'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.1'
-
 depends          'ros-docs'
 depends          'git'
 depends          'apache2'
 depends          'python'
 depends          'php'
 depends          'sudo'
+depends 	 'cron'
