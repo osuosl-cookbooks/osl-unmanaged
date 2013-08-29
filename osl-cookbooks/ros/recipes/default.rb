@@ -27,6 +27,7 @@ end
 # required for ros/browse/list.php
 include_recipe "php"
 include_recipe "build-essential"
+include_recipe "cron"
 package "libyaml-devel"
 php_pear "yaml" do
   action :install
