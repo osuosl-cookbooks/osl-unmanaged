@@ -33,7 +33,8 @@ php_pear "yaml" do
 end
 
 sudo 'ros' do
-  user      "ros"
+  user      'ros'
   runas     'root'
+  nopasswd  true
   commands  ['service httpd reload']
 end
