@@ -9,3 +9,5 @@ max_clients = ((mem - 512) / 150).floor
 if max_clients < 5 do
     max_clients = 5
 end
+
+default['apache']['prefork']['maxclients'] = max_clients
