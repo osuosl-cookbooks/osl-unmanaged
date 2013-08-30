@@ -24,4 +24,4 @@ cookbook_license        "apachev2"
 cookbook_email          "systems@osuosl.org"
 role_path               ["#{base_path}/roles"]
 data_bag_path           ["#{base_path}/data_bags"]
-knife[:secret_file] =  "#{home_dir}/.chef/encrypted_data_bag_secret"
+#knife[:secret_file] =  "#{home_dir}/.chef/encrypted_data_bag_secret"
