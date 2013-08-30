@@ -16,12 +16,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 include_recipe 'apache2'
 include_recipe 'apache2::mod_rewrite'
 include_recipe 'apache2::mod_php5'
 include_recipe 'apache2::mod_ssl'
-include_recipe 'php::module_mysql'
-include_recipe 'php::module_apc'
+
+# Install standard php packages
+package 'php-mysql'
+package 'php-pecl-apc'
 
 remote_directory "sites-available" do
 	path "#{node['apache']['dir']}/sites-available"
