@@ -27,7 +27,6 @@ end
 # required for ros/browse/list.php
 include_recipe "php"
 include_recipe "build-essential"
-include_recipe "cron"
 package "libyaml-devel"
 php_pear "yaml" do
   action :install
@@ -42,6 +41,7 @@ sudo 'ros' do
   commands  ['/sbin/service httpd reload']
 end
 
+include_recipe "cron"
 cron_d "dump_wiki" do
 	minute 13
 	hour 12
