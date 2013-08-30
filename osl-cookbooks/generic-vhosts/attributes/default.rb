@@ -6,7 +6,7 @@ mem = (total_memory.split("kB")[0].to_i / 1024) # in MB
 
 max_clients = ((mem - 512) / 150).floor
 
-if max_clients < 5 do
+if max_clients < 5
     max_clients = 5
 end
 

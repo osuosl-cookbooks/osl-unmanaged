@@ -18,7 +18,8 @@
     "racktables": "= 0.1.0",
     "rdiff-backup": "= 0.1.0",
     "ssh-ldap": "= 0.1.0",
-    "ros": "= 0.1.2"
+    "ros": "= 0.1.2",
+    "generic-vhosts": "= 0.1.3"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
