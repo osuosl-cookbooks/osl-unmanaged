@@ -4,7 +4,7 @@ total_memory = node['memory']['total']
 
 mem = (total_memory.split("kB")[0].to_i / 1024) # in MB
 
-max_clients = ((mem - 768) / 150).floor
+max_clients = ((mem - 1024) / 150).floor
 
 if max_clients < 5
     max_clients = 5
