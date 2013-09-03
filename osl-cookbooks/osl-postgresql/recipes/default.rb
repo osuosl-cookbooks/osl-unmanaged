@@ -6,12 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe 'osl-postgresql::mount'
-include_recipe 'postgresql::server'
-include_recipe 'postgresql::config_pgtune'
-include_recipe 'postgresql::contrib'
-include_recipe 'firewall::postgres'
-
 node.set['postgresql']['version'] = '9.2'
 node.set['postgresql']['enable_pgdg_yum'] = true
 node.set['postgresql']['dir'] = '/var/lib/pgsql/9.2/data'
