@@ -24,7 +24,7 @@
 # changed too. It is in the source.rb file, though we recommend
 # overriding attributes by modifying a role, or the node itself.
 # default['nginx']['source']['checksum']
-default['nginx']['version'] = "1.2.6"
+default['nginx']['version'] = "1.2.9"
 default['nginx']['package_name'] = "nginx"
 default['nginx']['dir'] = "/etc/nginx"
 default['nginx']['log_dir'] = "/var/log/nginx"
@@ -38,6 +38,9 @@ when "redhat","centos","scientific","amazon","oracle","fedora"
   default['nginx']['user']       = "nginx"
   default['nginx']['init_style'] = "init"
   default['nginx']['repo_source'] = "epel"
+when "gentoo"
+  default['nginx']['user']       = "nginx"
+  default['nginx']['init_style'] = "init"
 else
   default['nginx']['user']       = "www-data"
   default['nginx']['init_style'] = "init"
@@ -63,10 +66,12 @@ default['nginx']['gzip_types']        = [
   "application/x-javascript",
   "text/xml",
   "application/xml",
-  "application/xml+rss",
+  "application/rss+xml",
+  "application/atom+xml",
   "text/javascript",
   "application/javascript",
-  "application/json"
+  "application/json",
+  "text/mathml"
 ]
 
 default['nginx']['keepalive']          = "on"
@@ -76,6 +81,7 @@ default['nginx']['worker_connections'] = 1024
 default['nginx']['worker_rlimit_nofile'] = nil
 default['nginx']['multi_accept']       = false
 default['nginx']['event']              = nil
+default['nginx']['server_tokens']      = nil
 default['nginx']['server_names_hash_bucket_size'] = 64
 default['nginx']['sendfile'] = 'on'
 
@@ -86,4 +92,5 @@ default['nginx']['types_hash_max_size'] = 2048
 default['nginx']['types_hash_bucket_size'] = 64
 
 default['nginx']['proxy_read_timeout'] = nil
+default['nginx']['client_body_buffer_size'] = nil
 default['nginx']['client_max_body_size'] = nil

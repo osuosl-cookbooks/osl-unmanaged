@@ -31,6 +31,9 @@ http {
   <% unless node['nginx']['disable_access_log'] -%>
   access_log	<%= node['nginx']['log_dir'] %>/access.log;
   <% end %>
+  <% if node['nginx']['server_tokens'] -%>
+  server_tokens <%= node['nginx']['server_tokens'] %>;
+  <% end -%>
 
   sendfile <%= node['nginx']['sendfile'] %>;
   tcp_nopush on;
@@ -60,10 +63,17 @@ http {
   <% if node['nginx']['proxy_read_timeout'] -%>
   proxy_read_timeout <%= node['nginx']['proxy_read_timeout'] %>;
   <% end -%>
+  <% if node['nginx']['client_body_buffer_size'] -%>
+  client_body_buffer_size <%= node['nginx']['client_body_buffer_size'] %>;
+  <% end -%>
   <% if node['nginx']['client_max_body_size'] -%>
   client_max_body_size <%= node['nginx']['client_max_body_size'] %>;
   <% end -%>
 
+  <% if node['nginx']['enable_rate_limiting'] -%>
+  limit_req_zone $binary_remote_addr zone=<%= node['nginx']['rate_limiting_zone_name'] %>:<%= node['nginx']['rate_limiting_backoff'] %> rate=<%= node['nginx']['rate_limit'] %>;
+
+  <% end -%>
   include <%= node['nginx']['dir'] %>/conf.d/*.conf;
   include <%= node['nginx']['dir'] %>/sites-enabled/*;
 }
