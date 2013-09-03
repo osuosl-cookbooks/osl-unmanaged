@@ -18,9 +18,9 @@ node.set['postgresql']['contrib']['packages'] = ['postgresql92-contrib']
 node.set['postgresql']['config_pgtune']['db_type'] = 'web'
 node.set['postgresql']['config_pgtune']['max_connections'] = '300'
 
+node.set['postgresql']['config']['archive_command'] = 'test ! -f ../backups/%f && cp %p ../backups/%f'
+node.set['postgresql']['config']['archive_mode'] = 'on'
 node.set['postgresql']['config']['listen_addresses'] = '*'
+node.set['postgresql']['config']['max_wal_senders'] = '10'
 node.set['postgresql']['config']['log_filename'] = 'postgresql-%Y-%m-%d.log'
 node.set['postgresql']['config']['wal_level'] = 'hot_standby'
-node.set['postgresql']['config']['max_wal_senders'] = '10'
-node.set['postgresql']['config']['archive_mode'] = 'on'
-node.set['postgresql']['config']['archive_command'] = 'cp %p ../archive/%f'
