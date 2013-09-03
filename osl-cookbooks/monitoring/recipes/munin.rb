@@ -6,4 +6,4 @@
 
 include_recipe "munin::server"
 
-node.set['munin']['server_auth_method'] = htpasswd
+node.set['munin']['server_auth_method'] = 'htpasswd'
