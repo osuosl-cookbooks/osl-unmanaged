@@ -9,7 +9,7 @@
 
 mount "/var/lib/pgsql" do
   device "/dev/mapper/lvm-pgsql"
-  device_type :label
   fstype "xfs"
   options "rw,noatime,logbufs=8"
+  action [:enable, :mount]
 end
