@@ -95,6 +95,8 @@ config file.
 * `node['nginx']['event']` - used for config value of `events { use
   }`. Set the event-model. By default nginx looks for the most
   suitable method for your OS.
+* `node['nginx']['server_tokens']` - used for config value of
+  `server_tokens`.
 * `node['nginx']['server_names_hash_bucket_size']` - used for config
   value of `server_names_hash_bucket_size`.
 * `node['nginx']['disable_access_log']` - set to true to disable the
@@ -109,8 +111,25 @@ config file.
   `types_hash_bucket_size` configuration directive.
 * `node['nginx']['proxy_read_timeout']` - defines a timeout (between two
   successive read operations) for reading a response from the proxied server.
+* `node['nginx']['client_body_buffer_size']` - used for config value of
+  `client_body_buffer_size`.
 * `node['nginx']['client_max_body_size']` - specifies the maximum accepted body
   size of a client request, as indicated by the request header Content-Length.
+* `node['nginx']['repo_source']` - when installed from a package this attribute affects
+  which yum repositories, if any, will be added before installing the nginx package. The
+  default value of 'epel' will use the `yum::epel` recipe, 'nginx' will use the
+  `nginx::repo` recipe, and setting no value will not add any additional repositories.
+
+Rate Limiting attributes:
+
+* `node['nginx']['enable_rate_limiting']` - set to true to enable rate
+  limiting (`limit_req_zone` in nginx.conf)
+* `node['nginx']['rate_limiting_zone_name']` - sets the zone in
+  `limit_req_zone`.
+* `node['nginx']['rate_limiting_backoff']` - sets the backoff time for
+  `limit_req_zone`.
+* `node['nginx']['rate_limit']` - set the rate limit amount for
+  `limit_req_zone`.
 
 ### Attributes for configuring the gzip module
 
@@ -138,12 +157,13 @@ config file.
 
 *nginx::http_realip_module*
 
-From: http://wiki.nginx.org/HttpRealIpModule
+From: http://nginx.org/en/docs/http/ngx_http_realip_module.html
 
 * `node['nginx']['realip']['header']` - Header to use for the RealIp
   Module; only accepts "X-Forwarded-For" or "X-Real-IP"
 * `node['nginx']['realip']['addresses']` - Addresses to use for the
   `http_realip` configuration.
+* `node['nginx']['realip']['real_ip_recursive']` - If recursive search is enabled, the original client address that matches one of the trusted addresses is replaced by the last non-trusted address sent in the request header field. Can be on "on" or "off" (default).
 
 ## source.rb
 
