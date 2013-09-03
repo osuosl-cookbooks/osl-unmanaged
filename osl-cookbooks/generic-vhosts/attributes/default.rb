@@ -11,3 +11,4 @@ if max_clients < 5
 end
 
 default['apache']['prefork']['maxclients'] = max_clients
+default['apache']['prefork']['serverlimit'] = max_clients
