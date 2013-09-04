@@ -12,3 +12,5 @@ end
 
 default['apache']['prefork']['maxclients'] = max_clients
 default['apache']['prefork']['serverlimit'] = max_clients
+default['apache']['prefork']['startservers'] = 4
+default['apache']['prefork']['minspareservers'] = 4
