@@ -17,4 +17,5 @@
 # limitations under the License.
 #
 
+include_recipe 'firewall::munin'
 include_recipe 'munin::client'

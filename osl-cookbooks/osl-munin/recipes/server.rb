@@ -33,3 +33,5 @@ node.set['munin']['web_server'] = 'nginx'
 
 include_recipe 'osl-nginx::repo'
 include_recipe 'munin::server'
+include_recipe 'firewall::http'
+include_recipe 'firewall::munin'

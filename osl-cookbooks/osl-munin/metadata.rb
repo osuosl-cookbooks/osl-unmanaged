@@ -8,3 +8,5 @@ version          '0.1.0'
 
 depends          'munin'
 depends          'osl-nginx'
+depends          'firewall'
+depends          'certificate'
