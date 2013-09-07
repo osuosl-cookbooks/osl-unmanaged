@@ -17,5 +17,14 @@
 # limitations under the License.
 #
 
+# Work around for CentOS
+directory "/var/log/munin"
+
 include_recipe 'firewall::munin'
 include_recipe 'munin::client'
+
+service_name = node['munin']['service_name']
+
+service service_name do
+  action [:start,:enable]
+end
