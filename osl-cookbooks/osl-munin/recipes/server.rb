@@ -27,7 +27,6 @@ mount node['osl-munin']['muninpath'] do
 end
 
 node.set['munin']['server_auth_method'] = 'htauth'
-node.set['munin']['server_role'] = 'munin'
 node.set['munin']['public_domain'] = 'munin2.osuosl.org'
 node.set['munin']['web_server'] = 'nginx'
 
