@@ -8,7 +8,8 @@ run_list(
   "recipe[chef-client::cron]",
   "recipe[aliases]",
   "recipe[openssh]",
-  "recipe[chef-client::delete_validation]"
+  "recipe[chef-client::delete_validation]",
+  "recipe[osl-munin::client]"
 )
 default_attributes(
 )
