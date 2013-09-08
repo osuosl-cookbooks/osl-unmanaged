@@ -19,7 +19,7 @@
     "rdiff-backup": "= 0.1.1",
     "ssh-ldap": "= 0.1.0",
     "osl-packstack": "= 0.0.2",
-    "generic-vhosts": "= 0.1.10",
+    "generic-vhosts": "= 0.1.11",
     "ros": "= 0.1.6"
   },
   "json_class": "Chef::Environment",
