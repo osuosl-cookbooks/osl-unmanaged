@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "osl-postgresql": "= 0.1.6",
     "aliases": "= 0.1.0",
-    "base": "= 0.1.2",
+    "base": "= 0.1.3",
     "firewall": "= 0.1.0",
     "fossology-sites-enabled": "= 0.1.0",
     "goblin": "= 0.1.1",
@@ -19,7 +19,7 @@
     "rdiff-backup": "= 0.1.0",
     "ssh-ldap": "= 0.1.0",
     "ros": "= 0.1.6",
-    "generic-vhosts": "= 0.1.12"
+    "generic-vhosts": "= 0.1.14"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
