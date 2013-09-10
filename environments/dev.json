@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "osl-postgresql": "= 0.1.6",
     "aliases": "= 0.1.0",
-    "base": "= 0.1.3",
+    "base": "= 0.1.4",
     "firewall": "= 0.1.0",
     "fossology-sites-enabled": "= 0.1.0",
     "goblin": "= 0.1.0",
