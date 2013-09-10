@@ -18,7 +18,7 @@
     "racktables": "= 0.1.0",
     "rdiff-backup": "= 0.1.0",
     "ssh-ldap": "= 0.1.0",
-    "ros": "= 0.1.6",
+    "ros": "= 0.1.7",
     "generic-vhosts": "= 0.1.14",
     "ros-docs": "= 0.1.1"
   },

@@ -20,7 +20,7 @@
     "ssh-ldap": "= 0.1.0",
     "osl-packstack": "= 0.0.2",
     "generic-vhosts": "= 0.1.14",
-    "ros": "= 0.1.6",
+    "ros": "= 0.1.7",
     "ssh-keys": "= 1.0.0",
     "ros-docs": "= 0.1.1"
   },
