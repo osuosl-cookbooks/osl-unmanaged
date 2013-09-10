@@ -17,5 +17,9 @@
 # limitations under the License.
 #
 include_recipe 'ros-docs::user'
-include_recipe 'ros-docs::gluster'
+if node['ros-docs']['glustervol']
+  include_recipe 'ros-docs::gluster'
+else
+  include_recipe 'ros-docs::localmount'
+end
 include_recipe 'ros-docs::apache'
