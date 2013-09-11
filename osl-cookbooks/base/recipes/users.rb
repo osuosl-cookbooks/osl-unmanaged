@@ -7,6 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "user::data_bag"
-
 node.default['users'] = ['osl-root', 'osl-osuadmin']
+
+include_recipe "user::data_bag"
