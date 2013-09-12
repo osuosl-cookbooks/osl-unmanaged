@@ -1,21 +1,12 @@
 # Default Varnish cache policy
 
-# Define the internal network subnet.
-# These are used below to allow internal access to certain files while not
-# allowing access from the public internet.
-acl internal {
-  "140.211.15.0"/24;
-  "140.211.167.0"/27;
-  "10.1.0.0"/23;
-}
-
-
 # Define the list of backends (web servers).
 # Port 80 Backend Servers
-
+backend default { .host = "127.0.0.1"; .probe = { .url = "/"; .interval = 5s; .timeout = 1s; .window = 5; .threshold = 3; }}
 
 # Incoming requests: Decide whether to try cache or not
 sub vcl_recv {
+  set req.backend = default;
   # Use anonymous, cached pages if all backends are down.
   if (!req.backend.healthy) {
     unset req.http.Cookie;
