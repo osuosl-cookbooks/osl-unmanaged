@@ -16,3 +16,8 @@ end
 package "pigz" do
     action :install
 end
+
+cron_d "compress-http-logs" do
+    hour 12
+    command "/etc/cron.daily/compress-http-logs"
+end
