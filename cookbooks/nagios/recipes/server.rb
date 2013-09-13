@@ -21,6 +21,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# install nrpe first so the nagios user is available before we template files using that user
+include_recipe "nagios::client"
+
 # workaround to allow for a nagios server install from source using the override attribute on debian/ubuntu (COOK-2350)
 if platform_family?('debian') && node['nagios']['server']['install_method'] == "source"
   nagios_service_name = "nagios"
@@ -48,12 +51,13 @@ else
   raise 'Unknown web server option provided for Nagios server'
 end
 
-# find nagios web interface users from the users data bag
+# find nagios web interface users from the defined data bag
+user_databag = node['nagios']['users_databag'].to_sym
 group = node['nagios']['users_databag_group']
 begin
-  sysadmins = search(:users, "groups:#{group}")
+  sysadmins = search(user_databag, "groups:#{group} NOT action:remove")
 rescue Net::HTTPServerException
-  Chef::Log.fatal("Could not find appropriate items in the \"users\" databag.  Check to make sure there is a users databag and if you have set the \"users_databag_group\" that users in that group exist")
+  Chef::Log.fatal("Could not find appropriate items in the \"#{node['nagios']['users_databag']}\" databag.  Check to make sure the databag exists and if you have set the \"users_databag_group\" that users in that group exist")
   raise 'Could not find appropriate items in the "users" databag.  Check to make sure there is a users databag and if you have set the "users_databag_group" that users in that group exist'
 end
 
@@ -77,7 +81,6 @@ when "cas"
 when "ldap"
   if(web_srv == :apache)
     include_recipe "apache2::mod_authnz_ldap"
-    include_recipe "apache2::mod_ldap"
   else
     Chef::Log.fatal("LDAP authentication for Nagios is not supported on NGINX")
     Chef::Log.fatal("Set node['nagios']['server_auth_method'] attribute in your role: #{node['nagios']['server_role']}")
@@ -151,6 +154,7 @@ unmanaged_hosts = nagios_bags.get('nagios_unmanagedhosts')
 serviceescalations = nagios_bags.get('nagios_serviceescalations')
 contacts = nagios_bags.get('nagios_contacts')
 contactgroups = nagios_bags.get('nagios_contactgroups')
+servicedependencies = nagios_bags.get('nagios_servicedependencies')
 
 # Add unmanaged host hostgroups to the hostgroups array if they don't already exist
 unmanaged_hosts.each do |host|
@@ -169,12 +173,12 @@ if nagios_bags.bag_list.include?("nagios_hostgroups")
     hostgroup_list << hg['hostgroup_name']
     temp_hostgroup_array= Array.new
     if node['nagios']['multi_environment_monitoring']
-      search(:node, "#{hg['search_query']}") do |n|
-        temp_hostgroup_array << n['hostname']
+      search(:node, hg['search_query']) do |n|
+        temp_hostgroup_array << n[node['nagios']['host_name_attribute']]
       end
     else
       search(:node, "#{hg['search_query']} AND chef_environment:#{node.chef_environment}") do |n|
-        temp_hostgroup_array << n['hostname']
+        temp_hostgroup_array << n[node['nagios']['host_name_attribute']]
       end
     end
     hostgroup_nodes[hg['hostgroup_name']] = temp_hostgroup_array.join(",")
@@ -185,6 +189,13 @@ end
 members = Array.new
 sysadmins.each do |s|
   members << s['id']
+end
+
+# add additional contacts including pagerduty to the contacts
+if node['nagios']['additional_contacts']
+  node['nagios']['additional_contacts'].each do |s,enabled|
+    members << s if enabled
+  end
 end
 
 public_domain = node['public_domain'] || node['domain']
@@ -230,7 +241,7 @@ bash "Create SSL Certificates" do
   openssl req -subj "#{node['nagios']['ssl_req']}" -new -x509 -nodes -sha1 -days 3650 -key nagios-server.key > nagios-server.crt
   cat nagios-server.key nagios-server.crt > nagios-server.pem
   EOH
-  not_if { ::File.exists?("#{node['nagios']['conf_dir']}/certificates/nagios-server.pem") }
+  not_if { ::File.exists?("#{node['nagios']['ssl_cert_file']}") }
 end
 
 %w{ nagios cgi }.each do |conf|
@@ -280,6 +291,10 @@ nagios_conf "hosts" do
   variables(:nodes => nodes,
             :unmanaged_hosts => unmanaged_hosts,
             :hostgroups => hostgroups)
+end
+
+nagios_conf "servicedependencies" do
+  variables(:servicedependencies => servicedependencies)
 end
 
 service "nagios" do
