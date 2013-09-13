@@ -22,7 +22,8 @@
     "generic-vhosts": "= 0.1.17",
     "ros": "= 0.1.8",
     "ssh-keys": "= 1.0.0",
-    "ros-docs": "= 0.1.1"
+    "ros-docs": "= 0.1.1",
+    "osl-haproxy": "= 0.1.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",

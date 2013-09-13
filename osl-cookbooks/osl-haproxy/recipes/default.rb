@@ -16,3 +16,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+include_recipe "haproxy"
+
+template "#{node['haproxy']['conf_dir']}/haproxy.cfg" do
+  source "haproxy.cfg.erb"
+  owner "root"
+  group "root"
+  mode 00644
+  notifies :reload, "service[haproxy]"
+  variables(
+    :defaults_options => haproxy_defaults_options,
+    :defaults_timeouts => haproxy_defaults_timeouts
+  )
+end
+
+service "haproxy" do
+  supports :restart => true, :status => true, :reload => true
+  action [:enable, :start]
+end
