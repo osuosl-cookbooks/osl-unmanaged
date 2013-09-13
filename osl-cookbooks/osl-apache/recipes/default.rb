@@ -17,3 +17,8 @@
 # limitations under the License.
 #
 include_recipe "apache2"
+include_recipe 'base::http'
+
+package 'php-mysql'
+package 'php-pecl-apc'
+
