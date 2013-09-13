@@ -18,6 +18,8 @@
 #
 include_recipe "apache2"
 include_recipe 'base::http'
+include_recipe "firewall::http"
+
 
 package 'php-mysql'
 package 'php-pecl-apc'
