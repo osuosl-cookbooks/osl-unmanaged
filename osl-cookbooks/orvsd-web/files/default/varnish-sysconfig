@@ -30,7 +30,7 @@ VARNISH_THREAD_TIMEOUT=120
 VARNISH_STORAGE_FILE=/var/lib/varnish/varnish_storage.bin
 # # Cache file size: in bytes, optionally using k / M / G / T suffix,
 # # or in percentage of available disk space using the % suffix.
-VARNISH_STORAGE_SIZE=2G
+VARNISH_STORAGE_SIZE=1G
 # # Backend storage specification
 VARNISH_STORAGE="file,${VARNISH_STORAGE_FILE},${VARNISH_STORAGE_SIZE}"
 # # Default TTL used when the backend does not specify one
