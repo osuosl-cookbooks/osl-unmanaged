@@ -18,21 +18,24 @@
 #
 include_recipe "osl-apache"
 
-node["phpbb"]["vhosts"].each do |vhost|
+node["phpbb"]["vhosts"].each do |vhost, prod|
 
-	directory "#{node['apache']['log_dir']}/#{vhost}/access" do
-		owner "root"
-		group "root"
-		mode 00755
-		recursive true
-		action :create
-	end
+	if prod do
 
-	directory "#{node['apache']['log_dir']}/#{vhost}/error" do
-		owner "root"
-		group "root"
-		mode 00755
-		action :create
+		directory "#{node['apache']['log_dir']}/#{vhost}/access" do
+			owner "root"
+			group "root"
+			mode 00755
+			recursive true
+			action :create
+		end
+
+		directory "#{node['apache']['log_dir']}/#{vhost}/error" do
+			owner "root"
+			group "root"
+			mode 00755
+			action :create
+		end
 	end
 
 	template "#{node['apache']['dir']}/sites-available/#{vhost}" do
