@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 include_recipe "haproxy"
+include_recipe "firewall::http"
+
 
 template "#{node['haproxy']['conf_dir']}/haproxy.cfg" do
   source "haproxy.cfg.erb"
