@@ -1,5 +1,5 @@
-#
 # Author:: Joshua Sierles <joshua@37signals.com>
+#
 # Author:: Joshua Timberman <joshua@opscode.com>
 # Author:: Nathan Haneysmith <nathan@opscode.com>
 # Author:: Seth Chisamore <schisamo@opscode.com>
@@ -23,6 +23,10 @@
 #
 
 default['nagios']['pagerduty_key'] = ''
+default['nagios']['pagerduty']['script_url'] = 'https://raw.github.com/PagerDuty/pagerduty-nagios-pl/master/pagerduty_nagios.pl'
+unless node['nagios']['pagerduty_key'].empty?
+  default['nagios']['additional_contacts'] = { 'pagerduty' => true }
+end
 
 case node['platform_family']
 when 'debian'
@@ -47,16 +51,19 @@ default['nagios']['cache_dir']  = '/var/cache/nagios3'
 default['nagios']['state_dir']  = '/var/lib/nagios3'
 default['nagios']['run_dir']    = '/var/run/nagios3'
 default['nagios']['docroot']    = '/usr/share/nagios3/htdocs'
+default['nagios']['timezone']	= 'UTC'
 default['nagios']['enable_ssl'] = false
 default['nagios']['http_port']  = node['nagios']['enable_ssl'] ? '443' : '80'
 default['nagios']['server_name'] = node.has_key?(:domain) ? "nagios.#{domain}" : 'nagios'
+default['nagios']['ssl_cert_file'] = "#{node['nagios']['conf_dir']}/certificates/nagios-server.pem"
+default['nagios']['ssl_cert_key']  = "#{node['nagios']['conf_dir']}/certificates/nagios-server.pem"
 default['nagios']['ssl_req'] = '/C=US/ST=Several/L=Locality/O=Example/OU=Operations/' +
   "CN=#{node['nagios']['server_name']}/emailAddress=ops@#{node['nagios']['server_name']}"
 
 # for server from source installation
 default['nagios']['server']['url']      = 'http://prdownloads.sourceforge.net/sourceforge/nagios'
-default['nagios']['server']['version']  = '3.4.4'
-default['nagios']['server']['checksum'] = 'cf6c4c82c4d8dd42e5daae92c20682574f001f03d062600327372c8274fc338e'
+default['nagios']['server']['version']  = '3.5.0'
+default['nagios']['server']['checksum'] = '469381b2954392689c85d3db733e8da4bd43b806b3d661d1a7fbd52dacc084db'
 
 default['nagios']['notifications_enabled']   = 0
 default['nagios']['check_external_commands'] = true
@@ -64,8 +71,10 @@ default['nagios']['default_contact_groups']  = %w{admins}
 default['nagios']['sysadmin_email']          = "root@localhost"
 default['nagios']['sysadmin_sms_email']      = "root@localhost"
 default['nagios']['server_auth_method']      = "openid"
+default['nagios']['users_databag']           = "users"
 default['nagios']['users_databag_group']     = "sysadmin"
 default['nagios']['host_name_attribute']     = "hostname"
+default['nagios']['large_installation_tweaks'] = 0
 
 # for cas authentication
 default['nagios']['cas_login_url'] = "https://example.com/cas/login"

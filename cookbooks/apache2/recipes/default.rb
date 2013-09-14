@@ -16,7 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-include_recipe "firewall::http"
 
 package "apache2" do
   package_name node['apache']['package']

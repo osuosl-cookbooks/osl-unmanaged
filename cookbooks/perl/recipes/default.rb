@@ -33,21 +33,21 @@ unless node['platform'] == 'windows'
 	end
 else
 	installer = "strawberry-perl-#{node['perl']['maj_version']}.#{node['perl']['min_version']}.#{node['perl']['sub_version']}-#{node['perl']['bitness']}.msi"
-		
-	tempdir = "#{ENV['TEMP']}"
-	
+
+	tempdir = ENV['TEMP']
+
 	if tempdir.nil? || tempdir == ''
 		tempdir = 'C:\\temp\\'
 
 		#directory 'C:\\temp\\' do
-		directory "#{tempdir}" do
+		directory tempdir do
 	 		action :create
 	 		inherits true
 	 		owner "administrator"
 	 		group "administrators"
 	 	end
 	end
-		
+
 	directory node['perl']['install_dir'] do
 		action :create
 		recursive true
@@ -55,7 +55,7 @@ else
 		owner "administrator"
 		group "administrators"
 	end
-	
+
 	remote_file "#{tempdir}\\#{installer}" do
 		source "https://strawberry-perl.googlecode.com/files/#{installer}"
 		action :create
@@ -63,20 +63,20 @@ else
 		group "administrators"
 		mode 0774
 	end
-	
+
 	execute "Install StrawberryPerl" do
 		command "msiexec /qn /i #{tempdir}\\#{installer} INSTALLDIR=#{node['perl']['install_dir']} PERL_PATH=YES"
 		not_if { File.exists?("#{node['perl']['install_dir']}\\perl\\bin\\perl.exe") }
 	end
-	
+
 	execute "Add Perl to PATH" do
 		command "setx /M path \"#{node['perl']['install_dir']}perl\\bin;%path%\""
 	end
-	
+
 	## Going to try the windows_path primitive
 	## This appears to only Append to %PATH%, when I want it to Prepend
 	#windows_path "#{node['perl']['install_dir']}perl\\bin" do
 	#	action :add
-	#end	
-	
+	#end
+
 end

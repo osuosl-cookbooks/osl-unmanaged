@@ -20,20 +20,14 @@ if node["nagios"]["server"]["stop_apache"]
   end
 end
 
-via_pkg = value_for_platform_family(
-  %w(rhel fedora) => {
-    %w(5.0 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8) => false,
-    "default" => nil
-  },
-  "default" => true
-)
-
-if(via_pkg.nil?)
+# This doesn't use value_for_platform_family so that it can specify version ranges - COOK-2891
+if platform_family?('rhel') || platform_family?('fedora')
   node.set['nagios']['server']['nginx_dispatch'] = :both
-elsif(via_pkg == false)
-  node.set["nginx"]["install_method"] = 'source'
-  node.set['nagios']['server']['nginx_dispatch'] = :both
+  if node['platform_version'].to_f < 6
+    node.set['nginx']['install_method'] = 'source'
+  end
 end
+
 include_recipe "nginx"
 
 %w(default 000-default).each do |disable_site|
@@ -67,21 +61,16 @@ end
 template File.join(node['nginx']['dir'], 'sites-available', 'nagios3.conf') do
   source 'nginx.conf.erb'
   mode 00644
-  pem = File.join(
-    node['nagios']['conf_dir'],
-    'certificates',
-    'nagios-server.pem'
-  )
   variables(
     :public_domain => public_domain,
-    :listen_port => node['nagios']['http_port'],
-    :https => node['nagios']['https'],
-    :cert_file => pem,
-    :cert_key => pem,
-    :docroot => node['nagios']['docroot'],
-    :log_dir => node['nagios']['log_dir'],
-    :fqdn => node['fqdn'],
-    :nagios_url => node['nagios']['url'],
+    :listen_port   => node['nagios']['http_port'],
+    :https         => node['nagios']['enable_ssl'],
+    :ssl_cert_file => node['nagios']['ssl_cert_file'],
+    :ssl_cert_key  => node['nagios']['ssl_cert_key'],
+    :docroot       => node['nagios']['docroot'],
+    :log_dir       => node['nagios']['log_dir'],
+    :fqdn          => node['fqdn'],
+    :nagios_url    => node['nagios']['url'],
     :chef_env =>  node.chef_environment == '_default' ? 'default' : node.chef_environment,
     :htpasswd_file => File.join(
       node['nagios']['conf_dir'],
@@ -98,4 +87,3 @@ end
 nginx_site "nagios3.conf" do
   notifies :reload, "service[nginx]"
 end
-

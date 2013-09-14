@@ -1,0 +1,2 @@
+ErrorLog "|/usr/bin/rotatelogs <%= node['apache']['log_dir'] %>/<%= @params[:name] %>/error/%Y%d%m.log 86400"
+CustomLog "|/usr/bin/rotatelogs <%= node['apache']['log_dir'] %>/<%= @params[:name] %>/access/%Y%d%m.log 86400" combined

@@ -17,11 +17,8 @@ app_name = 'racktables'
 app_config = node[app_name]
 
 src_filename = app_config['source']
-extension_filename = app_config['extension']
 src_filepath = "/tmp/Racktables.tar.gz"
-extension_filepath = "/tmp/extension.tar.gz"
-tmp_path = "/tmp/RackTables"
-tmp_extension_path = "/tmp/extension"
+tmp_path = "/tmp/RackTables-0.20.4"
 extract_path = app_config['dir']
 
 # Packages
@@ -58,9 +55,11 @@ web_app "racktables" do
   ssl_listen_ports node['racktables']['ssl_listen_ports']
 end
 
+
 # wget & extract file
 remote_file src_filepath do
   source src_filename
+  checksum app_config['checksum']
   owner app_name
   group app_name
   action :create_if_missing
@@ -70,10 +69,7 @@ bash 'extract_module' do
   cwd ::File.dirname(src_filepath)
   code <<-EOH
     tar xzf #{src_filepath}
-    tar xvf #{extension_filepath}
-    sudo cp -r #{tmp_path}/ #{extract_path}
-    sudo cp #{tmp_extension_path}/extension.php #{extract_path}/plugins/
-    sudo cp -r #{tmp_extension_path}/extensions/ #{extract_path}/wwwroot/
+    sudo cp -r #{tmp_path}/wwwroot/* #{extract_path}
     EOH
   #not_if { ::File.exists?(extract_path) }
 end
