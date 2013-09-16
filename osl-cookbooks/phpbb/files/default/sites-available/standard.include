@@ -1,0 +1,40 @@
+ServerAdmin webmaster@phpbb.com
+
+DocumentRoot /var/www/phpbb.com/htdocs
+php_admin_value open_basedir ".:/tmp:/usr/share/php:/var/www/phpbb.com"
+
+# Deal with bots
+SetEnvIfNoCase user-agent "Link Sleuth" bad_bot=1
+SetEnvIfNoCase user-agent "HTTrack " bad_bot=1
+
+# Other performance settings
+Timeout 10
+KeepAlive On
+
+# phpBB specific settings
+Include /var/www/phpbb.com/htdocs/symfony/.htdev
+
+ProxyRequests off
+ProxyPass /updatecheck http://version.phpbb.com/legacy
+ProxyPassReverse /updatecheck http://version.phpbb.com/legacy
+
+<Directory /var/www/phpbb.com/htdocs>
+    Options FollowSymLinks
+    AllowOverride All
+    Order Allow,Deny
+    Allow from all
+    Deny from env=bad_bot
+</Directory>
+
+<FilesMatch "^\.ht">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<Proxy *>
+    Order allow,deny
+    Allow from All
+</proxy>
+
+CustomLog "|/usr/sbin/rotatelogs /var/log/httpd/phpbb.com/transfer/%Y%m%d.log 86400" combined
+ErrorLog "|/usr/sbin/rotatelogs /var/log/httpd/phpbb.com/error/%Y%m%d.log 86400"
