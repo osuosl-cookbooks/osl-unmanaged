@@ -1,3 +1,0 @@
-LogFormat "%h %l %u %t \"%r\" \"%{Host}i\" %>s %b" commonwh
-CustomLog "|/usr/bin/rotatelogs #{node['apache']['log_dir']}/<%= @server_name %>/access/%Y%m%d.log 86400" commonwh
-ErrorLog "|/usr/sbin/rotatelogs #{node['apache']['log_dir']}/<%= @server_name %>/error/%Y%m%d.log 86400"
