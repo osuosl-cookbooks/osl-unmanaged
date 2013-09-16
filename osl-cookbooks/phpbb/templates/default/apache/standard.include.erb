@@ -36,5 +36,4 @@ ProxyPassReverse /updatecheck http://version.phpbb.com/legacy
     Allow from All
 </proxy>
 
-CustomLog "|/usr/sbin/rotatelogs /var/log/apache2/phpbb.com/transfer/%Y%m%d.log" combined
-ErrorLog "|/usr/sbin/rotatelogs /var/log/apache2/phpbb.com/error/%Y%m%d.log"
+<%= render "custom_logs.erb" %>

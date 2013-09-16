@@ -21,7 +21,6 @@ include_recipe "osl-apache"
 node["phpbb"]["vhosts"].each do |vhost, prod|
 
 	if prod do
-
 		directory "#{node['apache']['log_dir']}/#{vhost}/access" do
 			owner "root"
 			group "root"
@@ -29,7 +28,6 @@ node["phpbb"]["vhosts"].each do |vhost, prod|
 			recursive true
 			action :create
 		end
-
 		directory "#{node['apache']['log_dir']}/#{vhost}/error" do
 			owner "root"
 			group "root"
@@ -43,5 +41,9 @@ node["phpbb"]["vhosts"].each do |vhost, prod|
 		owner "root"
 		group "root"
 		mode 00644
+		variables ({
+			:server_name => "#{vhost}"
+		})
+
 	end
 end
