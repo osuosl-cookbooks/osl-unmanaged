@@ -18,6 +18,21 @@
 #
 include_recipe "osl-apache"
 
+directory "#{node['apache']['log_dir']}/phpbb.com/access" do
+    owner "root"
+    group "root"
+    mode 00755
+    recursive true
+    action :create
+end
+directory "#{node['apache']['log_dir']}/phpbb.com/error" do
+    owner "root"
+    group "root"
+    mode 00755
+    recursive true
+    action :create
+end
+
 node['phpbb']['vhosts'].each do |vhost| 
 
 	cookbook_file "#{node['apache']['dir']}/sites-available/#{vhost}" do

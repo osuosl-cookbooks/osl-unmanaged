@@ -1,25 +1,25 @@
 <VirtualHost *:8080>
-    ServerName www.phpbb.com
+    ServerName www-test.phpbb.com
     ServerAlias phpbb.com temp.phpbb.com dev.phpbb.com phpbb.osuosl.org www2.phpbb.com
 
     RewriteEngine on
     AllowEncodedSlashes NoDecode
-    RewriteCond %{HTTP_HOST} !^www\.phpbb\.com$ [NC]
+    RewriteCond %{HTTP_HOST} !^www-test\.phpbb\.com$ [NC]
     RewriteCond %{HTTP_HOST} !^local\.phpbb\.com$ [NC]
-    RewriteRule (.*) http://www.phpbb.com$1 [R=301,L]
+    RewriteRule (.*) http://www-test.phpbb.com$1 [R=301,L]
 
     Include /etc/httpd/sites-available/standard.include
 </VirtualHost>
 
 <VirtualHost *:443>
-    ServerName www.phpbb.com
+    ServerName www-test.phpbb.com
     ServerAlias phpbb.com temp.phpbb.com dev.phpbb.com phpbb.osuosl.org www2.phpbb.com
 
     RewriteEngine on
     AllowEncodedSlashes NoDecode
-    RewriteCond %{HTTP_HOST} !^www\.phpbb\.com$ [NC]
+    RewriteCond %{HTTP_HOST} !^www-test\.phpbb\.com$ [NC]
     RewriteCond %{HTTP_HOST} !^local\.phpbb\.com$ [NC]
-    RewriteRule (.*) http://www.phpbb.com$1 [R=301,L]
+    RewriteRule (.*) http://www-test.phpbb.com$1 [R=301,L]
 
     SSLEngine On
     Include /etc/httpd/sites-available/standard.include
