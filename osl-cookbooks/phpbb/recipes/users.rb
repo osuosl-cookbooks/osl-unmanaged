@@ -18,6 +18,5 @@
 #
 group "phpbb" do
     action :create
-    members node['phpbb']['users']
     append true
 end
