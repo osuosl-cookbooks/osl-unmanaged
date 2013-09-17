@@ -76,7 +76,8 @@ hba_data = [
   {:type => 'host', :db => 'openfcoe_patchwork', :user => 'openfcoe_patchwork', :addr => '140.211.15.215/32', :method => 'md5'},
   {:type => 'host', :db => 'summit_linuxplumbersconf', :user => 'summit_linuxplumbersconf', :addr => '140.211.15.222/32', :method => 'md5'},
   {:type => 'host', :db => 'midnight_trac', :user => 'midnight_trac', :addr => '140.211.15.12/32', :method => 'md5'},
-  {:type => 'host', :db => 'testpypi', :user => 'testpypi', :addr => '140.211.10.73/32', :method => 'md5'}
+  {:type => 'host', :db => 'testpypi', :user => 'testpypi', :addr => '140.211.10.73/32', :method => 'md5'},
+  {:type => 'host'. :db => 'ros_answers', :user => 'ros_answers', :addr => '140,211,9,4/32', :method => 'md5'}
 ].flatten
 
 node.set["postgresql"]["pg_hba"] = hba_data
