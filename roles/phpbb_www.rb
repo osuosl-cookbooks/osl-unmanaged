@@ -3,7 +3,8 @@ description "phpbb web node"
 run_list(
   "role[base_managed]",
   "recipe[phpbb::apache]",
-  "recipe[phpbb::memcache]"
+  "recipe[phpbb::memcache]",
+  "recipe[phpbb::users]"
 ) 
 override_attributes(
   "memcached" => {
