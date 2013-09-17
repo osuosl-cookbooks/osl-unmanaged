@@ -17,6 +17,10 @@
 # limitations under the License.
 #
 include_recipe "osl-apache"
+include_recipe "apache2::mod_proxy"
+include_recipe "apache2::mod_proxy_http"
+
+
 
 directory "#{node['apache']['log_dir']}/phpbb.com/access" do
     owner "root"
@@ -33,12 +37,9 @@ directory "#{node['apache']['log_dir']}/phpbb.com/error" do
     action :create
 end
 
-node['phpbb']['vhosts'].each do |vhost| 
-
-	cookbook_file "#{node['apache']['dir']}/sites-available/#{vhost}" do
-		source "sites-available/#{vhost}"
-		owner "root"
-		group "root"
-		mode 00644
-	end
+remote_directory "sites-available" do
+    path "#{node['apache']['dir']}/sites-available"
+    source "sites-available" 
+    action :create
+    notifies :reload, "service[apache2]"
 end
