@@ -20,3 +20,5 @@ default['nsswitch']['netgroup'] = "files"
 default['nsswitch']['publickey'] = "nisplus"
 default['nsswitch']['automount'] = "files"
 default['nsswitch']['aliases'] = "files"
+
+default['users'] = ['osl-root', 'osl-osuadmin']
