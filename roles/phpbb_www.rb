@@ -9,7 +9,7 @@ run_list(
 ) 
 override_attributes(
   "memcached" => {
-    "memory" => "64"
+    "memory" => "256"
   },
   "base" => {
     "packages" => %w[ vim bash-completion cronie cronie-anacron crontabs dmidecode htop iotop pv pwgen screen strace time ]
