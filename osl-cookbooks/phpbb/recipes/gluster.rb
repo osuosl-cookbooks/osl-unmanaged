@@ -27,7 +27,7 @@ if glustervol
   mount glusterpath do
     device glustervol
     fstype "glusterfs"
-    options "defaults,_netdev"
+    options "defaults,_netdev,use-readdirp=yes"
     action [:mount,:enable]
   end
 end
