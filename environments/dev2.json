@@ -25,7 +25,8 @@
     "ros-docs": "= 0.1.1",
     "osl-haproxy": "= 0.1.0",
     "phpbb": "= 0.1.1",
-    "osl-apache": "= 0.1.0"
+    "osl-apache": "= 0.1.0",
+    "nagios": "= 4.3.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
