@@ -23,7 +23,7 @@
     "ros-docs": "= 0.1.1",
     "osl-packstack": "= 0.0.5",
     "haproxy": "= 1.4.0",
-    "cpu": "= 0.2.0"
+    "cpu": "= 0.2.0",
     "nagios": "= 4.2.0"
   },
   "json_class": "Chef::Environment",
