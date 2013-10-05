@@ -47,7 +47,7 @@ node.default['postfix']['mail_relay_networks'] = [
 node.default['postfix']['mailtype'] = "client"
 node.default['postfix']['mydomain'] = "osuosl.org"
 node.default['postfix']['myorigin'] = "osuosl.org"
-node.default['postfix']['relayhost'] = "osuosl.org"
+node.override['postfix']['relayhost'] = "osuosl.org"
 
 # Disable ssh password login
 node.default['openssh']['server']['password_authentication'] = "no"
@@ -59,8 +59,8 @@ node.default['ntp']['servers'] = ['time.oregonstate.edu', 'pool.ntp.org']
 node.default['mysql']['version'] = "5.5"
 
 # Set default ldap servers
-node.default['ldap']['uri'] = "ldaps://ldap1.osuosl.org/ ldaps://ldap2.osuosl.org/"
-node.default['ldap']['base'] = "dc=osuosl,dc=org"
+node.override['ldap']['uri'] = "ldaps://ldap1.osuosl.org/ ldaps://ldap2.osuosl.org/"
+node.override['ldap']['base'] = "dc=osuosl,dc=org"
 
 # Rsyslog configuration
 node.default['rsyslog']['server_search'] = "role:logstash_server"
