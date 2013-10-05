@@ -23,7 +23,7 @@ node.set['ros-docs']['ssh_keys'] = [
 ]
 
 # Configure the volume mount point
-node.set['ros-docs']['glustervol'] = 'fs3.osuosl.bak:/ros-docs'
+node.set['ros-docs']['localmount'] = '/dev/vdb'
 
 # Apache configuration
 node.set['ros-docs']['server_name'] = 'docs.ros.org'

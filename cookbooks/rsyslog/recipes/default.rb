@@ -2,7 +2,7 @@
 # Cookbook Name:: rsyslog
 # Recipe:: default
 #
-# Copyright 2009-2011, Opscode, Inc.
+# Copyright 2009-2013, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,50 +17,50 @@
 # limitations under the License.
 #
 
-package "rsyslog" do
-  action :install
+package 'rsyslog'
+
+if node['rsyslog']['use_relp']
+  package 'rsyslog-relp'
 end
 
-cookbook_file "#{node["rsyslog"]["defaults_file"]}" do
-  source "rsyslog.default"
-  owner node['rsyslog']['user']
-  group node['rsyslog']['group']
-  mode 0644
+directory '/etc/rsyslog.d' do
+  owner 'root'
+  group 'root'
+  mode  '0755'
 end
 
-directory "/etc/rsyslog.d" do
-  owner node['rsyslog']['user']
-  group node['rsyslog']['group']
-  mode 0755
-end
-
-directory "/var/spool/rsyslog" do
-  owner node['rsyslog']['user']
-  group node['rsyslog']['group']
-  mode 0755
+directory '/var/spool/rsyslog' do
+  owner 'root'
+  group 'root'
+  mode  '0755'
 end
 
 # Our main stub which then does its own rsyslog-specific
 # include of things in /etc/rsyslog.d/*
-template "/etc/rsyslog.conf" do
-  source 'rsyslog.conf.erb'
-  owner node['rsyslog']['user']
-  group node['rsyslog']['group']
-  mode 0644
-  variables(:protocol => node['rsyslog']['protocol'])
+template '/etc/rsyslog.conf' do
+  source  'rsyslog.conf.erb'
+  owner   'root'
+  group   'root'
+  mode    '0644'
   notifies :restart, "service[#{node['rsyslog']['service_name']}]"
 end
 
-template "/etc/rsyslog.d/50-default.conf" do
-  source "50-default.conf.erb"
-  backup false
-  owner node['rsyslog']['user']
-  group node['rsyslog']['group']
-  mode 0644
+template '/etc/rsyslog.d/50-default.conf' do
+  source  '50-default.conf.erb'
+  owner   'root'
+  group   'root'
+  mode    '0644'
   notifies :restart, "service[#{node['rsyslog']['service_name']}]"
 end
 
-service "#{node['rsyslog']['service_name']}" do
-  supports :restart => true, :reload => true
-  action [:enable, :start]
+# syslog needs to be stopped before rsyslog can be started on RHEL versions before 6.0
+if platform_family?('rhel') && node['platform_version'].to_i < 6
+  service 'syslog' do
+    action [:stop, :disable]
+  end
+end
+
+service node['rsyslog']['service_name'] do
+  supports :restart => true, :reload => true, :status => true
+  action   [:enable, :start]
 end

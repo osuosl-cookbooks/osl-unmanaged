@@ -23,13 +23,25 @@ directory "/var/www/planet.ros.org/htdocs" do
 	owner "alfred"
 end
 
-# install yaml using pear LWRP
-# required for ros/browse/list.php
 include_recipe "php"
 include_recipe "build-essential"
-package "libyaml-devel"
-php_pear "yaml" do
-  action :install
+
+# Install PHP module packages.
+# yaml is required for ros/browse/list.php
+# mbstring, gd, and imagick are required for www.turtlebot.com's MODX instance.
+%w{libyaml-devel php-mbstring php-gd ImageMagick-devel}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
+# Install PEAR/PECL module packages.
+# yaml is required for ros/browse/list.php
+# imagick is required for www.turtlebot.com's MODX instance.
+%w{yaml imagick}.each do |pkg|
+  php_pear pkg do
+    action :install
+  end
 end
 
 # Gives the ROS user the ability to reload apache with sudo

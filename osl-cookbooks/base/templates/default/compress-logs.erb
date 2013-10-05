@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# Default apache log location
+export PATH="/usr/bin:/bin"
+
+# Compresses cronologs that are more than one day old
+if [ -d /var/log/apache2 ]; then
+    find /var/log/apache2 -name "*[0-9].log" -mmin +1440 \
+      -exec nice pigz --best "{}" ";"
+fi
+
+if [ -d /var/log/httpd ]; then
+    find /var/log/httpd -name "*[0-9].log" -mmin +1440 \
+      -exec nice pigz --best "{}" ";"
+fi
+
+# Compress Squid logs too, if exists
+if [ -d /var/log/squid/transfer ]; then
+    find /var/log/squid/transfer -name "*[0-9].log" -mmin +1440 \
+        -exec nice pigz --best "{}" ";"
+fi
+
+# Compress mod_jk logs too, if exists
+if [ -d /var/log/apache2/mod_jk ]; then
+    find /var/log/apache2/mod_jk -name "*[0-9].log" -mmin +1440 \
+        -exec nice pigz --best "{}" ";"
+fi
+
+# Compress tomcat logs too, if exists
+if [ -d /var/log/tomcat-6 ]; then
+    find /var/log/tomcat-6 -name "*[0-9].log" -mmin +1440 \
+        -exec nice pigz --best "{}" ";"
+fi
+
+# Compress Nginx logs too
+if [ -d /var/log/nginx/ ]; then
+    find /var/log/nginx -name "*[0-9].log" -mmin +1440 \
+        -exec nice pigz --best "{}" "+"
+fi
+
+# Compress jetty6 logs too
+if [ -d /var/log/jetty6 ]; then
+    find /var/log/jetty6 -name "*[0-9]*.log" -mmin +1440 \
+        -exec nice pigz --best "{}" "+"
+fi

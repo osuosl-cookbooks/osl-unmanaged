@@ -23,7 +23,7 @@ include_recipe 'base::glusterfs'
 glustervol = node['ros-docs']['glustervol']
 
 if glustervol
-  glusterpath = node['ros-docs']['glusterpath']
+  glusterpath = node['ros-docs']['mountpath']
   directory glusterpath
   mount glusterpath do
     device glustervol

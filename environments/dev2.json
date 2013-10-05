@@ -1,0 +1,44 @@
+{
+  "name": "dev2",
+  "description": "The development environment",
+  "cookbook_versions": {
+    "osl-postgresql": "= 0.1.6",
+    "aliases": "= 0.1.0",
+    "base": "= 0.1.5",
+    "firewall": "= 0.1.0",
+    "fossology-sites-enabled": "= 0.1.0",
+    "goblin": "= 0.1.0",
+    "lanparty": "= 0.1.0",
+    "monitoring": "= 0.1.1",
+    "moodle": "= 0.1.0",
+    "mysql": "= 3.0.2",
+    "orvsd-web": "= 0.1.1",
+    "osl-redmine": "= 0.0.1",
+    "osl-slapd": "= 0.1.0",
+    "racktables": "= 0.1.0",
+    "rdiff-backup": "= 0.1.2",
+    "ssh-ldap": "= 0.1.0",
+    "osl-packstack": "= 0.0.3",
+    "generic-vhosts": "= 0.1.17",
+    "ros": "= 0.1.8",
+    "ssh-keys": "= 1.0.0",
+    "ros-docs": "= 0.1.1",
+    "osl-haproxy": "= 0.1.0",
+    "phpbb": "= 0.1.1",
+    "osl-apache": "= 0.1.0",
+    "nagios": "= 4.3.0"
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "users": [
+          "vagrant"
+        ]
+      }
+    }
+  },
+  "override_attributes": {
+  }
+}

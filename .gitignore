@@ -3,3 +3,6 @@
 data_bags
 data_bags/*
 .DS_Store
+*~
+*.swp
+*.swo

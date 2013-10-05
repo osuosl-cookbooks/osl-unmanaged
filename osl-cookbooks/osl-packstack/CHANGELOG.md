@@ -3,11 +3,16 @@ osl-packstack CHANGELOG
 
 This file is used to list changes made in each version of the osl-packstack cookbook.
 
-0.1.0
+0.0.2 (September 12, 2013)
 -----
-- [your_name] - Initial release of osl-packstack
+- [Geoffrey Corey] - Initial release and deployment of osl-packstack
+
+0.0.4 (September 17, 2013)
+----
+- [Geoffrey Corey] - Restructure the recipe, moved user array to attributes to allow user overrides
+
+0.0.5 (September 18, 2013)
+----
+- [Geoffrey Corey] - More Recipe restructure, edit the cookbook for supoprted platforms
 
 - - -
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
