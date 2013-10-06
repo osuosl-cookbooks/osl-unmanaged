@@ -6,6 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
 template "/etc/cron.daily/compress-http-logs" do
   source "compress-logs.erb"
   mode "755"
@@ -13,6 +14,7 @@ template "/etc/cron.daily/compress-http-logs" do
   group "root"
 end
 
+include_recipe "yum::epel"
 package "pigz" do
     action :install
 end

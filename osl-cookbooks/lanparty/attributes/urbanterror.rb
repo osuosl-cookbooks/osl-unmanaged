@@ -26,13 +26,15 @@ default['lanparty']['urbanterror']['sv_maxclients'] = "12"
 default['lanparty']['urbanterror']['g_gametype']    = "7"
 
 # Load encrypted passwords if they exist
-if Chef::EncryptedDataBagItem.load("lanparty", "urbanterror")
-  urbanterror_creds = Chef::EncryptedDataBagItem.load("lanparty", "urbanterror")
-  default['lanparty']['urbanterror']['rconpassword']= urbanterror_creds['rcon_password']
-  default['lanparty']['urbanterror']['g_password']  = urbanterror_creds['g_password']
-else
-  default['lanparty']['urbanterror']['rconpassword']= nil
-  default['lanparty']['urbanterror']['g_password']  = nil
+unless Chef::Config[:solo]
+  if Chef::EncryptedDataBagItem.load("lanparty", "urbanterror")
+    urbanterror_creds = Chef::EncryptedDataBagItem.load("lanparty", "urbanterror")
+    default['lanparty']['urbanterror']['rconpassword']= urbanterror_creds['rcon_password']
+    default['lanparty']['urbanterror']['g_password']  = urbanterror_creds['g_password']
+  else
+    default['lanparty']['urbanterror']['rconpassword']= nil
+    default['lanparty']['urbanterror']['g_password']  = nil
+  end
 end
 
 default['lanparty']['urbanterror']['timelimit']     = "20"
