@@ -1,10 +1,10 @@
-# CHANGELOG for base_system
+# CHANGELOG for base
 
-This file is used to list changes made in each version of base_system.
+This file is used to list changes made in each version of base.
 
 ## 0.1.0:
 
-* Initial release of base_system
+* Initial release of base
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
