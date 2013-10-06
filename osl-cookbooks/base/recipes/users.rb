@@ -7,4 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "user::data_bag"
+if Chef::Config[:solo]
+  include_recipe "user"
+else 
+  include_recipe "user::data_bag"
+end
