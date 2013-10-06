@@ -69,17 +69,27 @@ node.default['rsyslog']['preserve_fqdn'] = "on"
 
 # Include the base_managed recipes
 include_recipe "base::unmanaged"
-include_recipe "firewall"
+unless Chef::Config[:solo]
+  include_recipe "firewall"
+end
 include_recipe "base::security"
-include_recipe "base::iptables"
+unless Chef::Config[:solo]
+  include_recipe "base::iptables"
+end
 include_recipe "base::issue"
 include_recipe "base::users"
 include_recipe "base::ifconfig"
 include_recipe "postfix::client"
-include_recipe "firewall::nrpe"
-include_recipe "nagios::client"
+unless Chef::Config[:solo]
+  include_recipe "firewall::nrpe"
+  include_recipe "nagios::client"
+end
 include_recipe "ntp"
 include_recipe "sudo"
-include_recipe "monitoring"
+unless Chef::Config[:solo]
+  include_recipe "monitoring"
+end
 include_recipe "sysctl"
-include_recipe "rsyslog::client"
+unless Chef::Config[:solo]
+  include_recipe "rsyslog::client"
+end
