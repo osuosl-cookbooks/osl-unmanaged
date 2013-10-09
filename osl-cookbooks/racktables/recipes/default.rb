@@ -8,9 +8,10 @@
 #
 
 include_recipe "racktables::#{node['racktables']['install_method']}"
+include_recipe "racktables::server"
 
-include_recipe "apache2"
-include_recipe "apache2::mod_php5"
-if node['racktables']['ssl_enabled']
-  include_recipe "apache2::mod_ssl"
+user 'racktables' do
+  comment "racktables user"
+  system true
+  shell "/bin/false"
 end
