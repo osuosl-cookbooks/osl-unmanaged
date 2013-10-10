@@ -15,24 +15,81 @@ e.g.
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
 
-e.g.
 #### racktables::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['racktables']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+
+* node["racktables"]["install_method"]
+
+  Method to install racktables.
+
+  Options:
+    * 'source'
+
+  Default: 'source'
+
+* node["racktables"]["source"]
+
+  Source of the racktables tarball.
+
+  Default: "http://sourceforge.net/projects/racktables/files/RackTables-0.20.4.tar.gz/download"
+
+* node["racktables"]["checksum"]
+
+  MD5 Checksum of the tarball to be downloaded.
+
+* node["racktables"]["dir"]
+
+  Directory to install racktables to.
+
+  Default: '/var/www/racktables'
+
+* node["racktables"]["redirect_http"] 
+
+  Redirect all HTTP traffic to HTTPS
+
+  Default: true
+
+* node["racktables"]["ssl_enabled"]
+
+  Enable SSL.
+
+  Default: true
+
+* node["racktables"]["ssl_listen_ports"]
+
+  Ports on which SSL should listen.
+
+  Default: ["443"]
+
+* node["racktables"]["cert_path"] 
+  
+  Path to the SSL certificate file.
+
+  Default: '/etc/pki/tls/certs/wildcard.pem'
+
+* node["racktables"]["key_path"]
+  
+  Path to the SSL key file.
+
+  Default: '/etc/pki/tls/private/wildcard.key'
+
+* node["racktables"]["db"]["name"]
+
+  Database name.
+
+  Default: 'racktables\_db'
+
+* node["racktables"]["db"]["user"]
+
+  Database user.
+
+  Default: 'racktables\_user'
+
+* node["racktables"]["db"]["password"]
+
+  Database password. Should be stored in an encrypted databag.
+
+  Default: 'password'
 
 Usage
 -----

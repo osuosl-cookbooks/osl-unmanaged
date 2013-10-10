@@ -37,3 +37,7 @@ directory node['racktables']['dir'] do
   action :create
 end
 
+directory "#{node['apache']['log_dir']}/racktables/" do
+   mode 00755
+end
+
