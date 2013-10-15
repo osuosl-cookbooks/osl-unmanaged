@@ -7,22 +7,28 @@
 # All rights reserved - Do Not Redistribute
 #
 
-src_filepath = "/tmp/Racktables.tar.gz"
-tmp_path = "/tmp/RackTables-0.20.4"
+version = node['racktables']['source']['version']
+install_dir = node['racktables']['source']['install_dir']
 
-remote_file src_filepath do
-  source node['racktables']['source']
-  checksum node['racktables']['checksum']
-  owner 'racktables'
-  group 'racktables'
-  action :create_if_missing
+directory node['racktables']['source']['install_dir'] do
+  owner node['apache']['user']
+  group node['apache']['group']
+  mode 0755
+  action :create
+end
+
+remote_file "#{Chef::Config['file_cache_path']}/Racktables-#{version}.tar.gz" do
+  source node['racktables']['source']['url']
+  checksum node['racktables']['source']['checksum']
+  backup false
+  action :create
 end
 
 bash 'extract_module' do
-  cwd ::File.dirname(src_filepath)
+  cwd Chef::Config['file_cache_path']
   code <<-EOH
-    tar xzf #{src_filepath}
-    sudo cp -r #{tmp_path}/wwwroot/* #{node['racktables']['dir']}
-    EOH
-  #not_if { ::File.exists?(node['racktables']['dir']) }
+    tar xzvf Racktables-#{version}.tar.gz
+    (cp -r RackTables-#{version}/* #{install_dir})
+    (chown -R #{node['apache']['user']}:#{node['apache']['group']} #{install_dir})
+  EOH
 end
