@@ -13,7 +13,9 @@ if Chef::Config[:solo]
     Chef::Log.warn("This recipe uses search. Chef Solo does not support search.")
 else
   search(:node, "roles:#{node['munin']['server_role']}") do |node|
-    munin_host << node['ipaddress']
+    node["network"]["interfaces"].collect { |i| i[1]["addresses"].select{ |address, data| data["family"] == "inet" }.keys }.flatten.each do |ipaddress|
+      munin_host << ipaddress
+    end
   end
 
   # on the first run, search isn't available, so if you're the munin server, go

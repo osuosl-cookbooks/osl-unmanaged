@@ -67,6 +67,18 @@ node.default['rsyslog']['server_search'] = "role:logstash_server"
 node.default['rsyslog']['port'] = "5000"
 node.default['rsyslog']['preserve_fqdn'] = "on"
 
+# Nagios backend IP configuration
+mon_host = ['127.0.0.1']
+unless Chef::Config[:solo]
+  search(:node, "roles:#{node['nagios']['server_role']}") do |node|
+    node["network"]["interfaces"].collect { |i| i[1]["addresses"].select{ |address, data| data["family"] == "inet" }.keys }.flatten.each do |ipaddress|
+      mon_host << ipaddress
+    end
+  end
+end
+node.default['nagios']['allowed_hosts'] = mon_host.uniq
+
+
 # Include the base_managed recipes
 include_recipe "base::unmanaged"
 unless Chef::Config[:solo]
