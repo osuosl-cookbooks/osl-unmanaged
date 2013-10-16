@@ -32,3 +32,11 @@ end
 directory "#{node['apache']['log_dir']}/racktables/" do
    mode 00755
 end
+
+directory node['racktables']['source']['install_dir'] do
+  owner node['apache']['user']
+  group node['apache']['group']
+  mode 0755
+  action :create
+end
+

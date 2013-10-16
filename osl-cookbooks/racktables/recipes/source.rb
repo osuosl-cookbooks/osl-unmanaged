@@ -10,13 +10,6 @@
 version = node['racktables']['source']['version']
 install_dir = node['racktables']['source']['install_dir']
 
-directory node['racktables']['source']['install_dir'] do
-  owner node['apache']['user']
-  group node['apache']['group']
-  mode 0755
-  action :create
-end
-
 remote_file "#{Chef::Config['file_cache_path']}/Racktables-#{version}.tar.gz" do
   source node['racktables']['source']['url']
   checksum node['racktables']['source']['checksum']
