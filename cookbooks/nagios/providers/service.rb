@@ -24,7 +24,7 @@ end
 
 action :add do
   Chef::Log.info "Adding #{new_resource.id} to #{node['nagios']['config_dir']}/services.cfg"
-  Chef::Log.info "Adding #{new_resource.check_command} to #{node['nagios']['config_dir']}/commands.cfg"
+  Chef::Log.info "Adding #{new_resource.id} to #{node['nagios']['config_dir']}/commands.cfg"
 
   new_service = Hash.new
   
@@ -43,5 +43,7 @@ action :add do
     new_service['command_line'] = new_resource.command_line
   end
 
-  @services << new_service # Add the new service/command to the array of services/commands to be created in the services.cfg/commands.cfg templates.
+  node.set['nagios']['server']['lwrp_services'] = Array.new unless node['nagios']['server']['lwrp_services']
+
+  node.set['nagios']['server']['lwrp_services'] << new_service # Add the new service/command to the array of services/commands to be created in the services.cfg/commands.cfg templates.
 end

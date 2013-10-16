@@ -20,7 +20,7 @@
 actions :add
 default_action :add
 
-attribute :id                   , :kind_of => String, :required => true, :name_attribute => true # Also serves as command_name for the command it generates.
+attribute :id                   , :kind_of => String, :name_attribute => true # Also serves as command_name for the command it generates.
 # TODO: Try and put all of these into a loop and add all other possible service and command options. If that's not possible, have one attribute that contains a hash of arbitrary attributes.
 attribute :service_description  , :kind_of => String, :default => nil
 attribute :host_name            , :kind_of => String, :default => nil

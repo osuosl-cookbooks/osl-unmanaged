@@ -146,7 +146,7 @@ nodes.each do |n|
 end
 
 nagios_bags = NagiosDataBags.new
-services = nagios_bags.get('nagios_services')
+services = nagios_bags.get('nagios_services') << node['nagios']['server']['lwrp_services']
 servicegroups = nagios_bags.get('nagios_servicegroups')
 templates = nagios_bags.get('nagios_templates')
 eventhandlers = nagios_bags.get('nagios_eventhandlers')
