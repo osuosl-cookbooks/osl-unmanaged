@@ -7,3 +7,12 @@
 # All rights reserved - Do Not Redistribute
 
 include_recipe "orvsd-web::default"
+
+users = node['orvsdweb']['users']
+
+user users do
+    system true
+    shell "/bin/false"
+end
+
+

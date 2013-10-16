@@ -12,7 +12,7 @@
     "monitoring": "= 0.1.1",
     "moodle": "= 0.1.0",
     "mysql": "= 3.0.12",
-    "orvsd-web": "= 0.1.1",
+    "orvsd-web": "= 0.1.2",
     "osl-redmine": "= 0.0.1",
     "osl-slapd": "= 0.1.0",
     "racktables": "= 0.2.0",

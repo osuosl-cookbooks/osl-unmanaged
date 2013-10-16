@@ -9,6 +9,6 @@
 include_recipe "yum::epel"
 include_recipe "base::glusterfs"
 include_recipe "firewall::http"
-unless Chef::Config[:solo]
+unless Chef::Config[:solo] or node.chef_environment == "dev"
   include_recipe "monitoring::http"
 end
