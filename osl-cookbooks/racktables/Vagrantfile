@@ -24,6 +24,8 @@ Vagrant.configure("2") do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
+  config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.network :forwarded_port, guest: 443, host: 8443
 
   # config.vm.network :public_network
 
@@ -71,7 +73,14 @@ Vagrant.configure("2") do |config|
   # config.berkshelf.except = []
 
   config.vm.provision :chef_solo do |chef|
+    chef.data_bags_path = "#{ENV['HOME']}/chef-repo/data_bags"
+    chef.encrypted_data_bag_secret_key_path = "#{ENV['HOME']}/.chef/encrypted_data_bag_secret"
+
     chef.json = {
+      :racktables => {
+        :ssl_enabled => false,
+        :redirect_http => false
+      },
       :mysql => {
         :server_root_password => 'rootpass',
         :server_debian_password => 'debpass',
