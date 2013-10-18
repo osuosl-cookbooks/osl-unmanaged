@@ -1,6 +1,0 @@
-cookbook "base", git: "https://github.com/osuosl/chef-repo.git", rel: "osl-cookbooks/base"
-cookbook "firewall", git: "https://github.com/osuosl/chef-repo.git", rel: "osl-cookbooks/firewall"
-
-site :opscode
-
-metadata
