@@ -6,3 +6,6 @@ data_bags/*
 *~
 *.swp
 *.swo
+/cookbooks
+/osl-cookbooks
+/osuosl-cookbooks
