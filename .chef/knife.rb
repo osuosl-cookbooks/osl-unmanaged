@@ -17,7 +17,7 @@ cache_type              'BasicFile'
 cache_options( :path => "#{home_dir}/.chef/checksums" )
 cookbook_path [
                         "#{base_path}/cookbooks",
-                        "#{base_path}/osl-cookbooks"
+                        "#{base_path}/osuosl-cookbooks"
               ]
 cookbook_copyright      "OSU Open Source Lab"
 cookbook_license        "apachev2"
