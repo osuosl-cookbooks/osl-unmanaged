@@ -3,7 +3,7 @@ description "orvsd jenkins role"
 run_list(
   "role[base_managed]",
   "recipe[jenkins::server]",
-  "recipe[jenkins::proxy_apache2]"
+  "recipe[jenkins::proxy]"
 )
 override_attributes(
 )
