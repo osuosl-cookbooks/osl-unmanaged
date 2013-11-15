@@ -6,5 +6,14 @@ run_list(
 override_attributes(
     "nginx" => {
         "repo_source" => "nginx"
+    },
+    "jenkins" => {
+        "node" => {
+            "agent_type" => "ssh",
+            "home" => "alfred",
+            "user" => "alfred",
+            "group" => "alfred",
+            "shell" => "/bin/bash"
+        }
     }
 )
