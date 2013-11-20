@@ -19,7 +19,7 @@ cookbook_path [
                         "#{base_path}/cookbooks",
                         "#{base_path}/osuosl-cookbooks"
               ]
-cookbook_copyright      "OSU Open Source Lab"
+cookbook_copyright      "Oregon State University"
 cookbook_license        "apachev2"
 cookbook_email          "systems@osuosl.org"
 role_path               ["#{base_path}/roles"]
