@@ -24,6 +24,7 @@ override_attributes(
     }
   },
   "nginx" => {
+    "repo_source" => "nginx",
     "realip" => {
       "addresses" => [
         "140.211.15.203",
