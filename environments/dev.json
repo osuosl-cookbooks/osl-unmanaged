@@ -9,7 +9,7 @@
     "fossology-sites-enabled": "= 0.1.0",
     "goblin": "= 0.1.0",
     "lanparty": "= 0.1.0",
-    "monitoring": "= 0.1.2",
+    "monitoring": "= 0.2.0",
     "moodle": "= 0.1.0",
     "mysql": "= 3.0.12",
     "orvsd-web": "= 0.1.2",
