@@ -3,7 +3,8 @@ description "orvsd static web server role"
 run_list(
   "role[base_managed]",
   "recipe[orvsd-web::static]",
-  "recipe[nginx::http_realip_module]"
+  "recipe[nginx::http_realip_module]",
+  "role[nginx]"
 )
 override_attributes(
   "orvsdweb" => {
