@@ -4,7 +4,8 @@ run_list(
   "recipe[nagios::server]",
   "role[base_managed]",
   "recipe[firewall::http]",
-  "recipe[ssh-ldap]"
+  "recipe[ssh-ldap]",
+  "recipe[certificate::wildcard]"
 )
 default_attributes(
   "nagios" => {
@@ -23,6 +24,9 @@ override_attributes(
     "default_contact_groups" => %w{osl_pager},
     "server" => {
       "install_method" => "source",
-    }
+    },
+    "enable_ssl" => "true",
+    "ssl_cert_file" => "/etc/pki/tls/certs/wildcard.pem",
+    "ssl_cert_key" => "/etc/pki/tls/private/wildcard.key"
   }
 )
