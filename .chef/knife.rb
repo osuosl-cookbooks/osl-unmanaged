@@ -16,7 +16,6 @@ validation_key          "#{home_dir}/.chef/#{validation_client_name}.pem"
 cache_type              'BasicFile'
 cache_options( :path => "#{home_dir}/.chef/checksums" )
 cookbook_path [
-                        "#{base_path}/cookbooks",
                         "#{base_path}/osuosl-cookbooks"
               ]
 cookbook_copyright      "Oregon State University"
