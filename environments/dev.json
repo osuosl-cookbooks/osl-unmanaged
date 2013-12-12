@@ -18,7 +18,7 @@
     "racktables": "= 0.2.0",
     "rdiff-backup": "= 0.1.1",
     "ssh-ldap": "= 0.1.0",
-    "osl-packstack": "= 0.0.5",
+    "osl-packstack": "= 0.0.6",
     "generic-vhosts": "= 0.1.18",
     "ros": "= 0.1.8",
     "ssh-keys": "= 1.0.0",
