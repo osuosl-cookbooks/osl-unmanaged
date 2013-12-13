@@ -13,7 +13,7 @@
     "moodle": "= 0.1.0",
     "mysql": "= 3.0.12",
     "orvsd-web": "= 0.1.2",
-    "osl-redmine": "= 0.0.1",
+    "osl-redmine": "= 0.1.0",
     "osl-slapd": "= 0.1.0",
     "racktables": "= 0.2.0",
     "rdiff-backup": "= 0.1.1",
