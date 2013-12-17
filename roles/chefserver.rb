@@ -8,5 +8,8 @@ run_list(
 default_attributes(
   "chef_server" => {
     "url" => "https://chef.osuosl.org"
+  },
+  "certificate" => {
+    "nginx_cert" => "true"
   }
 )
