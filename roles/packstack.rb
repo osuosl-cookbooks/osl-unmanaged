@@ -6,6 +6,12 @@ override_attributes "osl-packstack" => {
     "release" => "havana"
   },
   "type" => "not_compute"
-}, "users" => [
+}, 
+"users" => [
   "packstack-root"
-]
+],
+"authorization" => {
+  "sudo" => {
+    "include_sudoers_d" => true
+  }
+}
