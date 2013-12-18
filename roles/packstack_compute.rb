@@ -9,4 +9,9 @@ override_attributes "osl-packstack" => {
 }, "users" => [
   "packstack-root",
   "packstack-nova"
-]
+],
+"authorization" => {
+    "sudo" => {
+      "include_sudoers_d" => true
+  }
+}
