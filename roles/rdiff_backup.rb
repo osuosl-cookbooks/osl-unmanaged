@@ -30,6 +30,8 @@ default_attributes(
         "/var/log",
         "/var/spool/cron/lastrun"
       ],
+      "destination-dir" => "/data/rdiff-backup",
+      "user" => "rdiff-backup-client",
       "retention-period" => "3M",
       "nagios-maxchange" => 10000
     }
