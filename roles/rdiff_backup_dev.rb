@@ -6,7 +6,8 @@ run_list(
 default_attributes(
   "rdiff-backup" => {
     "client" => {
-      "retention-period" => "5d",
+      "retention-period" => "5D",
+      "user" => "rdiff-backup-client-dev"
     }
   }
 )
