@@ -1,7 +1,6 @@
 name "rdiff_backup"
 description "role for all servers to be backed up with rdiff-backup"
 run_list(
-  "recipe[nagios::client]",
   "recipe[rdiff-backup::client]"
 )
 default_attributes(
