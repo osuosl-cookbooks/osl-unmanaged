@@ -19,15 +19,11 @@ default_attributes(
         "/var/cfengine",
         "/var/chef",
         "/var/lib/denyhosts",
-        "/var/lib/ntp",
         "/var/lib/slocate",
         "/var/lib/mysql",
-        "/var/spool/postfix",
-        "/var/lib/svn",
-        "/var/svn",
-        "/var/tmp",
         "/var/log",
-        "/var/spool/cron/lastrun"
+        "/var/spool",
+        "/var/tmp"
       ],
       "destination-dir" => "/data/rdiff-backup",
       "user" => "rdiff-backup-client",
