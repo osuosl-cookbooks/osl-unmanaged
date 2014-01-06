@@ -1,1 +1,4 @@
 include = cat .mrconfig.d/*
+
+[data_bags]
+checkout = git clone git@git.osuosl.org:chef/data_bags.git
