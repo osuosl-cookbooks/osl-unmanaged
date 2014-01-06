@@ -1,0 +1,90 @@
+[osuosl-cookbooks/ros-docs]
+checkout = git clone git@github.com:osuosl-cookbooks/ros-docs.git
+
+[osuosl-cookbooks/osl-postgresql]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-postgresql.git
+
+[osuosl-cookbooks/base]
+checkout = git clone git@github.com:osuosl-cookbooks/base.git
+
+[osuosl-cookbooks/osl-munin]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-munin.git
+
+[osuosl-cookbooks/osl-nginx]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-nginx.git
+
+[osuosl-cookbooks/aliases]
+checkout = git clone git@github.com:osuosl-cookbooks/aliases.git
+
+[osuosl-cookbooks/firewall]
+checkout = git clone git@github.com:osuosl-cookbooks/firewall.git
+
+[osuosl-cookbooks/generic-vhosts]
+checkout = git clone git@github.com:osuosl-cookbooks/generic-vhosts.git
+
+[osuosl-cookbooks/goblin]
+checkout = git clone git@github.com:osuosl-cookbooks/goblin.git
+
+[osuosl-cookbooks/lanparty]
+checkout = git clone git@github.com:osuosl-cookbooks/lanparty.git
+
+[osuosl-cookbooks/monitoring]
+checkout = git clone git@github.com:osuosl-cookbooks/monitoring.git
+
+[osuosl-cookbooks/orvsd-web]
+checkout = git clone git@github.com:osuosl-cookbooks/orvsd-web.git
+
+[osuosl-cookbooks/osl-apache]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-apache.git
+
+[osuosl-cookbooks/osl-slapd]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-slapd.git
+
+[osuosl-cookbooks/ssh-ldap]
+checkout = git clone git@github.com:osuosl-cookbooks/ssh-ldap.git
+
+[osuosl-cookbooks/osl-mysql]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-mysql.git
+
+[osuosl-cookbooks/racktables]
+checkout = git clone git@github.com:osuosl-cookbooks/racktables.git
+
+[osuosl-cookbooks/osl-packstack]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-packstack.git
+
+[osuosl-cookbooks/osl-haproxy]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-haproxy.git
+
+[osuosl-cookbooks/phpbb]
+checkout = git clone git@github.com:osuosl-cookbooks/phpbb.git
+
+[osuosl-cookbooks/rdiff-backup]
+checkout = git clone git@github.com:osuosl-cookbooks/rdiff-backup.git
+
+[osuosl-cookbooks/ros]
+checkout = git clone git@github.com:osuosl-cookbooks/ros.git
+
+[osuosl-cookbooks/nagios]
+checkout = git clone git@github.com:osuosl-cookbooks/nagios.git
+
+[osuosl-cookbooks/ganeti_webmgr]
+checkout = git clone git@github.com:osuosl-cookbooks/ganeti_webmgr.git
+
+[osuosl-cookbooks/gitlab]
+checkout = git clone git@github.com:osuosl-cookbooks/gitlab.git
+
+[osuosl-cookbooks/osl-nfs]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-nfs.git
+
+[osuosl-cookbooks/osl-redmine]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-redmine.git
+
+[osuosl-cookbooks/gitolite]
+checkout = git clone git@github.com:osuosl-cookbooks/gitolite.git
+
+[osuosl-cookbooks/osl-nodejs]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-nodejs.git
+
+[osuosl-cookbooks/sinatra_app]
+checkout = git clone git@github.com:osuosl-cookbooks/sinatra_app.git
+
