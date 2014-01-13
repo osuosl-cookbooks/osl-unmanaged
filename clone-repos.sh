@@ -1,5 +1,7 @@
 #! /bin/bash
 
+#adding test comment
+
 COOKBOOKS_DIR=osuosl-cookbooks
 
 # Enable explicit output
