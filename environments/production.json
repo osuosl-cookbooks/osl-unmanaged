@@ -26,7 +26,8 @@
     "cpu": "= 0.2.0",
     "nagios": "= 4.3.0",
     "osl-munin": "= 0.1.1",
-    "osl-apache": "= 0.1.4"
+    "osl-apache": "= 0.1.4",
+    "yum": "= 2.4.1"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
