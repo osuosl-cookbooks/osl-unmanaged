@@ -2,6 +2,7 @@
   "name": "dev2",
   "description": "The development environment",
   "cookbook_versions": {
+    "base": "= 1.2.1"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
