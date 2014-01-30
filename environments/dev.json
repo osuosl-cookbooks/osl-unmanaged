@@ -29,6 +29,7 @@
     "ssh-keys": "= 1.0.0",
     "ssh-ldap": "= 0.1.0",
     "osl-nginx": "= 0.2.0",
+    "yum-epel": "= 0.2.0",
     "yum": "= 3.0.6"
   },
   "json_class": "Chef::Environment",
