@@ -33,6 +33,7 @@
     "ros-docs": "= 0.1.1",
     "ssh-keys": "= 1.0.0",
     "ssh-ldap": "= 0.1.0",
+    "sudo": "= 2.3.0",
     "osl-nginx": "= 0.2.0",
     "yum-centos": "= 0.1.4",
     "yum-elrepo": "= 0.1.4",
