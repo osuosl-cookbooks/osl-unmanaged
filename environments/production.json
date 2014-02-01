@@ -10,6 +10,7 @@
     "fossology-sites-enabled": "= 0.1.0",
     "generic-vhosts": "= 0.1.24",
     "goblin": "= 0.1.1",
+    "git": "= 2.3.0",
     "haproxy": "= 1.4.0",
     "lanparty": "= 0.1.0",
     "monitoring": "= 0.2.2",
