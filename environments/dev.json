@@ -7,6 +7,7 @@
     "chef-client": "= 3.2.2",
     "firewall": "= 0.1.2",
     "fossology-sites-enabled": "= 0.1.0",
+    "git": "= 2.8.4",
     "generic-vhosts": "= 0.1.18",
     "goblin": "= 0.1.0",
     "lanparty": "= 0.1.0",
