@@ -28,6 +28,7 @@
     "racktables": "= 0.2.0",
     "rdiff-backup": "= 0.1.1",
     "ros": "= 0.1.8",
+    "rsyslog": "= 1.10.2",
     "iis": "= 2.0.0",
     "ros-docs": "= 0.1.1",
     "ssh-keys": "= 1.0.0",
