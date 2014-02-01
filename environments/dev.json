@@ -17,7 +17,7 @@
     "orvsd-web": "= 0.1.2",
     "osl-apache": "= 0.1.0",
     "osl-haproxy": "= 0.1.0",
-    "osl-packstack": "= 0.1.0",
+    "osl-packstack": "= 0.0.5",
     "osl-postgresql": "= 0.1.7",
     "osl-redmine": "= 0.1.0",
     "osl-slapd": "= 0.1.0",
