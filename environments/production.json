@@ -13,6 +13,7 @@
     "git": "= 2.3.0",
     "haproxy": "= 1.4.0",
     "lanparty": "= 0.1.0",
+    "memcached": "= 1.4.0",
     "monitoring": "= 0.2.2",
     "moodle": "= 0.1.0",
     "mysql": "= 3.0.12",
