@@ -24,6 +24,7 @@
     "osl-postgresql": "= 0.1.7",
     "osl-redmine": "= 0.0.1",
     "osl-slapd": "= 0.1.0",
+    "postfix": "= 2.1.4",
     "racktables": "= 0.1.0",
     "rdiff-backup": "= 0.2.0",
     "ros": "= 0.1.18",
