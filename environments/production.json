@@ -40,6 +40,7 @@
     "java": "= 1.10.0",
     "jenkins": "= 0.8.0",
     "lanparty": "= 0.1.0",
+    "line": "= 0.5.0",
     "memcached": "= 1.4.0",
     "monitoring": "= 0.2.2",
     "moodle": "= 0.1.0",
