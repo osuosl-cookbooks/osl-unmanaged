@@ -63,6 +63,7 @@
     "osl-apache": "= 0.1.4",
     "osl-haproxy": "= 0.1.0",
     "osl-munin": "= 0.1.1",
+    "osl-mysql": "= 0.1.0",
     "osl-packstack": "= 0.0.5",
     "osl-postgresql": "= 0.1.7",
     "osl-redmine": "= 0.0.1",
