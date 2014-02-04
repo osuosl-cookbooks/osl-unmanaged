@@ -74,6 +74,7 @@
     "postfix": "= 2.1.4",
     "postgresql": "= 3.0.2",
     "proj-drupalorg": "= 0.1.0",
+    "proj-phpbb": "= 0.1.2",
     "racktables": "= 0.1.0",
     "rdiff-backup": "= 0.2.0",
     "ros": "= 0.1.18",
