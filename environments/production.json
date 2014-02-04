@@ -109,6 +109,7 @@
     "yum-percona": "= 0.1.6",
     "yum-pgdg": "= 0.1.4",
     "yum-repoforge": "= 0.1.4",
+    "zlib": "= 2.0.0",
     "osl-nginx": "= 0.1.0",
   },
   "json_class": "Chef::Environment",
