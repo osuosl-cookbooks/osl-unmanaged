@@ -107,6 +107,7 @@
     "yum-fedora": "= 0.1.4",
     "yum-ius": "= 0.1.4",
     "yum-percona": "= 0.1.6",
+    "yum-pgdg": "= 0.1.4",
     "osl-nginx": "= 0.1.0",
   },
   "json_class": "Chef::Environment",
