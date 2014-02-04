@@ -104,6 +104,7 @@
     "yum-centos": "= 0.1.4",
     "yum-elrepo": "= 0.1.4",
     "yum-epel": "= 0.2.0"
+    "yum-fedora": "= 0.1.4",
     "osl-nginx": "= 0.1.0",
   },
   "json_class": "Chef::Environment",
