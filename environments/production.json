@@ -64,6 +64,7 @@
     "osl-haproxy": "= 0.1.0",
     "osl-munin": "= 0.1.1",
     "osl-mysql": "= 0.1.0",
+    "osl-nginx": "= 0.1.0",
     "osl-packstack": "= 0.0.5",
     "osl-postgresql": "= 0.1.7",
     "osl-redmine": "= 0.0.1",
@@ -109,8 +110,7 @@
     "yum-percona": "= 0.1.6",
     "yum-pgdg": "= 0.1.4",
     "yum-repoforge": "= 0.1.4",
-    "zlib": "= 2.0.0",
-    "osl-nginx": "= 0.1.0",
+    "zlib": "= 2.0.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
