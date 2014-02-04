@@ -88,6 +88,7 @@
     "selinux": "= 0.5.6",
     "simple_iptables": "= 0.3.0",
     "sinatra_app": "= 0.1.0",
+    "ssh-keys": "= 1.0.0",
     "sudo": "= 2.2.0",
     "ssh-ldap": "= 0.1.0",
     "yum": "= 2.4.1",
