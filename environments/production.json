@@ -104,7 +104,7 @@
     "yum": "= 2.4.1",
     "yum-centos": "= 0.1.4",
     "yum-elrepo": "= 0.1.4",
-    "yum-epel": "= 0.2.0"
+    "yum-epel": "= 0.2.0",
     "yum-fedora": "= 0.1.4",
     "yum-ius": "= 0.1.4",
     "yum-percona": "= 0.1.6",
