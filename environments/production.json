@@ -101,6 +101,7 @@
     "xfs": "= 1.1.0",
     "xml": "= 1.1.2",
     "yum": "= 2.4.1",
+    "yum-centos": "= 0.1.4",
     "osl-nginx": "= 0.1.0",
   },
   "json_class": "Chef::Environment",
