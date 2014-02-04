@@ -86,6 +86,7 @@
     "rsyslog": "= 1.8.0",
     "runit": "= 1.2.0",
     "selinux": "= 0.5.6",
+    "simple_iptables": "= 0.3.0",
     "sudo": "= 2.2.0",
     "ssh-ldap": "= 0.1.0",
     "yum": "= 2.4.1",
