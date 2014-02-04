@@ -78,6 +78,7 @@
     "python": "= 1.2.2",
     "rabbitmq": "= 2.0.0",
     "racktables": "= 0.1.0",
+    "rbenv": "= 1.4.1",
     "rdiff-backup": "= 0.2.0",
     "ros": "= 0.1.18",
     "ros-docs": "= 0.1.3",
