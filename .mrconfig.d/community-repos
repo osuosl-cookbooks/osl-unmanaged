@@ -1,0 +1,237 @@
+[community-cookbooks/ant]
+checkout = git clone https://github.com/opscode-cookbooks/ant.git
+
+[community-cookbooks/apache2]
+checkout = git clone https://github.com/opscode-cookbooks/apache2.git
+
+[community-cookbooks/application]
+checkout = git clone https://github.com/opscode-cookbooks/application.git
+
+[community-cookbooks/application_nginx]
+checkout = git clone https://github.com/opscode-cookbooks/application_nginx.git
+
+[community-cookbooks/application_python]
+checkout = git clone https://github.com/opscode-cookbooks/application_python.git
+
+[community-cookbooks/application_ruby]
+checkout = git clone https://github.com/opscode-cookbooks/application_ruby.git
+
+[community-cookbooks/apt]
+checkout = git clone https://github.com/opscode-cookbooks/apt.git
+
+[community-cookbooks/ark]
+checkout = git clone https://github.com/opscode-cookbooks/ark.git
+
+[community-cookbooks/aws]
+checkout = git clone https://github.com/opscode-cookbooks/aws.git
+
+[community-cookbooks/bluepill]
+checkout = git clone https://github.com/opscode-cookbooks/bluepill.git
+
+[community-cookbooks/build-essential]
+checkout = git clone https://github.com/opscode-cookbooks/build-essential.git
+
+[community-cookbooks/certificate]
+checkout = git clone https://github.com/atomic-penguin/cookbook-certificate.git
+
+[community-cookbooks/chef-client]
+checkout = git clone https://github.com/opscode-cookbooks/chef-client.git
+
+[community-cookbooks/chef-server]
+checkout = git clone https://github.com/opscode-cookbooks/chef-server.git
+
+[community-cookbooks/chef-handler]
+checkout = git clone https://github.com/opscode-cookbooks/chef_handler.git
+
+[community-cookbooks/cpu]
+checkout = git clone https://github.com/Youscribe/cpu-cookbook.git
+
+[community-cookbooks/cron]
+checkout = git clone https://github.com/opscode-cookbooks/cron.git
+
+[community-cookbooks/daemontools]
+checkout = git clone https://github.com/opscode-cookbooks/daemontools.git
+
+[community-cookbooks/database]
+checkout = git clone https://github.com/opscode-cookbooks/database.git
+
+[community-cookbooks/dmg]
+checkout = git clone https://github.com/opscode-cookbooks/dmg.git
+
+[community-cookbooks/elasticsearch]
+checkout = git clone https://github.com/elasticsearch/cookbook-elasticsearch.git
+
+[community-cookbooks/erlang]
+checkout = git clone https://github.com/opscode-cookbooks/erlang.git
+
+[community-cookbooks/gecode]
+checkout = git clone https://github.com/opscode-cookbooks/gecode.git
+
+[community-cookbooks/git]
+checkout = git clone https://github.com/opscode-cookbooks/git.git
+
+[community-cookbooks/gunicorn]
+checkout = git clone https://github.com/opscode-cookbooks/gunicorn.git
+
+[community-cookbooks/haproxy]
+checkout = git clone https://github.com/opscode-cookbooks/haproxy.git
+
+[community-cookbooks/iptables]
+checkout = git clone https://github.com/opscode-cookbooks/iptables.git
+
+[community-cookbooks/java]
+checkout = git clone https://github.com/opscode-cookbooks/java.git
+
+[community-cookbooks/jenkins]
+checkout = git clone https://github.com/opscode-cookbooks/jenkins.git
+
+[community-cookbooks/line]
+checkout = git clone https://github.com/someara/line-cookbook.git
+
+[community-cookbooks/logrotate]
+checkout = git clone https://github.com/opscode-cookbooks/logrotate.git
+
+[community-cookbooks/logstash]
+checkout = git clone https://github.com/lusis/chef-logstash.git
+
+[community-cookbooks/lsyncd]
+checkout = git clone https://github.com/bflad/chef-lsyncd-old.git
+
+[community-cookbooks/magic_shell]
+checkout = git clone https://github.com/customink-webops/magic_shell.git
+
+[community-cookbooks/memcached]
+checkout = git clone https://github.com/opscode-cookbooks/memcached.git
+
+[community-cookbooks/moodle]
+checkout = git clone https://github.com/mediacore/moodle-box.git
+
+[community-cookbooks/mysql]
+checkout = git clone https://github.com/opscode-cookbooks/mysql.git
+
+[community-cookbooks/nfs]
+checkout = git clone https://github.com/atomic-penguin/cookbook-nfs.git
+
+[community-cookbooks/nginx]
+checkout = git clone https://github.com/opscode-cookbooks/nginx.git
+
+[community-cookbooks/nscd]
+checkout = git clone https://github.com/opscode-cookbooks/nscd.git
+
+[community-cookbooks/ntp]
+checkout = git clone https://github.com/opscode-cookbooks/ntp.git
+
+[community-cookbooks/ohai]
+checkout = git clone https://github.com/opscode-cookbooks/ohai.git
+
+[community-cookbooks/openldap]
+checkout = git clone https://github.com/opscode-cookbooks/openldap.git
+
+[community-cookbooks/openssh]
+checkout = git clone https://github.com/opscode-cookbooks/openssh.git
+
+[community-cookbooks/openssl]
+checkout = git clone https://github.com/opscode-cookbooks/openssl.git
+
+[community-cookbooks/passenger_apache2]
+checkout = git clone https://github.com/opscode-cookbooks/passenger_apache2.git
+
+[community-cookbooks/perl]
+checkout = git clone https://github.com/opscode-cookbooks/perl.git
+
+[community-cookbooks/php]
+checkout = git clone https://github.com/opscode-cookbooks/php.git
+
+[community-cookbooks/postfix]
+checkout = git clone https://github.com/opscode-cookbooks/postfix.git
+
+[community-cookbooks/postgresql]
+checkout = git clone https://github.com/opscode-cookbooks/postgresql.git
+
+[community-cookbooks/python]
+checkout = git clone https://github.com/opscode-cookbooks/python.git
+
+[community-cookbooks/rabbitmq]
+checkout = git clone https://github.com/opscode-cookbooks/rabbitmq.git
+
+[community-cookbooks/rbenv]
+checkout = git clone https://github.com/RiotGames/rbenv-cookbook.git
+
+[community-cookbooks/rsync]
+checkout = git clone https://github.com/opscode-cookbooks/rsync.git
+
+[community-cookbooks/rsyslog]
+checkout = git clone https://github.com/opscode-cookbooks/rsyslog.git
+
+[community-cookbooks/runit]
+checkout = git clone https://github.com/opscode-cookbooks/runit.git
+
+[community-cookbooks/selinux]
+checkout = git clone https://github.com/opscode-cookbooks/selinux.git
+
+[community-cookbooks/simple_iptables]
+checkout = git clone https://github.com/dcrosta/cookbook-simple-iptables.git
+
+[community-cookbooks/ssh-keys]
+checkout = git clone https://github.com/nickola/chef-ssh-keys.git
+
+[community-cookbooks/sudo]
+checkout = git clone https://github.com/opscode-cookbooks/sudo.git
+
+[community-cookbooks/supervisor]
+checkout = git clone https://github.com/opscode-cookbooks/supervisor.git
+
+[community-cookbooks/sysctl]
+checkout = git clone https://github.com/onehealth-cookbooks/sysctl.git
+
+[community-cookbooks/ucspi-tcp]
+checkout = git clone https://github.com/opscode-cookbooks/ucspi-tcp.git
+
+[community-cookbooks/unicorn]
+checkout = git clone https://github.com/opscode-cookbooks/unicorn.git
+
+[community-cookbooks/user]
+checkout = git clone https://github.com/fnichol/chef-user.git
+
+[community-cookbooks/users]
+checkout = git clone https://github.com/opscode-cookbooks/users.git
+
+[community-cookbooks/windows]
+checkout = git clone https://github.com/opscode-cookbooks/windows.git
+
+[community-cookbooks/xfs]
+checkout = git clone https://github.com/opscode-cookbooks/xfs.git
+
+[community-cookbooks/xml]
+checkout = git clone https://github.com/opscode-cookbooks/xml.git
+
+[community-cookbooks/yum]
+checkout = git clone https://github.com/opscode-cookbooks/yum.git
+
+[community-cookbooks/yum-centos]
+checkout = git clone https://github.com/opscode-cookbooks/yum-centos.git
+
+[community-cookbooks/yum-elrepo]
+checkout = git clone https://github.com/opscode-cookbooks/yum-elrepo.git
+
+[community-cookbooks/yum-epel]
+checkout = git clone https://github.com/opscode-cookbooks/yum-epel.git
+
+[community-cookbooks/yum-fedora]
+checkout = git clone https://github.com/opscode-cookbooks/yum-fedora.git
+
+[community-cookbooks/yum-ius]
+checkout = git clone https://github.com/opscode-cookbooks/yum-ius.git
+
+[community-cookbooks/yum-percona]
+checkout = git clone https://github.com/opscode-cookbooks/yum-percona.git
+
+[community-cookbooks/yum-pgdg]
+checkout = git clone https://github.com/opscode-cookbooks/yum-pgdg.git
+
+[community-cookbooks/yum-repoforge]
+checkout = git clone https://github.com/opscode-cookbooks/yum-repoforge.git
+
+[community-cookbooks/zlib]
+checkout = git clone https://github.com/opscode-cookbooks/zlib.git
+

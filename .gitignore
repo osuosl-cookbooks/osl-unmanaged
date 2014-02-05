@@ -9,3 +9,4 @@ data_bags/*
 /cookbooks
 /osl-cookbooks
 /osuosl-cookbooks
+/community-cookbooks
