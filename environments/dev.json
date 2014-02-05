@@ -30,7 +30,7 @@
     "firewall": "= 0.1.2",
     "fossology-sites-enabled": "= 0.1.0",
     "gecode": "= 2.0.0",
-    "generic-vhosts": "= 0.1.25",
+    "generic-vhosts": "= 0.1.26",
     "goblin": "= 0.1.1",
     "git": "= 2.3.0",
     "gitolite": "= 0.1.0",
