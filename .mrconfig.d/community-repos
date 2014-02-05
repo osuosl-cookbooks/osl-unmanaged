@@ -32,7 +32,7 @@ checkout = git clone https://github.com/opscode-cookbooks/bluepill.git
 checkout = git clone https://github.com/opscode-cookbooks/build-essential.git
 
 [community-cookbooks/certificate]
-checkout = git clone https://github.com/atomic-penguin/cookbook-certificate.git
+checkout = git clone https://github.com/atomic-penguin/cookbook-certificate.git certificate
 
 [community-cookbooks/chef-client]
 checkout = git clone https://github.com/opscode-cookbooks/chef-client.git
@@ -41,10 +41,10 @@ checkout = git clone https://github.com/opscode-cookbooks/chef-client.git
 checkout = git clone https://github.com/opscode-cookbooks/chef-server.git
 
 [community-cookbooks/chef-handler]
-checkout = git clone https://github.com/opscode-cookbooks/chef_handler.git
+checkout = git clone https://github.com/opscode-cookbooks/chef_handler.git chef-handler
 
 [community-cookbooks/cpu]
-checkout = git clone https://github.com/Youscribe/cpu-cookbook.git
+checkout = git clone https://github.com/Youscribe/cpu-cookbook.git cpu
 
 [community-cookbooks/cron]
 checkout = git clone https://github.com/opscode-cookbooks/cron.git
@@ -89,7 +89,7 @@ checkout = git clone https://github.com/opscode-cookbooks/java.git
 checkout = git clone https://github.com/opscode-cookbooks/jenkins.git
 
 [community-cookbooks/line]
-checkout = git clone https://github.com/someara/line-cookbook.git
+checkout = git clone https://github.com/someara/line-cookbook.git line
 
 [community-cookbooks/logrotate]
 checkout = git clone https://github.com/opscode-cookbooks/logrotate.git
@@ -98,7 +98,7 @@ checkout = git clone https://github.com/opscode-cookbooks/logrotate.git
 checkout = git clone https://github.com/lusis/chef-logstash.git
 
 [community-cookbooks/lsyncd]
-checkout = git clone https://github.com/bflad/chef-lsyncd-old.git
+checkout = git clone https://github.com/bflad/chef-lsyncd-old.git lsyncd
 
 [community-cookbooks/magic_shell]
 checkout = git clone https://github.com/customink-webops/magic_shell.git
@@ -107,13 +107,13 @@ checkout = git clone https://github.com/customink-webops/magic_shell.git
 checkout = git clone https://github.com/opscode-cookbooks/memcached.git
 
 [community-cookbooks/moodle]
-checkout = git clone https://github.com/mediacore/moodle-box.git
+checkout = git clone https://github.com/mediacore/moodle-box.git moodle
 
 [community-cookbooks/mysql]
 checkout = git clone https://github.com/opscode-cookbooks/mysql.git
 
 [community-cookbooks/nfs]
-checkout = git clone https://github.com/atomic-penguin/cookbook-nfs.git
+checkout = git clone https://github.com/atomic-penguin/cookbook-nfs.git nfs
 
 [community-cookbooks/nginx]
 checkout = git clone https://github.com/opscode-cookbooks/nginx.git
@@ -158,7 +158,7 @@ checkout = git clone https://github.com/opscode-cookbooks/python.git
 checkout = git clone https://github.com/opscode-cookbooks/rabbitmq.git
 
 [community-cookbooks/rbenv]
-checkout = git clone https://github.com/RiotGames/rbenv-cookbook.git
+checkout = git clone https://github.com/RiotGames/rbenv-cookbook.git rbenv
 
 [community-cookbooks/rsync]
 checkout = git clone https://github.com/opscode-cookbooks/rsync.git
@@ -176,7 +176,7 @@ checkout = git clone https://github.com/opscode-cookbooks/selinux.git
 checkout = git clone https://github.com/dcrosta/cookbook-simple-iptables.git
 
 [community-cookbooks/ssh-keys]
-checkout = git clone https://github.com/nickola/chef-ssh-keys.git
+checkout = git clone https://github.com/nickola/chef-ssh-keys.git ssh-keys
 
 [community-cookbooks/sudo]
 checkout = git clone https://github.com/opscode-cookbooks/sudo.git
@@ -194,7 +194,7 @@ checkout = git clone https://github.com/opscode-cookbooks/ucspi-tcp.git
 checkout = git clone https://github.com/opscode-cookbooks/unicorn.git
 
 [community-cookbooks/user]
-checkout = git clone https://github.com/fnichol/chef-user.git
+checkout = git clone https://github.com/fnichol/chef-user.git user
 
 [community-cookbooks/users]
 checkout = git clone https://github.com/opscode-cookbooks/users.git
