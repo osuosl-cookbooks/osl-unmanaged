@@ -76,6 +76,9 @@ checkout = git clone https://github.com/opscode-cookbooks/gunicorn.git
 [community-cookbooks/haproxy]
 checkout = git clone https://github.com/opscode-cookbooks/haproxy.git
 
+[community-cookbooks/iis]
+checkout = git clone https://github.com/opscode-cookbooks/iis.git
+
 [community-cookbooks/iptables]
 checkout = git clone https://github.com/opscode-cookbooks/iptables.git
 
