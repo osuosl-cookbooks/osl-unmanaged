@@ -59,7 +59,7 @@ checkout = git clone https://github.com/opscode-cookbooks/database.git
 checkout = git clone https://github.com/opscode-cookbooks/dmg.git
 
 [community-cookbooks/elasticsearch]
-checkout = git clone https://github.com/elasticsearch/cookbook-elasticsearch.git
+checkout = git clone https://github.com/elasticsearch/cookbook-elasticsearch.git elasticsearch
 
 [community-cookbooks/erlang]
 checkout = git clone https://github.com/opscode-cookbooks/erlang.git
@@ -95,7 +95,7 @@ checkout = git clone https://github.com/someara/line-cookbook.git line
 checkout = git clone https://github.com/opscode-cookbooks/logrotate.git
 
 [community-cookbooks/logstash]
-checkout = git clone https://github.com/lusis/chef-logstash.git
+checkout = git clone https://github.com/lusis/chef-logstash.git logstash
 
 [community-cookbooks/lsyncd]
 checkout = git clone https://github.com/bflad/chef-lsyncd-old.git lsyncd
@@ -173,7 +173,7 @@ checkout = git clone https://github.com/opscode-cookbooks/runit.git
 checkout = git clone https://github.com/opscode-cookbooks/selinux.git
 
 [community-cookbooks/simple_iptables]
-checkout = git clone https://github.com/dcrosta/cookbook-simple-iptables.git
+checkout = git clone https://github.com/dcrosta/cookbook-simple-iptables.git simple_iptables
 
 [community-cookbooks/ssh-keys]
 checkout = git clone https://github.com/nickola/chef-ssh-keys.git ssh-keys
