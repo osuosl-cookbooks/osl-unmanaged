@@ -109,6 +109,9 @@ checkout = git clone https://github.com/opscode-cookbooks/memcached.git
 [community-cookbooks/moodle]
 checkout = git clone https://github.com/mediacore/moodle-box.git moodle
 
+[community-cookbooks/munin]
+checkout = git clone https://github.com/cookbooks/munin.git munin
+
 [community-cookbooks/mysql]
 checkout = git clone https://github.com/opscode-cookbooks/mysql.git
 
