@@ -82,7 +82,7 @@
     "racktables": "= 0.1.0",
     "rbenv": "= 1.4.1",
     "rdiff-backup": "= 0.2.0",
-    "ros": "= 0.1.28",
+    "ros": "= 0.1.29",
     "ros-docs": "= 0.1.6",
     "rsync": "= 0.8.4",
     "rsyslog": "= 1.8.0",
