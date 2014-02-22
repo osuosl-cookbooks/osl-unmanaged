@@ -52,6 +52,7 @@
     "mysql": "= 3.0.12",
     "nagios": "= 4.3.0",
     "networking_basic": "= 0.0.5",
+    "newrelic": "= 0.5.8",
     "nfs": "= 0.4.2",
     "nginx": "= 1.8.0",
     "nscd": "= 0.8.2",
