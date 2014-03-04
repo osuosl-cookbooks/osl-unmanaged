@@ -116,7 +116,7 @@
     "zlib": "= 2.0.0",
     "osl-drupal": "= 0.1.0",
     "osl-sudo": "= 0.1.0",
-    "osl-nodejs": "= 0.1.1"
+    "osl-nodejs": "= 0.1.2"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
