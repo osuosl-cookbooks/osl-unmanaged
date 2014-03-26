@@ -18,5 +18,5 @@ override_attributes(
     "rabbitmq" => {
       "host" => "mig-be.onid.oregonstate.edu",
     },
-  },
+  }
 )
