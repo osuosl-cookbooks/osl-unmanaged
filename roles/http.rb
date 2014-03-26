@@ -1,5 +1,5 @@
 name "http"
-description "Base role for http host"
+description "Base for http host"
 run_list(
   "recipe[base::http]",
   "recipe[firewall::http]",
