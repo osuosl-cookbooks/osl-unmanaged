@@ -12,5 +12,10 @@ override_attributes(
     "redirect_http" => true,
     "cert_path" => "/etc/pki/tls/certs/wildcard.pem",
     "key_path" => "/etc/pki/tls/private/wildcard.key"
+  },
+  "mysql" => {
+    "client" => {
+      "packages" => ["mysql", "mysql-devel", "ruby-devel"]
+    }
   }
 )
