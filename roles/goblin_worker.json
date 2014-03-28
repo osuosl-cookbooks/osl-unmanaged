@@ -1,0 +1,20 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base]",
+    "recipe[firewall]",
+    "recipe[goblin::worker]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "openssh": {
+      "server": {
+        "password_authentication": "yes"
+      }
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "goblin worker role",
+  "name": "goblin_worker"
+}

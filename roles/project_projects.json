@@ -1,0 +1,16 @@
+{
+  "env_run_lists": {},
+  "run_list": [],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "rdiff-backup": {
+      "client": {
+        "destination-dir": "/data/rdiff-backup-projects"
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "role for all project servers that don't fit into any other project categories",
+  "name": "project_projects"
+}

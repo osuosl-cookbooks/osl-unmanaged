@@ -1,0 +1,28 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-packstack]",
+    "role[base_managed]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "osl-packstack": {
+      "rdo": {
+        "release": "havana"
+      },
+      "type": "not_compute"
+    },
+    "users": [
+      "packstack-root"
+    ],
+    "authorization": {
+      "sudo": {
+        "include_sudoers_d": true
+      }
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Main setup for packstack nodes",
+  "name": "packstack"
+}

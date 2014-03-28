@@ -1,0 +1,12 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[base::unmanaged]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "base role for all systems",
+  "name": "base"
+}

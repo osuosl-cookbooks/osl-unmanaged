@@ -1,0 +1,12 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-nodejs::default]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "nodejs for nodejs web nodes",
+  "name": "nodejs"
+}

@@ -1,0 +1,37 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "recipe[phpbb::apache]",
+    "recipe[phpbb::memcache]",
+    "recipe[phpbb::users]",
+    "recipe[phpbb::gluster]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "memcached": {
+      "memory": "256"
+    },
+    "base": {
+      "packages": [
+        "vim",
+        "bash-completion",
+        "cronie",
+        "cronie-anacron",
+        "crontabs",
+        "dmidecode",
+        "htop",
+        "iotop",
+        "pv",
+        "pwgen",
+        "screen",
+        "strace",
+        "time"
+      ]
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "phpbb web node",
+  "name": "phpbb_www"
+}

@@ -1,0 +1,14 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "recipe[osl-postgresql::mount]",
+    "recipe[osl-postgresql::server]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "postgresql server role",
+  "name": "postgres"
+}

@@ -1,0 +1,56 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "recipe[logstash::server]",
+    "recipe[php::module_curl]",
+    "recipe[logstash::kibana]",
+    "recipe[firewall::kibana]",
+    "recipe[firewall::logstash-server]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "logstash": {
+      "kibana": {
+        "http_port": "8080"
+      },
+      "server": {
+        "filters": [
+          {
+            "grok": {
+              "pattern": "<%{POSINT:syslog_pri}>%{SYSLOGTIMESTAMP:syslog_timestamp} %{SYSLOGHOST:syslog_hostname} %{DATA:syslog_program}(?:[%{POSINT:syslog_pid}])?: %{GREEDYDATA:syslog_message}",
+              "patterns_dir": "/opt/logstash/server/etc/patterns/",
+              "type": "syslog"
+            }
+          }
+        ],
+        "allowed_ip_ranges": [
+          "140.211.166.0/23",
+          "10.1.0.0/24",
+          "140.211.15.0/24"
+        ],
+        "outputs": [
+          {
+            "file": {
+              "path": "/opt/logstash/server/syslog_logs/%{syslog_hostname}.log",
+              "type": "syslog"
+            }
+          }
+        ],
+        "enable_embedded_es": true,
+        "inputs": [
+          {
+            "syslog": {
+              "port": "5000",
+              "type": "syslog"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "Attributes and run_lists specific to FAO's logstash instance",
+  "name": "logstash_server"
+}

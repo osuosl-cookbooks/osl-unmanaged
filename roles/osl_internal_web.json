@@ -1,0 +1,35 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "recipe[osl-slapd::client]",
+    "recipe[firewall::http]",
+    "recipe[certificate::wildcard]",
+    "recipe[apache2]",
+    "recipe[apache2::mod_ssl]",
+    "recipe[apache2::mod_php5]",
+    "recipe[racktables]",
+    "recipe[java::openjdk]",
+    "recipe[jenkins::server]",
+    "recipe[jenkins::proxy_apache2]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "jenkins": {
+      "http_proxy": {
+        "ssl": {
+          "key_path": "/etc/pki/tls/private/wildcard.key",
+          "cert_path": "/etc/pki/tls/certs/wildcard.pem",
+          "dir": "/etc/pki/tls/certs",
+          "redirect_http": true,
+          "enabled": true
+        },
+        "host_name": "jenkins.osuosl.org"
+      }
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "ermahgerd internal web services",
+  "name": "osl_internal_web"
+}

@@ -1,0 +1,15 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-mysql::server]",
+    "role[base_managed]",
+    "recipe[firewall::mysql]",
+    "recipe[monitoring::mysql]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "mysql server role",
+  "name": "mysql"
+}

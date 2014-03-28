@@ -1,0 +1,21 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "recipe[firewall::http]",
+    "recipe[certificate::wildcard]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "chef_server": {
+      "url": "https://chef.osuosl.org"
+    },
+    "certificate": {
+      "nginx_cert": "true"
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "ermahgerd chef server role",
+  "name": "chefserver"
+}

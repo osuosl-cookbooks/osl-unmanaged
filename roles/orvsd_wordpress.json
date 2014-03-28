@@ -1,0 +1,25 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[orvsd-web::wordpress]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "jenkins": {
+      "node": {
+        "group": "alfred",
+        "agent_type": "ssh",
+        "shell": "/bin/bash",
+        "user": "alfred",
+        "home": "alfred"
+      }
+    },
+    "nginx": {
+      "repo_source": "nginx"
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "orvsd wordpress web server role",
+  "name": "orvsd_wordpress"
+}

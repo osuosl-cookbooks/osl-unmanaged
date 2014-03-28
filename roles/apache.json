@@ -1,0 +1,12 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[monitoring::http]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Base role for apache server",
+  "name": "apache"
+}

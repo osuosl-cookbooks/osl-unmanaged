@@ -1,0 +1,16 @@
+{
+  "env_run_lists": {},
+  "run_list": [],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "rdiff-backup": {
+      "client": {
+        "destination-dir": "/data/rdiff-backup-orvsd"
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "role for all ORVSD servers",
+  "name": "project_orvsd"
+}

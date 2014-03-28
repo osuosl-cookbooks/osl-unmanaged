@@ -1,0 +1,31 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "recipe[racktables]",
+    "recipe[certificate::wildcard]",
+    "recipe[firewall::http]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "mysql": {
+      "client": {
+        "packages": [
+          "mysql",
+          "mysql-devel",
+          "ruby-devel"
+        ]
+      }
+    },
+    "racktables": {
+      "redirect_http": true,
+      "ssl_enabled": true,
+      "key_path": "/etc/pki/tls/private/wildcard.key",
+      "cert_path": "/etc/pki/tls/certs/wildcard.pem"
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "ermahgerd racktables",
+  "name": "racktables"
+}

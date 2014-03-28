@@ -1,0 +1,19 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[rdiff_backup]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "rdiff-backup": {
+      "client": {
+        "retention-period": "5D",
+        "user": "rdiff-backup-client-dev"
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "role for all servers in dev environments to be backed up with rdiff-backup",
+  "name": "rdiff_backup_dev"
+}
