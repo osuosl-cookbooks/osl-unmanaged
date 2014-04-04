@@ -96,3 +96,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/sinatra_app.git
 
 [osuosl-cookbooks/ssh-ldap]
 checkout = git clone git@github.com:osuosl-cookbooks/ssh-ldap.git
+
+[osuosl-cookbooks/workstation]
+checkout = git clone git@github.com:osuosl-cookbooks/workstation.git
