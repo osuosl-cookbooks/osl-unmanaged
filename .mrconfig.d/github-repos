@@ -1,6 +1,9 @@
 [osuosl-cookbooks/aliases]
 checkout = git clone git@github.com:osuosl-cookbooks/aliases.git
 
+[osuosl-cookbooks/autofs]
+checkout = git clone git@github.com:osuosl-cookbooks/autofs.git
+
 [osuosl-cookbooks/base]
 checkout = git clone git@github.com:osuosl-cookbooks/base.git
 
