@@ -6,16 +6,6 @@
   ],
   "chef_type": "role",
   "override_attributes": {
-    "osl-packstack": {
-      "rdo": {
-        "release": "havana"
-      },
-      "type": "compute"
-    },
-    "users": [
-      "packstack-root",
-      "packstack-nova"
-    ],
     "authorization": {
       "sudo": {
         "include_sudoers_d": true
