@@ -1,7 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "role[base]",
+    "role[base_managed]",
     "recipe[osl-packstack]",
     "recipe[firewall::http]",
     "recipe[firewall::puppetmaster]"
