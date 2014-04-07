@@ -1,0 +1,30 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base]",
+    "recipe[osl-packstack::foreman]",
+    "recipe[firewall::http]",
+    "recipe[firewall::puppetmaster]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "authorization": {
+      "sudo": {
+        "include_sudoers_d": true
+      }
+    },
+    "firewall": {
+      "range": {
+        "osl_managed": [
+          "10.1.0.208",
+          "10.1.0.28",
+          "10.1.0.238"
+        ]
+      }
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Main setup for foreman node",
+  "name": "packstack_foreman"
+}
