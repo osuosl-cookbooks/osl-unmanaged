@@ -1,7 +1,7 @@
 {
   "sources": {
     "ant": {
-      "locked_version": "1.0.0"
+      "locked_version": "1.0.2"
     },
     "apache2": {
       "locked_version": "1.10.0"
