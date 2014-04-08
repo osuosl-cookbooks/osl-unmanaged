@@ -12,15 +12,6 @@
       "sudo": {
         "include_sudoers_d": true
       }
-    },
-    "firewall": {
-      "range": {
-        "osl_managed": [
-          "10.1.0.208",
-          "10.1.0.28",
-          "10.1.0.238"
-        ]
-      }
     }
   },
   "default_attributes": {},
