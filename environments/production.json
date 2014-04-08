@@ -9,7 +9,7 @@
     "application_nginx": "= 1.0.4",
     "application_python": "= 1.2.2",
     "application_ruby": "= 1.1.4",
-    "apt": "= 2.1.1",
+    "apt": "= 2.3.8",
     "ark": "= 0.1.0",
     "aws": "= 0.101.2",
     "base": "= 1.2.5",
