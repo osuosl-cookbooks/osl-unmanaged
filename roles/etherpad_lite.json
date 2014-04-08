@@ -2,7 +2,8 @@
   "env_run_lists": {},
   "run_list": [
     "role[base_managed]",
-    "role[nodejs]"
+    "role[nodejs]",
+    "role[nginx]"
   ],
   "chef_type": "role",
   "override_attributes": {},
