@@ -25,7 +25,7 @@
         "memory_limit": "512M",
         "upload_max_filesize": "10M"
       }
-    },
+    }
   },
   "json_class": "Chef::Role",
   "description": "apereo.osuosl.org role",
