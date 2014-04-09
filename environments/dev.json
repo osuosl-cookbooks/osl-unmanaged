@@ -34,7 +34,7 @@
     "goblin": "= 0.1.1",
     "git": "= 2.3.0",
     "gitolite": "= 0.1.0",
-    "gunicorn": "= 1.1.0",
+    "gunicorn": "= 1.1.2",
     "haproxy": "= 1.4.0",
     "iptables": "= 0.13.0",
     "java": "= 1.10.0",
@@ -126,7 +126,7 @@
       }
     },
     "omnibus_updater": {
-        "version": "11.12.0"
+      "version": "11.12.0"
     }
   },
   "override_attributes": {

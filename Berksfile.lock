@@ -67,13 +67,13 @@
       "locked_version": "1.2.0"
     },
     "gecode": {
-      "locked_version": "2.0.0"
+      "locked_version": "2.1.0"
     },
     "git": {
       "locked_version": "2.3.0"
     },
     "gunicorn": {
-      "locked_version": "1.1.0"
+      "locked_version": "1.1.2"
     },
     "haproxy": {
       "locked_version": "1.4.0"
