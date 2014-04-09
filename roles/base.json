@@ -3,6 +3,12 @@
   "run_list": [
     "recipe[base::unmanaged]"
   ],
+  "env_run_lists": {
+    "dev": [
+        "recipe[base::unmanaged]",
+        "recipe[omnibus_updater]"
+    ]
+  },
   "chef_type": "role",
   "override_attributes": {},
   "default_attributes": {},
