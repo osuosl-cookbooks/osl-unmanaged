@@ -25,7 +25,7 @@
     "database": "= 1.4.0",
     "dmg": "= 1.1.0",
     "elasticsearch": "= 0.3.8",
-    "erlang": "= 1.2.0",
+    "erlang": "= 1.5.2",
     "fenestra": "= 0.1.0",
     "firewall": "= 0.1.2",
     "fossology-sites-enabled": "= 0.1.0",
