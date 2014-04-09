@@ -13,6 +13,7 @@
     "role[rdiff_backup]",
     "role[project_projects]",
     "recipe[php::module_gd]",
+    "recipe[php::module_apc]",
     "recipe[git]",
     "recipe[mysql::client]",
     "recipe[osl-sudo::apereo]",
