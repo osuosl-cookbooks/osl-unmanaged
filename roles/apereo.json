@@ -1,0 +1,35 @@
+{
+  "env_run_lists": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base_managed]",
+    "recipe[php]",
+    "recipe[generic-vhosts]",
+    "recipe[osl-apache::default]",
+    "recipe[osl-apache::munin]",
+    "recipe[osl-apache::mysql]",
+    "role[apache]",
+    "role[rdiff_backup]",
+    "role[project_projects]",
+    "recipe[php::module_gd]",
+    "recipe[git]",
+    "recipe[mysql::client]",
+    "recipe[osl-sudo::apereo]",
+    "recipe[osl-drupal::drush]"
+  ],
+  "override_attributes": {
+    "php": {
+      "directives": {
+        "post_max_size": "10M",
+        "memory_limit": "512M",
+        "upload_max_filesize": "10M"
+      }
+    },
+  },
+  "json_class": "Chef::Role",
+  "description": "apereo.osuosl.org role",
+  "name": "apereo",
+  "default_attributes": {
+  }
+}
