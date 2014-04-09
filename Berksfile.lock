@@ -61,7 +61,7 @@
       "locked_version": "1.1.0"
     },
     "elasticsearch": {
-      "locked_version": "0.2.7"
+      "locked_version": "0.3.8"
     },
     "erlang": {
       "locked_version": "1.2.0"
