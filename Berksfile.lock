@@ -52,7 +52,7 @@
       "locked_version": "1.2.2"
     },
     "daemontools": {
-      "locked_version": "1.0.0"
+      "locked_version": "1.2.0"
     },
     "database": {
       "locked_version": "1.4.0"

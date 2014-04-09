@@ -21,7 +21,7 @@
     "chef_handler": "= 1.1.5",
     "cpu": "= 0.2.0",
     "cron": "= 1.2.2",
-    "daemontools": "= 1.0.0",
+    "daemontools": "= 1.2.0",
     "database": "= 1.4.0",
     "dmg": "= 1.1.0",
     "elasticsearch": "= 0.2.7",
