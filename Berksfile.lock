@@ -120,7 +120,7 @@
       "ref": "45fb684ed4b9fba137bbd3857ddb78800e763cb3"
     },
     "munin": {
-      "locked_version": "1.4.0"
+      "locked_version": "1.4.3"
     },
     "mysql": {
       "locked_version": "3.0.12"
