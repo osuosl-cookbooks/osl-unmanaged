@@ -71,7 +71,7 @@
     "osl-redmine": "= 0.0.1",
     "osl-slapd": "= 0.1.2",
     "passenger_apache2": "= 2.2.0",
-    "perl": "= 1.2.0",
+    "perl": "= 1.2.2",
     "php": "= 1.2.4",
     "postfix": "= 2.1.4",
     "postgresql": "= 3.0.2",
