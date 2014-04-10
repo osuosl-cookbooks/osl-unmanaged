@@ -18,7 +18,7 @@
       }
     },
     "racktables": {
-      "install_dir": "/var/www/racktables/wwwroot",
+      "install_dir": "/var/www/racktables",
       "server_name": "inventory.osuosl.org",
       "server_aliases": ["inventory2.osuosl.org"],
       "redirect_http": true,
