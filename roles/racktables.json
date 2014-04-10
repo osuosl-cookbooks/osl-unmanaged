@@ -18,6 +18,9 @@
       }
     },
     "racktables": {
+      "install_dir": "/var/www/racktables/wwwroot",
+      "server_name": "inventory.osuosl.org",
+      "server_aliases": ["inventory2.osuosl.org"],
       "redirect_http": true,
       "ssl_enabled": true,
       "key_path": "/etc/pki/tls/private/wildcard.key",
