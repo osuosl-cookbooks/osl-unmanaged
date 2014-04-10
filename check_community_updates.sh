@@ -16,9 +16,8 @@ for x in $COOKBOOKS
 do
     OSL_VER=$(knife cookbook show $x | awk '{ print $2; }')
     CURRENT_VER=$(curl -s http://cookbooks.opscode.com/api/v1/cookbooks/$x | jq .latest_version | rev | cut -d'/' -f1 | rev | tr -d \" | sed 's/_/./g')
-    if ! [ $OSL_VER = $CURRENT_VER ]
-      then
-        echo For cookbook $x the latest version is $CURRENT_VER, and we use $OSL_VER
-    fi
+    LOCKED_VER=$(cat $DIR/environments/production.json | jq .cookbook_versions.\"$x\" | awk '{print $2;}' | tr -d \")
+    if [ -z $LOCKED_VER ]; then LOCKED_VER="N/A"; fi
+    echo For cookbook $x the latest version is $CURRENT_VER, and we use $OSL_VER. The version locked in production is $LOCKED_VER
 done
 
