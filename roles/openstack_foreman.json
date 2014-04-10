@@ -18,5 +18,5 @@
   "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "foreman role to manage the deployment of openstack",
-  "name": "openstack-foreman"
+  "name": "openstack_foreman"
 }
