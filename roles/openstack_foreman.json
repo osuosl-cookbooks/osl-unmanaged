@@ -1,0 +1,22 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "role[http]",
+    "recipe[firewall::puppetmaster]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+      "firewall": {
+        "range": {
+          "osl_managed": [
+            "140.211.167.128/25"
+          ]
+        }
+      }
+    },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "foreman role to manage the deployment of openstack",
+  "name": "openstack-foreman"
+}
