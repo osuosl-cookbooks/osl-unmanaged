@@ -197,6 +197,9 @@
     "ssh-keys": {
       "locked_version": "1.0.0"
     },
+    "sqlite": {
+      "locked_version": "1.0.0"
+    },
     "sudo": {
       "locked_version": "2.2.0"
     },
