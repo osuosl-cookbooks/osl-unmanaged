@@ -68,7 +68,7 @@
     "osl-munin": "= 0.1.1",
     "osl-mysql": "= 0.1.0",
     "osl-nginx": "= 0.1.0",
-    "osl-packstack": "= 0.0.6",
+    "osl-openstack": "= 0.0.6",
     "osl-postgresql": "= 0.1.8",
     "osl-redmine": "= 0.0.1",
     "osl-slapd": "= 0.1.2",
