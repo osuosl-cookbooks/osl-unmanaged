@@ -207,7 +207,7 @@
       "locked_version": "0.4.0"
     },
     "sysctl": {
-      "locked_version": "0.3.3"
+      "locked_version": "0.4.0"
     },
     "ucspi-tcp": {
       "locked_version": "1.0.0"
