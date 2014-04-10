@@ -96,7 +96,7 @@
     "sudo": "= 2.2.0",
     "ssh-ldap": "= 0.1.0",
     "supervisor": "= 0.4.0",
-    "sysctl": "= 0.3.3",
+    "sysctl": "= 0.4.0",
     "ucspi-tcp": "= 1.0.0",
     "unicorn": "= 1.2.2",
     "user": "= 0.3.1",
