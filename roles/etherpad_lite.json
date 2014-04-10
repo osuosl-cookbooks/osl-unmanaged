@@ -3,11 +3,19 @@
   "run_list": [
     "role[base_managed]",
     "role[nodejs]",
+    "recipe[osl-nginx::project_etherpad-lite]",
     "role[nginx]"
   ],
   "chef_type": "role",
   "override_attributes": {},
-  "default_attributes": {},
+  "default_attributes": {
+    "osl-nginx": {
+       "recipes": [
+            "default",
+            "http_ssl_module"
+       ]
+    }
+  },
   "json_class": "Chef::Role",
   "description": "etherpad-lite role for all etherpads",
   "name": "etherpad_lite"
