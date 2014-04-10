@@ -3,7 +3,8 @@
   "run_list": [
     "role[base_managed]",
     "role[http]",
-    "recipe[firewall::puppetmaster]"
+    "recipe[firewall::puppetmaster]",
+    "recipe[osl-openstack::default]"
   ],
   "chef_type": "role",
   "override_attributes": {
