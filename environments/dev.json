@@ -93,7 +93,7 @@
     "ssh-keys": "= 1.0.0",
     "sudo": "= 2.2.0",
     "ssh-ldap": "= 0.1.0",
-    "supervisor": "= 0.4.10",
+    "supervisor": "= 0.4.0",
     "sysctl": "= 0.3.3",
     "ucspi-tcp": "= 1.0.0",
     "unicorn": "= 1.2.2",

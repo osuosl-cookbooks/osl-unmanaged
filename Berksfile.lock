@@ -204,7 +204,7 @@
       "locked_version": "2.2.0"
     },
     "supervisor": {
-      "locked_version": "0.4.10"
+      "locked_version": "0.4.0"
     },
     "sysctl": {
       "locked_version": "0.3.3"
