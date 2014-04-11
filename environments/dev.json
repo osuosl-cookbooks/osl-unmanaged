@@ -12,7 +12,7 @@
     "apt": "= 2.3.8",
     "ark": "= 0.1.0",
     "aws": "= 0.101.2",
-    "base": "= 1.2.7",
+    "base": "= 1.2.8",
     "bluepill": "= 2.3.1",
     "build-essential": "= 1.4.2",
     "certificate": "= 0.5.0",
