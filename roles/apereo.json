@@ -5,7 +5,8 @@
   "run_list": [
     "role[base_managed]",
     "recipe[php]",
-    "recipe[osl-apache::project_apereo]",
+    "recipe[generic-vhosts]",
+    "recipe[osl-apache::default]",
     "recipe[osl-apache::munin]",
     "recipe[osl-apache::mysql]",
     "role[apache]",
