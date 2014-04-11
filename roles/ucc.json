@@ -1,0 +1,28 @@
+{
+  "run_list": [
+    "role[base_managed]",
+    "recipe[php]",
+    "recipe[osl-apache::project_ucc],
+    "recipe[osl-apache::munin]",
+    "recipe[osl-apache::mysql]",
+    "role[apache]",
+    "role[rdiff_backup]",
+    "role[project_projects]"
+  ],
+  "env_run_lists": {
+  },
+  "override_attributes": {
+  },
+  "description": "Role for ucc.osuosl.org",
+  "chef_type": "role",
+  "name": "ucc",
+  "default_attributes": {
+    "apache": {
+        "prefork": {
+            "serverlimit": "30",
+            "maxclients": "30"
+          }
+    }
+  },
+  "json_class": "Chef::Role"
+}
