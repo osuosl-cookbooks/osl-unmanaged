@@ -2,7 +2,7 @@
   "run_list": [
     "role[base_managed]",
     "recipe[php]",
-    "recipe[osl-apache::project_ucc],
+    "recipe[osl-apache::project_ucc]",
     "recipe[osl-apache::munin]",
     "recipe[osl-apache::mysql]",
     "role[apache]",
