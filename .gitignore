@@ -2,6 +2,7 @@
 .chef/*.pem
 data_bags
 data_bags/*
+node-backup*
 .DS_Store
 *~
 *.swp
