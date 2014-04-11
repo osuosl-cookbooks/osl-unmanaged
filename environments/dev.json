@@ -116,7 +116,8 @@
     "osl-sudo": "= 0.1.0",
     "munin": "= 1.4.3",
     "iis": "= 2.1.0",
-    "homebrew": "= 1.5.4"
+    "homebrew": "= 1.5.4",
+    "virtualbox": "= 1.0.2"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
