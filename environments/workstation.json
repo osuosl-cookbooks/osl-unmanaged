@@ -1,9 +1,13 @@
 {
-    "chef_type": "environment", 
-    "cookbook_versions": {}, 
-    "default_attributes": {}, 
-    "description": "", 
-    "json_class": "Chef::Environment", 
-    "name": "workstation", 
-    "override_attributes": {}
+  "name": "workstation",
+  "description": "",
+  "cookbook_versions": {
+    "workstation": "= 0.2.0"
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  }
 }
