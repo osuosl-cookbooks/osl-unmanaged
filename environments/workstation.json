@@ -1,6 +1,6 @@
 {
   "name": "workstation",
-  "description": "",
+  "description": "Keep workstation things out of production",
   "cookbook_versions": {
     "workstation": "= 0.2.0"
   },
