@@ -1,0 +1,20 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "role[http]",
+    "recipe[osl-openstack::default]",
+    "recipe[firewall::amqp]",
+    "recipe[firewall::http-alt]",
+    "recipe[firewall::iscsi]",
+    "recipe[firewall::mysql]",
+    "recipe[firewall::openstack]",
+    "recipe[firewall::rsync]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "controller role to setup ports and packages for an openstack controller node",
+  "name": "openstack_controller"
+}
