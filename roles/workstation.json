@@ -9,6 +9,9 @@
   "chef_type": "role",
   "run_list": [
     "recipe[workstation]",
+    "recipe[workstation::chef-client]",
+    "recipe[workstation::user]",
+    "recipe[workstation::ldap]",
     "recipe[workstation::network]",
     "recipe[workstation::mounts]",
     "recipe[workstation::repos]",
