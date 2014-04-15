@@ -3,6 +3,10 @@
   "description": "Role for OSL Workstations",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "resolver": {
+      "nameservers" => ["140.211.166.130", "140.211.166.131"],
+      "search" => "workstation.osuosl.bak. osuosl.bak. osuosl.org."
+    }
   },
   "override_attributes": {
   },
@@ -16,7 +20,8 @@
     "recipe[workstation::mounts]",
     "recipe[workstation::repos]",
     "recipe[workstation::timezone]",
-    "recipe[workstation::autofs]"
+    "recipe[workstation::autofs]",
+    "recipe[resolver::default]"
   ],
   "env_run_lists": {
   }
