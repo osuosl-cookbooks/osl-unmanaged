@@ -15,7 +15,6 @@
     "recipe[workstation::network]",
     "recipe[workstation::mounts]",
     "recipe[workstation::repos]",
-    "recipe[workstation::packages]",
     "recipe[workstation::timezone]"
   ],
   "env_run_lists": {
