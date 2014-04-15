@@ -3,7 +3,8 @@
   "description": "Keep workstation things out of production",
   "cookbook_versions": {
     "workstation": "= 0.6.4",
-    "cron": "= 1.2.2"
+    "cron": "= 1.2.2",
+    "resolver": "= 1.1.4"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
