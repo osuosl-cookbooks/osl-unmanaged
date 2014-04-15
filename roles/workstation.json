@@ -4,8 +4,8 @@
   "json_class": "Chef::Role",
   "default_attributes": {
     "resolver": {
-      "nameservers" => ["140.211.166.130", "140.211.166.131"],
-      "search" => "workstation.osuosl.bak. osuosl.bak. osuosl.org."
+      "nameservers": ["140.211.166.130", "140.211.166.131"],
+      "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
     }
   },
   "override_attributes": {
