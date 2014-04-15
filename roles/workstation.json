@@ -6,6 +6,9 @@
     "resolver": {
       "nameservers": ["140.211.166.130", "140.211.166.131"],
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
+    },
+    "workstation": {
+      "purge": ["resolvconf"]
     }
   },
   "override_attributes": {
@@ -21,6 +24,7 @@
     "recipe[workstation::repos]",
     "recipe[workstation::timezone]",
     "recipe[workstation::autofs]",
+    "recipe[workstation::packages]",
     "recipe[resolver::default]"
   ],
   "env_run_lists": {
