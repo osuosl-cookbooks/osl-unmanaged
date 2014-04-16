@@ -5,7 +5,7 @@
     "chef-client": "= 3.3.8",
     "cron": "= 1.2.2",
     "resolver": "= 1.1.4",
-    "workstation": "= 0.7.0"
+    "workstation": "= 0.7.1"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
