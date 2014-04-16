@@ -18,11 +18,6 @@
     }
   },
   "override_attributes": {
-    "workstation": {
-      "network": {
-        "routes": []
-      }
-    }
   },
   "chef_type": "role",
   "run_list": [
