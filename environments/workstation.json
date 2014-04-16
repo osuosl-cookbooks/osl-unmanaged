@@ -2,10 +2,10 @@
   "name": "workstation",
   "description": "Keep workstation things out of production",
   "cookbook_versions": {
-    "workstation": "= 0.7.0",
+    "chef-client": "= 3.3.8",
     "cron": "= 1.2.2",
     "resolver": "= 1.1.4",
-    "chef-client": "= 3.3.8"
+    "workstation": "= 0.7.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
