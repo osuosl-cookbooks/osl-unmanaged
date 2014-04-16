@@ -2,7 +2,7 @@
   "name": "workstation",
   "description": "Keep workstation things out of production",
   "cookbook_versions": {
-    "workstation": "= 0.6.5",
+    "workstation": "= 0.7.0",
     "cron": "= 1.2.2",
     "resolver": "= 1.1.4"
   },
