@@ -3,29 +3,36 @@
   "description": "Role for OSL Workstations",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "chef-client": {
+      "init_style": "none",
+      "cron": {
+        "hour": "*",
+        "minute": "*/30",
+        "use_cron_d": "true",
+        "log_file": "/var/log/chef/client.log"
+      }
+    },
     "resolver": {
       "nameservers": ["140.211.166.130", "140.211.166.131"],
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
-    },
-    "workstation": {
-      "purge": ["resolvconf"]
     }
   },
   "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[chef-client::default]",
+    "recipe[chef-client::delete_validation]",
+    "recipe[user::data_bag]",
+    "recipe[resolver::default]",
     "recipe[workstation]",
-    "recipe[workstation::chef-client]",
-    "recipe[workstation::user]",
     "recipe[workstation::ldap]",
     "recipe[workstation::network]",
     "recipe[workstation::mounts]",
     "recipe[workstation::repos]",
     "recipe[workstation::timezone]",
     "recipe[workstation::autofs]",
-    "recipe[workstation::packages]",
-    "recipe[resolver::default]"
+    "recipe[workstation::packages]"
   ],
   "env_run_lists": {
   }
