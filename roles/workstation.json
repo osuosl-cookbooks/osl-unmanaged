@@ -26,7 +26,7 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[chef-client::default]",
+    "recipe[chef-client::cron]",
     "recipe[chef-client::delete_validation]",
     "recipe[user::data_bag]",
     "recipe[resolver::default]",
