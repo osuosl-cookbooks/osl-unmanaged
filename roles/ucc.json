@@ -28,7 +28,14 @@
             "post_max_size": "10M",
             "memory_limit": "256M",
             "upload_max_filesize": "10M"
-        }
+        },
+        "packages": [
+            "php",
+            "php-devel",
+            "php-cli",
+            "php-pear",
+            "php-xml"
+        ]
     }
   },
   "json_class": "Chef::Role"
