@@ -65,7 +65,7 @@
     "orvsd-web": "= 0.1.1",
     "osl-apache": "= 1.0.4",
     "osl-haproxy": "= 0.1.0",
-    "osl-munin": "= 0.1.1",
+    "osl-munin": "= 0.1.2",
     "osl-mysql": "= 0.1.0",
     "osl-nginx": "= 1.0.4",
     "osl-openstack": "= 0.0.8",
