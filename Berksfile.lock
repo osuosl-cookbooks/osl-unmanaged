@@ -204,7 +204,7 @@
       "locked_version": "1.0.0"
     },
     "sudo": {
-      "locked_version": "2.2.0"
+      "locked_version": "2.5.2"
     },
     "supervisor": {
       "locked_version": "0.4.0"
