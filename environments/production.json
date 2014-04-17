@@ -93,7 +93,7 @@
     "simple_iptables": "= 0.6.0",
     "sinatra_app": "= 0.1.0",
     "ssh-keys": "= 1.0.0",
-    "sudo": "= 2.2.0",
+    "sudo": "= 2.5.2",
     "ssh-ldap": "= 0.1.0",
     "supervisor": "= 0.4.0",
     "sysctl": "= 0.4.0",
