@@ -25,3 +25,4 @@ role_path               ["#{base_path}/roles"]
 data_bag_path           ["#{base_path}/data_bags"]
 encrypted_data_bag_secret =  "#{home_dir}/.chef/encrypted_data_bag_secret"
 #knife[:secret_file] =  "#{home_dir}/.chef/encrypted_data_bag_secret"
+ssl_verify_mode         :verify_peer
