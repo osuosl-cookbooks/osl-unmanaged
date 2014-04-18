@@ -78,7 +78,7 @@
     "php": "= 1.2.4",
     "postfix": "= 2.1.4",
     "postgresql": "= 3.0.2",
-    "proj-drupalorg": "= 0.1.0",
+    "proj-drupalorg": "= 0.1.1",
     "proj-phpbb": "= 0.1.2",
     "python": "= 1.2.2",
     "rabbitmq": "= 2.0.0",
