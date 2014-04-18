@@ -1,7 +1,8 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[base::managed]"
+    "recipe[base::managed]",
+    "recipe[omnibus_updater]"
   ],
   "chef_type": "role",
   "override_attributes": {},
