@@ -46,6 +46,7 @@
     "lsyncd": "= 0.1.0",
     "magic_shell": "= 0.2.0",
     "memcached": "= 1.4.0",
+    "monit": "= 0.7.1",
     "monitoring": "= 0.2.3",
     "moodle": "= 0.1.0",
     "mysql": "= 3.0.12",
