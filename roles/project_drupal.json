@@ -1,6 +1,8 @@
 {
   "env_run_lists": {},
-  "run_list": [],
+  "run_list": [
+    "role[rdiff_backup]"
+  ],
   "chef_type": "role",
   "override_attributes": {},
   "default_attributes": {
