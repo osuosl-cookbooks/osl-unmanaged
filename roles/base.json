@@ -1,7 +1,8 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[base::unmanaged]"
+    "recipe[base::unmanaged]",
+    "recipe[omnibus_updater]"
   ],
   "env_run_lists": {
     "dev": [
