@@ -174,7 +174,7 @@
       "locked_version": "1.4.6"
     },
     "rabbitmq": {
-      "locked_version": "2.0.0"
+      "locked_version": "3.1.0"
     },
     "resolver": {
       "locked_version": "1.1.4"
