@@ -6,6 +6,7 @@
   "chef_type": "role",
   "default_attributes": {},
   "override_attributes": {
+    "users": ["rdiff-backup-client"],
     "rdiff-backup": {
       "client": {
         "destination-dir": "/data/rdiff-backup-drupal",
