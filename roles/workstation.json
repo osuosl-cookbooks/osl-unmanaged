@@ -15,6 +15,11 @@
     "resolver": {
       "nameservers": ["140.211.166.130", "140.211.166.131", "216.165.191.54"],
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
+    },
+    "sudo": {
+      "include_sudoers_d": "true",
+      "sudoers_default": ["env_reset", "set_home"],
+      "groups": []
     }
   },
   "override_attributes": {
@@ -24,8 +29,10 @@
     "recipe[chef-client::cron]",
     "recipe[chef-client::delete_validation]",
     "recipe[user::data_bag]",
+    "recipe[sudo::default]",
     "recipe[resolver::default]",
     "recipe[workstation]",
+    "recipe[workstation::sudoers]",
     "recipe[workstation::ldap]",
     "recipe[workstation::network]",
     "recipe[workstation::mounts]",
