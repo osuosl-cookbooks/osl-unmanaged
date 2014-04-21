@@ -8,6 +8,11 @@
   "default_attributes": {
     "rdiff-backup": {
       "client": {
+        "source-dirs": [
+          "/home",
+          "/etc",
+          "/var"
+        ],
         "retention-period": "5D",
         "user": "rdiff-backup-client-dev"
       }
