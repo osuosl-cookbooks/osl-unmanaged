@@ -8,13 +8,20 @@
   "default_attributes": {
     "rdiff-backup": {
       "client": {
-        "source-dirs": [
-          "/home",
-          "/etc",
-          "/var"
-        ],
-        "retention-period": "5D",
-        "user": "rdiff-backup-client-dev"
+        "default": {
+          "user": "rdiff-backup-client-dev",
+          "retention-period": "1W",
+          "exclude-dirs": [
+            "/etc/cron.d",
+            "/var/log/apache",
+            "/var/log/nginx"
+          ]
+        },
+        "/etc": {},
+        "/home": {},
+        "/var": {
+          "retention-period": "2D"
+        }
       }
     }
   },
