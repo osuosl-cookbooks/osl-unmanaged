@@ -22,6 +22,9 @@
         "sudoers_default": ["env_reset", "set_home"],
         "groups": []
       }
+    },
+    "ntp": {
+      "servers": ["time.osuosl.org"]
     }
   },
   "override_attributes": {
@@ -41,7 +44,8 @@
     "recipe[workstation::repos]",
     "recipe[workstation::timezone]",
     "recipe[workstation::autofs]",
-    "recipe[workstation::packages]"
+    "recipe[workstation::packages]",
+    "recipe[ntp::default]"
   ],
   "env_run_lists": {
   }

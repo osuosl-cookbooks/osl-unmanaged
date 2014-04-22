@@ -4,6 +4,7 @@
   "cookbook_versions": {
     "chef-client": "= 3.3.8",
     "cron": "= 1.2.2",
+    "ntp": "= 1.6.2",
     "resolver": "= 1.1.4",
     "workstation": "= 0.9.6"
   },
