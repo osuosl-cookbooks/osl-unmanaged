@@ -51,7 +51,8 @@
     "recipe[workstation::timezone]",
     "recipe[workstation::autofs]",
     "recipe[workstation::packages]",
-    "recipe[ntp::default]"
+    "recipe[ntp::default]",
+    "recipe[openssh::default"
   ],
   "env_run_lists": {
   }
