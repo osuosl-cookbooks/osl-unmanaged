@@ -22,6 +22,12 @@
     "ntp": {
       "servers": ["time.osuosl.org"]
     },
+    "openssh": {
+      "server": {
+        "permit_root_login": "no",
+        "x11_forwarding": "yes"
+      }
+    },
     "resolver": {
       "nameservers": ["140.211.166.130", "140.211.166.131", "216.165.191.54"],
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
