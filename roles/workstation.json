@@ -3,6 +3,13 @@
   "description": "Role for OSL Workstations",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "include_sudoers_d": "true",
+        "sudoers_default": ["env_reset", "set_home"],
+        "groups": []
+      }
+    },
     "chef-client": {
       "init_style": "none",
       "cron": {
@@ -12,19 +19,12 @@
         "log_file": "/var/log/chef/client.log"
       }
     },
+    "ntp": {
+      "servers": ["time.osuosl.org"]
+    },
     "resolver": {
       "nameservers": ["140.211.166.130", "140.211.166.131", "216.165.191.54"],
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
-    },
-    "authorization": {
-      "sudo": {
-        "include_sudoers_d": "true",
-        "sudoers_default": ["env_reset", "set_home"],
-        "groups": []
-      }
-    },
-    "ntp": {
-      "servers": ["time.osuosl.org"]
     }
   },
   "override_attributes": {
