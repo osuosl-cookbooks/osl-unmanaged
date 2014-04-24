@@ -35,7 +35,8 @@
     "rvm": {
       "default_ruby": "ruby-1.9.3-p327",
       "global_gems": [
-        { "name": "bundler" }
+        { "name": "foodcritic" },
+        { "name": "knife" }
       ]
     }
   },
