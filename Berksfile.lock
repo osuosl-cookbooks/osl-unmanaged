@@ -191,6 +191,9 @@
     "runit": {
       "locked_version": "1.4.6"
     },
+    "rvm": {
+      "locked_version": "0.9.2"
+    },
     "selinux": {
       "locked_version": "0.7.2"
     },
@@ -274,6 +277,9 @@
     },
     "couchdb": {
       "locked_version": "2.5.1"
+    },
+    "chef_gem": {
+      "locked_version": "0.1.0"
     }
   }
 }
