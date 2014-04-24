@@ -31,6 +31,9 @@
     "resolver": {
       "nameservers": ["140.211.166.130", "140.211.166.131", "216.165.191.54"],
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
+    },
+    "rvm": {
+      "default_ruby": "ruby-1.9.3-p327"
     }
   },
   "override_attributes": {
@@ -53,7 +56,8 @@
     "recipe[workstation::packages]",
     "recipe[workstation::xrandr]",
     "recipe[ntp::default]",
-    "recipe[openssh::default]"
+    "recipe[openssh::default]",
+    "recipe[rvm::system]"
   ],
   "env_run_lists": {
   }
