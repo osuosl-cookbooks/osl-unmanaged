@@ -36,7 +36,12 @@
       "default_ruby": "ruby-1.9.3-p327",
       "global_gems": [
         { "name": "foodcritic" },
-        { "name": "knife" }
+        { "name": "knife-spork" },
+        { "name": "berkshelf" },
+        { "name": "chef-zero" },
+        { "name": "test-kitchen" },
+        { "name": "chefspec" },
+        { "name": "serverspec" }
       ]
     }
   },
