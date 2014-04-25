@@ -35,7 +35,7 @@
     "rvm": {
       "default_ruby": "ruby-1.9.3-p545",
       "global_gems": [
-        { "name": "berkshelf"},
+        { "name": "berkshelf", "version": "2.0.14" },
         { "name": "chef"},
         { "name": "chefspec"},
         { "name": "foodcritic"},
