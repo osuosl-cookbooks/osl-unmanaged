@@ -45,7 +45,8 @@
         { "name": "knife-env-diff"},
         { "name": "knife-file"},
         { "name": "knife-spork"},
-        { "name": "serverspec"}
+        { "name": "serverspec"},
+        { "name": "rspec"}
       ]
     }
   },
