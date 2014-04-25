@@ -46,7 +46,7 @@
         { "name": "knife-file"},
         { "name": "knife-spork"},
         { "name": "serverspec"},
-        { "name": "rspec"}
+        { "name": "rspec", "version": "2.14.1" }
       ]
     }
   },
