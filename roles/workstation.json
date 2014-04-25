@@ -33,7 +33,7 @@
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
     },
     "rvm": {
-      "default_ruby": "ruby-1.9.3-p327",
+      "default_ruby": "ruby-1.9.3-p545",
       "global_gems": [
         { "name": "berkshelf"},
         { "name": "chef"},
