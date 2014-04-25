@@ -114,11 +114,6 @@
     "monit": {
       "locked_version": "0.7.1"
     },
-    "moodle": {
-      "locked_version": "0.1.0",
-      "git": "git://github.com/mediacore/moodle-box",
-      "ref": "45fb684ed4b9fba137bbd3857ddb78800e763cb3"
-    },
     "munin": {
       "locked_version": "1.4.3"
     },

@@ -38,7 +38,6 @@ cookbook "lsyncd"
 cookbook "magic_shell"
 cookbook "memcached"
 cookbook "monit"
-cookbook "moodle", git: 'git://github.com/mediacore/moodle-box' 
 cookbook "munin"
 cookbook "mysql"
 cookbook "nfs"
