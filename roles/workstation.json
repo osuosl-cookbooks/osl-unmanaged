@@ -60,6 +60,7 @@
     "recipe[sudo::default]",
     "recipe[resolver::default]",
     "recipe[workstation]",
+    "recipe[workstation::hosts"],
     "recipe[workstation::sudoers]",
     "recipe[workstation::ldap]",
     "recipe[workstation::network]",
@@ -69,6 +70,8 @@
     "recipe[workstation::autofs]",
     "recipe[workstation::packages]",
     "recipe[workstation::xrandr]",
+    "recipe[workstation::dsh]",
+    "recipe[workstation::printers]",
     "recipe[ntp::default]",
     "recipe[openssh::default]",
     "recipe[rvm::system]"
