@@ -60,7 +60,7 @@
     "recipe[sudo::default]",
     "recipe[resolver::default]",
     "recipe[workstation]",
-    "recipe[workstation::hosts"],
+    "recipe[workstation::hosts]",
     "recipe[workstation::sudoers]",
     "recipe[workstation::ldap]",
     "recipe[workstation::network]",
