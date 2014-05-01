@@ -6,7 +6,7 @@
     "authorization": {
       "sudo": {
         "include_sudoers_d": "true",
-        "sudoers_default": ["env_reset", "set_home"],
+        "sudoers_default": ["env_reset", "set_home"]
       }
     },
     "chef-client": {
