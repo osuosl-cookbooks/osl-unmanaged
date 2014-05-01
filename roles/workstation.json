@@ -7,7 +7,6 @@
       "sudo": {
         "include_sudoers_d": "true",
         "sudoers_default": ["env_reset", "set_home"],
-        "groups": []
       }
     },
     "chef-client": {
@@ -51,6 +50,12 @@
     }
   },
   "override_attributes": {
+    "authorization": {
+      "sudo": {
+        "users": ["osuadmin"],
+        "groups": []
+      }
+    }
   },
   "chef_type": "role",
   "run_list": [
