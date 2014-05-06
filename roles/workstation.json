@@ -78,8 +78,7 @@
     "recipe[workstation::dsh]",
     "recipe[workstation::printers]",
     "recipe[ntp::default]",
-    "recipe[openssh::default]",
-    "recipe[rvm::system]"
+    "recipe[openssh::default]"
   ],
   "env_run_lists": {
   }
