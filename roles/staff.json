@@ -1,5 +1,5 @@
 {
-  "name": "workstation",
+  "name": "staff",
   "description": "Role for OSL Staff Machines",
   "json_class": "Chef::Role",
   "default_attributes": {
