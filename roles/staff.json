@@ -1,0 +1,57 @@
+{
+  "name": "workstation",
+  "description": "Role for OSL Staff Machines",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "chef-client": {
+      "init_style": "none",
+      "cron": {
+        "hour": "*",
+        "minute": "*/30",
+        "use_cron_d": "true",
+        "log_file": "/var/log/chef/client.log"
+      }
+    },
+    "ntp": {
+      "servers": ["time.osuosl.org"]
+    },
+    "openssh": {
+      "server": {
+        "permit_root_login": "no",
+        "x11_forwarding": "yes"
+      }
+    },
+    "rvm": {
+      "default_ruby": "ruby-1.9.3-p545",
+      "global_gems": [
+        { "name": "berkshelf", "version": "2.0.14" },
+        { "name": "chef"},
+        { "name": "chefspec"},
+        { "name": "foodcritic"},
+        { "name": "kitchen-openstack"},
+        { "name": "kitchen-vagrant"},
+        { "name": "knife-backup"},
+        { "name": "knife-env-diff"},
+        { "name": "knife-file"},
+        { "name": "knife-spork"},
+        { "name": "serverspec"},
+        { "name": "rspec", "version": "2.14.1" }
+      ]
+    }
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[chef-client::cron]",
+    "recipe[chef-client::delete_validation]",
+    "recipe[workstation::repos]",
+    "recipe[workstation::timezone]",
+    "recipe[workstation::packages]",
+    "recipe[workstation::printers]",
+    "recipe[ntp::default]",
+    "recipe[openssh::default]"
+  ],
+  "env_run_lists": {
+  }
+}
