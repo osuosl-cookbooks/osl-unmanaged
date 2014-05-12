@@ -46,7 +46,7 @@
       "locked_version": "1.1.0"
     },
     "erlang": {
-      "locked_version": "1.2.0"
+      "locked_version": "1.5.4"
     },
     "git": {
       "locked_version": "2.3.0"
@@ -82,7 +82,7 @@
       "locked_version": "0.2.0"
     },
     "memcached": {
-      "locked_version": "1.4.0"
+      "locked_version": "1.7.2"
     },
     "monit": {
       "locked_version": "0.7.1"
@@ -148,7 +148,7 @@
       "locked_version": "1.12.2"
     },
     "runit": {
-      "locked_version": "1.4.6"
+      "locked_version": "1.5.10"
     },
     "rvm": {
       "locked_version": "0.9.2"
