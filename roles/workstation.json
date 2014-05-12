@@ -70,7 +70,6 @@
     "recipe[workstation::repos]",
     "recipe[workstation::sudoers]",
     "recipe[workstation::ldap]",
-    "recipe[workstation::mounts]",
     "recipe[workstation::timezone]",
     "recipe[workstation::autofs]",
     "recipe[workstation::packages]",
