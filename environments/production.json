@@ -57,7 +57,7 @@
     "osl-mysql": "= 0.1.0",
     "osl-nginx": "= 1.0.4",
     "osl-openstack": "= 0.0.8",
-    "osl-postgresql": "= 0.1.10",
+    "osl-postgresql": "= 0.1.11",
     "osl-redmine": "= 0.0.1",
     "osl-slapd": "= 0.1.2",
     "passenger_apache2": "= 2.2.0",
