@@ -64,6 +64,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-nodejs.git
 [osuosl-cookbooks/osl-openstack]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-openstack.git
 
+[osuosl-cookbooks/osl-php]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-php.git
+
 [osuosl-cookbooks/osl-postgresql]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-postgresql.git
 
