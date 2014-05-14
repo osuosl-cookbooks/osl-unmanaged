@@ -100,9 +100,6 @@
           "vagrant"
         ]
       }
-    },
-    "omnibus_updater": {
-      "version": "11.12.0"
     }
   },
   "override_attributes": {
