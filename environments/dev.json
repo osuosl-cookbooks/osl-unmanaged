@@ -42,7 +42,7 @@
     "nagios": "= 4.3.1",
     "networking_basic": "= 0.0.5",
     "nfs": "= 1.0.0",
-    "nginx": "= 1.8.0",
+    "nginx": "= 2.6.2",
     "ntp": "= 1.6.2",
     "ohai": "= 1.1.12",
     "omnibus_updater": "= 1.0.0",
