@@ -73,7 +73,7 @@
       "locked_version": "1.2.0"
     },
     "logstash": {
-      "locked_version": "0.5.9"
+      "locked_version": "0.8.1"
     },
     "lsyncd": {
       "locked_version": "0.1.0"
