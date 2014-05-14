@@ -24,7 +24,9 @@ cookbook "java"
 cookbook "jenkins"
 cookbook "line"
 cookbook "logrotate"
-cookbook "logstash"
+cookbook 'logstash',
+  github: 'lusis/chef-logstash',
+  tag: '0.8.1'
 cookbook "lsyncd"
 cookbook "magic_shell"
 cookbook "memcached"
