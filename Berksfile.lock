@@ -181,7 +181,7 @@
       "locked_version": "1.2.4"
     },
     "yum": {
-      "locked_version": "2.4.4"
+      "locked_version": "3.2.1"
     },
     "chef_gem": {
       "locked_version": "0.1.0"
