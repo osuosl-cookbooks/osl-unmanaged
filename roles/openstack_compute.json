@@ -1,22 +1,19 @@
 {
-  "env_run_lists": {},
-  "run_list": [
-    "role[base_managed]",
-    "recipe[osl-openstack::compute]",
-    "recipe[firewall::iscsi]",
-    "recipe[firewall::openstack]",
-    "recipe[firewall::rsync]"
-  ],
-  "chef_type": "role",
-  "override_attributes": {
-    "authorization": {
-      "sudo": {
-        "include_sudoers_d": true
-      }
-    }
-  },
-  "default_attributes": {},
-  "json_class": "Chef::Role",
-  "description": "compute role to setup ports, packages, sudoers for an openstack compute node",
-  "name": "openstack_compute"
+    "chef_type": "role", 
+    "default_attributes": {}, 
+    "description": "OpenStack Compute role to setup a compute node in openstack infra", 
+    "env_run_lists": {}, 
+    "json_class": "Chef::Role", 
+    "name": "openstack_compute", 
+    "override_attributes": {
+        "authorization": {
+            "sudo": {
+                "include_sudoers_d": true
+            }
+        }
+    }, 
+    "run_list": [
+      "role[openstack_basebase]",
+      "recipe[openstack-compute::compute]"
+    ]
 }
