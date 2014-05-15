@@ -37,7 +37,7 @@
     "rvm": {
       "default_ruby": "ruby-1.9.3-p545",
       "global_gems": [
-        { "name": "berkshelf", "version": "2.0.14" },
+        { "name": "berkshelf", "version": "2.0.16" },
         { "name": "kitchen-openstack"},
         { "name": "kitchen-vagrant"},
         { "name": "knife-backup"},
