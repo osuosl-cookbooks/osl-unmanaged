@@ -13,14 +13,6 @@
     },
     "certificate": {
       "nginx_cert": "true"
-    },
-    "nagios": {
-      "checks": {
-        "load": {
-          "warning": "5,4,3",
-          "critical": "6,5,4"
-        }
-      }
     }
   },
   "json_class": "Chef::Role",
