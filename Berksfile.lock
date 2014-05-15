@@ -183,7 +183,7 @@
       "locked_version": "1.2.4"
     },
     "yum": {
-      "locked_version": "3.2.0"
+      "locked_version": "3.0.0"
     },
     "openstack-block-storage": {
       "locked_version": "8.4.3",
