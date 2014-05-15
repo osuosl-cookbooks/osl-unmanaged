@@ -73,7 +73,9 @@
       "locked_version": "1.2.0"
     },
     "logstash": {
-      "locked_version": "0.8.1"
+      "locked_version": "0.8.1",
+      "git": "git://github.com/lusis/chef-logstash.git",
+      "ref": "6fbf75792ef25e229830763d3fca72e7d412ac89"
     },
     "lsyncd": {
       "locked_version": "0.1.0"
@@ -181,10 +183,94 @@
       "locked_version": "1.2.4"
     },
     "yum": {
-      "locked_version": "3.2.1"
+      "locked_version": "3.2.0"
+    },
+    "openstack-block-storage": {
+      "locked_version": "8.4.3",
+      "git": "git://github.com/stackforge/cookbook-openstack-block-storage.git",
+      "ref": "33f7ceb488c2e0eb3349d8551f6c8c05b7f32c59"
+    },
+    "openstack-common": {
+      "locked_version": "8.5.0",
+      "git": "git://github.com/stackforge/cookbook-openstack-common.git",
+      "ref": "3e9264d94b0cc0d30705408aa82ae538c482d2bb"
+    },
+    "openstack-compute": {
+      "locked_version": "8.4.3",
+      "git": "git://github.com/stackforge/cookbook-openstack-compute.git",
+      "ref": "b4a3123dcbd258b353ff1f4463e4da14da1e72d1"
+    },
+    "openstack-dashboard": {
+      "locked_version": "8.1.1",
+      "git": "git://github.com/stackforge/cookbook-openstack-dashboard.git",
+      "ref": "d965afb91f21174e6156ddb8695dcad24e083c0a"
+    },
+    "openstack-identity": {
+      "locked_version": "8.1.4",
+      "git": "git://github.com/stackforge/cookbook-openstack-identity.git",
+      "ref": "d3d1e34a63e2fe5f3764149a38378070956e1756"
+    },
+    "openstack-image": {
+      "locked_version": "8.2.2",
+      "git": "git://github.com/stackforge/cookbook-openstack-image.git",
+      "ref": "48749c19e0e0b60061dbc894b09646e3c90d3377"
+    },
+    "openstack-network": {
+      "locked_version": "8.5.2",
+      "git": "git://github.com/stackforge/cookbook-openstack-network.git",
+      "ref": "379c68fdeff7d4be0197b5faefc27ebaa12c038d"
+    },
+    "openstack-object-storage": {
+      "locked_version": "8.3.0",
+      "git": "git://github.com/stackforge/cookbook-openstack-object-storage.git",
+      "ref": "07f08328a201a484bfec59ecffd4f8c443e77bc6"
+    },
+    "openstack-ops-database": {
+      "locked_version": "8.1.0",
+      "git": "git://github.com/stackforge/cookbook-openstack-ops-database.git",
+      "ref": "b6af43226c565424181c2f761b34af1a466c7748"
+    },
+    "openstack-ops-messaging": {
+      "locked_version": "8.0.1",
+      "git": "git://github.com/stackforge/cookbook-openstack-ops-messaging.git",
+      "ref": "774eb5b028299c3ac765718ab00cdda866b07ff5"
+    },
+    "openstack-orchestration": {
+      "locked_version": "8.1.2",
+      "git": "git://github.com/stackforge/cookbook-openstack-orchestration.git",
+      "ref": "e2bebd46f229781100ed1ac6812c2417c9146ea5"
+    },
+    "openstack-telemetry": {
+      "locked_version": "8.4.1",
+      "git": "git://github.com/stackforge/cookbook-openstack-telemetry.git",
+      "ref": "2e911759f130b1e2545c04bf81edda257a7701cf"
+    },
+    "couchdb": {
+      "locked_version": "2.5.1"
+    },
+    "yum-epel": {
+      "locked_version": "0.3.6"
+    },
+    "zlib": {
+      "locked_version": "2.0.0"
+    },
+    "gecode": {
+      "locked_version": "2.1.0"
+    },
+    "ucspi-tcp": {
+      "locked_version": "1.1.0"
+    },
+    "yum-erlang_solutions": {
+      "locked_version": "0.2.0"
+    },
+    "ant": {
+      "locked_version": "1.0.2"
     },
     "chef_gem": {
       "locked_version": "0.1.0"
+    },
+    "statsd": {
+      "locked_version": "0.0.1"
     }
   }
 }
