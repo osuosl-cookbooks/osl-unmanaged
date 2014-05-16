@@ -62,7 +62,6 @@
     "recipe[base::default]",
     "recipe[chef-client::cron]",
     "recipe[chef-client::delete_validation]",
-    "recipe[user::data_bag]",
     "recipe[sudo::default]",
     "recipe[resolver::default]",
     "recipe[workstation]",
