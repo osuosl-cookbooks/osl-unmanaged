@@ -13,7 +13,7 @@
         }
     }, 
     "run_list": [
-      "role[openstack_basebase]",
+      "role[openstack_base]",
       "recipe[openstack-compute::compute]"
     ]
 }
