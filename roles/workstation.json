@@ -9,7 +9,7 @@
         "sudoers_defaults": [
           "env_reset",
           "set_home",
-          "secure_path='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'"
+          "secure_path=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\""
         ]
       }
     },
