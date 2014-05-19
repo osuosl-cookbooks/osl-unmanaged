@@ -63,7 +63,7 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[base::default]",
+    "recipe[base::mailhandler]",
     "recipe[chef-client::cron]",
     "recipe[chef-client::delete_validation]",
     "recipe[sudo::default]",
