@@ -6,7 +6,11 @@
     "authorization": {
       "sudo": {
         "include_sudoers_d": "true",
-        "sudoers_default": ["env_reset", "set_home"]
+        "sudoers_default": [
+          "env_reset",
+          "set_home",
+          "secure_path='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'"
+        ]
       }
     },
     "chef-client": {
