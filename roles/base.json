@@ -5,10 +5,6 @@
     "recipe[omnibus_updater]"
   ],
   "env_run_lists": {
-    "dev": [
-        "recipe[base::unmanaged]",
-        "recipe[omnibus_updater]"
-    ]
   },
   "chef_type": "role",
   "override_attributes": {},
