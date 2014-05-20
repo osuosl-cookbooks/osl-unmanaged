@@ -76,7 +76,7 @@
             "endpoints": {
                 "bind-host": "140.211.167.193",
                 "compute-vnc-bind": {
-                    "bind_interface": "eth1",
+                    "bind_interface": "enP2p1s0f3",
                     "host": "0.0.0.0"
                 },
                 "db": {
