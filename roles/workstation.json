@@ -69,6 +69,7 @@
     "recipe[sudo::default]",
     "recipe[resolver::default]",
     "recipe[workstation]",
+    "recipe[workstation::blacklist]",
     "recipe[workstation::hosts]",
     "recipe[workstation::network]",
     "recipe[workstation::repos]",
