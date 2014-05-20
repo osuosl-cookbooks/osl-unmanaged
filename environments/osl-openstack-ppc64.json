@@ -1,0 +1,102 @@
+{
+    "chef_type": "environment",
+    "cookbook_versions": {},
+    "default_attributes": {},
+    "description": "The OSL Openstack Environment (pp64)",
+    "json_class": "Chef::Environment",
+    "name": "osl-openstack-ppc64",
+    "override_attributes": {
+        "yum": {
+          "epel": {
+            "baseurl": "http://epel.osuosl.org/6/$basearch",
+            "enable": "true",
+            "gpgkey": "http://epel.osuosl.org/RPM-GPG-KEY-EPEL-6"
+          }
+        },
+        "openstack": {
+            "compute": {
+                "config": {
+                    "ram_allocation_ratio": 5.0
+                },
+                "libvirt": {
+                    "virt_type": "kvm"
+                },
+                "network": {
+                    "public_interface": "eth0",
+                    "service_type": "nova"
+                },
+                "networks": [
+                    {
+                        "bridge": "br100",
+                        "bridge_dev": "eth1",
+                        "dns1": "140.211.166.130",
+                        "dns2": "140.211.166.131",
+                        "ipv4_cidr": "192.168.56.0/24",
+                        "label": "private",
+                        "multi_host": "T",
+                        "network_size": "255",
+                        "num_networks": "1"
+                    }
+                ]
+            },
+            "dashboard": {
+                "keystone_default_role": "_member_"
+            },
+            "db": {
+                "compute": {
+                    "db_name": "nova_ppc64",
+                    "username": "nova_ppc64"
+                },
+                "identity": {
+                    "db_name": "keystone_ppc64",
+                    "username": "keystone_ppc64"
+                },
+                "image": {
+                    "db_name": "glance_ppc64",
+                    "username": "glance_ppc64"
+                },
+                "block-storage": {
+                    "db_name": "cinder_ppc64",
+                    "username": "cinder_ppc64"
+                },
+                "dashboard": {
+                    "db_name": "horizon_ppc64",
+                    "username": "horizon_ppc64"
+                },
+                "telemetry": {
+                    "db_name": "ceilometer_ppc64",
+                    "username": "ceilometer_ppc64"
+                },
+                "orchestration": {
+                    "db_name": "heat_ppc64",
+                    "username": "heat_ppc64"
+                }
+            },
+            "developer_mode": false,
+            "endpoints": {
+                "bind-host": "140.211.167.193",
+                "compute-vnc-bind": {
+                    "bind_interface": "eth1",
+                    "host": "0.0.0.0"
+                },
+                "db": {
+                    "host": "mysql1-vip.osuosl.org"
+                },
+                "host": "openpower-openstack.osuosl.org",
+                "mq": {
+                    "host": "openpower-openstack.osuosl.org"
+                }
+            },
+            "secret": {
+                "key_path": "/etc/chef/encrypted_data_bag_secret",
+                "secrets_data_bag": "ppc64_secrets",
+                "service_passwords_data_bag": "ppc64_service_passwords",
+                "db_passwords_data_bag": "ppc64_db_passwords",
+                "user_passwords_data_bag": "ppc64_user_passwords"
+            },
+            "yum": {
+                "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Havana"
+            }
+        }
+    }
+}
