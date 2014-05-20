@@ -80,11 +80,11 @@
                     "host": "0.0.0.0"
                 },
                 "db": {
-                    "host": "mysql1-vip.osuosl.org"
+                    "host": "140.211.15.221"
                 },
-                "host": "openpower-openstack.osuosl.org",
+                "host": "140.211.167.193",
                 "mq": {
-                    "host": "openpower-openstack.osuosl.org"
+                    "host": "140.211.167.193"
                 }
             },
             "secret": {
