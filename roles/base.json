@@ -1,14 +1,31 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[base::unmanaged]",
-    "recipe[omnibus_updater]"
+    "recipe[aliases]",
+    "recipe[base::default]",
+    "recipe[base::denyhosts]",
+    "recipe[base::environment]",
+    "recipe[base::packages]",
+    "recipe[chef-client::cron]",
+    "recipe[chef-client::delete_validation]",
+    "recipe[openssh]",
+    "recipe[osl-munin::client]"
   ],
   "env_run_lists": {
   },
   "chef_type": "role",
   "override_attributes": {},
-  "default_attributes": {},
+  "default_attributes": {
+    "chef_client": {
+      "init_style": "none",
+      "cron": {
+        "minute": "*/30",
+        "hour": "*",
+        "use_cron_d": true,
+        "log_file": "/var/log/chef/client.log"
+      }
+    }
+  },
   "json_class": "Chef::Role",
   "description": "base role for all systems",
   "name": "base"
