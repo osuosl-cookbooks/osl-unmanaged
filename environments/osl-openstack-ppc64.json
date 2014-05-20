@@ -83,6 +83,15 @@
                     "host": "140.211.167.193"
                 }
             },
+            "image": {
+                "image_upload": true,
+                "upload_image": {
+                    "fedora-20": "http://ftp.osuosl.org/pub/osl/openpower/openstack/fedora-20.qcow2"
+                },
+                "upload_images": [
+                    "fedora-20"
+                ]
+            },
             "secret": {
                 "key_path": "/etc/chef/encrypted_data_bag_secret",
                 "secrets_data_bag": "ppc64_secrets",
