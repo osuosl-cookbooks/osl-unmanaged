@@ -75,10 +75,6 @@
             "developer_mode": false,
             "endpoints": {
                 "bind-host": "140.211.167.193",
-                "compute-vnc-bind": {
-                    "bind_interface": "eth1",
-                    "host": "0.0.0.0"
-                },
                 "db": {
                     "host": "140.211.15.221"
                 },
