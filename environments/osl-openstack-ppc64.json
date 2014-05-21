@@ -22,7 +22,7 @@
                     "virt_type": "kvm"
                 },
                 "network": {
-                    "public_interface": "enP2p1s0f3",
+                    "public_interface": "enP2p1s0f2",
                     "service_type": "nova"
                 },
                 "networks": [
