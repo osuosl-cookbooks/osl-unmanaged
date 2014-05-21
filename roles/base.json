@@ -1,8 +1,8 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "recipe[base::mailhandler]",
     "recipe[aliases]",
-    "recipe[base::default]",
     "recipe[base::denyhosts]",
     "recipe[base::environment]",
     "recipe[base::packages]",
