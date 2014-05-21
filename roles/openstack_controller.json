@@ -14,9 +14,9 @@
     },  
     "run_list": [
         "role[openstack_base]",
+        "recipe[openstack-ops-messaging::server]",
         "recipe[openstack-identity::server]",
         "recipe[openstack-identity::registration]",
-        "recipe[openstack-ops-messaging::server]",
         "recipe[openstack-image::api]",
         "recipe[openstack-image::registry]",
         "recipe[openstack-image::identity_registration]",
