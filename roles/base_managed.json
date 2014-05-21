@@ -2,6 +2,8 @@
   "env_run_lists": {},
   "run_list": [
     "role[base]",
+    "recipe[nagios::client_package]",
+    "recipe[nagios::client]",
     "recipe[base::ifconfig]",
     "recipe[base::iptables]",
     "recipe[base::issue]",
@@ -12,7 +14,6 @@
     "recipe[firewall::nrpe]",
     "recipe[firewall]",
     "recipe[monitoring]",
-    "recipe[nagios::client]",
     "recipe[ntp]",
     "recipe[omnibus_updater]",
     "recipe[postfix::client]",
