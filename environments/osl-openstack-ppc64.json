@@ -27,11 +27,11 @@
                 },
                 "networks": [
                     {
-                        "bridge": "br42",
-                        "bridge_interface": "enP2p1s0f3",
+                        "bridge": "br-int",
+                        "bridge_interface": "lo",
                         "dns1": "140.211.166.130",
                         "dns2": "140.211.166.131",
-                        "ipv4_cidr": "10.1.100.0/24",
+                        "ipv4_cidr": "192.168.32.0/22",
                         "label": "private",
                         "multi_host": "T",
                         "network_size": "255",
