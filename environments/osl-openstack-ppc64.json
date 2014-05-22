@@ -24,6 +24,7 @@
                 "network": {
                     "public_interface": "enP2p1s0f2",
                     "service_type": "neutron",
+                    "multi_host": "true",
                     "floating": {
                         "ipv4_cidr": "140.211.168.0/24"
                     }
