@@ -84,6 +84,10 @@
                 "orchestration": {
                     "db_name": "heat_ppc64",
                     "username": "heat_ppc64"
+                },
+                "network": {
+                    "db_name": "neutron_ppc64",
+                    "username": "neutron_ppc64"
                 }
             },
             "developer_mode": false,
