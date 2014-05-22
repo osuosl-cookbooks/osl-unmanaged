@@ -23,15 +23,15 @@
                 },
                 "network": {
                     "public_interface": "enP2p1s0f2",
-                    "service_type": "nova",
+                    "service_type": "neutron",
                     "floating": {
                         "ipv4_cidr": "140.211.168.0/24"
                     }
                 },
                 "networks": [
                     {
-                        "bridge": "br-int",
-                        "bridge_interface": "lo",
+                        "bridge": "br-private",
+                        "bridge_interface": "enP2p1s0f3",
                         "dns1": "140.211.166.130",
                         "dns2": "140.211.166.131",
                         "ipv4_cidr": "192.168.32.0/22",
