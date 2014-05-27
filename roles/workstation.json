@@ -37,20 +37,6 @@
     "resolver": {
       "nameservers": ["140.211.166.130", "140.211.166.131", "216.165.191.54"],
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
-    },
-    "rvm": {
-      "default_ruby": "ruby-1.9.3-p545",
-      "global_gems": [
-        { "name": "berkshelf", "version": "2.0.16" },
-        { "name": "kitchen-openstack"},
-        { "name": "kitchen-vagrant"},
-        { "name": "knife-backup"},
-        { "name": "knife-env-diff"},
-        { "name": "knife-file"},
-        { "name": "knife-spork"},
-        { "name": "serverspec"},
-        { "name": "rspec", "version": "2.14.1" }
-      ]
     }
   },
   "override_attributes": {
@@ -83,7 +69,6 @@
     "recipe[workstation::printers]",
     "recipe[ntp::default]",
     "recipe[openssh::default]",
-    "recipe[rvm::system]"
   ],
   "env_run_lists": {
   }
