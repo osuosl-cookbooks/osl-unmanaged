@@ -6,72 +6,74 @@
     "json_class": "Chef::Environment",
     "name": "osl-openstack-x86",
     "override_attributes": {
-        "yum": {
-          "epel": {
-            "baseurl": "http://epel.osuosl.org/6/$basearch",
-            "enable": "true",
-            "gpgkey": "http://epel.osuosl.org/RPM-GPG-KEY-EPEL-6"
-          }
+    "yum": {
+      "epel": {
+        "baseurl": "http://epel.osuosl.org/6/$basesearch",
+        "enable": "true",
+        "gpgkey": "http://epel.osuosl.org/RPM-GPG-KEY-EPEL-6"
+      }
+    },
+    "openstack": {
+      "release": "havanah",
+      "secret": {
+        "key_path": "/etc/chef/encrypted_data_bag_secret"
+      },
+      "yum": {
+        "uri": "http://repos.fedorapeople.org/repos/openstack/openstack-havana/epel-6/",
+        "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Havana"
+      },
+      "developer_mode": false,
+      "endpoints": {
+        "bind-host": "140.211.167.174",
+        "host": "140.211.167.174",
+        "db": {
+          "host": "140.211.15.221"
         },
-        "openstack": {
-            "compute": {
-                "config": {
-                    "ram_allocation_ratio": 5.0
-                },
-                "libvirt": {
-                    "virt_type": "kvm"
-                },
-                "network": {
-                    "public_interface": "eth0",
-                    "service_type": "nova"
-                },
-                "networks": [
-                    {
-                        "bridge": "br100",
-                        "bridge_dev": "eth1",
-                        "dns1": "140.211.166.130",
-                        "dns2": "140.211.166.131",
-                        "ipv4_cidr": "192.168.56.0/24",
-                        "label": "private",
-                        "multi_host": "T",
-                        "network_size": "255",
-                        "num_networks": "1"
-                    }
-                ]
-            },
-            "dashboard": {
-                "keystone_default_role": "_member_"
-            },
-            "developer_mode": false,
-            "endpoints": {
-                "bind-host": "140.211.167.174",
-                "compute-vnc-bind": {
-                    "bind_interface": "eth1",
-                    "host": "0.0.0.0"
-                },
-                "db": {
-                    "host": "140.211.15.221"
-                },
-                "host": "140.211.167.174",
-                "mq": {
-                    "host": "140.211.167.174"
-                }
-            },
-            "image": {
-                "image_upload": true,
-                "upload_image": {
-                    "cirros": "https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img"
-                },
-                "upload_images": [
-                    "cirros"
-                ]
-            },
-            "secret": {
-                "key_path": "/etc/chef/encrypted_data_bag_secret"
-            },
-            "yum": {
-                "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Havana"
-            }
+        "mq": {
+          "host": "140.211.167.174"
         }
+      },
+      "dashboard": {
+        "keystone_default_role": "_member_"
+      },
+      "image": {
+        "image_upload": true,
+        "upload_images": [
+          "cirros"
+        ],
+        "upload_image": {
+          "cirros": "https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img"
+        }
+      },
+      "compute": {
+        "network": {
+          "public_interface": "eth0",
+          "service_type": "nova",
+          "multi_host": "true",
+          "force_dhcp_release": "true"
+        },
+        "config": {
+          "ram_allocation_ratio": 5.0,
+          "allow_same_net_traffic": "False"
+        },
+        "libvirt": {
+          "virt_type": "kvm",
+          "bind_interface": "eth1"
+        },
+        "networks": [
+          {
+            "label": "private",
+            "ipv4_cidr": "192.168.56.0/24",
+            "num_networks": "1",
+            "network_size": "255",
+            "bridge": "br100",
+            "bridge_dev": "eth1",
+            "dns1": "140.211.166.130",
+            "dns2": "140.211.166.131",
+            "multi_host": "T"
+          }
+        ]
+      }
     }
+  }
 }
