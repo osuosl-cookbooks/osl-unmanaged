@@ -22,7 +22,7 @@
                 },
                 "libvirt": {
                     "virt_type": "kvm",
-                    "bind_interface": "enP2p1s0f3"
+                    "bind_interface": "eth1"
                 },
                 "network": {
                     "public_interface": "enP2p1s0f2",
