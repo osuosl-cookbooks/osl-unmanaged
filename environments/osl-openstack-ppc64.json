@@ -33,10 +33,10 @@
                     {
                         "label": "private",
                         "bridge": "br-private",
-                        "bridge_interface": "enP2p1s0f2",
+                        "bridge_interface": "enP2p1s0f1",
                         "dns1": "140.211.166.130",
                         "dns2": "140.211.166.131",
-                        "ipv4_cidr": "192.168.56.0/22",
+                        "ipv4_cidr": "192.168.60.0/22",
                         "multi_host": "T",
                         "network_size": "255",
                         "num_networks": "1"
