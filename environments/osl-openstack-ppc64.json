@@ -21,8 +21,7 @@
                     "allow_same_net_traffic": "False"
                 },
                 "libvirt": {
-                    "virt_type": "kvm",
-                    "bind_interface": "eth1"
+                    "virt_type": "kvm"
                 },
                 "network": {
                     "public_interface": "enP2p1s0f2",
