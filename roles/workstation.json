@@ -66,6 +66,7 @@
     "recipe[base::mailhandler]",
     "recipe[chef-client::cron]",
     "recipe[chef-client::delete_validation]",
+    "recipe[python]",
     "recipe[sudo::default]",
     "recipe[resolver::default]",
     "recipe[workstation]",
