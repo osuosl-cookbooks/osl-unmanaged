@@ -14,37 +14,30 @@
           }
         },
         "openstack": {
+            "release": "havanah",
             "compute": {
                 "config": {
-                    "ram_allocation_ratio": 5.0
+                    "ram_allocation_ratio": 5.0,
+                    "allow_same_net_traffic": "False"
                 },
                 "libvirt": {
-                    "virt_type": "kvm"
+                    "virt_type": "kvm",
+                    "bind_interface": "enP2p1s0f3"
                 },
                 "network": {
                     "public_interface": "enP2p1s0f2",
-                    "service_type": "neutron",
-                    "multi_host": "true"
+                    "service_type": "nova",
+                    "multi_host": "true",
+                    "force_dhcp_release": "true"
                 },
                 "networks": [
                     {
+                        "label": "private",
                         "bridge": "br-private",
                         "bridge_interface": "enP2p1s0f3",
                         "dns1": "140.211.166.130",
                         "dns2": "140.211.166.131",
-                        "ipv4_cidr": "192.168.32.0/22",
-                        "label": "private",
-                        "multi_host": "T",
-                        "network_size": "255",
-                        "num_networks": "1"
-                    },
-                    {
-                        "bridge": "br108",
-                        "bridge_interface": "enP2p1s0f2",
-                        "dns1": "140.211.166.130",
-                        "dns2": "140.211.166.131",
-                        "ipv4_cidr": "140.211.168.0/24",
-                        "label": "public",
+                        "ipv4_cidr": "192.168.56.0/22",
                         "multi_host": "T",
                         "network_size": "255",
                         "num_networks": "1"
