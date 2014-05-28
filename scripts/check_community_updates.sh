@@ -9,7 +9,7 @@
 # It also assumes it is in the same directory as the Berksfile.
 
 DIR=$(dirname $0)
-BERKSFILE=$DIR/Berksfile
+BERKSFILE=$DIR/../Berksfile
 COOKBOOKS=$(grep cookbook $BERKSFILE | grep -v , | cut -d' ' -f 2 | tr -d \")
 
 for x in $COOKBOOKS
