@@ -1,0 +1,15 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "user": {
+      "data_bag_name": "ns"
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "dns server role",
+  "name": "ns"
+}
