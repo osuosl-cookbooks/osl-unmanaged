@@ -52,7 +52,7 @@
     "osl-apache": "= 1.0.7",
     "osl-haproxy": "= 0.1.0",
     "osl-munin": "= 0.1.2",
-    "osl-mysql": "= 0.1.0",
+    "osl-mysql": "= 0.2.0",
     "osl-nginx": "= 1.0.5",
     "osl-openstack": "= 0.0.9",
     "osl-postgresql": "= 0.1.9",
