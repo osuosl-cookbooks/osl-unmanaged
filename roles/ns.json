@@ -7,8 +7,10 @@
   "override_attributes": {},
   "default_attributes": {
     "user": {
-      "data_bag_name": "ns",
-      "user_array_node_attr": ["osl-root"]
+      "data_bag_name": "ns"
+    },
+    "base": {
+      "user_accounts": ["osl-root"]
     }
   },
   "json_class": "Chef::Role",
