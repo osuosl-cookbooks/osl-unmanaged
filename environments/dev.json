@@ -21,7 +21,7 @@
     "dmg": "= 1.1.0",
     "erlang": "= 1.5.4",
     "fenestra": "= 0.1.0",
-    "firewall": "= 0.1.6",
+    "firewall": "= 2.0.0",
     "generic-vhosts": "= 0.1.31",
     "goblin": "= 0.1.1",
     "git": "= 4.0.2",
