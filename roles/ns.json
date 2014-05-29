@@ -9,9 +9,7 @@
     "user": {
       "data_bag_name": "ns"
     },
-    "base": {
-      "user_accounts": ["osl-root"]
-    }
+    "users": ["osl-root"]
   },
   "json_class": "Chef::Role",
   "description": "dns server role",
