@@ -1,7 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[users::data_bag]"
+    "recipe[user::data_bag]"
   ],
   "chef_type": "role",
   "override_attributes": {},
