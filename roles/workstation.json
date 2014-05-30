@@ -13,7 +13,7 @@
         ]
       }
     },
-    "chef-client": {
+    "chef_client": {
       "init_style": "none",
       "config": {
         "ssl_verify_mode": ":verify_peer"
