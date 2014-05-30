@@ -16,7 +16,7 @@
     "recipe[monitoring]",
     "recipe[ntp]",
     "recipe[omnibus_updater]",
-    "recipe[postfix::client]",
+    "recipe[postfix::default]",
     "recipe[rsyslog::default]",
     "recipe[sudo]"
   ],
