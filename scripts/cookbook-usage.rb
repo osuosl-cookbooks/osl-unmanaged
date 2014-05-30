@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-def remove_cb_from_list?(cb)
+def keep_cookbookp(cb)
   return `knife search node 'recipes:#{cb}*' -i | head -n 1 | cut -d' ' -f1 | tr -d ' '`.to_i != 0
 end
 
@@ -8,7 +8,7 @@ end
 cookbooks = `knife cookbook list | cut -d' ' -f1`.split
 cookbooks_to_keep = []
 cookbooks.each do |cb|
-  unless remove_cb_from_list?(cb)
+  unless keep_cookbookp(cb)
     next
   else
     unless cookbooks_to_keep.include?(cb)
