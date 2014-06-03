@@ -36,7 +36,6 @@
       }
     },
     "postfix": {
-      "mailtype": "client",
       "mydomain": "osuosl.org",
       "myorigin": "osuosl.org",
       "relayhost": "osuosl.org"
@@ -57,7 +56,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[base::mailhandler]",
-    "recipe[postfix::client]",
+    "recipe[postfix::default]",
     "recipe[chef-client::config]",
     "recipe[chef-client::cron]",
     "recipe[chef-client::delete_validation]",
