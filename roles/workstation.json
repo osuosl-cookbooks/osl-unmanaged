@@ -35,6 +35,12 @@
         "x11_forwarding": "yes"
       }
     },
+    "postfix": {
+      "mailtype": "client",
+      "mydomain": "osuosl.org",
+      "myorigin": "osuosl.org",
+      "relayhost": "osuosl.org"
+    },
     "resolver": {
       "nameservers": ["140.211.166.130", "140.211.166.131", "216.165.191.54"],
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
@@ -51,6 +57,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[base::mailhandler]",
+    "recipe[postfix::client]",
     "recipe[chef-client::config]",
     "recipe[chef-client::cron]",
     "recipe[chef-client::delete_validation]",
