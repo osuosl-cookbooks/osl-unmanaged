@@ -148,7 +148,6 @@
         "zsh"
       ],
       "purge": [
-        "network-manager",
         "resolvconf"
       ]
     }
