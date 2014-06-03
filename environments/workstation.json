@@ -20,6 +20,7 @@
         "alsa-utils",
         "aptitude",
         "arandr",
+        "autoconf",
         "awesome",
         "bash",
         "build-essential",
