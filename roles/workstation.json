@@ -21,6 +21,7 @@
       "cron": {
         "hour": "*",
         "minute": "*/30",
+        "mailto": "chef@osuosl.org",
         "use_cron_d": "true",
         "log_file": "/var/log/chef/client.log"
       }
