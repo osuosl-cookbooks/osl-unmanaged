@@ -35,7 +35,7 @@
     "logstash": "= 0.8.1",
     "lsyncd": "= 0.1.0",
     "magic_shell": "= 0.2.0",
-    "maintain-dns": "= 0.1.1",
+    "maintain-dns": "= 0.1.2",
     "memcached": "= 1.7.2",
     "monit": "= 0.7.1",
     "monitoring": "= 0.2.3",
