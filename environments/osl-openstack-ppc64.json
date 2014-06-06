@@ -43,7 +43,7 @@
                         "dns2": "140.211.166.131",
                         "ipv4_cidr": "192.168.60.0/22",
                         "multi_host": "T",
-                        "network_size": "255",
+                        "network_size": "1024",
                         "num_networks": "1"
                     }
                 ]
