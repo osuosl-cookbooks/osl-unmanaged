@@ -50,6 +50,7 @@
     "openssh": "= 1.3.2",
     "openssl": "= 1.1.0",
     "orvsd-web": "= 0.1.3",
+    "orvsd_central": "= 0.1.3",
     "osl-apache": "= 1.0.7",
     "osl-haproxy": "= 0.1.0",
     "osl-munin": "= 0.1.2",
