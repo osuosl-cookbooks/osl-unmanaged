@@ -38,7 +38,7 @@
                     {
                         "label": "private",
                         "bridge": "br-private",
-                        "bridge_dev": "enP2p1s0f1",
+                        "bridge_dev": "enP2p1s0f3",
                         "dns1": "140.211.166.130",
                         "dns2": "140.211.166.131",
                         "ipv4_cidr": "192.168.60.0/22",
