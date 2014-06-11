@@ -41,7 +41,7 @@
       "relayhost": "[smtp.osuosl.org]"
     },
     "resolver": {
-      "nameservers": ["140.211.166.130", "140.211.166.131", "216.165.191.54"],
+      "nameservers": ["10.1.0.130", "10.1.0.131", "216.165.191.54"],
       "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
     }
   },
