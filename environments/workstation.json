@@ -62,6 +62,7 @@
         "iceweasel",
         "libcrack2",
         "libgd2-xpm:i386",
+        "libgnome-keyring-dev",
         "libgphoto2-2:i386",
         "libsane:i386",
         "ia32-libs",
