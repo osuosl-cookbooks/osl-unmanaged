@@ -52,7 +52,8 @@
                 "keystone_default_role": "_member_",
                 "ssl": {
                   "cert": "wildcard.pem",
-                  "key": "wildcard.key"
+                  "key": "wildcard.key",
+                  "chain": "wildcard-bundle.crt"
                 }
             },
             "db": {
