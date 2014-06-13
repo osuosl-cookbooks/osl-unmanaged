@@ -49,7 +49,11 @@
                 ]
             },
             "dashboard": {
-                "keystone_default_role": "_member_"
+                "keystone_default_role": "_member_",
+                "ssl": {
+                  "cert": "wildcard.pem",
+                  "key": "wildcard.key"
+                }
             },
             "db": {
                 "compute": {
