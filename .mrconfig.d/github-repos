@@ -43,6 +43,18 @@ checkout = git clone git@github.com:osuosl-cookbooks/nagios.git
 [osuosl-cookbooks/orvsd-web]
 checkout = git clone git@github.com:osuosl-cookbooks/orvsd-web.git
 
+[osuosl-cookbooks/openstack-compute]
+checkout = git clone -b havana/ppc64-misc-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-compute.git openstack-compute
+
+[osuosl-cookbooks/openstack-identity]
+checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-identity.git openstack-identity
+
+[osuosl-cookbooks/openstack-image]
+checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-image.git openstack-image
+
+[osuosl-cookbooks/openstack-network]
+checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-network.git openstack-network
+
 [osuosl-cookbooks/osl-apache]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-apache.git
 
