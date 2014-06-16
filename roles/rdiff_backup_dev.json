@@ -8,9 +8,9 @@
   "default_attributes": {
     "rdiff-backup": {
       "client": {
+        "user": "rdiff-backup-client-dev",
         "jobs": {
           "default": {
-            "user": "rdiff-backup-client-dev",
             "retention-period": "1W",
             "exclude-dirs": [
               "/etc/cron.d",
