@@ -8,19 +8,21 @@
   "default_attributes": {
     "rdiff-backup": {
       "client": {
-        "default": {
-          "user": "rdiff-backup-client-dev",
-          "retention-period": "1W",
-          "exclude-dirs": [
-            "/etc/cron.d",
-            "/var/log/apache",
-            "/var/log/nginx"
-          ]
-        },
-        "/etc": {},
-        "/home": {},
-        "/var": {
-          "retention-period": "2D"
+        "jobs": {
+          "default": {
+            "user": "rdiff-backup-client-dev",
+            "retention-period": "1W",
+            "exclude-dirs": [
+              "/etc/cron.d",
+              "/var/log/apache",
+              "/var/log/nginx"
+            ]
+          },
+          "/etc": {},
+          "/home": {},
+          "/var": {
+            "retention-period": "2D"
+          }
         }
       }
     }
