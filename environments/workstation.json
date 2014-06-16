@@ -110,6 +110,7 @@
         "pulseaudio",
         "pv",
         "python3",
+        "pwgen",
         "racket",
         "racket-doc",
         "renameutils",
@@ -148,6 +149,7 @@
         "xmonad",
         "xscreensaver",
         "xscreensaver-data-extra",
+        "xsel",
         "xtightvncviewer",
         "zathura",
         "zsh"
