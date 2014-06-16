@@ -107,5 +107,13 @@
     }
   },
   "override_attributes": {
+    "firewall": {
+      "nagios": {
+        "servers": [
+          "127.0.0.1",
+          "140.211.9.10"
+        ]
+      }
+    }
   }
 }
