@@ -1,0 +1,129 @@
+{
+    "chef_type": "environment",
+    "cookbook_versions": {},
+    "default_attributes": {},
+    "description": "The OSL Openstack Staging Environment (pp64)",
+    "json_class": "Chef::Environment",
+    "name": "osl-openstack-ppc64-staging",
+    "override_attributes": {
+        "yum": {
+          "epel": {
+            "baseurl": "http://epel.osuosl.org/6/$basearch",
+            "enable": "true",
+            "gpgkey": "http://epel.osuosl.org/RPM-GPG-KEY-EPEL-6"
+          }
+        },
+        "openstack": {
+            "sysctl": {
+              "net.ipv4.ip_forward": "1",
+              "net.ipv4.conf.all.rp_filter": "0",
+              "net.ipv4.conf.default.rp_filter": "0"
+            },
+            "release": "havanah",
+            "compute": {
+                "config": {
+                    "ram_allocation_ratio": 5.0,
+                    "allow_same_net_traffic": "False"
+                },
+                "libvirt": {
+                    "virt_type": "kvm"
+                },
+                "network": {
+                    "public_interface": "enP2p1s0f2",
+                    "service_type": "nova",
+                    "multi_host": "true",
+                    "force_dhcp_release": "true"
+                },
+                "networks": [
+                    {
+                        "label": "private",
+                        "bridge": "br-private",
+                        "bridge_dev": "enP2p1s0f3",
+                        "dns1": "140.211.166.130",
+                        "dns2": "140.211.166.131",
+                        "ipv4_cidr": "192.168.60.0/22",
+                        "multi_host": "T",
+                        "network_size": "1024",
+                        "num_networks": "1"
+                    }
+                ]
+            },
+            "dashboard": {
+                "keystone_default_role": "_member_",
+                "ssl": {
+                  "cert": "wildcard.pem",
+                  "key": "wildcard.key",
+                  "chain": "wildcard-bundle.crt"
+                }
+            },
+            "db": {
+                "compute": {
+                    "db_name": "nova_stg",
+                    "username": "nova_stg"
+                },
+                "identity": {
+                    "db_name": "keystone_stg",
+                    "username": "keystone_stg"
+                },
+                "image": {
+                    "db_name": "glance_stg",
+                    "username": "glance_stg"
+                },
+                "block-storage": {
+                    "db_name": "cinder_stg",
+                    "username": "cinder_stg"
+                },
+                "dashboard": {
+                    "db_name": "horizon_stg",
+                    "username": "horizon_stg"
+                },
+                "telemetry": {
+                    "db_name": "ceilometer_stg",
+                    "username": "ceilometer_stg"
+                },
+                "orchestration": {
+                    "db_name": "heat_stg",
+                    "username": "heat_stg"
+                },
+                "network": {
+                    "db_name": "neutron_stg",
+                    "username": "neutron_stg"
+                }
+            },
+            "developer_mode": false,
+            "endpoints": {
+                "bind-host": "0.0.0.0",
+                "db": {
+                    "host": "140.211.15.221"
+                },
+                "host": "140.211.167.214",
+                "mq": {
+                    "host": "140.211.167.214"
+                }
+            },
+            "image": {
+                "image_upload": true,
+                "upload_image": {
+                    "fedora-20": "http://ftp.osuosl.org/pub/osl/openpower/openstack/fedora-20.qcow2",
+                    "debian-7": "http://ftp.osuosl.org/pub/osl/openpower/openstack/debian-7.qcow2",
+                    "ubuntu-14.04": "http://ftp.osuosl.org/pub/osl/openpower/openstack/ubuntu-14.04.qcow2"
+                },
+                "upload_images": [
+                    "fedora-20",
+                    "debian-7",
+                    "ubuntu-14.04"
+                ]
+            },
+            "secret": {
+                "key_path": "/etc/chef/encrypted_data_bag_secret",
+                "secrets_data_bag": "ppc64_staging_secrets",
+                "service_passwords_data_bag": "ppc64_staging_service_passwords",
+                "db_passwords_data_bag": "ppc64_staging_db_passwords",
+                "user_passwords_data_bag": "ppc64_staging_user_passwords"
+            },
+            "yum": {
+                "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Havana"
+            }
+        }
+    }
+}
