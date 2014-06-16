@@ -2,6 +2,7 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[user::data_bag]",
+    "recipe[firewall::dns]",
     "recipe[maintain-dns::ns]"
   ],
   "chef_type": "role",
