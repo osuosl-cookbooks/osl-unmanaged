@@ -61,6 +61,7 @@
         "i3lock",
         "icedove",
         "iceweasel",
+        "iptables-persistent",
         "libcrack2",
         "libgd2-xpm:i386",
         "libgnome-keyring-dev",
