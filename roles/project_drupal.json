@@ -1,21 +1,10 @@
 {
   "env_run_lists": {},
-  "run_list": [
-    "role[rdiff_backup]"
-  ],
+  "run_list": [],
   "chef_type": "role",
   "default_attributes": {},
-  "override_attributes": {
-    "users": ["rdiff-backup-client"],
-    "rdiff-backup": {
-      "client": {
-        "destination-dir": "/data/rdiff-backup-drupal",
-        "source-dirs": ["/etc","/var","/home"],
-        "retention-period": "3M"
-      }
-    }
-  },
+  "override_attributes": {},
   "json_class": "Chef::Role",
-  "description": "role for all Drupal servers",
+  "description": "Role for all Drupal servers",
   "name": "project_drupal"
 }

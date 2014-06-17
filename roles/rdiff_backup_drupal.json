@@ -1,0 +1,21 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[rdiff_backup]"
+  ],
+  "chef_type": "role",
+  "default_attributes": {},
+  "override_attributes": {
+    "rdiff-backup": {
+      "client": {
+        "user": "rdiff-backup-client",
+        "destination-dir": "/data/rdiff-backup-drupal",
+        "source-dirs": ["/etc","/var","/home"],
+        "retention-period": "3M"
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "Generic backup role for Drupal servers",
+  "name": "project_drupal"
+}
