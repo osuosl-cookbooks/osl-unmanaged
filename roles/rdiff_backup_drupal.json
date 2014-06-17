@@ -17,5 +17,5 @@
   },
   "json_class": "Chef::Role",
   "description": "Generic backup role for Drupal servers",
-  "name": "project_drupal"
+  "name": "rdiff_backup_drupal"
 }
