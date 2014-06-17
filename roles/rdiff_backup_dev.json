@@ -1,7 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "role[rdiff_backup]"
+    "recipe[rdiff-backup::client]"
   ],
   "chef_type": "role",
   "override_attributes": {},
