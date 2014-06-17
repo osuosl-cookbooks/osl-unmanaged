@@ -77,6 +77,7 @@
     "recipe[workstation::xrandr]",
     "recipe[workstation::dsh]",
     "recipe[workstation::printers]",
+    "recipe[workstation::pastebin]",
     "recipe[ntp::default]",
     "recipe[openssh::default]"
   ],
