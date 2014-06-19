@@ -118,7 +118,7 @@
         }, 
         "yum": {
             "epel": {
-                "baseurl": "http://epel.osuosl.org/6/$basesearch", 
+                "baseurl": "http://epel.osuosl.org/6/$basearch", 
                 "enable": "true", 
                 "gpgkey": "http://epel.osuosl.org/RPM-GPG-KEY-EPEL-6"
             }
