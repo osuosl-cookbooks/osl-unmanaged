@@ -83,7 +83,6 @@
     "recipe[workstation::timezone]",
     "recipe[workstation::autofs]",
     "recipe[workstation::packages]",
-    "recipe[workstation::lightdm]",
     "recipe[workstation::xrandr]",
     "recipe[workstation::dsh]",
     "recipe[workstation::printers]",
