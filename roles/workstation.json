@@ -13,6 +13,14 @@
         ]
       }
     },
+    "workstation": {
+      "hostlist": [
+        {
+          "ip": "127.0.0.1",
+          "aliasles": "theoc moodle1 moodle2 moodle3"
+        }
+      ]
+    },
     "chef_client": {
       "init_style": "none",
       "config": {
