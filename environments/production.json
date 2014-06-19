@@ -94,7 +94,8 @@
     "osl-drupal": "= 0.2.1",
     "osl-sudo": "= 0.1.0",
     "osl-nodejs": "= 0.1.3",
-    "homebrew": "= 1.5.4"
+    "homebrew": "= 1.5.4",
+    "workstation": "= 1.3.7"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
