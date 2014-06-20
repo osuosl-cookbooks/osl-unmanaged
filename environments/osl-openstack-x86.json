@@ -38,6 +38,7 @@
             },
             "dashboard": {
                 "keystone_default_role": "_member_",
+                "server_hostname": "openstack.osuosl.org",
                 "ssl": {
                     "cert": "wildcard.pem",
                     "chain": "wildcard-bundle.crt",
