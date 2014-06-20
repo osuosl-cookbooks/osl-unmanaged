@@ -1,125 +1,125 @@
 {
-    "chef_type": "environment", 
-    "cookbook_versions": {}, 
-    "default_attributes": {}, 
-    "description": "The OSL Openstack Environment (x86)", 
-    "json_class": "Chef::Environment", 
-    "name": "osl-openstack-x86", 
+    "chef_type": "environment",
+    "cookbook_versions": {},
+    "default_attributes": {},
+    "description": "The OSL Openstack Environment (x86)",
+    "json_class": "Chef::Environment",
+    "name": "osl-openstack-x86",
     "override_attributes": {
         "openstack": {
             "compute": {
                 "config": {
-                    "allow_same_net_traffic": "False", 
+                    "allow_same_net_traffic": "False",
                     "ram_allocation_ratio": 5.0
-                }, 
+                },
                 "libvirt": {
-                    "bind_interface": "eth1", 
+                    "bind_interface": "eth1",
                     "virt_type": "kvm"
-                }, 
+                },
                 "network": {
-                    "force_dhcp_release": "true", 
-                    "multi_host": "true", 
-                    "public_interface": "eth0", 
+                    "force_dhcp_release": "true",
+                    "multi_host": "true",
+                    "public_interface": "eth0",
                     "service_type": "nova"
-                }, 
+                },
                 "networks": [
                     {
-                        "bridge": "br100", 
-                        "bridge_dev": "eth1", 
-                        "dns1": "140.211.166.130", 
-                        "dns2": "140.211.166.131", 
-                        "ipv4_cidr": "192.168.56.0/22", 
-                        "label": "private", 
-                        "multi_host": "T", 
-                        "network_size": "1024", 
+                        "bridge": "br100",
+                        "bridge_dev": "eth1",
+                        "dns1": "140.211.166.130",
+                        "dns2": "140.211.166.131",
+                        "ipv4_cidr": "192.168.56.0/22",
+                        "label": "private",
+                        "multi_host": "T",
+                        "network_size": "1024",
                         "num_networks": "1"
                     }
                 ]
-            }, 
+            },
             "dashboard": {
-                "keystone_default_role": "_member_", 
+                "keystone_default_role": "_member_",
                 "ssl": {
-                    "cert": "wildcard.pem", 
-                    "chain": "wildcard-bundle.crt", 
+                    "cert": "wildcard.pem",
+                    "chain": "wildcard-bundle.crt",
                     "key": "wildcard.key"
                 }
-            }, 
+            },
             "db": {
                 "block-storage": {
-                    "db_name": "cinder_x86", 
+                    "db_name": "cinder_x86",
                     "username": "cinder_x86"
-                }, 
+                },
                 "compute": {
-                    "db_name": "nova_x86", 
+                    "db_name": "nova_x86",
                     "username": "nova_x86"
-                }, 
+                },
                 "dashboard": {
-                    "db_name": "horizon_x86", 
+                    "db_name": "horizon_x86",
                     "username": "horizon_x86"
-                }, 
+                },
                 "identity": {
-                    "db_name": "keystone_x86", 
+                    "db_name": "keystone_x86",
                     "username": "keystone_x86"
-                }, 
+                },
                 "image": {
-                    "db_name": "glance_x86", 
+                    "db_name": "glance_x86",
                     "username": "glance_x86"
-                }, 
+                },
                 "network": {
-                    "db_name": "neutron_x86", 
+                    "db_name": "neutron_x86",
                     "username": "neutron_x86"
-                }, 
+                },
                 "orchestration": {
-                    "db_name": "heat_x86", 
+                    "db_name": "heat_x86",
                     "username": "heat_x86"
-                }, 
+                },
                 "telemetry": {
-                    "db_name": "ceilometer_x86", 
+                    "db_name": "ceilometer_x86",
                     "username": "ceilometer_x86"
                 }
-            }, 
-            "developer_mode": false, 
+            },
+            "developer_mode": false,
             "endpoints": {
-                "bind-host": "140.211.167.215", 
+                "bind-host": "140.211.167.215",
                 "db": {
                     "host": "140.211.15.221"
-                }, 
-                "host": "140.211.167.215", 
+                },
+                "host": "140.211.167.215",
                 "mq": {
                     "host": "140.211.167.215"
                 }
-            }, 
+            },
             "image": {
-                "image_upload": true, 
+                "image_upload": true,
                 "upload_image": {
                     "cirros": "https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img"
-                }, 
+                },
                 "upload_images": [
                     "cirros"
                 ]
-            }, 
-            "release": "havanah", 
+            },
+            "release": "havanah",
             "secret": {
-                "db_passwords_data_bag": "x86_db_passwords", 
-                "key_path": "/etc/chef/encrypted_data_bag_secret", 
-                "secrets_data_bag": "x86_secrets", 
-                "service_passwords_data_bag": "x86_service_passwords", 
+                "db_passwords_data_bag": "x86_db_passwords",
+                "key_path": "/etc/chef/encrypted_data_bag_secret",
+                "secrets_data_bag": "x86_secrets",
+                "service_passwords_data_bag": "x86_service_passwords",
                 "user_passwords_data_bag": "x86_user_passwords"
-            }, 
+            },
             "sysctl": {
-                "net.ipv4.conf.all.rp_filter": "0", 
-                "net.ipv4.conf.default.rp_filter": "0", 
+                "net.ipv4.conf.all.rp_filter": "0",
+                "net.ipv4.conf.default.rp_filter": "0",
                 "net.ipv4.ip_forward": "1"
-            }, 
+            },
             "yum": {
-                "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Havana", 
+                "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Havana",
                 "uri": "http://repos.fedorapeople.org/repos/openstack/openstack-havana/epel-6/"
             }
-        }, 
+        },
         "yum": {
             "epel": {
-                "baseurl": "http://epel.osuosl.org/6/$basearch", 
-                "enable": "true", 
+                "baseurl": "http://epel.osuosl.org/6/$basearch",
+                "enable": "true",
                 "gpgkey": "http://epel.osuosl.org/RPM-GPG-KEY-EPEL-6"
             }
         }
