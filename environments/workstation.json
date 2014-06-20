@@ -18,6 +18,7 @@
       "packages": [
         "ack-grep",
         "alsa-utils",
+        "apt-file",
         "aptitude",
         "arandr",
         "autoconf",
