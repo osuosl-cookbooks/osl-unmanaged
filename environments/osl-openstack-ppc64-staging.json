@@ -6,6 +6,9 @@
     "json_class": "Chef::Environment",
     "name": "osl-openstack-ppc64-staging",
     "override_attributes": {
+        "apache": {
+          "contact": "hostmaster@osuosl.org"
+        },
         "yum": {
           "epel": {
             "baseurl": "http://epel.osuosl.org/6/$basearch",
