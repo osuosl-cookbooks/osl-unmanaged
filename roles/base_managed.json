@@ -5,7 +5,6 @@
     "recipe[nagios::client_package]",
     "recipe[nagios::client]",
     "recipe[base::ifconfig]",
-    "recipe[base::iptables]",
     "recipe[base::issue]",
     "recipe[base::managed]",
     "recipe[base::security]",
