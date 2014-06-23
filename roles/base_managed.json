@@ -1,6 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "recipe[rsyslog::default]",
     "role[base]",
     "recipe[nagios::client_package]",
     "recipe[nagios::client]",
@@ -16,7 +17,6 @@
     "recipe[ntp]",
     "recipe[omnibus_updater]",
     "recipe[postfix::default]",
-    "recipe[rsyslog::default]",
     "recipe[sudo]"
   ],
   "chef_type": "role",
