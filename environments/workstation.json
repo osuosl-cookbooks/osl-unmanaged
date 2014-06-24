@@ -26,6 +26,7 @@
         "bash",
         "build-essential",
         "chefdk",
+        "chromium",
         "colordiff",
         "cone",
         "conky",
