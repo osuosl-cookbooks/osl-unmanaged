@@ -1,0 +1,16 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-apache::default]",
+    "recipe[ganeti_webmgr::default]",
+    "recipe[ganeti_webmgr::bootstrap_user]",
+    "recipe[ganeti_webmgr::apache]",
+    "recipe[firewall::gwm]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Ganeti Web Manager server role",
+  "name": "gwm"
+}
