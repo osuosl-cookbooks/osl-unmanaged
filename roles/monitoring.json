@@ -16,6 +16,12 @@
       "notifications_enabled": "1",
       "user": "nagios",
       "ssl_cert_file": "/etc/pki/tls/certs/wildcard.pem",
+      "default_host": {
+          "notification_interval": "0"
+      },
+      "default_service": {
+          "notification_interval": "0"
+      },
       "server": {
         "install_method": "source"
       },
