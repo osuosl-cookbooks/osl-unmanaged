@@ -95,7 +95,8 @@
     "osl-sudo": "= 0.1.0",
     "osl-nodejs": "= 0.1.3",
     "homebrew": "= 1.5.4",
-    "workstation": "= 1.3.7"
+    "workstation": "= 1.3.7",
+    "ganeti_webmgr": "= 0.4.7"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
