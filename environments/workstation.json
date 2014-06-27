@@ -16,6 +16,7 @@
   "default_attributes": {
     "workstation": {
       "packages": [
+        "0ad",
         "ack-grep",
         "alsa-utils",
         "apt-file",
