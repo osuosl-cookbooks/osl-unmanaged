@@ -40,6 +40,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/monitoring.git
 [osuosl-cookbooks/nagios]
 checkout = git clone git@github.com:osuosl-cookbooks/nagios.git
 
+[osuosl-cookbooks/orvsd_central]
+checkout = git clone git@github.com:osuosl-cookbooks/orvsd_central.git
+
 [osuosl-cookbooks/orvsd-web]
 checkout = git clone git@github.com:osuosl-cookbooks/orvsd-web.git
 
