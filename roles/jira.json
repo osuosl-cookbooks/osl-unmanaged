@@ -1,0 +1,17 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[jira]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+  },
+  "default_attributes": {
+    "jira": {
+      "install_type": "standalone"
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "jira server role",
+  "name": "jira"
+}
