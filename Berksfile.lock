@@ -1,276 +1,347 @@
-{
-  "sources": {
-    "apache2": {
-      "locked_version": "1.10.0"
-    },
-    "apt": {
-      "locked_version": "2.2.0"
-    },
-    "ark": {
-      "locked_version": "0.8.0"
-    },
-    "aws": {
-      "locked_version": "2.1.1"
-    },
-    "bluepill": {
-      "locked_version": "2.3.1"
-    },
-    "build-essential": {
-      "locked_version": "1.4.2"
-    },
-    "certificate": {
-      "locked_version": "0.5.0"
-    },
-    "chef-client": {
-      "locked_version": "3.3.8"
-    },
-    "chef_handler": {
-      "locked_version": "1.1.5"
-    },
-    "chef-server": {
-      "locked_version": "1.1.0"
-    },
-    "cpu": {
-      "locked_version": "0.2.0"
-    },
-    "cron": {
-      "locked_version": "1.2.2"
-    },
-    "daemontools": {
-      "locked_version": "1.2.0"
-    },
-    "database": {
-      "locked_version": "1.4.0"
-    },
-    "dmg": {
-      "locked_version": "1.1.0"
-    },
-    "erlang": {
-      "locked_version": "1.5.4"
-    },
-    "git": {
-      "locked_version": "4.0.2"
-    },
-    "haproxy": {
-      "locked_version": "1.6.2"
-    },
-    "homebrew": {
-      "locked_version": "1.5.4"
-    },
-    "iptables": {
-      "locked_version": "0.12.0"
-    },
-    "java": {
-      "locked_version": "1.22.0"
-    },
-    "jenkins": {
-      "locked_version": "2.0.2"
-    },
-    "line": {
-      "locked_version": "0.5.1"
-    },
-    "logrotate": {
-      "locked_version": "1.2.0"
-    },
-    "logstash": {
-      "locked_version": "0.8.1",
-      "git": "git://github.com/lusis/chef-logstash.git",
-      "ref": "6fbf75792ef25e229830763d3fca72e7d412ac89"
-    },
-    "lsyncd": {
-      "locked_version": "0.1.0"
-    },
-    "magic_shell": {
-      "locked_version": "0.2.0"
-    },
-    "memcached": {
-      "locked_version": "1.7.2"
-    },
-    "monit": {
-      "locked_version": "0.7.1"
-    },
-    "munin": {
-      "locked_version": "1.4.3"
-    },
-    "mysql": {
-      "locked_version": "3.0.12"
-    },
-    "nfs": {
-      "locked_version": "1.0.0"
-    },
-    "nginx": {
-      "locked_version": "2.6.2"
-    },
-    "ntp": {
-      "locked_version": "1.6.2"
-    },
-    "ohai": {
-      "locked_version": "1.1.12"
-    },
-    "omnibus_updater": {
-      "locked_version": "1.0.0"
-    },
-    "openssh": {
-      "locked_version": "1.3.2"
-    },
-    "openssl": {
-      "locked_version": "1.1.0"
-    },
-    "pacman": {
-      "locked_version": "1.1.1"
-    },
-    "passenger_apache2": {
-      "locked_version": "2.2.0"
-    },
-    "perl": {
-      "locked_version": "1.2.2"
-    },
-    "php": {
-      "locked_version": "1.2.4"
-    },
-    "postfix": {
-      "locked_version": "2.1.4"
-    },
-    "postgresql": {
-      "locked_version": "3.0.2"
-    },
-    "python": {
-      "locked_version": "1.4.6"
-    },
-    "rabbitmq": {
-      "locked_version": "3.1.0"
-    },
-    "resolver": {
-      "locked_version": "1.1.4"
-    },
-    "rsync": {
-      "locked_version": "0.8.4"
-    },
-    "rsyslog": {
-      "locked_version": "1.12.2"
-    },
-    "runit": {
-      "locked_version": "1.5.10"
-    },
-    "rvm": {
-      "locked_version": "0.9.2"
-    },
-    "selinux": {
-      "locked_version": "0.7.2"
-    },
-    "simple_iptables": {
-      "locked_version": "0.6.0"
-    },
-    "sudo": {
-      "locked_version": "2.5.2"
-    },
-    "supervisor": {
-      "locked_version": "0.4.0"
-    },
-    "sysctl": {
-      "locked_version": "0.4.0"
-    },
-    "user": {
-      "locked_version": "0.3.0"
-    },
-    "windows": {
-      "locked_version": "1.30.2"
-    },
-    "xfs": {
-      "locked_version": "1.1.0"
-    },
-    "xml": {
-      "locked_version": "1.2.4"
-    },
-    "yum": {
-      "locked_version": "3.0.0"
-    },
-    "openstack-block-storage": {
-      "locked_version": "8.4.3",
-      "git": "git://github.com/stackforge/cookbook-openstack-block-storage.git",
-      "ref": "33f7ceb488c2e0eb3349d8551f6c8c05b7f32c59"
-    },
-    "openstack-common": {
-      "locked_version": "8.5.0",
-      "git": "git://github.com/stackforge/cookbook-openstack-common.git",
-      "ref": "3e9264d94b0cc0d30705408aa82ae538c482d2bb"
-    },
-    "openstack-compute": {
-      "locked_version": "8.4.3",
-      "git": "git://github.com/stackforge/cookbook-openstack-compute.git",
-      "ref": "b4a3123dcbd258b353ff1f4463e4da14da1e72d1"
-    },
-    "openstack-dashboard": {
-      "locked_version": "8.1.1",
-      "git": "git://github.com/stackforge/cookbook-openstack-dashboard.git",
-      "ref": "d965afb91f21174e6156ddb8695dcad24e083c0a"
-    },
-    "openstack-identity": {
-      "locked_version": "8.1.4",
-      "git": "git://github.com/stackforge/cookbook-openstack-identity.git",
-      "ref": "d3d1e34a63e2fe5f3764149a38378070956e1756"
-    },
-    "openstack-image": {
-      "locked_version": "8.2.2",
-      "git": "git://github.com/stackforge/cookbook-openstack-image.git",
-      "ref": "48749c19e0e0b60061dbc894b09646e3c90d3377"
-    },
-    "openstack-network": {
-      "locked_version": "8.5.2",
-      "git": "git://github.com/stackforge/cookbook-openstack-network.git",
-      "ref": "379c68fdeff7d4be0197b5faefc27ebaa12c038d"
-    },
-    "openstack-object-storage": {
-      "locked_version": "8.3.0",
-      "git": "git://github.com/stackforge/cookbook-openstack-object-storage.git",
-      "ref": "07f08328a201a484bfec59ecffd4f8c443e77bc6"
-    },
-    "openstack-ops-database": {
-      "locked_version": "8.1.0",
-      "git": "git://github.com/stackforge/cookbook-openstack-ops-database.git",
-      "ref": "b6af43226c565424181c2f761b34af1a466c7748"
-    },
-    "openstack-ops-messaging": {
-      "locked_version": "8.0.1",
-      "git": "git://github.com/stackforge/cookbook-openstack-ops-messaging.git",
-      "ref": "774eb5b028299c3ac765718ab00cdda866b07ff5"
-    },
-    "openstack-orchestration": {
-      "locked_version": "8.1.2",
-      "git": "git://github.com/stackforge/cookbook-openstack-orchestration.git",
-      "ref": "e2bebd46f229781100ed1ac6812c2417c9146ea5"
-    },
-    "openstack-telemetry": {
-      "locked_version": "8.4.1",
-      "git": "git://github.com/stackforge/cookbook-openstack-telemetry.git",
-      "ref": "2e911759f130b1e2545c04bf81edda257a7701cf"
-    },
-    "couchdb": {
-      "locked_version": "2.5.1"
-    },
-    "yum-epel": {
-      "locked_version": "0.3.6"
-    },
-    "zlib": {
-      "locked_version": "2.0.0"
-    },
-    "gecode": {
-      "locked_version": "2.1.0"
-    },
-    "ucspi-tcp": {
-      "locked_version": "1.1.0"
-    },
-    "yum-erlang_solutions": {
-      "locked_version": "0.2.0"
-    },
-    "ant": {
-      "locked_version": "1.0.2"
-    },
-    "chef_gem": {
-      "locked_version": "0.1.0"
-    },
-    "statsd": {
-      "locked_version": "0.0.1"
-    }
-  }
-}
+DEPENDENCIES
+  apache2
+  apt
+  ark
+  aws
+  berkshelf-api-server
+  bluepill
+  build-essential
+  certificate
+  chef-client
+  chef-server
+  chef_handler
+  cpu
+  cron
+  daemontools
+  database
+  dmg
+  erlang
+  git
+  haproxy
+  homebrew
+  hostsfile
+  iptables
+  java
+  jenkins
+  line
+  logrotate
+  logstash
+    git: git://github.com/lusis/chef-logstash.git
+    revision: 6fbf75792ef25e229830763d3fca72e7d412ac89
+    tag: 0.8.1
+  lsyncd
+  magic_shell
+  memcached
+  monit
+  munin
+  mysql
+  nfs
+  nginx
+  ntp
+  ohai
+  omnibus_updater
+  openssh
+  openssl
+  openstack-block-storage
+    git: git://github.com/stackforge/cookbook-openstack-block-storage.git
+    revision: 33f7ceb488c2e0eb3349d8551f6c8c05b7f32c59
+    branch: stable/havana
+  openstack-common
+    git: git://github.com/stackforge/cookbook-openstack-common.git
+    revision: 6e7b2c50630668fd3d4a4c85277d9f4c6f58e9c7
+    branch: stable/havana
+  openstack-compute
+    git: git://github.com/stackforge/cookbook-openstack-compute.git
+    revision: b4a3123dcbd258b353ff1f4463e4da14da1e72d1
+    branch: stable/havana
+  openstack-dashboard
+    git: git://github.com/stackforge/cookbook-openstack-dashboard.git
+    revision: d965afb91f21174e6156ddb8695dcad24e083c0a
+    branch: stable/havana
+  openstack-identity
+    git: git://github.com/stackforge/cookbook-openstack-identity.git
+    revision: fb57c97b43fc36a5a39bc0f03aaf4af5f2e47d10
+    branch: stable/havana
+  openstack-image
+    git: git://github.com/stackforge/cookbook-openstack-image.git
+    revision: 48749c19e0e0b60061dbc894b09646e3c90d3377
+    branch: stable/havana
+  openstack-network
+    git: git://github.com/stackforge/cookbook-openstack-network.git
+    revision: 379c68fdeff7d4be0197b5faefc27ebaa12c038d
+    branch: stable/havana
+  openstack-object-storage
+    git: git://github.com/stackforge/cookbook-openstack-object-storage.git
+    revision: 5712ec0e772a17303f9070d401875ec1ec20e0cf
+    branch: stable/havana
+  openstack-ops-database
+    git: git://github.com/stackforge/cookbook-openstack-ops-database.git
+    revision: b6af43226c565424181c2f761b34af1a466c7748
+    branch: stable/havana
+  openstack-ops-messaging
+    git: git://github.com/stackforge/cookbook-openstack-ops-messaging.git
+    revision: 774eb5b028299c3ac765718ab00cdda866b07ff5
+    branch: stable/havana
+  openstack-orchestration
+    git: git://github.com/stackforge/cookbook-openstack-orchestration.git
+    revision: e2bebd46f229781100ed1ac6812c2417c9146ea5
+    branch: stable/havana
+  openstack-telemetry
+    git: git://github.com/stackforge/cookbook-openstack-telemetry.git
+    revision: 2e911759f130b1e2545c04bf81edda257a7701cf
+    branch: stable/havana
+  pacman
+  partial_search
+  passenger_apache2
+  perl
+  php
+  postfix
+  postgresql
+  python
+  rabbitmq
+  resolver
+  rsync
+  rsyslog
+  runit
+  rvm
+  selinux
+  simple_iptables
+  sqlite
+  sudo
+  supervisor
+  sysctl
+  user
+  windows
+  xfs
+  xml
+  yum
+
+GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
+  ant (1.0.2)
+    ark (>= 0.0.0)
+    java (>= 0.0.0)
+  apache2 (1.10.4)
+    iptables (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    pacman (>= 0.0.0)
+  apt (2.3.10)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  aws (2.2.2)
+  berkshelf-api-server (1.4.0)
+    build-essential (>= 2.0.2)
+    github (~> 0.2)
+    libarchive (~> 0.4)
+    nginx (>= 1.7.0)
+    runit (>= 0.0.0)
+  bluepill (2.3.1)
+    rsyslog (>= 0.0.0)
+  build-essential (2.0.4)
+  certificate (0.5.2)
+  chef-client (3.6.0)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+  chef-server (2.1.6)
+  chef-sugar (2.0.0)
+  chef_gem (0.1.0)
+  chef_handler (1.1.6)
+  cpu (0.2.0)
+  cron (1.4.0)
+  daemontools (1.3.0)
+    build-essential (>= 0.0.0)
+    ucspi-tcp (>= 0.0.0)
+  database (2.2.0)
+    aws (>= 0.0.0)
+    mysql (>= 5.0.0)
+    mysql-chef_gem (>= 0.0.0)
+    postgresql (>= 1.0.0)
+    xfs (>= 0.0.0)
+  dmg (2.2.0)
+  erlang (1.5.4)
+    apt (>= 1.7.0)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+    yum-erlang_solutions (>= 0.0.0)
+  git (4.0.2)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    runit (>= 1.0.0)
+    windows (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  github (0.3.0)
+    libarchive (>= 0.0.0)
+  haproxy (1.6.4)
+    build-essential (>= 0.0.0)
+    cpu (>= 0.2.0)
+  homebrew (1.7.2)
+  hostsfile (2.4.5)
+  iis (2.1.2)
+    windows (>= 1.2.6)
+  iptables (0.13.2)
+  java (1.22.0)
+  jenkins (2.1.0)
+    apt (~> 2.0)
+    runit (~> 1.5)
+    yum (~> 3.0)
+  libarchive (0.4.0)
+    build-essential (~> 2.0)
+  line (0.5.1)
+  logrotate (1.6.0)
+  logstash (0.8.1)
+    ant (>= 0.0.0)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+    java (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    python (>= 0.0.0)
+    rabbitmq (>= 0.0.0)
+    runit (>= 0.0.0)
+    yum (>= 0.0.0)
+  lsyncd (0.2.0)
+    yum (~> 3.0.0)
+  magic_shell (1.0.0)
+  memcached (1.7.2)
+    runit (~> 1.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  monit (0.7.1)
+  munin (1.4.3)
+    apache2 (>= 1.7)
+    nginx (>= 1.8)
+  mysql (5.3.6)
+    yum-mysql-community (>= 0.0.0)
+  mysql-chef_gem (0.0.2)
+    build-essential (>= 0.0.0)
+    mysql (>= 0.0.0)
+  nfs (2.0.0)
+    line (>= 0.0.0)
+  nginx (2.7.4)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ntp (1.6.2)
+  ohai (2.0.1)
+  omnibus_updater (1.0.0)
+  openssh (1.3.4)
+    iptables (>= 0.0.0)
+  openssl (2.0.0)
+    chef-sugar (>= 0.0.0)
+  openstack-block-storage (8.4.3)
+    apt (>= 0.0.0)
+    openstack-common (~> 8.0)
+    openstack-identity (~> 8.0)
+    openstack-image (~> 8.0)
+    python (>= 1.4.6)
+    selinux (>= 0.0.0)
+  openstack-common (8.5.0)
+    apt (~> 2.3.8)
+    database (>= 1.4.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  openstack-compute (8.4.3)
+    openstack-common (~> 8.0)
+    openstack-identity (~> 8.0)
+    openstack-image (~> 8.0)
+    openstack-network (~> 8.0)
+    python (>= 0.0.0)
+    selinux (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  openstack-dashboard (8.1.1)
+    apache2 (>= 0.0.0)
+    openstack-common (~> 8.0)
+  openstack-identity (8.1.5)
+    openstack-common (~> 8.0)
+  openstack-image (8.2.2)
+    openstack-common (~> 8.0)
+    openstack-identity (~> 8.0)
+  openstack-network (8.5.2)
+    openstack-common (~> 8.2)
+    openstack-identity (~> 8.0)
+  openstack-object-storage (8.3.1)
+    apt (>= 0.0.0)
+    memcached (>= 0.0.0)
+    openstack-common (~> 8.0)
+    statsd (>= 0.0.0)
+  openstack-ops-database (8.1.0)
+    database (>= 1.4.0)
+    mysql (>= 4.1.1)
+    openstack-common (~> 8.0)
+    postgresql (>= 3.0.0)
+  openstack-ops-messaging (8.0.1)
+    openstack-common (~> 8.0)
+    rabbitmq (>= 2.1.0)
+  openstack-orchestration (8.1.2)
+    openstack-common (~> 8.0)
+    openstack-identity (~> 8.0)
+  openstack-telemetry (8.4.1)
+    openstack-common (~> 8.1)
+    openstack-identity (~> 8.0)
+  pacman (1.1.1)
+  partial_search (1.0.8)
+  passenger_apache2 (2.2.0)
+    apache2 (>= 1.0.4)
+    build-essential (>= 0.0.0)
+  perl (1.2.4)
+  php (1.4.6)
+    build-essential (>= 0.0.0)
+    iis (>= 0.0.0)
+    mysql (>= 0.0.0)
+    windows (>= 0.0.0)
+    xml (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  postfix (3.3.1)
+  postgresql (3.4.1)
+    apt (>= 1.9.0)
+    build-essential (>= 0.0.0)
+    openssl (>= 0.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  rabbitmq (3.2.2)
+    erlang (>= 0.9.0)
+  resolver (1.1.4)
+  rsync (0.8.4)
+  rsyslog (1.12.2)
+  runit (1.5.10)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  rvm (0.9.2)
+    chef_gem (>= 0.0.0)
+    java (>= 0.0.0)
+  selinux (0.8.0)
+  simple_iptables (0.6.4)
+  sqlite (1.0.0)
+  statsd (0.0.1)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+  sudo (2.6.0)
+  supervisor (0.4.10)
+    python (>= 0.0.0)
+  sysctl (0.6.0)
+    ohai (>= 0.0.0)
+  ucspi-tcp (1.1.0)
+    build-essential (>= 0.0.0)
+  user (0.3.0)
+  windows (1.31.0)
+    chef_handler (>= 0.0.0)
+  xfs (1.1.0)
+  xml (1.2.6)
+    build-essential (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
+  yum (3.0.6)
+  yum-epel (0.3.6)
+    yum (~> 3.0)
+  yum-erlang_solutions (0.2.0)
+    yum (~> 3.0)
+  yum-mysql-community (0.1.8)
+    yum (>= 3.0.0)
