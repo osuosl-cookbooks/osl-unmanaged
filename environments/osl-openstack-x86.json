@@ -16,7 +16,7 @@
                     "ram_allocation_ratio": 5.0
                 },
                 "libvirt": {
-                    "bind_interface": "eth1",
+                    "bind_interface": "eth0",
                     "virt_type": "kvm"
                 },
                 "network": {
