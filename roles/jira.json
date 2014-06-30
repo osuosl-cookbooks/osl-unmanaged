@@ -10,7 +10,14 @@
   },
   "default_attributes": {
     "jira": {
-      "install_type": "standalone"
+      "install_type": "standalone",
+      "apache2": {
+        "ssl": {
+          "certificate_file": "/etc/jira/certs/_.osuosl.org.pem",
+          "key_file": "/etc/jira/certs/_.osuosl.org.key",
+          "chain_file": "/etc/jira/certs/gd-bundle.crt"
+        }
+      }
     },
     "java": {
       "install_flavor": "oracle",
