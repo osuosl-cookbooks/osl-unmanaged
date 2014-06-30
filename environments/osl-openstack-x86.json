@@ -17,7 +17,9 @@
                 },
                 "libvirt": {
                     "bind_interface": "eth0",
-                    "virt_type": "kvm"
+                    "virt_type": "kvm",
+                    "images_type": "lvm",
+                    "volume_group": "nova"
                 },
                 "network": {
                     "force_dhcp_release": "true",
