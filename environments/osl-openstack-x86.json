@@ -25,7 +25,9 @@
                     "force_dhcp_release": "true",
                     "multi_host": "true",
                     "public_interface": "eth0",
-                    "service_type": "nova"
+                    "service_type": "nova",
+                    "libvirt_inject_key": "false",
+                    "libvirt_inject_password": "false"
                 },
                 "networks": [
                     {
