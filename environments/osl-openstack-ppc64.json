@@ -1,6 +1,8 @@
 {
     "chef_type": "environment",
-    "cookbook_versions": {},
+    "cookbook_versions": {
+      "openstack-dashboard": "= 8.1.2"
+    },
     "default_attributes": {},
     "description": "The OSL Openstack Environment (pp64)",
     "json_class": "Chef::Environment",
