@@ -1,0 +1,10 @@
+{
+  "name": "nagios_dev",
+  "description": "role for working on nagios servers that disables sending notifications",
+  "override_attributes": {
+    "nagios": {
+      "contacts_databag": null,
+      "contactgroups_databag": null
+    }
+  }
+}
