@@ -48,10 +48,10 @@
                 "server_hostname": "openstack.osuosl.org", 
                 "ssl": {
                     "cert": "horizon.pem", 
-                    "cert_url": "/etc/pki/tls/certs/wildcard.pem", 
+                    "cert_url": "file:///etc/pki/tls/certs/wildcard.pem", 
                     "chain": "wildcard-bundle.crt", 
                     "key": "horizon.key", 
-                    "key_url": "/etc/pki/tls/private/wildcard.key"
+                    "key_url": "file:///etc/pki/tls/private/wildcard.key"
                 }
             }, 
             "db": {
