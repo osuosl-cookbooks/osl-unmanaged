@@ -1,7 +1,6 @@
 {
     "chef_type": "environment",
     "cookbook_versions": {
-      "openstack-dashboard": "= 8.1.2"
     },
     "default_attributes": {},
     "description": "The OSL Openstack Environment (pp64)",
@@ -56,9 +55,11 @@
             "dashboard": {
                 "keystone_default_role": "_member_",
                 "ssl": {
-                  "cert": "wildcard.pem",
-                  "key": "wildcard.key",
-                  "chain": "wildcard-bundle.crt"
+                  "cert": "horizon.pem",
+                  "cert_url": "file:///etc/pki/tls/certs/wildcard.pem",
+                  "chain": "wildcard-bundle.crt",
+                  "key": "horizon.key",
+                  "key_url": "file:///etc/pki/tls/private/wildcard.key"
                 }
             },
             "db": {
