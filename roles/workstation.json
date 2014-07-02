@@ -42,7 +42,7 @@
     },
     "resolver": {
       "nameservers": ["10.1.0.130", "10.1.0.131", "216.165.191.54"],
-      "search": "workstation.osuosl.bak. osuosl.bak. osuosl.org."
+      "search": "osuosl.org workstation.osuosl.bak osuosl.bak"
     }
   },
   "override_attributes": {
