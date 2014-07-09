@@ -40,7 +40,7 @@
                         "bridge_dev": "eth1",
                         "dns1": "140.211.166.130",
                         "dns2": "140.211.166.131",
-                        "ipv4_cidr": "192.168.56.0/22",
+                        "ipv4_cidr": "10.1.100.128/25",
                         "label": "private",
                         "multi_host": "T",
                         "network_size": "1024",
