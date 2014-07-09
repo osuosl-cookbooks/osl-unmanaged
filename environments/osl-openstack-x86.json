@@ -22,7 +22,6 @@
                     "ram_allocation_ratio": 5.0
                 },
                 "libvirt": {
-                    "bind_interface": "br42",
                     "images_type": "lvm",
                     "virt_type": "kvm",
                     "volume_group": "nova"
