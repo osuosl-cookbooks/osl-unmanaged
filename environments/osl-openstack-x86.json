@@ -3,22 +3,9 @@
     "cookbook_versions": {},
     "default_attributes": {
         "chef_client": {
-            "cron": {
-                "hour": "*",
-                "log_file": "/var/log/chef/client.log",
-                "minute": "*/30",
-                "use_cron_d": true
-            },
-            "init_style": "none"
-        },
-        "nagios": {
-            "allowed_hosts": [
-                "140.211.167.157",
-                "10.1.0.100"
-            ]
-        },
-        "omnibus_updater": {
-            "version": "11.12.0"
+            "config": {
+                "ssl_verify_mode": ":verify_peer"
+            }
         }
     },
     "description": "The OSL Openstack Environment (x86)",
