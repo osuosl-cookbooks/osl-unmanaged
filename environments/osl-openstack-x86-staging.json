@@ -90,12 +90,5 @@
             "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Havana",
             "uri": "http://repos.fedorapeople.org/repos/openstack/openstack-havana/epel-6/"
         }
-    },
-    "yum": {
-        "epel": {
-            "baseurl": "http://epel.osuosl.org/6/$basearch",
-            "enable": "true",
-            "gpgkey": "http://epel.osuosl.org/RPM-GPG-KEY-EPEL-6"
-        }
     }
 }
