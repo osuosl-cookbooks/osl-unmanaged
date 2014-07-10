@@ -1,6 +1,7 @@
 {
     "chef_type": "environment",
     "cookbook_versions": {
+        "mysql": "4.1.1"
     },
     "default_attributes": {
         "chef_client": {
