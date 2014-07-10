@@ -15,6 +15,10 @@
         "apache": {
             "contact": "hostmaster@osuosl.org"
         },
+        "mysql": {
+            "allow_remote_root": true,
+            "root_network_acl": "%"
+        },
         "openstack": {
             "compute": {
                 "config": {
@@ -22,6 +26,7 @@
                     "ram_allocation_ratio": 5.0
                 },
                 "libvirt": {
+                    "bind_interface": "eth1"
                     "images_type": "lvm",
                     "virt_type": "kvm",
                     "volume_group": "nova"
@@ -31,13 +36,13 @@
                     "libvirt_inject_key": "false",
                     "libvirt_inject_password": "false",
                     "multi_host": "true",
-                    "public_interface": "br108",
+                    "public_interface": "eth0",
                     "service_type": "nova"
                 },
                 "networks": [
                     {
                         "bridge": "br-tenant",
-                        "bridge_dev": "eth1",
+                        "bridge_dev": "eth2",
                         "dns1": "140.211.166.130",
                         "dns2": "140.211.166.131",
                         "ipv4_cidr": "192.168.56.0/22",
@@ -50,58 +55,17 @@
             },
             "dashboard": {
                 "keystone_default_role": "_member_",
-                "server_hostname": "openstack.osuosl.org",
-                "ssl": {
-                    "cert": "horizon.pem",
-                    "cert_url": "file:///etc/pki/tls/certs/wildcard.pem",
-                    "chain": "wildcard-bundle.crt",
-                    "key": "horizon.key",
-                    "key_url": "file:///etc/pki/tls/private/wildcard.key"
                 }
             },
-            "db": {
-                "block-storage": {
-                    "db_name": "cinder_x86",
-                    "username": "cinder_x86"
-                },
-                "compute": {
-                    "db_name": "nova_x86",
-                    "username": "nova_x86"
-                },
-                "dashboard": {
-                    "db_name": "horizon_x86",
-                    "username": "horizon_x86"
-                },
-                "identity": {
-                    "db_name": "keystone_x86",
-                    "username": "keystone_x86"
-                },
-                "image": {
-                    "db_name": "glance_x86",
-                    "username": "glance_x86"
-                },
-                "network": {
-                    "db_name": "neutron_x86",
-                    "username": "neutron_x86"
-                },
-                "orchestration": {
-                    "db_name": "heat_x86",
-                    "username": "heat_x86"
-                },
-                "telemetry": {
-                    "db_name": "ceilometer_x86",
-                    "username": "ceilometer_x86"
-                }
-            },
-            "developer_mode": false,
+            "developer_mode": true,
             "endpoints": {
-                "bind-host": "140.211.167.215",
+                "bind-host": "140.211.167.174",
                 "db": {
-                    "host": "140.211.15.221"
+                    "host": "10.1.0.208"
                 },
-                "host": "140.211.167.215",
+                "host": "140.211.167.174",
                 "mq": {
-                    "host": "140.211.167.215"
+                    "host": "10.1.0.208"
                 }
             },
             "image": {
@@ -115,11 +79,7 @@
             },
             "release": "havanah",
             "secret": {
-                "db_passwords_data_bag": "x86_db_passwords",
                 "key_path": "/etc/chef/encrypted_data_bag_secret",
-                "secrets_data_bag": "x86_secrets",
-                "service_passwords_data_bag": "x86_service_passwords",
-                "user_passwords_data_bag": "x86_user_passwords"
             },
             "sysctl": {
                 "net.ipv4.conf.all.rp_filter": "0",
