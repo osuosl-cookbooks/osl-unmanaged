@@ -26,7 +26,7 @@
                     "ram_allocation_ratio": 5.0
                 },
                 "libvirt": {
-                    "bind_interface": "eth1"
+                    "bind_interface": "eth1",
                     "images_type": "lvm",
                     "virt_type": "kvm",
                     "volume_group": "nova"
