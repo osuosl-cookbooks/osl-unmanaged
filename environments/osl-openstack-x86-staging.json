@@ -10,7 +10,7 @@
     },
     "description": "The OSL Openstack Staging Environment (x86)",
     "json_class": "Chef::Environment",
-    "name": "osl-openstack-x86-stagin",
+    "name": "osl-openstack-x86-staging",
     "override_attributes": {
         "apache": {
             "contact": "hostmaster@osuosl.org"
