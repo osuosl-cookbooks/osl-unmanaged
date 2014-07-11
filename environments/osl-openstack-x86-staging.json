@@ -28,7 +28,7 @@
                     "ram_allocation_ratio": 5.0
                 },
                 "libvirt": {
-                    "bind_interface": "eth1",
+                    "bind_interface": "eth2",
                     "virt_type": "qemu"
                 },
                 "network": {
@@ -36,13 +36,13 @@
                     "libvirt_inject_key": "false",
                     "libvirt_inject_password": "false",
                     "multi_host": "true",
-                    "public_interface": "br108",
+                    "public_interface": "eth0",
                     "service_type": "nova"
                 },
                 "networks": [
                     {
                         "bridge": "br-tenant",
-                        "bridge_dev": "eth2",
+                        "bridge_dev": "eth1",
                         "dns1": "140.211.166.130",
                         "dns2": "140.211.166.131",
                         "ipv4_cidr": "192.168.56.0/22",
