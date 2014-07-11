@@ -76,7 +76,7 @@
                     "cirros"
                 ]
             },
-            "release": "havanah",
+            "release": "icehouse",
             "secret": {
                 "key_path": "/etc/chef/encrypted_data_bag_secret"
             },
@@ -86,8 +86,8 @@
                 "net.ipv4.ip_forward": "1"
             },
             "yum": {
-                "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Havana",
-                "uri": "http://repos.fedorapeople.org/repos/openstack/openstack-havana/epel-6/"
+                "repo-key": "https://raw.githubusercontent.com/redhat-openstack/rdo-release/master/RPM-GPG-KEY-RDO-Icehouse",
+                "uri": "http://repos.fedorapeople.org/repos/openstack/openstack-icehouse/epel-6/"
             }
         },
         "yum": {
