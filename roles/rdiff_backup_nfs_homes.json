@@ -12,7 +12,7 @@
       "client": {
         "jobs": {
           "default": {
-            "destination-dir": "/data/rdiff-backup-nfs-homes",
+            "destination-dir": "/data/rdiff-backup-nfs-homes"
           },
           "/data/homes": {
             "retention-period": "2D"
