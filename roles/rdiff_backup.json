@@ -13,7 +13,7 @@
         "jobs": {
           "default": {
             "user": "rdiff-backup-client",
-            "destination-dir": "/data/rdiff-backup"
+            "destination-dir": "/data/rdiff-backup",
             "retention-period": "3M",
             "exclude-dirs": [
               "/var/cache",

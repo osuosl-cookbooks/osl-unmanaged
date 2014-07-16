@@ -7,7 +7,7 @@
   "run_list": [
     "role[rdiff_backup]"
   ],
-  "default_attributes": {},
+  "default_attributes": {
     "rdiff-backup": {
       "client": {
         "jobs": {
