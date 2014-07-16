@@ -1,21 +1,25 @@
 {
+  "name": "rdiff_backup_drupal",
+  "description": "Generic backup role for Drupal project servers",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
   "env_run_lists": {},
   "run_list": [
     "role[rdiff_backup]"
   ],
-  "chef_type": "role",
   "default_attributes": {},
-  "override_attributes": {
     "rdiff-backup": {
       "client": {
-        "user": "rdiff-backup-client",
-        "destination-dir": "/data/rdiff-backup-drupal",
-        "source-dirs": ["/etc","/var","/home"],
-        "retention-period": "3M"
+        "jobs": {
+          "default": {
+            "destination-dir": "/data/rdiff-backup-drupal",
+            "retention-period": "3M"
+          },
+          "/etc": {},
+          "/home": {},
+          "/var": {}
+        }
       }
     }
-  },
-  "json_class": "Chef::Role",
-  "description": "Generic backup role for Drupal servers",
-  "name": "rdiff_backup_drupal"
+  }
 }

@@ -1,40 +1,40 @@
 {
+  "name": "rdiff_backup",
+  "description": "Generic role for all servers to be backed up with rdiff-backup",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
   "env_run_lists": {},
   "run_list": [
     "recipe[rdiff-backup::client]"
   ],
-  "chef_type": "role",
-  "override_attributes": {},
   "default_attributes": {
     "rdiff-backup": {
       "client": {
-        "retention-period": "3M",
-        "source-dirs": [
-          "/root",
-          "/home",
-          "/etc",
-          "/opt",
-          "/var",
-          "/srv"
-        ],
-        "nagios-maxchange": 10000,
-        "exclude-dirs": [
-          "/var/cache",
-          "/var/cfengine",
-          "/var/chef",
-          "/var/lib/denyhosts",
-          "/var/lib/slocate",
-          "/var/lib/mysql",
-          "/var/log",
-          "/var/spool",
-          "/var/tmp"
-        ],
-        "user": "rdiff-backup-client",
-        "destination-dir": "/data/rdiff-backup"
+        "jobs": {
+          "default": {
+            "user": "rdiff-backup-client",
+            "destination-dir": "/data/rdiff-backup"
+            "retention-period": "3M",
+            "exclude-dirs": [
+              "/var/cache",
+              "/var/cfengine",
+              "/var/chef",
+              "/var/lib/denyhosts",
+              "/var/lib/slocate",
+              "/var/lib/mysql",
+              "/var/log",
+              "/var/spool",
+              "/var/tmp"
+            ]
+          },
+          "/etc": {},
+          "/home": {},
+          "/opt": {},
+          "/root": {},
+          "/srv": {},
+          "/var": {}
+        }
       }
     }
-  },
-  "json_class": "Chef::Role",
-  "description": "role for all servers to be backed up with rdiff-backup",
-  "name": "rdiff_backup"
+  }
 }
