@@ -13,9 +13,10 @@
         "jobs": {
           "default": {
             "destination-dir": "/data/rdiff-backup-nfs-homes",
-            "retention-period": "2D"
           },
-          "/data/homes": {}
+          "/data/homes": {
+            "retention-period": "2D"
+          }
         }
       }
     }
