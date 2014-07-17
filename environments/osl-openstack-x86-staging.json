@@ -66,6 +66,7 @@
                     "host": "10.1.0.208"
                 },
                 "compute-vnc-bind": {
+                    "host": "nil",
                     "interface": "eth2"
                 }
             },
