@@ -64,10 +64,6 @@
                 "host": "140.211.167.174",
                 "mq": {
                     "host": "10.1.0.208"
-                },
-                "compute-vnc-bind": {
-                    "host": "nil",
-                    "interface": "eth2"
                 }
             },
             "image": {
