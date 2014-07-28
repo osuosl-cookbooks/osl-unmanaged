@@ -1,7 +1,8 @@
 {
     "chef_type": "environment",
     "cookbook_versions": {
-        "mysql": "4.1.1"
+        "mysql": "4.1.1",
+        "osl-openstack": "1.0.0"
     },
     "default_attributes": {
         "chef_client": {
