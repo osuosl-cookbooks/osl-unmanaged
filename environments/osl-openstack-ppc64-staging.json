@@ -1,7 +1,8 @@
 {
     "chef_type": "environment",
     "cookbook_versions": {
-        "mysql": "4.1.1"
+        "mysql": "4.1.1",
+        "osl-openstack": "1.0.0"
     },
     "default_attributes": {
         "chef_client": {
@@ -34,7 +35,7 @@
                 },
                 "networks": [
                     {
-                        "bridge": "br-private",
+                        "bridge": "br-tenant",
                         "bridge_dev": "enP2p1s0f3",
                         "dns1": "140.211.166.130",
                         "dns2": "140.211.166.131",
@@ -114,7 +115,7 @@
                     "ubuntu-14.04"
                 ]
             },
-            "release": "havanah",
+            "release": "icehouse",
             "secret": {
                 "db_passwords_data_bag": "ppc64_staging_db_passwords",
                 "key_path": "/etc/chef/encrypted_data_bag_secret",
