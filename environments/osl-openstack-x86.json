@@ -99,18 +99,64 @@
             "developer_mode": false,
             "endpoints": {
                 "bind-host": "140.211.167.215",
+                "block-storage-api": {
+                    "scheme": "https"
+                },
+
+                "compute-api": {
+                    "scheme": "https"
+                },
+                "compute-ec2-api": {
+                    "scheme": "http"
+                },
+                "compute-ec2-admin": {
+                    "scheme": "https"
+                },
                 "compute-novnc": {
                     "scheme": "https"
                 },
+                "compute-vnc": {
+                    "scheme": "https"
+                },
                 "compute-xvpvnc": {
+                    "scheme": "https"
+                },
+                "database-api": {
                     "scheme": "https"
                 },
                 "db": {
                     "host": "140.211.15.221"
                 },
                 "host": "140.211.167.215",
+                "identity-api": {
+                    "scheme": "https"
+                },
+                "identity-admin": {
+                    "scheme": "https"
+                },
+                "image-api": {
+                    "scheme": "https"
+                },
+                "image-registry": {
+                    "scheme": "https"
+                },
                 "mq": {
                     "host": "10.1.0.238"
+                },
+                "object-storage-api": {
+                    "scheme": "https"
+                },
+                "orchestration-api": {
+                    "scheme": "https"
+                },
+                "orchestration-api-cfn": {
+                    "scheme": "https"
+                },
+                "orchestration-api-cloudwatch": {
+                    "scheme": "https"
+                },
+                "telemetry-api": {
+                    "scheme": "https"
                 }
             },
             "image": {
