@@ -99,6 +99,12 @@
             "developer_mode": false,
             "endpoints": {
                 "bind-host": "140.211.167.215",
+                "compute-novnc": {
+                    "scheme": "https"
+                },
+                "compute-xvpvnc": {
+                    "scheme": "https"
+                },
                 "db": {
                     "host": "140.211.15.221"
                 },
