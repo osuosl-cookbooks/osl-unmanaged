@@ -1,4 +1,4 @@
-site :opscode
+source 'https://api.berkshelf.com'
 
 cookbook "apache2"
 cookbook "apt"
@@ -59,7 +59,9 @@ cookbook "rsync"
 cookbook "rsyslog"
 cookbook "runit"
 cookbook "rvm"
-cookbook "selinux"
+cookbook "selinux",
+  github: "skottler/selinux",
+  ref: "5c92a6dcbf"
 cookbook "simple_iptables"
 cookbook "sqlite"
 cookbook "sudo"

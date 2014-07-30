@@ -23,6 +23,9 @@ DEPENDENCIES
   iptables
   java
   jenkins
+  jira
+    git: git://github.com/bflad/chef-jira.git
+    revision: da71ddbf910ff78e94e342babf996d0e9c78dab0
   line
   logrotate
   logstash
@@ -35,8 +38,10 @@ DEPENDENCIES
   monit
   munin
   mysql
+  mysql_connector
   nfs
   nginx
+  nrpe
   ntp
   ohai
   omnibus_updater
@@ -105,6 +110,9 @@ DEPENDENCIES
   runit
   rvm
   selinux
+    git: git://github.com/skottler/selinux.git
+    revision: 5c92a6dcbf3c352fac7275dea3529ba5183b1d86
+    ref: 5c92a6d
   simple_iptables
   sqlite
   sudo
@@ -188,6 +196,14 @@ GRAPH
     apt (~> 2.0)
     runit (~> 1.5)
     yum (~> 3.0)
+  jira (2.0.1)
+    apache2 (>= 0.0.0)
+    ark (>= 0.0.0)
+    database (>= 0.0.0)
+    java (>= 0.0.0)
+    mysql (>= 0.0.0)
+    mysql_connector (>= 0.0.0)
+    postgresql (>= 0.0.0)
   libarchive (0.4.0)
     build-essential (~> 2.0)
   line (0.5.1)
@@ -219,6 +235,7 @@ GRAPH
   mysql-chef_gem (0.0.2)
     build-essential (>= 0.0.0)
     mysql (>= 0.0.0)
+  mysql_connector (0.7.2)
   nfs (2.0.0)
     line (>= 0.0.0)
   nginx (2.7.4)
@@ -228,6 +245,9 @@ GRAPH
     ohai (~> 2.0)
     runit (~> 1.2)
     yum-epel (~> 0.3)
+  nrpe (1.4.0)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   ntp (1.6.2)
   ohai (2.0.1)
   omnibus_updater (1.0.0)
@@ -318,7 +338,7 @@ GRAPH
   rvm (0.9.2)
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
-  selinux (0.8.0)
+  selinux (0.8.1)
   simple_iptables (0.6.4)
   sqlite (1.0.0)
   statsd (0.0.1)
