@@ -5,7 +5,13 @@
     "recipe[orvsd_central]"
   ],
   "chef_type": "role",
-  "override_attributes": {},
+  "override_attributes": {
+      "orvsd":{
+          "db": {
+              "host": "db1.orvsd.org"
+          }
+      }
+  },
   "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "orvsd py web server role",
