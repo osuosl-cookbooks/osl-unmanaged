@@ -2,7 +2,7 @@
     "chef_type": "environment",
     "cookbook_versions": {
         "mysql": "4.1.1",
-        "osl-openstack": "1.0.0"
+        "osl-openstack": "1.0.1"
     },
     "default_attributes": {
         "chef_client": {
@@ -127,10 +127,6 @@
               "net.ipv4.conf.all.rp_filter": "0",
               "net.ipv4.conf.default.rp_filter": "0",
               "net.ipv4.ip_forward": "1"
-            },
-            "yum": {
-                "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Icehouse",
-                "uri": "http://repos.fedorapeople.org/repos/openstack/openstack-icehouse/epel-6/"
             }
         },
         "yum": {
