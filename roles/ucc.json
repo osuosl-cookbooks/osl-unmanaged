@@ -7,8 +7,8 @@
     "recipe[osl-apache::munin]",
     "recipe[osl-apache::mysql]",
     "role[apache]",
-    "role[rdiff_backup]",
-    "role[project_projects]"
+    "role[project_projects]",
+    "role[rdiff_backup]"
   ],
   "env_run_lists": {
   },
