@@ -13,7 +13,7 @@
         "jobs": {
           "default": {
             "destination-dir": "/data/rdiff-backup-drupal",
-            "retention-period": "3M"
+            "active": false
           },
           "/etc": {},
           "/home": {},

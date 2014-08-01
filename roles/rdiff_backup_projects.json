@@ -1,0 +1,21 @@
+{
+  "name": "rdiff_backup_projects",
+  "description": "Generic backup role for other project servers",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "env_run_lists": {},
+  "run_list": [
+    "role[rdiff_backup]"
+  ],
+  "default_attributes": {
+    "rdiff-backup": {
+      "client": {
+        "jobs": {
+          "default": {
+            "destination-dir": "/data/rdiff-backup-projects"
+          }
+        }
+      }
+    }
+  }
+}
