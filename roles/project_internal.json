@@ -1,16 +1,19 @@
 {
+  "name": "project_internal",
+  "description": "Generic role for internal OSL servers",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
   "env_run_lists": {},
   "run_list": [],
-  "chef_type": "role",
-  "override_attributes": {},
   "default_attributes": {
     "rdiff-backup": {
       "client": {
-        "destination-dir": "/data/rdiff-backup-internal"
+        "jobs": {
+          "default": {
+            "destination-dir": "/data/rdiff-backup-internal"
+          }
+        }
       }
     }
-  },
-  "json_class": "Chef::Role",
-  "description": "role for all internal servers",
-  "name": "project_internal"
+  }
 }

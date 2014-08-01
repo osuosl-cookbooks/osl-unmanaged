@@ -1,10 +1,23 @@
 {
+  "name": "project_drupal",
+  "description": "Generic role for Drupal project servers",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
   "env_run_lists": {},
   "run_list": [],
-  "chef_type": "role",
-  "default_attributes": {},
-  "override_attributes": {},
-  "json_class": "Chef::Role",
-  "description": "Role for all Drupal servers",
-  "name": "project_drupal"
+  "default_attributes": {
+    "rdiff-backup": {
+      "client": {
+        "jobs": {
+          "default": {
+            "destination-dir": "/data/rdiff-backup-drupal",
+            "active": false
+          },
+          "/etc": {},
+          "/home": {},
+          "/var": {}
+        }
+      }
+    }
+  }
 }

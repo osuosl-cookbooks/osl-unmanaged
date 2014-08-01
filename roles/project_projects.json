@@ -1,16 +1,19 @@
 {
+  "name": "project_projects",
+  "description": "Role for all project servers that don't fit into any other project categories",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
   "env_run_lists": {},
   "run_list": [],
-  "chef_type": "role",
-  "override_attributes": {},
   "default_attributes": {
     "rdiff-backup": {
       "client": {
-        "destination-dir": "/data/rdiff-backup-projects"
+        "jobs": {
+          "default": {
+            "destination-dir": "/data/rdiff-backup-projects"
+          }
+        }
       }
     }
-  },
-  "json_class": "Chef::Role",
-  "description": "role for all project servers that don't fit into any other project categories",
-  "name": "project_projects"
+  }
 }

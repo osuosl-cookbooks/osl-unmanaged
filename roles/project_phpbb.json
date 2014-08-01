@@ -1,16 +1,19 @@
 {
+  "name": "project_phpbb",
+  "description": "Generic role for phpBB project servers",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
   "env_run_lists": {},
   "run_list": [],
-  "chef_type": "role",
-  "override_attributes": {},
   "default_attributes": {
     "rdiff-backup": {
       "client": {
-        "destination-dir": "/data/rdiff-backup-phpbb"
+        "jobs": {
+          "default": {
+            "destination-dir": "/data/rdiff-backup-phpbb"
+          }
+        }
       }
     }
-  },
-  "json_class": "Chef::Role",
-  "description": "role for all phpBB servers",
-  "name": "project_phpbb"
+  }
 }
