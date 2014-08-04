@@ -3,9 +3,9 @@
   "run_list": [
     "recipe[base::mailhandler]",
     "recipe[aliases]",
+    "recipe[base::packages]",
     "recipe[base::denyhosts]",
     "recipe[base::environment]",
-    "recipe[base::packages]",
     "recipe[chef-client::cron]",
     "recipe[chef-client::delete_validation]",
     "recipe[openssh]",
