@@ -63,7 +63,7 @@
                 },
                 "host": "10.1.0.208",
                 "mq": {
-                    "host": "10.1.0.238"
+                    "host": "10.1.0.208"
                 },
                 "identity-api": {
                     "uri": "http://otest-admin.osuosl.bak:35357/v2.0"
