@@ -53,7 +53,8 @@
                 ]
             },
             "dashboard": {
-                "keystone_default_role": "_member_"
+                "keystone_default_role": "_member_",
+                "use_ssl": false
             },
             "developer_mode": true,
             "endpoints": {
