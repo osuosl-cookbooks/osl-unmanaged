@@ -13,6 +13,7 @@
         }
     },  
     "run_list": [
+        "recipe[osl-openstack::controller]",
         "role[openstack_base]",
         "recipe[openstack-ops-messaging::server]",
         "recipe[openstack-identity::server]",
@@ -37,6 +38,7 @@
         "recipe[openstack-block-storage::api]",
         "recipe[openstack-block-storage::scheduler]",
         "recipe[openstack-block-storage::volume]",
+        "certificate::wildcard",
         "recipe[openstack-compute::nova-cert]",
         "recipe[openstack-compute::vncproxy]",
         "recipe[openstack-dashboard::server]"
