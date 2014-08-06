@@ -38,7 +38,7 @@
         "recipe[openstack-block-storage::api]",
         "recipe[openstack-block-storage::scheduler]",
         "recipe[openstack-block-storage::volume]",
-        "certificate::wildcard",
+        "recipe[certificate::wildcard]",
         "recipe[openstack-compute::nova-cert]",
         "recipe[openstack-compute::vncproxy]",
         "recipe[openstack-dashboard::server]"
