@@ -107,12 +107,14 @@
                 "upload_image": {
                     "debian-7": "http://ftp.osuosl.org/pub/osl/openpower/openstack/debian-7.qcow2",
                     "fedora-20": "http://ftp.osuosl.org/pub/osl/openpower/openstack/fedora-20.qcow2",
-                    "ubuntu-14.04": "http://ftp.osuosl.org/pub/osl/openpower/openstack/ubuntu-14.04.qcow2"
+                    "ubuntu-14.04": "http://ftp.osuosl.org/pub/osl/openpower/openstack/ubuntu-14.04.qcow2",
+                    "ubuntu-14.04-le": "http://ftp.osuosl.org/pub/osl/openpower/openstack/ubuntu-14.04-le.qcow2"
                 },
                 "upload_images": [
                     "debian-7",
                     "fedora-20",
-                    "ubuntu-14.04"
+                    "ubuntu-14.04",
+                    "ubuntu-14.04-le"
                 ]
             },
             "release": "icehouse",
