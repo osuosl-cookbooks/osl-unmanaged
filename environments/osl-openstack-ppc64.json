@@ -112,7 +112,7 @@
                     "ubuntu-14.04-le"
                 ]
             },
-            "release": "release",
+            "release": "icehouse",
             "secret": {
                 "db_passwords_data_bag": "ppc64_db_passwords",
                 "key_path": "/etc/chef/encrypted_data_bag_secret",
