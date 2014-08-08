@@ -85,7 +85,7 @@
                     "uri": "http://otest-admin.osuosl.bak:6081/console"
                 },
                 "compute-novnc": {
-                    "uri": "http://otest-admin.osuosl.bak:6080/vnc_auto.html"
+                    "uri": "https://otest-admin.osuosl.bak:6080/vnc_auto.html"
                 },
                 "image-api": {
                     "uri": "http://otest-admin.osuosl.bak:9292/v2"
