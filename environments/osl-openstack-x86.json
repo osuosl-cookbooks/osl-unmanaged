@@ -2,7 +2,7 @@
     "chef_type": "environment",
     "cookbook_versions": {
         "mysql": "4.1.1",
-        "osl-openstack": "1.0.0"
+        "osl-openstack": "1.0.5"
     },
     "default_attributes": {
         "chef_client": {
@@ -107,46 +107,46 @@
                     "host": "10.1.0.238"
                 },
                 "identity-api": {
-                    "uri": "https://openstack.osuosl.org:35357/v2.0"
+                    "uri": "http://openstack.osuosl.org:35357/v2.0"
                 },
                 "identity-admin": {
-                    "uri": "https://openstack.osuosl.org:5000/v2.0"
+                    "uri": "http://openstack.osuosl.org:5000/v2.0"
                 },
                 "compute-api": {
-                    "uri": "https://openstack.osuosl.org:8774/v2/%(tenant_id)s"
+                    "uri": "http://openstack.osuosl.org:8774/v2/%(tenant_id)s"
                 },
                 "compute-ec2-api": {
-                    "uri": "https://openstack.osuosl.org:8773/services/Cloud"
+                    "uri": "http://openstack.osuosl.org:8773/services/Cloud"
                 },
                 "compute-ec2-admin": {
-                    "uri": "https://openstack.osuosl.org:8773/services/Admin"
+                    "uri": "http://openstack.osuosl.org:8773/services/Admin"
                 },
                 "compute-xvpvnc": {
-                    "uri": "https://openstack.osuosl.org:6081/console"
+                    "uri": "http://openstack.osuosl.org:6081/console"
                 },
                 "compute-novnc": {
-                    "uri": "https://openstack.osuosl.org:6080/vnc_auto.html"
+                    "uri": "http://openstack.osuosl.org:6080/vnc_auto.html"
                 },
                 "image-api": {
-                    "uri": "https://openstack.osuosl.org:9292/v2"
+                    "uri": "http://openstack.osuosl.org:9292/v2"
                 },
                 "image-registry": {
-                    "uri": "https://openstack.osuosl.org:9191/v2"
+                    "uri": "http://openstack.osuosl.org:9191/v2"
                 },
                 "block-storage-api": {
-                    "uri": "https://openstack.osuosl.org:8776/v1/%(tenant_id)s"
+                    "uri": "http://openstack.osuosl.org:8776/v1/%(tenant_id)s"
                 },
                 "telemetry-api": {
-                    "uri": "https://openstack.osuosl.org:9000/v1"
+                    "uri": "http://openstack.osuosl.org:9000/v1"
                 },
                 "orchestration-api": {
-                    "uri": "https://openstack.osuosl.org:8004//v1/%(tenant_id)s"
+                    "uri": "http://openstack.osuosl.org:8004/v1/%(tenant_id)s"
                 },
                 "orchestration-api-cfn": {
-                    "uri": "https://openstack.osuosl.org:8000/v1"
+                    "uri": "http://openstack.osuosl.org:8000/v1"
                 },
                 "orchestration-api-cloudwatch": {
-                    "uri": "https://openstack.osuosl.org:8003/v1"
+                    "uri": "http://openstack.osuosl.org:8003/v1"
                 }
             },
             "image": {
