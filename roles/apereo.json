@@ -39,6 +39,13 @@
           "owner": "apache",
           "group": "apache"
         }
+      },
+      {
+        "wwwsakaiprojectorg": {
+          "cert_path": "/etc/pki/tls",
+          "owner": "apache",
+          "group": "apache"
+        }
       }
     ]
   }
