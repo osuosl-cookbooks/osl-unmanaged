@@ -40,7 +40,7 @@
     "monit": "= 0.7.1",
     "monitoring": "= 0.2.3",
     "mysql": "= 4.0.14",
-    "nagios": "= 4.3.4",
+    "nagios": "= 4.4.1",
     "networking_basic": "= 0.0.5",
     "nfs": "= 1.0.0",
     "nginx": "= 2.6.2",
