@@ -6,10 +6,8 @@
   ],
   "chef_type": "role",
   "override_attributes": {
-      "orvsd":{
-          "db": {
-              "host": "db1.orvsd.org"
-          }
+      "orvsd_central":{
+          "vhost": "central.orvsd.org"
       }
   },
   "default_attributes": {},
