@@ -34,9 +34,6 @@
   "default_attributes": {
     "certificate": [
       {
-        "self": null
-      },
-      {
         "wwwapereoorg": {
           "cert_path": "/etc/ssl",
           "owner": "apache",
