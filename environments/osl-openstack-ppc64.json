@@ -3,7 +3,7 @@
     "cookbook_versions": {
         "munin": "= 1.4.3",
         "mysql": "4.1.1",
-        "nagios": "= 4.4.0",
+        "nagios": "= 4.4.1",
         "osl-munin": "= 0.1.2",
         "osl-openstack": "1.0.4"
     },
