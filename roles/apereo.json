@@ -37,14 +37,18 @@
         "wwwapereoorg": {
           "cert_path": "/etc/pki/tls",
           "owner": "apache",
-          "group": "apache"
+          "group": "apache",
+          "cert_file": "www.apereo.org.pem",
+          "key_file": "www.apereo.org.key"
         }
       },
       {
         "wwwsakaiprojectorg": {
           "cert_path": "/etc/pki/tls",
           "owner": "apache",
-          "group": "apache"
+          "group": "apache",
+          "cert_file": "www.sakaiproject.org.pem",
+          "key_file": "www.sakaiproject.org.key"
         }
       }
     ]
