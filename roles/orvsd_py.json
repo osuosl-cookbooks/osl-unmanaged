@@ -2,7 +2,8 @@
   "env_run_lists": {},
   "run_list": [
     "role[base_managed]",
-    "recipe[orvsd_central]"
+    "recipe[orvsd_central]",
+    "recipe[orvsd_central::gluster]"
   ],
   "chef_type": "role",
   "override_attributes": {
