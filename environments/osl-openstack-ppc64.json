@@ -1,10 +1,20 @@
 {
     "chef_type": "environment",
     "cookbook_versions": {
+        "munin": "= 1.4.3",
         "mysql": "4.1.1",
+        "nagios": "= 4.4.0",
+        "osl-munin": "= 0.1.2",
         "osl-openstack": "1.0.4"
     },
-    "default_attributes": {},
+    "default_attributes": {
+        "nagios": {
+          "allowed_hosts": [
+            "140.211.167.157",
+            "10.1.0.100"
+          ]
+        }
+    },
     "description": "The OSL Openstack Environment (pp64)",
     "json_class": "Chef::Environment",
     "name": "osl-openstack-ppc64",
