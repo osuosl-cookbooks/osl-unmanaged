@@ -35,7 +35,7 @@
     "certificate": [
       {
         "wwwapereoorg": {
-          "cert_path": "/etc/ssl",
+          "cert_path": "/etc/pki/tls",
           "owner": "apache",
           "group": "apache"
         }
