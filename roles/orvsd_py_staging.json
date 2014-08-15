@@ -10,9 +10,11 @@
       "orvsd_central":{
           "data_bag": "orvsd_central_staging",
           "debug": "True",
-          "moodle2-masters": {
-              "mountpath": "/data/moodle2-masters",
-              "remotepath": "fs1.orvsd.bak:/moodle2-masters"
+          "gluster": {
+              "moodle2-masters": {
+                  "mountpath": "/data/moodle2-masters",
+                  "remotepath": "fs1.orvsd.bak:/moodle2-masters"
+              }
           },
           "vhost": "central-staging.orvsd.org"
       }

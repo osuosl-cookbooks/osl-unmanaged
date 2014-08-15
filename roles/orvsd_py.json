@@ -8,9 +8,11 @@
   "chef_type": "role",
   "override_attributes": {
       "orvsd_central":{
-          "moodle2-masters": {
-              "mountpath": "/data/moodle2-masters",
-              "remotepath": "fs1.orvsd.bak:/moodle2-masters"
+          "gluster": {
+              "moodle2-masters": {
+                  "mountpath": "/data/moodle2-masters",
+                  "remotepath": "fs1.orvsd.bak:/moodle2-masters"
+              }
           },
           "vhost": "central.orvsd.org"
       }
