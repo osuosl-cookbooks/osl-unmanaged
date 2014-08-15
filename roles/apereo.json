@@ -16,7 +16,8 @@
     "recipe[git]",
     "recipe[mysql::client]",
     "recipe[osl-sudo::apereo]",
-    "recipe[osl-drupal::drush]"
+    "recipe[osl-drupal::drush]",
+    "recipe[certificate::manage_by_attributes]"
   ],
   "override_attributes": {
     "php": {
@@ -31,5 +32,17 @@
   "description": "apereo.osuosl.org role",
   "name": "apereo",
   "default_attributes": {
+    "certificate": [
+      {
+        "self": null
+      },
+      {
+        "wwwapereoorg": {
+          "cert_path": "/etc/ssl",
+          "owner": "apache",
+          "group": "apache"
+        }
+      }
+    ]
   }
 }
