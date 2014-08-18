@@ -60,7 +60,7 @@
         },
         {
           "ip": "127.0.0.1",
-          "aliases": "www.apereo.org"
+          "aliases": "www.apereo.org apereo.org"
         }
       ]
     }
