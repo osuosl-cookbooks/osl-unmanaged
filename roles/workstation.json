@@ -59,8 +59,8 @@
           "aliases": "theoc moodle1 moodle2 moodle3"
         },
         {
-          "ip": "192.168.0.2",
-          "aliases": "controller"
+          "ip": "127.0.0.1",
+          "aliases": "www.apereo.org"
         }
       ]
     }
