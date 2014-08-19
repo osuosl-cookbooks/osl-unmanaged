@@ -56,7 +56,7 @@
       "hostlist": [
         {
           "ip": "127.0.0.1",
-          "aliases": "theoc moodle1 moodle2 moodle3"
+          "aliases": "orvsd_central school22 school25 school27"
         }
       ]
     }
