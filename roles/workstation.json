@@ -51,9 +51,6 @@
         "users": ["osuadmin"],
         "groups": []
       }
-    },
-    "workstation": {
-      "hostlist": []
     }
   },
   "chef_type": "role",
