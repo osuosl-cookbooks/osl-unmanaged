@@ -53,16 +53,7 @@
       }
     },
     "workstation": {
-      "hostlist": [
-        {
-          "ip": "127.0.0.1",
-          "aliases": "theoc moodle1 moodle2 moodle3"
-        },
-        {
-          "ip": "127.0.0.1",
-          "aliases": "www.apereo.org apereo.org"
-        }
-      ]
+      "hostlist": []
     }
   },
   "chef_type": "role",
