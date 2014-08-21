@@ -138,3 +138,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/whats-fresh.git
 
 [osuosl-cookbooks/workstation]
 checkout = git clone git@github.com:osuosl-cookbooks/workstation.git
+
+[osuosl-cookbooks/yum-osuosl]
+checkout = git clone git@github.com:osuosl-cookbooks/yum-osuosl.git
