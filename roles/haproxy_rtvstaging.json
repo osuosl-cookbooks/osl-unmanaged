@@ -1,0 +1,26 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[certificate::wildcard]",
+    "recipe[osl-haproxy]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+      "haproxy": {
+          "enable_ssl": "true",
+          "member_port": "80",
+          "ssl_member_port": "443",
+          "ssl_incoming_port": "443 ssl crt /etc/pki/tls/certs/wildcard.pem ciphers RC4-SHA:HIGH:!aNULL:!MD5",
+          "members": [
+            {
+              "hostname": "rtvstaging-web.osuosl.org",
+              "ipaddress": "140.211.15.30"
+            }
+          ]
+      }
+   },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "haproxy configuration for RTV Staging",
+  "name": "haproxy_rtvstaging"
+}
