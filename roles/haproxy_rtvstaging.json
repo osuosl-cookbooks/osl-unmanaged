@@ -23,7 +23,7 @@
             "cert_file": "wildcard.pem",
             "key_file": "wildcard.key",
             "chain_file": "wildcard-bundle.crt",
-            "combined_file": "true"
+            "combined_file": true
         }
       } ]
    },
