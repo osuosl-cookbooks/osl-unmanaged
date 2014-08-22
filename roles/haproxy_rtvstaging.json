@@ -1,7 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[certificate::wildcard]",
+    "recipe[certificate::manage_by_attributes]",
     "recipe[osl-haproxy]"
   ],
   "chef_type": "role",
@@ -17,7 +17,15 @@
               "ipaddress": "140.211.15.30"
             }
           ]
-      }
+      },
+      "certificate": [ {
+        "wildcard": {
+            "cert_file": "wildcard.pem",
+            "key_file": "wildcard.key",
+            "chain_file": "wildcard-bundle.crt",
+            "combined_file": "true"
+        }
+      } ]
    },
   "default_attributes": {},
   "json_class": "Chef::Role",
