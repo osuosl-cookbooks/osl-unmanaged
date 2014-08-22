@@ -25,7 +25,7 @@
     "generic-vhosts": "= 0.1.31",
     "goblin": "= 0.1.1",
     "git": "= 4.0.2",
-    "haproxy": "= 1.6.2",
+    "haproxy": "= 1.6.4",
     "iptables": "= 0.13.0",
     "java": "= 1.22.0",
     "jenkins": "= 0.8.0",
