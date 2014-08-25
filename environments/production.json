@@ -53,7 +53,7 @@
     "openssl": "= 1.1.0",
     "orvsd-web": "= 0.2.1",
     "orvsd_central": "= 1.0.2",
-    "osl-apache": "= 1.0.8",
+    "osl-apache": "= 1.0.9",
     "osl-haproxy": "= 1.0.0",
     "osl-munin": "= 0.1.2",
     "osl-mysql": "= 0.1.0",
