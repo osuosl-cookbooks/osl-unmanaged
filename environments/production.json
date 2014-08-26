@@ -102,11 +102,6 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
-    "mysql": {
-       "tuning": {
-          "log_queries_not_using_index": false
-       }
-    },
     "omnibus_updater": {
       "version": "11.12.0"
     },
