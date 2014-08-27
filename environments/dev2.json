@@ -41,7 +41,6 @@
     "monitoring": "= 0.2.3",
     "munin": "= 1.4.3",
     "mysql": "= 3.0.12",
-    "nagios": "= 4.4.0",
     "networking_basic": "= 0.0.5",
     "newrelic": "= 0.5.8",
     "nfs": "= 1.0.0",
