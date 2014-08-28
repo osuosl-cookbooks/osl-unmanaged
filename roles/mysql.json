@@ -9,11 +9,12 @@
   "chef_type": "role",
   "override_attributes": {},
   "default_attributes": {
-    "mysql": {
-       "tuning": {
-          "log_queries_not_using_index": false
-       }
-    },
+     "mysql": {
+        "tuning": {
+           "log_queries_not_using_index": false
+        }
+     }
+  },
   "json_class": "Chef::Role",
   "description": "mysql server role",
   "name": "mysql"
