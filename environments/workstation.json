@@ -121,6 +121,7 @@
         "pulseaudio",
         "pv",
         "python3",
+        "python-sphinx",
         "pwgen",
         "qemu",
         "qemu-kvm",
