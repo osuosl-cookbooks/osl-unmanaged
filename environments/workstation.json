@@ -176,7 +176,8 @@
         "zsh"
       ],
       "purge": [
-        "resolvconf"
+        "resolvconf",
+        "nova-api"
       ]
     }
   },
