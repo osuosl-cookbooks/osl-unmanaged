@@ -16,8 +16,6 @@
   "chef_type": "environment",
   "default_attributes": {
     "workstation": {
-      "hostlist": [
-      ],
       "packages": [
         "0ad",
         "ack-grep",
