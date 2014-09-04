@@ -40,7 +40,7 @@
           "group": "apache",
           "cert_file": "www.apereo.org.pem",
           "key_file": "www.apereo.org.key",
-          "chain_file": "www.apereo.org.crt"
+          "chain_file": "www.apereo.org-bundle.crt"
         }
       },
       {
@@ -50,7 +50,7 @@
           "group": "apache",
           "cert_file": "www.sakaiproject.org.pem",
           "key_file": "www.sakaiproject.org.key",
-          "chain_file": "www.sakaiproject.org.crt"
+          "chain_file": "www.sakaiproject.org-bundle.crt"
         }
       }
     ]
