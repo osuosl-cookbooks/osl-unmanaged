@@ -24,7 +24,6 @@ cookbook "hostsfile"
 cookbook "iptables"
 cookbook "java"
 cookbook "jenkins"
-cookbook "jira", github: "bflad/chef-jira"
 cookbook "line"
 cookbook "logrotate"
 cookbook "logstash",
