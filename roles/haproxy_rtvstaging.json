@@ -27,6 +27,10 @@
             {
               "hostname": "rtvstaging-web",
               "ipaddress": "140.211.15.30"
+            },
+            {
+              "hostname": "rtvstaging-web2",
+              "ipaddress": "140.211.15.117"
             }
           ]
       }
