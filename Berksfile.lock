@@ -3,6 +3,7 @@ DEPENDENCIES
   apt
   ark
   aws
+  bash
   berkshelf-api-server
   bluepill
   build-essential
@@ -115,6 +116,8 @@ DEPENDENCIES
     ref: 5c92a6d
   simple_iptables
   sqlite
+  ssh-util
+  ssh_user
   sudo
   supervisor
   sysctl
@@ -139,6 +142,7 @@ GRAPH
     7-zip (>= 0.0.0)
     windows (>= 0.0.0)
   aws (2.2.2)
+  bash (0.1.2)
   berkshelf-api-server (1.4.0)
     build-essential (>= 2.0.2)
     github (~> 0.2)
@@ -341,6 +345,10 @@ GRAPH
   selinux (0.8.1)
   simple_iptables (0.6.4)
   sqlite (1.0.0)
+  ssh-util (0.6.3)
+  ssh_user (0.1.1)
+    ssh-util (>= 0.0.0)
+    user (>= 0.0.0)
   statsd (0.0.1)
     build-essential (>= 0.0.0)
     git (>= 0.0.0)
