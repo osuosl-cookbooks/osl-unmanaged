@@ -1,0 +1,21 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[proj-rtv::default]",
+    "recipe[proj-rtv::gluster]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+      "proj-rtv": {
+        "gluster": {
+          "data": {
+            "mountpath": "/data/gluster"
+          }
+        }
+      }
+   },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Rocky base",
+  "name": "rocky_base"
+}
