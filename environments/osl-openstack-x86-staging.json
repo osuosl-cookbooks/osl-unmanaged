@@ -1,7 +1,12 @@
 {
     "chef_type": "environment",
     "cookbook_versions": {
-        "mysql": "4.1.1"
+      "apache2": "= 1.10.0",
+      "munin": "= 1.4.3",
+      "mysql": "4.1.1",
+      "nagios": "= 4.4.1",
+      "osl-munin": "= 0.1.2",
+      "osl-openstack": "= 1.0.6"
     },
     "default_attributes": {
         "chef_client": {

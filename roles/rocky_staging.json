@@ -1,0 +1,23 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[rocky_base]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+      "proj-rtv": {
+        "data_bag": "rocky_staging",
+        "environment": "staging",
+        "monitor_mode": "false",
+        "gluster": {
+          "data": {
+            "remotepath": "fs3.osuosl.bak:/rtvstaging-data"
+          }
+        }
+      }
+   },
+  "json_class": "Chef::Role",
+  "description": "Rocky Staging cluster",
+  "name": "rocky_staging"
+}

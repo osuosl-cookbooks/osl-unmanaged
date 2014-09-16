@@ -7,6 +7,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/autofs.git
 [osuosl-cookbooks/base]
 checkout = git clone git@github.com:osuosl-cookbooks/base.git
 
+[osuosl-cookbooks/celery]
+checkout = git clone git@github.com:osuosl-cookbooks/celery.git
+
 [osuosl-cookbooks/firewall]
 checkout = git clone git@github.com:osuosl-cookbooks/firewall.git
 
@@ -111,6 +114,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/proj-drupalorg.git
 
 [osuosl-cookbooks/proj-phpbb]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-phpbb.git
+
+[osuosl-cookbooks/proj-rtv]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-rtv.git
 
 [osuosl-cookbooks/proj-teachengineering]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-teachengineering.git

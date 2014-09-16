@@ -54,10 +54,6 @@
     },
     "workstation": {
       "hostlist": [
-        {
-          "ip": "127.0.0.1",
-          "aliases": "orvsd_central school22 school25 school27"
-        }
       ]
     }
   },

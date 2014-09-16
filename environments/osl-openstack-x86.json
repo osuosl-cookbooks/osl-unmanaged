@@ -1,187 +1,191 @@
 {
-    "chef_type": "environment",
-    "cookbook_versions": {
-        "mysql": "4.1.1",
-        "osl-openstack": "1.0.5"
-    },
-    "default_attributes": {
-        "chef_client": {
-            "config": {
-                "ssl_verify_mode": ":verify_peer"
-            }
-        }
-    },
-    "description": "The OSL Openstack Environment (x86)",
-    "json_class": "Chef::Environment",
-    "name": "osl-openstack-x86",
-    "override_attributes": {
-        "apache": {
-            "contact": "hostmaster@osuosl.org"
-        },
-        "openstack": {
-            "compute": {
-                "config": {
-                    "allow_same_net_traffic": "False",
-                    "ram_allocation_ratio": 5.0
-                },
-                "libvirt": {
-                    "images_type": "lvm",
-                    "virt_type": "kvm",
-                    "volume_group": "nova"
-                },
-                "network": {
-                    "force_dhcp_release": "true",
-                    "libvirt_inject_key": "false",
-                    "libvirt_inject_password": "false",
-                    "multi_host": "true",
-                    "public_interface": "br108",
-                    "service_type": "nova"
-                },
-                "networks": [
-                    {
-                        "bridge": "br-tenant",
-                        "bridge_dev": "eth1",
-                        "dns1": "140.211.166.130",
-                        "dns2": "140.211.166.131",
-                        "ipv4_cidr": "192.168.56.0/22",
-                        "label": "private",
-                        "multi_host": "T",
-                        "network_size": "1024",
-                        "num_networks": "1"
-                    }
-                ]
-            },
-            "dashboard": {
-                "keystone_default_role": "_member_",
-                "server_hostname": "openstack.osuosl.org",
-                "ssl": {
-                    "cert": "horizon.pem",
-                    "cert_url": "file:///etc/pki/tls/certs/wildcard.pem",
-                    "chain": "wildcard-bundle.crt",
-                    "key": "horizon.key",
-                    "key_url": "file:///etc/pki/tls/private/wildcard.key"
-                }
-            },
-            "db": {
-                "block-storage": {
-                    "db_name": "cinder_x86",
-                    "username": "cinder_x86"
-                },
-                "compute": {
-                    "db_name": "nova_x86",
-                    "username": "nova_x86"
-                },
-                "dashboard": {
-                    "db_name": "horizon_x86",
-                    "username": "horizon_x86"
-                },
-                "identity": {
-                    "db_name": "keystone_x86",
-                    "username": "keystone_x86"
-                },
-                "image": {
-                    "db_name": "glance_x86",
-                    "username": "glance_x86"
-                },
-                "network": {
-                    "db_name": "neutron_x86",
-                    "username": "neutron_x86"
-                },
-                "orchestration": {
-                    "db_name": "heat_x86",
-                    "username": "heat_x86"
-                },
-                "telemetry": {
-                    "db_name": "ceilometer_x86",
-                    "username": "ceilometer_x86"
-                }
-            },
-            "developer_mode": false,
-            "endpoints": {
-                "bind-host": "140.211.167.215",
-                "db": {
-                    "host": "140.211.15.221"
-                },
-                "host": "140.211.167.215",
-                "mq": {
-                    "host": "10.1.0.238"
-                },
-                "identity-api": {
-                    "uri": "http://openstack.osuosl.org:35357/v2.0"
-                },
-                "identity-admin": {
-                    "uri": "http://openstack.osuosl.org:5000/v2.0"
-                },
-                "compute-api": {
-                    "uri": "http://openstack.osuosl.org:8774/v2/%(tenant_id)s"
-                },
-                "compute-ec2-api": {
-                    "uri": "http://openstack.osuosl.org:8773/services/Cloud"
-                },
-                "compute-ec2-admin": {
-                    "uri": "http://openstack.osuosl.org:8773/services/Admin"
-                },
-                "compute-xvpvnc": {
-                    "uri": "http://openstack.osuosl.org:6081/console"
-                },
-                "compute-novnc": {
-                    "uri": "https://openstack.osuosl.org:6080/vnc_auto.html"
-                },
-                "image-api": {
-                    "uri": "http://openstack.osuosl.org:9292/v2"
-                },
-                "image-registry": {
-                    "uri": "http://openstack.osuosl.org:9191/v2"
-                },
-                "block-storage-api": {
-                    "uri": "http://openstack.osuosl.org:8776/v1/%(tenant_id)s"
-                },
-                "telemetry-api": {
-                    "uri": "http://openstack.osuosl.org:9000/v1"
-                },
-                "orchestration-api": {
-                    "uri": "http://openstack.osuosl.org:8004/v1/%(tenant_id)s"
-                },
-                "orchestration-api-cfn": {
-                    "uri": "http://openstack.osuosl.org:8000/v1"
-                },
-                "orchestration-api-cloudwatch": {
-                    "uri": "http://openstack.osuosl.org:8003/v1"
-                }
-            },
-            "image": {
-                "image_upload": true,
-                "upload_image": {
-                    "cirros": "https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img"
-                },
-                "upload_images": [
-                    "cirros"
-                ]
-            },
-            "release": "icehouse",
-            "secret": {
-                "db_passwords_data_bag": "x86_db_passwords",
-                "key_path": "/etc/chef/encrypted_data_bag_secret",
-                "secrets_data_bag": "x86_secrets",
-                "service_passwords_data_bag": "x86_service_passwords",
-                "user_passwords_data_bag": "x86_user_passwords"
-            },
-            "sysctl": {
-                "net.ipv4.conf.all.rp_filter": "0",
-                "net.ipv4.conf.default.rp_filter": "0",
-                "net.ipv4.ip_forward": "1"
-            },
-            "yum": {
-                "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Icehouse",
-                "uri": "http://repos.fedorapeople.org/repos/openstack/openstack-icehouse/epel-6/"
-            }
-        },
-        "yum": {
-            "epel": {
-                "baseurl": "http://epel.osuosl.org/6/$basearch",
-                "enable": "true",
-                "gpgkey": "http://epel.osuosl.org/RPM-GPG-KEY-EPEL-6"
-            }
-        }
+  "name": "osl-openstack-x86",
+  "description": "The OSL Openstack Environment (x86)",
+  "cookbook_versions": {
+    "apache2": "= 1.10.0",
+    "munin": "= 1.4.3",
+    "mysql": "4.1.1",
+    "nagios": "= 4.4.1",
+    "osl-munin": "= 0.1.2",
+    "osl-openstack": "= 1.0.6"
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "chef_client": {
+      "config": {
+        "ssl_verify_mode": ":verify_peer"
+      }
     }
+  },
+  "override_attributes": {
+    "apache": {
+      "contact": "hostmaster@osuosl.org"
+    },
+    "openstack": {
+      "compute": {
+        "config": {
+          "allow_same_net_traffic": "False",
+          "ram_allocation_ratio": 5.0
+        },
+        "libvirt": {
+          "images_type": "lvm",
+          "virt_type": "kvm",
+          "volume_group": "nova"
+        },
+        "network": {
+          "force_dhcp_release": "true",
+          "libvirt_inject_key": "false",
+          "libvirt_inject_password": "false",
+          "multi_host": "true",
+          "public_interface": "br108",
+          "service_type": "nova"
+        },
+        "networks": [
+          {
+            "bridge": "br-tenant",
+            "bridge_dev": "eth1",
+            "dns1": "140.211.166.130",
+            "dns2": "140.211.166.131",
+            "ipv4_cidr": "192.168.56.0/22",
+            "label": "private",
+            "multi_host": "T",
+            "network_size": "1024",
+            "num_networks": "1"
+          }
+        ]
+      },
+      "dashboard": {
+        "keystone_default_role": "_member_",
+        "server_hostname": "openstack.osuosl.org",
+        "ssl": {
+          "cert": "horizon.pem",
+          "cert_url": "file:///etc/pki/tls/certs/wildcard.pem",
+          "chain": "wildcard-bundle.crt",
+          "key": "horizon.key",
+          "key_url": "file:///etc/pki/tls/private/wildcard.key"
+        }
+      },
+      "db": {
+        "block-storage": {
+          "db_name": "cinder_x86",
+          "username": "cinder_x86"
+        },
+        "compute": {
+          "db_name": "nova_x86",
+          "username": "nova_x86"
+        },
+        "dashboard": {
+          "db_name": "horizon_x86",
+          "username": "horizon_x86"
+        },
+        "identity": {
+          "db_name": "keystone_x86",
+          "username": "keystone_x86"
+        },
+        "image": {
+          "db_name": "glance_x86",
+          "username": "glance_x86"
+        },
+        "network": {
+          "db_name": "neutron_x86",
+          "username": "neutron_x86"
+        },
+        "orchestration": {
+          "db_name": "heat_x86",
+          "username": "heat_x86"
+        },
+        "telemetry": {
+          "db_name": "ceilometer_x86",
+          "username": "ceilometer_x86"
+        }
+      },
+      "developer_mode": false,
+      "endpoints": {
+        "bind-host": "140.211.167.215",
+        "db": {
+          "host": "140.211.15.221"
+        },
+        "host": "140.211.167.215",
+        "mq": {
+          "host": "10.1.0.238"
+        },
+        "identity-api": {
+          "uri": "http://openstack.osuosl.org:35357/v2.0"
+        },
+        "identity-admin": {
+          "uri": "http://openstack.osuosl.org:5000/v2.0"
+        },
+        "compute-api": {
+          "uri": "http://openstack.osuosl.org:8774/v2/%(tenant_id)s"
+        },
+        "compute-ec2-api": {
+          "uri": "http://openstack.osuosl.org:8773/services/Cloud"
+        },
+        "compute-ec2-admin": {
+          "uri": "http://openstack.osuosl.org:8773/services/Admin"
+        },
+        "compute-xvpvnc": {
+          "uri": "http://openstack.osuosl.org:6081/console"
+        },
+        "compute-novnc": {
+          "uri": "https://openstack.osuosl.org:6080/vnc_auto.html"
+        },
+        "image-api": {
+          "uri": "http://openstack.osuosl.org:9292/v2"
+        },
+        "image-registry": {
+          "uri": "http://openstack.osuosl.org:9191/v2"
+        },
+        "block-storage-api": {
+          "uri": "http://openstack.osuosl.org:8776/v1/%(tenant_id)s"
+        },
+        "telemetry-api": {
+          "uri": "http://openstack.osuosl.org:9000/v1"
+        },
+        "orchestration-api": {
+          "uri": "http://openstack.osuosl.org:8004/v1/%(tenant_id)s"
+        },
+        "orchestration-api-cfn": {
+          "uri": "http://openstack.osuosl.org:8000/v1"
+        },
+        "orchestration-api-cloudwatch": {
+          "uri": "http://openstack.osuosl.org:8003/v1"
+        }
+      },
+      "image": {
+        "image_upload": true,
+        "upload_image": {
+          "cirros": "https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img"
+        },
+        "upload_images": [
+          "cirros"
+        ]
+      },
+      "release": "icehouse",
+      "secret": {
+        "db_passwords_data_bag": "x86_db_passwords",
+        "key_path": "/etc/chef/encrypted_data_bag_secret",
+        "secrets_data_bag": "x86_secrets",
+        "service_passwords_data_bag": "x86_service_passwords",
+        "user_passwords_data_bag": "x86_user_passwords"
+      },
+      "sysctl": {
+        "net.ipv4.conf.all.rp_filter": "0",
+        "net.ipv4.conf.default.rp_filter": "0",
+        "net.ipv4.ip_forward": "1"
+      },
+      "yum": {
+        "repo-key": "https://github.com/redhat-openstack/rdo-release/raw/master/RPM-GPG-KEY-RDO-Icehouse",
+        "uri": "http://repos.fedorapeople.org/repos/openstack/openstack-icehouse/epel-6/"
+      }
+    },
+    "yum": {
+      "epel": {
+        "baseurl": "http://epel.osuosl.org/6/$basearch",
+        "enable": "true",
+        "gpgkey": "http://epel.osuosl.org/RPM-GPG-KEY-EPEL-6"
+      }
+    }
+  }
 }

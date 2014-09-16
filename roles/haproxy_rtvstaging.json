@@ -6,19 +6,6 @@
   ],
   "chef_type": "role",
   "override_attributes": {
-      "haproxy": {
-          "enable_ssl": "true",
-          "member_port": "80",
-          "ssl_member_port": "443 ssl",
-          "ssl_incoming_port": "443 ssl crt /etc/pki/tls/wildcard.pem ciphers RC4-SHA:HIGH:!aNULL:!MD5",
-          "ssl_httpchk": false,
-          "members": [
-            {
-              "hostname": "rtvstaging-web",
-              "ipaddress": "140.211.15.30"
-            }
-          ]
-      },
       "certificate": [ {
         "wildcard": {
             "cert_file": "wildcard.pem",
@@ -26,7 +13,27 @@
             "chain_file": "wildcard-bundle.crt",
             "combined_file": true
         }
-      } ]
+      } ],
+      "osl-haproxy": {
+          "enable_ssl_backend": true
+      },
+      "haproxy": {
+          "enable_ssl": true,
+          "member_port": 80,
+          "ssl_member_port": 443,
+          "ssl_incoming_port": "443 ssl crt /etc/pki/tls/wildcard.pem ciphers RC4-SHA:HIGH:!aNULL:!MD5",
+          "ssl_httpchk": false,
+          "members": [
+            {
+              "hostname": "rtvstaging-web",
+              "ipaddress": "140.211.15.30"
+            },
+            {
+              "hostname": "rtvstaging-web2",
+              "ipaddress": "140.211.15.117"
+            }
+          ]
+      }
    },
   "default_attributes": {},
   "json_class": "Chef::Role",

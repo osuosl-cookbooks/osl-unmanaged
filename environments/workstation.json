@@ -27,6 +27,7 @@
         "awesome",
         "bash",
         "build-essential",
+        "bzr",
         "chefdk",
         "chromium",
         "colordiff",
@@ -121,6 +122,7 @@
         "pulseaudio",
         "pv",
         "python3",
+        "python-sphinx",
         "pwgen",
         "qemu",
         "qemu-kvm",
@@ -144,6 +146,7 @@
         "subversion-tools",
         "suckless-tools",
         "synergy",
+        "system-config-printer",
         "task",
         "terminator",
         "tig",
@@ -175,6 +178,7 @@
         "zsh"
       ],
       "purge": [
+        "nova-api",
         "resolvconf"
       ]
     }

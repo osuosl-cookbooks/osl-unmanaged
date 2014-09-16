@@ -1,6 +1,7 @@
 {
     "chef_type": "environment",
     "cookbook_versions": {
+        "apache2": "= 1.10.0",
         "munin": "= 1.4.3",
         "mysql": "4.1.1",
         "nagios": "= 4.4.1",
