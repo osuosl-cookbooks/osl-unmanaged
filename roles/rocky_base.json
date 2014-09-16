@@ -13,7 +13,8 @@
             "mountpath": "/data/gluster"
           }
         }
-      }
+      },
+      "users": ["osl-root", "osl-osuadmin", "rocky"]
    },
   "json_class": "Chef::Role",
   "description": "Rocky base",
