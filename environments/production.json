@@ -66,7 +66,7 @@
     "perl": "= 1.2.2",
     "php": "= 1.2.4",
     "postfix": "= 2.1.4",
-    "postgresql": "= 3.0.2",
+    "postgresql": "= 3.4.2",
     "proj-drupalorg": "= 0.1.8",
     "proj-phpbb": "= 0.1.2",
     "python": "= 1.4.6",
