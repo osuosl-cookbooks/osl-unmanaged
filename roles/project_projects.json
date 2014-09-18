@@ -5,7 +5,7 @@
   "json_class": "Chef::Role",
   "env_run_lists": {},
   "run_list": [],
-  "default_attributes": {
+  "override_attributes": {
     "rdiff-backup": {
       "client": {
         "jobs": {
