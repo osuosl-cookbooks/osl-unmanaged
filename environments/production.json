@@ -99,7 +99,8 @@
     "ganeti_webmgr": "= 0.4.7",
     "modules": "= 0.2.0",
     "proj-rtv": "= 0.1.1",
-    "whats-fresh": "= 0.1.6"
+    "whats-fresh": "= 0.1.6",
+    "celery": "= 0.1.1"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",

@@ -101,6 +101,7 @@ DEPENDENCIES
   passenger_apache2
   perl
   php
+  poise
   postfix
   postgresql
   python
@@ -322,6 +323,7 @@ GRAPH
     windows (>= 0.0.0)
     xml (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  poise (1.0.10)
   postfix (3.3.1)
   postgresql (3.4.1)
     apt (>= 1.9.0)
