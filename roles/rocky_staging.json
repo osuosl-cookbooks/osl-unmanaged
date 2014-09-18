@@ -14,7 +14,11 @@
           "data": {
             "remotepath": "fs3.osuosl.bak:/rtvstaging-data"
           }
-        }
+        },
+        "web": {
+          "name": "rtvstaging.osuosl.org",
+          "server_aliases": [ "rtvstaging-lb.osuosl.org" ]
+        },
       }
    },
   "json_class": "Chef::Role",
