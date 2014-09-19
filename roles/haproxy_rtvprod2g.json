@@ -34,6 +34,14 @@
             }
           ]
       },
+      "sysctl": {
+        "params": {
+          "net": {
+            "netfilter.nf_conntrack_max": "256000",
+            "nf_conntrack_max": "256000"
+          }
+        }
+      },
       "users": ["osl-root", "osl-osuadmin", "rocky"]
    },
   "default_attributes": {},
