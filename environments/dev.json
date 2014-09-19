@@ -51,7 +51,7 @@
     "openssl": "= 1.1.0",
     "orvsd-web": "= 0.2.1",
     "orvsd_central": "= 1.0.3",
-    "osl-apache": "= 1.0.10",
+    "osl-apache": "= 1.0.12",
     "osl-haproxy": "= 1.0.0",
     "osl-munin": "= 0.1.2",
     "osl-mysql": "= 0.2.0",
@@ -97,7 +97,7 @@
     "ganeti_webmgr": "= 0.4.7",
     "modules": "= 0.2.0",
     "whats-fresh": "= 0.1.1",
-    "proj-rtv": "= 0.1.1",
+    "proj-rtv": "= 0.1.2",
     "celery": "= 0.1.1"
   },
   "json_class": "Chef::Environment",
