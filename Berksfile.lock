@@ -324,7 +324,7 @@ GRAPH
     xml (>= 0.0.0)
     yum-epel (>= 0.0.0)
   poise (1.0.10)
-  postfix (3.3.1)
+  postfix (3.6.0)
   postgresql (3.4.1)
     apt (>= 1.9.0)
     build-essential (>= 0.0.0)
