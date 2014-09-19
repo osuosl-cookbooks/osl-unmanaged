@@ -42,11 +42,13 @@
     },
     "postfix": {
       "mailtype": "client",
-      "mydomain": "osuosl.org",
-      "myorigin": "osuosl.org",
-      "relayhost": "osuosl.org",
-      "smtpd_use_tls": "no",
-      "smtp_use_tls": "no"
+      "main": {
+        "mydomain": "osuosl.org",
+        "myorigin": "osuosl.org",
+        "relayhost": "osuosl.org",
+        "smtpd_use_tls": "no",
+        "smtp_use_tls": "no"
+      }
     },
     "openssh": {
       "server": {

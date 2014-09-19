@@ -36,9 +36,12 @@
       }
     },
     "postfix": {
-      "mydomain": "osuosl.org",
-      "myorigin": "osuosl.org",
-      "relayhost": "[smtp.osuosl.org]"
+      "mail_type": "client",
+      "main": {
+        "mydomain": "osuosl.org",
+        "myorigin": "osuosl.org",
+        "relayhost": "[smtp.osuosl.org]"
+      }
     },
     "resolver": {
       "nameservers": ["10.1.0.130", "10.1.0.131", "216.165.191.54"],
