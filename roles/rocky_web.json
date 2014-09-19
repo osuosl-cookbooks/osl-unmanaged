@@ -1,6 +1,8 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "role[rocky_base]",
+    "recipe[certificate::manage_by_attributes]",
     "recipe[proj-rtv::web]",
   ],
   "chef_type": "role",

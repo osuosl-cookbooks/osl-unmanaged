@@ -7,10 +7,10 @@
   "chef_type": "role",
   "override_attributes": {
       "certificate": [ {
-        "wildcard": {
-            "cert_file": "wildcard.pem",
-            "key_file": "wildcard.key",
-            "chain_file": "wildcard-bundle.crt",
+        "register2g-rtv": {
+            "cert_file": "register2g.rockthevote.com.pem",
+            "key_file": "register2g.rockthevote.com.key",
+            "chain_file": "register2g.rockthevote.com-bundle.crt",
             "combined_file": true
         }
       } ],
@@ -21,16 +21,16 @@
           "enable_ssl": true,
           "member_port": 80,
           "ssl_member_port": 443,
-          "ssl_incoming_port": "443 ssl crt /etc/pki/tls/wildcard.pem ciphers RC4-SHA:HIGH:!aNULL:!MD5",
+          "ssl_incoming_port": "443 ssl crt /etc/pki/tls/register2g.rockthevote.com.pem ciphers RC4-SHA:HIGH:!aNULL:!MD5",
           "ssl_httpchk": false,
           "members": [
             {
-              "hostname": "rtvstaging-web",
-              "ipaddress": "140.211.15.30"
+              "hostname": "rtvprod2g-web1",
+              "ipaddress": "140.211.15.72"
             },
             {
-              "hostname": "rtvstaging-web2",
-              "ipaddress": "140.211.15.117"
+              "hostname": "rtvprod2g-web2",
+              "ipaddress": "140.211.15.10"
             }
           ]
       },
@@ -38,6 +38,6 @@
    },
   "default_attributes": {},
   "json_class": "Chef::Role",
-  "description": "haproxy configuration for RTV Staging",
-  "name": "haproxy_rtvstaging"
+  "description": "haproxy configuration for RTV Production 2g",
+  "name": "haproxy_rtvprod2g"
 }
