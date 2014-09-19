@@ -19,7 +19,7 @@
           "cert_file": "register2g.rockthevote.com.pem",
           "key_file": "register2g.rockthevote.com.key",
           "chain_file": "register2g.rockthevote.com-bundle.crt"
-        },
+        }
       },
       "certificate": [
         {

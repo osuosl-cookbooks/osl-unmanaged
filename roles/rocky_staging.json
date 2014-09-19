@@ -17,12 +17,12 @@
         },
         "web": {
           "name": "rtvstaging.osuosl.org",
-          "server_aliases": [ "rtvstaging-lb.osuosl.org" ]
+          "server_aliases": [ "rtvstaging-lb.osuosl.org" ],
           "cert_file": "wildcard.pem",
           "key_file": "wildcard.key",
           "chain_file": "wildcard-bundle.crt"
-        },
-      }
+        }
+      },
       "certificate": [
         {
           "wildcard": {

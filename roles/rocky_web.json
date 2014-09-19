@@ -3,7 +3,7 @@
   "run_list": [
     "role[rocky_base]",
     "recipe[certificate::manage_by_attributes]",
-    "recipe[proj-rtv::web]",
+    "recipe[proj-rtv::web]"
   ],
   "chef_type": "role",
   "override_attributes": {},
@@ -22,8 +22,8 @@
           "maxsparethreads": 2550,
           "threadsperchild": 150,
           "maxrequestsperchild": 10000
-        },
-      },
+        }
+      }
    },
   "json_class": "Chef::Role",
   "description": "Rocky web server",
