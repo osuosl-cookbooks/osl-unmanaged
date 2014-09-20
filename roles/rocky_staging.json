@@ -14,8 +14,27 @@
           "data": {
             "remotepath": "fs3.osuosl.bak:/rtvstaging-data"
           }
+        },
+        "web": {
+          "name": "rtvstaging.osuosl.org",
+          "server_aliases": [ "rtvstaging-lb.osuosl.org" ],
+          "cert_file": "wildcard.pem",
+          "key_file": "wildcard.key",
+          "chain_file": "wildcard-bundle.crt"
         }
-      }
+      },
+      "certificate": [
+        {
+          "wildcard": {
+            "cert_path": "/etc/pki/tls",
+            "owner": "apache",
+            "group": "apache",
+            "cert_file": "wildcard.pem",
+            "key_file": "wildcard.key",
+            "chain_file": "wildcard-bundle.crt"
+          }
+        }
+      ]
    },
   "json_class": "Chef::Role",
   "description": "Rocky Staging cluster",
