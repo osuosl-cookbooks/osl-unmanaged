@@ -17,8 +17,8 @@
         "web": {
           "name": "register2g.rockthevote.com",
           "cert_file": "register2g.rockthevote.com.pem",
-          "key_file": "register2g.rockthevote.com.key",
-          "chain_file": "register2g.rockthevote.com-bundle.crt"
+          "cert_key": "register2g.rockthevote.com.key",
+          "cert_chain": "register2g.rockthevote.com-bundle.crt"
         }
       },
       "certificate": [
