@@ -11,6 +11,6 @@
       }
    },
   "json_class": "Chef::Role",
-  "description": "Rocky pdfgen server",
-  "name": "rocky_pdfgen"
+  "description": "Rocky smtp configuration",
+  "name": "rocky_smtp"
 }
