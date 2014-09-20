@@ -17,7 +17,7 @@
         "worker": {
           "startservers": 4,
           "serverlimit": 17,
-          "maxclients": 2550,
+          "maxclients": 1088,
           "minsparethreads": 64,
           "maxsparethreads": 2550,
           "threadsperchild": 150,
