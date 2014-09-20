@@ -1,0 +1,17 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[postfix::client]",
+    "role[rocky_base]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+      "postfix": {
+        "relayhost_role": "rocky_smtp_relay"
+      }
+   },
+  "json_class": "Chef::Role",
+  "description": "Rocky pdfgen server",
+  "name": "rocky_pdfgen"
+}
