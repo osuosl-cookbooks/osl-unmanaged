@@ -3,6 +3,7 @@
   "run_list": [
     "role[rocky_base]",
     "recipe[certificate::manage_by_attributes]",
+    "role[apache]",
     "recipe[proj-rtv::web]"
   ],
   "chef_type": "role",
