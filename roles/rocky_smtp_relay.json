@@ -17,6 +17,9 @@
         "smtpd_client_recipient_rate_limit": 50,
         "smtpd_client_message_rate_limit": 50,
         "smtpd_client_restrictions": "permit_mynetworks",
+        "smtp_destination_concurrency_limit": 2,
+        "smtp_destination_rate_delay": "1s",
+        "smtp_extra_recipient_limit": 10,
         "smtpd_helo_restrictions": [
           "permit_mynetworks",
           "reject_invalid_hostname"
