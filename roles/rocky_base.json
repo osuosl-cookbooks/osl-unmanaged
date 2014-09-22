@@ -5,7 +5,13 @@
     "recipe[proj-rtv::gluster]"
   ],
   "chef_type": "role",
-  "override_attributes": {},
+  "override_attributes": {
+    "postfix": {
+      "main": {
+        "relayhost": "rtv-smtp.osuosl.org"
+      }
+    }
+  },
   "default_attributes": {
       "proj-rtv": {
         "gluster": {
