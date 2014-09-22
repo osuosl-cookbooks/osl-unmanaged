@@ -22,7 +22,7 @@
           "startservers": 4,
           "serverlimit": 17,
           "maxclients": 1088,
-          "minsparethreads": 64,
+          "minsparethreads": 150,
           "maxsparethreads": 2550,
           "threadsperchild": 150,
           "maxrequestsperchild": 10000
