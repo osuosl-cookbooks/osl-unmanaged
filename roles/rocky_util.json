@@ -5,13 +5,7 @@
     "recipe[proj-rtv::util]"
   ],
   "chef_type": "role",
-  "override_attributes": {
-    "postfix": {
-      "main": {
-        "relayhost": "rtv-smtp.osuosl.org"
-      }
-    }
-  },
+  "override_attributes": {},
   "default_attributes": {
       "users": [ "osl-root", "osl-osuadmin", "rocky", "rockthevote" ],
       "proj-rtv": {
