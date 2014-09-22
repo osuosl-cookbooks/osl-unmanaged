@@ -1,0 +1,18 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[rocky_base]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "postfix": {
+      "main": {
+        "relayhost": "rtv-smtp.osuosl.org"
+      }
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Rocky pdfgen server",
+  "name": "rocky_pdfgen"
+}
