@@ -9,6 +9,9 @@
   "chef_type": "role",
   "override_attributes": {},
   "default_attributes": {
+      "proj-rtv": {
+        "passenger_poolsize": 45
+      },
       "apache": {
         "mpm": "worker",
         "binary": "/usr/sbin/httpd.worker",
