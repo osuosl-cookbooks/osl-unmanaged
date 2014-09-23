@@ -1,7 +1,6 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[rsyslog::default]",
     "role[base]",
     "recipe[nagios::client_package]",
     "recipe[nagios::client]",

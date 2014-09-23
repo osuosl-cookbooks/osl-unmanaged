@@ -4,8 +4,7 @@
     "role[base_managed]",
     "recipe[lanparty]",
     "recipe[lanparty::urbanterror]",
-    "recipe[lanparty::teeworlds]",
-    "recipe[rsyslog::client]"
+    "recipe[lanparty::teeworlds]"
   ],
   "chef_type": "role",
   "override_attributes": {},
