@@ -8,7 +8,7 @@
   "override_attributes": {
     "postfix": {
       "main": {
-        "relayhost": "rtv-smtp.osuosl.org"
+        "relayhost": "osuosl.org"
       }
     }
   },
