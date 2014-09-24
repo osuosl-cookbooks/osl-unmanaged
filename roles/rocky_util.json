@@ -2,7 +2,8 @@
   "env_run_lists": {},
   "run_list": [
     "role[rocky_base]",
-    "recipe[proj-rtv::util]"
+    "recipe[proj-rtv::util]",
+    "recipe[monitoring::rtv]"
   ],
   "chef_type": "role",
   "override_attributes": {},
