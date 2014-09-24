@@ -38,7 +38,7 @@
     "maintain-dns": "= 0.1.4",
     "memcached": "= 1.7.2",
     "monit": "= 0.7.1",
-    "monitoring": "= 0.2.4",
+    "monitoring": "= 0.2.5",
     "mysql": "= 4.0.14",
     "nagios": "= 4.4.1",
     "networking_basic": "= 0.0.5",
