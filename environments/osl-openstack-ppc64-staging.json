@@ -83,7 +83,7 @@
       "xfs": "= 1.1.0",
       "xml": "= 1.2.4",
       "yum": "= 3.2.4",
-      "yum-epel": "= 0.3.0",
+      "yum-epel": "= 0.4.0",
       "zlib": "= 2.0.0"
     },
     "default_attributes": {
