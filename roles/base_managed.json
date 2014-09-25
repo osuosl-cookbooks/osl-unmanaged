@@ -57,6 +57,13 @@
     "ntp": {
       "servers": ["time.oregonstate.edu", "pool.ntp.org"]
     },
+    "munin": {
+      "multi_environment_monitoring": [
+        "production",
+        "osl-openstack-x86",
+        "osl-openstack-ppc64"
+      ]
+    },
     "mysql": {
       "version": "5.5"
     },

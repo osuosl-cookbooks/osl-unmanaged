@@ -6,15 +6,7 @@
   ],
   "chef_type": "role",
   "override_attributes": {},
-  "default_attributes": {
-    "munin": {
-      "multi_environment_monitoring": [
-        "production",
-        "osl-openstack-x86",
-        "osl-openstack-ppc64"
-      ]
-    }
-  },
+  "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "munin server role",
   "name": "munin"
