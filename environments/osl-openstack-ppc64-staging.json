@@ -32,7 +32,7 @@
       "monit": "= 0.7.1",
       "monitoring": "= 0.2.5",
       "munin": "= 1.4.3",
-      "mysql": "= 4.1.1",
+      "mysql": "= 5.5.1",
       "nagios": "= 4.4.1",
       "networking_basic": "= 0.0.5",
       "newrelic": "= 0.5.8",
