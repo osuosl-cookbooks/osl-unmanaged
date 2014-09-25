@@ -50,7 +50,7 @@
       "openstack-image": "= 9.2.0",
       "openstack-network": "= 9.1.0",
       "openstack-object-storage": "= 9.0.3",
-      "openstack-ops-database": "= 9.1.0",
+      "openstack-ops-database": "= 9.2.0",
       "openstack-ops-messaging": "= 9.0.1",
       "openstack-orchestration": "= 9.2.0",
       "openstack-telemetry": "= 9.2.0",
