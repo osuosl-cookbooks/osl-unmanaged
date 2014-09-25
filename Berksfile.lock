@@ -122,6 +122,9 @@ DEPENDENCIES
   sudo
   supervisor
   sysctl
+    git: git://github.com/onehealth-cookbooks/sysctl.git
+    revision: 8d0bcf83179a59b1bc83c57be143b990c2d395e4
+    ref: 8d0bcf8
   user
   windows
   xfs

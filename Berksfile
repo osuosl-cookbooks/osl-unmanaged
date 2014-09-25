@@ -70,7 +70,9 @@ cookbook "ssh_user"
 cookbook "ssh-util"
 cookbook "sudo"
 cookbook "supervisor"
-cookbook "sysctl"
+cookbook "sysctl",
+  github: "onehealth-cookbooks/sysctl",
+  ref: "8d0bcf83179"
 cookbook "user"
 cookbook "windows"
 cookbook "xfs"
