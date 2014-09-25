@@ -2,7 +2,8 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[certificate::manage_by_attributes]",
-    "recipe[osl-haproxy]"
+    "recipe[osl-haproxy]",
+    "recipe[monitoring::haproxy]"
   ],
   "chef_type": "role",
   "override_attributes": {
@@ -25,7 +26,7 @@
           "ssl_httpchk": false,
           "members": [
             {
-              "hostname": "rtvstaging-web",
+              "hostname": "rtvstaging-web1",
               "ipaddress": "140.211.15.30"
             },
             {

@@ -1,7 +1,6 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[rsyslog::default]",
     "role[base]",
     "recipe[nagios::client_package]",
     "recipe[nagios::client]",
@@ -57,6 +56,13 @@
     },
     "ntp": {
       "servers": ["time.oregonstate.edu", "pool.ntp.org"]
+    },
+    "munin": {
+      "multi_environment_monitoring": [
+        "production",
+        "osl-openstack-x86",
+        "osl-openstack-ppc64"
+      ]
     },
     "mysql": {
       "version": "5.5"

@@ -19,8 +19,8 @@
           "name": "rtvstaging.osuosl.org",
           "server_aliases": [ "rtvstaging-lb.osuosl.org" ],
           "cert_file": "wildcard.pem",
-          "key_file": "wildcard.key",
-          "chain_file": "wildcard-bundle.crt"
+          "cert_key": "wildcard.key",
+          "cert_chain": "wildcard-bundle.crt"
         }
       },
       "certificate": [
