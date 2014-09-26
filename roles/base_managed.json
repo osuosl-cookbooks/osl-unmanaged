@@ -51,7 +51,8 @@
     },
     "openssh": {
       "server": {
-        "password_authentication": "no"
+        "password_authentication": "no",
+        "protocol": 2
       }
     },
     "nagios": {
