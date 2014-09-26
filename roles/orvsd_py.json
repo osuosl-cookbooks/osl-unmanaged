@@ -8,6 +8,7 @@
   "chef_type": "role",
   "override_attributes": {
       "orvsd_central":{
+          "git-branch": "master",
           "gluster": {
               "moodle2-masters": {
                   "mountpath": "/data/moodle2-masters",
