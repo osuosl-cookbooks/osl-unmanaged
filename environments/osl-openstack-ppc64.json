@@ -31,7 +31,7 @@
     "memcached": "= 1.7.2",
     "modules": "= 0.2.0",
     "monit": "= 0.7.1",
-    "monitoring": "= 0.2.5",
+    "monitoring": "= 0.2.6",
     "munin": "= 1.4.3",
     "mysql": "= 5.5.1",
     "nagios": "= 4.4.2",
@@ -89,7 +89,8 @@
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
-  "default_attributes": {},
+  "default_attributes": {
+  },
   "override_attributes": {
     "apache": {
       "contact": "hostmaster@osuosl.org"
