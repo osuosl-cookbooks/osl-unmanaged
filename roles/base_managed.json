@@ -54,6 +54,14 @@
         "password_authentication": "no"
       }
     },
+    "nagios": {
+      "multi_environment_monitoring": true,
+      "monitored_environments": [
+        "production",
+        "osl-openstack-x86",
+        "osl-openstack-ppc64"
+        ]
+    },
     "ntp": {
       "servers": ["time.oregonstate.edu", "pool.ntp.org"]
     },
