@@ -17,6 +17,11 @@
   "chef_type": "environment",
   "default_attributes": {
     "workstation": {
+      "pip_packages": [
+        "python-glanceclient",
+        "python-keystoneclient",
+        "python-novaclient"
+      ],
       "packages": [
         "0ad",
         "ack-grep",
