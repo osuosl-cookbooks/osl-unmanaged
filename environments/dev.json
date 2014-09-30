@@ -71,7 +71,7 @@
     "rabbitmq": "= 3.1.0",
     "racktables": "= 0.2.7",
     "rdiff-backup": "= 0.2.0",
-    "ros": "= 0.1.46",
+    "ros": "= 0.1.47",
     "ros-docs": "= 0.1.7",
     "rsync": "= 0.8.4",
     "rsyslog": "= 1.12.2",
