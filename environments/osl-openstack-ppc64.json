@@ -105,6 +105,7 @@
           "virt_type": "kvm"
         },
         "network": {
+          "auto_assign_floating_ip": true,
           "force_dhcp_release": "true",
           "multi_host": "true",
           "public_interface": "enP2p1s0f2",
