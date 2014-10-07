@@ -2,6 +2,7 @@ base_path   = File.expand_path(File.join(File.dirname(__FILE__), ".."))
 user_email  = `git config --get user.email`
 home_dir    = ENV['HOME'] || ENV['HOMEDRIVE']
 org         = ENV['chef_org'] || 'my_org'
+knife[:secret_file] = "#{home_dir}/.chef/encrypted_data_bag_secret"
 
 chef_server_url         'https://chef.osuosl.org'
 log_level               :info
@@ -23,5 +24,5 @@ cookbook_license        "apachev2"
 cookbook_email          "systems@osuosl.org"
 role_path               ["#{base_path}/roles"]
 data_bag_path           ["#{base_path}/data_bags"]
-#knife[:secret_file] =  "#{home_dir}/.chef/encrypted_data_bag_secret"
+data_bag_encrypt_version 2
 ssl_verify_mode         :verify_peer
