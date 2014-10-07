@@ -1,0 +1,21 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "recipe[jenkins::master]",
+    "recipe[jenkins::java]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "jenkins": {
+      "master": {
+        "install_method": "war",
+        "version": "1.555"
+      }
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Configure node as a Jenkins master server",
+  "name": "jenkins_server"
+}
