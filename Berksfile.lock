@@ -24,9 +24,6 @@ DEPENDENCIES
   iptables
   java
   jenkins
-  jira
-    git: git://github.com/bflad/chef-jira.git
-    revision: da71ddbf910ff78e94e342babf996d0e9c78dab0
   line
   logrotate
   logstash
@@ -204,14 +201,6 @@ GRAPH
     apt (~> 2.0)
     runit (~> 1.5)
     yum (~> 3.0)
-  jira (2.0.1)
-    apache2 (>= 0.0.0)
-    ark (>= 0.0.0)
-    database (>= 0.0.0)
-    java (>= 0.0.0)
-    mysql (>= 0.0.0)
-    mysql_connector (>= 0.0.0)
-    postgresql (>= 0.0.0)
   libarchive (0.4.0)
     build-essential (~> 2.0)
   line (0.5.1)
