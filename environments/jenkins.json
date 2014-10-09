@@ -1,0 +1,24 @@
+{
+  "name": "jenkins",
+  "description": "The jenkins environment",
+  "cookbook_versions": {
+    "apt": "= 2.5.3",
+    "build-essential": "= 2.0.6",
+    "jenkins": "= 2.1.0",
+    "runit": "= 1.5.10",
+    "yum": "= 3.2.4",
+    "yum-epel": "= 0.4.0"
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "nagios": {
+      "allowed_hosts": [
+        "140.211.167.157",
+        "10.1.0.100"
+      ]
+    }
+  },
+  "override_attributes": {
+  }
+}
