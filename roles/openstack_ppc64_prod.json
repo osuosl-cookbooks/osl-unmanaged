@@ -1,0 +1,76 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[openstack_base]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "osl-openstack": {
+      "database_suffix": "ppc64",
+      "databag_prefix": "ppc64",
+      "vnc_bind_interface": {
+        "controller": "eth1",
+        "compute": "enP2p1s0f2"
+      }
+    },
+    "openstack": {
+      "compute": {
+        "network": {
+          "auto_assign_floating_ip": "true\ndefault_floating_pool=public",
+          "public_interface": "enP2p1s0f2"
+        },
+        "networks": [
+          {
+            "bridge": "br-tenant",
+            "bridge_dev": "enP2p1s0f3",
+            "dns1": "140.211.166.130",
+            "dns2": "140.211.166.131",
+            "ipv4_cidr": "192.168.60.0/22",
+            "label": "private",
+            "multi_host": "T",
+            "network_size": "1024",
+            "num_networks": "1"
+          }
+        ]
+      },
+      "dashboard": {
+        "server_hostname": "openpower-openstack.osuosl.org"
+      },
+      "endpoints": {
+        "bind-host": "0.0.0.0",
+        "db": {
+          "host": "140.211.15.221"
+        },
+        "host": "140.211.167.193",
+        "mq": {
+          "host": "140.211.167.193"
+        },
+        "compute-xvpvnc": {
+          "uri": "http://openstack.osuosl.org:6081/console"
+        },
+        "compute-novnc": {
+          "uri": "https://openstack.osuosl.org:6080/vnc_auto.html"
+        }
+      },
+      "image": {
+        "image_upload": true,
+        "upload_image": {
+          "debian-7": "http://ftp.osuosl.org/pub/osl/openpower/openstack/debian-7.qcow2",
+          "fedora-20": "http://ftp.osuosl.org/pub/osl/openpower/openstack/fedora-20.qcow2",
+          "ubuntu-14.04": "http://ftp.osuosl.org/pub/osl/openpower/openstack/ubuntu-14.04.qcow2",
+          "ubuntu-14.04-le": "http://ftp.osuosl.org/pub/osl/openpower/openstack/ubuntu-14.04-le.qcow2"
+        },
+        "upload_images": [
+          "debian-7",
+          "fedora-20",
+          "ubuntu-14.04",
+          "ubuntu-14.04-le"
+        ]
+      }
+    }
+   },
+  "json_class": "Chef::Role",
+  "description": "Openstack ppc64 Production Role",
+  "name": "openstack_ppc64_prod"
+}

@@ -1,0 +1,111 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[openstack_base]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "osl-openstack": {
+      "database_suffix": "xstg",
+      "databag_prefix": "x86_staging",
+      "vnc_bind_interface": {
+        "controller": "eth1",
+        "compute": "br42"
+      }
+    },
+    "openstack": {
+      "compute": {
+        "libvirt": {
+          "images_type": "lvm",
+          "volume_group": "nova"
+        },
+        "network": {
+          "libvirt_inject_key": "false",
+          "libvirt_inject_password": "false",
+          "public_interface": "br113"
+        },
+        "networks": [
+          {
+            "bridge": "br-tenant",
+            "bridge_dev": "eth1",
+            "dns1": "140.211.166.130",
+            "dns2": "140.211.166.131",
+            "ipv4_cidr": "192.168.56.0/22",
+            "label": "private",
+            "multi_host": "T",
+            "network_size": "1024",
+            "num_networks": "1"
+          }
+        ]
+      },
+      "dashboard": {
+        "server_hostname": "openstack-staging.osuosl.org"
+      },
+      "endpoints": {
+        "bind-host": "0.0.0.0",
+        "db": {
+          "host": "140.211.15.221"
+        },
+        "host": "140.211.167.174",
+        "mq": {
+          "host": "10.1.0.208"
+        },
+        "identity-api": {
+          "uri": "http://openstack-staging.osuosl.org:35357/v2.0"
+        },
+        "identity-admin": {
+          "uri": "http://openstack-staging.osuosl.org:5000/v2.0"
+        },
+        "compute-api": {
+          "uri": "http://openstack-staging.osuosl.org:8774/v2/%(tenant_id)s"
+        },
+        "compute-ec2-api": {
+          "uri": "http://openstack-staging.osuosl.org:8773/services/Cloud"
+        },
+        "compute-ec2-admin": {
+          "uri": "http://openstack-staging.osuosl.org:8773/services/Admin"
+        },
+        "compute-xvpvnc": {
+          "uri": "http://openstack-staging.osuosl.org:6081/console"
+        },
+        "compute-novnc": {
+          "uri": "https://openstack-staging.osuosl.org:6080/vnc_auto.html"
+        },
+        "image-api": {
+          "uri": "http://openstack-staging.osuosl.org:9292/v2"
+        },
+        "image-registry": {
+          "uri": "http://openstack-staging.osuosl.org:9191/v2"
+        },
+        "block-storage-api": {
+          "uri": "http://openstack-staging.osuosl.org:8776/v1/%(tenant_id)s"
+        },
+        "telemetry-api": {
+          "uri": "http://openstack-staging.osuosl.org:9000/v1"
+        },
+        "orchestration-api": {
+          "uri": "http://openstack-staging.osuosl.org:8004/v1/%(tenant_id)s"
+        },
+        "orchestration-api-cfn": {
+          "uri": "http://openstack-staging.osuosl.org:8000/v1"
+        },
+        "orchestration-api-cloudwatch": {
+          "uri": "http://openstack-staging.osuosl.org:8003/v1"
+        }
+      },
+      "image": {
+        "image_upload": true,
+        "upload_image": {
+          "cirros": "https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img"
+        },
+        "upload_images": [
+          "cirros"
+        ]
+      }
+    }
+   },
+  "json_class": "Chef::Role",
+  "description": "Openstack x86 Staging Role",
+  "name": "openstack_x86_staging"
+}
