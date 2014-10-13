@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
 # Chef requires
-require 'chef/shell/ext'
 require 'chef/knife'
 require 'chef/knife/exec'
+require 'chef/shell/ext'
 
 # Other requires
 require 'optparse'
