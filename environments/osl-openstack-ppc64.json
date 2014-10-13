@@ -179,6 +179,48 @@
         "host": "140.211.167.193",
         "mq": {
           "host": "140.211.167.193"
+        },
+        "identity-api": {
+          "uri": "http://openpower-openstack.osuosl.org:35357/v2.0"
+        },
+        "identity-admin": {
+          "uri": "http://openpower-openstack.osuosl.org:5000/v2.0"
+        },
+        "compute-api": {
+          "uri": "http://openpower-openstack.osuosl.org:8774/v2/%(tenant_id)s"
+        },
+        "compute-ec2-api": {
+          "uri": "http://openpower-openstack.osuosl.org:8773/services/Cloud"
+        },
+        "compute-ec2-admin": {
+          "uri": "http://openpower-openstack.osuosl.org:8773/services/Admin"
+        },
+        "compute-xvpvnc": {
+          "uri": "http://openpower-openstack.osuosl.org:6081/console"
+        },
+        "compute-novnc": {
+          "uri": "https://openpower-openstack.osuosl.org:6080/vnc_auto.html"
+        },
+        "image-api": {
+          "uri": "http://openpower-openstack.osuosl.org:9292/v2"
+        },
+        "image-registry": {
+          "uri": "http://openpower-openstack.osuosl.org:9191/v2"
+        },
+        "block-storage-api": {
+          "uri": "http://openpower-openstack.osuosl.org:8776/v1/%(tenant_id)s"
+        },
+        "telemetry-api": {
+          "uri": "http://openpower-openstack.osuosl.org:9000/v1"
+        },
+        "orchestration-api": {
+          "uri": "http://openpower-openstack.osuosl.org:8004/v1/%(tenant_id)s"
+        },
+        "orchestration-api-cfn": {
+          "uri": "http://openpower-openstack.osuosl.org:8000/v1"
+        },
+        "orchestration-api-cloudwatch": {
+          "uri": "http://openpower-openstack.osuosl.org:8003/v1"
         }
       },
       "image": {
