@@ -100,10 +100,6 @@
     "apache": {
       "contact": "hostmaster@osuosl.org"
     },
-    "mysql": {
-      "allow_remote_root": true,
-      "root_network_acl": "%"
-    },
     "openstack": {
       "compute": {
         "config": {
@@ -111,20 +107,22 @@
           "ram_allocation_ratio": 5.0
         },
         "libvirt": {
-          "virt_type": "qemu"
+          "images_type": "lvm",
+          "virt_type": "kvm",
+          "volume_group": "nova"
         },
         "network": {
           "force_dhcp_release": "true",
           "libvirt_inject_key": "false",
           "libvirt_inject_password": "false",
           "multi_host": "true",
-          "public_interface": "eth0",
+          "public_interface": "br113",
           "service_type": "nova"
         },
         "networks": [
           {
             "bridge": "br-tenant",
-            "bridge_dev": "eth2",
+            "bridge_dev": "eth1",
             "dns1": "140.211.166.130",
             "dns2": "140.211.166.131",
             "ipv4_cidr": "192.168.56.0/22",
@@ -137,56 +135,97 @@
       },
       "dashboard": {
         "keystone_default_role": "_member_",
-        "use_ssl": false
+        "server_hostname": "openstack-staging.osuosl.org",
+        "ssl": {
+          "cert": "horizon.pem",
+          "cert_url": "file:///etc/pki/tls/certs/wildcard.pem",
+          "chain": "wildcard-bundle.crt",
+          "key": "horizon.key",
+          "key_url": "file:///etc/pki/tls/private/wildcard.key"
+        }
       },
-      "developer_mode": true,
-      "endpoints": {
-        "bind-host": "10.1.0.208",
-        "db": {
-          "host": "10.1.0.208"
+      "db": {
+        "block-storage": {
+          "db_name": "cinder_xstg",
+          "username": "cinder_xstg"
         },
-        "host": "10.1.0.208",
+        "compute": {
+          "db_name": "nova_xstg",
+          "username": "nova_xstg"
+        },
+        "dashboard": {
+          "db_name": "horizon_xstg",
+          "username": "horizon_xstg"
+        },
+        "identity": {
+          "db_name": "keystone_xstg",
+          "username": "keystone_xstg"
+        },
+        "image": {
+          "db_name": "glance_xstg",
+          "username": "glance_xstg"
+        },
+        "network": {
+          "db_name": "neutron_xstg",
+          "username": "neutron_xstg"
+        },
+        "orchestration": {
+          "db_name": "heat_xstg",
+          "username": "heat_xstg"
+        },
+        "telemetry": {
+          "db_name": "ceilometer_xstg",
+          "username": "ceilometer_xstg"
+        }
+      },
+      "developer_mode": false,
+      "endpoints": {
+        "bind-host": "140.211.167.174",
+        "db": {
+          "host": "140.211.15.221"
+        },
+        "host": "140.211.167.174",
         "mq": {
           "host": "10.1.0.208"
         },
         "identity-api": {
-          "uri": "http://otest-admin.osuosl.bak:35357/v2.0"
+          "uri": "http://openstack-staging.osuosl.bak:35357/v2.0"
         },
         "identity-admin": {
-          "uri": "http://otest-admin.osuosl.bak:5000/v2.0"
+          "uri": "http://openstack-staging.osuosl.bak:5000/v2.0"
         },
         "compute-api": {
-          "uri": "http://otest-admin.osuosl.bak:8774/v2/%(tenant_id)s"
+          "uri": "http://openstack-staging.osuosl.bak:8774/v2/%(tenant_id)s"
         },
         "compute-ec2-api": {
-          "uri": "http://otest-admin.osuosl.bak:8773/services/Cloud"
+          "uri": "http://openstack-staging.osuosl.bak:8773/services/Cloud"
         },
         "compute-ec2-admin": {
-          "uri": "http://otest-admin.osuosl.bak:8773/services/Admin"
+          "uri": "http://openstack-staging.osuosl.bak:8773/services/Admin"
         },
         "compute-xvpvnc": {
-          "uri": "http://otest-admin.osuosl.bak:6081/console"
+          "uri": "http://openstack-staging.osuosl.bak:6081/console"
         },
         "image-api": {
-          "uri": "http://otest-admin.osuosl.bak:9292/v2"
+          "uri": "http://openstack-staging.osuosl.bak:9292/v2"
         },
         "image-registry": {
-          "uri": "http://otest-admin.osuosl.bak:9191/v2"
+          "uri": "http://openstack-staging.osuosl.bak:9191/v2"
         },
         "block-storage-api": {
-          "uri": "http://otest-admin.osuosl.bak:8776/v1/%(tenant_id)s"
+          "uri": "http://openstack-staging.osuosl.bak:8776/v1/%(tenant_id)s"
         },
         "telemetry-api": {
-          "uri": "http://otest-admin.osuosl.bak:9000/v1"
+          "uri": "http://openstack-staging.osuosl.bak:9000/v1"
         },
         "orchestration-api": {
-          "uri": "http://otest-admin.osuosl.bak:8004//v1/%(tenant_id)s"
+          "uri": "http://openstack-staging.osuosl.bak:8004//v1/%(tenant_id)s"
         },
         "orchestration-api-cfn": {
-          "uri": "http://otest-admin.osuosl.bak:8000/v1"
+          "uri": "http://openstack-staging.osuosl.bak:8000/v1"
         },
         "orchestration-api-cloudwatch": {
-          "uri": "http://otest-admin.osuosl.bak:8003/v1"
+          "uri": "http://openstack-staging.osuosl.bak:8003/v1"
         }
       },
       "image": {
@@ -200,16 +239,16 @@
       },
       "release": "icehouse",
       "secret": {
-        "key_path": "/etc/chef/encrypted_data_bag_secret"
+        "db_passwords_data_bag": "x86_staging_db_passwords",
+        "key_path": "/etc/chef/encrypted_data_bag_secret",
+        "secrets_data_bag": "x86_staging_secrets",
+        "service_passwords_data_bag": "x86_staging_service_passwords",
+        "user_passwords_data_bag": "x86_staging_user_passwords"
       },
       "sysctl": {
         "net.ipv4.conf.all.rp_filter": "0",
         "net.ipv4.conf.default.rp_filter": "0",
         "net.ipv4.ip_forward": "1"
-      },
-      "yum": {
-        "repo-key": "https://raw.githubusercontent.com/redhat-openstack/rdo-release/master/RPM-GPG-KEY-RDO-Icehouse",
-        "uri": "http://repos.fedorapeople.org/repos/openstack/openstack-icehouse/epel-6/"
       }
     },
     "yum": {
