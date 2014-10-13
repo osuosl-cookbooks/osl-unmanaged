@@ -7,6 +7,7 @@ require 'chef/shell/ext'
 
 # Other requires
 require 'optparse'
+require 'pry' # for a repl
 
 # Parse options
 options = {}
@@ -26,9 +27,17 @@ OptionParser.new do |opts|
     options[:not_today] = o
   end
 
+  opts.on('-d', '--debug', 'Drop into a repl after loading nodes') do |o|
+    options[:debug] = o
+  end
+
 end.parse!
 
 # Helper functions that output useful stuff
+def debug(nodes)
+  binding.pry
+end
+
 def never(nodes)
   out = nodes.dup.keep_if {|n,t| !t }
   puts "\n\n"
