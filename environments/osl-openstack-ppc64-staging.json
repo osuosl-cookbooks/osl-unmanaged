@@ -183,6 +183,12 @@
         "host": "140.211.167.214",
         "mq": {
           "host": "140.211.167.214"
+        },
+        "compute-xvpvnc": {
+          "uri": "http://openpower-staging.osuosl.org:6081/console"
+        },
+        "compute-novnc": {
+          "uri": "https://openpower-staging.osuosl.org:6080/vnc_auto.html"
         }
       },
       "image": {
