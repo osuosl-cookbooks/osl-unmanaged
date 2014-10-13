@@ -31,25 +31,25 @@ end.parse!
 # Helper functions that output useful stuff
 def never(nodes)
   out = nodes.dup.keep_if {|n,t| !t }
+  puts "\n\n"
   puts "the following nodes have never had a successful chef run:"
   puts out.keys.join("\n")
-  puts "\n\n"
 end
 
 def oldest(nodes)
   out = nodes.dup 
   out.keep_if {|n,t| !!t}
   ns = out.to_a.sort { |a,b| b.last <=> a.last }
+  puts "\n\n"
   puts "From newest run to oldest run:"
   puts ns.collect {|n| "#{n.first} #{Time.at(n.last)}"}.join("\n")
-  puts "\n\n"
 end
 
 def not_today(nodes)
   out = nodes.dup.keep_if {|n,t| !!t and Time.now.to_i - t < 86400 }
+  puts "\n\n"
   puts "the following nodes have not run successfully in the last 24 hours:"
   puts out.keys.join("\n")
-  puts "\n\n"
 end
 
 # Collect ohai_time (time since last run, in epoch seconds) into ns
