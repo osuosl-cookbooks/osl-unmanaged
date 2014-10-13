@@ -180,7 +180,7 @@
       },
       "developer_mode": false,
       "endpoints": {
-        "bind-host": "140.211.167.174",
+        "bind-host": "0.0.0.0",
         "db": {
           "host": "140.211.15.221"
         },
