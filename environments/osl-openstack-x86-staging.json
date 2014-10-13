@@ -206,6 +206,9 @@
         "compute-xvpvnc": {
           "uri": "http://openstack-staging.osuosl.org:6081/console"
         },
+        "compute-novnc": {
+          "uri": "https://openstack-staging.osuosl.org:6080/vnc_auto.html"
+        },
         "image-api": {
           "uri": "http://openstack-staging.osuosl.org:9292/v2"
         },
