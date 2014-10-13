@@ -249,6 +249,9 @@
         "net.ipv4.conf.all.rp_filter": "0",
         "net.ipv4.conf.default.rp_filter": "0",
         "net.ipv4.ip_forward": "1"
+      },
+      "yum": {
+        "repo-key": "https://raw.githubusercontent.com/redhat-openstack/rdo-release/icehouse/RPM-GPG-KEY-RDO-Icehouse"
       }
     },
     "yum": {
