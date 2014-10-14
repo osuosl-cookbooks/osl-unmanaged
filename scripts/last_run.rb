@@ -55,7 +55,7 @@ def oldest(nodes)
 end
 
 def not_today(nodes)
-  out = nodes.dup.keep_if {|n,t| !!t and Time.now.to_i - t < 86400 }
+  out = nodes.dup.keep_if {|n,t| !!t and Time.now.to_i - t > 86400 }
   puts "\n\n"
   puts "the following nodes have not run successfully in the last 24 hours:"
   puts out.keys.join("\n")
