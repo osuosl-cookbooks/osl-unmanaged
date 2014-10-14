@@ -31,11 +31,18 @@ OptionParser.new do |opts|
     options[:debug] = o
   end
 
+  opts.on('--no-ignore', 'Dont ignore nodes marked to be ignored') do |o|
+    options[:no_ignore]
+  end
+
 end.parse!
 
 # Helper functions that output useful stuff
 def debug(nodes)
   binding.pry
+end
+
+def ignore()
 end
 
 def never(nodes)
@@ -62,11 +69,13 @@ def not_today(nodes)
 end
 
 # Collect ohai_time (time since last run, in epoch seconds) into ns
-def main()
+def main(options)
   ns = {}
+
+  ignore = Proc.new { |n| !options[:no_ignore] and n[:last_run_ignore] }
   exec_block = Proc.new do |nodes|
     nodes.all do |n|
-      ns[n.name] = n[:ohai_time]
+      ns[n.name] = n[:ohai_time] unless ignore.call(n)
     end
   end
 
@@ -83,7 +92,7 @@ def main()
 end
 
 # Collect nodes
-ns = main
+ns = main options
 
 # Run helper functions for output
 options.each_pair do |k,v|
