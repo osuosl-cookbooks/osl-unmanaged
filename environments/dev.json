@@ -38,7 +38,7 @@
     "maintain-dns": "= 0.1.4",
     "memcached": "= 1.7.2",
     "monit": "= 0.7.1",
-    "monitoring": "= 0.2.6",
+    "monitoring": "= 0.2.7",
     "mysql": "= 4.0.14",
     "nagios": "= 4.4.2",
     "networking_basic": "= 0.0.5",
@@ -51,11 +51,11 @@
     "openssl": "= 1.1.0",
     "orvsd-web": "= 0.2.1",
     "orvsd_central": "= 1.0.5",
-    "osl-apache": "= 1.0.12",
-    "osl-haproxy": "= 1.0.1",
+    "osl-apache": "= 1.0.13",
+    "osl-haproxy": "= 1.0.2",
     "osl-munin": "= 0.1.2",
     "osl-mysql": "= 0.2.0",
-    "osl-nginx": "= 1.0.5",
+    "osl-nginx": "= 1.1.1",
     "osl-openstack": "= 0.0.9",
     "osl-postgresql": "= 0.1.17",
     "osl-redmine": "= 0.1.0",
@@ -97,7 +97,7 @@
     "ganeti_webmgr": "= 0.4.7",
     "modules": "= 0.2.0",
     "whats-fresh": "= 0.1.1",
-    "proj-rtv": "= 0.1.3",
+    "proj-rtv": "= 0.1.4",
     "celery": "= 0.1.1"
   },
   "json_class": "Chef::Environment",
@@ -112,5 +112,6 @@
     }
   },
   "override_attributes": {
+
   }
 }

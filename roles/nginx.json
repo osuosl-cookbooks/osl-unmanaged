@@ -3,7 +3,7 @@
   "run_list": [
     "recipe[base::http]",
     "recipe[firewall::http]",
-    "recipe[monitoring::nginx]"
+    "recipe[osl-nginx::mon]"
   ],
   "chef_type": "role",
   "override_attributes": {},

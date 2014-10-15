@@ -3,7 +3,7 @@
   "run_list": [
     "role[rocky_base]",
     "recipe[proj-rtv::util]",
-    "recipe[monitoring::rtv]"
+    "recipe[proj-rtv::mon]"
   ],
   "chef_type": "role",
   "override_attributes": {},
