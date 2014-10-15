@@ -10,10 +10,7 @@
   "override_attributes": {
     "orvsdweb": {
       "static": {
-        "glustervol": [
-          "fs1.orvsd.bak:/static-media",
-          "fs2.orvsd.bak:/static-media"
-        ],
+        "glustervol": "fs1.orvsd.bak:/static-media",
         "glusterpath": "/data",
         "root": "/data/media.orvsd.org",
         "server_name": "media.orvsd.org"
