@@ -4,7 +4,6 @@
     "recipe[php]",
     "recipe[php::module_apc]",
     "recipe[osl-apache::project_ucc]",
-    "recipe[osl-apache::munin]",
     "recipe[osl-apache::mysql]",
     "role[apache]",
     "role[project_projects]",
