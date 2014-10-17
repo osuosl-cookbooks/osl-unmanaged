@@ -1,6 +1,5 @@
 {
   "chef_type": "role",
-  "default_attributes": {},
   "description": "Base Openstack role for all openstack nodes to setup certain aspects of the node",
   "env_run_lists": {},
   "json_class": "Chef::Role",
