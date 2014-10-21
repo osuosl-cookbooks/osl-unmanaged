@@ -1,0 +1,20 @@
+{
+  "chef_type": "role",
+  "default_attributes": {
+    "openstack": {
+      "compute": {
+        "config": {
+          "availability_zone": "power8"
+        }
+      }
+    }
+  },
+  "description": "OpenStack power8 availability zone",
+  "env_run_lists": {},
+  "json_class": "Chef::Role",
+  "name": "openstack_az_power8",
+  "override_attributes": {},
+  "run_list": [
+    "role[openstack_compute]"
+  ]
+}

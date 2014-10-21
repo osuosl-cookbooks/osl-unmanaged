@@ -60,6 +60,7 @@
       "multi_environment_monitoring": true,
       "monitored_environments": [
         "production",
+        "openstack_production",
         "osl-openstack-x86",
         "osl-openstack-ppc64"
         ]
@@ -70,6 +71,7 @@
     "munin": {
       "multi_environment_monitoring": [
         "production",
+        "openstack_production",
         "osl-openstack-x86",
         "osl-openstack-ppc64"
       ]
