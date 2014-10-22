@@ -10,28 +10,7 @@
       "compute": {
         "config": {
           "availability_zone": "power8"
-        },
-        "networks": [
-          {
-            "bridge": "br-tenant",
-            "bridge_dev": "enP3p5s0f3",
-            "dns1": "140.211.166.130",
-            "dns2": "140.211.166.131",
-            "ipv4_cidr": "192.168.60.0/22",
-            "label": "private",
-            "multi_host": "T",
-            "network_size": "1024",
-            "num_networks": "1"
-          }
-        ],
-        "network": {
-          "public_interface": "enP2p1s0f2"
         }
-      }
-    },
-    "osl-openstack": {
-      "vnc_bind_interface": {
-        "compute": "enP3p5s0f2"
       }
     }
   },
