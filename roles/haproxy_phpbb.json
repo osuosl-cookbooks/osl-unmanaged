@@ -9,15 +9,15 @@
   "override_attributes": {
       "certificate": [ {
         "phpbb-www": {
-            "cert_file": "php-www.pem",
-            "key_file": "php-www.key",
-            "chain_file": "php-www-bundle.crt",
+            "cert_file": "phpbb-www.pem",
+            "key_file": "phpbb-www.key",
+            "chain_file": "phpbb-www-bundle.crt",
             "combined_file": true
         },
         "phpbb-wildcard": {
-            "cert_file": "php-wildcard.pem",
-            "key_file": "php-wildcard.key",
-            "chain_file": "php-wildcard-bundle.crt",
+            "cert_file": "phpbb-wildcard.pem",
+            "key_file": "phpbb-wildcard.key",
+            "chain_file": "phpbb-wildcard-bundle.crt",
             "combined_file": true
         }
       } ],
