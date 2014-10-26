@@ -1,0 +1,53 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[certificate::manage_by_attributes]",
+    "recipe[osl-haproxy]",
+    "recipe[osl-haproxy::mon]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+      "certificate": [ {
+        "phpbb-www": {
+            "cert_file": "php-www.pem",
+            "key_file": "php-www.key",
+            "chain_file": "php-www-bundle.crt",
+            "combined_file": true
+        },
+        "phpbb-wildcard": {
+            "cert_file": "php-wildcard.pem",
+            "key_file": "php-wildcard.key",
+            "chain_file": "php-wildcard-bundle.crt",
+            "combined_file": true
+        }
+      } ],
+      "haproxy": {
+          "defaults_timeouts": {
+            "client": "15m"
+          },
+          "enable_ssl": true,
+          "member_port": 80,
+          "ssl_member_port": 443,
+          "ssl_incoming_port": "443 ssl crt /etc/pki/tls/phpbb-wildcard.pem crt /etc/pki/tls/phpbb-www.pem ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS",
+          "ssl_httpchk": false,
+          "members": [
+            {
+              "hostname": "phpbb-www2",
+              "ipaddress": "140.211.15.224"
+            }
+          ]
+      },
+      "sysctl": {
+        "params": {
+          "net": {
+            "netfilter.nf_conntrack_max": "256000",
+            "nf_conntrack_max": "256000"
+          }
+        }
+      }
+   },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "haproxy configuration for phpbb",
+  "name": "haproxy_phpbb"
+}
