@@ -19,7 +19,7 @@ OptionParser.new do |opts|
   opts.banner = ["Usage: environment-cookbook-checker.rb [options]",
                  "No output is usually good -- check the exit code!"].join("\n")
 
-  opts.on('-E ENV', '--environment=ENV', String) do |v|
+  opts.on('-E ENV', '--environment=ENV', 'defaults to \'production\'', String) do |v|
     options['environment'] = v
   end
   opts.on('-f FILE', '--env-file FILE', String) do |v|
