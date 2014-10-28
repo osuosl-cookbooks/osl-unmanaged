@@ -16,7 +16,8 @@ options = {
 }
 
 OptionParser.new do |opts|
-  opts.banner = "Usage: environment-cookbook-checker.rb [options]"
+  opts.banner = ["Usage: environment-cookbook-checker.rb [options]",
+                 "No output is usually good -- check the exit code!"].join("\n")
 
   opts.on('-E ENV', '--environment=ENV', String) do |v|
     options['environment'] = v
