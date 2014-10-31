@@ -25,12 +25,9 @@
           "defaults_timeouts": {
             "client": "15m"
           },
-          "enable_ssl": true,
           "member_port": 80,
           "ssl_member_port": 443,
           "ssl_incoming_port": "443 ssl crt /etc/pki/tls/phpbb-wildcard.pem crt /etc/pki/tls/phpbb-www.pem ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS no-sslv3",
-          "ssl_httpchk": false,
-          "x_forwarded_for": true,
           "members": [
             {
               "hostname": "phpbb-www1",
