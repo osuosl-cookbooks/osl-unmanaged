@@ -2,7 +2,7 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[certificate::manage_by_attributes]",
-    "recipe[osl-haproxy]",
+    "recipe[proj-phpbb::haproxy]",
     "recipe[osl-haproxy::mon]"
   ],
   "chef_type": "role",
