@@ -11,6 +11,7 @@
     "recipe[base::security]",
     "recipe[base::selinux]",
     "recipe[base::users]",
+    "recipe[logrotate::global]",
     "recipe[firewall::nrpe]",
     "recipe[firewall]",
     "recipe[monitoring]",
@@ -87,6 +88,14 @@
       "server_search": "role:logstash_server",
       "port": 5000,
       "preserve_fqdn": "on"
+    },
+    "logrotate": {
+      "global": {
+        "compress": true,
+        "dateext": true,
+        "nomail": true,
+        "notifempty": true
+      }
     }
   },
   "json_class": "Chef::Role",
