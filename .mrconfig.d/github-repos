@@ -79,9 +79,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-drupal.git
 [osuosl-cookbooks/osl-haproxy]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-haproxy.git
 
-[osuosl-cookbooks/osl-jenkins]
-checkout = git clone git@github.com:osuosl-cookbooks/osl-jenkins.git
-
 [osuosl-cookbooks/osl-munin]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-munin.git
 
