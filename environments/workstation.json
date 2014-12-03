@@ -135,6 +135,7 @@
         "racket",
         "racket-doc",
         "renameutils",
+        "reprepro",
         "rsync",
         "rsyslog-gnutls",
         "rubygems",
