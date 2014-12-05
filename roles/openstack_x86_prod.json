@@ -42,6 +42,11 @@
       }
     },
     "openstack": {
+      "block-storage": {
+        "volume": {
+          "volume_clear": "none"
+        }
+      },
       "compute": {
         "libvirt": {
           "images_type": "lvm",
