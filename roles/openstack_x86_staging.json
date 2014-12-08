@@ -48,10 +48,6 @@
         }
       },
       "compute": {
-        "libvirt": {
-          "images_type": "lvm",
-          "volume_group": "nova"
-        },
         "network": {
           "libvirt_inject_key": "false",
           "libvirt_inject_password": "false",
