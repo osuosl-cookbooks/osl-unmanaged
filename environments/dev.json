@@ -7,7 +7,7 @@
     "apt": "= 2.2.0",
     "ark": "= 0.8.0",
     "aws": "= 2.1.1",
-    "base": "= 1.3.17",
+    "base": "= 1.3.20",
     "bluepill": "= 2.3.1",
     "build-essential": "= 1.4.2",
     "celery": "= 0.1.1",
@@ -98,7 +98,8 @@
     "xml": "= 1.2.4",
     "yum": "= 3.0.0",
     "yum-epel": "= 0.3.0",
-    "zlib": "= 2.0.0"
+    "zlib": "= 2.0.0",
+    "resource_from_hash": "= 0.1.2"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
