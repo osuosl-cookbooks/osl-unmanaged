@@ -10,7 +10,7 @@
     "erlang": "= 1.5.4",
     "firewall": "= 2.1.8",
     "iptables-ng": "= 2.2.0",
-    "monitoring": "= 0.2.7",
+    "monitoring": "= 0.2.8",
     "munin": "= 1.4.3",
     "nagios": "= 4.4.2",
     "ntp": "= 1.6.2",
@@ -51,5 +51,7 @@
       }
     }
   },
-  "override_attributes": { }
+  "override_attributes": {
+
+  }
 }
