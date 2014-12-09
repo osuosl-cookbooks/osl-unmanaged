@@ -42,11 +42,6 @@
       }
     },
     "openstack": {
-      "block-storage": {
-        "volume": {
-          "volume_clear": "none"
-        }
-      },
       "compute": {
         "network": {
           "libvirt_inject_key": "false",
