@@ -46,6 +46,7 @@
         "network": {
           "libvirt_inject_key": "false",
           "libvirt_inject_password": "false",
+          "auto_assign_floating_ip": "true\ndefault_floating_pool=public",
           "public_interface": "br108"
         }
       },
