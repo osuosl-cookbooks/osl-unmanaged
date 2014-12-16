@@ -3,6 +3,9 @@
   "description": "phpbb environment",
   "json_class": "Chef::Environment",
   "chef_type": "environment",
+  "cookbook_versions": {
+    "apache2": "= 1.10.0"
+  },
   "default_attributes": {
     "nagios": {
       "allowed_hosts": [
