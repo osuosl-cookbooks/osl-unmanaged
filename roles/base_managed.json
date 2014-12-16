@@ -61,7 +61,8 @@
       "multi_environment_monitoring": true,
       "monitored_environments": [
         "production",
-        "openstack_production"
+        "openstack_production",
+        "phpbb"
         ]
     },
     "ntp": {
@@ -70,7 +71,8 @@
     "munin": {
       "multi_environment_monitoring": [
         "production",
-        "openstack_production"
+        "openstack_production",
+        "phpbb"
       ]
     },
     "mysql": {
