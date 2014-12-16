@@ -3,6 +3,13 @@
   "description": "phpbb environment",
   "json_class": "Chef::Environment",
   "chef_type": "environment",
-  "default_attributes": {},
+  "default_attributes": {
+    "nagios": {
+      "allowed_hosts": [
+        "140.211.167.157",
+        "10.1.0.100"
+      ]
+    }
+  },
   "override_attributes": {}
 }
