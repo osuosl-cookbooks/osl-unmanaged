@@ -22,7 +22,6 @@
         "python-novaclient"
       ],
       "packages": [
-        "0ad",
         "ack-grep",
         "alsa-utils",
         "apt-file",
@@ -79,7 +78,6 @@
         "libgnome-keyring-dev",
         "libgphoto2-2:i386",
         "libsane:i386",
-        "ia32-libs",
         "iftop",
         "inkscape",
         "iotop",
