@@ -1,6 +1,6 @@
 {
-  "name": "workstation-dev",
-  "description": "Keep workstation things out of production",
+  "name": "workstation_dev",
+  "description": "Dev workstation environment for testing Jessie",
   "cookbook_versions": {
     "chef-client": "= 3.3.8",
     "chef_gem": "= 0.1.0",
