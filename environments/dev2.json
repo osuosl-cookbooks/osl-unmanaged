@@ -1,6 +1,6 @@
 {
-  "name": "production",
-  "description": "The production environment",
+  "name": "dev2",
+  "description": "The development environment",
   "cookbook_versions": {
     "aliases": "= 0.1.1",
     "apache2": "= 1.10.0",
