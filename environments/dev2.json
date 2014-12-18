@@ -111,6 +111,7 @@
           "vagrant"
         ]
       }
+    },
     "nagios": {
       "allowed_hosts": [
         "140.211.167.157",
