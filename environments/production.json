@@ -30,6 +30,7 @@
     "haproxy": "= 1.6.4",
     "homebrew": "= 1.5.4",
     "iptables": "= 0.13.0",
+    "iptables-ng": "= 2.2.0",
     "java": "= 1.22.0",
     "jenkins": "= 0.8.0",
     "lanparty": "= 0.1.1",
