@@ -1,7 +1,8 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "role[orvsd_memcached]"
+    "role[orvsd_memcached]",
+    "recipe[firewall::memcached]"
   ],
   "chef_type": "role",
   "override_attributes": {},
