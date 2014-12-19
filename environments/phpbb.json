@@ -14,5 +14,11 @@
       ]
     }
   },
-  "override_attributes": {}
+  "override_attributes": {
+    "openssh": {
+      "server": {
+        "banner": "/dev/null"
+      }
+    }
+  }
 }
