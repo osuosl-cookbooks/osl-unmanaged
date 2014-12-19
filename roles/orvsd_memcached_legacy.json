@@ -9,9 +9,9 @@
   "override_attributes": {},
   "default_attributes": {
     "osl-php": {
-      "packages": {
+      "packages": [
         "php-pecl-memcache" 
-      }
+      ]
     },
     "memcached": {
       "memory": "384"
