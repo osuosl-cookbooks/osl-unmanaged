@@ -9,8 +9,8 @@
     "rdiff-backup": {
       "client": {
         "user": "rdiff-backup-client-dev",
-        "jobs": {
-          "default": {
+        "fs": {
+          "job-defaults": {
             "retention-period": "1W",
             "exclude-dirs": [
               "/etc/cron.d",
@@ -18,10 +18,12 @@
               "/var/log/nginx"
             ]
           },
-          "/etc": {},
-          "/home": {},
-          "/var": {
-            "retention-period": "2D"
+          "jobs": {
+            "/etc": {},
+            "/home": {},
+            "/var": {
+              "retention-period": "2D"
+            }
           }
         }
       }
