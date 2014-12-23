@@ -4,7 +4,8 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "cookbook_versions": {
-    "apache2": "= 1.10.0"
+    "apache2": "= 1.10.0",
+    "jira": "1.0.2"
   },
   "default_attributes": {
     "nagios": {
