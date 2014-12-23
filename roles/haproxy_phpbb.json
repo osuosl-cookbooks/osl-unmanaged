@@ -30,8 +30,8 @@
           "ssl_incoming_port": "443 ssl crt /etc/pki/tls/phpbb-wildcard.pem crt /etc/pki/tls/phpbb-www.pem ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS no-sslv3",
           "members": [
             {
-              "hostname": "phpbb-www3",
-              "ipaddress": "140.211.15.19"
+              "hostname": "phpbb-www2",
+              "ipaddress": "140.211.15.224"
             }
           ]
       },
