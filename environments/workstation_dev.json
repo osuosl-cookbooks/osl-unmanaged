@@ -21,6 +21,7 @@
       "packages": [
         "ack-grep",
         "alsa-utils",
+        "apt",
         "apt-file",
         "aptitude",
         "arandr",
