@@ -14,8 +14,7 @@
             "retention-period": "1W",
             "exclude-dirs": [
               "/etc/cron.d",
-              "/var/log/apache",
-              "/var/log/nginx"
+              "/var/log/spool"
             ]
           },
           "jobs": {
