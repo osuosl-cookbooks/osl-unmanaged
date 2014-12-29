@@ -112,6 +112,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-slapd.git
 [osuosl-cookbooks/osl-vhosts]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-vhosts.git
 
+[osuosl-cookbooks/pgd]
+checkout = git clone git@github.com:osuosl-cookbooks/pgd.git
+
 [osuosl-cookbooks/proj-drupalorg]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-drupalorg.git
 
