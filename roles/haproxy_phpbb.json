@@ -1,44 +1,11 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[certificate::manage_by_attributes]",
     "recipe[proj-phpbb::haproxy]",
     "recipe[osl-haproxy::mon]"
   ],
   "chef_type": "role",
   "override_attributes": {
-      "certificate": [ {
-        "phpbb-www": {
-            "cert_file": "phpbb-www.pem",
-            "key_file": "phpbb-www.key",
-            "chain_file": "phpbb-www-bundle.crt",
-            "combined_file": true
-        },
-        "phpbb-wildcard": {
-            "cert_file": "phpbb-wildcard.pem",
-            "key_file": "phpbb-wildcard.key",
-            "chain_file": "phpbb-wildcard-bundle.crt",
-            "combined_file": true
-        }
-      } ],
-      "haproxy": {
-          "defaults_timeouts": {
-            "client": "15m"
-          },
-          "member_port": 80,
-          "ssl_member_port": 443,
-          "ssl_incoming_port": "443 ssl crt /etc/pki/tls/phpbb-wildcard.pem crt /etc/pki/tls/phpbb-www.pem ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS no-sslv3",
-          "backends": {
-            "maintenance": [{
-              "hostname": "phpbb-www2",
-              "ipaddress": "140.211.15.224"
-            }],
-            "http": [{
-              "hostname": "phpbb-www3",
-              "ipaddress": "140.211.15.19"
-            }]
-          }
-      },
       "sysctl": {
         "params": {
           "net": {
