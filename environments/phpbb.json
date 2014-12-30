@@ -5,7 +5,8 @@
   "chef_type": "environment",
   "cookbook_versions": {
     "apache2": "= 1.10.0",
-    "jira": "1.0.2"
+    "jira": "1.0.2",
+    "proj-phpbb": "1.0.37"
   },
   "default_attributes": {
     "nagios": {
