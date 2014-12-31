@@ -28,7 +28,7 @@
     "openstack-ops-messaging": "= 9.0.1",
     "openstack-orchestration": "= 9.2.0",
     "openstack-telemetry": "= 9.2.0",
-    "osl-apache": "= 1.0.13",
+    "osl-apache": "= 1.0.14",
     "osl-munin": "= 0.1.2",
     "osl-openstack": "= 1.0.10",
     "postfix": "= 3.6.0",
