@@ -50,6 +50,12 @@
       "config": {
         "ssl_verify_mode": ":verify_peer"
       }
+    },
+    "nagios": {
+      "allowed_hosts": [
+        "140.211.167.157",
+        "10.1.0.100"
+      ]
     }
   },
   "override_attributes": {
