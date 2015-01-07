@@ -10,7 +10,7 @@
     "resolver": "= 1.1.4",
     "orvsd_central": "= 1.0.5",
     "workstation": "= 1.4",
-    "celery": "= 0.1.2"
+    "celery": "= 0.1.4"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
