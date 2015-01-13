@@ -44,8 +44,7 @@
     "postfix": {
       "mailtype": "client",
       "main": {
-        "mydomain": "osuosl.org",
-        "myorigin": "osuosl.org",
+        "myorigin": "$mydomain",
         "relayhost": "osuosl.org",
         "smtpd_use_tls": "no",
         "smtp_use_tls": "no"
