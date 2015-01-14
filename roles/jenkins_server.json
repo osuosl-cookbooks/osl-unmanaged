@@ -5,7 +5,8 @@
     "recipe[jenkins::java]",
     "recipe[jenkins::master]",
     "recipe[certificate::manage_by_attributes]",
-    "recipe[osl-haproxy::default]"
+    "recipe[osl-haproxy::default]",
+    "recipe[git::default]"
   ],
   "chef_type": "role",
   "override_attributes": {
