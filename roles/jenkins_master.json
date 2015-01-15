@@ -41,5 +41,5 @@
   "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "Configure node as a Jenkins master server",
-  "name": "jenkins_server"
+  "name": "jenkins_master"
 }
