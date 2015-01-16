@@ -55,7 +55,7 @@
     "omnibus_updater": "= 1.0.2",
     "openssh": "= 1.3.2",
     "openssl": "= 1.1.0",
-    "orvsd_central": "= 1.1.0",
+    "orvsd_central": "= 1.1.1",
     "orvsd-web": "= 0.2.6",
     "osl-apache": "= 1.0.16",
     "osl-drupal": "= 0.2.1",
