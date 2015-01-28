@@ -112,6 +112,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-redmine.git
 [osuosl-cookbooks/osl-slapd]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-slapd.git
 
+[osuosl-cookbooks/osl-varnish]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-varnish.git
+
 [osuosl-cookbooks/osl-vhosts]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-vhosts.git
 
