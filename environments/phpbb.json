@@ -6,6 +6,7 @@
   "cookbook_versions": {
     "apache2": "= 1.10.0",
     "jira": "1.0.2",
+    "osl-haproxy": "= 1.1.0",
     "rdiff-backup": "= 1.1.1"
   },
   "default_attributes": {
