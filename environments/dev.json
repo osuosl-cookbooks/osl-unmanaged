@@ -76,7 +76,7 @@
     "postgresql": "= 3.0.2",
     "proj-drupalorg": "= 0.1.7",
     "proj-phpbb": "= 1.0.5",
-    "proj-rtv": "= 0.1.5",
+    "proj-rtv": "= 0.1.6",
     "python": "= 1.4.6",
     "rabbitmq": "= 3.1.0",
     "racktables": "= 0.2.7",
