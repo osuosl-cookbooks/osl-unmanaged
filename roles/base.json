@@ -2,6 +2,7 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[base::mailhandler]",
+    "recipe[base::rhsm]",
     "recipe[aliases]",
     "recipe[base::packages]",
     "recipe[base::denyhosts]",
