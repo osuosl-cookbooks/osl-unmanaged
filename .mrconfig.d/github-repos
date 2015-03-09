@@ -40,6 +40,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/gitlab.git
 [osuosl-cookbooks/gitolite]
 checkout = git clone git@github.com:osuosl-cookbooks/gitolite.git
 
+[osuosl-cookbooks/glusterfs]
+checkout = git clone git@github.com:osuosl-cookbooks/glusterfs.git
+
 [osuosl-cookbooks/goblin]
 checkout = git clone git@github.com:osuosl-cookbooks/goblin.git
 
