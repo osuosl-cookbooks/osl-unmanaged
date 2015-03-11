@@ -142,7 +142,7 @@
         "rsync",
         "rsyslog-gnutls",
         "rubygems",
-        "rxvt-unicode",
+        "rxvt-unicode-256color",
         "sakura",
         "screen",
         "scrot",
