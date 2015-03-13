@@ -1,0 +1,30 @@
+{
+    "chef_type": "role",
+    "default_attributes": {},
+    "description": "OpenStack Cinder role to setup a cinder on a node",
+    "env_run_lists": {},
+    "json_class": "Chef::Role",
+    "name": "openstack_cinder",
+    "override_attributes": {
+        "authorization": {
+            "sudo": {
+                "include_sudoers_d": true
+            }
+        },
+        "openstack": {
+          "block_storage": {
+            "volume": {
+              "volume_group": "openstack"
+            }
+          }
+        }
+    },
+    "run_list": [
+      "role[openstack_base]",
+      "recipe[openstack-block-storage::api]",
+      "recipe[openstack-block-storage::scheduler]",
+      "recipe[openstack-block-storage::volume]",
+      "recipe[openstack-block-storage::client]",
+      "recipe[openstack-block-storage::identity_registration]"
+    ]
+}
