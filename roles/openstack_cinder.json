@@ -17,7 +17,7 @@
           }
         },
         "openstack": {
-          "block_storage": {
+          "block-storage": {
             "volume": {
               "volume_group": "openstack"
             }
