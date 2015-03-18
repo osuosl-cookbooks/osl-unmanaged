@@ -11,6 +11,11 @@
                 "include_sudoers_d": true
             }
         },
+        "osl-openstack": {
+          "cinder": {
+            "iscsi_role": "openstack_compute"
+          }
+        },
         "openstack": {
           "block_storage": {
             "volume": {
@@ -21,10 +26,6 @@
     },
     "run_list": [
       "role[openstack_base]",
-      "recipe[openstack-block-storage::api]",
-      "recipe[openstack-block-storage::scheduler]",
-      "recipe[openstack-block-storage::volume]",
-      "recipe[openstack-block-storage::client]",
-      "recipe[openstack-block-storage::identity_registration]"
+      "recipe[osl-openstack::cinder]",
     ]
 }
