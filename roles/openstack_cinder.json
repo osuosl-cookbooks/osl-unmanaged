@@ -19,6 +19,7 @@
         "openstack": {
           "block-storage": {
             "volume": {
+              "volume_clear_size": "256",
               "volume_group": "openstack"
             }
           }
