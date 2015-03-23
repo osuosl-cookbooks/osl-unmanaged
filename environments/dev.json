@@ -82,7 +82,7 @@
     "racktables": "= 0.2.7",
     "rdiff-backup": "= 0.2.0",
     "resource_from_hash": "= 0.1.2",
-    "ros": "= 0.1.48",
+    "ros": "= 0.1.49",
     "ros-docs": "= 0.1.7",
     "rsync": "= 0.8.7",
     "rsyslog": "= 1.12.2",
