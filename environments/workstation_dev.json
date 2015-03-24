@@ -2,6 +2,7 @@
   "name": "workstation_dev",
   "description": "Dev workstation environment for testing Jessie",
   "cookbook_versions": {
+    "apt": "= 2.5.3",
     "chef-client": "= 3.3.8",
     "chef_gem": "= 0.1.0",
     "cron": "= 1.2.2",
