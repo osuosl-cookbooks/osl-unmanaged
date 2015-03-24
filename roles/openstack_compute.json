@@ -10,6 +10,12 @@
             "sudo": {
                 "include_sudoers_d": true
             }
+        },
+        "firewall": {
+          "iptables-config": {
+            "save_on_restart": "yes",
+            "save_on_stop": "yes"
+          }
         }
     }, 
     "run_list": [
