@@ -170,6 +170,7 @@
         "tree",
         "ttf-mscorefonts-installer",
         "units",
+        "update-notifier-common",
         "vim",
         "vim-gtk",
         "virtualbox",
