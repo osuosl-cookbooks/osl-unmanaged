@@ -62,6 +62,7 @@
       "monitored_environments": [
         "production",
         "openstack_production",
+        "phase_out_nginx",
         "phpbb"
         ]
     },
@@ -72,6 +73,7 @@
       "multi_environment_monitoring": [
         "production",
         "openstack_production",
+        "phase_out_nginx",
         "phpbb"
       ]
     },
