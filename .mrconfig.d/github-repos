@@ -172,6 +172,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/ros.git
 [osuosl-cookbooks/ros-docs]
 checkout = git clone git@github.com:osuosl-cookbooks/ros-docs.git
 
+[osuosl-cookbooks/rsync]
+checkout = git clone git@github.com:osuosl-cookbooks/rsync.git
+
 [osuosl-cookbooks/sinatra_app]
 checkout = git clone git@github.com:osuosl-cookbooks/sinatra_app.git
 
