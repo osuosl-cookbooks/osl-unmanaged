@@ -1,0 +1,20 @@
+{
+  "name": "phase_out_nginx",
+  "description": "This environment is for phasing out the nginx cookbook",
+  "cookbook_versions": {
+    "nginx": "= 2.6.2"
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "nagios": {
+      "allowed_hosts": [
+        "140.211.167.157",
+        "10.1.0.100"
+      ]
+    }
+  },
+  "override_attributes": {
+
+  }
+}
