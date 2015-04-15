@@ -88,9 +88,6 @@ checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/coo
 [osuosl-cookbooks/osl-apache]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-apache.git
 
-[osuosl-cookbooks/osl-application-python]
-checkout = git clone git@github.com:osuosl-cookbooks/osl-application-python.git
-
 [osuosl-cookbooks/osl-berkshelf-api]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-berkshelf-api.git
 
