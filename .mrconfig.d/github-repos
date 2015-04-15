@@ -28,6 +28,12 @@ checkout = git clone git@github.com:osuosl-cookbooks/fenestra.git
 [osuosl-cookbooks/firewall]
 checkout = git clone git@github.com:osuosl-cookbooks/firewall.git
 
+[osuosl-cookbooks/ganeti]
+checkout = git clone git@github.com:osuosl-cookbooks/ganeti.git
+
+[osuosl-cookbooks/ganeti-instance-image]
+checkout = git clone git@github.com:osuosl-cookbooks/ganeti-instance-image.git
+
 [osuosl-cookbooks/ganeti_webmgr]
 checkout = git clone git@github.com:osuosl-cookbooks/ganeti_webmgr.git
 
