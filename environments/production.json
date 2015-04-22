@@ -44,7 +44,7 @@
     "memcached": "= 1.7.2",
     "modules": "= 0.2.0",
     "monit": "= 0.7.1",
-    "monitoring": "= 0.2.8",
+    "monitoring": "= 0.2.9",
     "munin": "= 1.4.3",
     "mysql": "= 3.0.12",
     "nagios": "= 4.4.2",

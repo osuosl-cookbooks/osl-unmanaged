@@ -10,7 +10,7 @@
     "erlang": "= 1.5.4",
     "firewall": "= 2.1.14",
     "iptables-ng": "= 2.2.0",
-    "monitoring": "= 0.2.8",
+    "monitoring": "= 0.2.9",
     "munin": "= 1.4.3",
     "nagios": "= 4.4.2",
     "ntp": "= 1.6.2",
