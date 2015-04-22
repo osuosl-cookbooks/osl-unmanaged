@@ -2,8 +2,6 @@
 
 require 'octokit'
 
-puts ARGV[0]
-
 client = Octokit::Client.new \
   :access_token => ARGV[0]
 
