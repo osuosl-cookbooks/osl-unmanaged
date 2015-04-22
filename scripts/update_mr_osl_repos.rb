@@ -2,16 +2,17 @@
 
 require 'octokit'
 
+puts ARGV[0]
+
 client = Octokit::Client.new \
-  :client_id     => '',
-  :client_secret => ''
+  :access_token => ARGV[0]
 
 client.auto_paginate = true
 user = client.user 'osuosl-cookbooks'
 
 entries = []
 
-client.org_repos('osuosl-cookbooks').collect { |r| r.name }.each do |name|
+client.org_repos('osuosl-cookbooks').collect { |r| r.name }.sort.each do |name|
   puts name
   entries << "[osuosl-cookbooks/#{name}]\ncheckout = git clone git@github.com:osuosl-cookbooks/#{name}.git"
 end
