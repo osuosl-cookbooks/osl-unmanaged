@@ -8,7 +8,7 @@ client = Octokit::Client.new \
 client.auto_paginate = true
 
 entries = []
-client.org_repos('osuosl-cookbooks').collect { |r| r.name }.sort.each do |name|
+client.org_repos('osuosl-cookbooks').map(&:name).sort.each do |name|
   entries << "[osuosl-cookbooks/#{name}]\ncheckout = git clone git@github.com:osuosl-cookbooks/#{name}.git"
 end
 
