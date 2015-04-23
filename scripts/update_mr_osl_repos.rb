@@ -3,7 +3,7 @@
 require 'octokit'
 
 client = Octokit::Client.new \
-  :access_token => ARGV[0]
+  :access_token => ENV['ACCESS_TOKEN']
 
 client.auto_paginate = true
 
