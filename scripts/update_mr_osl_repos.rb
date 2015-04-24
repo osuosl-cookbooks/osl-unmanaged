@@ -12,6 +12,6 @@ client.org_repos('osuosl-cookbooks').map(&:name).sort.each do |name|
   entries << "[osuosl-cookbooks/#{name}]\ncheckout = git clone git@github.com:osuosl-cookbooks/#{name}.git"
 end
 
-File.open('../.mrconfig.d/github-repos', 'w') do |f|
+File.open(File.join(File.dirname(__FILE__), '../.mrconfig.d/github-repos'), 'w') do |f|
   f.puts entries.join("\n\n")
 end
