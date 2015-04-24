@@ -169,6 +169,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/racktables.git
 [osuosl-cookbooks/rdiff-backup]
 checkout = git clone git@github.com:osuosl-cookbooks/rdiff-backup.git
 
+[osuosl-cookbooks/resource_from_hash]
+checkout = git clone git@github.com:osuosl-cookbooks/resource_from_hash.git
+
 [osuosl-cookbooks/ros]
 checkout = git clone git@github.com:osuosl-cookbooks/ros.git
 
