@@ -24,7 +24,7 @@ end
 
 # Only create a new entry if there wasn't already an existing entry for it
 entries = []
-client.org_repos('osuosl-cookbooks').map(&:name).sort.each do |n|
+client.org_repos('osuosl-cookbooks').map(&:name).each do |n|
   if oldmap.key? n
     entries << oldmap[n]
   else
@@ -33,5 +33,5 @@ client.org_repos('osuosl-cookbooks').map(&:name).sort.each do |n|
 end
 
 File.open(fname, 'w') do |f|
-  f.puts entries.join("\n\n")
+  f.puts entries.sort.join("\n\n")
 end
