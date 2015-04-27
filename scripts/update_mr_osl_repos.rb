@@ -10,6 +10,13 @@ require 'octokit'
 client = Octokit::Client.new \
   :access_token => ENV['ACCESS_TOKEN']
 
+begin
+  client.user
+rescue Octokit::Unauthorized
+  STDERR.puts "Login failure; exiting"
+  exit 1
+end
+
 client.auto_paginate = true
 
 fname = File.join(File.dirname(__FILE__), '../.mrconfig.d/github-repos')
