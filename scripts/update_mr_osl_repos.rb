@@ -12,8 +12,8 @@ client = Octokit::Client.new \
 
 begin
   client.user
-rescue Octokit::Unauthorized
-  STDERR.puts "Login failure; exiting"
+rescue Octokit::Unauthorized => e
+  STDERR.puts "Login failure; exiting: #{e.message}"
   exit 1
 end
 
