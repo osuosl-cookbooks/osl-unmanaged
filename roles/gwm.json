@@ -5,7 +5,7 @@
     "recipe[ganeti_webmgr::default]",
     "recipe[ganeti_webmgr::bootstrap_user]",
     "recipe[ganeti_webmgr::apache]",
-    "recipe[ganeti_webmgr::haystacK]",
+    "recipe[ganeti_webmgr::haystack]",
     "recipe[firewall::gwm]"
   ],
   "chef_type": "role",
