@@ -41,7 +41,7 @@
     "magic_shell": "= 0.2.0",
     "maintain-dns": "= 0.1.4",
     "memcached": "= 1.7.2",
-    "modules": "= 0.2.0",
+    "modules": "= 0.2.1",
     "monit": "= 0.7.1",
     "monitoring": "= 0.2.9",
     "munin": "= 1.4.3",
