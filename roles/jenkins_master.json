@@ -8,7 +8,8 @@
     "recipe[certificate::manage_by_attributes]",
     "recipe[osl-jenkins::haproxy]",
     "recipe[osl-haproxy::default]",
-    "recipe[git::default]"
+    "recipe[git::default]",
+    "recipe[osl-jenkins::chef_ci_cookbook_template]"
   ],
   "chef_type": "role",
   "override_attributes": {
