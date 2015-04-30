@@ -6,7 +6,8 @@
     "recipe[ganeti_webmgr::bootstrap_user]",
     "recipe[ganeti_webmgr::apache]",
     "recipe[ganeti_webmgr::haystack]",
-    "recipe[firewall::gwm]"
+    "recipe[firewall::gwm]",
+    "recipe[certificate::wildcard]"
   ],
   "chef_type": "role",
   "override_attributes": {},
