@@ -107,7 +107,8 @@
     "yum-centos": "= 0.3.0",
     "yum-epel": "= 0.3.0",
     "zlib": "= 2.0.0",
-    "glusterfs": "= 0.1.1"
+    "glusterfs": "= 0.1.1",
+    "osl-mirror": "= 0.1.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
