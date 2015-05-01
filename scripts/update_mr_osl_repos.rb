@@ -8,7 +8,7 @@
 require 'octokit'
 
 client = Octokit::Client.new \
-  :access_token => ENV['ACCESS_TOKEN']
+  :access_token => ENV['GITHUB_TOKEN']
 
 begin
   client.user
