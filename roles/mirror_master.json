@@ -1,0 +1,17 @@
+{
+    "chef_type": "role", 
+    "default_attributes": {}, 
+    "description": "OSL Master Mirror Role", 
+    "env_run_lists": {}, 
+    "json_class": "Chef::Role", 
+    "name": "mirror_master", 
+    "override_attributes": {
+      "osl-mirror": {
+        "master": true
+      }
+    }, 
+    "run_list": [
+      "recipe[osl-mirror]",
+      "recipe[osl-mirror::apache]"
+    ]
+}
