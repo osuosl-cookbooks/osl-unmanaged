@@ -2,8 +2,8 @@
   "name": "nagios-staging",
   "description": "For staging Nagios cookbook version 7",
   "cookbook_versions": {
-    "nagios": "= 7.0.8",
-    "nrpe": "= 1.4.12"
+    "nagios": "~> 7.1",
+    "nrpe": "~> 1.5"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
