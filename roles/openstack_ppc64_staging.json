@@ -10,7 +10,7 @@
         "networks": [
           {
             "bridge": "br-tenant",
-            "bridge_dev": "net1",
+            "bridge_dev": "enP3p5s0f3",
             "dns1": "140.211.166.130",
             "dns2": "140.211.166.131",
             "ipv4_cidr": "192.168.64.0/22",
@@ -44,14 +44,14 @@
       "databag_prefix": "ppc64_staging",
       "vnc_bind_interface": {
         "controller": "eth1",
-        "compute": "net0"
+        "compute": "enP3p5s0f2"
       }
     },
     "openstack": {
       "compute": {
         "network": {
           "auto_assign_floating_ip": "true\ndefault_floating_pool=nova",
-          "public_interface": "net0"
+          "public_interface": "enP3p5s0f2"
         }
       },
       "dashboard": {
