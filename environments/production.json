@@ -23,7 +23,7 @@
     "database": "= 1.4.0",
     "erlang": "= 1.5.4",
     "fenestra": "= 0.1.0",
-    "firewall": "= 2.1.15",
+    "firewall": "= 2.1.16",
     "ganeti_webmgr": "= 0.4.10",
     "generic-vhosts": "= 0.1.31",
     "git": "= 4.0.2",
