@@ -8,12 +8,12 @@
 require 'octokit'
 
 client = Octokit::Client.new \
-  :access_token => ENV['GITHUB_TOKEN']
+  access_token: ENV['GITHUB_TOKEN']
 
 begin
   client.user
-rescue Octokit::Unauthorized => e
-  STDERR.puts "Login failure; exiting: #{e.message}"
+rescue Octokit::Unauthorized => err
+  STDERR.puts "Login failure; exiting: #{err.message}"
   exit 1
 end
 
@@ -25,7 +25,8 @@ File.open(fname, 'r') do |f|
   oldentries = f.read.split("\n\n")
   oldentries.each do |e|
     # Create a map of repo names to their corresponding existing entries
-    oldmap[e.gsub(%r{^.*\n.*git@github\.com:osuosl-cookbooks/(.*?)(\.git.*)?( .*)?$}, '\1')] = e
+    regex = /^.*\n.*git@github\.com:osuosl-cookbooks\/(.*?)(\.git.*)?( .*)?$/
+    oldmap[e.gsub(regex, '\1')] = e
   end
 end
 
@@ -35,7 +36,8 @@ client.org_repos('osuosl-cookbooks').map(&:name).each do |n|
   if oldmap.key? n
     entries << oldmap[n]
   else
-    entries << "[osuosl-cookbooks/#{n}]\ncheckout = git clone git@github.com:osuosl-cookbooks/#{n}.git"
+    entries << "[osuosl-cookbooks/#{n}]
+checkout = git clone git@github.com:osuosl-cookbooks/#{n}.git"
   end
 end
 
