@@ -22,7 +22,7 @@ exists() {
 <% if knife_config[:bootstrap_install_command] %>
   <%= knife_config[:bootstrap_install_command] %>
 <% else %>
-  rpm_url="<%= knife_config[:rpm_url] ? knife_config[:rpm_url] : "http://ftp.osuosl.org/pub/osl/openpower/rpms/chef-11.12.4+20140507001835-1.fedora.20.ppc64.rpm" %>"
+  rpm_url="<%= knife_config[:rpm_url] ? knife_config[:rpm_url] : "http://ftp.osuosl.org/pub/osl/openpower/rpms/chef-12.0.3-1.$(uname -m).rpm" %>"
   if ! exists /usr/bin/chef-client; then
     echo "Installing Chef Client..."
     if exists wget; then
