@@ -54,7 +54,8 @@
     "openssh": {
       "server": {
         "password_authentication": "no",
-        "protocol": 2
+        "protocol": 2,
+        "subsystem": "sftp internal-sftp"
       }
     },
     "nagios": {
