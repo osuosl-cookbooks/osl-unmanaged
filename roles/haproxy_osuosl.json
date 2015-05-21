@@ -4,7 +4,8 @@
     "recipe[osl-haproxy::data_bag]",
     "recipe[osl-haproxy::ucarp]",
     "recipe[osl-haproxy::mon]",
-    "recipe[ucarp::data_bag]"
+    "recipe[ucarp::data_bag]",
+    "recipe[firewall::vnc]"
   ],
   "chef_type": "role",
   "override_attributes": {
@@ -28,6 +29,14 @@
       "ucarp": {
         "data_bag": {
           "cluster": "osuosl"
+        }
+      },
+      "firewall": {
+        "vnc": {
+          "type": "gwm",
+          "ports": {
+            "gwm": ["8888"]
+          }
         }
       }
    },
