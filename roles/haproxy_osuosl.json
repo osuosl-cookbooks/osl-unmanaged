@@ -28,7 +28,7 @@
       },
       "ucarp": {
         "data_bag": {
-          "cluster": "osuosl"
+          "cluster": "vip-lb1"
         }
       },
       "firewall": {
