@@ -15,6 +15,7 @@
       "host_name_attribute": "fqdn",
       "notifications_enabled": "1",
       "user": "nagios",
+      "url": "nagios2.osuosl.org",
       "ssl_cert_file": "/etc/pki/tls/certs/wildcard.pem",
       "default_host": {
           "notification_interval": "0"
