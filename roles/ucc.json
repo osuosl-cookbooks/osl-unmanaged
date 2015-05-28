@@ -3,6 +3,7 @@
     "role[base_managed]",
     "recipe[php]",
     "recipe[php::module_apc]",
+    "recipe[osl-apache]",
     "recipe[osl-apache::project_ucc]",
     "recipe[osl-apache::mysql]",
     "role[apache]",
