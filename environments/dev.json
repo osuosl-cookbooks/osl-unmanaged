@@ -18,7 +18,7 @@
     "cpu": "= 0.2.0",
     "cron": "= 1.2.2",
     "daemontools": "= 1.2.0",
-    "database": "= 1.4.0",
+    "database": "= 4.0.6",
     "dmg": "= 1.1.0",
     "erlang": "= 1.5.4",
     "fenestra": "= 0.1.0",
