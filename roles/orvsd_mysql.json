@@ -6,8 +6,21 @@
   ],
   "chef_type": "role",
   "override_attributes": {
+    "osl-mysql": {
+      "replication": {
+        "role": "orvsd_mysql"
+      }
+    },
     "percona": {
-      "version": "5.5"
+      "version": "5.5",
+      "encrypted_data_bag": "mysql_orvsd",
+      "server": {
+        "innodb_log_file_size": "512M",
+        "pidfile": "/var/run/mysql/mysql.pid",
+        "replication": {
+          "username": "repl"
+        }
+      }
     }
   },
   "default_attributes": {},
