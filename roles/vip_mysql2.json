@@ -1,0 +1,20 @@
+{
+  "env_run_lists": {},
+  "run_list": [],
+  "chef_type": "role",
+  "override_attributes": {
+    "osl-mysql": {
+      "replication": {
+        "role": "vip_mysql2"
+      }
+    },
+    "percona": {
+      "version": "5.6",
+      "encrypted_data_bag": "vip_mysql2"
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "vip_mysql2 server role",
+  "name": "vip_mysql2"
+}
