@@ -5,7 +5,11 @@
     "role[mysql]"
   ],
   "chef_type": "role",
-  "override_attributes": {},
+  "override_attributes": {
+    "percona": {
+      "version": "5.5"
+    }
+  },
   "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "ORVSD mysql server role",
