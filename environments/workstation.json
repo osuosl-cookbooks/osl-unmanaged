@@ -18,9 +18,6 @@
   "default_attributes": {
     "workstation": {
       "pip_packages": [
-        "python-glanceclient",
-        "python-keystoneclient",
-        "python-novaclient"
       ],
       "packages": [
         "ack-grep",
