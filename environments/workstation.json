@@ -17,6 +17,8 @@
   "chef_type": "environment",
   "default_attributes": {
     "workstation": {
+      "pip_packages": [
+      ],
       "packages": [
         "ack-grep",
         "alsa-utils",
