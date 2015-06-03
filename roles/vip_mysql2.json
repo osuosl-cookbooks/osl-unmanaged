@@ -11,6 +11,11 @@
     "percona": {
       "version": "5.6",
       "encrypted_data_bag": "vip_mysql2"
+    },
+    "ucarp": {
+      "data_bag": {
+        "cluster": "vip-mysql2"
+      }
     }
   },
   "default_attributes": {},
