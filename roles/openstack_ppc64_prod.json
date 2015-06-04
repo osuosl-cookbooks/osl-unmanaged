@@ -50,7 +50,6 @@
     "openstack": {
       "compute": {
         "network": {
-          "auto_assign_floating_ip": "true\ndefault_floating_pool=public",
           "public_interface": "net0"
         }
       },
