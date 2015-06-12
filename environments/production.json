@@ -66,7 +66,7 @@
     "osl-drupal": "= 0.2.1",
     "osl-haproxy": "= 2.2.1",
     "osl-jenkins": "= 0.5.0",
-    "osl-mirror": "= 0.1.6",
+    "osl-mirror": "= 0.1.7",
     "osl-munin": "= 0.1.5",
     "osl-mysql": "= 1.0.0",
     "osl-nginx": "= 1.1.2",
