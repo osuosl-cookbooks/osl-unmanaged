@@ -1,6 +1,14 @@
 {
     "chef_type": "role", 
-    "default_attributes": {}, 
+    "default_attributes": {
+      "osl-mirror": {
+        "ftpsync": {
+          "push_key": [
+            "no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty,command=\"/data/mirror/bin/ftpsync-wrapper\",from=\"140.211.166.134\" ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq1qr1xRYuGuCWhiwv6212BDgp5g8cHbXVQz0Q7wP6shGEdLyciQvMwz0dbl6YhIhVuYoRspD5bpKeF1QVpSMwcYvebS893geLjSrjXCYA9Rhz/+tn4CvirXsSPLVc8lRZhW3K63Bu6iOvm8gVWjc3iJfoNMvEy4Y9LqOhVUf5HfxjP26N53eYVpZkqK5qI606yaf8fIyC+p6GaJHqirlut77aJXR9I0v4ojayQ2TrGHkQM5F5PbnhU7dtJPn1OttoCIscVeoDDJF1mm1LWFJxuT/1R6SMYOhSflpztGrYisoF0UnOSlJ8w7y25TtWlq7iUVs5Adb7Lqx5/X8hvY/cQ== ftpsync@ftp-osl"
+          ]
+        }
+      }
+    },
     "description": "OSL Slave Mirror Role", 
     "env_run_lists": {}, 
     "json_class": "Chef::Role", 
