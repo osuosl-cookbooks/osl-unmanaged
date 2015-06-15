@@ -16,6 +16,7 @@
     "override_attributes": {}, 
     "run_list": [
       "recipe[osl-mirror]",
+      "recipe[osl-mirror::ftpsync]",
       "recipe[osl-mirror::apache]",
       "recipe[osl-mirror::ftp]",
       "recipe[osl-mirror::rsync]",
