@@ -53,6 +53,7 @@
     },
     "openssh": {
       "server": {
+        "authorized_keys_file": "%h/.ssh/authorized_keys",
         "password_authentication": "no",
         "protocol": 2,
         "subsystem": "sftp internal-sftp"
