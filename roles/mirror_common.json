@@ -1,0 +1,18 @@
+{
+    "chef_type": "role", 
+    "override_attributes": {}, 
+    "description": "OSL Common Mirror Role", 
+    "env_run_lists": {}, 
+    "json_class": "Chef::Role", 
+    "name": "mirror_common", 
+    "default_attributes": {}, 
+    "run_list": [
+      "recipe[osl-mirror]",
+      "recipe[osl-mirror::ftpsync]",
+      "recipe[osl-mirror::apache]",
+      "recipe[osl-mirror::ftp]",
+      "recipe[osl-mirror::rsync]",
+      "recipe[osl-mirror::xinetd]",
+      "role[apache]"
+    ]
+}
