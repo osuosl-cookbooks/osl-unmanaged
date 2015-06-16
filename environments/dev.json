@@ -43,7 +43,7 @@
     "maintain-dns": "= 0.1.4",
     "mariadb": "= 0.3.0",
     "memcached": "= 1.7.2",
-    "modules": "= 0.2.2",
+    "modules": "= 0.2.3",
     "monit": "= 0.7.1",
     "monitoring": "= 0.2.9",
     "munin": "= 1.4.3",
