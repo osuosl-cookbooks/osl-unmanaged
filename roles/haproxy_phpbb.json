@@ -2,7 +2,8 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[proj-phpbb::haproxy]",
-    "recipe[osl-haproxy::mon]"
+    "recipe[osl-haproxy::mon]",
+    "recipe[ucarp::data_bag]"
   ],
   "chef_type": "role",
   "override_attributes": {
@@ -12,6 +13,11 @@
             "netfilter.nf_conntrack_max": "256000",
             "nf_conntrack_max": "256000"
           }
+        }
+      },
+      "ucarp": {
+        "data_bag": {
+          "cluster": "vip-phpbb-lb1"
         }
       }
    },
