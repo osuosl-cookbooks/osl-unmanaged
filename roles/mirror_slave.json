@@ -15,12 +15,6 @@
     "name": "mirror_slave", 
     "override_attributes": {}, 
     "run_list": [
-      "recipe[osl-mirror]",
-      "recipe[osl-mirror::ftpsync]",
-      "recipe[osl-mirror::apache]",
-      "recipe[osl-mirror::ftp]",
-      "recipe[osl-mirror::rsync]",
-      "recipe[osl-mirror::xinetd]",
-      "role[apache]"
+      "role[mirror_common]"
     ]
 }
