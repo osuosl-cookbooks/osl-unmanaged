@@ -50,7 +50,7 @@
     "munin": "= 1.4.3",
     "mysql": "= 3.0.12",
     "mysql2_chef_gem": "= 1.0.1",
-    "nagios": "= 4.4.2",
+    "nagios": "= 4.4.3",
     "networking_basic": "= 0.0.5",
     "newrelic": "= 0.5.8",
     "nfs": "= 1.0.0",

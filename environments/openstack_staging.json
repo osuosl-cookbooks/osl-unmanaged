@@ -12,7 +12,7 @@
     "iptables-ng": "= 2.2.0",
     "monitoring": "= 0.2.9",
     "munin": "= 1.4.3",
-    "nagios": "= 4.4.2",
+    "nagios": "= 4.4.3",
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 1.0.2",
     "openssh": "= 1.4.0",

@@ -49,7 +49,7 @@
     "munin": "= 1.4.3",
     "mysql": "= 4.0.14",
     "mysql2_chef_gem": "= 1.0.1",
-    "nagios": "= 4.4.2",
+    "nagios": "= 4.4.3",
     "networking_basic": "= 0.0.5",
     "nfs": "= 1.0.0",
     "nginx": "= 2.6.2",
