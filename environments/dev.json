@@ -62,7 +62,7 @@
     "orvsd-web": "= 0.2.6",
     "osl-apache": "= 1.0.24",
     "osl-drupal": "= 0.2.1",
-    "osl-haproxy": "= 2.2.2",
+    "osl-haproxy": "= 2.3.0",
     "osl-mirror": "= 0.1.14",
     "osl-munin": "= 0.1.5",
     "osl-mysql": "= 1.0.0",
