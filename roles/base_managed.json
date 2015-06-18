@@ -2,7 +2,7 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[base::rhsm]",
-    "recipe[rsyslog::default]",
+    "recipe[base::rsyslog]",
     "role[base]",
     "recipe[nagios::client_package]",
     "recipe[nagios::client]",
@@ -84,11 +84,6 @@
     "ldap": {
       "uri": "ldaps://ldap1.osuosl.org ldaps://ldap2.osuosl.org",
       "base": "dc=osuosl,dc=org"
-    },
-    "rsyslog": {
-      "server_search": "role:logstash_server",
-      "port": 5000,
-      "preserve_fqdn": "on"
     },
     "logrotate": {
       "global": {
