@@ -1,42 +1,12 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[nagios::server]",
     "role[base_managed]",
-    "recipe[firewall::http]",
-    "recipe[ssh-ldap]",
-    "recipe[certificate::wildcard]"
+    "recipe[osl-nagios::server]"
   ],
   "chef_type": "role",
-  "override_attributes": {
-    "nagios": {
-      "group": "nagios",
-      "enable_ssl": "true",
-      "host_name_attribute": "fqdn",
-      "notifications_enabled": "1",
-      "user": "nagios",
-      "url": "nagios2.osuosl.org",
-      "ssl_cert_file": "/etc/pki/tls/certs/wildcard.pem",
-      "default_host": {
-          "notification_interval": "0"
-      },
-      "default_service": {
-          "notification_interval": "0"
-      },
-      "server": {
-        "install_method": "source"
-      },
-      "default_contact_groups": [
-        "osl_pager"
-      ],
-      "ssl_cert_key": "/etc/pki/tls/private/wildcard.key"
-    }
-  },
-  "default_attributes": {
-    "nagios": {
-      "server_auth_method": "htpasswd"
-    }
-  },
+  "override_attributes": {},
+  "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "monitoring server role",
   "name": "monitoring"
