@@ -18,6 +18,7 @@
   "default_attributes": {
     "workstation": {
       "pip_packages": [
+        "httpie"
       ],
       "packages": [
         "ack-grep",
