@@ -13,6 +13,7 @@
       "recipe[osl-mirror::ftp]",
       "recipe[osl-mirror::rsync]",
       "recipe[osl-mirror::xinetd]",
+      "recipe[osl-mirror::mon]",
       "role[apache]"
     ]
 }
