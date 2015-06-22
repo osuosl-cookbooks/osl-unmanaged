@@ -29,7 +29,7 @@
     "openstack-orchestration": "= 9.2.0",
     "openstack-telemetry": "= 9.2.0",
     "osl-apache": "= 1.0.17",
-    "osl-munin": "= 0.1.5",
+    "osl-munin": "= 0.1.6",
     "osl-nagios": "= 0.1.2",
     "osl-openstack": "= 1.0.12",
     "postfix": "= 3.6.0",
