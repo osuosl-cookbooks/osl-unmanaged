@@ -4,14 +4,14 @@
     "description": "OpenStack Controller role to setup. Installs and configures a controller node for openstack infra",
     "env_run_lists": {}, 
     "json_class": "Chef::Role",
-    "name": "openstack_controller", 
+    "name": "openstack_controller",
     "override_attributes": {
         "authorization": {
             "sudo": {
                 "include_sudoers_d": true
             }
         }
-    },  
+    },
     "run_list": [
         "role[openstack_base]",
         "recipe[openstack-ops-messaging::server]",
@@ -33,7 +33,6 @@
         "recipe[openstack-compute::scheduler]",
         "recipe[openstack-compute::api-ec2]",
         "recipe[openstack-compute::api-os-compute]",
-        "recipe[openstack-compute::api-metadata]",
         "recipe[openstack-block-storage::api]",
         "recipe[openstack-block-storage::scheduler]",
         "recipe[openstack-block-storage::volume]",
