@@ -69,7 +69,7 @@
     "osl-mirror": "= 0.1.16",
     "osl-munin": "= 0.1.6",
     "osl-mysql": "= 1.0.0",
-    "osl-nagios": "= 0.1.2",
+    "osl-nagios": "= 0.1.3",
     "osl-nginx": "= 1.1.2",
     "osl-nodejs": "= 0.1.3",
     "osl-postgresql": "= 0.1.17",
