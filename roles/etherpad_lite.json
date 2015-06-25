@@ -3,7 +3,7 @@
   "run_list": [
     "role[base_managed]",
     "role[nodejs]",
-    "recipe[osl-nginx::project_etherpad-lite]",
+    "recipe[osl-nginx::project_etherpad_lite]",
     "role[nginx]"
   ],
   "chef_type": "role",
