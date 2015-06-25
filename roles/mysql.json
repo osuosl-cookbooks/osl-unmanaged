@@ -4,7 +4,7 @@
     "recipe[osl-mysql::server]",
     "role[base_managed]",
     "recipe[firewall::mysql]",
-    "recipe[monitoring::mysql]"
+    "recipe[osl-nagios::mysql]"
   ],
   "chef_type": "role",
   "override_attributes": {},
