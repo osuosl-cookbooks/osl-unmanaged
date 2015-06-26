@@ -62,7 +62,7 @@
     "osl-drupal": "= 0.2.1",
     "osl-haproxy": "= 2.2.2",
     "osl-munin": "= 0.1.4",
-    "osl-mysql": "= 0.1.0",
+    "osl-mysql": "= 1.0.1",
     "osl-nginx": "= 1.1.3",
     "osl-nodejs": "= 0.1.3",
     "osl-postgresql": "= 0.1.17",
