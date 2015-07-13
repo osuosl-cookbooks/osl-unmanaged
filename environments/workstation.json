@@ -19,7 +19,9 @@
     "workstation": {
       "pip_packages": [
         "httpie",
-        "python-glanceclient"
+        "python-glanceclient",
+        "python-keystoneclient",
+        "python-novaclient"
       ],
       "packages": [
         "ack-grep",
