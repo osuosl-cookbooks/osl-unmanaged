@@ -18,7 +18,8 @@
   "default_attributes": {
     "workstation": {
       "pip_packages": [
-        "httpie"
+        "httpie",
+        "python-glanceclient"
       ],
       "packages": [
         "ack-grep",
