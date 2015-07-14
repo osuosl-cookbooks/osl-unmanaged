@@ -89,6 +89,7 @@
     "recipe[workstation::dsh]",
     "recipe[workstation::printers]",
     "recipe[workstation::pastebin]",
+    "recipe[workstation::nodejs]",
     "recipe[ntp::default]",
     "recipe[openssh::default]"
   ],
