@@ -49,6 +49,7 @@
         "debootstrap",
         "dmz-cursor-theme",
         "dnsutils",
+        "docker.io",
         "dsh",
         "dstat",
         "elinks",
