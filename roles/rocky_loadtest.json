@@ -1,0 +1,40 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[rocky_base]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+      "proj-rtv": {
+        "data_bag": "rocky_loadtest",
+        "environment": "production",
+        "gluster": {
+          "data": {
+            "remotepath": "fs4.osuosl.bak:/data/rtvloadtest-data"
+          }
+        },
+        "web": {
+          "name": "rocky_loadtest.osuosl.org",
+          "cert_file": "*.osuosl.org.pem",
+          "cert_key": "*.osuosl.org.key",
+          "cert_chain": "*.osuosl.org-bundle.crt"
+        }
+      },
+      "certificate": [
+        {
+          "wildcard": {
+            "cert_path": "/etc/pki/tls",
+            "owner": "apache",
+            "group": "apache",
+            "cert_file": "*.osuosl.org.pem",
+            "key_file": "*.osuosl.org.key",
+            "chain_file": "*.osuosl.org-bundle.crt"
+          }
+        }
+      ]
+   },
+  "json_class": "Chef::Role",
+  "description": "Rocky load testing cluster",
+  "name": "rocky_loadtest"
+}
