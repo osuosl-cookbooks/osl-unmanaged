@@ -80,7 +80,7 @@
     "python": "= 1.4.6",
     "rabbitmq": "= 3.1.0",
     "racktables": "= 1.3.3",
-    "rdiff-backup": "= 2.0.0",
+    "rdiff-backup": "= 2.0.1",
     "ros": "= 0.1.49",
     "ros-docs": "= 0.1.7",
     "rsync": "= 0.8.7",
