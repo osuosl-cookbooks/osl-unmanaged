@@ -26,7 +26,7 @@
         }
     },
     "run_list": [
-      "role[openstack_base]",
+      "recipe[osl-openstack]",
       "recipe[osl-openstack::cinder]"
     ]
 }
