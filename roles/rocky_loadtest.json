@@ -16,9 +16,9 @@
         },
         "web": {
           "name": "rocky_loadtest.osuosl.org",
-          "cert_file": "*.osuosl.org.pem",
-          "cert_key": "*.osuosl.org.key",
-          "cert_chain": "*.osuosl.org-bundle.crt"
+          "cert_file": "wildcard.pem",
+          "cert_key": "wildcard.key",
+          "cert_chain": "wildcard-bundle.crt"
         }
       },
       "certificate": [
@@ -27,9 +27,9 @@
             "cert_path": "/etc/pki/tls",
             "owner": "apache",
             "group": "apache",
-            "cert_file": "*.osuosl.org.pem",
-            "key_file": "*.osuosl.org.key",
-            "chain_file": "*.osuosl.org-bundle.crt"
+            "cert_file": "wildcard.pem",
+            "key_file": "wildcard.key",
+            "chain_file": "wildcard-bundle.crt"
           }
         }
       ]
