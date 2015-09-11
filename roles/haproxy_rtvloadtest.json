@@ -27,5 +27,5 @@
   "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "haproxy configuration for rtv central load balancers",
-  "name": "haproxy_osuosl"
+  "name": "haproxy_rtvloadtest"
 }
