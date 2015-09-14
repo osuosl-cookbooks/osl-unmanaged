@@ -8,7 +8,7 @@
   "default_attributes": {
       "proj-rtv": {
         "data_bag": "rocky_loadtest",
-        "environment": "production",
+        "environment": "loadtest",
         "gluster": {
           "data": {
             "remotepath": "fs4.osuosl.bak:/rtvloadtest-data"
