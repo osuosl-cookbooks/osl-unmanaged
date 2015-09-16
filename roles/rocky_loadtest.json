@@ -18,7 +18,8 @@
           "name": "rtv-loadtest.osuosl.org",
           "cert_file": "wildcard.pem",
           "cert_key": "wildcard.key",
-          "cert_chain": "wildcard-bundle.crt"
+          "cert_chain": "wildcard-bundle.crt",
+          "ssl_enable": false
         }
       },
       "certificate": [
