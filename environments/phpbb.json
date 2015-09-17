@@ -9,7 +9,7 @@
     "osl-haproxy": "= 2.1.0",
     "osl-nagios": "= 0.1.4",
     "nagios": "= 4.4.3",
-    "rdiff-backup": "= 2.0.3"
+    "rdiff-backup": "= 2.0.4"
   },
   "default_attributes": {
     "nagios": {
