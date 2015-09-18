@@ -6,6 +6,12 @@
   "chef_type": "role",
   "override_attributes": {},
   "default_attributes": {
+      "postfix": {
+        "main": {
+          "local_transport": "discard",
+	  "relay_transport": "discard"
+        }
+      },
       "proj-rtv": {
         "data_bag": "rocky_loadtest",
         "environment": "loadtest",
