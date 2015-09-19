@@ -15,6 +15,7 @@
       "proj-rtv": {
         "data_bag": "rocky_loadtest",
         "environment": "loadtest",
+        "passenger_poolsize": "120",
         "gluster": {
           "data": {
             "remotepath": "fs4.osuosl.bak:/rtvloadtest-data"
