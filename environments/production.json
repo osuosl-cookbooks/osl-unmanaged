@@ -24,7 +24,7 @@
     "erlang": "= 1.5.4",
     "fenestra": "= 0.1.0",
     "firewall": "= 2.1.17",
-    "ganeti_webmgr": "= 0.4.12",
+    "ganeti_webmgr": "= 0.4.13",
     "generic-vhosts": "= 0.1.32",
     "git": "= 4.0.2",
     "glusterfs": "= 0.1.1",
