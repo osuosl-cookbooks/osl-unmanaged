@@ -10,7 +10,7 @@
   "override_attributes": {},
   "default_attributes": {
       "proj-rtv": {
-        "passenger_poolsize": 45
+        "passenger_poolsize": 60
       },
       "apache": {
         "mpm": "worker",
