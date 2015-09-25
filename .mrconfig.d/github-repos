@@ -28,6 +28,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-block-st
 [osuosl-cookbooks/cookbook-openstack-mellanox]
 checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-mellanox.git
 
+[osuosl-cookbooks/cookbook-openstack-network]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-network.git
+
 [osuosl-cookbooks/crowd]
 checkout = git clone git@github.com:osuosl-cookbooks/crowd.git
 
