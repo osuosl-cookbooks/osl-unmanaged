@@ -1,6 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "recipe[base]",
     "recipe[base::mailhandler]",
     "recipe[base::rhsm]",
     "recipe[aliases]",
