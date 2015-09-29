@@ -24,6 +24,9 @@
       "server": {
         "banner": "none"
       }
+    },
+    "omnibus_updater": {
+      "version": "12.4.3"
     }
   }
 }
