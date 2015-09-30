@@ -16,23 +16,23 @@ OptionParser.new do |opts|
   opts.banner = "Usage: #{__FILE__} [options]"
 
   opts.on('-n', '--never', "Display nodes that have never run") do |o|
-    options[:never] = o
+    options['never'] = o
   end
 
   opts.on('-o', '--oldest', "Display nodes sorted from newest last run to oldest") do |o|
-    options[:oldest] = o
+    options['oldest'] = o
   end
 
   opts.on('-t', '--not-today', "Display nodes that have not run today") do |o|
-    options[:not_today] = o
+    options['not_today'] = o
   end
 
   opts.on('-d', '--debug', 'Drop into a repl after loading nodes') do |o|
-    options[:debug] = o
+    options['debug'] = o
   end
 
   opts.on('--no-ignore', 'Dont ignore nodes marked to be ignored') do |o|
-    options[:no_ignore]
+    options['no_ignore']
   end
 
 end.parse!
@@ -72,10 +72,10 @@ end
 def main(options)
   ns = {}
 
-  ignore = Proc.new { |n| !options[:no_ignore] and n[:last_run_ignore] }
+  ignore = Proc.new { |n| !options['no_ignore'] and n['last_run_ignore'] }
   exec_block = Proc.new do |nodes|
     nodes.all do |n|
-      ns[n.name] = n[:ohai_time] unless ignore.call(n)
+      ns[n.name] = n['ohai_time'] unless ignore.call(n)
     end
   end
 
