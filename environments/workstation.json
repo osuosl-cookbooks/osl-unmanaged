@@ -19,6 +19,7 @@
   "default_attributes": {
     "workstation": {
       "pip_packages": [
+        "docker-compose",
         "httpie",
         "python-glanceclient",
         "python-keystoneclient",
