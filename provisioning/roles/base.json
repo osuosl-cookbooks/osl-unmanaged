@@ -1,0 +1,45 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[base::mailhandler]",
+    "recipe[aliases]",
+    "recipe[base::packages]",
+    "recipe[base::environment]",
+    "recipe[base::users]",
+    "recipe[openssh]",
+    "recipe[sysctl::apply]"
+  ],
+  "env_run_lists": {
+  },
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "sysctl": {
+      "params": {
+        "kernel": {
+          "msqmnb": 65536,
+          "msqmax": 65536,
+          "shmmax": 68719476736,
+          "shmall": 4294967296
+        },
+        "net": {
+          "core": {
+            "rmem_max": 16777216,
+            "wmem_max": 16777216
+          },
+          "ipv4": {
+            "tcp_rmem": "4096 87380 16777216",
+            "tcp_wmem": "4096 87380 16777216",
+            "tcp_no_metrics_save": 1,
+            "netfiler": {
+              "ip_conntrack_tcp_timeout_established": 14400
+            }
+          }
+        }
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "base role for all systems",
+  "name": "base"
+}

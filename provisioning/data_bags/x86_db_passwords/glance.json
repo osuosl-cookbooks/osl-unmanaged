@@ -1,0 +1,9 @@
+{
+  "glance": {
+    "encrypted_data": "uQ0SoIzghdfJsozm4LyeinV4GdsY3NnJ1P5bwVUvGts=\n",
+    "iv": "BfrBKz9hs23zg7GMqGj+pA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "glance"
+}

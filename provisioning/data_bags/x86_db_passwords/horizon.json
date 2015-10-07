@@ -1,0 +1,9 @@
+{
+  "horizon": {
+    "encrypted_data": "rFz433xIh0lpoEStOktU7YE7uQFplS32cLJeZKpqniI=\n",
+    "iv": "3VUYL7hSdiCrZWP82tPMzw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "horizon"
+}

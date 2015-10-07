@@ -1,0 +1,91 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base]",
+    "recipe[base::ifconfig]",
+    "recipe[base::issue]",
+    "recipe[base::security]",
+    "recipe[base::selinux]",
+    "recipe[logrotate::global]",
+    "recipe[firewall]",
+    "recipe[ntp]",
+    "recipe[postfix::default]",
+    "recipe[sudo]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "users": ["osuadmin"],
+        "passwordless": true,
+        "sudoers_defaults": [
+         "!visiblepw",
+          "env_reset",
+          "env_keep =  \"COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS_COLORS\"",
+          "env_keep += \"MAIL PS1 PS2 QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE\"",
+          "env_keep += \"LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES\"",
+          "env_keep += \"LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE\"",
+          "env_keep += \"LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY\"",
+          "env_keep += \"HOME\"",
+          "always_set_home",
+          "secure_path = /sbin:/bin:/usr/sbin:/usr/bin"
+        ]
+      }
+    },
+    "postfix": {
+      "mailtype": "client",
+      "main": {
+        "myorigin": "$mydomain",
+        "relayhost": "osuosl.org",
+        "smtpd_use_tls": "no",
+        "smtp_use_tls": "no"
+      }
+    },
+    "openssh": {
+      "server": {
+        "password_authentication": "no",
+        "protocol": 2,
+        "subsystem": "sftp internal-sftp"
+      }
+    },
+    "nagios": {
+      "multi_environment_monitoring": true,
+      "monitored_environments": [
+        "production",
+        "openstack_production",
+        "phase_out_nginx",
+        "phpbb"
+        ]
+    },
+    "ntp": {
+      "servers": ["time.oregonstate.edu", "pool.ntp.org"]
+    },
+    "munin": {
+      "multi_environment_monitoring": [
+        "production",
+        "openstack_production",
+        "phase_out_nginx",
+        "phpbb"
+      ]
+    },
+    "mysql": {
+      "version": "5.5"
+    },
+    "ldap": {
+      "uri": "ldaps://ldap1.osuosl.org ldaps://ldap2.osuosl.org",
+      "base": "dc=osuosl,dc=org"
+    },
+    "logrotate": {
+      "global": {
+        "compress": true,
+        "dateext": true,
+        "nomail": true,
+        "notifempty": true
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "base managed role for all managed systems",
+  "name": "base_managed"
+}

@@ -1,0 +1,9 @@
+{
+  "dash": {
+    "encrypted_data": "pdNsHp331rlEofU2qeK5QUNASAoAD/dBOJ9QbdzGSfg=\n",
+    "iv": "sCd7tS+NfZCOamlXK3Xhkg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "dash"
+}

@@ -1,0 +1,9 @@
+{
+  "keystone": {
+    "encrypted_data": "GlKHqziMHKqtKh1Kwq3uxwP8Vb35JMCn+j8uSoO8+to=\n",
+    "iv": "xwbAUZlte5iedcY/nzd+cQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "keystone"
+}
