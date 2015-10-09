@@ -50,6 +50,15 @@
   "chef_type": "environment",
   "default_attributes": {
     "chef_client": {
+      "init_style": "none",
+      "cron": {
+        "minute": "*/30",
+        "hour": "*",
+        "use_cron_d": true,
+        "append_log": true,
+        "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock ",
+        "log_file": "/var/log/chef/client.log"
+      },
       "config": {
         "ssl_verify_mode": ":verify_peer"
       }
