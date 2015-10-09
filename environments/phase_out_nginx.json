@@ -3,7 +3,7 @@
   "description": "This environment is for phasing out the nginx cookbook",
   "cookbook_versions": {
     "aliases": "= 0.1.2",
-    "base": "= 1.4.3",
+    "base": "= 1.4.4",
     "build-essential": "= 1.4.2",
     "chef-client": "= 3.3.8",
     "firewall": "= 2.1.17",
