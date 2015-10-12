@@ -43,6 +43,12 @@ task openstack_x86: [:create_key] do
     "#{PROV_PATH}/openstack_x86.rb")
 end
 
+desc 'Omnibus'
+task omnibus: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/omnibus.rb")
+end
+
 desc 'Blow everything away'
 task clean: [:destroy_all]
 
