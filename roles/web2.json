@@ -37,7 +37,8 @@
         "upload_max_filesize": "10M",
         "realpath_cache_size": "2M",
         "realpath_cache_ttl": 240
-      }
+      },
+      "packages": []
     }
   },
   "json_class": "Chef::Role",
