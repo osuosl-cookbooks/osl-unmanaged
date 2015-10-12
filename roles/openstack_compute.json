@@ -19,8 +19,6 @@
         }
     }, 
     "run_list": [
-      "recipe[osl-openstack::compute]",
-      "role[openstack_base]",
-      "recipe[openstack-compute::compute]"
+      "recipe[osl-openstack::compute]"
     ]
 }
