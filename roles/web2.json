@@ -8,8 +8,7 @@
     "recipe[osl-apache]",
     "role[apache]",
     "role[rdiff_backup]",
-    "recipe[git]",
-    "recipe[mysql::client]"
+    "recipe[git]"
   ],
   "override_attributes": {
     "osl-php": {
