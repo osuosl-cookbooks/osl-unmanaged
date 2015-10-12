@@ -1,0 +1,46 @@
+{
+  "env_run_lists": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[yum-ius]",
+    "recipe[osl-php]",
+    "recipe[osl-apache]",
+    "role[apache]",
+    "role[rdiff_backup]",
+    "recipe[git]",
+    "recipe[mysql::client]"
+  ],
+  "override_attributes": {
+    "osl-php": {
+      "packages": {
+        "web2": [
+          "php56u",
+          "php56u-devel",
+          "php56u-gd",
+          "php56u-intl",
+          "php56u-mbstring",
+          "php56u-mcrypt",
+          "php56u-mysqlnd",
+          "php56u-opcache",
+          "php56u-pdo",
+          "php56u-pear",
+          "php56u-pecl-imagick",
+          "php56u-pecl-memcached"
+          ]
+      }
+    },
+    "php": {
+      "directives": {
+        "post_max_size": "10M",
+        "memory_limit": "512M",
+        "upload_max_filesize": "10M",
+        "realpath_cache_size": "2M",
+        "realpath_cache_ttl": 240
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "web2.osuosl.org role",
+  "name": "web2"
+}
