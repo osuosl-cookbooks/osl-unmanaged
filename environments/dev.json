@@ -91,7 +91,7 @@
     "resource_from_hash": "= 0.1.2",
     "ros": "= 0.1.49",
     "ros-docs": "= 0.1.7",
-    "rsync": "= 1.0.0",
+    "rsync": "= 1.0.1",
     "rsyslog": "= 1.12.2",
     "runit": "= 1.5.10",
     "selinux": "= 0.7.2",
