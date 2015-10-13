@@ -150,7 +150,6 @@
         "minute": "*/30",
         "hour": "*",
         "use_cron_d": true,
-        "append_log": true,
         "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock ",
         "log_file": "/var/log/chef/client.log"
       }
