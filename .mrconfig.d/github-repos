@@ -250,6 +250,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/ssh-ldap.git
 [osuosl-cookbooks/sshfs]
 checkout = git clone git@github.com:osuosl-cookbooks/sshfs.git
 
+[osuosl-cookbooks/standupbot]
+checkout = git clone git@github.com:osuosl-cookbooks/standupbot.git
+
 [osuosl-cookbooks/timesync]
 checkout = git clone git@github.com:osuosl-cookbooks/timesync.git
 
