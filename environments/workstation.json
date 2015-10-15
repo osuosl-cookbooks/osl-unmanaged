@@ -21,6 +21,7 @@
       "pip_packages": [
         "docker-compose",
         "httpie",
+        "python-openstackclient",
         "python-glanceclient",
         "python-keystoneclient",
         "python-novaclient"
