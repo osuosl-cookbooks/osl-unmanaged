@@ -3,7 +3,7 @@
   "description": "workstation environment",
   "cookbook_versions": {
     "apt": "= 2.7.0",
-    "chef-client": "= 3.3.8",
+    "chef-client": "= 4.3.1",
     "chef_gem": "= 0.1.0",
     "cron": "= 1.2.2",
     "ntp": "= 1.6.2",

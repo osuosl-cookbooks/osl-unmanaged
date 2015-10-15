@@ -6,7 +6,7 @@
     "apache2": "= 1.10.0",
     "base": "= 1.4.4",
     "certificate": "= 1.0.0",
-    "chef-client": "= 3.3.8",
+    "chef-client": "= 4.3.1",
     "erlang": "= 1.5.4",
     "firewall": "= 2.1.19",
     "iptables-ng": "= 2.2.8",
