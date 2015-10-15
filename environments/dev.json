@@ -129,8 +129,7 @@
         "minute": "*/30",
         "hour": "*",
         "use_cron_d": true,
-        "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock ",
-        "log_file": "/var/log/chef/client.log"
+        "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock "
       }
     }
   },

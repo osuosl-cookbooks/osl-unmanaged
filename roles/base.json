@@ -8,6 +8,7 @@
     "recipe[base::packages]",
     "recipe[base::denyhosts]",
     "recipe[base::environment]",
+    "recipe[chef-client::config]",
     "recipe[chef-client::cron]",
     "recipe[chef-client::delete_validation]",
     "recipe[openssh]",
