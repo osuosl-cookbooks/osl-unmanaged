@@ -1,21 +1,20 @@
 {
-  "name": "nagios-staging",
+  "name": "nagios_staging",
   "description": "For staging Nagios cookbook version 7",
   "cookbook_versions": {
-    "nagios": "~> 7.1",
-    "nrpe": "~> 1.5"
+    "nagios": "= 7.2.4",
+    "nrpe": "= 1.5.2"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
-    "nagios": {
-      "allowed_hosts": [
-        "140.211.167.157",
-        "10.1.0.100"
-      ]
-    }
   },
   "override_attributes": {
-
+    "nagios": {
+      "server": {
+        "server_alias": "nagios3.osuosl.org"
+      },
+      "default_contact_groups": []
+    }
   }
 }
