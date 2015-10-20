@@ -53,7 +53,7 @@
         "server_hostname": "openstack.osuosl.org"
       },
       "endpoints": {
-        "bind-host": "140.211.167.215",
+        "bind-host": "0.0.0.0",
         "db": {
           "host": "140.211.15.221"
         },
