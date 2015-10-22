@@ -14,7 +14,13 @@
       "server": {
         "server_alias": "nagios3.osuosl.org"
       },
-      "default_contact_groups": []
+      "default_contact_groups": ["test"],
+      "monitored_environments": [
+        "openstack_production",
+        "phpbb",
+        "production",
+        "phase_out_nginx"
+      ]
     }
   }
 }
