@@ -6,6 +6,7 @@
     "recipe[yum-ius]",
     "recipe[osl-php]",
     "recipe[osl-apache]",
+    "recipe[apache2::mod_php5]",
     "recipe[osl-apache::osl_web2]",
     "role[apache]",
     "role[project_internal]",
