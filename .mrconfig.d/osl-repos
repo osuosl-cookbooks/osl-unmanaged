@@ -1,5 +1,2 @@
 [data_bags]
-checkout = git clone git@git.osuosl.org:chef/data_bags.git
-
-[node-backup]
-checkout = git clone git@git.osuosl.org:chef/node-backup.git
+checkout = git clone git@git.osuosl.org:osuosl-chef/data_bags.git
