@@ -8,6 +8,7 @@
     "recipe[osl-apache]",
     "recipe[osl-apache::osl_web2]",
     "role[apache]",
+    "role[project_internal]",
     "role[rdiff_backup]",
     "recipe[git]"
   ],
