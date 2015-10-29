@@ -9,7 +9,7 @@
     "chef-client": "= 3.3.8",
     "erlang": "= 1.5.4",
     "firewall": "= 2.1.18",
-    "iptables-ng": "= 2.2.0",
+    "iptables-ng": "= 2.2.8",
     "magic_shell": "= 1.0.0",
     "monitoring": "= 0.2.9",
     "munin": "= 1.4.3",
