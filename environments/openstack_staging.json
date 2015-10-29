@@ -8,7 +8,7 @@
     "certificate": "= 1.0.0",
     "chef-client": "= 3.3.8",
     "erlang": "= 1.5.4",
-    "firewall": "= 2.1.17",
+    "firewall": "= 2.1.19",
     "iptables-ng": "= 2.2.8",
     "magic_shell": "= 1.0.0",
     "monitoring": "= 0.2.9",
