@@ -14,7 +14,8 @@
   "default_attributes": {
     "dhcp": {
       "hosts": [
-        "ajats-macmini"
+        "ajats-macmini",
+        "ajats-ubuntu"
       ]
     },
     "firewall": {
