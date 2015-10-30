@@ -1,0 +1,12 @@
+{
+  "id": "base",
+  "frontend": {
+    "https_http": [
+      "maxconn 2000",
+      "option forwardfor"
+    ],
+    "http": [
+      "bind 0.0.0.0:80"
+    ]
+  }
+}
