@@ -20,6 +20,7 @@ machine 'ajats-vpn.osuosl.org' do
     }
   }
   role 'base_managed'
+  role 'ajats'
   file('/etc/chef/encrypted_data_bag_secret',
        File.dirname(__FILE__) +
        '/encrypted_data_bag_secret')

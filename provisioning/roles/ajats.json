@@ -1,0 +1,27 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[firewall::nat]",
+    "recipe[osl-vpn::ajats]",
+    "recipe[osl-dhcp::ajats]"
+  ],
+  "env_run_lists": {
+  },
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "dhcp": {
+      "hosts": [
+        "ajats-macmini"
+      ]
+    },
+    "firewall": {
+      "nat": {
+        "network": "10.4.1.0/24"
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "AJATS role",
+  "name": "ajats"
+}
