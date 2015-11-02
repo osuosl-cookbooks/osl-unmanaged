@@ -16,6 +16,7 @@
         "use_cron_d": true,
         "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock "
       }
+    }
   },
   "override_attributes": {
     "nagios": {
