@@ -15,7 +15,8 @@
     "dhcp": {
       "hosts": [
         "ajats-macmini",
-        "ajats-ubuntu"
+        "ajats-ubuntu",
+        "ajats-windows"
       ]
     },
     "firewall": {
