@@ -2,6 +2,7 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[firewall::nat]",
+    "recipe[modules]",
     "recipe[osl-vpn::ajats]",
     "recipe[osl-dhcp::ajats]",
     "recipe[osl-haproxy::data_bag]",
@@ -28,6 +29,12 @@
       "global_options": {
         "tune.ssl.default-dh-param": 1024
       }
+    },
+    "modules": {
+      "modules": [
+        "ip_conntrack_tftp",
+        "nf_nat_tftp"
+        ]
     },
     "osl-haproxy": {
       "cluster": "ajats",
