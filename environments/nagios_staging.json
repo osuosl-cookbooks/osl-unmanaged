@@ -8,6 +8,14 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
+    "chef_client": {
+      "init_style": "none",
+      "cron": {
+        "minute": "*/30",
+        "hour": "*",
+        "use_cron_d": true,
+        "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock "
+      }
   },
   "override_attributes": {
     "nagios": {

@@ -6,7 +6,7 @@
     "apache2": "= 1.10.0",
     "base": "= 1.4.4",
     "certificate": "= 1.0.0",
-    "chef-client": "= 3.3.8",
+    "chef-client": "= 4.3.1",
     "erlang": "= 1.5.4",
     "firewall": "= 2.1.19",
     "iptables-ng": "= 2.2.8",
@@ -50,6 +50,13 @@
   "chef_type": "environment",
   "default_attributes": {
     "chef_client": {
+      "init_style": "none",
+      "cron": {
+        "minute": "*/30",
+        "hour": "*",
+        "use_cron_d": true,
+        "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock "
+      },
       "config": {
         "ssl_verify_mode": ":verify_peer"
       }
