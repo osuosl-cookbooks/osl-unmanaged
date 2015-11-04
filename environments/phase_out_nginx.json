@@ -6,7 +6,7 @@
     "base": "= 1.4.4",
     "build-essential": "= 1.4.2",
     "chef-client": "= 4.3.1",
-    "firewall": "= 2.1.19",
+    "firewall": "= 2.1.20",
     "iptables-ng": "= 2.2.8",
     "monitoring": "= 0.2.9",
     "munin": "= 1.4.3",
