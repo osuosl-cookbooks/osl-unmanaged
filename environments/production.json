@@ -18,7 +18,7 @@
     "chef_handler": "= 1.1.5",
     "chef-server": "= 1.1.0",
     "cpu": "= 0.2.0",
-    "cron": "= 1.2.2",
+    "cron": "= 1.7.0",
     "daemontools": "= 1.2.0",
     "database": "= 4.0.6",
     "dhcp": "= 5.2.0",
