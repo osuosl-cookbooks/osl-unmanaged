@@ -118,6 +118,9 @@ checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/coo
 [osuosl-cookbooks/openstack-network]
 checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-network.git openstack-network
 
+[osuosl-cookbooks/openvpn]
+checkout = git clone git@github.com:osuosl-cookbooks/openvpn.git
+
 [osuosl-cookbooks/orvsd-web]
 checkout = git clone git@github.com:osuosl-cookbooks/orvsd-web.git
 
@@ -135,6 +138,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-berkshelf-api.git
 
 [osuosl-cookbooks/osl-ceph]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-ceph.git
+
+[osuosl-cookbooks/osl-dhcp]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-dhcp.git
 
 [osuosl-cookbooks/osl-drupal]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-drupal.git
@@ -196,11 +202,17 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-varnish.git
 [osuosl-cookbooks/osl-vhosts]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-vhosts.git
 
+[osuosl-cookbooks/osl-vpn]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-vpn.git
+
 [osuosl-cookbooks/pgd]
 checkout = git clone git@github.com:osuosl-cookbooks/pgd.git
 
 [osuosl-cookbooks/production-roles]
 checkout = git clone git@github.com:osuosl-cookbooks/production-roles.git
+
+[osuosl-cookbooks/proj-ajats]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-ajats.git
 
 [osuosl-cookbooks/proj-drupalorg]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-drupalorg.git
