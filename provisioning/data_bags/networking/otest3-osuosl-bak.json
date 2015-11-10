@@ -1,0 +1,40 @@
+{
+  "id": "otest3-osuosl-bak",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "eth1",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "device": "eth1"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "eth1.42",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "device": "eth1.42",
+        "onboot": "yes",
+        "userctl": "no",
+        "vlan": "yes",
+        "bridge": "br42"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "eth1.108",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "device": "eth1.108",
+        "onboot": "yes",
+        "userctl": "no",
+        "vlan": "yes",
+        "bridge": "br108"
+      }
+    }
+  ]
+}

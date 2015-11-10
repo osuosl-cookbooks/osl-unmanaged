@@ -1,8 +1,8 @@
 .rake_test_cache
 .kitchen
 .chef/*.pem
-data_bags
-data_bags/*
+/data_bags
+/data_bags/*
 node-backup*
 .DS_Store
 *~
@@ -12,3 +12,14 @@ node-backup*
 /osl-cookbooks
 /osuosl-cookbooks
 /community-cookbooks
+
+# chef-provisioner
+/provisioning/.chef/*.pem
+/provisioning/.chef/local-mode-cache
+/provisioning/.chef/clients
+/provisioning/.chef/nodes
+/provisioning/.chef/provisioning
+/provisioning/nodes
+/provisioning/cookbooks
+/provisioning/clients
+/provisioning/Berksfile.lock

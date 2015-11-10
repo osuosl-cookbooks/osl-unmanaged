@@ -1,0 +1,9 @@
+{
+  "guest": {
+    "encrypted_data": "pT+8jQdqPGK6W6mWC/hLvOCy0x2PcA9iEWFIoe/3W9I=\n",
+    "iv": "Q97H4wPP1nnJOf30V3nltA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "guest"
+}

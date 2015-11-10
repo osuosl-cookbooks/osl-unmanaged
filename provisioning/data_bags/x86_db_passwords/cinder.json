@@ -1,0 +1,9 @@
+{
+  "cinder": {
+    "encrypted_data": "6PeFCFMJE2eTl8bFCTNbehZwfqRnYiHWmcU5vBftT/Q=\n",
+    "iv": "9HxM+EivZYALD5Q6qtSb8Q==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "cinder"
+}

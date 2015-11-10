@@ -1,0 +1,16 @@
+{
+  "id": "otest-controller-osuosl-org",
+  "resources": [
+    {
+      "resource": "ifconfig",
+      "attributes": {
+        "onboot": "yes",
+        "mask": "255.255.254.0",
+        "bcast": "10.1.0.254",
+        "bootproto": "static",
+        "device": "eth1"
+      },
+      "name": "10.1.0.208"
+    }
+  ]
+}

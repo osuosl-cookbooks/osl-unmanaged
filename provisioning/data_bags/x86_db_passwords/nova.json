@@ -1,0 +1,9 @@
+{
+  "nova": {
+    "encrypted_data": "7Fbndn8f8l/ajImFfSN/sHSbYGm4n7lfXeiRRzD3gzs=\n",
+    "iv": "UKqhXG2EvtanGqIbMB2B/g==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "nova"
+}

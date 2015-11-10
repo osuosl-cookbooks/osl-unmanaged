@@ -1,0 +1,9 @@
+{
+  "rbd": {
+    "encrypted_data": "2H1iLvsPg9QKAGbswy9dG2YV1f4ft5KMODObjG4BjmI=\n",
+    "iv": "LNLqkqT+Y3TyOS+5G/oufw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "rbd"
+}

@@ -1,0 +1,9 @@
+{
+  "openstack-image": {
+    "encrypted_data": "Xj8w+3F4pUxvfSEaSaY3lqKra/+eJDym7ZQuqYgQkmlZPN5Tvfxg0/6pTwng\n+Ed2\n",
+    "iv": "CR8t2lZOn7MSMuhQwMmawA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "openstack-image"
+}

@@ -1,0 +1,9 @@
+{
+  "openstack_identity_bootstrap_token": {
+    "encrypted_data": "VU0t7HqnbbP4wplw0KyR/pPyYzWAKc0ZnnhQbkDeEuquxyYRakRUz3HPwlXK\neqp5gubdk9X9EkHMBQMvjJ6iSA==\n",
+    "iv": "T+S8UwGHjoQOtppBiIkXkw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "openstack_identity_bootstrap_token"
+}

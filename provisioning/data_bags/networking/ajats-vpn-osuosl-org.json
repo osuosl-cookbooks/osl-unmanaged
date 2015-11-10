@@ -1,0 +1,16 @@
+{
+  "id": "ajats-vpn-osuosl-org",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "10.4.1.1",
+      "attributes": {
+        "onboot": "yes",
+        "mask": "255.255.255.0",
+        "bcast": "10.4.1.255",
+        "bootproto": "static",
+        "device": "eth1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "mysqlroot": {
+    "encrypted_data": "cOvqMevQJghfFqTulV3MimKvpBAKOjoJFpCVyCg1hRY=\n",
+    "iv": "+HNemcMDya5G8A9L8Ain8Q==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "mysqlroot"
+}
