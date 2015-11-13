@@ -7,7 +7,6 @@
     "recipe[osl-nagios::client]",
     "recipe[base::ifconfig]",
     "recipe[base::issue]",
-    "recipe[base::managed]",
     "recipe[base::security]",
     "recipe[base::selinux]",
     "recipe[base::users]",
