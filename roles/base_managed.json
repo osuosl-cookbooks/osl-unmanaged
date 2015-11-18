@@ -4,7 +4,7 @@
     "recipe[base::rhsm]",
     "recipe[base::rsyslog]",
     "role[base]",
-    "recipe[osl-nagios::client]",
+    "recipe[osl-nrpe]",
     "recipe[base::ifconfig]",
     "recipe[base::issue]",
     "recipe[base::security]",
