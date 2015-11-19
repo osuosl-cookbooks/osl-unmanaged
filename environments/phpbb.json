@@ -7,7 +7,7 @@
     "apache2": "= 3.1.0",
     "jira": "1.0.2",
     "osl-haproxy": "= 2.1.0",
-    "osl-nagios": "= 2.0.0",
+    "osl-nagios": "= 2.0.1",
     "nagios": "= 7.2.4",
     "rdiff-backup": "= 2.0.4"
   },
