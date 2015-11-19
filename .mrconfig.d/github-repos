@@ -34,6 +34,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-network.
 [osuosl-cookbooks/crowd]
 checkout = git clone git@github.com:osuosl-cookbooks/crowd.git
 
+[osuosl-cookbooks/dhcp-cookbook]
+checkout = git clone git@github.com:osuosl-cookbooks/dhcp-cookbook.git
+
 [osuosl-cookbooks/fenestra]
 checkout = git clone git@github.com:osuosl-cookbooks/fenestra.git
 
@@ -189,6 +192,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-postgresql.git
 
 [osuosl-cookbooks/osl-redmine]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-redmine.git
+
+[osuosl-cookbooks/osl-rsync]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-rsync.git
 
 [osuosl-cookbooks/osl-slapd]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-slapd.git
