@@ -5,7 +5,9 @@
   "chef_type": "environment",
   "cookbook_versions": {
     "apache2": "= 3.1.0",
+    "git": "= 4.0.2",
     "jira": "1.0.2",
+    "mysql": "= 5.5.1",
     "osl-haproxy": "= 2.1.0",
     "osl-nagios": "= 2.0.1",
     "nagios": "= 7.2.4",
