@@ -5,6 +5,7 @@
     "recipe[base::rsyslog]",
     "role[base]",
     "recipe[osl-nrpe]",
+    "recipe[osl-nrpe::check_cron]",
     "recipe[base::ifconfig]",
     "recipe[base::issue]",
     "recipe[base::security]",
