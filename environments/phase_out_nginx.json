@@ -23,7 +23,7 @@
     "osl-nagios": "= 2.0.1",
     "osl-nginx": "= 1.1.4",
     "osl-nodejs": "= 0.1.5",
-    "osl-nrpe": "= 1.1.0",
+    "osl-nrpe": "= 1.2.0",
     "postfix": "= 3.6.0",
     "python": "= 1.4.6",
     "rdiff-backup": "= 2.0.4",
