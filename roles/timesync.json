@@ -1,0 +1,24 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[postgresql::server]",
+    "recipe[timesync::create_database]",
+    "recipe[timesync::user]",
+    "recipe[timesync::client]",
+    "recipe[timesync::default]",
+    "recipe[haproxy::default]",
+    "recipe[firewall::http]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "postgresql": {
+      "password": {
+        "postgres": "postgres"
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "Role for managing timesync-staging.osuosl.org",
+  "name": "timesync"
+}
