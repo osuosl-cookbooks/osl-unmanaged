@@ -11,13 +11,7 @@
   ],
   "chef_type": "role",
   "override_attributes": {},
-  "default_attributes": {
-    "postgresql": {
-      "password": {
-        "postgres": "postgres"
-      }
-    }
-  },
+  "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "Role for managing timesync-staging.osuosl.org",
   "name": "timesync"
