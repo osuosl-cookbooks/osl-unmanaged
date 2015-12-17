@@ -48,7 +48,6 @@
         "bash",
         "build-essential",
         "bzr",
-        "chefdk",
         "chromium",
         "cmake",
         "cmake-data",
