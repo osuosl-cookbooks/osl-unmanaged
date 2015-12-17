@@ -20,7 +20,7 @@
     "orvsd_central": "= 1.1.3",
     "orvsd-web": "= 0.2.8",
     "osl-munin": "= 0.1.6",
-    "osl-nagios": "= 2.0.1",
+    "osl-nagios": "= 2.0.2",
     "osl-nginx": "= 1.1.4",
     "osl-nodejs": "= 0.1.5",
     "osl-nrpe": "= 1.2.0",
