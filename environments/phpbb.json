@@ -9,7 +9,7 @@
     "jira": "1.0.2",
     "mysql": "= 5.5.1",
     "osl-haproxy": "= 2.1.0",
-    "osl-nagios": "= 2.0.2",
+    "osl-nagios": "= 2.0.3",
     "nagios": "= 7.2.4",
     "rdiff-backup": "= 2.0.4"
   },
