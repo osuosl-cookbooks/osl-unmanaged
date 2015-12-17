@@ -2,9 +2,9 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[postgresql::server]",
+    "recipe[postgresql::client]",
     "recipe[timesync::create_database]",
     "recipe[timesync::user]",
-    "recipe[timesync::client]",
     "recipe[timesync::default]",
     "recipe[haproxy::default]",
     "recipe[firewall::http]"
