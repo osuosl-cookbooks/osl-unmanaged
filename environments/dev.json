@@ -28,7 +28,7 @@
     "git": "= 4.0.2",
     "glusterfs": "= 0.1.1",
     "goblin": "= 0.1.1",
-    "haproxy": "= 1.4.0",
+    "haproxy": "= 1.6.6",
     "homebrew": "= 1.5.4",
     "iptables": "= 0.13.0",
     "iptables-ng": "= 2.2.8",
