@@ -17,6 +17,9 @@
           "port": "8000"
         }
       ]
+    },
+    "timesync": {
+      "instance_name": "osuosl-timesync-staging"
     }
   },
   "default_attributes": {},
