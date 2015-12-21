@@ -56,7 +56,7 @@
     "nagios": "= 7.2.4",
     "networking_basic": "= 0.0.5",
     "newrelic": "= 0.5.8",
-    "nfs": "= 1.0.0",
+    "nfs": "= 2.2.6",
     "nginx": "= 2.6.2",
     "nodejs": "= 2.4.0",
     "nrpe": "= 1.5.2",
