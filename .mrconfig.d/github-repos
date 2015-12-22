@@ -223,6 +223,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/production-roles.git
 [osuosl-cookbooks/proj-ajats]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-ajats.git
 
+[osuosl-cookbooks/proj-deluge]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-deluge.git
+
 [osuosl-cookbooks/proj-drupalorg]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-drupalorg.git
 
