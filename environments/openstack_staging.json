@@ -32,7 +32,7 @@
     "osl-apache": "= 1.0.17",
     "osl-munin": "= 0.1.6",
     "osl-nagios": "= 2.0.6",
-    "osl-nrpe": "= 1.2.0",
+    "osl-nrpe": "= 1.3.0",
     "osl-openstack": "= 1.0.16",
     "postfix": "= 3.6.0",
     "rabbitmq": "= 3.1.0",
