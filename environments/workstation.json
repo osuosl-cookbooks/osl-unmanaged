@@ -177,6 +177,7 @@
         "sqlite3",
         "sshfs",
         "sslscan",
+        "stow",
         "strace",
         "strace64",
         "sublime-text",
