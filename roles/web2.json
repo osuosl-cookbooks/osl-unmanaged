@@ -35,7 +35,7 @@
     "php": {
       "directives": {
         "post_max_size": "10M",
-        "memory_limit": "512M",
+        "memory_limit": "1G",
         "upload_max_filesize": "10M",
         "realpath_cache_size": "2M",
         "realpath_cache_ttl": 240
