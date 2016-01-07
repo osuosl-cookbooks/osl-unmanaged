@@ -3,7 +3,7 @@
   "description": "This environment is for phasing out the nginx cookbook",
   "cookbook_versions": {
     "aliases": "= 0.1.2",
-    "base": "= 1.4.7",
+    "base": "= 1.4.8",
     "build-essential": "= 1.4.2",
     "chef-client": "= 4.3.1",
     "firewall": "= 2.1.20",
@@ -27,7 +27,7 @@
     "postfix": "= 3.6.0",
     "python": "= 1.4.6",
     "rdiff-backup": "= 2.0.5",
-    "rsyslog": "= 1.12.2",
+    "rsyslog": "= 4.0.0",
     "selinux": "= 0.7.2",
     "sudo": "= 2.5.2",
     "sysctl": "= 0.6.0",
