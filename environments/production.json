@@ -105,7 +105,7 @@
     "rdiff-backup": "= 2.0.5",
     "resource_from_hash": "= 0.1.4",
     "rhsm": "= 1.0.0",
-    "ros": "= 0.1.49",
+    "ros": "= 0.1.50",
     "ros-docs": "= 0.1.7",
     "rsync": "= 1.0.1",
     "rsyslog": "= 4.0.0",
