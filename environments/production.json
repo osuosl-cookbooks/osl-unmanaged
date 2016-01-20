@@ -97,6 +97,7 @@
     "proj-ajats": "= 0.1.1",
     "proj-drupalorg": "= 0.1.8",
     "proj-facebook": "= 0.1.0",
+    "proj-misc": "= 0.1.0",
     "proj-rtv": "= 0.1.8",
     "python": "= 1.4.6",
     "python-webapp": "= 0.1.2",
