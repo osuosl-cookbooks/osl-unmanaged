@@ -189,6 +189,7 @@
         "system-config-printer",
         "task",
         "terminator",
+        "texlive-full",
         "tig",
         "tmux",
         "tree",
