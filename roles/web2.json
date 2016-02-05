@@ -7,7 +7,7 @@
     "recipe[osl-php]",
     "recipe[osl-apache]",
     "recipe[apache2::mod_php5]",
-    "recipe[osl-apache::osl_web2]",
+    "recipe[osl-apache::data_bags]",
     "role[apache]",
     "role[project_internal]",
     "role[rdiff_backup]",
