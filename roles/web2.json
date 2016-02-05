@@ -14,6 +14,11 @@
     "recipe[git]"
   ],
   "override_attributes": {
+    "osl-apache": {
+      "data_bags": {
+        "item": "osl_web2"
+      }
+    },
     "osl-php": {
       "packages": {
         "web2": [
