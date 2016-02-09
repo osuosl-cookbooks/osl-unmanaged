@@ -11,7 +11,7 @@
         "environment": "production",
         "gluster": {
           "data": {
-            "remotepath": "fs4.osuosl.bak:/rtvprodvr-data"
+            "remotepath": "fs4.osuosl.bak:/rtvprodvr-data2"
           }
         },
         "web": {
