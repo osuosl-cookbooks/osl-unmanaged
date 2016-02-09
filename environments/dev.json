@@ -83,7 +83,7 @@
     "postgresql": "= 3.4.2",
     "proj-drupalorg": "= 0.1.7",
     "proj-phpbb": "= 1.0.5",
-    "proj-rtv": "= 0.1.8",
+    "proj-rtv": "= 0.1.9",
     "python": "= 1.4.6",
     "python-webapp": "= 0.1.1",
     "rabbitmq": "= 3.1.0",
