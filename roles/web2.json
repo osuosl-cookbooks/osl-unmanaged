@@ -11,7 +11,8 @@
     "role[apache]",
     "role[project_internal]",
     "role[rdiff_backup]",
-    "recipe[git]"
+    "recipe[git]",
+    "role[jenkins_client]"
   ],
   "override_attributes": {
     "osl-apache": {
