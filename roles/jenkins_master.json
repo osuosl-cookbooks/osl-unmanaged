@@ -9,7 +9,8 @@
     "recipe[osl-jenkins::haproxy]",
     "recipe[osl-haproxy::default]",
     "recipe[git::default]",
-    "recipe[osl-jenkins::chef_ci_cookbook_template]"
+    "recipe[osl-jenkins::chef_ci_cookbook_template]",
+    "recipe[python]"
   ],
   "chef_type": "role",
   "override_attributes": {
