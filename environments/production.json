@@ -130,6 +130,7 @@
     "yum": "= 3.5.2",
     "yum-centos": "= 0.3.0",
     "yum-epel": "= 0.3.0",
+    "yum-passenger": "= 0.1.1",
     "zlib": "= 2.0.0"
   },
   "json_class": "Chef::Environment",
