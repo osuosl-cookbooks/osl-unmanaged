@@ -12,7 +12,8 @@
     "role[project_internal]",
     "role[rdiff_backup]",
     "recipe[git]",
-    "role[jenkins_client]"
+    "role[jenkins_client]",
+    "recipe[poise-python]"
   ],
   "override_attributes": {
     "osl-apache": {
