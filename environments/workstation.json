@@ -30,7 +30,7 @@
       }
     },
     "workstation": {
-      "pip_packages": [
+      "python_packages": [
         "docker-compose",
         "httpie",
         "python-openstackclient",
