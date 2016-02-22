@@ -41,6 +41,9 @@
         ]
       }
     },
+    "poise-python": {
+      "provider": "system"
+    },
     "postfix": {
       "mailtype": "client",
       "main": {
