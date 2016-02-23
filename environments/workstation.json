@@ -31,7 +31,6 @@
     },
     "workstation": {
       "python_packages": [
-        "docker-compose",
         "httpie",
         "python-openstackclient",
         "python-glanceclient",
@@ -75,6 +74,7 @@
         "fish",
         "fonts-inconsolata",
         "fping",
+        "gcc",
         "gconf-defaults-service",
         "gconf-editor",
         "gedit",
