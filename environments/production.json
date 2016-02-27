@@ -67,7 +67,7 @@
     "openssl": "= 1.1.0",
     "openvpn": "= 3.0.0",
     "orvsd_central": "= 1.1.3",
-    "orvsd-web": "= 0.2.8",
+    "orvsd-web": "= 0.2.9",
     "osl-apache": "= 1.0.31",
     "osl-backup": "= 0.2.8",
     "osl-dhcp": "= 0.1.2",
