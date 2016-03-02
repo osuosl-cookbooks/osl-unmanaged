@@ -1,6 +1,9 @@
 {
   "env_run_lists": {},
-  "run_list": [],
+  "run_list": [
+    "ucarp::data_bag",
+    "osl-mysql::mon"
+  ],
   "chef_type": "role",
   "override_attributes": {
     "osl-mysql": {
