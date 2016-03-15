@@ -69,7 +69,7 @@
     "osl-nagios": "= 2.1.0",
     "osl-nginx": "= 1.1.4",
     "osl-nrpe": "= 1.4.3",
-    "osl-openstack": "= 1.0.17",
+    "osl-openstack": "= 1.0.19",
     "osl-postgresql": "= 0.1.17",
     "osl-redmine": "= 0.1.0",
     "osl-slapd": "= 0.1.3",
