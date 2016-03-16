@@ -19,6 +19,7 @@
         }
     }, 
     "run_list": [
+      "recipe[osl-openstack::mon]",
       "recipe[osl-openstack::compute]"
     ]
 }
