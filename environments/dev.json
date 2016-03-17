@@ -103,7 +103,7 @@
     "ssh-ldap": "= 0.1.0",
     "sudo": "= 2.5.2",
     "supervisor": "= 0.4.12",
-    "sysctl": "= 0.6.0",
+    "sysctl": "= 0.7.0",
     "ucarp": "= 1.0.2",
     "user": "= 0.3.1",
     "whats-fresh": "= 0.2.0",
@@ -113,7 +113,7 @@
     "xml": "= 1.2.4",
     "yum": "= 3.10.0",
     "yum-centos": "= 0.4.11",
-    "yum-epel": "= 0.3.0",
+    "yum-epel": "= 0.6.6",
     "zlib": "= 2.0.0"
   },
   "json_class": "Chef::Environment",
