@@ -104,6 +104,7 @@
     "sudo": "= 2.5.2",
     "supervisor": "= 0.4.12",
     "sysctl": "= 0.7.0",
+    "systemd": "= 1.2.0",
     "ucarp": "= 1.0.2",
     "user": "= 0.3.1",
     "whats-fresh": "= 0.2.0",
