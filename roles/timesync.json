@@ -1,7 +1,6 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[timesync::create_database]",
     "recipe[timesync::user]",
     "recipe[timesync::default]",
     "recipe[haproxy::default]",
