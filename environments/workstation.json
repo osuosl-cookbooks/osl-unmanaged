@@ -16,7 +16,7 @@
     "poise-python": "= 1.2.1",
     "resolver": "= 1.1.4",
     "systemd": "= 1.2.0",
-    "workstation": "= 2.2.6"
+    "workstation": "= 2.3.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
@@ -63,7 +63,6 @@
         "debootstrap",
         "dmz-cursor-theme",
         "dnsutils",
-        "docker.io",
         "dsh",
         "dstat",
         "elinks",
@@ -224,7 +223,9 @@
       ],
       "purge": [
         "nova-api",
-        "resolvconf"
+        "resolvconf",
+        "lxc-docker*",
+        "docker.io*"
       ]
     }
   },
