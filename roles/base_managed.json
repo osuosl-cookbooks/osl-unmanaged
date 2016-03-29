@@ -74,10 +74,11 @@
     },
     "munin": {
       "multi_environment_monitoring": [
-        "production",
+        "apache_app",
         "openstack_production",
         "phase_out_nginx",
-        "phpbb"
+        "phpbb",
+        "production"
       ]
     },
     "mysql": {
