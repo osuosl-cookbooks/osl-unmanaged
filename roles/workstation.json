@@ -90,6 +90,7 @@
     "recipe[workstation::printers]",
     "recipe[workstation::pastebin]",
     "recipe[workstation::nodejs]",
+    "recipe[workstation::docker]",
     "recipe[workstation::chefdk]",
     "recipe[workstation::kitchen]",
     "recipe[ntp::default]",
