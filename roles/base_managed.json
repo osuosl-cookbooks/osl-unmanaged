@@ -63,10 +63,11 @@
     "nagios": {
       "multi_environment_monitoring": true,
       "monitored_environments": [
-        "production",
+        "apache_app",
         "openstack_production",
         "phase_out_nginx",
-        "phpbb"
+        "phpbb",
+        "production"
         ]
     },
     "ntp": {
