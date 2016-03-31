@@ -227,7 +227,6 @@
       "purge": [
         "nova-api",
         "resolvconf",
-        "lxc-docker*",
         "docker.io*"
       ]
     }
