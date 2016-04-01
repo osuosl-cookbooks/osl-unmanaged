@@ -68,7 +68,7 @@
     "osl-mysql": "= 1.0.3",
     "osl-nagios": "= 2.1.2",
     "osl-nginx": "= 1.1.4",
-    "osl-nrpe": "= 1.4.5",
+    "osl-nrpe": "= 1.4.6",
     "osl-openstack": "= 1.0.19",
     "osl-postgresql": "= 0.1.17",
     "osl-redmine": "= 0.1.0",
