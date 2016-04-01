@@ -75,7 +75,7 @@
     "recipe[resolver::default]",
     "recipe[workstation]",
     "recipe[workstation::blacklist]",
-    "recipe[workstation::cron-apt]",
+    "recipe[workstation::cron_apt]",
     "recipe[workstation::hosts]",
     "recipe[workstation::network]",
     "recipe[workstation::repos]",
