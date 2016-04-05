@@ -4,7 +4,7 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "cookbook_versions": {
-    "apache2": "= 3.2.0",
+    "apache2": "= 3.1.0",
     "git": "= 4.0.2",
     "jira": "1.0.2",
     "mysql": "= 6.1.2",
