@@ -81,7 +81,7 @@
     "osl-nagios": "= 2.1.2",
     "osl-nginx": "= 1.1.4",
     "osl-nodejs": "= 0.1.5",
-    "osl-nrpe": "= 1.4.6",
+    "osl-nrpe": "= 1.4.7",
     "osl-postgresql": "= 0.1.20",
     "osl-redmine": "= 0.1.0",
     "osl-rsync": "= 0.1.0",
