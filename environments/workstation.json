@@ -225,9 +225,10 @@
         "zsh"
       ],
       "purge": [
+        "docker.io*",
+        "iceweasel",
         "nova-api",
-        "resolvconf",
-        "docker.io*"
+        "resolvconf"
       ]
     }
   },
