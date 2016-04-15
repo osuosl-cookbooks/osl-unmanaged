@@ -31,7 +31,7 @@
     },
     "openssh": {
       "server": {
-        "permit_root_login": "no",
+        "permit_root_login": "yes",
         "x11_forwarding": "yes"
       }
     },
