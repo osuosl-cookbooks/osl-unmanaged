@@ -101,6 +101,7 @@
         "i3lock",
         "icedove",
         "icedtea-netx",
+        "iceweasel",
         "iftop",
         "inkscape",
         "iotop",
@@ -226,7 +227,6 @@
       ],
       "purge": [
         "docker.io*",
-        "iceweasel",
         "nova-api",
         "resolvconf"
       ]
