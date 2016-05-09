@@ -51,7 +51,7 @@
     "yum-centos": "= 0.4.11",
     "yum-epel": "= 0.6.6",
     "yum-erlang_solutions": "0.2.0",
-    "resource_from_hash": "= 0.1.4"
+    "resource_from_hash": "= 0.1.5"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
