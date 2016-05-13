@@ -100,9 +100,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/nagios.git
 [osuosl-cookbooks/nodejs-webapp]
 checkout = git clone git@github.com:osuosl-cookbooks/nodejs-webapp.git
 
-[osuosl-cookbooks/omnibus-builder]
-checkout = git clone git@github.com:osuosl-cookbooks/omnibus-builder.git
-
 [osuosl-cookbooks/omnibus]
 checkout = git clone git@github.com:osuosl-cookbooks/omnibus.git
 
@@ -208,9 +205,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-supermarket.git
 [osuosl-cookbooks/osl-varnish]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-varnish.git
 
-[osuosl-cookbooks/osl-vhosts]
-checkout = git clone git@github.com:osuosl-cookbooks/osl-vhosts.git
-
 [osuosl-cookbooks/osl-vpn]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-vpn.git
 
@@ -237,9 +231,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/proj-phpbb.git
 
 [osuosl-cookbooks/proj-rtv]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-rtv.git
-
-[osuosl-cookbooks/proj-teachengineering]
-checkout = git clone git@github.com:osuosl-cookbooks/proj-teachengineering.git
 
 [osuosl-cookbooks/python-webapp]
 checkout = git clone git@github.com:osuosl-cookbooks/python-webapp.git
