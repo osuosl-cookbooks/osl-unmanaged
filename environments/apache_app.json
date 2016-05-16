@@ -70,7 +70,7 @@
     "orvsd-web": "= 0.2.9",
     "osl-apache": "= 2.2.1",
     "osl-app": "= 1.3.3",
-    "osl-backup": "= 0.2.9",
+    "osl-backup": "= 0.2.10",
     "osl-dhcp": "= 0.1.2",
     "osl-drupal": "= 0.2.1",
     "osl-gitlab": "= 0.1.5",
