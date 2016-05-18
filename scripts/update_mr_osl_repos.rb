@@ -21,8 +21,7 @@ client = Octokit::Client.new \
 begin
   client.user
 rescue Octokit::Unauthorized => err
-  STDERR.puts "Login failure; exiting: #{err.message}"
-  exit 1
+  abort "Login failure; exiting: #{err.message}"
 end
 
 client.auto_paginate = true
