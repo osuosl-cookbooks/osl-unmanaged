@@ -5,7 +5,8 @@
 # Existing entries that are still needed are not modified so that manual edits
 # can still be made.
 #
-# To use, get an GitHub API token with read access to all private repos in the osuosl-cookbooks organization and export it first:
+# To use, get an GitHub API token with read access to all private repos in the
+# osuosl-cookbooks organization and export it first:
 #
 # $ export GITHUB_TOKEN=exampletoken
 # $ ./update_mr_osl_repos.rb
