@@ -25,7 +25,7 @@ File.open(fname, 'r') do |f|
   oldentries = f.read.split("\n\n")
   oldentries.each do |e|
     # Create a map of repo names to their corresponding existing entries
-    regex = /^.*\n.*git@github\.com:osuosl-cookbooks\/(.*?)(\.git.*)?( .*)?$/
+    regex = %r{^.*\n.*git@github\.com:osuosl-cookbooks/(.*?)(\.git.*)?( .*)?$}
     oldmap[e.gsub(regex, '\1')] = e
   end
 end
