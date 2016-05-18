@@ -103,21 +103,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/nodejs-webapp.git
 [osuosl-cookbooks/omnibus]
 checkout = git clone git@github.com:osuosl-cookbooks/omnibus.git
 
-[osuosl-cookbooks/openstack-compute]
-checkout = git clone -b havana/ppc64-misc-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-compute.git openstack-compute
-
-[osuosl-cookbooks/openstack-dashboard]
-checkout = git clone -b havana/ssl_fix git@github.com:osuosl-cookbooks/cookbook-openstack-dashboard.git openstack-dashboard
-
-[osuosl-cookbooks/openstack-identity]
-checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-identity.git openstack-identity
-
-[osuosl-cookbooks/openstack-image]
-checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-image.git openstack-image
-
-[osuosl-cookbooks/openstack-network]
-checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-network.git openstack-network
-
 [osuosl-cookbooks/openvpn]
 checkout = git clone git@github.com:osuosl-cookbooks/openvpn.git
 
