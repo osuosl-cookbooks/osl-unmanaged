@@ -25,6 +25,18 @@ checkout = git clone git@github.com:osuosl-cookbooks/code_generator.git
 [osuosl-cookbooks/cookbook-openstack-block-storage]
 checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-block-storage.git
 
+[osuosl-cookbooks/cookbook-openstack-compute]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-compute.git
+
+[osuosl-cookbooks/cookbook-openstack-dashboard]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-dashboard.git
+
+[osuosl-cookbooks/cookbook-openstack-identity]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-identity.git
+
+[osuosl-cookbooks/cookbook-openstack-image]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-image.git
+
 [osuosl-cookbooks/cookbook-openstack-mellanox]
 checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-mellanox.git
 
@@ -103,21 +115,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/nodejs-webapp.git
 [osuosl-cookbooks/omnibus]
 checkout = git clone git@github.com:osuosl-cookbooks/omnibus.git
 
-[osuosl-cookbooks/openstack-compute]
-checkout = git clone -b havana/ppc64-misc-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-compute.git openstack-compute
-
-[osuosl-cookbooks/openstack-dashboard]
-checkout = git clone -b havana/ssl_fix git@github.com:osuosl-cookbooks/cookbook-openstack-dashboard.git openstack-dashboard
-
-[osuosl-cookbooks/openstack-identity]
-checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-identity.git openstack-identity
-
-[osuosl-cookbooks/openstack-image]
-checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-image.git openstack-image
-
-[osuosl-cookbooks/openstack-network]
-checkout = git clone -b havana/databag-fixes git@github.com:osuosl-cookbooks/cookbook-openstack-network.git openstack-network
-
 [osuosl-cookbooks/openvpn]
 checkout = git clone git@github.com:osuosl-cookbooks/openvpn.git
 
@@ -129,6 +126,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/orvsd_central.git
 
 [osuosl-cookbooks/osl-apache]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-apache.git
+
+[osuosl-cookbooks/osl-app]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-app.git
 
 [osuosl-cookbooks/osl-backup]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-backup.git
@@ -223,8 +223,14 @@ checkout = git clone git@github.com:osuosl-cookbooks/proj-deluge.git
 [osuosl-cookbooks/proj-drupalorg]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-drupalorg.git
 
+[osuosl-cookbooks/proj-ecf]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-ecf.git
+
 [osuosl-cookbooks/proj-facebook]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-facebook.git
+
+[osuosl-cookbooks/proj-misc]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-misc.git
 
 [osuosl-cookbooks/proj-phpbb]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-phpbb.git
