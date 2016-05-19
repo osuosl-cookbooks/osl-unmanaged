@@ -5,8 +5,6 @@ org         = ENV['chef_org'] || 'my_org'
 knife[:secret_file] = "#{home_dir}/.chef/encrypted_data_bag_secret"
 
 chef_server_url         'https://chef.osuosl.org'
-log_level               :info
-log_location            STDOUT
 
 # USERNAME is UPPERCASE in Windows, but lowercase in the Chef server,
 # so `downcase` it.
