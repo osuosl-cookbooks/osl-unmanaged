@@ -19,7 +19,7 @@
     "poise-python": "= 1.2.1",
     "resolver": "= 1.1.4",
     "systemd": "= 2.0.0",
-    "workstation": "= 3.0.5"
+    "workstation": "= 3.0.4"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
