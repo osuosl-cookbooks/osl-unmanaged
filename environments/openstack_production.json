@@ -17,7 +17,7 @@
     "mysql": "= 5.3.6",
     "nagios": "= 7.2.4",
     "ntp": "= 1.6.2",
-    "omnibus_updater": "= 1.0.2",
+    "omnibus_updater": "= 1.1.0",
     "openssh": "= 1.4.0",
     "openstack-block-storage": "= 9.4.2",
     "openstack-common": "= 9.7.1",
