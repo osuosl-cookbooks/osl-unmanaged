@@ -55,7 +55,7 @@
     "nginx": "= 2.6.2",
     "ntp": "= 1.6.2",
     "ohai": "= 1.1.12",
-    "omnibus_updater": "= 1.0.2",
+    "omnibus_updater": "= 1.1.0",
     "openssh": "= 1.4.0",
     "openssl": "= 1.1.0",
     "orvsd_central": "= 1.1.3",
