@@ -63,7 +63,7 @@
     "osl-apache": "= 1.0.30",
     "osl-drupal": "= 0.2.1",
     "osl-haproxy": "= 2.3.0",
-    "osl-mirror": "= 0.1.23",
+    "osl-mirror": "= 0.1.24",
     "osl-munin": "= 0.1.7",
     "osl-mysql": "= 1.0.3",
     "osl-nagios": "= 2.1.2",
