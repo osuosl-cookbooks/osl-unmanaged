@@ -9,7 +9,7 @@
     "jira": "1.0.2",
     "mysql": "= 6.1.2",
     "ntp": "= 1.6.2",
-    "osl-apache": "= 2.3.5",
+    "osl-apache": "= 2.3.6",
     "osl-haproxy": "= 2.1.0",
     "osl-nagios": "= 2.1.2",
     "nagios": "= 7.2.4",
