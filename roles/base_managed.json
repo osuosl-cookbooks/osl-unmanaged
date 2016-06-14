@@ -12,6 +12,7 @@
     "recipe[base::issue]",
     "recipe[base::security]",
     "recipe[base::selinux]",
+    "recipe[base::tuned]",
     "recipe[base::users]",
     "recipe[logrotate::global]",
     "recipe[firewall]",
