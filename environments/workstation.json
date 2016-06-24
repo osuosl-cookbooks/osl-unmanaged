@@ -163,6 +163,7 @@
         "pv",
         "pwgen",
         "python3",
+        "python3-dev",
         "python-sphinx",
         "qemu",
         "qemu-kvm",
