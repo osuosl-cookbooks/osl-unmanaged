@@ -82,6 +82,7 @@
         "gconf-defaults-service",
         "gconf-editor",
         "gedit",
+        "gettext",
         "gimp",
         "gmrun",
         "gnome",
