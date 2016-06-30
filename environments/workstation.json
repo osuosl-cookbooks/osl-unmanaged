@@ -35,11 +35,12 @@
     },
     "workstation": {
       "python_packages": [
+        "docker-compose",
         "httpie",
-        "python-openstackclient",
         "python-glanceclient",
         "python-keystoneclient",
-        "python-novaclient"
+        "python-novaclient",
+        "python-openstackclient"
       ],
       "packages": [
         "ack-grep",
