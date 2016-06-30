@@ -39,7 +39,8 @@
         "python-openstackclient",
         "python-glanceclient",
         "python-keystoneclient",
-        "python-novaclient"
+        "python-novaclient",
+        "docker-compose"
       ],
       "packages": [
         "ack-grep",
