@@ -93,6 +93,7 @@
     "recipe[workstation::docker]",
     "recipe[workstation::chefdk]",
     "recipe[workstation::kitchen]",
+    "recipe[workstation::code_generator]",
     "recipe[ntp::default]",
     "recipe[openssh::default]"
   ],
