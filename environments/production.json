@@ -85,7 +85,7 @@
     "osl-nrpe": "= 1.4.7",
     "osl-postgresql": "= 0.1.22",
     "osl-redmine": "= 0.1.0",
-    "osl-rsync": "= 0.1.0",
+    "osl-rsync": "= 0.2.0",
     "osl-slapd": "= 0.1.3",
     "osl-sudo": "= 0.1.0",
     "osl-varnish": "= 1.0.0",
