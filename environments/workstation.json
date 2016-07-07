@@ -173,6 +173,7 @@
         "racket-doc",
         "renameutils",
         "reprepro",
+        "resolvconf",
         "rsync",
         "rsyslog-gnutls",
         "rubygems",
@@ -230,8 +231,7 @@
       ],
       "purge": [
         "docker.io*",
-        "nova-api",
-        "resolvconf"
+        "nova-api"
       ]
     }
   },
