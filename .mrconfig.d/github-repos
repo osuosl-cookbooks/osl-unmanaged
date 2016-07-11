@@ -124,6 +124,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/orvsd-web.git
 [osuosl-cookbooks/orvsd_central]
 checkout = git clone git@github.com:osuosl-cookbooks/orvsd_central.git
 
+[osuosl-cookbooks/osl-admin]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-admin.git
+
 [osuosl-cookbooks/osl-apache]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-apache.git
 
