@@ -24,7 +24,7 @@
     "dhcp": "= 5.2.0",
     "erlang": "= 1.5.4",
     "fenestra": "= 0.1.0",
-    "firewall": "= 2.4.2",
+    "firewall": "= 2.4.4",
     "formsender": "= 0.1.6",
     "ganeti_webmgr": "= 0.4.14",
     "generic-vhosts": "= 0.1.32",
