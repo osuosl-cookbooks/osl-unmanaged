@@ -94,6 +94,7 @@
     "recipe[workstation::chefdk]",
     "recipe[workstation::kitchen]",
     "recipe[workstation::code_generator]",
+    "recipe[workstation::users]",
     "recipe[ntp::default]",
     "recipe[openssh::default]"
   ],
