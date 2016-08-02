@@ -27,7 +27,7 @@
     "firewall": "= 2.4.5",
     "formsender": "= 0.1.6",
     "ganeti_webmgr": "= 0.4.14",
-    "generic-vhosts": "= 0.1.32",
+    "generic-vhosts": "= 0.1.33",
     "git": "= 4.4.1",
     "glusterfs": "= 0.1.1",
     "goblin": "= 0.1.1",
