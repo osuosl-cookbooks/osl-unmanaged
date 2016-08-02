@@ -19,8 +19,7 @@
         "device": "eth1.42",
         "onboot": "yes",
         "userctl": "no",
-        "vlan": "yes",
-        "bridge": "br42"
+        "vlan": "yes"
       }
     },
     {
@@ -32,8 +31,7 @@
         "device": "eth1.108",
         "onboot": "yes",
         "userctl": "no",
-        "vlan": "yes",
-        "bridge": "br108"
+        "vlan": "yes"
       }
     }
   ]

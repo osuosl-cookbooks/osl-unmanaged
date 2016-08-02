@@ -1,0 +1,9 @@
+{
+  "id": "nova_api",
+  "nova_api": {
+    "encrypted_data": "SVk34zszi2VE91xOHN9ari1OhDZDf4fHuUTVKLHL2Ec=\n",
+    "iv": "+KD4d0KMpAnnYtXyzmiIJw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

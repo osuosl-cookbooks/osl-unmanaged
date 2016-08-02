@@ -1,7 +1,7 @@
 {
   "guest": {
-    "encrypted_data": "pT+8jQdqPGK6W6mWC/hLvOCy0x2PcA9iEWFIoe/3W9I=\n",
-    "iv": "Q97H4wPP1nnJOf30V3nltA==\n",
+    "encrypted_data": "0gOD7RTPHY7H/C9Gu/s57Iot95DshlWtjWIXaYLHnzN9v9tkD6MF9tvnL43A\nq4oo\n",
+    "iv": "1f1lRR5CJT8jZ7bVIOJyXA==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   },

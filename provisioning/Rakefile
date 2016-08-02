@@ -11,7 +11,7 @@ def run_command(command)
   end
 end
 
-PROV_PATH = '.'
+PROV_PATH = '.'.freeze
 
 task :destroy_all do
   Rake::Task[:destroy_machines].invoke
@@ -37,10 +37,50 @@ File.binwrite('.chef/validator.pem', OpenSSL::PKey::RSA.new(2048).to_pem)")
   end
 end
 
-desc 'OpenStack Staging (x86)'
-task openstack_x86: [:create_key] do
+desc 'OpenStack HAProxy'
+task openstack_haproxy: [:create_key] do
   run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/openstack_x86.rb")
+    "#{PROV_PATH}/openstack_haproxy.rb")
+end
+
+desc 'OpenStack Staging (x86)'
+task openstack_x86:
+    [
+      :create_key,
+      :openstack_x86_controller,
+      :openstack_x86_compute
+    ]
+
+desc 'OpenStack Staging Controller (x86)'
+task openstack_x86_controller: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/openstack_x86_controller.rb")
+end
+
+desc 'OpenStack Staging Compute (x86)'
+task openstack_x86_compute: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/openstack_x86_compute.rb")
+end
+
+desc 'OpenStack Staging (ppc64)'
+task openstack_ppc64:
+    [
+      :create_key,
+      :openstack_ppc64_controller,
+      :openstack_ppc64_compute
+    ]
+
+desc 'OpenStack Staging Controller (ppc64)'
+task openstack_ppc64_controller: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/openstack_ppc64_controller.rb")
+end
+
+desc 'OpenStack Staging Compute (ppc64)'
+task openstack_ppc64_compute: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/openstack_ppc64_compute.rb")
 end
 
 desc 'Omnibus'
