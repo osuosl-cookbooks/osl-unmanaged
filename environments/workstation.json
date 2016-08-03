@@ -94,6 +94,7 @@
         "gnumeric",
         "gnutls-bin",
         "golang",
+        "golang-1.6",
         "google-chrome-stable",
         "graphviz",
         "hdparm",
