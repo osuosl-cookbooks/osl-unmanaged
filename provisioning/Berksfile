@@ -3,7 +3,7 @@ source 'https://supermarket.chef.io'
 # OSL Base deps
 cookbook 'aliases', git: 'git@github.com:osuosl-cookbooks/aliases'
 cookbook 'base', git: 'git@github.com:osuosl-cookbooks/base'
-cookbook 'compat_resource', '12.5.24'
+cookbook 'compat_resource', '12.9.1'
 cookbook 'firewall', git: 'git@github.com:osuosl-cookbooks/firewall'
 cookbook 'modules', git: 'git@github.com:osuosl-cookbooks/modules-cookbook'
 cookbook 'openvpn', github: 'osuosl-cookbooks/openvpn'
@@ -19,6 +19,7 @@ cookbook 'resource_from_hash',
          git: 'git@github.com:osuosl-cookbooks/resource_from_hash'
 cookbook 'statsd', github: 'att-cloud/cookbook-statsd'
 cookbook 'yum-qemu-ev', git: 'git@github.com:osuosl-cookbooks/yum-qemu-ev.git'
+cookbook 'provision_test', path: 'test/cookbooks/provision_test'
 
 # WIP patches
 %w(
