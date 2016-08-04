@@ -43,7 +43,7 @@
       "physical_interface_mappings": [
         {
           "name": "public",
-          "controller": "eth1",
+          "controller": "eth2",
           "compute": "enP3p5s0f2"
         }
       ]
