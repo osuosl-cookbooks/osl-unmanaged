@@ -1,0 +1,64 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-openstack]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "openstack": {
+      "mq": {
+        "user": "admin"
+      },
+      "image": {
+        "image_upload": true,
+        "upload_image": {},
+        "upload_images": []
+      }
+    }
+  },
+  "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "include_sudoers_d": true
+      }
+    },
+    "firewall": {
+      "iptables-config": {
+        "save_on_restart": "yes",
+        "save_on_stop": "yes"
+      }
+    },
+    "osl-openstack": {
+      "database_suffix": "ppc64",
+      "databag_prefix": "ppc64_mitaka",
+      "endpoint_hostname": "openpower-controller.osuosl.org",
+      "db_hostname": "vip-mysql2.osuosl.org",
+      "image": {
+        "glance_vol": "fs3.osuosl.bak:/openstack-glance"
+      },
+      "vxlan_interface": {
+        "controller": "eth1",
+        "compute": "enP3p5s0f3"
+      },
+      "physical_interface_mappings": [
+        {
+          "name": "public",
+          "controller": "eth1",
+          "compute": "enP3p5s0f2"
+        }
+      ]
+    },
+    "openstack": {
+      "block-storage": {
+        "conf": {
+          "DEFAULT": {
+            "volume_group": "openpower"
+          }
+        }
+      }
+    }
+   },
+  "json_class": "Chef::Role",
+  "description": "Openstack ppc64 Mitaka Role",
+  "name": "openstack_ppc64_mitaka"
+}
