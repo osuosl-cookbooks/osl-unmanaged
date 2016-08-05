@@ -37,14 +37,24 @@
         "glance_vol": "fs3.osuosl.bak:/openstack-glance"
       },
       "vxlan_interface": {
-        "controller": "eth1",
-        "compute": "enP3p5s0f3"
+        "controller": {
+          "default": "eth1"
+        },
+        "compute": {
+          "default": "enP3p5s0f3",
+          "openpower2.osuosl.bak": "enP3p5s0f1"
+        }
       },
       "physical_interface_mappings": [
         {
           "name": "public",
-          "controller": "eth2",
-          "compute": "enP3p5s0f2"
+          "controller": {
+            "default": "eth2"
+          },
+          "compute": {
+            "default": "enP3p5s0f2",
+            "openpower2.osuosl.bak": "enP3p5s0f0"
+          }
         }
       ]
     },
