@@ -57,15 +57,6 @@
           }
         }
       ]
-    },
-    "openstack": {
-      "block-storage": {
-        "conf": {
-          "DEFAULT": {
-            "volume_group": "openpower"
-          }
-        }
-      }
     }
    },
   "json_class": "Chef::Role",
