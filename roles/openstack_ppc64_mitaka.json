@@ -32,7 +32,7 @@
       "database_suffix": "ppc64",
       "databag_prefix": "ppc64_mitaka",
       "endpoint_hostname": "openpower-controller.osuosl.org",
-      "db_hostname": "vip-mysql2.osuosl.org",
+      "db_hostname": "mysql3.osuosl.bak",
       "image": {
         "glance_vol": "fs3.osuosl.bak:/openstack-glance"
       },
