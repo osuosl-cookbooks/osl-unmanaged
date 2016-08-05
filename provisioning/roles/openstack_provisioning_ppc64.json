@@ -54,13 +54,21 @@
       "physical_interface_mappings": [
         {
           "name": "public",
-          "controller": "eth1",
-          "compute": "enP3p5s0f2"
+          "controller": {
+            "default": "eth1"
+          },
+          "compute": {
+            "default": "enP3p5s0f2"
+          }
         },
         {
           "name": "vlan42",
-          "controller": "eth2",
-          "compute": "enP3p5s0f3"
+          "controller": {
+            "default": "eth2"
+          },
+          "compute": {
+            "default": "enP3p5s0f3"
+          }
         }
       ]
     },

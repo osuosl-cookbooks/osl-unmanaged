@@ -54,13 +54,21 @@
       "physical_interface_mappings": [
         {
           "name": "backend",
-          "controller": "eth2",
-          "compute": "eth1.42"
+          "controller": {
+            "default": "eth2"
+          },
+          "compute": {
+            "default": "eth1.42"
+          }
         },
         {
           "name": "public",
-          "controller": "eth3",
-          "compute": "eth1.108"
+          "controller": {
+            "default": "eth3"
+          },
+          "compute": {
+            "default": "eth1.108"
+          }
         }
       ]
     },
