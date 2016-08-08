@@ -23,7 +23,7 @@
     "osl-nagios": "= 2.1.2",
     "osl-nginx": "= 1.1.4",
     "osl-nodejs": "= 0.1.5",
-    "osl-nrpe": "= 1.4.7",
+    "osl-nrpe": "= 1.4.8",
     "poise": "= 2.6.0",
     "poise-languages": "= 1.3.2",
     "poise-python": "= 1.2.1",
