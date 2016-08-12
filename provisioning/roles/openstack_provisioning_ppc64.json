@@ -12,7 +12,7 @@
       "image": {
         "image_upload": true,
         "upload_image": {
-          "cirros": "http://download.cirros-cloud.net/daily/20150923/cirros-d150923-x86_64-disk.img"
+          "cirros": "http://download.cirros-cloud.net/daily/20150923/cirros-d150923-ppc64le-disk.img"
         },
         "upload_images": []
       }
@@ -42,32 +42,32 @@
     "osl-openstack": {
       "database_suffix": "x86",
       "databag_prefix": "x86",
-      "endpoint_hostname": "otest-controller.osuosl.org",
-      "db_hostname": "otest-controller.osuosl.org",
+      "endpoint_hostname": "otest-openpower-controller.osuosl.org",
+      "db_hostname": "otest-openpower-controller.osuosl.org",
       "image": {
         "glance_vol": "fs3.osuosl.bak:/openstack-glance"
       },
       "vxlan_interface": {
-        "controller": "eth1",
-        "compute": "eth0"
+        "controller": "eth3",
+        "compute": "enP3p5s0f3"
       },
       "physical_interface_mappings": [
         {
-          "name": "backend",
+          "name": "public",
+          "controller": {
+            "default": "eth1"
+          },
+          "compute": {
+            "default": "enP3p5s0f2"
+          }
+        },
+        {
+          "name": "vlan42",
           "controller": {
             "default": "eth2"
           },
           "compute": {
-            "default": "eth1.42"
-          }
-        },
-        {
-          "name": "public",
-          "controller": {
-            "default": "eth3"
-          },
-          "compute": {
-            "default": "eth1.108"
+            "default": "enP3p5s0f3"
           }
         }
       ]
@@ -76,7 +76,7 @@
       "block-storage": {
         "conf": {
           "DEFAULT": {
-            "volume_group": "lvm"
+            "volume_group": "openpower"
           }
         },
         "volume": {
@@ -86,6 +86,6 @@
     }
    },
   "json_class": "Chef::Role",
-  "description": "Openstack x86 Provisioning Role",
-  "name": "openstack_provisioning"
+  "description": "Openstack ppc64 Provisioning Role",
+  "name": "openstack_provisioning_ppc64"
 }

@@ -6,6 +6,7 @@
     "recipe[base::packages]",
     "recipe[base::environment]",
     "recipe[base::users]",
+    "recipe[provision_test::users]",
     "recipe[openssh]",
     "recipe[sysctl::apply]"
   ],

@@ -1,0 +1,16 @@
+{
+  "id": "lb-openstack-osuosl-org",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "10.1.0.52",
+      "attributes": {
+        "onboot": "yes",
+        "mask": "255.255.254.0",
+        "bcast": "10.1.1.255",
+        "bootproto": "static",
+        "device": "eth1"
+      }
+    }
+  ]
+}

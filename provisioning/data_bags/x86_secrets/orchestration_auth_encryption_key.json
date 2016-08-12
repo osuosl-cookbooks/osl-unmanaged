@@ -1,0 +1,9 @@
+{
+  "id": "orchestration_auth_encryption_key",
+  "orchestration_auth_encryption_key": {
+    "encrypted_data": "lMQlguO446gZ4/yo7yrX59JC/V9AlQGx2XSHNPvgTXUyLhGLn7/JM9fqP6WX\nnD0S313wKZNdWcH8QzPbjmcbdA==\n",
+    "iv": "/SV75pBsEQ+DRIyRbgTz2w==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

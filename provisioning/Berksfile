@@ -3,12 +3,9 @@ source 'https://supermarket.chef.io'
 # OSL Base deps
 cookbook 'aliases', git: 'git@github.com:osuosl-cookbooks/aliases'
 cookbook 'base', git: 'git@github.com:osuosl-cookbooks/base'
-cookbook 'compat_resource', '12.5.10'
+cookbook 'compat_resource', '12.9.1'
 cookbook 'firewall', git: 'git@github.com:osuosl-cookbooks/firewall'
 cookbook 'modules', git: 'git@github.com:osuosl-cookbooks/modules-cookbook'
-cookbook 'monitoring', git: 'git@github.com:osuosl-cookbooks/monitoring'
-cookbook 'munin'
-cookbook 'omnibus_updater'
 cookbook 'openvpn', github: 'osuosl-cookbooks/openvpn'
 cookbook 'osl-dhcp', git: 'git@github.com:osuosl-cookbooks/osl-dhcp'
 cookbook 'osl-haproxy', git: 'git@github.com:osuosl-cookbooks/osl-haproxy'
@@ -16,25 +13,41 @@ cookbook 'osl-nagios', git: 'git@github.com:osuosl-cookbooks/osl-nagios'
 cookbook 'osl-nrpe', git: 'git@github.com:osuosl-cookbooks/osl-nrpe'
 cookbook 'osl-apache', git: 'git@github.com:osuosl-cookbooks/osl-apache'
 cookbook 'osl-munin', git: 'git@github.com:osuosl-cookbooks/osl-munin'
-cookbook 'osl-openstack', git: 'git@github.com:osuosl-cookbooks/osl-openstack',
-                          branch: 'ramereth/liberty'
+cookbook 'osl-openstack', git: 'git@github.com:osuosl-cookbooks/osl-openstack'
 cookbook 'osl-vpn', git: 'git@github.com:osuosl-cookbooks/osl-vpn'
-cookbook 'scl'
 cookbook 'resource_from_hash',
          git: 'git@github.com:osuosl-cookbooks/resource_from_hash'
 cookbook 'statsd', github: 'att-cloud/cookbook-statsd'
-cookbook 'yum-fedora'
+cookbook 'yum-qemu-ev', git: 'git@github.com:osuosl-cookbooks/yum-qemu-ev.git'
+cookbook 'provision_test', path: 'test/cookbooks/provision_test'
+
+# WIP patches
+%w(
+  dashboard
+).each do |cb|
+  cookbook "openstack-#{cb}",
+           github: "osuosl-cookbooks/cookbook-openstack-#{cb}",
+           branch: 'stable/mitaka'
+end
 
 # Openstack deps
-# cookbook 'mysql', '~> 4.1'
-%w(openstack-bare-metal openstack-block-storage openstack-common
-   openstack-object-storage openstack-ops-database openstack-ops-messaging
-   openstack-orchestration openstack-telemetry openstack-identity
-   openstack-integration-test openstack-image openstack-network
-   openstack-compute openstack-dashboard).each do |cb|
-  cookbook cb,
-           github: "openstack/cookbook-#{cb}",
-           branch: 'stable/liberty'
+%w(
+  block-storage
+  common
+  compute
+  identity
+  image
+  integration-test
+  network
+  ops-database
+  ops-messaging
+  orchestration
+  telemetry
+).each do |cb|
+#  dashboard
+  cookbook "openstack-#{cb}",
+           github: "openstack/cookbook-openstack-#{cb}",
+           branch: 'stable/mitaka'
 end
 
 metadata

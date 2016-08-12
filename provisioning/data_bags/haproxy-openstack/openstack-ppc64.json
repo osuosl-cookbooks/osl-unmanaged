@@ -1,0 +1,120 @@
+{
+  "id": "openstack-ppc64",
+  "listen": {
+    "dashboard": [
+      "bind *:80",
+      "bind *:443 ssl crt /etc/pki/tls/wildcard.pem ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA no-sslv3",
+      "balance source",
+      "redirect scheme https if !{ ssl_fc }",
+      "option forwardfor",
+      "option tcpka",
+      "option httpchk",
+      "option tcplog",
+      "server dashboard_ppc64 10.1.0.121:80 check inter 2000 rise 2 fall 5"
+    ],
+    "glance_api_ppc64": [
+      "bind *:9292",
+      "balance source",
+      "option tcpka",
+      "option httpchk",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:9292 check inter 2000 rise 2 fall 5"
+    ],
+    "glance_registry_ppc64": [
+      "bind *:9191",
+      "balance source",
+      "option tcpka",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:9191 check inter 2000 rise 2 fall 5"
+    ],
+    "keystone_admin_ppc64": [
+      "bind *:35357",
+      "balance source",
+      "option tcpka",
+      "option httpchk",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:35357 check inter 2000 rise 2 fall 5"
+    ],
+    "keystone_public_internal_ppc64": [
+      "bind *:5000",
+      "balance source",
+      "option tcpka",
+      "option httpchk",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:5000 check inter 2000 rise 2 fall 5"
+    ],
+    "nova_ec2_api_ppc64": [
+      "bind *:8773",
+      "balance source",
+      "option tcpka",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:8773 check inter 2000 rise 2 fall 5"
+    ],
+    "nova_compute_api_ppc64": [
+      "bind *:8774",
+      "balance source",
+      "option tcpka",
+      "option httpchk",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:8774 check inter 2000 rise 2 fall 5"
+    ],
+    "nova_metadata_api_ppc64": [
+      "bind *:8775",
+      "balance source",
+      "option tcpka",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:8775 check inter 2000 rise 2 fall 5"
+    ],
+    "cinder_api_ppc64": [
+      "bind *:8776",
+      "balance source",
+      "option tcpka",
+      "option httpchk",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:8776 check inter 2000 rise 2 fall 5"
+    ],
+    "ceilometer_api_ppc64": [
+      "bind *:8777",
+      "balance source",
+      "option tcpka",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:8777 check inter 2000 rise 2 fall 5"
+    ],
+    "nova_vncproxy_ppc64": [
+      "bind *:6080",
+      "balance source",
+      "option tcpka",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:6080 check inter 2000 rise 2 fall 5"
+    ],
+    "neutron_api_ppc64": [
+      "bind *:9696",
+      "balance source",
+      "option tcpka",
+      "option httpchk",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:9696 check inter 2000 rise 2 fall 5"
+    ],
+    "swift_proxy": [
+      "bind *:8080",
+      "balance source",
+      "option tcpka",
+      "option tcplog",
+      "server controller_ppc64 10.1.0.121:8080 check inter 2000 rise 2 fall 5"
+    ]
+  },
+  "ssl": {
+    "resources": [
+      {
+        "name": "osuosl-wildcard",
+        "resource": "certificate_manage",
+        "attributes": {
+          "cert_file": "wildcard.pem",
+          "key_file": "wildcard.key",
+          "chain_file": "wildcard-bundle.crt",
+          "combined_file": true
+        }
+      }
+    ]
+  }
+}

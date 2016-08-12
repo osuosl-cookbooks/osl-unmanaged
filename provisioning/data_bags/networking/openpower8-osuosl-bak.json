@@ -1,0 +1,25 @@
+{
+  "id": "openpower8-osuosl-bak",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "10.1.1.48",
+      "attributes": {
+        "onboot": "yes",
+        "mask": "255.255.254.0",
+        "bcast": "10.1.1.255",
+        "bootproto": "static",
+        "device": "enP3p5s0f3"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "enP3p5s0f2",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "device": "enP3p5s0f2"
+      }
+    }
+  ]
+}
