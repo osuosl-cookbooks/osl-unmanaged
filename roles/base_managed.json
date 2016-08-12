@@ -76,6 +76,7 @@
     "munin": {
       "multi_environment_monitoring": [
         "openstack_production",
+        "openstack_mitaka",
         "phase_out_nginx",
         "phpbb",
         "production"
