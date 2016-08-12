@@ -13,6 +13,7 @@
     "firewall": "= 2.4.5",
     "galera": "= 0.4.1",
     "iptables-ng": "= 2.2.8",
+    "kernel-modules": "= 0.1.4",
     "magic_shell": "= 1.0.0",
     "mariadb": "= 0.3.1",
     "munin": "= 1.4.3",
