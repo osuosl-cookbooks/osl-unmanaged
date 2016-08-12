@@ -65,6 +65,7 @@
       "multi_environment_monitoring": true,
       "monitored_environments": [
         "openstack_production",
+        "openstack_mitaka",
         "phase_out_nginx",
         "phpbb",
         "production"
