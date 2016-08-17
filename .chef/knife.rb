@@ -1,7 +1,6 @@
 base_path   = File.expand_path(File.join(File.dirname(__FILE__), ".."))
 user_email  = `git config --get user.email`
 home_dir    = ENV['HOME'] || ENV['HOMEDRIVE']
-org         = ENV['chef_org'] || 'my_org'
 knife[:secret_file] = "#{home_dir}/.chef/encrypted_data_bag_secret"
 
 chef_server_url         'https://chef.osuosl.org'
