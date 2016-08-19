@@ -28,6 +28,12 @@
         "save_on_stop": "yes"
       }
     },
+    "openstack": {
+      "dashboard": {
+        "server_hostname": "openpower-openstack.osuosl.org",
+        "server_aliases": [ "openpower-controller.osuosl.org" ]
+      }
+    },
     "osl-openstack": {
       "database_suffix": "ppc64",
       "databag_prefix": "ppc64_mitaka",
