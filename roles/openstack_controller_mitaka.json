@@ -1,0 +1,18 @@
+{
+    "chef_type": "role",
+    "default_attributes": {},
+    "description": "OpenStack Mitaka Controller role to setup. Installs and configures a controller node for openstack infra",
+    "env_run_lists": {}, 
+    "json_class": "Chef::Role",
+    "name": "openstack_controller_mitaka",
+    "override_attributes": {
+        "authorization": {
+            "sudo": {
+                "include_sudoers_d": true
+            }
+        }
+    },
+    "run_list": [
+        "recipe[osl-openstack::controller]"
+    ]
+}
