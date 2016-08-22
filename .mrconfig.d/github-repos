@@ -73,23 +73,11 @@ checkout = git clone git@github.com:osuosl-cookbooks/generic-vhosts.git
 [osuosl-cookbooks/gitlab]
 checkout = git clone git@github.com:osuosl-cookbooks/gitlab.git
 
-[osuosl-cookbooks/gitolite]
-checkout = git clone git@github.com:osuosl-cookbooks/gitolite.git
-
 [osuosl-cookbooks/glusterfs]
 checkout = git clone git@github.com:osuosl-cookbooks/glusterfs.git
 
-[osuosl-cookbooks/goblin]
-checkout = git clone git@github.com:osuosl-cookbooks/goblin.git
-
 [osuosl-cookbooks/haskell-platform]
 checkout = git clone git@github.com:osuosl-cookbooks/haskell-platform.git
-
-[osuosl-cookbooks/iptables-ng]
-checkout = git clone git@github.com:osuosl-cookbooks/iptables-ng.git
-
-[osuosl-cookbooks/lanparty]
-checkout = git clone git@github.com:osuosl-cookbooks/lanparty.git
 
 [osuosl-cookbooks/maintain-dns]
 checkout = git clone git@github.com:osuosl-cookbooks/maintain-dns.git
@@ -102,9 +90,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/modules-cookbook modules
 
 [osuosl-cookbooks/monitoring]
 checkout = git clone git@github.com:osuosl-cookbooks/monitoring.git
-
-[osuosl-cookbooks/moodle]
-checkout = git clone git@github.com:osuosl-cookbooks/moodle.git
 
 [osuosl-cookbooks/nagios]
 checkout = git clone git@github.com:osuosl-cookbooks/nagios.git
@@ -190,9 +175,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-php.git
 [osuosl-cookbooks/osl-postgresql]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-postgresql.git
 
-[osuosl-cookbooks/osl-redmine]
-checkout = git clone git@github.com:osuosl-cookbooks/osl-redmine.git
-
 [osuosl-cookbooks/osl-rsync]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-rsync.git
 
@@ -258,9 +240,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/rsync.git
 
 [osuosl-cookbooks/sencha-sdk]
 checkout = git clone git@github.com:osuosl-cookbooks/sencha-sdk.git
-
-[osuosl-cookbooks/sinatra_app]
-checkout = git clone git@github.com:osuosl-cookbooks/sinatra_app.git
 
 [osuosl-cookbooks/ssh-ldap]
 checkout = git clone git@github.com:osuosl-cookbooks/ssh-ldap.git
