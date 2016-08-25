@@ -13,6 +13,13 @@
         "image_upload": true,
         "upload_image": {},
         "upload_images": []
+      },
+      "compute": {
+        "conf": {
+          "DEFAULT": {
+            "disk_allocation_ratio": 3
+          }
+        }
       }
     }
   },
