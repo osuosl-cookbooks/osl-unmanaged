@@ -49,6 +49,12 @@
       "image": {
         "glance_vol": "fs3.osuosl.bak:/openstack-glance"
       },
+      "mon": {
+        "check_nova_images": {
+          "warning": 3,
+          "critical": 5
+        }
+      },
       "vxlan_interface": {
         "controller": {
           "default": "eth1"
