@@ -36,12 +36,15 @@
     },
     "workstation": {
       "python_packages": [
+        "climesync",
         "docker-compose",
         "httpie",
+        "pymesync",
         "python-glanceclient",
         "python-keystoneclient",
         "python-novaclient",
-        "python-openstackclient"
+        "python-openstackclient",
+        "setuptools"
       ],
       "packages": [
         "ack-grep",
