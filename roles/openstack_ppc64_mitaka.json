@@ -9,6 +9,11 @@
       "mq": {
         "user": "admin"
       },
+      "identity": {
+        "ssl": {
+          "cert_required": false
+        }
+      },
       "image": {
         "image_upload": true,
         "upload_image": {},
