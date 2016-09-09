@@ -50,7 +50,11 @@
         "realpath_cache_ttl": 240
       },
       "packages": []
-    }
+    },
+    "users": [
+      "pac12-production",
+      "pac12-staging"
+    ]
   },
   "json_class": "Chef::Role",
   "description": "web2.osuosl.org role",
