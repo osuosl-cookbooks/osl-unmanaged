@@ -76,7 +76,7 @@
     "osl-haproxy": "= 2.3.0",
     "osl-jenkins": "= 0.7.26",
     "osl-mirror": "= 0.2.1",
-    "osl-munin": "= 0.1.9",
+    "osl-munin": "= 0.1.8",
     "osl-mysql": "= 1.0.4",
     "osl-nagios": "= 2.3.1",
     "osl-nginx": "= 1.1.4",
