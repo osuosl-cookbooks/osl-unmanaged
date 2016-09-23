@@ -13,6 +13,7 @@
         }
     },
     "run_list": [
-        "recipe[osl-openstack::controller]"
+        "recipe[osl-openstack::controller]",
+        "recipe[osl-rsync::apache]"
     ]
 }
