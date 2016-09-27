@@ -68,7 +68,7 @@
     "orvsd-web": "= 0.2.9",
     "osl-admin": "= 0.4.0",
     "osl-apache": "= 2.5.1",
-    "osl-app": "= 1.5.0",
+    "osl-app": "= 1.5.1",
     "osl-backup": "= 0.4.0",
     "osl-dhcp": "= 0.1.2",
     "osl-drupal": "= 0.2.1",
