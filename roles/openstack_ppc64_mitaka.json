@@ -22,7 +22,7 @@
       "compute": {
         "conf": {
           "DEFAULT": {
-            "disk_allocation_ratio": 3
+            "disk_allocation_ratio": 5
           }
         }
       }
