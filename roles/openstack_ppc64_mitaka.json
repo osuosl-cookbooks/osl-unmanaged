@@ -22,7 +22,8 @@
       "compute": {
         "conf": {
           "DEFAULT": {
-            "disk_allocation_ratio": 5
+            "disk_allocation_ratio": 5,
+            "allow_resize_to_same_host": true
           }
         }
       }
