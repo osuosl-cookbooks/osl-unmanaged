@@ -66,7 +66,7 @@
           "default": "eth1"
         },
         "compute": {
-          "default": "enP3p9s0f2",
+          "default": "enP3p9s0f3",
           "openpower2.osuosl.bak": "enP3p5s0f1"
         }
       },
