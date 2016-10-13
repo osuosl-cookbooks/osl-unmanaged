@@ -10,7 +10,7 @@
     "chef-client": "= 4.3.1",
     "database": "= 4.0.6",
     "erlang": "= 3.0.0",
-    "firewall": "= 2.6.0",
+    "firewall": "= 2.6.1",
     "galera": "= 0.4.1",
     "iptables-ng": "= 2.2.8",
     "kernel-modules": "= 0.1.4",
