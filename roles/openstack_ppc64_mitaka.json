@@ -59,6 +59,10 @@
         "check_nova_images": {
           "warning": 3,
           "critical": 5
+        },
+        "check_nova_hypervisors": {
+          "warn_vcpus_percent": "0:200",
+          "critical_vcpus_percent": "0:250"
         }
       },
       "vxlan_interface": {
