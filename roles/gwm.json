@@ -38,6 +38,5 @@
     },
   "json_class": "Chef::Role",
   "description": "Ganeti Web Manager server role",
-  "name": "gwm",
-
+  "name": "gwm"
 }
