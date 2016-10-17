@@ -11,11 +11,8 @@
   ],
   "chef_type": "role",
   "override_attributes": {},
-  "default_attributes": {},
-  "json_class": "Chef::Role",
-  "description": "Ganeti Web Manager server role",
-  "name": "gwm",
-  "ganeti_webmgr": {
+  "default_attributes": {
+    "ganeti_webmgr": {
       "migrate": true,
       "apache": {
         "server_port": 443,
@@ -36,6 +33,11 @@
         "host": "vip-mysql2.osuosl.org",
         "engine": "django.db.backends.mysql",
         "name": "ganeti_webmgr"
-    }
-  }
+        }
+      }
+    },
+  "json_class": "Chef::Role",
+  "description": "Ganeti Web Manager server role",
+  "name": "gwm",
+
 }
