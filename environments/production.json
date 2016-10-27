@@ -82,7 +82,7 @@
     "osl-nginx": "= 1.1.4",
     "osl-nodejs": "= 0.1.5",
     "osl-nrpe": "= 1.4.10",
-    "osl-postgresql": "= 0.2.0",
+    "osl-postgresql": "= 0.2.2",
     "osl-rsync": "= 0.2.4",
     "osl-slapd": "= 0.1.3",
     "osl-sudo": "= 0.1.0",
