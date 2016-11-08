@@ -1,0 +1,88 @@
+{
+  "name": "workstation_base",
+  "description": "Base Role for OSL Workstations",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "include_sudoers_d": "true",
+        "sudoers_defaults": [
+          "env_reset",
+          "set_home",
+          "secure_path=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\""
+        ]
+      }
+    },
+    "chef_client": {
+      "init_style": "none",
+      "config": {
+        "ssl_verify_mode": ":verify_peer"
+      },
+      "cron": {
+        "hour": "*",
+        "minute": "*/30",
+        "mailto": "chef@osuosl.org",
+        "use_cron_d": "true",
+        "log_file": "/var/log/chef/client.log"
+      }
+    },
+    "ntp": {
+      "servers": ["time.osuosl.org"]
+    },
+    "openssh": {
+      "server": {
+        "permit_root_login": "yes",
+        "x11_forwarding": "yes"
+      }
+    },
+    "postfix": {
+      "mail_type": "client",
+      "main": {
+        "mydomain": "osuosl.org",
+        "myorigin": "osuosl.org",
+        "relayhost": "[smtp.osuosl.org]",
+        "smtpd_use_tls": "no",
+        "smtp_use_tls": "no"
+      }
+    },
+    "resolver": {
+      "nameservers": ["140.211.166.130", "140.211.166.131", "216.165.191.54"],
+      "search": "workstation.cass.oregonstate.edu osuosl.org osuosl.bak  osuosl.oob"
+    }
+  },
+  "override_attributes": {
+    "workstation": {
+      "hostlist": [
+      ]
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[base::mailhandler]",
+    "recipe[postfix::default]",
+    "recipe[chef-client::config]",
+    "recipe[chef-client::cron]",
+    "recipe[chef-client::delete_validation]",
+    "recipe[python]",
+    "recipe[resolver::default]",
+    "recipe[workstation]",
+    "recipe[workstation::blacklist]",
+    "recipe[workstation::cron_apt]",
+    "recipe[workstation::repos]",
+    "recipe[workstation::timezone]",
+    "recipe[workstation::packages]",
+    "recipe[workstation::xrandr]",
+    "recipe[workstation::dsh]",
+    "recipe[workstation::printers]",
+    "recipe[workstation::pastebin]",
+    "recipe[workstation::nodejs]",
+    "recipe[workstation::docker]",
+    "recipe[workstation::chefdk]",
+    "recipe[workstation::kitchen]",
+    "recipe[workstation::code_generator]",
+    "recipe[ntp::default]",
+    "recipe[openssh::default]"
+  ],
+  "env_run_lists": {
+  }
+}
