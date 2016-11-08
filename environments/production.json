@@ -42,7 +42,7 @@
     "logstash": "= 0.8.1",
     "lsyncd": "= 0.1.0",
     "magic_shell": "= 1.0.0",
-    "maintain-dns": "= 1.1.0",
+    "maintain-dns": "= 1.2.0",
     "mariadb": "= 0.3.0",
     "memcached": "= 1.7.2",
     "modules": "= 0.2.4",
