@@ -7,10 +7,8 @@
   "override_attributes": {
     "nodejs": {
       "version": "0.10.26",
-      "source": {
-        "url": "https://nodejs.org/dist/v0.10.26/node-v0.10.26-linux-x64.tar.gz"
-      },
       "binary": {
+        "url": "https://nodejs.org/dist/v0.10.26/node-v0.10.26-linux-x64.tar.gz"
         "checksum": {
           "linux_x64": "305bf2983c65edea6dd2c9f3669b956251af03523d31cf0a0471504fd5920aac"
         }
