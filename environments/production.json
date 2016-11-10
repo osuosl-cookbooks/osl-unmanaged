@@ -93,7 +93,7 @@
     "percona": "= 0.16.1",
     "perl": "= 1.2.2",
     "php": "= 1.2.4",
-    "poise": "= 2.6.0",
+    "poise": "= 2.7.1",
     "poise-languages": "= 2.0.3",
     "poise-python": "= 1.5.1",
     "postfix": "= 3.6.0",
