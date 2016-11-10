@@ -1,0 +1,19 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[nodejs]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {
+    "nodejs": {
+      "version": "0.12.7",
+      "binary": {
+        "url": "https://nodejs.org/dist/v0.12.7/node-v0.12.7-linux-x64.tar.gz",
+        "checksum": "6a2b3077f293d17e2a1e6dba0297f761c9e981c255a2c82f329d4173acf9b9d5"
+      }
+    }
+   },
+  "json_class": "Chef::Role",
+  "description": "Install NodeJS 0.12.7",
+  "name": "nodejs_0_12_7"
+}
