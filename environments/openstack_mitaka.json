@@ -33,7 +33,7 @@
     "openstack-orchestration": "= 13.0.0",
     "openstack-telemetry": "= 13.0.0",
     "osl-apache": "= 2.5.1",
-    "osl-munin": "= 0.1.9",
+    "osl-munin": "= 0.1.11",
     "osl-nrpe": "= 1.4.10",
     "osl-openstack": "= 2.2.3",
     "poise": "= 2.6.0",
