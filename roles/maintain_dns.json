@@ -1,0 +1,17 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[base_managed]",
+    "recipe[maintain-dns::ns]",
+    "recipe[maintain-dns::dhcp]",
+    "recipe[maintain-dns::mon]",
+    "recipe[firewall::dns]",
+    "recipe[firewall::dhcp]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Role for maintain-dns hosts",
+  "name": "maintain_dns"
+}
