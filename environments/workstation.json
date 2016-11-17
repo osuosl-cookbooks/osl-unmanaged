@@ -177,6 +177,7 @@
         "qemu-kvm",
         "racket",
         "racket-doc",
+        "rdesktop",
         "renameutils",
         "reprepro",
         "rsync",
