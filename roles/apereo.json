@@ -12,7 +12,7 @@
     "role[project_projects]",
     "role[rdiff_backup]",
     "recipe[php::module_gd]",
-    "recipe[php::module_apc]",
+    "recipe[osl-php::apc]",
     "recipe[git]",
     "recipe[mysql::client]",
     "recipe[osl-sudo::apereo]",
@@ -25,6 +25,9 @@
         "post_max_size": "10M",
         "memory_limit": "512M",
         "upload_max_filesize": "10M"
+      },
+       "apc": {
+         "shm_size": "512M"
       }
     }
   },
