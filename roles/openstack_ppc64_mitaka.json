@@ -71,7 +71,8 @@
         },
         "compute": {
           "default": "enP3p9s0f3",
-          "openpower2.osuosl.bak": "enP3p5s0f1"
+          "openpower2.osuosl.bak": "enP3p5s0f1",
+          "openpower5.osuosl.bak": "enP3p5s0f3"
         }
       },
       "physical_interface_mappings": [
@@ -82,7 +83,8 @@
           },
           "compute": {
             "default": "enP3p9s0f2",
-            "openpower2.osuosl.bak": "enP3p5s0f0"
+            "openpower2.osuosl.bak": "enP3p5s0f0",
+            "openpower5.osuosl.bak": "enP3p5s0f2"
           }
         }
       ]
