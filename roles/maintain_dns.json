@@ -1,12 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "role[base_managed]",
-    "recipe[maintain-dns::ns]",
-    "recipe[maintain-dns::dhcp]",
-    "recipe[maintain-dns::mon]",
-    "recipe[firewall::dns]",
-    "recipe[firewall::dhcp]"
+    "role[base_managed]"
   ],
   "chef_type": "role",
   "override_attributes": {},

@@ -15,11 +15,11 @@
   "run_list": [
     "recipe[base::users]",
     "recipe[sudo::default]",
+    "recipe[workstation::ldap]",
     "role[workstation_base]",
     "recipe[workstation::hosts]",
     "recipe[workstation::network]",
     "recipe[workstation::sudoers]",
-    "recipe[workstation::ldap]",
     "recipe[workstation::autofs]",
     "recipe[workstation::lightdm]",
     "recipe[workstation::users]"
