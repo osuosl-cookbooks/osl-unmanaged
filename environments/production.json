@@ -67,7 +67,7 @@
     "openvpn": "= 3.0.0",
     "osl-admin": "= 0.5.0",
     "osl-apache": "= 2.5.1",
-    "osl-app": "= 1.10.1",
+    "osl-app": "= 1.10.2",
     "osl-backup": "= 0.5.1",
     "osl-dhcp": "= 0.2.1",
     "osl-drupal": "= 0.2.1",
