@@ -12,7 +12,7 @@
     "ntp": "= 1.6.2",
     "osl-apache": "= 2.5.1",
     "osl-haproxy": "= 2.1.0",
-    "osl-nagios": "= 2.4.1",
+    "osl-nagios": "= 2.5.0",
     "nagios": "= 7.2.4",
     "proj-phpbb": "= 2.2.9",
     "rdiff-backup": "= 2.0.8"
