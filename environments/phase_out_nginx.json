@@ -28,7 +28,7 @@
     "postfix": "= 3.6.0",
     "proj-misc": "= 0.1.1",
     "python": "= 1.4.6",
-    "rdiff-backup": "= 2.0.7",
+    "rdiff-backup": "= 2.0.8",
     "rsyslog": "= 4.0.0",
     "selinux": "= 0.7.2",
     "sudo": "= 2.5.2",
