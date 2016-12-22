@@ -33,7 +33,7 @@
     "openstack-telemetry": "= 9.3.2",
     "osl-apache": "= 1.0.17",
     "osl-munin": "= 0.1.11",
-    "osl-nagios": "= 2.6.0",
+    "osl-nagios": "= 2.6.1",
     "osl-nrpe": "= 1.4.13",
     "osl-openstack": "= 1.0.20",
     "poise": "= 2.6.0",
