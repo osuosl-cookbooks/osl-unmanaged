@@ -23,3 +23,6 @@ node-backup*
 /provisioning/cookbooks
 /provisioning/clients
 /provisioning/Berksfile.lock
+
+# allow local berkshelf settings
+.berkshelf/
