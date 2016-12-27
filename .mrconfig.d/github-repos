@@ -82,9 +82,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/haskell-platform.git
 [osuosl-cookbooks/maintain-dns]
 checkout = git clone git@github.com:osuosl-cookbooks/maintain-dns.git
 
-[osuosl-cookbooks/mirror-sync]
-checkout = git clone git@github.com:osuosl-cookbooks/mirror-sync.git
-
 [osuosl-cookbooks/modules]
 checkout = git clone git@github.com:osuosl-cookbooks/modules-cookbook modules
 
@@ -237,9 +234,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/sencha-sdk.git
 
 [osuosl-cookbooks/ssh-ldap]
 checkout = git clone git@github.com:osuosl-cookbooks/ssh-ldap.git
-
-[osuosl-cookbooks/sshfs]
-checkout = git clone git@github.com:osuosl-cookbooks/sshfs.git
 
 [osuosl-cookbooks/standupbot]
 checkout = git clone git@github.com:osuosl-cookbooks/standupbot.git
