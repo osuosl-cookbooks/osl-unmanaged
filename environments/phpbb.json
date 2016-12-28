@@ -15,7 +15,7 @@
     "osl-nagios": "= 2.6.1",
     "nagios": "= 7.2.4",
     "proj-phpbb": "= 2.2.9",
-    "rdiff-backup": "= 2.0.8"
+    "rdiff-backup": "= 2.0.9"
   },
   "default_attributes": {
     "nagios": {
