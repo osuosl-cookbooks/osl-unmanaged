@@ -14,7 +14,7 @@
     "osl-haproxy": "= 2.1.0",
     "osl-nagios": "= 2.6.1",
     "nagios": "= 7.2.4",
-    "proj-phpbb": "= 2.2.9",
+    "proj-phpbb": "= 2.2.10",
     "rdiff-backup": "= 2.0.9"
   },
   "default_attributes": {
