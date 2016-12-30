@@ -10,7 +10,7 @@
     "mysql": "= 6.1.2",
     "nodejs": "= 2.4.0",
     "ntp": "= 1.6.2",
-    "osl-apache": "= 2.5.1",
+    "osl-apache": "= 2.5.2",
     "osl-haproxy": "= 2.1.0",
     "osl-nagios": "= 2.6.1",
     "nagios": "= 7.2.4",
