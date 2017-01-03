@@ -11,7 +11,7 @@
     "nodejs": "= 2.4.0",
     "ntp": "= 1.6.2",
     "osl-apache": "= 2.5.2",
-    "osl-haproxy": "= 2.1.0",
+    "osl-haproxy": "= 2.3.1",
     "osl-nagios": "= 2.6.1",
     "nagios": "= 7.2.4",
     "proj-phpbb": "= 2.2.10",
