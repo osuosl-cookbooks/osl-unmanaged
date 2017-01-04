@@ -26,6 +26,9 @@
   "default_attributes": {
     "chef_client": {
       "init_style": "none",
+      "config": {
+        "chef_server_url": "https://chef.osuosl.org/organizations/osuosl"
+      },
       "cron": {
         "minute": "*/30",
         "hour": "*",
