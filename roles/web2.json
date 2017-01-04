@@ -23,22 +23,20 @@
       }
     },
     "osl-php": {
-      "packages": {
-        "web2": [
-          "php56u",
-          "php56u-devel",
-          "php56u-gd",
-          "php56u-intl",
-          "php56u-mbstring",
-          "php56u-mcrypt",
-          "php56u-mysqlnd",
-          "php56u-opcache",
-          "php56u-pdo",
-          "php56u-pear",
-          "php56u-pecl-imagick",
-          "php56u-pecl-memcached"
-          ]
-      }
+      "packages": [
+        "php56u",
+        "php56u-devel",
+        "php56u-gd",
+        "php56u-intl",
+        "php56u-mbstring",
+        "php56u-mcrypt",
+        "php56u-mysqlnd",
+        "php56u-opcache",
+        "php56u-pdo",
+        "php56u-pear",
+        "php56u-pecl-imagick",
+        "php56u-pecl-memcached"
+      ]
     },
     "php": {
       "directives": {
