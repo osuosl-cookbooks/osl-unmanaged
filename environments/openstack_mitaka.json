@@ -66,7 +66,8 @@
         "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock "
       },
       "config": {
-        "ssl_verify_mode": ":verify_peer"
+        "ssl_verify_mode": ":verify_peer",
+        "chef_server_url": "https://chef.osuosl.org/organizations/osuosl"
       }
     },
     "nagios": {

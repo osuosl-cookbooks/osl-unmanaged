@@ -161,6 +161,9 @@
       ]
     },
     "chef_client": {
+      "config": {
+        "chef_server_url": "https://chef.osuosl.org/organizations/osuosl"
+      },
       "init_style": "none",
       "cron": {
         "minute": "*/30",
