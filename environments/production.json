@@ -70,7 +70,7 @@
     "osl-app": "= 1.10.3",
     "osl-backup": "= 0.5.4",
     "osl-dhcp": "= 0.2.1",
-    "osl-drupal": "= 0.2.1",
+    "osl-drupal": "= 0.2.2",
     "osl-gitlab": "= 0.1.5",
     "osl-haproxy": "= 2.3.1",
     "osl-jenkins": "= 0.7.28",
