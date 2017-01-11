@@ -77,7 +77,7 @@
     "recipe[workstation::pastebin]",
     "recipe[workstation::nodejs]",
     "recipe[workstation::docker]",
-    "recipe[workstation::chefdk]",
+    "recipe[base::chefdk]",
     "recipe[workstation::kitchen]",
     "recipe[workstation::vagrant]",
     "recipe[workstation::code_generator]",
