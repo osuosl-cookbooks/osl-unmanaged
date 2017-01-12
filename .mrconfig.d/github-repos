@@ -121,6 +121,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-ceph.git
 [osuosl-cookbooks/osl-dhcp]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-dhcp.git
 
+[osuosl-cookbooks/osl-dns]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-dns.git
+
 [osuosl-cookbooks/osl-drupal]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-drupal.git
 
