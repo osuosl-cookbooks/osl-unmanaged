@@ -175,7 +175,7 @@
   },
   "override_attributes": {
     "omnibus_updater": {
-      "version": "12.10.24"
+      "version": "12.17.44"
     }
   }
 }
