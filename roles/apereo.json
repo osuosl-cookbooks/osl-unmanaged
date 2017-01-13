@@ -16,7 +16,6 @@
     "recipe[git]",
     "recipe[mysql::client]",
     "recipe[osl-sudo::apereo]",
-    "recipe[osl-drupal::drush]",
     "recipe[certificate::manage_by_attributes]"
   ],
   "override_attributes": {
