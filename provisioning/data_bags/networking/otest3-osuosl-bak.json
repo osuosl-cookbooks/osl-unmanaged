@@ -3,20 +3,20 @@
   "resources": [
     {
       "resource": "osl_ifconfig",
-      "name": "eth1",
+      "name": "enp1s0",
       "attributes": {
         "target": "",
         "bootproto": "none",
-        "device": "eth1"
+        "device": "enp1s0"
       }
     },
     {
       "resource": "osl_ifconfig",
-      "name": "eth1.42",
+      "name": "enp1s0.42",
       "attributes": {
         "target": "",
         "bootproto": "none",
-        "device": "eth1.42",
+        "device": "enp1s0.42",
         "onboot": "yes",
         "userctl": "no",
         "vlan": "yes"
@@ -24,11 +24,11 @@
     },
     {
       "resource": "osl_ifconfig",
-      "name": "eth1.108",
+      "name": "enp1s0.108",
       "attributes": {
         "target": "",
         "bootproto": "none",
-        "device": "eth1.108",
+        "device": "enp1s0.108",
         "onboot": "yes",
         "userctl": "no",
         "vlan": "yes"
