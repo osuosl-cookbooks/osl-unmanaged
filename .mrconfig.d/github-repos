@@ -187,9 +187,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-varnish.git
 [osuosl-cookbooks/osl-vpn]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-vpn.git
 
-[osuosl-cookbooks/pgd]
-checkout = git clone git@github.com:osuosl-cookbooks/pgd.git
-
 [osuosl-cookbooks/production-roles]
 checkout = git clone git@github.com:osuosl-cookbooks/production-roles.git
 
