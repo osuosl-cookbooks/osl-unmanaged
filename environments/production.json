@@ -77,7 +77,7 @@
     "osl-jenkins": "= 0.7.28",
     "osl-mirror": "= 0.4.0",
     "osl-munin": "= 0.1.12",
-    "osl-mysql": "= 1.0.5",
+    "osl-mysql": "= 1.0.6",
     "osl-nagios": "= 2.6.1",
     "osl-netboot": "= 1.3.2",
     "osl-nginx": "= 1.1.4",
