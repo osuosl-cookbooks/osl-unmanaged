@@ -19,7 +19,7 @@ machine_batch do
         }
       },
                       convergence_options: {
-                        chef_version: '12.17.44'
+                        chef_version: '12.18.31'
                       }
       role 'base_managed'
       role 'openstack_provisioning'
