@@ -31,7 +31,7 @@
     "openstack-ops-messaging": "= 9.0.1",
     "openstack-orchestration": "= 9.2.1",
     "openstack-telemetry": "= 9.3.2",
-    "osl-apache": "= 1.0.17",
+    "osl-apache": "= 2.5.4",
     "osl-munin": "= 0.1.12",
     "osl-nagios": "= 2.6.1",
     "osl-nrpe": "= 1.4.14",
