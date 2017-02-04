@@ -32,7 +32,7 @@
     "openstack-ops-messaging": "= 13.0.0",
     "openstack-orchestration": "= 13.0.0",
     "openstack-telemetry": "= 13.0.0",
-    "osl-apache": "= 2.5.2",
+    "osl-apache": "= 2.5.4",
     "osl-munin": "= 0.1.12",
     "osl-nrpe": "= 1.4.14",
     "osl-openstack": "= 2.3.6",
