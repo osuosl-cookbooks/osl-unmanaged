@@ -12,6 +12,7 @@
     "erlang": "= 3.0.0",
     "firewall": "= 3.1.5",
     "galera": "= 0.4.1",
+    "git": "= 4.6.0",
     "iptables-ng": "= 2.2.8",
     "kernel-modules": "= 0.1.4",
     "magic_shell": "= 1.0.0",

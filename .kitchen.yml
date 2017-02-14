@@ -1,0 +1,39 @@
+---
+provisioner:
+  name: chef_zero
+  encrypted_data_bag_secret_key_path: <%= "#{ENV['HOME']}/.chef/encrypted_data_bag_secret" %>
+  environments_path: environments
+  client_rb:
+    environment: production
+
+suites:
+  - name: base
+    run_list:
+      - role[base]
+  - name: base_managed
+    run_list:
+      - role[base_managed]
+  - name: workstation
+    run_list:
+      - role[workstation]
+    provisioner:
+      client_rb:
+        environment: workstation
+    excludes:
+      - centos-6.8
+      - centos-7.3
+  - name: workstation_base
+    run_list:
+      - role[workstation_base]
+    provisioner:
+      client_rb:
+        environment: workstation
+    excludes:
+      - centos-6.8
+      - centos-7.3
+  - name: web2
+    run_list:
+      - role[web2]
+    excludes:
+      - centos-6.8
+      - debian-8
