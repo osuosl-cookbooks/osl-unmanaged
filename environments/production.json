@@ -92,6 +92,7 @@
     "poise": "= 2.7.1",
     "poise-languages": "= 2.0.3",
     "poise-python": "= 1.5.1",
+    "poise-service": "= 1.4.2",
     "postfix": "= 3.6.0",
     "postgresql": "= 3.4.16",
     "proj-ajats": "= 0.1.1",
