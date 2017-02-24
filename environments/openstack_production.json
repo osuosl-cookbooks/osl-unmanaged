@@ -4,19 +4,22 @@
   "cookbook_versions": {
     "aliases": "= 0.1.2",
     "apache2": "= 1.10.0",
-    "base": "= 1.7.10",
+    "apt": "= 2.9.2",
+    "aws": "= 2.4.0",
+    "base": "= 1.8.4",
+    "build-essential": "= 2.4.0",
     "certificate": "= 1.0.0",
     "chef-client": "= 4.3.1",
     "database": "= 2.3.1",
     "erlang": "= 1.5.4",
-    "firewall": "= 3.1.4",
+    "firewall": "= 3.1.5",
     "iptables-ng": "= 2.2.8",
     "magic_shell": "= 1.0.0",
     "monitoring": "= 0.2.9",
     "munin": "= 1.4.3",
     "mysql": "= 5.3.6",
-    "nagios": "= 7.2.4",
     "ntp": "= 1.6.2",
+    "ohai": "= 1.1.12",
     "omnibus_updater": "= 1.1.0",
     "openssh": "= 1.4.0",
     "openstack-block-storage": "= 9.4.2",
@@ -33,7 +36,6 @@
     "openstack-telemetry": "= 9.3.2",
     "osl-apache": "= 1.0.17",
     "osl-munin": "= 0.1.12",
-    "osl-nagios": "= 2.6.1",
     "osl-nrpe": "= 1.4.14",
     "osl-openstack": "= 1.0.20",
     "poise": "= 2.6.0",
@@ -51,7 +53,9 @@
     "yum-centos": "= 0.4.11",
     "yum-epel": "= 0.6.6",
     "yum-erlang_solutions": "0.2.0",
-    "yum-qemu-ev": "= 1.1.1",
+    "yum-fedora": "= 0.3.4",
+    "yum-qemu-ev": "= 1.1.2",
+    "yum-repoforge": "= 0.7.0",
     "resource_from_hash": "= 0.1.5"
   },
   "json_class": "Chef::Environment",
@@ -89,7 +93,7 @@
   },
   "override_attributes": {
     "omnibus_updater": {
-      "version": "12.10.24"
+      "version": "12.18.31"
     }
   }
 }

@@ -121,6 +121,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-ceph.git
 [osuosl-cookbooks/osl-dhcp]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-dhcp.git
 
+[osuosl-cookbooks/osl-dns]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-dns.git
+
 [osuosl-cookbooks/osl-drupal]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-drupal.git
 
@@ -184,9 +187,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-varnish.git
 [osuosl-cookbooks/osl-vpn]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-vpn.git
 
-[osuosl-cookbooks/pgd]
-checkout = git clone git@github.com:osuosl-cookbooks/pgd.git
-
 [osuosl-cookbooks/production-roles]
 checkout = git clone git@github.com:osuosl-cookbooks/production-roles.git
 
@@ -198,9 +198,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/proj-deluge.git
 
 [osuosl-cookbooks/proj-drupalorg]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-drupalorg.git
-
-[osuosl-cookbooks/proj-facebook]
-checkout = git clone git@github.com:osuosl-cookbooks/proj-facebook.git
 
 [osuosl-cookbooks/proj-misc]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-misc.git

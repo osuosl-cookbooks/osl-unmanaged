@@ -12,6 +12,7 @@ node-backup*
 /osl-cookbooks
 /osuosl-cookbooks
 /community-cookbooks
+Berksfile.lock
 
 # chef-provisioner
 /provisioning/.chef/*.pem

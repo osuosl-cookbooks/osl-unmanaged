@@ -35,12 +35,6 @@
         "include_sudoers_d": true
       }
     },
-    "firewall": {
-      "iptables-config": {
-        "save_on_restart": "yes",
-        "save_on_stop": "yes"
-      }
-    },
     "openstack": {
       "dashboard": {
         "server_hostname": "openpower-openstack.osuosl.org",
@@ -72,8 +66,10 @@
         },
         "compute": {
           "default": "enP3p9s0f3",
+          "openpower3.osuosl.bak": "enP1p9s0f1",
           "openpower2.osuosl.bak": "enP3p5s0f1",
-          "openpower5.osuosl.bak": "enP3p5s0f3"
+          "openpower5.osuosl.bak": "enP3p5s0f3",
+          "openpower6.osuosl.bak": "enP3p5s0f3"
         }
       },
       "physical_interface_mappings": [
@@ -84,8 +80,10 @@
           },
           "compute": {
             "default": "enP3p9s0f2",
+            "openpower3.osuosl.bak": "enP1p9s0f0",
             "openpower2.osuosl.bak": "enP3p5s0f0",
-            "openpower5.osuosl.bak": "enP3p5s0f2"
+            "openpower5.osuosl.bak": "enP3p5s0f2",
+            "openpower6.osuosl.bak": "enP3p5s0f2"
           }
         }
       ]

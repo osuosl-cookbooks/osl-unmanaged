@@ -43,6 +43,7 @@
       "database_suffix": "x86",
       "databag_prefix": "x86",
       "endpoint_hostname": "otest-controller.osuosl.org",
+      "nova_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3RFLB+6fuqQXp3Q7IWF9ioToj518yRg9fjokEIi4uummCvGl7/TjncRDXJGroQvy8YJej4ImKknoEoWy1eOIxBaZEiPek/aoGuSj58gwhvKJNxn94YYfymX6L2y2LzNXjHlkktxwqlMX3EzbtwLSRdcDIvoMPXDgmE61DF2JwXgMd7SeoXCmUGf8ifx6bsg8DW86JN7PfS1Eto+tS84wVou+a6ey2LEO6DpHNsnIBlQvpF//7JtIngadPt7ziecr1mDsHO8BlqKsTL7v9k6xuwXXCc34k3O2Km0UDJaQIF3xuruNatdD/4abrP1QNGDZPjAE4on558xgjzNSAYI5v nova-migration",
       "db_hostname": "otest-controller.osuosl.org",
       "image": {
         "glance_vol": "fs3.osuosl.bak:/openstack-glance"

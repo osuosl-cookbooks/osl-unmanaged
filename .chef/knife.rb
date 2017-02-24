@@ -3,7 +3,7 @@ user_email  = `git config --get user.email`
 home_dir    = ENV['HOME'] || ENV['HOMEDRIVE']
 knife[:secret_file] = "#{home_dir}/.chef/encrypted_data_bag_secret"
 
-chef_server_url         'https://chef.osuosl.org'
+chef_server_url         'https://chef.osuosl.org/organizations/osuosl'
 
 # USERNAME is UPPERCASE in Windows, but lowercase in the Chef server,
 # so `downcase` it.
