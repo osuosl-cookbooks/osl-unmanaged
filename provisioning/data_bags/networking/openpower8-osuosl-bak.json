@@ -8,6 +8,7 @@
         "onboot": "yes",
         "mask": "255.255.254.0",
         "bcast": "10.1.1.255",
+        "gateway": "10.1.0.1",
         "bootproto": "static",
         "device": "enP3p5s0f3"
       }
