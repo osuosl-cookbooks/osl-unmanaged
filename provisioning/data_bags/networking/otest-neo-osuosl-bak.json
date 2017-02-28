@@ -1,0 +1,28 @@
+{
+  "id": "otest-neo-osuosl-bak",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "10.1.0.106",
+      "attributes": {
+        "onboot": "yes",
+        "mask": "255.255.254.0",
+        "bcast": "10.1.1.255",
+        "gateway": "10.1.0.1",
+        "bootproto": "static",
+        "device": "eth0"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "10.0.0.34",
+      "attributes": {
+        "onboot": "yes",
+        "mask": "255.255.254.0",
+        "bcast": "10.1.0.255",
+        "bootproto": "static",
+        "device": "eth0:1"
+      }
+    }
+  ]
+}

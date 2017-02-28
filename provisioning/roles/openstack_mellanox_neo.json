@@ -1,0 +1,16 @@
+{
+    "chef_type": "role",
+    "default_attributes": {},
+    "description": "OpenStack Mellanox Neo",
+    "env_run_lists": {},
+    "json_class": "Chef::Role",
+    "name": "openstack_mellanox_neo",
+    "override_attributes": {
+        "osl-openstack": {
+          "mellanox_neo": {
+            "server_hostname": "otest-neo.osuosl.bak"
+          }
+        }
+    },
+    "run_list": []
+}
