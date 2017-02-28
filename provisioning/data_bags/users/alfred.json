@@ -1,0 +1,6 @@
+{
+  "id": "alfred",
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+ObCHCvgHbElN1+Od6ZYOw+R+kWA4NxGwXidegJxkramxi8gv2CASVioDszIlYlMVl6SY7vJuCxu89PT8UjIueeoryUy/+/l0q4/5kTtFEUjjqbJ6PrkmpaQk4NGmNrR78zPXXNdJExeG9CVKtmwfuOlPDAFHavLkn/U/vRxOUH0b9/w2jt0mH2uqo6rDwv7Bfqayz/eVuZLY8fIWd6XPO1oYikjtdtAuM5bwNrFFOV2Go9MedYkdZak29uauNuC8Ar/ibzTxKWNbwVRuRvVaYw376afVrgXqobtuJV7ZcyRktHCaGq3FVivxYBO8NE6L1u8fuE3FD/x/eq4//egR alfred-test"
+    ]
+}
