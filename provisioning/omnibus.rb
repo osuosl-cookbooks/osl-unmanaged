@@ -5,8 +5,8 @@ with_driver 'ssh'
 
 machine_batch do
   action [:ready, :converge_only]
-#  action :converge
-#  action :destroy
+  #  action :converge
+  #  action :destroy
   machine 'omnibus-ppc64' do
     machine_options transport_options: {
       host: '10.1.100.54',

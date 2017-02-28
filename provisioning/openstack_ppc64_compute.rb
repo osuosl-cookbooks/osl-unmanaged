@@ -26,7 +26,7 @@ machine 'openpower8' do
   file('/etc/chef/encrypted_data_bag_secret',
        File.dirname(__FILE__) +
        '/encrypted_data_bag_secret')
-#  action [:ready, :converge_only]
-#  action :converge
-#  action :destroy
+  #  action [:ready, :converge_only]
+  #  action :converge
+  #  action :destroy
 end

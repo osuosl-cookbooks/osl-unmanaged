@@ -1,10 +1,12 @@
 source 'https://supermarket.chef.io'
 
+solver :ruby, :required
+
 # OSL Base deps
 cookbook 'aliases', git: 'git@github.com:osuosl-cookbooks/aliases'
 cookbook 'base', git: 'git@github.com:osuosl-cookbooks/base'
-cookbook 'compat_resource', '12.9.1'
 cookbook 'firewall', git: 'git@github.com:osuosl-cookbooks/firewall'
+cookbook 'ibm-power', git: 'git@github.com:osuosl-cookbooks/ibm-power'
 cookbook 'modules', git: 'git@github.com:osuosl-cookbooks/modules-cookbook'
 cookbook 'openvpn', github: 'osuosl-cookbooks/openvpn'
 cookbook 'osl-dhcp', git: 'git@github.com:osuosl-cookbooks/osl-dhcp'
@@ -44,7 +46,7 @@ end
   orchestration
   telemetry
 ).each do |cb|
-#  dashboard
+  #  dashboard
   cookbook "openstack-#{cb}",
            github: "openstack/cookbook-openstack-#{cb}",
            branch: 'stable/mitaka'
