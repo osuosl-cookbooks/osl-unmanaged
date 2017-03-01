@@ -42,8 +42,8 @@
     "osl-openstack": {
       "database_suffix": "x86",
       "databag_prefix": "x86",
-      "endpoint_hostname": "otest-openpower-controller.osuosl.org",
-      "db_hostname": "otest-openpower-controller.osuosl.org",
+      "endpoint_hostname": "openpower-openstack.testing.osuosl.org",
+      "db_hostname": "openpower-openstack.testing.osuosl.org",
       "image": {
         "glance_vol": "fs3.osuosl.bak:/openstack-glance"
       },
@@ -82,6 +82,9 @@
         "volume": {
           "create_volume_group_type": "block_devices"
         }
+      },
+      "dashboard": {
+        "server_hostname": "openpower-openstack.testing.osuosl.org"
       }
     }
    },

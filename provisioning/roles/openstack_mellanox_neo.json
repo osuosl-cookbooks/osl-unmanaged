@@ -8,7 +8,7 @@
     "override_attributes": {
         "osl-openstack": {
           "mellanox_neo": {
-            "server_hostname": "otest-neo.osuosl.bak"
+            "server_hostname": "neo.testing.osuosl.org"
           }
         }
     },
