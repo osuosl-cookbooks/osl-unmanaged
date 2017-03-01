@@ -19,7 +19,7 @@
     "ohai": "= 1.1.12",
     "omnibus_updater": "= 1.1.0",
     "openssh": "= 1.4.0",
-    "osl-munin": "= 0.1.12",
+    "osl-munin": "= 0.1.13",
     "osl-nagios": "= 2.6.1",
     "osl-nginx": "= 1.1.4",
     "osl-nodejs": "= 0.1.5",
