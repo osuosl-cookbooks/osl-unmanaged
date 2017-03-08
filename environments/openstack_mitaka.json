@@ -20,6 +20,7 @@
     "munin": "= 1.4.3",
     "mysql": "= 6.0.31",
     "ntp": "= 1.6.2",
+    "ohai": "= 1.1.12",
     "omnibus_updater": "= 1.1.0",
     "openssh": "= 1.4.0",
     "openstack-block-storage": "= 13.0.0",
