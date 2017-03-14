@@ -3,9 +3,9 @@ require 'chef/provisioning/ssh_driver'
 
 with_driver 'ssh'
 
-machine 'openpower8' do
+machine 'neo_openpower' do
   machine_options transport_options: {
-    host: 'openpower8.osuosl.bak',
+    host: 'otest-neo.osuosl.bak',
     username: 'osuadmin',
     'ssh_options' => {
       keys: [
@@ -20,9 +20,8 @@ machine 'openpower8' do
                     chef_version: '12.18.31'
                   }
   role 'base_managed'
-  role 'openstack_provisioning_ppc64'
-  recipe 'osl-openstack::compute'
-  role 'openstack_cinder'
+  role 'openstack_mellanox_neo'
+  recipe 'osl-openstack::mellanox_neo'
   file('/etc/chef/encrypted_data_bag_secret',
        File.dirname(__FILE__) +
        '/encrypted_data_bag_secret')

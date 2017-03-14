@@ -83,6 +83,12 @@ task openstack_ppc64_compute: [:create_key] do
     "#{PROV_PATH}/openstack_ppc64_compute.rb")
 end
 
+desc 'OpenStack Staging Mellanox Neo (ppc64)'
+task openstack_ppc64_neo: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/openstack_ppc64_neo.rb")
+end
+
 desc 'Omnibus'
 task omnibus: [:create_key] do
   run_command('chef-client --force-formatter -z ' \
