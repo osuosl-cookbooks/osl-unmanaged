@@ -16,16 +16,24 @@ with_machine_options(
   }
 )
 
+data_bag_secret = Chef::EncryptedDataBagItem.load_secret(
+  File.join(__dir__, 'encrypted_data_bag_secret')
+)
+alfred = Chef::EncryptedDataBagItem.load('osl_jenkins', 'alfred', data_bag_secret)
+
 machine 'dns_jenkins' do
   attribute %w(osl-jenkins credentials git bumpzone user), ENV['GITHUB_USER']
   attribute %w(osl-jenkins credentials git bumpzone token), ENV['GITHUB_TOKEN']
   attribute %w(osl-jenkins credentials jenkins bumpzone user), ENV['JENKINS_USER']
   attribute %w(osl-jenkins credentials jenkins bumpzone api_token), ENV['JENKINS_PASS']
   attribute %w(osl-jenkins credentials jenkins bumpzone trigger_token), ENV['TRIGGER_TOKEN']
+  attribute %w(osl-jenkins credentials ssh alfred user), 'alfred'
+  attribute %w(osl-jenkins credentials ssh alfred private_key), alfred['ssh']['alfred']['private_key']
   role 'dns'
   role 'base_managed'
   recipe 'provision_test::dns'
   recipe 'osl-jenkins::bumpzone'
+  recipe 'provision_test::dns_jenkins'
   file('/etc/chef/encrypted_data_bag_secret',
        File.dirname(__FILE__) +
        '/encrypted_data_bag_secret')
