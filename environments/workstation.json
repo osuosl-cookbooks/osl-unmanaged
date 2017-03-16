@@ -8,7 +8,7 @@
     "celery": "= 0.1.5",
     "chef-client": "= 4.3.1",
     "chef_gem": "= 0.1.0",
-    "compat_resource": "= 12.9.1",
+    "compat_resource": "= 12.16.3",
     "cron": "= 1.7.6",
     "docker": "= 2.6.1",
     "nodejs": "= 3.0.0",
