@@ -22,6 +22,9 @@ cookbook 'resource_from_hash',
 cookbook 'statsd', github: 'att-cloud/cookbook-statsd'
 cookbook 'yum-qemu-ev', git: 'git@github.com:osuosl-cookbooks/yum-qemu-ev.git'
 cookbook 'provision_test', path: 'test/cookbooks/provision_test'
+cookbook 'selinux',
+         github: 'skottler/selinux',
+         ref: '5c92a6dcbf'
 
 # WIP patches
 # %w(
