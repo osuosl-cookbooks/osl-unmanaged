@@ -33,7 +33,7 @@
     "helpers-databags": "= 1.0.0",
     "homebrew": "= 1.5.4",
     "iptables": "= 0.13.0",
-    "iptables-ng": "= 2.2.8",
+    "iptables-ng": "= 3.0.0",
     "java": "= 1.39.0",
     "jenkins": "= 2.4.1",
     "line": "= 0.5.1",
