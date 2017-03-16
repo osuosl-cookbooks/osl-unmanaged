@@ -6,6 +6,7 @@
   "cookbook_versions": {
     "apache2": "= 3.1.0",
     "apt": "= 2.9.2",
+    "compat_resource": "= 12.16.3",
     "build-essential": "= 2.4.0",
     "git": "= 4.0.2",
     "jira": "1.0.2",
@@ -27,7 +28,7 @@
     "yum-epel": "= 0.7.0",
     "yum-fedora": "= 0.3.4",
     "yum-ius": "= 0.4.5",
-    "yum-repoforge": "= 0.7.0",
+    "yum-repoforge": "= 2.0.1",
     "proj-phpbb": "= 2.2.14",
     "rdiff-backup": "= 2.0.9"
   },
