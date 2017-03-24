@@ -61,6 +61,7 @@
         "autoconf",
         "awesome",
         "bash",
+        "bind9utils",
         "build-essential",
         "bzr",
         "chromium",
