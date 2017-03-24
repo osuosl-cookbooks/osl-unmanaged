@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+export BERKSHELF_PATH="vendor/"
 envs=$(ls environments | sed -e 's/.json//')
 for env in $envs ; do
   echo "Checking $env environment..."
@@ -8,5 +9,6 @@ for env in $envs ; do
 done
 echo "Checking provisioning environment..."
 cd provisioning
+export BERKSHELF_PATH="vendor/"
 rm -f Berksfile.lock
 berks install -q

@@ -12,6 +12,7 @@ node-backup*
 /osl-cookbooks
 /osuosl-cookbooks
 /community-cookbooks
+/vendor
 Berksfile.lock
 
 # chef-provisioner
@@ -23,6 +24,7 @@ Berksfile.lock
 /provisioning/nodes
 /provisioning/cookbooks
 /provisioning/clients
+/provisioning/vendor
 /provisioning/Berksfile.lock
 
 # allow local berkshelf settings
