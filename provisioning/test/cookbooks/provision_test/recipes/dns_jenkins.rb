@@ -6,7 +6,7 @@ end
 
 jenkins_ssh_slave 'dns_master' do
   remote_fs '/home/alfred/jenkins'
-  host node['osl-dns']['masters'].first
+  host 'ns-master.osuosl.org'
   user 'alfred'
   credentials 'alfred'
 end

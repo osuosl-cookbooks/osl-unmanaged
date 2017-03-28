@@ -1,22 +1,24 @@
 require 'chef/provisioning'
+require 'chef/provisioning/ssh_driver'
 
-with_driver 'fog:OpenStack'
-
-with_machine_options(
-  bootstrap_options: {
-    image_ref: '94773868-6e91-415c-9f36-df6977c43ce9', # CentOS 7.3
-    flavor_ref: 'ef9144dc-11d3-4596-8d07-7f58e3530285', # m1.small
-    security_groups: 'default',
-    key_name: ENV['OS_SSH_KEYPAIR'],
-    floating_ip_pool: ENV['OS_FLOATING_IP_POOL']
-  },
-  ssh_username: 'centos',
-  convergence_options: {
-    chef_version: '12.18.31'
-  }
-)
+with_driver 'ssh'
 
 machine 'dns_slave' do
+  machine_options transport_options: {
+    host: 'ns-slave.osuosl.org',
+    username: 'osuadmin',
+    'ssh_options' => {
+      keys: [
+        '~/.ssh/id_rsa-bootstrap'
+      ]
+    },
+    options: {
+      prefix: 'sudo '
+    }
+  },
+                  convergence_options: {
+                    chef_version: '12.18.31'
+                  }
   role 'dns'
   role 'base_managed'
   recipe 'provision_test::dns'

@@ -1,0 +1,17 @@
+{
+  "id": "ns-master-osuosl-org",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "140.211.9.8",
+      "attributes": {
+        "onboot": "yes",
+        "mask": "255.255.255.0",
+        "bcast": "140.211.9.255",
+        "gateway": "140.211.9.1",
+        "bootproto": "static",
+        "device": "eth0"
+      }
+    }
+  ]
+}

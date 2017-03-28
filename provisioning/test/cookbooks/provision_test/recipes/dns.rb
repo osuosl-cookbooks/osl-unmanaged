@@ -1,19 +1,5 @@
-master_ips = []
-slave_ips = []
-
-unless Chef::Config[:solo]
-  search(:node, 'recipes:osl-dns\:\:master',
-         filter_result: { 'ip' => %w(cloud public_ipv4) }).each do |result|
-    master_ips << result['ip']
-  end
-  search(:node, 'recipes:osl-dns\:\:slave',
-         filter_result: { 'ip' => %w(cloud public_ipv4) }).each do |result|
-    slave_ips << result['ip']
-  end
-end
-
-node.default['osl-dns']['repository'] = 'git@github.com:osuosl/zonefiles-test.git'
-node.default['osl-dns']['masters'] = master_ips.empty? ? [] : master_ips
-node.default['osl-dns']['slaves'] = slave_ips.empty? ? [] : slave_ips
-node.default['osl-dns']['auth_ips'] = [node['cloud']['local_ipv4']]
-node.default['osl-dns']['caching_ips'] = [node['cloud']['public_ipv4'], '127.0.0.1']
+node.default['firewall']['range']['osl_managed']['4'] << '140.211.168.0/24'
+node.default['osl-dns']['masters'] = %w(140.211.9.8)
+node.default['osl-dns']['slaves'] = %w(140.211.9.6 140.211.9.7)
+node.default['osl-dns']['auth_ips'] = %w(140.211.9.7 140.211.9.8)
+node.default['osl-dns']['caching_ips'] = %w(140.211.9.6 127.0.0.1 ::1)

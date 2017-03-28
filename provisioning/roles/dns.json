@@ -18,6 +18,9 @@
         "github_url": "https://github.com/osuosl/zonefiles-test.git",
         "dns_master": "dns_master"
       }
+    },
+    "osl-dns": {
+      "repository": "git@github.com:osuosl/zonefiles-test.git"
     }
    },
   "json_class": "Chef::Role",
