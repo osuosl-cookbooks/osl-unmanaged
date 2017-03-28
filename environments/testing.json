@@ -29,7 +29,7 @@
     "generic-vhosts": "= 0.1.33",
     "git": "= 4.4.1",
     "glusterfs": "= 0.1.1",
-    "haproxy": "= 3.0.1",
+    "haproxy": "= 3.0.2",
     "helpers-databags": "= 1.0.0",
     "homebrew": "= 1.5.4",
     "iptables": "= 0.13.0",
