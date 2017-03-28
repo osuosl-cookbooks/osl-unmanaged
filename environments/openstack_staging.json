@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "aliases": "= 0.1.2",
     "apache2": "= 1.10.0",
-    "base": "= 1.8.9",
+    "base": "= 1.9.0",
     "certificate": "= 1.0.0",
     "chef-client": "= 4.3.1",
     "database": "= 2.3.1",
