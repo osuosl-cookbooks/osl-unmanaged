@@ -16,7 +16,7 @@
     "nagios": "= 7.2.4",
     "nodejs": "= 2.4.0",
     "ntp": "= 1.6.2",
-    "osl-apache": "= 2.5.4",
+    "osl-apache": "= 2.6.0",
     "osl-haproxy": "= 2.4.2",
     "osl-nagios": "= 2.6.1",
     "rsyslog": "= 4.0.0",
