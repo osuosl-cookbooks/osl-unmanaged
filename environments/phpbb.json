@@ -29,7 +29,7 @@
     "yum-fedora": "= 0.3.4",
     "yum-ius": "= 0.4.5",
     "yum-repoforge": "= 2.0.1",
-    "proj-phpbb": "= 2.2.14",
+    "proj-phpbb": "= 2.2.15",
     "rdiff-backup": "= 2.0.9"
   },
   "default_attributes": {
