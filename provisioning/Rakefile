@@ -26,6 +26,7 @@ end
 
 desc 'Vendor your cookbooks/'
 task :berks_vendor do
+  run_command('rm -rf Gemfile.lock Berksfile.lock cookbooks/')
   run_command('berks vendor cookbooks')
 end
 
