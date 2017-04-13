@@ -22,7 +22,8 @@
     "recipe[workstation::sudoers]",
     "recipe[workstation::autofs]",
     "recipe[workstation::lightdm]",
-    "recipe[workstation::users]"
+    "recipe[workstation::users]",
+    "recipe[workstation::vimrc]"
   ],
   "env_run_lists": {
   }
