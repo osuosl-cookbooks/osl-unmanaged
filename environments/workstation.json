@@ -21,6 +21,7 @@
     "sudo": "= 2.9.0",
     "systemd": "= 2.0.0",
     "workstation": "= 3.8.0",
+    "virtualbox": "= 1.0.2",
     "yum-ius": "= 0.4.5"
   },
   "json_class": "Chef::Environment",
