@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "aliases": "= 0.1.2",
     "apt": "= 2.9.2",
-    "base": "= 1.9.1",
+    "base": "= 1.9.2",
     "build-essential": "= 2.4.0",
     "chef-client": "= 4.3.1",
     "compat_resource": "= 12.16.3",
