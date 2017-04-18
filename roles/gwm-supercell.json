@@ -1,0 +1,42 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-apache::default]",
+    "recipe[ganeti_webmgr::default]",
+    "recipe[ganeti_webmgr::bootstrap_user]",
+    "recipe[ganeti_webmgr::apache]",
+    "recipe[ganeti_webmgr::haystack]",
+    "recipe[firewall::gwm]",
+    "recipe[certificate::wildcard]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "ganeti_webmgr": {
+      "migrate": true,
+      "apache": {
+        "server_port": 443,
+        "server_name": "ganeti-supercell.osuosl.org",
+        "server_aliases": [
+          "supercell-gwm1.osuosl.org"
+        ]
+      },
+      "https_enabled": true,
+      "certificate_key_file": "/etc/pki/tls/private/wildcard.key",
+      "certificate_file": "/etc/pki/tls/certs/wildcard.pem",
+      "revision": "master",
+      "debug": false,
+      "databag_item": "production",
+      "database": {
+        "user": "ganeti_webmgr",
+        "port": "3306",
+        "host": "vip-mysql2.osuosl.org",
+        "engine": "django.db.backends.mysql",
+        "name": "ganeti-webmgr-supercell"
+        }
+      }
+    },
+  "json_class": "Chef::Role",
+  "description": "Ganeti Web Manager Supercell server role",
+  "name": "gwm-supercell"
+}
