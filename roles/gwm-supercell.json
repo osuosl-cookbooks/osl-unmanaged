@@ -28,7 +28,7 @@
       "debug": false,
       "databag_item": "supercell",
       "database": {
-        "user": "ganeti_webmgr",
+        "user": "ganeti-supercell",
         "port": "3306",
         "host": "vip-mysql2.osuosl.org",
         "engine": "django.db.backends.mysql",
