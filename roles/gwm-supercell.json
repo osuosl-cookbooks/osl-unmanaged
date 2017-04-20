@@ -26,7 +26,7 @@
       "certificate_file": "/etc/pki/tls/certs/wildcard.pem",
       "revision": "master",
       "debug": false,
-      "databag_item": "production",
+      "databag_item": "supercell",
       "database": {
         "user": "ganeti_webmgr",
         "port": "3306",
