@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "apt": "= 2.9.2",
     "apt-docker": "= 0.3.0",
-    "base": "= 1.9.0",
+    "base": "= 1.9.3",
     "celery": "= 0.1.5",
     "chef-client": "= 4.3.1",
     "chef_gem": "= 0.1.0",
@@ -20,7 +20,8 @@
     "resolver": "= 1.1.4",
     "sudo": "= 2.9.0",
     "systemd": "= 2.0.0",
-    "workstation": "= 3.7.4",
+    "workstation": "= 3.9.0",
+    "virtualbox": "= 1.0.2",
     "yum-ius": "= 0.4.5"
   },
   "json_class": "Chef::Environment",
@@ -222,7 +223,6 @@
         "units",
         "vim",
         "vim-gtk",
-        "virtualbox",
         "virtualenvwrapper",
         "vlc",
         "wbox",
