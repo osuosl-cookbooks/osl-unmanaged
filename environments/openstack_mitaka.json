@@ -11,7 +11,7 @@
     "compat_resource": "= 12.14.7",
     "database": "= 4.0.6",
     "erlang": "= 3.0.0",
-    "firewall": "= 4.1.0",
+    "firewall": "= 4.1.1",
     "galera": "= 0.4.1",
     "git": "= 4.6.0",
     "iptables-ng": "= 3.0.0",
