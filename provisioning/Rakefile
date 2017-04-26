@@ -26,6 +26,7 @@ end
 
 desc 'Vendor your cookbooks/'
 task :berks_vendor do
+  run_command('rm -rf Gemfile.lock Berksfile.lock cookbooks/')
   run_command('berks vendor cookbooks')
 end
 
@@ -87,6 +88,33 @@ desc 'OpenStack Staging Mellanox Neo (ppc64)'
 task openstack_ppc64_neo: [:create_key] do
   run_command('chef-client --force-formatter -z ' \
     "#{PROV_PATH}/openstack_ppc64_neo.rb")
+end
+
+desc 'DNS Master/Slave/Jenkins'
+task dns_all:
+    [
+      :create_key,
+      :dns_master,
+      :dns_slave,
+      :dns_jenkins
+    ]
+
+desc 'DNS Master'
+task dns_master: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/dns_master.rb")
+end
+
+desc 'DNS Slave'
+task dns_slave: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/dns_slave.rb")
+end
+
+desc 'DNS Jenkins'
+task dns_jenkins: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/dns_jenkins.rb")
 end
 
 desc 'Omnibus'
