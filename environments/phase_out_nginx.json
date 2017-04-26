@@ -8,7 +8,7 @@
     "build-essential": "= 2.4.0",
     "chef-client": "= 4.3.1",
     "compat_resource": "= 12.16.3",
-    "firewall": "= 4.1.1",
+    "firewall": "= 4.1.0",
     "git": "= 4.6.0",
     "iptables-ng": "= 3.0.0",
     "monitoring": "= 0.2.9",
