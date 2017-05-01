@@ -68,7 +68,8 @@
         "openstack_mitaka",
         "phase_out_nginx",
         "phpbb",
-        "production"
+        "production",
+        "gwm"
         ]
     },
     "ntp": {
@@ -80,7 +81,8 @@
         "openstack_mitaka",
         "phase_out_nginx",
         "phpbb",
-        "production"
+        "production",
+        "gwm"
       ]
     },
     "mysql": {
