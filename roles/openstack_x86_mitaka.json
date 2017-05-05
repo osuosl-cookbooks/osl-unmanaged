@@ -22,8 +22,7 @@
       "compute": {
         "conf": {
           "DEFAULT": {
-            "disk_allocation_ratio": 5,
-            "allow_resize_to_same_host": true
+            "disk_allocation_ratio": 5
           }
         }
       }
@@ -54,20 +53,14 @@
         "check_nova_images": {
           "warning": 3,
           "critical": 5
-        },
-        "check_nova_hypervisors": {
-          "warn_vcpus_percent": "0:200",
-          "critical_vcpus_percent": "0:250"
-        }
+       }
       },
       "vxlan_interface": {
         "controller": {
           "default": "eth1"
         },
         "compute": {
-          "default": "enP3p9s0f3",
-          "oprod3.osuosl.bak": "enP1p9s0f1",
-          "oprod4.osuosl.bak": "enP3p5s0f1"
+          "default": "enp4s0f0"
         }
       },
       "physical_interface_mappings": [
@@ -77,9 +70,7 @@
             "default": "eth2"
           },
           "compute": {
-            "default": "enP3p9s0f2",
-            "oprod3.osuosl.bak": "enP1p9s0ddf0",
-            "oprod4.osuosl.bak": "enP3p5s0f0"
+            "default": "enp4s0f1.108"
           }
         }
       ]
