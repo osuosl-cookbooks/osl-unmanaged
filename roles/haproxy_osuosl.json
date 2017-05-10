@@ -1,7 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[osl-haproxy::data_bag]",
+    "recipe[osl-haproxy::osuosl_lb]",
     "recipe[osl-haproxy::ucarp]",
     "recipe[osl-haproxy::mon]",
     "recipe[ucarp::data_bag]"
