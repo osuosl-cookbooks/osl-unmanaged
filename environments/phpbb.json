@@ -23,6 +23,7 @@
     "rsyslog": "= 4.0.0",
     "selinux": "= 0.9.0",
     "selinux_policy": "= 0.9.2",
+    "sysctl": "= 0.7.0",
     "varnish": "= 2.3.0",
     "yum": "= 3.11.0",
     "yum-centos": "= 0.4.11",
