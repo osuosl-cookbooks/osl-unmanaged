@@ -25,7 +25,7 @@
     "erlang": "= 1.5.4",
     "firewall": "= 4.1.2",
     "formsender": "= 0.1.6",
-    "ganeti_webmgr": "= 0.5.1",
+    "ganeti_webmgr": "= 0.5.2",
     "generic-vhosts": "= 0.1.33",
     "git": "= 4.4.1",
     "glusterfs": "= 0.1.1",
