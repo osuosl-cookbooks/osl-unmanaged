@@ -205,6 +205,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/proj-misc.git
 [osuosl-cookbooks/proj-phpbb]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-phpbb.git
 
+[osuosl-cookbooks/proj-ros]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-ros.git
+
 [osuosl-cookbooks/python-webapp]
 checkout = git clone git@github.com:osuosl-cookbooks/python-webapp.git
 
