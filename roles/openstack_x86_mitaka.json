@@ -42,6 +42,12 @@
       "image": {
         "glance_vol": "fs3.osuosl.bak:/openstack-glance"
       },
+      "mon": {
+        "check_cinder_services": {
+          "warning": "0:",
+          "critical": "0:"
+        }
+      },
       "vxlan_interface": {
         "controller": {
           "default": "eth1"
