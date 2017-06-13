@@ -220,12 +220,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/rdiff-backup.git
 [osuosl-cookbooks/resource_from_hash]
 checkout = git clone git@github.com:osuosl-cookbooks/resource_from_hash.git
 
-[osuosl-cookbooks/ros-docs]
-checkout = git clone git@github.com:osuosl-cookbooks/ros-docs.git
-
-[osuosl-cookbooks/ros]
-checkout = git clone git@github.com:osuosl-cookbooks/ros.git
-
 [osuosl-cookbooks/rsync]
 checkout = git clone git@github.com:osuosl-cookbooks/rsync.git
 
