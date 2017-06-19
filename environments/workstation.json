@@ -20,7 +20,7 @@
     "resolver": "= 1.1.4",
     "sudo": "= 2.9.0",
     "systemd": "= 2.0.0",
-    "workstation": "= 3.9.1",
+    "workstation": "= 3.9.2",
     "virtualbox": "= 1.0.2",
     "yum-ius": "= 0.4.5"
   },
