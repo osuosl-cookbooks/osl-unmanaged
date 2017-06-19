@@ -2,6 +2,7 @@
   "name": "testing",
   "description": "The testing environment to be used for simulating production",
   "cookbook_versions": {
+    "acme": "= 3.0.0",
     "aliases": "= 0.1.2",
     "apache2": "= 3.1.0",
     "apt": "= 2.9.2",
@@ -16,7 +17,7 @@
     "chef-dk": "= 3.0.0",
     "chef_handler": "= 2.1.0",
     "chef-server": "= 1.1.0",
-    "compat_resource": "= 12.16.3",
+    "compat_resource": "= 12.19.0",
     "cpu": "= 0.2.0",
     "cron": "= 1.7.6",
     "daemontools": "= 1.2.0",

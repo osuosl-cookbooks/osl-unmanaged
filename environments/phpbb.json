@@ -4,9 +4,10 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "cookbook_versions": {
+    "acme": "= 3.0.0",
     "apache2": "= 3.1.0",
     "apt": "= 2.9.2",
-    "compat_resource": "= 12.16.3",
+    "compat_resource": "= 12.19.0",
     "build-essential": "= 2.4.0",
     "git": "= 4.0.2",
     "htpasswd": "= 0.2.4",
