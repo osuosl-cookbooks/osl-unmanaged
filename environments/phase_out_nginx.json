@@ -5,7 +5,7 @@
     "acme": "= 3.0.0",
     "aliases": "= 0.1.2",
     "apt": "= 2.9.2",
-    "base": "= 1.11.3",
+    "base": "= 1.11.4",
     "build-essential": "= 2.4.0",
     "chef-client": "= 4.3.1",
     "compat_resource": "= 12.19.0",
