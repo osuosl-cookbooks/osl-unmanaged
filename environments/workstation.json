@@ -54,9 +54,13 @@
         "python-openstackclient",
         "setuptools"
       ],
+      "packages_stretch": [
+        "hexchat"
+      ],
       "packages_jessie": [
         "opera",
-        "spotify-client"
+        "spotify-client",
+        "xchat"
       ],
       "packages": [
         "ack-grep",
@@ -233,7 +237,6 @@
         "wbox",
         "weechat",
         "wodim",
-        "xchat",
         "xclip",
         "xcompmgr",
         "xfce4",
