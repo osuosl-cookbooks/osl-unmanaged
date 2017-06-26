@@ -23,7 +23,7 @@
     "resolver": "= 1.1.4",
     "sudo": "= 2.9.0",
     "systemd": "= 2.0.0",
-    "workstation": "= 3.9.2",
+    "workstation": "= 3.10.0",
     "virtualbox": "= 1.0.2",
     "yum-ius": "= 0.4.5"
   },
@@ -53,6 +53,10 @@
         "python-novaclient",
         "python-openstackclient",
         "setuptools"
+      ],
+      "packages_jessie": [
+        "opera",
+        "spotify-client"
       ],
       "packages": [
         "ack-grep",
@@ -115,7 +119,6 @@
         "htop",
         "httping",
         "i3",
-        "i3lock",
         "icedove",
         "icedtea-netx",
         "iceweasel",
@@ -171,9 +174,7 @@
         "obmenu",
         "openbox",
         "openvpn",
-        "opera",
         "pass",
-        "pastebinit",
         "pdftk",
         "pep8",
         "pianobar",
@@ -204,7 +205,6 @@
         "shellcheck",
         "silversearcher-ag",
         "sipcalc",
-        "spotify-client",
         "sqlite3",
         "sshfs",
         "sslscan",
