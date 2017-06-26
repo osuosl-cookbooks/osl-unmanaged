@@ -20,7 +20,7 @@
     "nodejs": "= 2.4.0",
     "ntp": "= 1.6.2",
     "osl-apache": "= 2.7.0",
-    "osl-haproxy": "= 2.6.3",
+    "osl-haproxy": "= 2.7.0",
     "osl-nagios": "= 2.6.2",
     "osl-php": "= 0.2.0",
     "rsyslog": "= 4.0.0",
