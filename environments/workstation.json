@@ -54,6 +54,10 @@
         "python-openstackclient",
         "setuptools"
       ],
+      "packages_jessie": [
+        "opera",
+        "spotify-client"
+      ],
       "packages": [
         "ack-grep",
         "alsa-utils",
@@ -171,7 +175,6 @@
         "obmenu",
         "openbox",
         "openvpn",
-        "opera",
         "pass",
         "pastebinit",
         "pdftk",
@@ -204,7 +207,6 @@
         "shellcheck",
         "silversearcher-ag",
         "sipcalc",
-        "spotify-client",
         "sqlite3",
         "sshfs",
         "sslscan",
