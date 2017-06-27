@@ -113,8 +113,6 @@
     "rdiff-backup": "= 2.0.9",
     "resource_from_hash": "= 0.1.5",
     "rhsm": "= 1.0.0",
-    "ros": "= 0.1.54",
-    "ros-docs": "= 0.1.7",
     "rsync": "= 1.0.3",
     "rsyslog": "= 4.0.0",
     "ruby-helper": "= 0.0.1",
