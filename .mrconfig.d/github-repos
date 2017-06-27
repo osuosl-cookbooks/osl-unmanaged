@@ -85,9 +85,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/maintain-dns.git
 [osuosl-cookbooks/modules]
 checkout = git clone git@github.com:osuosl-cookbooks/modules-cookbook modules
 
-[osuosl-cookbooks/monitoring]
-checkout = git clone git@github.com:osuosl-cookbooks/monitoring.git
-
 [osuosl-cookbooks/nagios]
 checkout = git clone git@github.com:osuosl-cookbooks/nagios.git
 
