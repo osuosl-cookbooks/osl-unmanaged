@@ -47,7 +47,6 @@
     "mariadb": "= 0.3.0",
     "modules": "= 0.2.4",
     "monit": "= 0.7.1",
-    "monitoring": "= 0.2.9",
     "munin": "= 1.4.3",
     "mysql2_chef_gem": "= 1.0.1",
     "mysql": "= 5.3.6",
