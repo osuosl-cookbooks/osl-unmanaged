@@ -67,9 +67,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/ganeti.git
 [osuosl-cookbooks/ganeti_webmgr]
 checkout = git clone git@github.com:osuosl-cookbooks/ganeti_webmgr.git
 
-[osuosl-cookbooks/generic-vhosts]
-checkout = git clone git@github.com:osuosl-cookbooks/generic-vhosts.git
-
 [osuosl-cookbooks/gitlab]
 checkout = git clone git@github.com:osuosl-cookbooks/gitlab.git
 
