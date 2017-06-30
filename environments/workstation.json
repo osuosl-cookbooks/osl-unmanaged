@@ -11,7 +11,7 @@
     "chef_gem": "= 0.1.0",
     "compat_resource": "= 12.19.0",
     "cron": "= 1.7.6",
-    "docker": "= 2.6.1",
+    "docker": "= 2.15.13",
     "golang": "= 1.7.0",
     "nodejs": "= 3.0.0",
     "ntp": "= 1.6.2",
@@ -23,7 +23,7 @@
     "resolver": "= 1.1.4",
     "sudo": "= 2.9.0",
     "systemd": "= 2.0.0",
-    "workstation": "= 3.10.1",
+    "workstation": "= 3.10.2",
     "virtualbox": "= 1.0.2",
     "yum-ius": "= 0.4.5"
   },
