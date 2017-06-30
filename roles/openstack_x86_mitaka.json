@@ -65,6 +65,15 @@
           "compute": {
             "default": "enp4s0f1.108"
           }
+        },
+        {
+          "name": "vlan42",
+          "controller": {
+            "default": "eth3"
+          },
+          "compute": {
+            "default": "enp4s0f1.42"
+          }
         }
       ]
     }
