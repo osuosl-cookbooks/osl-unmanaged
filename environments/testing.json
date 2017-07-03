@@ -138,7 +138,8 @@
     "yum-passenger": "= 0.1.1",
     "yum-qemu-ev": "= 1.1.2",
     "yum-repoforge": "= 2.0.1",
-    "zlib": "= 2.0.0"
+    "zlib": "= 2.0.0",
+    "zypper": "= 0.4.0"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
