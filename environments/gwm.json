@@ -54,7 +54,7 @@
     "nfs": "= 2.2.6",
     "nodejs": "= 3.0.0",
     "nodejs-webapp": "= 1.0.2",
-    "nrpe": "= 1.5.2",
+    "nrpe": "= 2.0.0",
     "ntp": "= 1.6.2",
     "ohai": "= 1.1.12",
     "omnibus_updater": "= 1.1.0",
