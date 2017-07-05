@@ -38,7 +38,7 @@
     "openstack-telemetry": "= 13.0.0",
     "osl-apache": "= 2.7.1",
     "osl-munin": "= 1.0.1",
-    "osl-nrpe": "= 1.5.1",
+    "osl-nrpe": "= 2.0.0",
     "osl-openstack": "= 2.5.1",
     "poise": "= 2.6.0",
     "poise-languages": "= 1.3.2",
