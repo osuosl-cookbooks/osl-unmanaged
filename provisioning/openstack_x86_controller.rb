@@ -19,6 +19,7 @@ machine 'controller' do
                   convergence_options: {
                     chef_version: '12.18.31'
                   }
+  attribute %w(osl-openstack node_type), 'controller'
   role 'base_managed'
   role 'openstack_provisioning'
   recipe 'osl-openstack::ops_database'
