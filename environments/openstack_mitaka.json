@@ -3,7 +3,7 @@
   "description": "Openstack Mitaka Environment",
   "cookbook_versions": {
     "aliases": "= 0.1.2",
-    "apache2": "= 3.2.2",
+    "apache2": "= 3.3.1",
     "base": "= 1.12.0",
     "ceph": "= 0.9.2",
     "certificate": "= 1.0.0",
@@ -36,7 +36,7 @@
     "openstack-ops-messaging": "= 13.0.0",
     "openstack-orchestration": "= 13.0.0",
     "openstack-telemetry": "= 13.0.0",
-    "osl-apache": "= 2.7.1",
+    "osl-apache": "= 2.8.0",
     "osl-munin": "= 1.0.1",
     "osl-nrpe": "= 2.0.4",
     "osl-openstack": "= 2.5.2",
