@@ -5,7 +5,7 @@
   "chef_type": "environment",
   "cookbook_versions": {
     "acme": "= 3.0.0",
-    "apache2": "= 3.1.0",
+    "apache2": "= 3.3.1",
     "apt": "= 2.9.2",
     "compat_resource": "= 12.19.0",
     "build-essential": "= 2.4.0",
@@ -21,7 +21,7 @@
     "nodejs": "= 2.4.0",
     "ntp": "= 1.6.2",
     "osl-acme": "= 1.0.0",
-    "osl-apache": "= 2.7.2",
+    "osl-apache": "= 2.8.0",
     "osl-haproxy": "= 2.7.0",
     "osl-nagios": "= 2.6.2",
     "osl-php": "= 0.2.0",
@@ -36,7 +36,7 @@
     "yum-fedora": "= 0.3.4",
     "yum-ius": "= 0.4.5",
     "yum-repoforge": "= 2.0.1",
-    "proj-phpbb": "= 3.0.1",
+    "proj-phpbb": "= 3.0.2",
     "rdiff-backup": "= 2.0.9"
   },
   "default_attributes": {
