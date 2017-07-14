@@ -68,7 +68,7 @@
     "osl-dhcp": "= 0.3.0",
     "osl-dns": "= 1.1.5",
     "osl-drupal": "= 0.2.2",
-    "osl-gitlab": "= 0.1.6",
+    "osl-gitlab": "= 0.2.0",
     "osl-haproxy": "= 2.7.0",
     "osl-jenkins": "= 1.6.1",
     "osl-mirror": "= 0.4.0",
