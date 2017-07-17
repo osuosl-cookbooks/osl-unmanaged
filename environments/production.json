@@ -23,7 +23,7 @@
     "cron": "= 1.7.6",
     "daemontools": "= 1.2.0",
     "database": "= 4.0.6",
-    "dhcp": "= 5.2.0",
+    "dhcp": "= 5.4.0",
     "docker": "= 2.15.13",
     "erlang": "= 1.5.4",
     "firewall": "= 4.3.0",
