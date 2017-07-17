@@ -42,7 +42,7 @@
     "logrotate": "= 2.1.0",
     "logstash": "= 0.8.1",
     "magic_shell": "= 1.0.0",
-    "maintain-dns": "= 2.4.0",
+    "maintain-dns": "= 2.4.1",
     "mariadb": "= 0.3.0",
     "modules": "= 0.2.4",
     "monit": "= 0.7.1",
