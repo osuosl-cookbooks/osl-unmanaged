@@ -112,7 +112,7 @@
     "python-webapp": "= 0.1.2",
     "rabbitmq": "= 5.2.0",
     "racktables": "= 1.3.3",
-    "rdiff-backup": "= 2.0.9",
+    "rdiff-backup": "= 2.0.10",
     "resource_from_hash": "= 0.1.5",
     "rhsm": "= 1.0.0",
     "rsync": "= 1.0.3",
