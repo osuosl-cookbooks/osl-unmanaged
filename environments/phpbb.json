@@ -37,7 +37,7 @@
     "yum-ius": "= 0.4.5",
     "yum-repoforge": "= 2.0.1",
     "proj-phpbb": "= 3.0.4",
-    "rdiff-backup": "= 2.0.9"
+    "rdiff-backup": "= 2.0.10"
   },
   "default_attributes": {
     "nagios": {
