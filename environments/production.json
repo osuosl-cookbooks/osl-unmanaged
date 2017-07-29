@@ -87,7 +87,7 @@
     "osl-php": "= 0.1.4",
     "osl-postgresql": "= 0.4.2",
     "osl-rsync": "= 0.2.6",
-    "osl-slapd": "= 0.1.4",
+    "osl-slapd": "= 0.1.5",
     "osl-sudo": "= 0.1.0",
     "osl-varnish": "= 1.0.1",
     "osl-vpn": "= 0.2.6",
