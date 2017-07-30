@@ -1,0 +1,12 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-jenkins::packer_pipeline_node]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "role for designating a machine as packer pipeline node where builds, tests, etc will happen ",
+  "name": "packer_pipeline_node client"
+}
