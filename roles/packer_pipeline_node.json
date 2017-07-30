@@ -8,5 +8,5 @@
   "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "role for designating a machine as packer pipeline node where builds, tests, etc will happen ",
-  "name": "packer_pipeline_node client"
+  "name": "packer_pipeline_node"
 }
