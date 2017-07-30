@@ -1,0 +1,12 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-jenkins::packer_pipeline_master]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "role for designating a machine as packer pipeline master where payload is processed for packer-templates repo changes ",
+  "name": "packer_pipeline_master"
+}
