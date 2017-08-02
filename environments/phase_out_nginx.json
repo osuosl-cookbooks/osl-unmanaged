@@ -23,7 +23,7 @@
     "omnibus_updater": "= 1.1.0",
     "openssh": "= 1.4.0",
     "osl-acme": "= 1.0.0",
-    "osl-munin": "= 1.0.1",
+    "osl-munin": "= 1.0.2",
     "osl-nagios": "= 2.6.2",
     "osl-nginx": "= 2.0.0",
     "osl-nodejs": "= 0.1.5",
