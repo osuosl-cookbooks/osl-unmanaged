@@ -73,7 +73,7 @@
     "osl-gitlab": "= 0.2.1",
     "osl-haproxy": "= 2.7.2",
     "osl-jenkins": "= 1.8.4",
-    "osl-mirror": "= 0.5.1",
+    "osl-mirror": "= 0.5.2",
     "osl-munin": "= 1.0.2",
     "osl-mysql": "= 1.0.6",
     "osl-nagios": "= 2.6.2",
