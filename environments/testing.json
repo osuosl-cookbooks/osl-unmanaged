@@ -80,7 +80,7 @@
     "osl-netboot": "= 1.3.2",
     "osl-nginx": "= 2.0.0",
     "osl-nodejs": "= 0.1.5",
-    "osl-nrpe": "= 2.1.0",
+    "osl-nrpe": "= 2.1.1",
     "osl-postgresql": "= 0.4.2",
     "osl-rsync": "= 0.2.6",
     "osl-slapd": "= 0.1.5",
