@@ -1,6 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "recipe[base::fix_rpmdb]",
     "recipe[base::rhsm]",
     "recipe[base::rsyslog]",
     "role[base]",
