@@ -86,7 +86,7 @@
     "osl-slapd": "= 0.1.5",
     "osl-sudo": "= 0.1.0",
     "osl-varnish": "= 1.0.0",
-    "osl-vpn": "= 0.2.6",
+    "osl-vpn": "= 0.2.7",
     "packagecloud": "= 0.1.1",
     "passenger_apache2": "= 2.2.0",
     "percona": "= 0.16.1",
