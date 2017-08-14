@@ -55,6 +55,9 @@
           "warning": 3,
           "critical": 5
         },
+        "check_nova_services": {
+          "warn_disabled": "@3:"
+        },
         "check_nova_hypervisors": {
           "warn_vcpus_percent": "0:200",
           "critical_vcpus_percent": "0:250"
