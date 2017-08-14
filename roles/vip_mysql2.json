@@ -10,7 +10,10 @@
     },
     "percona": {
       "version": "5.6",
-      "encrypted_data_bag": "vip_mysql2"
+      "encrypted_data_bag": "vip_mysql2",
+      "server": {
+        "innodb_log_file_size": "64M"
+      }
     },
     "ucarp": {
       "data_bag": {
