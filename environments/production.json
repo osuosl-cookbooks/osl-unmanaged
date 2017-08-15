@@ -74,7 +74,7 @@
     "osl-docker": "= 1.0.0",
     "osl-drupal": "= 0.2.2",
     "osl-gitlab": "= 0.2.1",
-    "osl-haproxy": "= 2.7.2",
+    "osl-haproxy": "= 2.7.3",
     "osl-jenkins": "= 1.8.8",
     "osl-memcached": "= 1.1.0",
     "osl-mirror": "= 0.5.3",
