@@ -6,7 +6,7 @@
     "apache2": "= 1.10.0",
     "apt": "= 2.9.2",
     "aws": "= 2.4.0",
-    "base": "= 1.15.0",
+    "base": "= 1.15.1",
     "build-essential": "= 2.4.0",
     "certificate": "= 1.0.0",
     "chef-client": "= 4.3.1",
