@@ -15,6 +15,7 @@
     "recipe[base::selinux]",
     "recipe[base::tuned]",
     "recipe[base::users]",
+    "recipe[base::gitlfs]",
     "recipe[firewall]",
     "recipe[omnibus_updater]"
   ],
