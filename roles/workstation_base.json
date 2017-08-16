@@ -82,6 +82,7 @@
     "recipe[workstation::kitchen]",
     "recipe[workstation::vagrant]",
     "recipe[workstation::code_generator]",
+    "recipe[base::gitlfs]",
     "recipe[ntp::default]",
     "recipe[openssh::default]"
   ],
