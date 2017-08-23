@@ -25,7 +25,7 @@
     "osl-acme": "= 1.0.0",
     "osl-munin": "= 1.0.2",
     "osl-nagios": "= 2.6.2",
-    "osl-nginx": "= 2.1.0",
+    "osl-nginx": "= 2.1.1",
     "osl-nodejs": "= 0.1.5",
     "osl-nrpe": "= 2.1.1",
     "poise": "= 2.6.0",
