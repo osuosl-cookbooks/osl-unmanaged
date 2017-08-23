@@ -59,6 +59,8 @@
       "physical_interface_mappings": [
         {
           "name": "public",
+          "subnet": "140.211.168.0/24",
+          "uuid": "f482a425-2008-44cc-9697-370c9ec06eb6",
           "controller": {
             "default": "eth2"
           },
@@ -68,6 +70,8 @@
         },
         {
           "name": "vlan42",
+          "subnet": "10.1.100.0/22",
+          "uuid": "44ba0b36-1c69-46ce-9993-97e36dbd4ede",
           "controller": {
             "default": "eth3"
           },
