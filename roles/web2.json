@@ -3,57 +3,12 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[yum-ius]",
-    "recipe[osl-php]",
-    "recipe[osl-apache]",
-    "recipe[apache2::mod_php5]",
-    "recipe[apache2::mod_include]",
-    "recipe[osl-apache::data_bags]",
+    "recipe[proj-misc::web2]",
     "role[apache]",
     "role[project_internal]",
     "role[rdiff_backup]",
-    "recipe[git]",
-    "role[jenkins_client]",
-    "recipe[poise-python]"
+    "role[jenkins_client]"
   ],
-  "override_attributes": {
-    "osl-apache": {
-      "data_bags": {
-        "item": "osl_web2"
-      }
-    },
-    "osl-php": {
-      "packages": [
-        "php56u",
-        "php56u-devel",
-        "php56u-gd",
-        "php56u-intl",
-        "php56u-mbstring",
-        "php56u-mcrypt",
-        "php56u-mysqlnd",
-        "php56u-opcache",
-        "php56u-pdo",
-        "php56u-pear",
-        "php56u-pecl-imagick",
-        "php56u-pecl-memcached"
-      ]
-    },
-    "php": {
-      "directives": {
-        "post_max_size": "10M",
-        "memory_limit": "1G",
-        "max_execution_time":"60",
-        "upload_max_filesize": "10M",
-        "realpath_cache_size": "2M",
-        "realpath_cache_ttl": 240
-      },
-      "packages": []
-    },
-    "users": [
-      "pac12-production",
-      "pac12-staging"
-    ]
-  },
   "json_class": "Chef::Role",
   "description": "web2.osuosl.org role",
   "name": "web2"
