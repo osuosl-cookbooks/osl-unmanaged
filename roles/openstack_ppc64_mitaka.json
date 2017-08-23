@@ -80,6 +80,8 @@
       "physical_interface_mappings": [
         {
           "name": "public",
+          "subnet": "140.211.168.0/24",
+          "uuid": "a5bd5b53-1dc4-423c-a854-aa1cc9ee5456",
           "controller": {
             "default": "eth2"
           },
