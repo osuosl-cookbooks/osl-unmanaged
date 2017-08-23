@@ -3,6 +3,7 @@
   "run_list": [
     "recipe[osl-apache::default]",
     "recipe[apache2::mod_ssl]",
+    "role[apache]",
     "recipe[ganeti_webmgr::default]",
     "recipe[ganeti_webmgr::bootstrap_user]",
     "recipe[ganeti_webmgr::apache]",
