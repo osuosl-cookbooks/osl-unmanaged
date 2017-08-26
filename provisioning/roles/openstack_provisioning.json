@@ -24,12 +24,6 @@
         "include_sudoers_d": true
       }
     },
-    "firewall": {
-      "iptables-config": {
-        "save_on_restart": "yes",
-        "save_on_stop": "yes"
-      }
-    },
     "mysql": {
       "server_root_password": "rootpass",
       "server_debian_password": "debpass",
@@ -67,7 +61,7 @@
           "compute": {
             "default": "eth1.42",
             "otest2.osuosl.bak": "enp2s0.42",
-            "otest3.osuosl.bak": "enp1s0.42"
+            "otest3.osuosl.bak": "enp2s0.42"
           }
         },
         {
@@ -78,7 +72,7 @@
           "compute": {
             "default": "eth1.108",
             "otest2.osuosl.bak": "enp2s0.108",
-            "otest3.osuosl.bak": "enp1s0.108"
+            "otest3.osuosl.bak": "enp2s0.108"
           }
         }
       ]
@@ -95,7 +89,7 @@
         }
       },
       "dashboard": {
-        "server_hostname": "openpower-openstack.testing.osuosl.org"
+        "server_hostname": "openstack.testing.osuosl.org"
       }
     }
    },

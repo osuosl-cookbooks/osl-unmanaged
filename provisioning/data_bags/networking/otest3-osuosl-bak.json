@@ -3,20 +3,32 @@
   "resources": [
     {
       "resource": "osl_ifconfig",
-      "name": "enp1s0",
+      "name": "10.1.1.66",
       "attributes": {
-        "target": "",
-        "bootproto": "none",
+        "onboot": "yes",
+        "mask": "255.255.254.0",
+        "bootproto": "static",
+        "nm_controlled": "no",
+        "gateway": "10.1.0.1",
         "device": "enp1s0"
       }
     },
     {
       "resource": "osl_ifconfig",
-      "name": "enp1s0.42",
+      "name": "enp2s0",
       "attributes": {
         "target": "",
         "bootproto": "none",
-        "device": "enp1s0.42",
+        "device": "enp2s0"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "enp2s0.42",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "device": "enp2s0.42",
         "onboot": "yes",
         "userctl": "no",
         "vlan": "yes"
@@ -24,11 +36,11 @@
     },
     {
       "resource": "osl_ifconfig",
-      "name": "enp1s0.108",
+      "name": "enp2s0.108",
       "attributes": {
         "target": "",
         "bootproto": "none",
-        "device": "enp1s0.108",
+        "device": "enp2s0.108",
         "onboot": "yes",
         "userctl": "no",
         "vlan": "yes"
