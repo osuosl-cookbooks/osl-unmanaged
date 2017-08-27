@@ -5,7 +5,7 @@
     "acme": "= 3.0.0",
     "aliases": "= 0.1.2",
     "apt": "= 2.9.2",
-    "base": "= 2.0.1",
+    "base": "= 2.0.2",
     "build-essential": "= 2.4.0",
     "chef-client": "= 4.3.1",
     "chef_nginx": "= 2.9.0",
