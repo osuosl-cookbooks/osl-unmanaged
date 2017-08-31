@@ -4,6 +4,7 @@
     "role[base_managed]",
     "recipe[osl-slapd::server]",
     "recipe[osl-slapd::client]",
+    "recipe[firewall::osl_only]",
     "recipe[firewall::openldap]"
   ],
   "chef_type": "role",
