@@ -129,6 +129,12 @@ task ajats: [:create_key] do
     "#{PROV_PATH}/ajats.rb")
 end
 
+desc 'Ganeti'
+task ganeti: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/ganeti.rb")
+end
+
 desc 'Blow everything away'
 task clean: [:destroy_all]
 

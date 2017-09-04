@@ -1,0 +1,77 @@
+{
+  "id": "gtest3-osuosl-bak",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "10.1.0.139",
+      "attributes": {
+        "type": "Bridge",
+        "onboot": "yes",
+        "mask": "255.255.254.0",
+        "bcast": "10.1.1.255",
+        "bootproto": "static",
+        "nm_controlled": "no",
+        "gateway": "10.1.0.1",
+        "device": "br42"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "br113",
+      "attributes": {
+        "type": "Bridge",
+        "onboot": "yes",
+        "bootproto": "none",
+        "nm_controlled": "no",
+        "device": "br113"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "enp2s0",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "device": "enp2s0"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "enp2s0.42",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "device": "enp2s0.42",
+        "onboot": "yes",
+        "userctl": "no",
+        "vlan": "yes",
+        "bridge": "br42"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "enp2s0.113",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "device": "enp2s0.113",
+        "onboot": "yes",
+        "userctl": "no",
+        "vlan": "yes",
+        "bridge": "br113"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "192.168.16.139",
+      "attributes": {
+        "onboot": "yes",
+        "mask": "255.255.255.0",
+        "bcast": "192.168.16.255",
+        "bootproto": "static",
+        "nm_controlled": "no",
+        "device": "enp1s0"
+      }
+    }
+  ]
+}
