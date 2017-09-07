@@ -25,7 +25,7 @@
     "dhcp": "= 5.4.0",
     "docker": "= 2.15.13",
     "erlang": "= 1.5.4",
-    "firewall": "= 4.4.1",
+    "firewall": "= 4.4.2",
     "formsender": "= 0.1.6",
     "ganeti_webmgr": "= 0.4.14",
     "git": "= 4.4.1",
