@@ -26,7 +26,7 @@
     "erlang": "= 1.5.4",
     "firewall": "= 4.4.2",
     "formsender": "= 0.1.6",
-    "ganeti_webmgr": "= 0.5.2",
+    "ganeti_webmgr": "= 0.6.0",
     "git": "= 4.4.1",
     "glusterfs": "= 0.1.1",
     "golang": "= 1.7.0",
