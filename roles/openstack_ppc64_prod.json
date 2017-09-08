@@ -39,6 +39,11 @@
     }
   },
   "default_attributes": {
+    "base": {
+      "ifconfig": {
+        "network_manager": false
+      }
+    },
     "osl-openstack": {
       "database_suffix": "ppc64",
       "databag_prefix": "ppc64",

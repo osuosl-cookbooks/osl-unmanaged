@@ -33,6 +33,11 @@
     }
   },
   "default_attributes": {
+    "base": {
+      "ifconfig": {
+        "network_manager": false
+      }
+    },
     "osl-openstack": {
       "database_suffix": "x86",
       "databag_prefix": "x86",
