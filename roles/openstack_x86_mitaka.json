@@ -27,6 +27,11 @@
         "include_sudoers_d": true
       }
     },
+    "base": {
+      "ifconfig": {
+        "network_manager": false
+      }
+    },
     "openstack": {
       "dashboard": {
         "server_hostname": "openstack.osuosl.org",
