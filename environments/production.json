@@ -65,7 +65,7 @@
     "openssl": "= 1.1.0",
     "openvpn": "= 3.0.0",
     "osl-acme": "= 1.1.0",
-    "osl-admin": "= 0.5.1",
+    "osl-admin": "= 0.5.2",
     "osl-apache": "= 2.9.0",
     "osl-app": "= 1.11.10",
     "osl-backup": "= 0.5.7",
