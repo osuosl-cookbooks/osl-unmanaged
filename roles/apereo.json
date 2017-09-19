@@ -19,6 +19,10 @@
     "recipe[certificate::manage_by_attributes]"
   ],
   "override_attributes": {
+    "osl-apache": {
+      "worker_mem": 34,
+      "system_reserve_mem": 278
+    },
     "php": {
       "directives": {
         "post_max_size": "10M",
