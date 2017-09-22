@@ -58,7 +58,7 @@
     "yum-epel": "= 0.6.5",
     "yum-repoforge": "= 0.7.0",
     "yum-erlang_solutions": "0.3.1",
-    "yum-qemu-ev": "= 1.1.4"
+    "yum-qemu-ev": "= 1.1.5"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",

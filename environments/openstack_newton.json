@@ -89,7 +89,7 @@
     "yum-cron": "= 0.1.1",
     "yum-epel": "= 2.1.2",
     "yum-erlang_solutions": "= 1.0.3",
-    "yum-qemu-ev": "= 1.1.4",
+    "yum-qemu-ev": "= 1.1.5",
     "yum-repoforge": "= 2.0.1",
     "zypper": "= 0.4.0"
   },
