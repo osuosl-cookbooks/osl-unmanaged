@@ -4,7 +4,6 @@
     "recipe[base::fix_rpmdb]",
     "recipe[base::resolver]",
     "recipe[base::rhsm]",
-    "recipe[base::rsyslog]",
     "role[base]",
     "recipe[osl-nrpe]",
     "recipe[osl-nrpe::check_chef_client]",
@@ -18,7 +17,8 @@
     "recipe[base::users]",
     "recipe[base::gitlfs]",
     "recipe[firewall]",
-    "recipe[omnibus_updater]"
+    "recipe[omnibus_updater]",
+    "recipe[osl-syslog]"
   ],
   "chef_type": "role",
   "override_attributes": {},
