@@ -4,7 +4,7 @@
     "recipe[base::fix_rpmdb]",
     "recipe[base::resolver]",
     "recipe[base::rhsm]",
-    "recipe[base::rsyslog]",
+    "recipe[osl-syslog]",
     "role[base]",
     "recipe[osl-nrpe]",
     "recipe[osl-nrpe::check_chef_client]",
