@@ -26,7 +26,7 @@
     "osl-munin": "= 1.0.2",
     "osl-nagios": "= 2.6.5",
     "osl-nginx": "= 2.1.1",
-    "osl-nodejs": "= 0.1.5",
+    "osl-nodejs": "= 0.1.7",
     "osl-nrpe": "= 2.1.3",
     "poise": "= 2.6.0",
     "poise-languages": "= 1.3.2",
