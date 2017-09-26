@@ -10,6 +10,7 @@ cookbook 'ganeti', git: 'git@github.com:osuosl-cookbooks/ganeti'
 cookbook 'ibm-power', git: 'git@github.com:osuosl-cookbooks/ibm-power'
 cookbook 'modules', git: 'git@github.com:osuosl-cookbooks/modules-cookbook'
 cookbook 'munin', git: 'git@github.com:osuosl-cookbooks/munin'
+cookbook 'openstackclient', github: 'cloudbau/cookbook-openstackclient'
 cookbook 'openvpn', github: 'osuosl-cookbooks/openvpn'
 cookbook 'osl-dhcp', git: 'git@github.com:osuosl-cookbooks/osl-dhcp'
 cookbook 'osl-dns', git: 'git@github.com:osuosl-cookbooks/osl-dns'
@@ -37,7 +38,7 @@ cookbook 'selinux',
 # ).each do |cb|
 #   cookbook "openstack-#{cb}",
 #            github: "osuosl-cookbooks/cookbook-openstack-#{cb}",
-#            branch: 'stable/mitaka'
+#            branch: 'stable/newton'
 # end
 
 # Openstack deps
@@ -55,10 +56,9 @@ cookbook 'selinux',
   orchestration
   telemetry
 ).each do |cb|
-  #  dashboard
   cookbook "openstack-#{cb}",
            github: "openstack/cookbook-openstack-#{cb}",
-           tag: 'mitaka-eol'
+           branch: 'stable/newton'
 end
 
 metadata

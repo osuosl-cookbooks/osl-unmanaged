@@ -16,7 +16,7 @@
     "chef-client": "= 4.3.1",
     "chef-dk": "= 3.0.0",
     "chef_handler": "= 2.1.0",
-    "chef-server": "= 1.1.0",
+    "chef-server": "= 5.4.0",
     "compat_resource": "= 12.19.0",
     "cpu": "= 0.2.0",
     "cron": "= 1.7.6",
