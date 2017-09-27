@@ -111,7 +111,7 @@
     "proj-deluge": "= 1.0.1",
     "proj-drupalorg": "= 0.1.8",
     "proj-facebook": "= 0.1.1",
-    "proj-misc": "= 0.2.4",
+    "proj-misc": "= 0.2.5",
     "proj-ros": "= 2.7.5",
     "python": "= 1.4.6",
     "python-webapp": "= 0.1.2",
