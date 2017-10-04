@@ -1,7 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[osl-openstack::upgrade]"
+    "recipe[osl-openstack]"
   ],
   "chef_type": "role",
   "override_attributes": {
