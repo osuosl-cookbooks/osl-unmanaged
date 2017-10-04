@@ -11,7 +11,7 @@
     "compat_resource": "= 12.19.0",
     "database": "= 4.0.6",
     "erlang": "= 3.0.0",
-    "firewall": "= 4.4.3",
+    "firewall": "= 4.4.4",
     "galera": "= 0.4.1",
     "git": "= 4.6.0",
     "htpasswd": "= 0.2.4",
