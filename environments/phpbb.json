@@ -22,7 +22,7 @@
     "ntp": "= 1.6.2",
     "osl-acme": "= 1.1.0",
     "osl-apache": "= 2.9.0",
-    "osl-haproxy": "= 2.7.7",
+    "osl-haproxy": "= 2.7.8",
     "osl-nagios": "= 2.6.5",
     "osl-php": "= 0.2.0",
     "osl-syslog": "= 1.0.0",
