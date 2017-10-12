@@ -1,0 +1,18 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-jenkins::powerci]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "osl-jenkins": {
+      "powerci": {
+        "docker_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCcmA6/tlqsHnUpX9lsta4kfmTsP+91DKRFlJxOltNs22vAPdoWgoH+ClhmP6kg+JwZPHE/UnhaeClG2qOcxY+RpTlRRx9I/gDLS+Is7YpA/t93Y3VIlQdCBw0o88Hw4aAkw5OiPvics0ON0yiHPcy0P9hGdNokweAwQv6TerpZ5Dxl2EIzH4ih1L0Ql1B3yjeUT+nSk4CzBaCDvd7MqjQvr/qy90UmhU32NVIW7d5OEkh5XyYOy5dQTdT2SdbXX4E2gGTJ3RFUX/o/4iGxRIaulpjxCD4EXK+XVjU2DNleACSICLaEr+7dr2MCN0EWmTmlmgjOfoVcodsTVBuGbDlD"
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "powerci jenkins role",
+  "name": "powerci_jenkins"
+}
