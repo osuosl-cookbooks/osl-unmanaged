@@ -29,8 +29,6 @@
     "nagios": {
       "multi_environment_monitoring": true,
       "monitored_environments": [
-        "openstack_production",
-        "openstack_mitaka",
         "openstack_newton",
         "phase_out_nginx",
         "phpbb",
@@ -40,8 +38,6 @@
     },
     "munin": {
       "multi_environment_monitoring": [
-        "openstack_production",
-        "openstack_mitaka",
         "openstack_newton",
         "phase_out_nginx",
         "phpbb",
