@@ -4,7 +4,7 @@ solver :ruby, :required
 
 # OSL Base deps
 cookbook 'aliases', git: 'git@github.com:osuosl-cookbooks/aliases'
-cookbook 'base', git: 'git@github.com:osuosl-cookbooks/base', tag: 'v2.3.0'
+cookbook 'base', git: 'git@github.com:osuosl-cookbooks/base'
 cookbook 'firewall', git: 'git@github.com:osuosl-cookbooks/firewall'
 cookbook 'ganeti', git: 'git@github.com:osuosl-cookbooks/ganeti'
 cookbook 'ibm-power', git: 'git@github.com:osuosl-cookbooks/ibm-power'
