@@ -56,7 +56,7 @@
     "nodejs-webapp": "= 1.0.2",
     "nrpe": "= 2.0.0",
     "ntp": "= 1.6.2",
-    "ohai": "= 1.1.12",
+    "ohai": "= 5.2.0",
     "omnibus_updater": "= 1.1.0",
     "openssh": "= 1.4.0",
     "openssl": "= 1.1.0",
