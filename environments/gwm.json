@@ -37,7 +37,7 @@
     "iptables": "= 0.13.0",
     "iptables-ng": "= 3.0.0",
     "java": "= 1.39.0",
-    "jenkins": "= 5.0.1",
+    "jenkins": "= 5.0.4",
     "line": "= 0.5.1",
     "logrotate": "= 2.1.0",
     "logstash": "= 0.8.1",
