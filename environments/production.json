@@ -173,6 +173,11 @@
         "10.162.136.229"
       ]
     },
+    "ohai": {
+      "disabled_plugins": [
+        ":Sessions"
+      ]
+    },
     "chef_client": {
       "config": {
         "chef_server_url": "https://chef.osuosl.org/organizations/osuosl"

@@ -58,6 +58,11 @@
         "10.1.0.66"
       ]
     },
+    "ohai": {
+      "disabled_plugins": [
+        ":Sessions"
+      ]
+    },
     "chef_client": {
       "init_style": "none",
       "config": {
