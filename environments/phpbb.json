@@ -7,7 +7,7 @@
     "acme": "= 3.0.0",
     "apache2": "= 3.3.1",
     "apt": "= 2.9.2",
-    "base": "= 2.4.0",
+    "base": "= 2.4.1",
     "compat_resource": "= 12.19.0",
     "build-essential": "= 2.4.0",
     "docker": "= 2.11.1",
