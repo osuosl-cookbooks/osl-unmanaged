@@ -107,7 +107,7 @@
     "postfix": "= 3.6.0",
     "postgresql": "= 3.4.16",
     "proj-ajats": "= 0.1.4",
-    "proj-deluge": "= 1.0.1",
+    "proj-deluge": "= 1.0.3",
     "proj-drupalorg": "= 0.1.8",
     "proj-facebook": "= 0.1.1",
     "proj-misc": "= 0.2.6",
