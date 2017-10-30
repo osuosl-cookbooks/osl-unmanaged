@@ -4,61 +4,14 @@
   "chef_type": "role",
   "run_list": [
     "role[base_managed]",
-    "recipe[php]",
-    "recipe[osl-apache]",
-    "recipe[osl-apache::project_apereo]",
-    "recipe[osl-apache::mysql]",
+    "recipe[proj-misc::apereo]",
     "role[apache]",
     "role[project_projects]",
-    "role[rdiff_backup]",
-    "recipe[php::module_gd]",
-    "recipe[osl-php::apc]",
-    "recipe[git]",
-    "recipe[mysql::client]",
-    "recipe[osl-sudo::apereo]",
-    "recipe[certificate::manage_by_attributes]"
+    "role[rdiff_backup]"
   ],
-  "override_attributes": {
-    "osl-apache": {
-      "worker_mem": 34,
-      "system_reserve_mem": 278
-    },
-    "php": {
-      "directives": {
-        "post_max_size": "10M",
-        "memory_limit": "512M",
-        "upload_max_filesize": "10M"
-      },
-       "apc": {
-         "shm_size": "512M"
-      }
-    }
-  },
+  "override_attributes": {},
   "json_class": "Chef::Role",
   "description": "apereo.osuosl.org role",
   "name": "apereo",
-  "default_attributes": {
-    "certificate": [
-      {
-        "wwwapereoorg": {
-          "cert_path": "/etc/pki/tls",
-          "owner": "apache",
-          "group": "apache",
-          "cert_file": "www.apereo.org.pem",
-          "key_file": "www.apereo.org.key",
-          "chain_file": "www.apereo.org-bundle.crt"
-        }
-      },
-      {
-        "wwwsakaiprojectorg": {
-          "cert_path": "/etc/pki/tls",
-          "owner": "apache",
-          "group": "apache",
-          "cert_file": "www.sakaiproject.org.pem",
-          "key_file": "www.sakaiproject.org.key",
-          "chain_file": "www.sakaiproject.org-bundle.crt"
-        }
-      }
-    ]
-  }
+  "default_attributes": {}
 }
