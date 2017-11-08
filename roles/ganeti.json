@@ -1,0 +1,10 @@
+{
+  "chef_type": "role",
+  "override_attributes": {},
+  "description": "Ganeti Role",
+  "env_run_lists": {},
+  "json_class": "Chef::Role",
+  "name": "ganeti",
+  "default_attributes": {},
+  "run_list": []
+}
