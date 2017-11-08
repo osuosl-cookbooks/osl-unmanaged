@@ -1,10 +1,10 @@
 {
   "chef_type": "role",
   "override_attributes": {},
-  "description": "Ganeti Internal Role",
+  "description": "Ganeti OSUOSL Internal Role",
   "env_run_lists": {},
   "json_class": "Chef::Role",
-  "name": "ganeti_internal",
+  "name": "ganeti_osuosl_internal",
   "default_attributes": {},
   "run_list": [
     "role[ganeti]",
