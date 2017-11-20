@@ -93,7 +93,7 @@
     "osl-rsync": "= 0.3.0",
     "osl-slapd": "= 0.1.5",
     "osl-sudo": "= 0.1.0",
-    "osl-syslog": "= 1.0.0",
+    "osl-syslog": "= 1.1.0",
     "osl-varnish": "= 1.0.1",
     "osl-vpn": "= 0.2.8",
     "packagecloud": "= 0.1.1",
