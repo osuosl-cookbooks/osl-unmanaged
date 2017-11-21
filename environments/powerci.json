@@ -118,7 +118,7 @@
     "racktables": "= 1.3.3",
     "rdiff-backup": "= 2.0.10",
     "resource_from_hash": "= 0.1.5",
-    "rhsm": "= 1.0.0",
+    "rhsm": "= 1.0.1",
     "rsync": "= 1.0.3",
     "rsyslog": "= 4.0.0",
     "ruby-helper": "= 0.0.1",
