@@ -83,7 +83,7 @@
     "osl-sudo": "= 0.1.0",
     "osl-syslog": "= 1.1.0",
     "osl-varnish": "= 1.0.1",
-    "osl-vpn": "= 0.3.1",
+    "osl-vpn": "= 0.3.2",
     "packagecloud": "= 0.1.1",
     "passenger_apache2": "= 2.2.0",
     "percona": "= 0.16.1",
