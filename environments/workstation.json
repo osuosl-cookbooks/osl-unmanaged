@@ -24,7 +24,7 @@
     "resolver": "= 2.0.1",
     "sudo": "= 2.9.0",
     "systemd": "= 2.0.0",
-    "workstation": "= 3.12.0",
+    "workstation": "= 3.12.1",
     "virtualbox": "= 1.0.2",
     "yum-ius": "= 0.4.5"
   },
