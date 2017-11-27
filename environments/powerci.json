@@ -72,7 +72,7 @@
     "osl-backup": "= 0.5.7",
     "osl-dhcp": "= 0.3.1",
     "osl-dns": "= 1.1.8",
-    "osl-docker": "= 1.3.0",
+    "osl-docker": "= 1.4.0",
     "osl-drupal": "= 0.2.2",
     "osl-ganeti": "= 1.7.3",
     "osl-gitlab": "= 0.2.1",
