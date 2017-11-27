@@ -73,7 +73,7 @@
     "osl-jenkins": "= 1.9.5",
     "osl-mirror": "= 0.6.0",
     "osl-mysql": "= 1.0.6",
-    "osl-nagios": "= 2.6.5",
+    "osl-nagios": "= 2.7.0",
     "osl-netboot": "= 1.3.5",
     "osl-nodejs": "= 0.1.7",
     "osl-nrpe": "= 2.1.3",
