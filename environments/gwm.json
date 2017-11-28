@@ -24,7 +24,7 @@
     "database": "= 1.4.0",
     "dhcp": "= 5.4.0",
     "erlang": "= 1.5.4",
-    "firewall": "= 4.4.7",
+    "firewall": "= 4.4.6",
     "formsender": "= 0.1.6",
     "ganeti_webmgr": "= 0.6.0",
     "git": "= 4.4.1",
