@@ -69,7 +69,7 @@
     "osl-dns": "= 1.1.8",
     "osl-drupal": "= 0.2.2",
     "osl-gitlab": "= 0.2.1",
-    "osl-haproxy": "= 2.7.9",
+    "osl-haproxy": "= 2.7.10",
     "osl-jenkins": "= 1.9.6",
     "osl-mirror": "= 0.6.0",
     "osl-mysql": "= 1.0.6",
