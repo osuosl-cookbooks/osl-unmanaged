@@ -26,7 +26,7 @@
     "dobc": "= 1.0.0",
     "docker": "= 2.15.29",
     "erlang": "= 1.5.4",
-    "firewall": "= 4.4.9",
+    "firewall": "= 4.4.10",
     "formsender": "= 0.1.6",
     "ganeti": "= 1.4.2",
     "ganeti_webmgr": "= 0.4.14",
