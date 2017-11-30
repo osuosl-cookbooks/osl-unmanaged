@@ -7,7 +7,7 @@
   "name": "ganeti",
   "default_attributes": {
     "firewall": {
-      "policy_by_ip": true
+      "policy_by_ip": false
     }
   },
   "run_list": []
