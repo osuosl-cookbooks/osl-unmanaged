@@ -5,6 +5,10 @@
   "env_run_lists": {},
   "json_class": "Chef::Role",
   "name": "ganeti",
-  "default_attributes": {},
+  "default_attributes": {
+    "firewall": {
+      "policy_by_ip": true
+    }
+  },
   "run_list": []
 }
