@@ -10,7 +10,7 @@
     "chef-client": "= 4.3.1",
     "chef_nginx": "= 6.2.0",
     "compat_resource": "= 12.19.0",
-    "firewall": "= 4.4.10",
+    "firewall": "= 4.4.11",
     "git": "= 4.6.0",
     "golang": "= 1.7.0",
     "iptables-ng": "= 3.0.0",
