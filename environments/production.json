@@ -75,7 +75,7 @@
     "osl-dns": "= 1.1.9",
     "osl-docker": "= 1.4.2",
     "osl-drupal": "= 0.2.2",
-    "osl-ganeti": "= 1.7.7",
+    "osl-ganeti": "= 1.7.8",
     "osl-gitlab": "= 0.2.1",
     "osl-haproxy": "= 2.7.11",
     "osl-jenkins": "= 1.9.6",
