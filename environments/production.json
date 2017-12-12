@@ -113,6 +113,7 @@
     "proj-facebook": "= 0.1.1",
     "proj-misc": "= 0.5.0",
     "proj-ros": "= 2.7.10",
+    "proj-webdav": "= 1.0.0",
     "python": "= 1.4.6",
     "python-webapp": "= 0.1.2",
     "rabbitmq": "= 5.2.0",
