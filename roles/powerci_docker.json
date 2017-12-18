@@ -5,7 +5,15 @@
   ],
   "chef_type": "role",
   "override_attributes": {},
-  "default_attributes": {},
+  "default_attributes": {
+    "base": {
+      "denyhosts": {
+        "allowed": [
+          "192.168.6.3"
+        ]
+      }
+    }
+  },
   "json_class": "Chef::Role",
   "description": "powerci docker role",
   "name": "powerci_docker"
