@@ -77,7 +77,7 @@
     "osl-drupal": "= 0.2.2",
     "osl-ganeti": "= 1.7.12",
     "osl-gitlab": "= 0.2.1",
-    "osl-haproxy": "= 2.7.11",
+    "osl-haproxy": "= 2.7.12",
     "osl-jenkins": "= 1.9.11",
     "osl-memcached": "= 1.1.0",
     "osl-mirror": "= 0.6.1",
