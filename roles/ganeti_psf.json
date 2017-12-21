@@ -1,0 +1,13 @@
+{
+  "chef_type": "role",
+  "override_attributes": {},
+  "description": "Ganeti PSF Role",
+  "env_run_lists": {},
+  "json_class": "Chef::Role",
+  "name": "ganeti_psf",
+  "default_attributes": {},
+  "run_list": [
+    "role[ganeti]",
+    "recipe[osl-ganeti::psf]"
+  ]
+}
