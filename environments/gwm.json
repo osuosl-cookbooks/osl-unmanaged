@@ -70,7 +70,7 @@
     "osl-drupal": "= 0.2.2",
     "osl-gitlab": "= 0.2.1",
     "osl-haproxy": "= 2.7.12",
-    "osl-jenkins": "= 1.9.11",
+    "osl-jenkins": "= 1.9.12",
     "osl-mirror": "= 0.7.0",
     "osl-mysql": "= 1.0.6",
     "osl-nagios": "= 2.7.1",
