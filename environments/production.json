@@ -80,7 +80,7 @@
     "osl-haproxy": "= 2.7.12",
     "osl-jenkins": "= 1.9.11",
     "osl-memcached": "= 1.1.0",
-    "osl-mirror": "= 0.6.1",
+    "osl-mirror": "= 0.7.0",
     "osl-munin": "= 1.0.6",
     "osl-mysql": "= 1.0.6",
     "osl-nagios": "= 2.7.1",
