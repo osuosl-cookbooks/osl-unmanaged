@@ -112,7 +112,7 @@
     "proj-drupalorg": "= 0.1.8",
     "proj-facebook": "= 0.1.1",
     "proj-misc": "= 0.7.1",
-    "proj-ros": "= 2.7.10",
+    "proj-ros": "= 2.7.11",
     "proj-webdav": "= 1.0.3",
     "python": "= 1.4.6",
     "python-webapp": "= 0.1.2",
