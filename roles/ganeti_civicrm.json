@@ -1,0 +1,13 @@
+{
+  "chef_type": "role",
+  "override_attributes": {},
+  "description": "Ganeti CiviCRM Role",
+  "env_run_lists": {},
+  "json_class": "Chef::Role",
+  "name": "ganeti_civicrm",
+  "default_attributes": {},
+  "run_list": [
+    "role[ganeti]",
+    "recipe[osl-ganeti::civicrm]"
+  ]
+}
