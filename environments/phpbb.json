@@ -25,7 +25,7 @@
     "osl-apache": "= 2.10.1",
     "osl-haproxy": "= 2.7.13",
     "osl-nagios": "= 2.7.1",
-    "osl-php": "= 1.0.0",
+    "osl-php": "= 2.0.0",
     "osl-syslog": "= 1.1.0",
     "php": "= 4.5.0",
     "rsyslog": "= 4.0.0",
@@ -40,7 +40,7 @@
     "yum-fedora": "= 0.3.4",
     "yum-ius": "= 0.4.5",
     "yum-repoforge": "= 2.0.1",
-    "proj-phpbb": "= 3.2.1",
+    "proj-phpbb": "= 3.2.2",
     "rdiff-backup": "= 2.0.10"
   },
   "default_attributes": {
