@@ -56,7 +56,7 @@
     "openstackclient": "= 0.1.1",
     "osl-apache": "= 2.10.1",
     "osl-munin": "= 1.0.6",
-    "osl-nrpe": "= 2.1.8",
+    "osl-nrpe": "= 2.1.9",
     "osl-openstack": "= 3.1.6",
     "osl-rsync": "= 0.3.0",
     "osl-syslog": "= 1.1.0",
