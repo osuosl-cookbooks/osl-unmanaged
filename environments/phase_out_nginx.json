@@ -33,7 +33,7 @@
     "poise-python": "= 1.2.1",
     "postfix": "= 3.6.0",
     "postgresql": "= 3.4.24",
-    "proj-misc": "= 0.7.3",
+    "proj-misc": "= 0.7.4",
     "python": "= 1.4.6",
     "rdiff-backup": "= 2.0.10",
     "rsyslog": "= 4.0.0",
