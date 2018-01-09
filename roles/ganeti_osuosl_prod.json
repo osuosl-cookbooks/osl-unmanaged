@@ -5,7 +5,13 @@
   "env_run_lists": {},
   "json_class": "Chef::Role",
   "name": "ganeti_osuosl_prod",
-  "default_attributes": {},
+  "default_attributes": {
+    "osl-ganeti": {
+      "authorized_keys": [
+        "ssh-dss AAAAB3NzaC1kc3MAAACBAOf13nXtfHGVFRUOf6h7oPBJ/KzJo9jHYNmefIvQ6kQA0h1yRxT0uPA8yw9H7NOnBfRpAi2jYt7ceWB4fyv6Zw8Ix2zj3gSfK0tssmCvDIYUu9R+sNgzVPoavhWiLo/xSu0nGvZvlHcmyPBIsZYEowfM2vSUf7c0bpdG7fS0oZrLAAAAFQCqHULqjDInn+K4OwCwrnbGJEvokwAAAIEAmLjKM2N8uHxxmSEK8NPKsHXi+jnKF4DjTSIRmO8LAsNMuQAnI/4oIuiaUDOpAp95IJJkcuq/vq4BWiI+ONDGdLMVBogZJHa5WgAoOcelUP8aru3bv2urQ9OpGTWu/lAX6j4JTL/aiNt1AlATxKAdF6hr1hgwFOmW/NYtrW5SmOYAAACBAIBrWMw2NDpvw9ahVzj+I7UUluegngEt4sRyAr0RNCU00TxTosTgF5B8Dv3aqYUJRPKfk5FFz4qwLLkT0xSF/Fmvwo1Ra2KK4H+VJiRxpq+j5mVhllTkj9VfBg9jUqwXTapL/fMYW8NlAJezPEQHE0OnbdM02CVCnFI6bw/Drike root@g1"
+      ]
+    }
+  },
   "run_list": [
     "role[ganeti]",
     "recipe[osl-ganeti::osuosl_prod]"
