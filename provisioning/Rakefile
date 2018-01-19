@@ -123,12 +123,6 @@ task omnibus: [:create_key] do
     "#{PROV_PATH}/omnibus.rb")
 end
 
-desc 'AJATS'
-task ajats: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/ajats.rb")
-end
-
 desc 'Ganeti'
 task ganeti: [:create_key] do
   run_command('chef-client --force-formatter -z ' \
