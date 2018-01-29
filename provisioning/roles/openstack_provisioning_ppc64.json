@@ -24,10 +24,26 @@
         "include_sudoers_d": true
       }
     },
-    "firewall": {
-      "iptables-config": {
-        "save_on_restart": "yes",
-        "save_on_stop": "yes"
+    "ceph": {
+      "mon": {
+        "role": "ceph_mon_ppc64",
+        "tag": "ceph-mon-ppc64"
+      },
+      "osd": {
+        "role": "ceph_osd_ppc64",
+        "tag": "ceph-osd-ppc64"
+      },
+      "network": {
+        "public": {
+          "cidr": [
+            "10.1.0.0/23"
+          ]
+        },
+        "cluster": {
+          "cidr": [
+            "10.1.0.0/23"
+          ]
+        }
       }
     },
     "mysql": {
@@ -42,14 +58,19 @@
     "osl-openstack": {
       "database_suffix": "x86",
       "databag_prefix": "x86",
+      "ceph": true,
       "endpoint_hostname": "openpower-openstack.testing.osuosl.org",
       "db_hostname": "openpower-openstack.testing.osuosl.org",
       "image": {
         "glance_vol": "fs3.osuosl.bak:/openstack-glance"
       },
       "vxlan_interface": {
-        "controller": "eth3",
-        "compute": "enP3p5s0f3"
+        "controller": {
+          "default": "eth3"
+        },
+        "compute": {
+          "default": "enP2p1s0.42"
+        }
       },
       "physical_interface_mappings": [
         {
@@ -58,21 +79,30 @@
             "default": "eth1"
           },
           "compute": {
-            "default": "enP3p5s0f2"
+            "default": "enP2p1s0.108"
           }
         },
         {
-          "name": "vlan42",
+          "name": "backend",
           "controller": {
             "default": "eth2"
           },
           "compute": {
-            "default": "enP3p5s0f3"
+            "default": "enP2p1s0.42"
           }
         }
       ]
     },
     "openstack": {
+      "compute": {
+        "libvirt": {
+          "rbd": {
+            "cinder": {
+              "secret_uuid": "6f60c8cc-cd51-40e8-8860-913fb0b98124"
+            }
+          }
+        }
+      },
       "block-storage": {
         "conf": {
           "DEFAULT": {

@@ -1,0 +1,80 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[osl-ceph]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "ceph": {
+      "admin": {
+        "tag": "ceph-admin-ppc64"
+      },
+      "mon": {
+        "role": "ceph_mon_ppc64",
+        "tag": "ceph-mon-ppc64"
+      },
+      "osd": {
+        "role": "ceph_osd_ppc64",
+        "tag": "ceph-osd-ppc64",
+        "devices": [
+          {
+            "data": "/dev/sde1",
+            "block_db": "/dev/sdc1",
+            "block_wal": "/dev/sdd1"
+          },
+          {
+            "data": "/dev/sdf1",
+            "block_db": "/dev/sdc2",
+            "block_wal": "/dev/sdd2"
+          },
+          {
+            "data": "/dev/sdg1",
+            "block_db": "/dev/sdc3",
+            "block_wal": "/dev/sdd3"
+          },
+          {
+            "data": "/dev/sdh1",
+            "block_db": "/dev/sdc4",
+            "block_wal": "/dev/sdd4"
+          },
+          {
+            "data": "/dev/sdi1",
+            "block_db": "/dev/sdc5",
+            "block_wal": "/dev/sdd5"
+          },
+          {
+            "data": "/dev/sdj1",
+            "block_db": "/dev/sdc6",
+            "block_wal": "/dev/sdd6"
+          },
+          {
+            "data": "/dev/sdk1",
+            "block_db": "/dev/sdc7",
+            "block_wal": "/dev/sdd7"
+          },
+          {
+            "data": "/dev/sdl1",
+            "block_db": "/dev/sdc8",
+            "block_wal": "/dev/sdd8"
+          }
+        ]
+      },
+      "network": {
+        "public": {
+          "cidr": [
+            "10.1.0.0/23"
+          ]
+        },
+        "cluster": {
+          "cidr": [
+            "10.1.0.0/23"
+          ]
+        }
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "Ceph ppc64 Role",
+  "name": "ceph_ppc64"
+}

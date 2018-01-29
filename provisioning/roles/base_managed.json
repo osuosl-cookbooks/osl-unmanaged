@@ -6,6 +6,7 @@
     "recipe[base::issue]",
     "recipe[base::security]",
     "recipe[base::selinux]",
+    "recipe[base::sysctl]",
     "recipe[firewall]"
   ],
   "chef_type": "role",

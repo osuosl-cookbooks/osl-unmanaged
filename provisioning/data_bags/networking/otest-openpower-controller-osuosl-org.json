@@ -9,6 +9,7 @@
         "mask": "255.255.255.0",
         "bcast": "140.211.9.255",
         "bootproto": "static",
+        "gateway": "140.211.9.1",
         "device": "eth0"
       }
     },

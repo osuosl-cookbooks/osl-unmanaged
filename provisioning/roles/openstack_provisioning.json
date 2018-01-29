@@ -24,6 +24,28 @@
         "include_sudoers_d": true
       }
     },
+    "ceph": {
+      "mon": {
+        "role": "ceph_mon_ppc64",
+        "tag": "ceph-mon-ppc64"
+      },
+      "osd": {
+        "role": "ceph_osd_ppc64",
+        "tag": "ceph-osd-ppc64"
+      },
+      "network": {
+        "public": {
+          "cidr": [
+            "10.1.0.0/23"
+          ]
+        },
+        "cluster": {
+          "cidr": [
+            "10.1.0.0/23"
+          ]
+        }
+      }
+    },
     "mysql": {
       "server_root_password": "rootpass",
       "server_debian_password": "debpass",
@@ -36,6 +58,7 @@
     "osl-openstack": {
       "database_suffix": "x86",
       "databag_prefix": "x86",
+      "ceph": true,
       "endpoint_hostname": "openstack.testing.osuosl.org",
       "nova_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3RFLB+6fuqQXp3Q7IWF9ioToj518yRg9fjokEIi4uummCvGl7/TjncRDXJGroQvy8YJej4ImKknoEoWy1eOIxBaZEiPek/aoGuSj58gwhvKJNxn94YYfymX6L2y2LzNXjHlkktxwqlMX3EzbtwLSRdcDIvoMPXDgmE61DF2JwXgMd7SeoXCmUGf8ifx6bsg8DW86JN7PfS1Eto+tS84wVou+a6ey2LEO6DpHNsnIBlQvpF//7JtIngadPt7ziecr1mDsHO8BlqKsTL7v9k6xuwXXCc34k3O2Km0UDJaQIF3xuruNatdD/4abrP1QNGDZPjAE4on558xgjzNSAYI5v nova-migration",
       "db_hostname": "openstack.testing.osuosl.org",
@@ -78,6 +101,15 @@
       ]
     },
     "openstack": {
+      "compute": {
+        "libvirt": {
+          "rbd": {
+            "cinder": {
+              "secret_uuid": "6f60c8cc-cd51-40e8-8860-913fb0b98124"
+            }
+          }
+        }
+      },
       "block-storage": {
         "conf": {
           "DEFAULT": {
