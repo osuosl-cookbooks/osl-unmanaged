@@ -5,7 +5,13 @@
   "env_run_lists": {},
   "json_class": "Chef::Role",
   "name": "ganeti_osuosl_internal",
-  "default_attributes": {},
+  "default_attributes": {
+    "osl-ganeti": {
+      "authorized_keys": [
+        "ssh-dss AAAAB3NzaC1kc3MAAACBAKbfH1pQR5901ZasBfGOAZvqTVaJNzradtrDGZcTRQnyFBn3xi/GXHAkMSKRitMRwL0Uk+r2pkI3RJiTPvIXBWl4Z4qW11ZojHY8XdPPoXzMYgOPzUlauxCQk4c/SuDPBhNH3ykudIOErtVgP7DX8BBaVhlzWu6hmvY4xZdUIDqBAAAAFQDRKQpQiRxHIhHIT59pu1WSRyDtZQAAAIEAmsDhV3bL1rTYWneU0ehshDLwnAT48mJ21Dz5+KlyYBFRH9OnN/KtR6eLSQo+uHUmD22ifSocXYqdx9R/rkrVc6/mvDElHUdtDf8JrX7MTn2qOGvTJ85xk+obyR0hLCgQhdPp0GzwqlMeTq71L3/MX8rJwiwKnUkPAEIAlsyivfAAAACATuuMyxEdash0tg9/F12gc1qfYCV32ffCX9PO41/E40g98QPOB2j5FuqjnynP1ml9fR3Ox3S9Jh8vcSuN2MT6VX3BdLqNdCzhIOKZJQymcsiyEczVoEMMKzBYPVKllKe2DOGatoeoMlFJLLl/AxAT/aJxTP7T3KAOSwUQN6Eohgs= root@ginternal1.osuosl.bak"
+      ]
+    }
+  },
   "run_list": [
     "role[ganeti]",
     "recipe[osl-ganeti::osuosl_internal]"

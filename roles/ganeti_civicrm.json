@@ -5,7 +5,13 @@
   "env_run_lists": {},
   "json_class": "Chef::Role",
   "name": "ganeti_civicrm",
-  "default_attributes": {},
+  "default_attributes": {
+    "osl-ganeti": {
+      "authorized_keys": [
+        "ssh-dss AAAAB3NzaC1kc3MAAACBAKBdn1bqGrW72wKn3dwK8mC8bTz/ytSSlvJiRVm+ITjnFPlDnk0rHAE8twaCJkQXQnBiFz5kU8fwNuyI6h/464lVRTAWXFnq8SdS0sIYVug+IZUAEzNmSlWurp/VFC/jByHHQn3JIy6nrZFesKEEvEd0Kn3J6Am+ET01tXPDzlIlAAAAFQDPb1X/EYHdR1KgYSh+9wbXfTh9sQAAAIBRfB7cAQwWQzjuNiAbUp1wVd+VueS3CyLVLPq1sacpGKgdpRcevVWHUcREba0lklDILOLk0D0UlJWqgNBU154jTnX+GMn3S7irldxt8aRD4x1bAHaajlMKAXhFlZf03JRL8xStlaIq6EBRYLS5dRNM0pxlB/Rkrv70y4lt9vjFLAAAAIAiOl/OTETWMl5I5lFf01wVActU+y3yIfpGnCYvt4pQyaQHlzGpR3srr1z27lhOr9l3FlvaJ7Sjh/zBwifBC5hB/AdFCkGAX0+tzKMrga0PRfv7xH/X5s1hJvWc8V+XWFpP3UZFstWc4v9J8NBU/3xRf74sTl4gxV6sLO2QRzJi8g== root@civicrm1.osuosl.bak"
+      ]
+    }
+  },
   "run_list": [
     "role[ganeti]",
     "recipe[osl-ganeti::civicrm]"
