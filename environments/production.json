@@ -79,7 +79,7 @@
     "osl-gitlab": "= 0.2.1",
     "osl-haproxy": "= 2.9.0",
     "osl-jenkins": "= 1.9.13",
-    "osl-memcached": "= 1.1.0",
+    "osl-memcached": "= 1.2.0",
     "osl-mirror": "= 0.7.1",
     "osl-munin": "= 1.0.6",
     "osl-mysql": "= 1.0.6",
