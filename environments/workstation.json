@@ -17,7 +17,7 @@
     "ntp": "= 1.6.2",
     "openssh": "= 1.4.0",
     "osl-acme": "= 1.1.0",
-    "osl-docker": "= 1.4.3",
+    "osl-docker": "= 1.5.0",
     "poise": "= 2.6.0",
     "poise-languages": "= 1.3.2",
     "poise-python": "= 1.2.1",
@@ -51,7 +51,6 @@
     "workstation": {
       "python_packages": [
         "climesync",
-        "docker-compose",
         "httpie",
         "pymesync",
         "python-glanceclient",
