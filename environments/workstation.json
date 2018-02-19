@@ -51,7 +51,6 @@
     "workstation": {
       "python_packages": [
         "climesync",
-        "docker-compose",
         "httpie",
         "pymesync",
         "python-glanceclient",
