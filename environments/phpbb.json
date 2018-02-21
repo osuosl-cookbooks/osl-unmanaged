@@ -25,7 +25,7 @@
     "osl-apache": "= 2.11.0",
     "osl-haproxy": "= 2.9.5",
     "osl-nagios": "= 2.7.1",
-    "osl-php": "= 2.0.0",
+    "osl-php": "= 2.0.1",
     "osl-syslog": "= 1.1.0",
     "php": "= 4.5.0",
     "rsyslog": "= 4.0.0",
