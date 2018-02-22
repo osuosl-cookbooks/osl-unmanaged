@@ -10,7 +10,7 @@
     "base": "= 2.8.0",
     "compat_resource": "= 12.19.0",
     "build-essential": "= 2.4.0",
-    "docker": "= 2.11.1",
+    "docker": "= 2.15.29",
     "git": "= 4.0.2",
     "golang": "= 1.7.0",
     "htpasswd": "= 0.2.4",
@@ -40,7 +40,7 @@
     "yum-fedora": "= 0.3.4",
     "yum-ius": "= 0.4.5",
     "yum-repoforge": "= 2.0.1",
-    "proj-phpbb": "= 3.4.0",
+    "proj-phpbb": "= 3.4.1",
     "rdiff-backup": "= 2.0.10"
   },
   "default_attributes": {
