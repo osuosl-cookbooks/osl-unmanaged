@@ -10,7 +10,7 @@
     "base": "= 2.8.0",
     "compat_resource": "= 12.19.0",
     "build-essential": "= 2.4.0",
-    "docker": "= 2.11.1",
+    "docker": "= 2.15.29",
     "git": "= 4.0.2",
     "golang": "= 1.7.0",
     "htpasswd": "= 0.2.4",
