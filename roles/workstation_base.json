@@ -40,9 +40,9 @@
       "main": {
         "mydomain": "osuosl.org",
         "myorigin": "osuosl.org",
-        "relayhost": "[smtp.osuosl.org]",
+        "relayhost": "[smtp.osuosl.org]:587",
         "smtpd_use_tls": "no",
-        "smtp_use_tls": "no"
+        "smtp_use_tls": "yes"
       }
     },
     "resolver": {
