@@ -148,6 +148,7 @@
     "yum-elrepo": "= 1.1.0",
     "yum-fedora": "= 0.3.4",
     "yum-ius": "= 0.4.5",
+    "yum-kernel-osuosl": "= 1.0.0",
     "yum-passenger": "= 0.1.1",
     "yum-qemu-ev": "= 1.1.5",
     "yum-repoforge": "= 2.0.1",
