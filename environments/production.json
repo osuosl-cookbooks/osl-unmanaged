@@ -72,7 +72,7 @@
     "osl-apache": "= 2.11.0",
     "osl-app": "= 1.11.15",
     "osl-backup": "= 0.5.7",
-    "osl-ceph": "= 1.1.0",
+    "osl-ceph": "= 1.1.1",
     "osl-dhcp": "= 0.4.0",
     "osl-dns": "= 1.1.13",
     "osl-docker": "= 1.5.0",
