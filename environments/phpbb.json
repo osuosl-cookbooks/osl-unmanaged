@@ -39,6 +39,7 @@
     "yum-epel": "= 0.7.0",
     "yum-fedora": "= 0.3.4",
     "yum-ius": "= 0.4.5",
+    "yum-kernel-osuosl": "= 1.0.0",
     "yum-repoforge": "= 2.0.1",
     "proj-phpbb": "= 3.5.1",
     "rdiff-backup": "= 2.0.10"
