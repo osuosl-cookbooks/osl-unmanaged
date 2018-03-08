@@ -109,7 +109,7 @@
     "poise-service": "= 1.4.2",
     "postfix": "= 3.6.0",
     "postgresql": "= 3.4.16",
-    "proj-deluge": "= 1.0.9",
+    "proj-deluge": "= 1.0.10",
     "proj-drupalorg": "= 0.1.8",
     "proj-misc": "= 0.17.3",
     "proj-ros": "= 2.7.13",
