@@ -129,6 +129,12 @@ task ganeti: [:create_key] do
     "#{PROV_PATH}/ganeti.rb")
 end
 
+desc 'Ceph (ppc64)'
+task ceph_ppc64: [:create_key] do
+  run_command('chef-client --force-formatter -z ' \
+    "#{PROV_PATH}/ceph_ppc64.rb")
+end
+
 desc 'Blow everything away'
 task clean: [:destroy_all]
 

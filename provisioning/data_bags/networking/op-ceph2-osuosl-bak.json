@@ -1,0 +1,29 @@
+{
+  "id": "op-ceph2-osuosl-bak",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "10.1.0.28",
+      "attributes": {
+        "onboot": "yes",
+        "mask": "255.255.254.0",
+        "bcast": "10.1.1.255",
+        "gateway": "10.1.0.1",
+        "bootproto": "static",
+        "mtu": "9000",
+        "device": "enp1s0f1"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "enP2p1s0f0",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "onboot": "no",
+        "device": "enP2p1s0f0",
+        "action": "disable"
+      }
+    }
+  ]
+}
