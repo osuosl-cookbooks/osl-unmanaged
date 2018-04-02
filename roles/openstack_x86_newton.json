@@ -39,6 +39,8 @@
       }
     },
     "osl-openstack": {
+      "ceph": true,
+      "ceph_item": "openstack_x86",
       "database_suffix": "x86",
       "databag_prefix": "x86_mitaka",
       "endpoint_hostname": "oprod-controller1.osuosl.org",
