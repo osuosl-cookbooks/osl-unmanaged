@@ -85,7 +85,9 @@
           "default": "eth1"
         },
         "compute": {
-          "default": "enp4s0f0"
+          "default": "enp4s0f0",
+          "oprod3.osuosl.bak": "enp4s0f0",
+          "oprod4.osuosl.bak": "enp4s0f0"
         }
       },
       "physical_interface_mappings": [
@@ -97,7 +99,9 @@
             "default": "eth2"
           },
           "compute": {
-            "default": "enp4s0f1.108"
+            "default": "ens802f1.108",
+            "oprod3.osuosl.bak": "enp4s0f1.108",
+            "oprod4.osuosl.bak": "enp4s0f1.108"
           }
         },
         {
@@ -108,7 +112,9 @@
             "default": "eth3"
           },
           "compute": {
-            "default": "enp4s0f1.42"
+            "default": "ens802f1.42",
+            "oprod3.osuosl.bak": "enp4s0f1.42",
+            "oprod4.osuosl.bak": "enp4s0f1.42"
           }
         }
       ]
