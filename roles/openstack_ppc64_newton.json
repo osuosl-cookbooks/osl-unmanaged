@@ -5,6 +5,31 @@
   ],
   "chef_type": "role",
   "override_attributes": {
+    "ceph": {
+      "admin": {
+        "tag": "ceph-admin-ppc64"
+      },
+      "mon": {
+        "role": "ceph_mon_ppc64",
+        "tag": "ceph-mon-ppc64"
+      },
+      "osd": {
+        "role": "ceph_osd_ppc64",
+        "tag": "ceph-osd-ppc64"
+      },
+      "network": {
+        "public": {
+          "cidr": [
+            "10.1.0.0/23"
+          ]
+        },
+        "cluster": {
+          "cidr": [
+            "10.1.0.0/23"
+          ]
+        }
+      }
+    },
     "openstack": {
       "mq": {
         "user": "admin"
@@ -47,6 +72,8 @@
       }
     },
     "osl-openstack": {
+      "ceph": true,
+      "ceph_item": "openstack_ppc64",
       "database_suffix": "ppc64",
       "databag_prefix": "ppc64_mitaka",
       "endpoint_hostname": "openpower-controller.osuosl.org",
