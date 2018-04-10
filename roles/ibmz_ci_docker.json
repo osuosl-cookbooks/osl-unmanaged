@@ -1,6 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "recipe[firewall::osl_only]",
     "recipe[osl-docker::ibmz_ci]"
   ],
   "chef_type": "role",
