@@ -54,7 +54,7 @@
     "openstack-orchestration": "= 14.0.0",
     "openstack-telemetry": "= 14.0.1",
     "openstackclient": "= 0.1.1",
-    "osl-apache": "= 2.11.0",
+    "osl-apache": "= 2.11.1",
     "osl-munin": "= 1.0.7",
     "osl-nrpe": "= 2.1.11",
     "osl-openstack": "= 3.2.0",
