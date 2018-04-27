@@ -85,9 +85,11 @@
           "default": "eth1"
         },
         "compute": {
-          "default": "enp4s0f0",
+          "default": "ens802f0",
           "oprod3.osuosl.bak": "enp4s0f0",
-          "oprod4.osuosl.bak": "enp4s0f0"
+          "oprod4.osuosl.bak": "enp4s0f0",
+          "oprod7.osuosl.bak": "ens802f0.42",
+          "oprod8.osuosl.bak": "ens802f0.42"
         }
       },
       "physical_interface_mappings": [
