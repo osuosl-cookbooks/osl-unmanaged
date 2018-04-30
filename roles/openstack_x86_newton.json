@@ -89,8 +89,7 @@
         "compute": {
           "default": "ens802f0.42",
           "oprod3.osuosl.bak": "enp4s0f0",
-          "oprod4.osuosl.bak": "enp4s0f0",
-          "oprod6.osuosl.bak": "ens802f0"
+          "oprod4.osuosl.bak": "enp4s0f0"
         }
       },
       "physical_interface_mappings": [
