@@ -87,9 +87,7 @@
           "default": "eth1"
         },
         "compute": {
-          "default": "ens802f0.42",
-          "oprod3.osuosl.bak": "enp4s0f0",
-          "oprod4.osuosl.bak": "enp4s0f0"
+          "default": "ens802f0.42"
         }
       },
       "physical_interface_mappings": [
@@ -101,9 +99,25 @@
             "default": "eth2"
           },
           "compute": {
-            "default": "ens802f1.108",
-            "oprod3.osuosl.bak": "enp4s0f1.108",
-            "oprod4.osuosl.bak": "enp4s0f1.108"
+            "default": "ens802f1.108"
+          }
+        },
+        {
+          "name": "public1",
+          "controller": {
+            "default": "eth5"
+          },
+          "compute": {
+            "default": "ens802f1.106"
+          }
+        },
+        {
+          "name": "public2",
+          "controller": {
+            "default": "eth6"
+          },
+          "compute": {
+            "default": "ens802f1.121"
           }
         },
         {
@@ -114,9 +128,7 @@
             "default": "eth3"
           },
           "compute": {
-            "default": "ens802f1.42",
-            "oprod3.osuosl.bak": "enp4s0f1.42",
-            "oprod4.osuosl.bak": "enp4s0f1.42"
+            "default": "ens802f1.42"
           }
         }
       ]
