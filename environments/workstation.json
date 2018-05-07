@@ -54,10 +54,12 @@
         "httpie",
         "pymesync",
         "python-glanceclient",
-        "python-keystoneclient",
         "python-novaclient",
-        "python-openstackclient",
         "setuptools"
+      ],
+      "python3_packages": [
+        "python-keystoneclient",
+        "python-openstackclient"
       ],
       "packages_stretch": [
         "hexchat"
