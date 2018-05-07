@@ -24,7 +24,7 @@
     "resolver": "= 2.0.1",
     "sudo": "= 2.9.0",
     "systemd": "= 2.0.0",
-    "workstation": "= 3.12.7",
+    "workstation": "= 3.12.8",
     "virtualbox": "= 1.0.2",
     "yum-ius": "= 0.4.5"
   },
@@ -54,10 +54,12 @@
         "httpie",
         "pymesync",
         "python-glanceclient",
-        "python-keystoneclient",
         "python-novaclient",
-        "python-openstackclient",
         "setuptools"
+      ],
+      "python3_packages": [
+        "python-keystoneclient",
+        "python-openstackclient"
       ],
       "packages_stretch": [
         "hexchat"
