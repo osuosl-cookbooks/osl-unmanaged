@@ -92,18 +92,9 @@
       },
       "physical_interface_mappings": [
         {
-          "name": "public",
-          "subnet": "140.211.168.0/24",
-          "uuid": "f482a425-2008-44cc-9697-370c9ec06eb6",
-          "controller": {
-            "default": "eth2"
-          },
-          "compute": {
-            "default": "ens802f1.108"
-          }
-        },
-        {
           "name": "public1",
+          "subnet": "140.211.167.0/27",
+          "uuid": "9f939457-9820-4b1d-a519-bc87e9b59b3e",
           "controller": {
             "default": "eth5"
           },
@@ -113,6 +104,8 @@
         },
         {
           "name": "public2",
+          "subnet": "140.211.166.224/27",
+          "uuid": "8dcba61e-5ef8-4e79-953a-ea67a66f32e6",
           "controller": {
             "default": "eth6"
           },
