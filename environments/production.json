@@ -24,7 +24,7 @@
     "daemontools": "= 1.2.0",
     "database": "= 4.0.6",
     "dhcp": "= 5.4.0",
-    "dobc": "= 1.0.1",
+    "dobc": "= 1.0.2",
     "docker": "= 2.15.29",
     "erlang": "= 1.5.4",
     "firewall": "= 4.7.5",
