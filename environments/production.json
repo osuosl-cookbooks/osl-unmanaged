@@ -75,7 +75,7 @@
     "osl-ceph": "= 1.1.2",
     "osl-dhcp": "= 0.4.1",
     "osl-dns": "= 1.1.13",
-    "osl-docker": "= 1.7.4",
+    "osl-docker": "= 1.7.5",
     "osl-drupal": "= 0.2.2",
     "osl-ganeti": "= 1.10.5",
     "osl-gitlab": "= 0.2.1",
