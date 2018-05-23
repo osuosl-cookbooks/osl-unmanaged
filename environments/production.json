@@ -112,7 +112,7 @@
     "proj-deluge": "= 1.0.12",
     "proj-drupalorg": "= 0.1.8",
     "proj-misc": "= 0.19.14",
-    "proj-ros": "= 2.7.13",
+    "proj-ros": "= 2.8.0",
     "proj-webdav": "= 1.0.3",
     "python": "= 1.4.6",
     "python-webapp": "= 0.1.2",
