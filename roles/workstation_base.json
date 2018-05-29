@@ -76,7 +76,6 @@
     "recipe[workstation::cron_apt]",
     "recipe[workstation::repos]",
     "recipe[base::sysctl]",
-    "recipe[python]",
     "recipe[resolver::default]",
     "recipe[workstation]",
     "recipe[workstation::blacklist]",
