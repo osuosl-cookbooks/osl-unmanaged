@@ -26,8 +26,8 @@ suites:
       client_rb:
         environment: workstation
     excludes:
-      - centos-6.8
-      - centos-7.3
+      - centos-6
+      - centos-7
   - name: workstation_base
     run_list:
       - role[workstation_base]
@@ -35,11 +35,11 @@ suites:
       client_rb:
         environment: workstation
     excludes:
-      - centos-6.8
-      - centos-7.3
+      - centos-6
+      - centos-7
   - name: web2
     run_list:
       - role[web2]
     excludes:
-      - centos-6.8
+      - centos-6
       - debian-8
