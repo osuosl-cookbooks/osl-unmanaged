@@ -1,10 +1,16 @@
 ---
+driver:
+  flavor_ref: 'm1.large'
+
+driver_config:
+  user_data: userdata.txt
+
 provisioner:
   name: chef_zero
   encrypted_data_bag_secret_key_path: <%= "#{ENV['HOME']}/.chef/encrypted_data_bag_secret" %>
   environments_path: environments
   client_rb:
-    environment: production
+    environment: <%= ENV['CHEF_ENVIRONMENT'] || 'production' %>
 
 suites:
   - name: base
@@ -20,8 +26,8 @@ suites:
       client_rb:
         environment: workstation
     excludes:
-      - centos-6.8
-      - centos-7.3
+      - centos-6
+      - centos-7
   - name: workstation_base
     run_list:
       - role[workstation_base]
@@ -29,11 +35,11 @@ suites:
       client_rb:
         environment: workstation
     excludes:
-      - centos-6.8
-      - centos-7.3
+      - centos-6
+      - centos-7
   - name: web2
     run_list:
       - role[web2]
     excludes:
-      - centos-6.8
+      - centos-6
       - debian-8
