@@ -20,7 +20,7 @@
     "database": "= 6.1.1",
     "dpkg_autostart": "= 0.2.0",
     "erlang": "= 5.1.0",
-    "firewall": "= 4.8.0",
+    "firewall": "= 4.8.1",
     "git": "= 9.0.0",
     "homebrew": "= 5.0.4",
     "hostsfile": "= 3.0.1",
