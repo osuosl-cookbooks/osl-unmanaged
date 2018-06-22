@@ -62,9 +62,14 @@
         "python-openstackclient"
       ],
       "packages_stretch": [
+        "default-libmysqlclient-dev",
+        "golang-1.7",
         "hexchat"
       ],
       "packages_jessie": [
+        "cone",
+        "golang-1.6",
+        "libmysqlclient-dev",
         "opera",
         "spotify-client",
         "xchat"
@@ -121,7 +126,6 @@
         "gnumeric",
         "gnutls-bin",
         "golang",
-        "golang-1.6",
         "google-chrome-stable",
         "graphviz",
         "hdparm",
@@ -149,7 +153,6 @@
         "libghc-xmonad-contrib-dev",
         "libgnome-keyring-dev",
         "libltdl-dev",
-        "libmysqlclient-dev",
         "libncurses5-dev",
         "libpam-cracklib",
         "libreoffice",
