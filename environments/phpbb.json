@@ -27,7 +27,7 @@
     "omnibus_updater": "= 3.0.2",
     "osl-acme": "= 1.1.0",
     "osl-apache": "= 2.11.6",
-    "osl-haproxy": "= 2.10.11",
+    "osl-haproxy": "= 2.10.12",
     "osl-nagios": "= 2.8.0",
     "osl-php": "= 2.0.1",
     "osl-syslog": "= 1.1.0",
