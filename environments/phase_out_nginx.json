@@ -48,7 +48,7 @@
     "yum-epel": "= 0.6.6",
     "yum-repoforge": "= 2.0.1",
     "yum-fedora": "= 0.3.4",
-    "yum-kernel-osuosl": "= 1.0.0",
+    "yum-kernel-osuosl": "= 1.1.0",
     "zypper": "= 0.4.0"
   },
   "json_class": "Chef::Environment",
