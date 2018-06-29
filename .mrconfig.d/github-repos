@@ -133,11 +133,17 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-gitlab.git
 [osuosl-cookbooks/osl-haproxy]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-haproxy.git
 
+[osuosl-cookbooks/osl-imap]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-imap.git
+
 [osuosl-cookbooks/osl-jenkins]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-jenkins.git
 
 [osuosl-cookbooks/osl-keepalived]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-keepalived.git
+
+[osuosl-cookbooks/osl-mailrelay]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-mailrelay.git
 
 [osuosl-cookbooks/osl-mirror]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-mirror.git
