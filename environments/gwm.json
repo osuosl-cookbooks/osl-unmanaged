@@ -93,7 +93,7 @@
     "poise-languages": "= 2.0.3",
     "poise-python": "= 1.5.1",
     "poise-service": "= 1.4.2",
-    "postfix": "= 3.6.0",
+    "postfix": "= 3.6.2",
     "postgresql": "= 3.4.16",
     "proj-deluge": "= 1.0.12",
     "proj-drupalorg": "= 0.1.8",
