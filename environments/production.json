@@ -81,7 +81,7 @@
     "osl-ganeti": "= 1.10.7",
     "osl-gitlab": "= 0.2.1",
     "osl-haproxy": "= 2.10.16",
-    "osl-jenkins": "= 1.10.12",
+    "osl-jenkins": "= 1.10.13",
     "osl-memcached": "= 1.2.0",
     "osl-mirror": "= 0.7.1",
     "osl-munin": "= 1.0.8",
