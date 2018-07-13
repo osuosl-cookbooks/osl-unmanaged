@@ -74,7 +74,7 @@
     "osl-mirror": "= 0.7.3",
     "osl-mysql": "= 1.0.7",
     "osl-nagios": "= 2.8.0",
-    "osl-netboot": "= 1.3.12",
+    "osl-netboot": "= 1.3.13",
     "osl-nodejs": "= 0.1.7",
     "osl-nrpe": "= 3.0.0",
     "osl-php": "= 0.2.1",
