@@ -30,7 +30,7 @@
     "osl-haproxy": "= 2.10.18",
     "osl-nagios": "= 2.8.0",
     "osl-php": "= 2.0.1",
-    "osl-syslog": "= 1.1.0",
+    "osl-syslog": "= 2.0.0",
     "php": "= 4.5.0",
     "postfix": "= 5.3.0",
     "rsyslog": "= 4.0.0",
