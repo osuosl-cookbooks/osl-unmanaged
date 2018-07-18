@@ -57,7 +57,7 @@
     "openstack-telemetry": "= 14.0.1",
     "openstackclient": "= 0.1.1",
     "osl-apache": "= 2.11.6",
-    "osl-munin": "= 1.0.8",
+    "osl-munin": "= 2.0.0",
     "osl-nrpe": "= 3.0.0",
     "osl-openstack": "= 3.2.13",
     "osl-rsync": "= 0.3.0",
