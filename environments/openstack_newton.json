@@ -76,7 +76,7 @@
     "resource_from_hash": "= 0.1.5",
     "rhsm": "= 1.0.1",
     "rsync": "= 1.0.2",
-    "rsyslog": "= 4.0.0",
+    "rsyslog": "= 6.0.5",
     "runit": "= 3.0.5",
     "selinux": "= 2.1.0",
     "seven_zip": "= 2.0.2",
