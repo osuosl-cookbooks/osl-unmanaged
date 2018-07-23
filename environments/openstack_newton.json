@@ -89,7 +89,7 @@
     "xinetd": "= 1.0.2",
     "yum": "= 3.13.0",
     "yum-centos": "= 2.3.0",
-    "yum-cron": "= 0.1.1",
+    "yum-cron": "= 1.0.0",
     "yum-epel": "= 2.1.2",
     "yum-erlang_solutions": "= 1.0.3",
     "yum-kernel-osuosl": "= 1.1.0",
