@@ -48,7 +48,7 @@
     "yum-kernel-osuosl": "= 1.1.0",
     "yum-repoforge": "= 2.0.1",
     "proj-phpbb": "= 3.5.5",
-    "rdiff-backup": "= 2.0.10"
+    "rdiff-backup": "= 2.0.11"
   },
   "default_attributes": {
     "nagios": {
