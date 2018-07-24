@@ -115,7 +115,7 @@
     "proj-drupalorg": "= 0.1.8",
     "proj-misc": "= 0.19.32",
     "proj-ros": "= 2.8.0",
-    "proj-webdav": "= 1.0.3",
+    "proj-webdav": "= 1.0.4",
     "python": "= 1.4.6",
     "python-webapp": "= 0.1.2",
     "rabbitmq": "= 5.2.0",
