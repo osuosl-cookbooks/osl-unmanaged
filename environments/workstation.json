@@ -2,7 +2,7 @@
   "name": "workstation",
   "description": "workstation environment",
   "cookbook_versions": {
-    "acme": "= 3.0.0",
+    "acme": "= 4.0.0",
     "apt": "= 2.9.2",
     "apt-docker": "= 0.3.0",
     "base": "= 3.0.4",
@@ -16,7 +16,7 @@
     "nodejs": "= 3.0.0",
     "ntp": "= 1.6.2",
     "openssh": "= 1.4.0",
-    "osl-acme": "= 1.1.0",
+    "osl-acme": "= 2.0.0",
     "osl-docker": "= 2.0.0",
     "poise": "= 2.8.1",
     "poise-languages": "= 2.1.2",

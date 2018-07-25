@@ -2,7 +2,7 @@
   "name": "gwm",
   "description": "The Ganeti Web Manager environment",
   "cookbook_versions": {
-    "acme": "= 3.0.0",
+    "acme": "= 4.0.0",
     "aliases": "= 0.1.2",
     "apache2": "= 3.3.1",
     "apt": "= 2.9.2",
@@ -61,7 +61,7 @@
     "openssh": "= 1.4.0",
     "openssl": "= 1.1.0",
     "openvpn": "= 3.0.0",
-    "osl-acme": "= 1.1.0",
+    "osl-acme": "= 2.0.0",
     "osl-apache": "= 2.11.6",
     "osl-app": "= 1.11.15",
     "osl-backup": "= 0.5.8",

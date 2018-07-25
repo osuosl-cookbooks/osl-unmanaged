@@ -4,7 +4,7 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "cookbook_versions": {
-    "acme": "= 3.0.0",
+    "acme": "= 4.0.0",
     "aliases": "= 0.1.2",
     "apache2": "= 3.3.1",
     "apt": "= 2.9.2",
@@ -25,7 +25,7 @@
     "nodejs": "= 2.4.0",
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
-    "osl-acme": "= 1.1.0",
+    "osl-acme": "= 2.0.0",
     "osl-apache": "= 2.11.6",
     "osl-haproxy": "= 2.10.18",
     "osl-nagios": "= 2.8.0",

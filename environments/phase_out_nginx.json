@@ -2,7 +2,7 @@
   "name": "phase_out_nginx",
   "description": "This environment is for phasing out the nginx cookbook",
   "cookbook_versions": {
-    "acme": "= 3.0.0",
+    "acme": "= 4.0.0",
     "aliases": "= 0.1.2",
     "apt": "= 2.9.2",
     "base": "= 3.0.4",
@@ -21,7 +21,7 @@
     "ohai": "= 5.2.0",
     "omnibus_updater": "= 3.0.2",
     "openssh": "= 1.4.0",
-    "osl-acme": "= 1.1.0",
+    "osl-acme": "= 2.0.0",
     "osl-munin": "= 2.0.0",
     "osl-nagios": "= 2.8.0",
     "osl-nginx": "= 2.1.2",
