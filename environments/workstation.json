@@ -2,7 +2,7 @@
   "name": "workstation",
   "description": "workstation environment",
   "cookbook_versions": {
-    "acme": "= 3.0.0",
+    "acme": "= 4.0.0",
     "apt": "= 2.9.2",
     "apt-docker": "= 0.3.0",
     "base": "= 3.0.4",
