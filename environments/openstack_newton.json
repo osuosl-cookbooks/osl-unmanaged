@@ -59,7 +59,7 @@
     "osl-apache": "= 2.11.6",
     "osl-munin": "= 2.0.0",
     "osl-nrpe": "= 3.0.0",
-    "osl-openstack": "= 3.2.13",
+    "osl-openstack": "= 3.2.14",
     "osl-rsync": "= 0.3.0",
     "osl-syslog": "= 2.0.1",
     "packagecloud": "= 0.3.0",
