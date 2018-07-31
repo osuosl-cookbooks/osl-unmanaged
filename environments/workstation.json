@@ -18,6 +18,7 @@
     "openssh": "= 1.4.0",
     "osl-acme": "= 2.0.0",
     "osl-docker": "= 2.0.0",
+    "osl-postfix": "= 1.0.0",
     "poise": "= 2.8.1",
     "poise-languages": "= 2.1.2",
     "poise-python": "= 1.7.0",
