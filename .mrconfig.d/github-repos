@@ -76,6 +76,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/glusterfs.git
 [osuosl-cookbooks/haskell-platform]
 checkout = git clone git@github.com:osuosl-cookbooks/haskell-platform.git
 
+[osuosl-cookbooks/ibm-power]
+checkout = git clone git@github.com:osuosl-cookbooks/ibm-power.git
+
 [osuosl-cookbooks/maintain-dns]
 checkout = git clone git@github.com:osuosl-cookbooks/maintain-dns.git
 
@@ -141,6 +144,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-jenkins.git
 
 [osuosl-cookbooks/osl-keepalived]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-keepalived.git
+
+[osuosl-cookbooks/osl-letsencrypt-boulder-server]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-letsencrypt-boulder-server.git
 
 [osuosl-cookbooks/osl-mailrelay]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-mailrelay.git
@@ -220,6 +226,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/proj-phpbb.git
 [osuosl-cookbooks/proj-ros]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-ros.git
 
+[osuosl-cookbooks/proj-webdav]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-webdav.git
+
 [osuosl-cookbooks/python-webapp]
 checkout = git clone git@github.com:osuosl-cookbooks/python-webapp.git
 
@@ -261,6 +270,12 @@ checkout = git clone git@github.com:osuosl-cookbooks/workstation.git
 
 [osuosl-cookbooks/yum-cron]
 checkout = git clone git@github.com:osuosl-cookbooks/yum-cron.git
+
+[osuosl-cookbooks/yum-kernel-osuosl]
+checkout = git clone git@github.com:osuosl-cookbooks/yum-kernel-osuosl.git
+
+[osuosl-cookbooks/yum-qemu-ev]
+checkout = git clone git@github.com:osuosl-cookbooks/yum-qemu-ev.git
 
 [osuosl-cookbooks/yum-osuosl]
 checkout = git clone git@github.com:osuosl-cookbooks/yum-osuosl.git
