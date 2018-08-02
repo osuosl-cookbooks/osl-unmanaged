@@ -1,8 +1,6 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[ucarp::data_bag]",
-    "recipe[ucarp::remove]",
     "recipe[osl-keepalived::mysql2]"
   ],
   "chef_type": "role",
