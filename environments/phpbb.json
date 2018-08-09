@@ -32,7 +32,7 @@
     "osl-nagios": "= 2.8.0",
     "osl-php": "= 3.0.0",
     "osl-postfix": "= 1.0.0",
-    "osl-syslog": "= 2.0.1",
+    "osl-syslog": "= 2.1.0",
     "php": "= 4.5.0",
     "postfix": "= 5.3.0",
     "rsyslog": "= 6.0.5",
