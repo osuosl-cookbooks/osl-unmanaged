@@ -1,0 +1,27 @@
+{
+  "name": "project_lf",
+  "description": "Role for Linux Foundation servers",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },  
+  "override_attributes": {
+    "rdiff-backup": {
+      "client": {
+        "jobs": {
+          "default": {
+            "destination-dir": "/data/rdiff-backup-lf"
+          }   
+        }   
+      }   
+    }   
+  },  
+  "chef_type": "role",
+  "run_list": [
+
+  ],  
+  "env_run_lists": {
+
+  }
+}
+
