@@ -29,7 +29,7 @@
     "osl-apache": "= 3.0.0",
     "osl-haproxy": "= 2.10.19",
     "osl-keepalived": "= 0.2.2",
-    "osl-nagios": "= 2.8.0",
+    "osl-nagios": "= 2.9.0",
     "osl-php": "= 3.0.0",
     "osl-postfix": "= 1.0.0",
     "osl-syslog": "= 2.1.1",
