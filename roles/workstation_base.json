@@ -79,7 +79,6 @@
     "recipe[resolver::default]",
     "recipe[workstation]",
     "recipe[workstation::blacklist]",
-    "recipe[workstation::timezone]",
     "recipe[workstation::packages]",
     "recipe[workstation::xrandr]",
     "recipe[workstation::dsh]",
