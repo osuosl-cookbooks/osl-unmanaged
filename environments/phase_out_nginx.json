@@ -5,9 +5,9 @@
     "acme": "= 4.0.0",
     "aliases": "= 0.1.2",
     "apt": "= 2.9.2",
-    "base": "= 3.0.6",
+    "base": "= 3.0.7",
     "build-essential": "= 8.1.1",
-    "chef-client": "= 4.3.1",
+    "chef-client": "= 10.1.2",
     "chef_nginx": "= 6.2.0",
     "compat_resource": "= 12.19.0",
     "firewall": "= 5.0.1",
@@ -75,18 +75,6 @@
       "disabled_plugins": [
         ":Sessions"
       ]
-    },
-    "chef_client": {
-      "init_style": "none",
-      "config": {
-        "chef_server_url": "https://chef.osuosl.org/organizations/osuosl"
-      },
-      "cron": {
-        "minute": "*/30",
-        "hour": "*",
-        "use_cron_d": true,
-        "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock "
-      }
     }
   },
   "override_attributes": {
