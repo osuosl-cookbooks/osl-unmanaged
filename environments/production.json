@@ -56,7 +56,7 @@
     "munin": "= 1.4.3",
     "mysql2_chef_gem": "= 1.0.1",
     "mysql": "= 8.5.1",
-    "nagios": "= 7.2.7",
+    "nagios": "= 8.1.0",
     "newrelic": "= 2.18.0",
     "nfs": "= 2.4.1",
     "nodejs": "= 3.0.0",
