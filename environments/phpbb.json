@@ -12,7 +12,7 @@
     "chef-client": "= 10.0.5",
     "chef-sugar": "= 4.0.0",
     "compat_resource": "= 12.19.0",
-    "build-essential": "= 2.4.0",
+    "build-essential": "= 8.1.1",
     "docker": "= 2.15.29",
     "git": "= 4.0.2",
     "golang": "= 1.7.0",
@@ -21,7 +21,7 @@
     "mariadb": "= 0.3.1",
     "memcached": "= 3.0.0",
     "mysql": "= 6.1.2",
-    "nagios": "= 7.2.7",
+    "nagios": "= 8.1.0",
     "nodejs": "= 2.4.0",
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
@@ -29,7 +29,7 @@
     "osl-apache": "= 3.0.0",
     "osl-haproxy": "= 2.10.19",
     "osl-keepalived": "= 0.2.2",
-    "osl-nagios": "= 2.8.0",
+    "osl-nagios": "= 2.9.0",
     "osl-php": "= 3.0.0",
     "osl-postfix": "= 1.0.0",
     "osl-syslog": "= 2.1.1",
@@ -49,8 +49,8 @@
     "yum-ius": "= 3.0.0",
     "yum-kernel-osuosl": "= 2.0.0",
     "yum-repoforge": "= 2.0.1",
-    "proj-phpbb": "= 3.5.7",
-    "rdiff-backup": "= 2.0.11"
+    "proj-phpbb": "= 3.5.8",
+    "rdiff-backup": "= 2.0.12"
   },
   "default_attributes": {
     "nagios": {
