@@ -13,7 +13,7 @@
     "recipe[base::ifconfig]",
     "recipe[base::issue]",
     "recipe[base::security]",
-    "recipe[base::selinux]",
+    "recipe[osl-selinux]",
     "recipe[base::tuned]",
     "recipe[base::users]",
     "recipe[base::gitlfs]",
