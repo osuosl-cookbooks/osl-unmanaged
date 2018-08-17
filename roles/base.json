@@ -4,7 +4,6 @@
     "recipe[base]",
     "recipe[base::mailhandler]",
     "recipe[base::rhsm]",
-    "recipe[aliases]",
     "recipe[base::packages]",
     "recipe[base::denyhosts]",
     "recipe[base::environment]",
