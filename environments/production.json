@@ -3,7 +3,6 @@
   "description": "The production environment",
   "cookbook_versions": {
     "acme": "= 4.0.0",
-    "aliases": "= 0.1.2",
     "apache2": "= 4.0.0",
     "apt": "= 2.9.2",
     "aws": "= 2.1.1",
