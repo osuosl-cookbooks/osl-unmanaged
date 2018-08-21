@@ -69,7 +69,7 @@
     "osl-gitlab": "= 0.2.1",
     "osl-haproxy": "= 2.10.19",
     "osl-jenkins": "= 1.10.17",
-    "osl-mirror": "= 0.7.4",
+    "osl-mirror": "= 0.7.5",
     "osl-mysql": "= 1.0.7",
     "osl-netboot": "= 1.3.13",
     "osl-nodejs": "= 0.1.7",
