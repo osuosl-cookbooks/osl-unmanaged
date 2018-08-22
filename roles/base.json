@@ -2,6 +2,7 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[base]",
+    "recipe[osl-postfix]",
     "recipe[base::mailhandler]",
     "recipe[base::rhsm]",
     "recipe[base::packages]",
