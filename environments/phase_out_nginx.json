@@ -36,7 +36,7 @@
     "postgresql": "= 3.4.24",
     "proj-misc": "= 0.22.1",
     "python": "= 1.4.6",
-    "rdiff-backup": "= 2.0.12",
+    "rdiff-backup": "= 3.0.0",
     "rsyslog": "= 6.0.5",
     "selinux": "= 2.1.1",
     "selinux_policy": "= 2.0.1",
