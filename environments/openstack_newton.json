@@ -60,7 +60,7 @@
     "osl-nrpe": "= 3.0.2",
     "osl-openstack": "= 3.2.14",
     "osl-postfix": "= 1.0.0",
-    "osl-rsync": "= 0.3.0",
+    "osl-rsync": "= 1.0.0",
     "osl-selinux": "= 1.0.1",
     "osl-syslog": "= 2.1.1",
     "packagecloud": "= 0.3.0",
