@@ -23,14 +23,8 @@
       }
     },
     "postfix": {
-      "mail_type": "client",
       "main": {
-        "mydomain": "osuosl.org",
-        "myorigin": "osuosl.org",
-        "relayhost": "[smtp.osuosl.org]:587",
-        "smtp_tls_CAfile": "/etc/ssl/certs/ca-certificates.crt",
-        "smtpd_use_tls": "no",
-        "smtp_use_tls": "yes"
+        "mydomain": "osuosl.org"
       }
     },
     "resolver": {
@@ -56,7 +50,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[base]",
-    "recipe[postfix::default]",
+    "recipe[osl-postfix]",
     "recipe[workstation::cron_apt]",
     "recipe[workstation::repos]",
     "recipe[resolver::default]",
