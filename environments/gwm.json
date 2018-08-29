@@ -77,7 +77,7 @@
     "osl-php": "= 0.2.1",
     "osl-postfix": "= 1.0.0",
     "osl-postgresql": "= 0.4.4",
-    "osl-rsync": "= 1.0.0",
+    "osl-rsync": "= 1.0.1",
     "osl-selinux": "= 1.0.1",
     "osl-slapd": "= 0.1.5",
     "osl-sudo": "= 0.1.0",
