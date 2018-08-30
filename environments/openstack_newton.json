@@ -2,15 +2,14 @@
   "name": "openstack_newton",
   "description": "Openstack Newton Environment",
   "cookbook_versions": {
-    "aliases": "= 0.1.2",
     "apache2": "= 3.3.1",
     "apt": "= 5.1.0",
-    "base": "= 3.0.6",
+    "base": "= 3.0.10",
     "bluepill": "= 4.0.2",
     "build-essential": "= 8.1.1",
     "ceph": "= 0.9.2",
     "certificate": "= 1.0.0",
-    "chef-client": "= 10.0.5",
+    "chef-client": "= 10.1.2",
     "chef-sugar": "= 4.0.0",
     "chef-vault": "= 3.0.0",
     "chef_handler": "= 2.1.2",
@@ -55,13 +54,14 @@
     "openstack-ops-messaging": "= 14.0.0",
     "openstack-orchestration": "= 14.0.0",
     "openstack-telemetry": "= 14.0.1",
-    "openstackclient": "= 0.1.1",
+    "openstackclient": "= 17.0.1",
     "osl-apache": "= 2.11.6",
     "osl-munin": "= 2.0.0",
     "osl-nrpe": "= 3.0.2",
-    "osl-openstack": "= 3.2.14",
+    "osl-openstack": "= 3.2.15",
     "osl-postfix": "= 1.0.0",
-    "osl-rsync": "= 0.3.0",
+    "osl-rsync": "= 1.0.1",
+    "osl-selinux": "= 1.0.1",
     "osl-syslog": "= 2.1.1",
     "packagecloud": "= 0.3.0",
     "percona": "= 0.16.1",
@@ -74,12 +74,12 @@
     "python": "= 1.4.6",
     "rabbitmq": "= 4.12.1",
     "resolver": "= 2.0.1",
-    "resource_from_hash": "= 0.1.5",
+    "resource_from_hash": "= 1.0.0",
     "rhsm": "= 1.0.1",
     "rsync": "= 1.0.2",
     "rsyslog": "= 6.0.5",
     "runit": "= 3.0.5",
-    "selinux": "= 2.1.0",
+    "selinux": "= 2.1.1",
     "seven_zip": "= 2.0.2",
     "statsd": "= 0.1.6",
     "sudo": "= 2.9.0",
@@ -105,19 +105,6 @@
       "disabled_plugins": [
         ":Sessions"
       ]
-    },
-    "chef_client": {
-      "init_style": "none",
-      "cron": {
-        "minute": "*/30",
-        "hour": "*",
-        "use_cron_d": true,
-        "environment_variables": "/usr/bin/flock -n /tmp/chef-client.lock "
-      },
-      "config": {
-        "ssl_verify_mode": ":verify_peer",
-        "chef_server_url": "https://chef.osuosl.org/organizations/osuosl"
-      }
     },
     "nagios": {
       "allowed_hosts": [

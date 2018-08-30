@@ -5,7 +5,7 @@
     "recipe[base::ifconfig]",
     "recipe[base::issue]",
     "recipe[base::security]",
-    "recipe[base::selinux]",
+    "recipe[osl-selinux]",
     "recipe[base::sysctl]",
     "recipe[firewall]"
   ],

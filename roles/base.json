@@ -2,15 +2,12 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[base]",
+    "recipe[osl-postfix]",
     "recipe[base::mailhandler]",
     "recipe[base::rhsm]",
-    "recipe[aliases]",
     "recipe[base::packages]",
     "recipe[base::denyhosts]",
     "recipe[base::environment]",
-    "recipe[chef-client::config]",
-    "recipe[chef-client::cron]",
-    "recipe[chef-client::delete_validation]",
     "recipe[osl-munin::client]"
   ],
   "env_run_lists": {

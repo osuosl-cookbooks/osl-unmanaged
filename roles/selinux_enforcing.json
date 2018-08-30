@@ -1,0 +1,14 @@
+{
+  "env_run_lists": {},
+  "run_list": [],
+  "chef_type": "role",
+  "override_attributes": {
+    "osl-selinux": {
+      "enforcing": true
+    }
+  },
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Enable SELinux enforcing",
+  "name": "selinux_enforcing"
+}

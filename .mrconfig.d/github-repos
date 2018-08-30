@@ -1,6 +1,3 @@
-[osuosl-cookbooks/aliases]
-checkout = git clone git@github.com:osuosl-cookbooks/aliases.git
-
 [osuosl-cookbooks/apache2]
 checkout = git clone git@github.com:osuosl-cookbooks/apache2.git
 
@@ -190,6 +187,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-postgresql.git
 [osuosl-cookbooks/osl-rsync]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-rsync.git
 
+[osuosl-cookbooks/osl-selinux]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-selinux.git
+
 [osuosl-cookbooks/osl-slapd]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-slapd.git
 
@@ -216,6 +216,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/proj-deluge.git
 
 [osuosl-cookbooks/proj-drupalorg]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-drupalorg.git
+
+[osuosl-cookbooks/proj-lf]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-lf.git
 
 [osuosl-cookbooks/proj-misc]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-misc.git
