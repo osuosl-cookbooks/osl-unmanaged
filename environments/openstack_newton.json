@@ -58,7 +58,7 @@
     "osl-apache": "= 2.11.6",
     "osl-munin": "= 2.0.0",
     "osl-nrpe": "= 3.0.2",
-    "osl-openstack": "= 3.2.14",
+    "osl-openstack": "= 3.2.15",
     "osl-postfix": "= 1.0.0",
     "osl-rsync": "= 1.0.1",
     "osl-selinux": "= 1.0.1",
