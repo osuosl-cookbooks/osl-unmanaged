@@ -79,7 +79,7 @@
     "osl-drupal": "= 0.2.2",
     "osl-ganeti": "= 2.0.1",
     "osl-gitlab": "= 0.2.1",
-    "osl-haproxy": "= 2.10.20",
+    "osl-haproxy": "= 3.0.0",
     "osl-jenkins": "= 1.10.18",
     "osl-keepalived": "= 0.2.2",
     "osl-memcached": "= 1.2.0",
