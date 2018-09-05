@@ -3,7 +3,9 @@
   "run_list": [
     "recipe[proj-phpbb::haproxy]",
     "recipe[osl-haproxy::mon]",
-    "recipe[ucarp::data_bag]"
+    "recipe[ucarp::data_bag]",
+    "recipe[ucarp::remove]",
+    "recipe[osl-keepalived::haproxy_phpbb]"
   ],
   "chef_type": "role",
   "override_attributes": {
