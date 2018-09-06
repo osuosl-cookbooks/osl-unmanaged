@@ -148,6 +148,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-letsencrypt-boulder-ser
 [osuosl-cookbooks/osl-mailrelay]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-mailrelay.git
 
+[osuosl-cookbooks/osl-memcached]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-memcached.git
+
 [osuosl-cookbooks/osl-mirror]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-mirror.git
 
