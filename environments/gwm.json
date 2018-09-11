@@ -63,7 +63,7 @@
     "osl-apache": "= 3.0.0",
     "osl-app": "= 1.11.15",
     "osl-backup": "= 0.5.9",
-    "osl-dhcp": "= 1.0.1",
+    "osl-dhcp": "= 1.0.2",
     "osl-dns": "= 1.1.14",
     "osl-drupal": "= 0.2.2",
     "osl-gitlab": "= 0.2.1",
