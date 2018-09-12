@@ -58,6 +58,7 @@
     "nagios": "= 8.1.0",
     "newrelic": "= 2.18.0",
     "nfs": "= 2.4.1",
+    "nginx": "= 8.1.5",
     "nodejs": "= 3.0.0",
     "nodejs-webapp": "= 1.0.2",
     "nrpe": "= 2.0.0",
