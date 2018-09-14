@@ -102,7 +102,7 @@
     "osl-sudo": "= 0.1.0",
     "osl-syslog": "= 2.1.1",
     "osl-varnish": "= 1.0.1",
-    "osl-vpn": "= 1.0.2",
+    "osl-vpn": "= 1.0.3",
     "packagecloud": "= 0.1.1",
     "passenger_apache2": "= 2.2.0",
     "percona": "= 0.16.1",
