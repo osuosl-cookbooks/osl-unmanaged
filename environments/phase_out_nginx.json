@@ -26,7 +26,7 @@
     "osl-nagios": "= 2.9.2",
     "osl-nginx": "= 3.0.0",
     "osl-nodejs": "= 0.1.7",
-    "osl-nrpe": "= 3.0.3",
+    "osl-nrpe": "= 3.0.4",
     "osl-postfix": "= 1.0.0",
     "osl-selinux": "= 1.0.1",
     "osl-syslog": "= 2.1.1",
