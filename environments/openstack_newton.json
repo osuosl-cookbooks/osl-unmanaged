@@ -57,7 +57,7 @@
     "openstackclient": "= 17.0.1",
     "osl-apache": "= 2.11.6",
     "osl-munin": "= 2.0.0",
-    "osl-nrpe": "= 3.0.3",
+    "osl-nrpe": "= 3.0.4",
     "osl-openstack": "= 3.2.15",
     "osl-postfix": "= 1.0.0",
     "osl-rsync": "= 1.0.3",
