@@ -10,6 +10,10 @@
       "admin": {
         "tag": "ceph-admin-x86"
       },
+      "mds": {
+        "role": "ceph_mds_x86",
+        "tag": "ceph-mds-x86"
+      },
       "mon": {
         "role": "ceph_mon_x86",
         "tag": "ceph-mon-x86"
