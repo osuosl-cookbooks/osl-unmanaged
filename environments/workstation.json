@@ -58,6 +58,7 @@
       ],
       "packages_jessie": [
         "cone",
+        "enigmail",
         "golang-1.6",
         "libmysqlclient-dev",
         "opera",
@@ -93,7 +94,6 @@
         "dstat",
         "elinks",
         "emacs",
-        "enigmail",
         "evince",
         "feh",
         "firefox-esr",
