@@ -12,7 +12,7 @@
     "chef-sugar": "= 4.0.0",
     "compat_resource": "= 12.19.0",
     "build-essential": "= 8.1.1",
-    "docker": "= 2.15.29",
+    "docker": "= 4.6.5",
     "git": "= 4.0.2",
     "golang": "= 1.7.0",
     "htpasswd": "= 0.3.0",
