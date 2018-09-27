@@ -113,9 +113,7 @@
             "openpower6.osuosl.bak": "enP4p1s0.108",
             "openpower8.osuosl.bak": "enP4p1s0.108"
           }
-        }
-      ],
-      "physical_interface_mappings": [
+        },
         {
           "name": "public3",
           "controller": {
