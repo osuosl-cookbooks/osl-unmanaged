@@ -116,6 +116,8 @@
         },
         {
           "name": "public3",
+          "subnet": "140.211.169.128/26",
+          "uuid": "02b4376c-179c-412d-94c9-e56fdb2a7caf",
           "controller": {
             "default": "eth3"
           },
