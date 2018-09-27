@@ -114,6 +114,23 @@
             "openpower8.osuosl.bak": "enP4p1s0.108"
           }
         }
+      ],
+      "physical_interface_mappings": [
+        {
+          "name": "public3",
+          "controller": {
+            "default": "eth3"
+          },
+          "compute": {
+            "default": "enP3p9s0f2",
+            "openpower1.osuosl.bak": "enP4p1s0.112",
+            "openpower2.osuosl.bak": "enP4p1s0.112",
+            "openpower3.osuosl.bak": "enP4p1s0.112",
+            "openpower5.osuosl.bak": "enP4p1s0.112",
+            "openpower6.osuosl.bak": "enP4p1s0.112",
+            "openpower8.osuosl.bak": "enP4p1s0.112"
+          }
+        }
       ]
     }
    },
