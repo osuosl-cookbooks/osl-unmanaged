@@ -17,7 +17,7 @@
     "ntp": "= 1.6.2",
     "openssh": "= 1.4.0",
     "osl-acme": "= 2.0.0",
-    "osl-docker": "= 2.1.0",
+    "osl-docker": "= 2.2.0",
     "osl-postfix": "= 1.0.0",
     "poise": "= 2.8.1",
     "poise-languages": "= 2.1.2",
