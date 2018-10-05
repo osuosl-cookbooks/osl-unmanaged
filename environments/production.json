@@ -83,7 +83,7 @@
     "osl-haproxy": "= 4.0.0",
     "osl-jenkins": "= 2.0.0",
     "osl-keepalived": "= 0.2.3",
-    "osl-memcached": "= 2.0.0",
+    "osl-memcached": "= 2.0.1",
     "osl-mirror": "= 1.0.1",
     "osl-munin": "= 2.0.0",
     "osl-mysql": "= 2.0.1",
