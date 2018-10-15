@@ -50,7 +50,7 @@
     "yum-kernel-osuosl": "= 2.0.0",
     "yum-repoforge": "= 2.0.1",
     "proj-phpbb": "= 3.5.12",
-    "rdiff-backup": "= 3.0.1"
+    "rdiff-backup": "= 3.0.2"
   },
   "default_attributes": {
     "nagios": {
