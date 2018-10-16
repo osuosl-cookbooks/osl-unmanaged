@@ -97,7 +97,7 @@
     "postgresql": "= 3.4.16",
     "proj-deluge": "= 2.0.0",
     "proj-drupalorg": "= 0.1.8",
-    "proj-misc": "= 1.1.1",
+    "proj-misc": "= 1.1.2",
     "python": "= 1.4.6",
     "python-webapp": "= 0.1.2",
     "rabbitmq": "= 5.2.0",
