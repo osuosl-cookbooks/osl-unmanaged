@@ -59,7 +59,7 @@
     "osl-apache": "= 2.11.6",
     "osl-docker": "= 2.2.1",
     "osl-munin": "= 2.0.0",
-    "osl-nrpe": "= 3.0.6",
+    "osl-nrpe": "= 3.0.7",
     "osl-openstack": "= 3.2.15",
     "osl-postfix": "= 1.0.0",
     "osl-rsync": "= 1.0.3",
