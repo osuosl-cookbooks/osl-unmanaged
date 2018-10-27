@@ -25,7 +25,7 @@
     "homebrew": "= 5.0.4",
     "hostsfile": "= 3.0.1",
     "htpasswd": "= 0.2.4",
-    "ibm-power": "= 2.1.0",
+    "ibm-power": "= 2.2.0",
     "iptables": "= 4.2.0",
     "iptables-ng": "= 3.0.0",
     "kernel-modules": "= 2.0.3",
