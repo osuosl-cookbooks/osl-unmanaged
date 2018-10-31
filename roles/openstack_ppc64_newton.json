@@ -87,13 +87,10 @@
           "default": "eth1"
         },
         "compute": {
-          "default": "enP3p9s0f3",
-          "openpower1.osuosl.bak": "enP4p1s0.42",
-          "openpower2.osuosl.bak": "enP4p1s0.42",
-          "openpower3.osuosl.bak": "enP4p1s0.42",
-          "openpower5.osuosl.bak": "enP4p1s0.42",
-          "openpower6.osuosl.bak": "enP4p1s0.42",
-          "openpower8.osuosl.bak": "enP4p1s0.42"
+          "default": "enP4p1s0.42",
+          "openpower4.osuosl.bak": "enP48p1s0f0.42",
+          "openpower7.osuosl.bak": "enP48p1s0f0.42",
+          "openpower9.osuosl.bak": "enP48p1s0f0.42"
         }
       },
       "physical_interface_mappings": [
@@ -105,13 +102,10 @@
             "default": "eth2"
           },
           "compute": {
-            "default": "enP3p9s0f2",
-            "openpower1.osuosl.bak": "enP4p1s0.108",
-            "openpower2.osuosl.bak": "enP4p1s0.108",
-            "openpower3.osuosl.bak": "enP4p1s0.108",
-            "openpower5.osuosl.bak": "enP4p1s0.108",
-            "openpower6.osuosl.bak": "enP4p1s0.108",
-            "openpower8.osuosl.bak": "enP4p1s0.108"
+            "default": "enP4p1s0.108",
+            "openpower4.osuosl.bak": "enP48p1s0f0.108",
+            "openpower7.osuosl.bak": "enP48p1s0f0.108",
+            "openpower9.osuosl.bak": "enP48p1s0f0.108"
           }
         },
         {
@@ -122,13 +116,10 @@
             "default": "eth3"
           },
           "compute": {
-            "default": "enP3p9s0f2",
-            "openpower1.osuosl.bak": "enP4p1s0.112",
-            "openpower2.osuosl.bak": "enP4p1s0.112",
-            "openpower3.osuosl.bak": "enP4p1s0.112",
-            "openpower5.osuosl.bak": "enP4p1s0.112",
-            "openpower6.osuosl.bak": "enP4p1s0.112",
-            "openpower8.osuosl.bak": "enP4p1s0.112"
+            "default": "enP4p1s0.112",
+            "openpower4.osuosl.bak": "enP48p1s0f0.112",
+            "openpower7.osuosl.bak": "enP48p1s0f0.112",
+            "openpower9.osuosl.bak": "enP48p1s0f0.112"
           }
         }
       ]
