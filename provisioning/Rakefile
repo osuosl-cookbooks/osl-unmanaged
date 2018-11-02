@@ -12,6 +12,7 @@ def run_command(command)
 end
 
 PROV_PATH = '.'.freeze
+client_options = '--force-formatter -z --local-mode --listen '
 
 task :destroy_all do
   Rake::Task[:destroy_machines].invoke
@@ -21,7 +22,7 @@ end
 
 desc 'Destroy machines'
 task :destroy_machines do
-  run_command("chef-client --force-formatter -z #{PROV_PATH}/destroy_all.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/destroy_all.rb")
 end
 
 desc 'Vendor your cookbooks/'
@@ -40,8 +41,7 @@ end
 
 desc 'OpenStack HAProxy'
 task openstack_haproxy: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/openstack_haproxy.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_haproxy.rb")
 end
 
 desc 'OpenStack Staging (x86)'
@@ -54,14 +54,12 @@ task openstack_x86:
 
 desc 'OpenStack Staging Controller (x86)'
 task openstack_x86_controller: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/openstack_x86_controller.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_x86_controller.rb")
 end
 
 desc 'OpenStack Staging Compute (x86)'
 task openstack_x86_compute: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/openstack_x86_compute.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_x86_compute.rb")
 end
 
 desc 'OpenStack Staging (ppc64)'
@@ -74,20 +72,17 @@ task openstack_ppc64:
 
 desc 'OpenStack Staging Controller (ppc64)'
 task openstack_ppc64_controller: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/openstack_ppc64_controller.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_ppc64_controller.rb")
 end
 
 desc 'OpenStack Staging Compute (ppc64)'
 task openstack_ppc64_compute: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/openstack_ppc64_compute.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_ppc64_compute.rb")
 end
 
 desc 'OpenStack Staging Mellanox Neo (ppc64)'
 task openstack_ppc64_neo: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/openstack_ppc64_neo.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_ppc64_neo.rb")
 end
 
 desc 'DNS Master/Slave/Jenkins'
@@ -101,38 +96,32 @@ task dns_all:
 
 desc 'DNS Master'
 task dns_master: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/dns_master.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/dns_master.rb")
 end
 
 desc 'DNS Slave'
 task dns_slave: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/dns_slave.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/dns_slave.rb")
 end
 
 desc 'DNS Jenkins'
 task dns_jenkins: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/dns_jenkins.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/dns_jenkins.rb")
 end
 
 desc 'Omnibus'
 task omnibus: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/omnibus.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/omnibus.rb")
 end
 
 desc 'Ganeti'
 task ganeti: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/ganeti.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/ganeti.rb")
 end
 
 desc 'Ceph (ppc64)'
 task ceph_ppc64: [:create_key] do
-  run_command('chef-client --force-formatter -z ' \
-    "#{PROV_PATH}/ceph_ppc64.rb")
+  run_command("chef-client #{client_options} #{PROV_PATH}/ceph_ppc64.rb")
 end
 
 desc 'Blow everything away'
