@@ -36,6 +36,7 @@ cookbook 'osl-syslog', git: 'git@github.com:osuosl-cookbooks/osl-syslog'
 cookbook 'osl-vpn', git: 'git@github.com:osuosl-cookbooks/osl-vpn'
 cookbook 'resource_from_hash',
          git: 'git@github.com:osuosl-cookbooks/resource_from_hash'
+cookbook 'seven_zip', '< 3.0.0'
 cookbook 'statsd', github: 'att-cloud/cookbook-statsd'
 cookbook 'yum-kernel-osuosl', git: 'git@github.com:osuosl-cookbooks/yum-kernel-osuosl.git'
 cookbook 'yum-qemu-ev', git: 'git@github.com:osuosl-cookbooks/yum-qemu-ev.git'
