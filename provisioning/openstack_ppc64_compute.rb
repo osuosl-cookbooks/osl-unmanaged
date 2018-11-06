@@ -19,9 +19,9 @@ machine 'openpower8' do
                   convergence_options: {
                     chef_version: '12.18.31'
                   }
-  attribute %w(osl-openstack credentials image_token), ENV['IMAGE_TOKEN']
-  attribute %w(osl-openstack credentials block_token), ENV['BLOCK_TOKEN']
-  attribute %w(osl-openstack credentials block_backup_token), ENV['BLOCK_BACKUP_TOKEN']
+  attribute %w(osl-openstack credentials ceph image_token), ENV['IMAGE_TOKEN']
+  attribute %w(osl-openstack credentials ceph block_token), ENV['BLOCK_TOKEN']
+  attribute %w(osl-openstack credentials ceph block_backup_token), ENV['BLOCK_BACKUP_TOKEN']
   role 'base_managed'
   role 'openstack_provisioning_ppc64'
   recipe 'osl-openstack::compute'
