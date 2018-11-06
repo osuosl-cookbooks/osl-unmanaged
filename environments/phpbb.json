@@ -20,7 +20,6 @@
     "mariadb": "= 0.3.1",
     "memcached": "= 3.0.0",
     "mysql": "= 6.1.2",
-    "mysql2_chef_gem": "= 2.1.0",
     "nagios": "= 8.1.0",
     "nodejs": "= 2.4.0",
     "ntp": "= 1.6.2",
