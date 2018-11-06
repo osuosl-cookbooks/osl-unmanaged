@@ -29,7 +29,7 @@
     "osl-nodejs": "= 0.1.7",
     "osl-nrpe": "= 3.0.8",
     "osl-postfix": "= 1.0.0",
-    "osl-prometheus": "= 1.0.0",
+    "osl-prometheus": "= 1.0.1",
     "osl-selinux": "= 1.0.1",
     "osl-syslog": "= 2.1.1",
     "poise": "= 2.6.0",
