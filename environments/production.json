@@ -112,7 +112,7 @@
     "perl": "= 1.2.2",
     "php": "= 4.5.0",
     "poise": "= 2.7.1",
-    "poise-languages": "= 2.0.3",
+    "poise-languages": "= 2.1.2",
     "poise-python": "= 1.5.1",
     "poise-service": "= 1.4.2",
     "postfix": "= 5.3.0",
