@@ -57,7 +57,7 @@
     "mysql2_chef_gem": "= 2.1.0",
     "mysql": "= 8.5.1",
     "nagios": "= 8.1.0",
-    "newrelic": "= 2.18.0",
+    "newrelic": "= 2.39.1",
     "nfs": "= 2.4.1",
     "nginx": "= 8.1.5",
     "nodejs": "= 3.0.0",
