@@ -10,7 +10,6 @@
     "recipe[osl-nrpe::check_chef_client]",
     "recipe[osl-nrpe::check_cron]",
     "recipe[osl-nrpe::check_raid]",
-    "recipe[base::ifconfig]",
     "recipe[base::issue]",
     "recipe[base::security]",
     "recipe[osl-selinux]",
