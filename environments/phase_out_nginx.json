@@ -17,7 +17,7 @@
     "munin": "= 1.4.3",
     "nagios": "= 8.1.0",
     "nginx": "= 8.1.5",
-    "nodejs": "= 2.4.0",
+    "nodejs": "= 6.0.0",
     "ntp": "= 1.6.2",
     "ohai": "= 5.2.0",
     "omnibus_updater": "= 3.0.2",
