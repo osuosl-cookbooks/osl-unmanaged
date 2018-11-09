@@ -88,7 +88,7 @@
     "osl-memcached": "= 2.0.1",
     "osl-mirror": "= 1.0.1",
     "osl-munin": "= 2.0.0",
-    "osl-mysql": "= 2.0.1",
+    "osl-mysql": "= 2.0.2",
     "osl-nagios": "= 3.0.0",
     "osl-netboot": "= 2.0.0",
     "osl-nfs": "= 1.0.0",
