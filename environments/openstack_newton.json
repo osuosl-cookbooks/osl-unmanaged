@@ -61,7 +61,7 @@
     "osl-docker": "= 2.2.1",
     "osl-munin": "= 2.0.0",
     "osl-nrpe": "= 3.0.8",
-    "osl-openstack": "= 3.2.15",
+    "osl-openstack": "= 4.0.0",
     "osl-postfix": "= 1.0.0",
     "osl-prometheus": "= 1.0.2",
     "osl-rsync": "= 1.0.3",
