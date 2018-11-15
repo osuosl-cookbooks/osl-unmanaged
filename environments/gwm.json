@@ -67,7 +67,7 @@
     "osl-drupal": "= 0.2.2",
     "osl-gitlab": "= 1.0.0",
     "osl-haproxy": "= 4.0.4",
-    "osl-jenkins": "= 2.0.5",
+    "osl-jenkins": "= 2.0.6",
     "osl-mirror": "= 1.0.1",
     "osl-mysql": "= 1.0.7",
     "osl-nginx": "= 2.1.2",
