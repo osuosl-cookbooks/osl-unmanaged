@@ -80,11 +80,6 @@ task openstack_ppc64_compute: [:create_key] do
   run_command("chef-client #{client_options} #{PROV_PATH}/openstack_ppc64_compute.rb")
 end
 
-desc 'OpenStack Staging Mellanox Neo (ppc64)'
-task openstack_ppc64_neo: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_ppc64_neo.rb")
-end
-
 desc 'DNS Master/Slave/Jenkins'
 task dns_all:
     [
