@@ -12,7 +12,7 @@ with_machine_options(
   },
   ssh_username: 'centos',
   convergence_options: {
-    chef_version: '12.18.31'
+    chef_version: '13.8.5'
   }
 )
 

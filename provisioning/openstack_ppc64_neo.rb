@@ -17,7 +17,7 @@ machine 'neo_openpower' do
     }
   },
                   convergence_options: {
-                    chef_version: '12.18.31'
+                    chef_version: '13.8.5'
                   }
   role 'base_managed'
   role 'openstack_mellanox_neo'

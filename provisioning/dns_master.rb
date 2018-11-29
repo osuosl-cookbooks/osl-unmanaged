@@ -17,7 +17,7 @@ machine 'dns_master' do
     }
   },
                   convergence_options: {
-                    chef_version: '12.18.31'
+                    chef_version: '13.8.5'
                   }
   role 'dns'
   role 'base_managed'

@@ -17,7 +17,7 @@ machine 'openpower8' do
     }
   },
                   convergence_options: {
-                    chef_version: '12.18.31'
+                    chef_version: '13.8.5'
                   }
   attribute %w(osl-openstack credentials ceph image_token), ENV['IMAGE_TOKEN']
   attribute %w(osl-openstack credentials ceph block_token), ENV['BLOCK_TOKEN']

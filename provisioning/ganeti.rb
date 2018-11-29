@@ -19,7 +19,7 @@ machine_batch do
         }
       },
                       convergence_options: {
-                        chef_version: '12.18.31'
+                        chef_version: '13.8.5'
                       }
       role 'base_managed'
       recipe 'osl-ganeti::osuosl_test'

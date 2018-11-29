@@ -17,7 +17,7 @@ machine 'controller_openpower' do
     }
   },
                   convergence_options: {
-                    chef_version: '12.18.31'
+                    chef_version: '13.8.5'
                   }
   attribute %w(osl-openstack node_type), 'controller'
   attribute %w(osl-openstack credentials ceph image_token), ENV['IMAGE_TOKEN']
