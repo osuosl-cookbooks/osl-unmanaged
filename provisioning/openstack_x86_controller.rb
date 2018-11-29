@@ -9,15 +9,15 @@ machine 'controller' do
     username: 'osuadmin',
     'ssh_options' => {
       keys: [
-        '~/.ssh/id_rsa-bootstrap'
-      ]
+        '~/.ssh/id_rsa-bootstrap',
+      ],
     },
     options: {
-      prefix: 'sudo '
-    }
+      prefix: 'sudo ',
+    },
   },
                   convergence_options: {
-                    chef_version: '13.8.5'
+                    chef_version: '13.8.5',
                   }
   attribute %w(osl-openstack node_type), 'controller'
   attribute %w(osl-openstack credentials ceph image_token), ENV['IMAGE_TOKEN']

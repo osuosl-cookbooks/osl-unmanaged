@@ -11,6 +11,6 @@
     'gdBQwb/tpRgIk3J8A83PHpp0lvEZRWcSGjqMoRpS9ekC7nXPtjfPKX0wYDkaWy2Uv6Lis0fH' \
     'aDpDnaE8Ucw5UWBePyCg6qCD3Z3sGnXJlaD3B1MqhYQBWxZvlKCKpyPx7w9cPHqmwvFUYB0f' \
     'by9lG/7kg6uYf09wyp6QT8kZTybM68UIHu681rZQE8dZiVHMqBU255zH09kDI8bR8ix4KdFb' \
-    'Kw== bootstrap'
+    'Kw== bootstrap',
   ]
 end

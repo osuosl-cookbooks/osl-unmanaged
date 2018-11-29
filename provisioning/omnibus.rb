@@ -13,12 +13,12 @@ machine_batch do
       username: 'centos',
       'ssh_options' => {
         keys: [
-          '~/.ssh/id_rsa-work'
-        ]
+          '~/.ssh/id_rsa-work',
+        ],
       },
       options: {
-        prefix: 'sudo '
-      }
+        prefix: 'sudo ',
+      },
     }
     recipe 'omnibus'
     file('/etc/chef/encrypted_data_bag_secret',
@@ -32,12 +32,12 @@ machine_batch do
       username: 'centos',
       'ssh_options' => {
         keys: [
-          '~/.ssh/id_rsa-work'
-        ]
+          '~/.ssh/id_rsa-work',
+        ],
       },
       options: {
-        prefix: 'sudo '
-      }
+        prefix: 'sudo ',
+      },
     }
     recipe 'omnibus'
     file('/etc/chef/encrypted_data_bag_secret',

@@ -9,15 +9,15 @@ machine 'dns_master' do
     username: 'osuadmin',
     'ssh_options' => {
       keys: [
-        '~/.ssh/id_rsa-bootstrap'
-      ]
+        '~/.ssh/id_rsa-bootstrap',
+      ],
     },
     options: {
-      prefix: 'sudo '
-    }
+      prefix: 'sudo ',
+    },
   },
                   convergence_options: {
-                    chef_version: '13.8.5'
+                    chef_version: '13.8.5',
                   }
   role 'dns'
   role 'base_managed'
