@@ -21,7 +21,7 @@
     "dpkg_autostart": "= 0.2.0",
     "docker": "= 4.6.5",
     "erlang": "= 5.1.0",
-    "firewall": "= 5.1.2",
+    "firewall": "= 5.1.3",
     "git": "= 9.0.0",
     "homebrew": "= 5.0.4",
     "hostsfile": "= 3.0.1",
