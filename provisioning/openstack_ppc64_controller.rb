@@ -9,20 +9,20 @@ machine 'controller_openpower' do
     username: 'osuadmin',
     'ssh_options' => {
       keys: [
-        '~/.ssh/id_rsa-bootstrap'
-      ]
+        '~/.ssh/id_rsa-bootstrap',
+      ],
     },
     options: {
-      prefix: 'sudo '
-    }
+      prefix: 'sudo ',
+    },
   },
                   convergence_options: {
-                    chef_version: '12.18.31'
+                    chef_version: '13.8.5',
                   }
   attribute %w(osl-openstack node_type), 'controller'
-  attribute %w(osl-openstack credentials image_token), ENV['IMAGE_TOKEN']
-  attribute %w(osl-openstack credentials block_token), ENV['BLOCK_TOKEN']
-  attribute %w(osl-openstack credentials block_backup_token), ENV['BLOCK_BACKUP_TOKEN']
+  attribute %w(osl-openstack credentials ceph image_token), ENV['IMAGE_TOKEN']
+  attribute %w(osl-openstack credentials ceph block_token), ENV['BLOCK_TOKEN']
+  attribute %w(osl-openstack credentials ceph block_backup_token), ENV['BLOCK_BACKUP_TOKEN']
   role 'base_managed'
   role 'openstack_provisioning_ppc64'
   recipe 'osl-openstack::ops_database'

@@ -9,15 +9,15 @@ machine 'openstack_haproxy' do
     username: 'osuadmin',
     'ssh_options' => {
       keys: [
-        '~/.ssh/id_rsa-bootstrap'
-      ]
+        '~/.ssh/id_rsa-bootstrap',
+      ],
     },
     options: {
-      prefix: 'sudo '
-    }
+      prefix: 'sudo ',
+    },
   },
                   convergence_options: {
-                    chef_version: '12.18.31'
+                    chef_version: '13.8.5',
                   }
   role 'base_managed'
   recipe 'firewall::openstack'
