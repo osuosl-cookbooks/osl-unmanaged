@@ -3,7 +3,7 @@ source 'https://supermarket.chef.io'
 solver :ruby, :required
 
 # OSL Base deps
-cookbook 'base', git: 'git@github.com:osuosl-cookbooks/base'
+cookbook 'base', git: 'git@github.com:osuosl-cookbooks/base', branch: 'ramereth/ifconfig-resource'
 cookbook 'ceph-chef', git: 'git@github.com:osuosl-cookbooks/ceph-chef'
 cookbook 'firewall', git: 'git@github.com:osuosl-cookbooks/firewall'
 cookbook 'ganeti', git: 'git@github.com:osuosl-cookbooks/ganeti'

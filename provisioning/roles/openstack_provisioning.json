@@ -93,9 +93,9 @@
             "default": "eth3"
           },
           "compute": {
-            "default": "eth1.108",
-            "otest2.osuosl.bak": "enp2s0.108",
-            "otest3.osuosl.bak": "enp2s0.108"
+            "default": "eth1.112",
+            "otest2.osuosl.bak": "enp2s0.112",
+            "otest3.osuosl.bak": "enp2s0.112"
           }
         }
       ]
