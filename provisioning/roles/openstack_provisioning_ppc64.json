@@ -69,7 +69,7 @@
           "default": "eth3"
         },
         "compute": {
-          "default": "enP2p1s0.42"
+          "default": "enP4p1s0.42"
         }
       },
       "physical_interface_mappings": [
@@ -79,16 +79,7 @@
             "default": "eth1"
           },
           "compute": {
-            "default": "enP2p1s0.108"
-          }
-        },
-        {
-          "name": "backend",
-          "controller": {
-            "default": "eth2"
-          },
-          "compute": {
-            "default": "enP2p1s0.42"
+            "default": "enP4p1s0.112"
           }
         }
       ]

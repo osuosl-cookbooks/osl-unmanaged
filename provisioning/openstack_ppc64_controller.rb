@@ -20,13 +20,20 @@ machine 'controller_openpower' do
                     chef_version: '13.8.5',
                   }
   attribute %w(osl-openstack node_type), 'controller'
-  attribute %w(osl-openstack credentials ceph image_token), ENV['IMAGE_TOKEN']
-  attribute %w(osl-openstack credentials ceph block_token), ENV['BLOCK_TOKEN']
-  attribute %w(osl-openstack credentials ceph block_backup_token), ENV['BLOCK_BACKUP_TOKEN']
   role 'base_managed'
+  role 'ceph'
+  role 'ceph_mon'
+  role 'ceph_mgr'
+  role 'ceph_osd'
+  role 'ceph_setup'
   role 'openstack_provisioning_ppc64'
   recipe 'osl-openstack::ops_database'
   recipe 'osl-openstack::controller'
+  role 'openstack_cinder'
+  recipe 'provision_test::orchestration'
+  recipe 'provision_test::tempest_ppc64'
+  recipe 'provision_test::tempest'
+  recipe 'provision_test::tempest_ppc64_post'
   file('/etc/chef/encrypted_data_bag_secret',
        File.dirname(__FILE__) +
        '/encrypted_data_bag_secret')
