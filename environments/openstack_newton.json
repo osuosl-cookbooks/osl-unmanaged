@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "apache2": "= 3.3.1",
     "apt": "= 5.1.0",
-    "base": "= 3.1.5",
+    "base": "= 3.2.0",
     "bluepill": "= 4.0.2",
     "build-essential": "= 8.1.1",
     "ceph": "= 0.9.2",
