@@ -99,7 +99,7 @@
     "yum-epel": "= 2.1.2",
     "yum-erlang_solutions": "= 1.0.3",
     "yum-kernel-osuosl": "= 2.0.0",
-    "yum-qemu-ev": "= 2.1.0",
+    "yum-qemu-ev": "= 2.1.1",
     "yum-repoforge": "= 2.0.1",
     "zypper": "= 0.4.0"
   },
