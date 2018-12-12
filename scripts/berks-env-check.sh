@@ -2,8 +2,8 @@
 set -e
 
 BERKS_OPTS="-q"
-
-while getopts "dr" opt ; do
+CHEF_ENV=""
+while getopts "dre:" opt ; do
   case $opt in
     d)
       BERKS_OPTS="-d"
@@ -12,12 +12,23 @@ while getopts "dr" opt ; do
       export DEBUG_RESOLVER=1
       BERKS_OPTS=${BERKS_OPTS/-q/}
       ;;
+    e)
+      CHEF_ENV=$OPTARG
+      ;;
     *)
       ;;
   esac
 done
 
 export BERKSHELF_PATH="vendor/"
+
+if [ -n "${CHEF_ENV}" ] ; then
+  echo "Checking $CHEF_ENV environment..."
+  rm -f Berksfile.lock
+  CHEF_ENVIRONMENT=$CHEF_ENV berks install ${BERKS_OPTS}
+  exit 0
+fi
+
 envs=$(ls environments | sed -e 's/.json//')
 for env in $envs ; do
   echo "Checking $env environment..."
