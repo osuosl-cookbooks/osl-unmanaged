@@ -1,0 +1,14 @@
+{
+  "name": "lf_bugs",
+  "description": "override attributes for lf-bugs.osuosl.org",
+  "override_attributes": {
+    "postfix": {
+      "use_alias_maps": true,
+      "use_transport_maps": true,
+      "use_virtual_aliases": true,
+      "use_virtual_aliases_domains": true
+    }
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
