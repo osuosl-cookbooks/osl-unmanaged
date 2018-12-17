@@ -54,7 +54,7 @@
     "yum-ius": "= 3.0.0",
     "yum-kernel-osuosl": "= 2.0.0",
     "yum-repoforge": "= 2.0.1",
-    "proj-phpbb": "= 4.0.1",
+    "proj-phpbb": "= 4.0.2",
     "rdiff-backup": "= 3.0.2"
   },
   "default_attributes": {
