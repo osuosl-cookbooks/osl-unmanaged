@@ -29,6 +29,7 @@
       "multi_environment_monitoring": true,
       "monitored_environments": [
         "openstack_newton",
+        "openstack_ocata",
         "phase_out_nginx",
         "phpbb",
         "production",
@@ -38,6 +39,7 @@
     "munin": {
       "multi_environment_monitoring": [
         "openstack_newton",
+        "openstack_ocata",
         "phase_out_nginx",
         "phpbb",
         "production",
