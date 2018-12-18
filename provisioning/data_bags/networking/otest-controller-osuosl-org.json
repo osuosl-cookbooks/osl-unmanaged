@@ -9,6 +9,7 @@
         "mask": "255.255.255.128",
         "bcast": "140.211.167.255",
         "bootproto": "static",
+        "gateway": "140.211.167.129",
         "device": "eth0"
       }
     },
@@ -39,6 +40,19 @@
         "onboot": "yes",
         "bootproto": "none",
         "device": "eth3"
+      }
+    },
+    {
+      "resource": "osl_route",
+      "name": "eth1",
+      "attributes": {
+        "routes": [
+          {
+            "address": "10.1.100.0",
+            "netmask": "255.255.252.0",
+            "gateway": "10.1.0.1"
+          }
+        ]
       }
     }
   ]

@@ -1,0 +1,10 @@
+{
+  "id": "nova_cell0",
+  "nova_cell0": {
+    "encrypted_data": "t1b4KVYbkp0Oh2iygAMbw/rf3eKCc9xOpj5MJWU=\n",
+    "iv": "3B/gRQZXiWbCeetS\n",
+    "auth_tag": "+UAG3yslvEYk8SRqvp7L4w==\n",
+    "version": 3,
+    "cipher": "aes-256-gcm"
+  }
+}

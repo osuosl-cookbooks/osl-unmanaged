@@ -1,0 +1,10 @@
+{
+  "id": "fernet_key1",
+  "fernet_key1": {
+    "encrypted_data": "ol4A01QKDODkk35wmMTAvcPVPiiWcno/rJGlLole+SyR4VNpEp5Uwn7/R9RS\nOdjW+8kKRbq3ZEKzXbT0fQkW\n",
+    "iv": "z3kVEpvKd5WDh0Mc\n",
+    "auth_tag": "M39e2M1Yw1tCSYIWlYblVA==\n",
+    "version": 3,
+    "cipher": "aes-256-gcm"
+  }
+}

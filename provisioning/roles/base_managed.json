@@ -1,8 +1,8 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "role[base]",
     "recipe[base::ifconfig]",
+    "role[base]",
     "recipe[base::issue]",
     "recipe[base::security]",
     "recipe[osl-selinux]",

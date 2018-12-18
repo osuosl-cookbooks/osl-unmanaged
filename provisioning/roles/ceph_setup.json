@@ -1,0 +1,13 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[provision_test::ceph_setup]",
+    "recipe[provision_test::ceph]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "Ceph Role",
+  "name": "ceph"
+}

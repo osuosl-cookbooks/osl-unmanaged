@@ -1,0 +1,10 @@
+{
+  "id": "openstack-placement",
+  "openstack-placement": {
+    "encrypted_data": "4ix3lB/G6y6sOYof2EZEXE62x3uhrnpp6y8dkqiHXumSkKJR99U=\n",
+    "iv": "/9BBw11QqdS+AsXV\n",
+    "auth_tag": "x0ltTFBwGUwugAE07ftEvg==\n",
+    "version": 3,
+    "cipher": "aes-256-gcm"
+  }
+}
