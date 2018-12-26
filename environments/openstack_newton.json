@@ -60,7 +60,7 @@
     "osl-apache": "= 2.11.6",
     "osl-docker": "= 2.2.1",
     "osl-munin": "= 2.0.1",
-    "osl-nrpe": "= 3.0.8",
+    "osl-nrpe": "= 3.0.9",
     "osl-openstack": "= 4.1.0",
     "osl-postfix": "= 1.0.0",
     "osl-prometheus": "= 1.0.2",
