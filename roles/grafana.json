@@ -1,0 +1,20 @@
+{
+  "name": "grafana",
+  "description": "Grafana configuration dashboard.osuosl.org",
+  "default_attributes": {
+    "grafana": {
+      "ini": {
+        "database": {
+          "host": "vip-mysql2.osuosl.org",
+          "name": "osuosl_grafana",
+          "user": "osuosl_grafana"
+        }
+      }
+    }
+  },
+  "run_list": [
+    "recipe[osl-grafana]"
+  ],
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}
