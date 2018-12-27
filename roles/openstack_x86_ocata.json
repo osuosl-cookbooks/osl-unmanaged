@@ -33,9 +33,6 @@
       }
     },
     "openstack": {
-      "mq": {
-        "user": "admin"
-      },
       "identity": {
         "ssl": {
           "cert_required": false
