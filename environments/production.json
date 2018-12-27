@@ -123,7 +123,7 @@
     "proj-deluge": "= 2.0.0",
     "proj-drupalorg": "= 0.1.8",
     "proj-lf": "= 0.4.3",
-    "proj-misc": "= 1.1.9",
+    "proj-misc": "= 1.1.10",
     "proj-ros": "= 3.0.0",
     "proj-webdav": "= 2.0.0",
     "prometheus-platform": "= 2.1.0",
