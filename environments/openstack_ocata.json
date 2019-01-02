@@ -71,7 +71,7 @@
     "osl-apache": "= 2.11.6",
     "osl-ceph": "= 2.1.1",
     "osl-docker": "= 2.2.1",
-    "osl-jenkins": "= 2.0.7",
+    "osl-jenkins": "= 2.0.8",
     "osl-keepalived": "= 0.2.4",
     "osl-letsencrypt-boulder-server": "= 3.0.1",
     "osl-munin": "= 2.0.1",
