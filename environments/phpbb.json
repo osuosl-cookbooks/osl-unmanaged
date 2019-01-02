@@ -27,7 +27,7 @@
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
     "osl-acme": "= 2.0.0",
-    "osl-apache": "= 3.0.0",
+    "osl-apache": "= 3.0.2",
     "osl-haproxy": "= 4.0.11",
     "osl-keepalived": "= 0.2.4",
     "osl-nagios": "= 3.0.0",
