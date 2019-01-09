@@ -62,7 +62,7 @@
     "osl-acme": "= 2.0.0",
     "osl-apache": "= 3.0.2",
     "osl-app": "= 2.0.1",
-    "osl-backup": "= 1.0.1",
+    "osl-backup": "= 1.0.2",
     "osl-dhcp": "= 1.0.2",
     "osl-drupal": "= 0.2.2",
     "osl-gitlab": "= 1.0.0",
