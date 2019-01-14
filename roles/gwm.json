@@ -23,6 +23,7 @@
       "https_enabled": true,
       "certificate_key_file": "/etc/pki/tls/private/wildcard.key",
       "certificate_file": "/etc/pki/tls/certs/wildcard.pem",
+      "certificate_chain_file": "/etc/pki/tls/certs/wildcard-bundle.crt",
       "revision": "master",
       "debug": false,
       "databag_item": "production",
