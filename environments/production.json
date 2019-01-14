@@ -32,7 +32,7 @@
     "firewall": "= 5.1.3",
     "formsender": "= 0.1.6",
     "ganeti": "= 2.0.0",
-    "ganeti_webmgr": "= 0.4.14",
+    "ganeti_webmgr": "= 1.0.0",
     "git": "= 9.0.0",
     "glusterfs": "= 0.1.1",
     "golang": "= 1.7.0",
