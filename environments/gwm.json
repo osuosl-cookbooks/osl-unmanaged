@@ -78,7 +78,7 @@
     "osl-postgresql": "= 0.4.4",
     "osl-rsync": "= 1.0.3",
     "osl-selinux": "= 1.0.1",
-    "osl-slapd": "= 0.1.5",
+    "osl-slapd": "= 1.0.0",
     "osl-sudo": "= 0.1.0",
     "osl-syslog": "= 2.1.1",
     "osl-varnish": "= 1.0.1",
