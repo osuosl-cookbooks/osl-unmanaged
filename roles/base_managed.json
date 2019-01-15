@@ -31,8 +31,7 @@
         "openstack_ocata",
         "phase_out_nginx",
         "phpbb",
-        "production",
-        "gwm"
+        "production"
         ]
     },
     "munin": {
@@ -40,8 +39,7 @@
         "openstack_ocata",
         "phase_out_nginx",
         "phpbb",
-        "production",
-        "gwm"
+        "production"
       ]
     },
     "mysql": {
