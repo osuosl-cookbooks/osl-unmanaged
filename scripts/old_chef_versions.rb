@@ -8,9 +8,8 @@ env = JSON.parse(File.read(f))
 prod_chef_version = env['override_attributes']['omnibus_updater']['version']
 
 query = 'chef_environment:phpbb '\
-  'OR chef_environment:phase_out_nginx '\
-  'OR chef_environment:openstack_production '\
   'OR chef_environment:production '\
+  'OR chef_environment:workstation '\
   'AND machine:x86_64'
 
 old_nodes = {}

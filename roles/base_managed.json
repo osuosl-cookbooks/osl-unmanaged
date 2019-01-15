@@ -29,19 +29,15 @@
       "multi_environment_monitoring": true,
       "monitored_environments": [
         "openstack_ocata",
-        "phase_out_nginx",
         "phpbb",
-        "production",
-        "gwm"
+        "production"
         ]
     },
     "munin": {
       "multi_environment_monitoring": [
         "openstack_ocata",
-        "phase_out_nginx",
         "phpbb",
-        "production",
-        "gwm"
+        "production"
       ]
     },
     "mysql": {
