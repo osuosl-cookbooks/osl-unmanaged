@@ -99,7 +99,7 @@
     "osl-nodejs": "= 1.0.0",
     "osl-nodes": "= 1.0.0",
     "osl-nrpe": "= 3.0.9",
-    "osl-php": "= 3.0.0",
+    "osl-php": "= 3.1.0",
     "osl-postfix": "= 1.0.0",
     "osl-postgresql": "= 1.0.1",
     "osl-prometheus": "= 1.0.2",

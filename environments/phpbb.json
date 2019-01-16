@@ -33,7 +33,7 @@
     "osl-nagios": "= 3.0.0",
     "osl-nodes": "= 1.0.0",
     "osl-mysql": "= 2.0.2",
-    "osl-php": "= 3.0.0",
+    "osl-php": "= 3.1.0",
     "osl-postfix": "= 1.0.0",
     "osl-prometheus": "= 1.0.2",
     "osl-selinux": "= 1.0.1",

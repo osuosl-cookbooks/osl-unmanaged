@@ -80,7 +80,7 @@
     "osl-nodes": "= 1.0.0",
     "osl-nrpe": "= 3.0.8",
     "osl-openstack": "= 5.0.2",
-    "osl-php": "= 3.0.0",
+    "osl-php": "= 3.1.0",
     "osl-postfix": "= 1.0.0",
     "osl-prometheus": "= 1.0.2",
     "osl-rsync": "= 1.0.3",
