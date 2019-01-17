@@ -49,6 +49,7 @@
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[chef_client_updater]",
     "recipe[base]",
     "recipe[osl-postfix]",
     "recipe[workstation::cron_apt]",
