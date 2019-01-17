@@ -1,6 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "recipe[chef_client_updater]",
     "recipe[base]",
     "recipe[osl-postfix]",
     "recipe[base::mailhandler]",
