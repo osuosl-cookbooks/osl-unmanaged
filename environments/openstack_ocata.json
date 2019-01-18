@@ -70,7 +70,7 @@
     "openstackclient": "= 17.0.1",
     "openvpn": "= 3.0.1",
     "osl-apache": "= 2.11.6",
-    "osl-ceph": "= 2.1.1",
+    "osl-ceph": "= 2.2.0",
     "osl-docker": "= 2.2.1",
     "osl-jenkins": "= 2.0.10",
     "osl-keepalived": "= 0.2.4",
