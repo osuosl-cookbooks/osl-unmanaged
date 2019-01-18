@@ -87,7 +87,7 @@
     "osl-rsync": "= 1.0.3",
     "osl-selinux": "= 1.0.1",
     "osl-syslog": "= 2.1.1",
-    "osl-vpn": "= 1.0.6",
+    "osl-vpn": "= 1.1.0",
     "packagecloud": "= 0.3.0",
     "percona": "= 0.16.1",
     "php": "= 4.5.0",
