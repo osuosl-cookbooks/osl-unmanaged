@@ -30,15 +30,6 @@
     "resolver": {
       "nameservers": ["140.211.166.130", "140.211.166.131", "216.165.191.54"],
       "search": "workstation.cass.oregonstate.edu osuosl.org osuosl.bak  osuosl.oob"
-    },
-    "sysctl": {
-      "params": {
-        "fs": {
-          "inotify": {
-            "max_user_instances": 8192
-          }
-        }
-      }
     }
   },
   "override_attributes": {
