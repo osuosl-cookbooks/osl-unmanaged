@@ -32,7 +32,7 @@
     "osl-haproxy": "= 4.0.11",
     "osl-keepalived": "= 0.2.4",
     "osl-nagios": "= 3.0.0",
-    "osl-nodes": "= 1.3.3",
+    "osl-nodes": "= 1.3.4",
     "osl-mysql": "= 2.0.3",
     "osl-php": "= 3.1.0",
     "osl-postfix": "= 1.0.0",
