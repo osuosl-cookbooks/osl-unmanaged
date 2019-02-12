@@ -123,6 +123,11 @@
           }
         }
       ]
+    },
+    "osl-prometheus": {
+      "openstack": {
+        "cloud": "ppc64"
+      }
     }
    },
   "json_class": "Chef::Role",

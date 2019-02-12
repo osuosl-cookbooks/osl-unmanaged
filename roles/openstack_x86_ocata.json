@@ -125,6 +125,11 @@
           }
         }
       ]
+    },
+    "osl-prometheus": {
+      "openstack": {
+        "cloud": "x86"
+      }
     }
    },
   "json_class": "Chef::Role",
