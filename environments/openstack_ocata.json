@@ -10,7 +10,7 @@
     "ceph-chef": "= 1.1.27",
     "certificate": "= 1.0.0",
     "chef-apt-docker": "= 2.0.6",
-    "chef-client": "= 10.1.2",
+    "chef-client": "= 11.0.5",
     "chef_client_updater": "= 3.5.1",
     "chef-sugar": "= 4.0.0",
     "chef-vault": "= 3.0.0",
