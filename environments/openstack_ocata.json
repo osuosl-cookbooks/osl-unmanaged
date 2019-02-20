@@ -71,7 +71,7 @@
     "openvpn": "= 3.0.1",
     "osl-apache": "= 2.11.6",
     "osl-ceph": "= 2.2.0",
-    "osl-docker": "= 2.2.1",
+    "osl-docker": "= 2.2.2",
     "osl-jenkins": "= 2.0.11",
     "osl-keepalived": "= 0.2.4",
     "osl-letsencrypt-boulder-server": "= 3.0.1",
