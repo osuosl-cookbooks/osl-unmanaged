@@ -1,0 +1,68 @@
+{
+  "id": "openpower-gpu1-osuosl-bak",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "enP8p1s0",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "mtu": "9000",
+        "device": "enP8p1s0"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "br42",
+      "attributes": {
+        "type": "Bridge",
+        "bootproto": "none",
+        "device": "br42",
+        "onboot": "no",
+        "userctl": "no",
+        "action": "delete"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "10.1.0.92",
+      "attributes": {
+        "bootproto": "static",
+        "mtu": "9000",
+        "mask": "255.255.254.0",
+        "bcast": "10.1.1.255",
+        "gateway": "10.1.0.1",
+        "device": "enP8p1s0.42",
+        "onboot": "yes",
+        "userctl": "no",
+        "vlan": "yes"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "enP8p1s0.108",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "mtu": "9000",
+        "device": "enP8p1s0.108",
+        "onboot": "yes",
+        "userctl": "no",
+        "vlan": "yes"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "enP8p1s0.112",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "mtu": "9000",
+        "device": "enP8p1s0.112",
+        "onboot": "yes",
+        "userctl": "no",
+        "vlan": "yes"
+      }
+    }
+  ]
+}

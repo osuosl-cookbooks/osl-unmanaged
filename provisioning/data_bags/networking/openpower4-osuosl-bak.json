@@ -1,0 +1,55 @@
+{
+  "id": "openpower8-osuosl-bak",
+  "resources": [
+    {
+      "resource": "osl_ifconfig",
+      "name": "enP48p1s0f0",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "mtu": "9000",
+        "device": "enP48p1s0f0"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "br42",
+      "attributes": {
+        "type": "Bridge",
+        "bootproto": "none",
+        "device": "br42",
+        "onboot": "no",
+        "userctl": "no",
+        "action": "delete"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "10.1.1.61",
+      "attributes": {
+        "bootproto": "static",
+        "mtu": "9000",
+        "mask": "255.255.254.0",
+        "bcast": "10.1.1.255",
+        "gateway": "10.1.0.1",
+        "device": "enP48p1s0f0.42",
+        "onboot": "yes",
+        "userctl": "no",
+        "vlan": "yes"
+      }
+    },
+    {
+      "resource": "osl_ifconfig",
+      "name": "enP48p1s0f0.108",
+      "attributes": {
+        "target": "",
+        "bootproto": "none",
+        "mtu": "9000",
+        "device": "enP48p1s0f0.108",
+        "onboot": "yes",
+        "userctl": "no",
+        "vlan": "yes"
+      }
+    }
+  ]
+}
