@@ -82,7 +82,7 @@
     "osl-openstack": "= 5.0.2",
     "osl-php": "= 3.1.1",
     "osl-postfix": "= 1.0.1",
-    "osl-prometheus": "= 1.2.6",
+    "osl-prometheus": "= 1.2.7",
     "osl-rsync": "= 1.0.3",
     "osl-selinux": "= 1.0.1",
     "osl-syslog": "= 2.1.1",
