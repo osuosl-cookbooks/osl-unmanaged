@@ -127,6 +127,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-drupal.git
 [osuosl-cookbooks/osl-docker]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-docker.git
 
+[osuosl-cookbooks/osl-fail2ban]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-fail2ban.git
+
 [osuosl-cookbooks/osl-gitlab]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-gitlab.git
 
@@ -171,6 +174,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-nginx.git
 
 [osuosl-cookbooks/osl-nodejs]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-nodejs.git
+
+[osuosl-cookbooks/osl-nodes]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-nodes.git
 
 [osuosl-cookbooks/osl-nrpe]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-nrpe.git
