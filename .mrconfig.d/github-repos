@@ -175,6 +175,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-nginx.git
 [osuosl-cookbooks/osl-nodejs]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-nodejs.git
 
+[osuosl-cookbooks/osl-nodes]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-nodes.git
+
 [osuosl-cookbooks/osl-nrpe]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-nrpe.git
 
