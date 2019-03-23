@@ -1,0 +1,51 @@
+#!/usr/bin/env python 
+import json
+import argparse
+import os
+
+parser = argparse.ArgumentParser(description='Create dhcp databags')
+
+parser.add_argument(
+  '--mac', 
+  nargs=1,
+  help='MAC address',
+  required=True
+)
+
+parser.add_argument(
+  '--ip', 
+  nargs=1,
+  help='IP address',
+  required=True
+)
+
+parser.add_argument(
+  '-d', 
+  nargs=1,
+  metavar='DATABAG_DIR',
+  default=['./data_bags/dhcp_hosts'],
+  help='Data bag directory',
+)
+
+parser.add_argument(
+  'hostname', 
+  help='Hostname of machine',
+)
+
+args = parser.parse_args()
+
+databag_dir = args.d[0]
+databag_id = args.hostname.replace('.','-')
+databag_path = os.path.join(databag_dir, databag_id + '.json')
+
+databag = open(databag_path, 'w')
+
+databag_contents = json.dumps({
+  'id': databag_id,
+  'hostname': args.hostname,
+  'mac': args.mac[0],
+  'ip': args.ip[0]
+}, indent=4)
+
+databag.write(databag_contents)
+databag.close()
