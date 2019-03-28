@@ -29,6 +29,7 @@ parser.add_argument(
 
 parser.add_argument(
   '-H', '--hostname', 
+  nargs=1,
   help='Hostname of machine',
   required=True
 )
@@ -36,14 +37,14 @@ parser.add_argument(
 args = parser.parse_args()
 
 databag_dir = args.dir[0]
-databag_id = args.hostname.replace('.','-')
+databag_id = args.hostname[0].replace('.','-')
 databag_path = os.path.join(databag_dir, databag_id + '.json')
 
 databag = open(databag_path, 'w')
 
 databag_contents = json.dumps({
   'id': databag_id,
-  'hostname': args.hostname,
+  'hostname': args.hostname[0],
   'mac': args.mac[0],
   'ip': args.ip[0]
 }, indent=4)
