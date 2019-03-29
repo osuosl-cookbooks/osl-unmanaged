@@ -29,7 +29,7 @@
     "omnibus_updater": "= 3.0.2",
     "osl-acme": "= 2.0.0",
     "osl-apache": "= 3.0.2",
-    "osl-haproxy": "= 4.0.15",
+    "osl-haproxy": "= 4.0.16",
     "osl-imap": "= 1.0.2",
     "osl-keepalived": "= 0.2.4",
     "osl-nagios": "= 3.0.1",
