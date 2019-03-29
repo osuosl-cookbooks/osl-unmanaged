@@ -82,7 +82,7 @@
     "osl-dns": "= 2.0.2",
     "osl-docker": "= 2.2.2",
     "osl-drupal": "= 0.2.2",
-    "osl-ganeti": "= 2.0.23",
+    "osl-ganeti": "= 2.0.24",
     "osl-git": "= 1.0.2",
     "osl-gitlab": "= 1.0.3",
     "osl-grafana": "= 1.0.1",
