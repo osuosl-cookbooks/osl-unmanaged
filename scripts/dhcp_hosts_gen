@@ -2,6 +2,7 @@
 import json
 import argparse
 import os
+import sys
 import re
 from ipaddress import ip_address as IP
 
@@ -10,24 +11,24 @@ def verifyIP(ip):
         IP(str(ip))
         return ip
     except ValueError:
-        print('Invalid IP Address:', ip)
+        sys.stderr.write("Invalid IP Address: {ip}\n".format(ip=ip))
         exit(1)
 
 def verifyMAC(mac):
     parts = mac.split(':')
     if len(parts) != 6:
-        print('Too Short. Invalid MAC Address:', mac)
+        sys.stderr.write("Too Short. Invalid MAC Address: {mac}\n".format(mac=mac))
         exit(1)
     for byte in parts:
         if not re.match('[0-9a-fA-F]{2}', byte):
-            print('Invalid MAC Address:', mac)
+            sys.stderr.write("Invalid MAC Address: {mac}\n".format(mac=mac))
             exit(1)
     return mac
 
 def verifyHostname(hostname):
     hostname = str(hostname)
     if not re.match("^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$", hostname):
-        print('Invalid Hostname:', hostname)
+        sys.stderr.write("Invalid Hostname: {hostname}\n".format(hostname=hostname))
         exit(1)
     return hostname
 
@@ -84,4 +85,4 @@ databag_contents = json.dumps({
 databag.write(databag_contents)
 databag.close()
 
-print('Created databag in', databag_dir)
+sys.stdout.write("Created databag in {dir}\n".format(dir=databag_dir))
