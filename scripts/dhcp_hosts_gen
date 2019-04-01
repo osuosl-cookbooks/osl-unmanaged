@@ -8,7 +8,7 @@ from ipaddress import ip_address as IP
 
 def verifyIP(ip):
     try:
-        IP(str(ip))
+        IP(unicode(ip))
         return ip
     except ValueError:
         sys.stderr.write("Invalid IP Address: {ip}\n".format(ip=ip))
@@ -20,7 +20,7 @@ def verifyMAC(mac):
         sys.stderr.write("Too Short. Invalid MAC Address: {mac}\n".format(mac=mac))
         exit(1)
     for byte in parts:
-        if not re.match('[0-9a-fA-F]{2}', byte):
+        if not re.match('[0-9a-fA-F]{2}', byte) or len(byte) != 2:
             sys.stderr.write("Invalid MAC Address: {mac}\n".format(mac=mac))
             exit(1)
     return mac
