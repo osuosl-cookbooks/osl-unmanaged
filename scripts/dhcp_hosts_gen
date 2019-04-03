@@ -1,0 +1,88 @@
+#!/usr/bin/env python 
+import json
+import argparse
+import os
+import sys
+import re
+from ipaddress import ip_address as IP
+
+def verifyIP(ip):
+    try:
+        IP(unicode(ip))
+        return ip
+    except ValueError:
+        sys.stderr.write("Invalid IP Address: {ip}\n".format(ip=ip))
+        exit(1)
+
+def verifyMAC(mac):
+    parts = mac.split(':')
+    if len(parts) != 6:
+        sys.stderr.write("Too Short. Invalid MAC Address: {mac}\n".format(mac=mac))
+        exit(1)
+    for byte in parts:
+        if not re.match('[0-9a-fA-F]{2}', byte) or len(byte) != 2:
+            sys.stderr.write("Invalid MAC Address: {mac}\n".format(mac=mac))
+            exit(1)
+    return mac
+
+def verifyHostname(hostname):
+    hostname = str(hostname)
+    if not re.match("^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$", hostname):
+        sys.stderr.write("Invalid Hostname: {hostname}\n".format(hostname=hostname))
+        exit(1)
+    return hostname
+
+parser = argparse.ArgumentParser(description='Create dhcp databags')
+
+parser.add_argument(
+  '-m', '--mac',
+  nargs=1,
+  help='MAC address',
+  required=True
+)
+
+parser.add_argument(
+  '-i', '--ip', 
+  nargs=1,
+  help='IP address',
+  required=True
+)
+
+parser.add_argument(
+  '-d', '--dir',
+  nargs=1,
+  metavar='DATABAG_DIR',
+  default=['data_bags/dhcp_hosts'],
+  help='Data bag directory (default: data_bags/dhcp_hosts)'
+)
+
+parser.add_argument(
+  '-H', '--hostname', 
+  nargs=1,
+  help='Hostname of machine',
+  required=True
+)
+
+args = parser.parse_args()
+
+ip = verifyIP(args.ip[0])
+mac = verifyMAC(args.mac[0])
+hostname = verifyHostname(args.hostname[0])
+
+databag_id = args.hostname[0].replace('.','-')
+databag_dir = args.dir[0]
+databag_path = os.path.join(databag_dir, databag_id + '.json')
+
+databag = open(databag_path, 'w')
+
+databag_contents = json.dumps({
+  'id': databag_id,
+  'hostname': hostname,
+  'mac': mac,
+  'ip': ip
+}, indent=4)
+
+databag.write(databag_contents)
+databag.close()
+
+sys.stdout.write("Created databag in {dir}\n".format(dir=databag_dir))
