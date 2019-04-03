@@ -124,6 +124,7 @@
     "yum-erlang_solutions": "= 2.0.0",
     "yum-ius": "= 3.0.0",
     "yum-kernel-osuosl": "= 2.0.0",
+    "yum-nvidia": "= 1.0.0",
     "yum-qemu-ev": "= 2.2.1",
     "yum-repoforge": "= 3.0.0",
     "yum-scl": "= 0.2.0",

@@ -165,6 +165,7 @@
     "yum-fedora": "= 0.3.4",
     "yum-ius": "= 3.0.0",
     "yum-kernel-osuosl": "= 2.0.0",
+    "yum-nvidia": "= 1.0.0",
     "yum-passenger": "= 0.1.1",
     "yum-qemu-ev": "= 2.2.1",
     "yum-repoforge": "= 2.0.1",
