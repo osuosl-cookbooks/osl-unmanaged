@@ -90,7 +90,8 @@
           "default": "enP4p1s0.42",
           "openpower4.osuosl.bak": "enP48p1s0f0.42",
           "openpower7.osuosl.bak": "enP48p1s0f0.42",
-          "openpower9.osuosl.bak": "enP48p1s0f0.42"
+          "openpower9.osuosl.bak": "enP48p1s0f0.42",
+          "openpower10.osuosl.bak": "enP48p1s0f0.42"
         }
       },
       "physical_interface_mappings": [
@@ -105,7 +106,8 @@
             "default": "enP4p1s0.108",
             "openpower4.osuosl.bak": "enP48p1s0f0.108",
             "openpower7.osuosl.bak": "enP48p1s0f0.108",
-            "openpower9.osuosl.bak": "enP48p1s0f0.108"
+            "openpower9.osuosl.bak": "enP48p1s0f0.108",
+            "openpower10.osuosl.bak": "enP48p1s0f0.108"
           }
         },
         {
@@ -119,7 +121,8 @@
             "default": "enP4p1s0.112",
             "openpower4.osuosl.bak": "enP48p1s0f0.112",
             "openpower7.osuosl.bak": "enP48p1s0f0.112",
-            "openpower9.osuosl.bak": "enP48p1s0f0.112"
+            "openpower9.osuosl.bak": "enP48p1s0f0.112",
+            "openpower10.osuosl.bak": "enP48p1s0f0.112"
           }
         }
       ]
