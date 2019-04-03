@@ -286,8 +286,11 @@ checkout = git clone git@github.com:osuosl-cookbooks/yum-cron.git
 [osuosl-cookbooks/yum-kernel-osuosl]
 checkout = git clone git@github.com:osuosl-cookbooks/yum-kernel-osuosl.git
 
-[osuosl-cookbooks/yum-qemu-ev]
-checkout = git clone git@github.com:osuosl-cookbooks/yum-qemu-ev.git
+[osuosl-cookbooks/yum-nvidia]
+checkout = git clone git@github.com:osuosl-cookbooks/yum-nvidia.git
 
 [osuosl-cookbooks/yum-osuosl]
 checkout = git clone git@github.com:osuosl-cookbooks/yum-osuosl.git
+
+[osuosl-cookbooks/yum-qemu-ev]
+checkout = git clone git@github.com:osuosl-cookbooks/yum-qemu-ev.git
