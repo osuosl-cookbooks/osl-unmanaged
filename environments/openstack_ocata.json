@@ -128,6 +128,7 @@
     "yum-qemu-ev": "= 2.2.1",
     "yum-repoforge": "= 3.0.0",
     "yum-scl": "= 0.2.0",
+    "yumgroup": "= 0.6.0",
     "zypper": "= 0.4.0"
   },
   "json_class": "Chef::Environment",
