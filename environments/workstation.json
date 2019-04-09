@@ -23,7 +23,7 @@
     "poise": "= 2.8.1",
     "poise-languages": "= 2.1.2",
     "poise-python": "= 1.7.0",
-    "postfix": "= 5.3.0",
+    "postfix": "= 5.3.1",
     "resolver": "= 2.0.1",
     "sudo": "= 2.9.0",
     "systemd": "= 2.0.0",
