@@ -52,7 +52,7 @@
     "varnish": "= 3.3.1",
     "yum": "= 3.11.0",
     "yum-centos": "= 0.4.11",
-    "yum-epel": "= 0.7.0",
+    "yum-epel": "= 3.3.0",
     "yum-fedora": "= 0.3.4",
     "yum-ius": "= 3.0.0",
     "yum-kernel-osuosl": "= 2.0.0",
