@@ -5,7 +5,7 @@
     "apache2": "= 3.3.1",
     "apt": "= 5.1.0",
     "ark": "= 3.1.0",
-    "base": "= 3.4.5",
+    "base": "= 3.4.6",
     "build-essential": "= 8.2.1",
     "ceph-chef": "= 1.1.27",
     "certificate": "= 1.0.0",
