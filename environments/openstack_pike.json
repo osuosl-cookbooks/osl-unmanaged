@@ -85,6 +85,7 @@
     "osl-dhcp": "= 1.0.3",
     "osl-dns": "= 2.0.2",
     "osl-docker": "= 2.2.2",
+    "osl-fail2ban": "= 1.0.0",
     "osl-git": "= 1.0.2",
     "osl-gitlab": "= 1.0.3",
     "osl-grafana": "= 1.0.1",
