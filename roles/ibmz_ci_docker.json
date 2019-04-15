@@ -2,7 +2,8 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[firewall::osl_only]",
-    "recipe[osl-docker::ibmz_ci]"
+    "recipe[osl-docker::ibmz_ci]",
+    "recipe[osl-jenkins]"
   ],
   "chef_type": "role",
   "override_attributes": {},
