@@ -19,7 +19,7 @@
     "openssh": "= 1.4.0",
     "osl-acme": "= 2.0.0",
     "osl-docker": "= 2.3.1",
-    "osl-fail2ban": "= 1.0.1",
+    "osl-fail2ban": "= 1.0.2",
     "osl-postfix": "= 1.0.1",
     "poise": "= 2.8.1",
     "poise-languages": "= 2.1.2",
