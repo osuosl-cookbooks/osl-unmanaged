@@ -206,6 +206,11 @@
     }
   },
   "override_attributes": {
+    "base": {
+      "denyhosts": {
+        "uninstall": true
+      }
+    },
     "omnibus_updater": {
       "version": "12.18.31"
     }
