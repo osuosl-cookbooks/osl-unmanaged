@@ -6,7 +6,6 @@
     "recipe[base::mailhandler]",
     "recipe[base::rhsm]",
     "recipe[base::packages]",
-    "recipe[base::denyhosts]",
     "recipe[osl-fail2ban]",
     "recipe[base::environment]",
     "recipe[osl-munin::client]"
