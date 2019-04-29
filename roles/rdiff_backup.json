@@ -19,7 +19,6 @@
               "/var/cache",
               "/var/cfengine",
               "/var/chef",
-              "/var/lib/denyhosts",
               "/var/lib/slocate",
               "/var/lib/mysql",
               "/var/log",

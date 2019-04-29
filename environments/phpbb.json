@@ -87,11 +87,6 @@
     }
   },
   "override_attributes": {
-    "base": {
-      "denyhosts": {
-        "uninstall": true
-      }
-    },
     "openssh": {
       "server": {
         "banner": "none"
