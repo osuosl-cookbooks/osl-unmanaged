@@ -71,7 +71,7 @@
     "openvpn": "= 3.0.1",
     "osl-apache": "= 2.11.6",
     "osl-ceph": "= 2.2.1",
-    "osl-docker": "= 2.3.1",
+    "osl-docker": "= 2.4.0",
     "osl-jenkins": "= 2.2.3",
     "osl-fail2ban": "= 1.0.2",
     "osl-keepalived": "= 0.2.4",
