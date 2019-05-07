@@ -60,7 +60,7 @@
     "yum-plugin-versionlock": "= 0.2.1",
     "yum-repoforge": "= 2.0.1",
     "yumgroup": "= 0.6.0",
-    "proj-phpbb": "= 4.0.4",
+    "proj-phpbb": "= 4.0.5",
     "rdiff-backup": "= 3.0.2"
   },
   "default_attributes": {
