@@ -1,7 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[osl-openstack::upgrade]"
+    "recipe[osl-openstack]"
   ],
   "chef_type": "role",
   "override_attributes": {
@@ -49,6 +49,17 @@
           "DEFAULT": {
             "disk_allocation_ratio": 5,
             "allow_resize_to_same_host": true
+          }
+        }
+      },
+      "network": {
+        "plugins": {
+          "linuxbridge": {
+            "conf": {
+              "DEFAULT": {
+                "debug": true
+              }
+            }
           }
         }
       }
