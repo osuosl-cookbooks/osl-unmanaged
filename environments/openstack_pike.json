@@ -31,7 +31,7 @@
     "dpkg_autostart": "= 0.2.0",
     "erlang": "= 7.0.0",
     "etcd": "= 3.2.5",
-    "firewall": "= 5.1.7",
+    "firewall": "= 5.2.0",
     "git": "= 9.0.1",
     "gitlab_omnibus": "= 1.2.0",
     "grafana": "= 3.0.1",
