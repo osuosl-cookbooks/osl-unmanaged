@@ -83,7 +83,7 @@
     "osl-backup": "= 1.0.4",
     "osl-ceph": "= 3.0.0",
     "osl-dhcp": "= 1.0.3",
-    "osl-dns": "= 2.0.2",
+    "osl-dns": "= 2.0.3",
     "osl-docker": "= 2.4.1",
     "osl-fail2ban": "= 1.0.2",
     "osl-git": "= 1.0.2",
