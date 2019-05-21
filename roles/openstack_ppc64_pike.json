@@ -47,20 +47,8 @@
       "compute": {
         "conf": {
           "DEFAULT": {
-            "debug": true,
             "disk_allocation_ratio": 5,
             "allow_resize_to_same_host": true
-          }
-        }
-      },
-      "network": {
-        "plugins": {
-          "linuxbridge": {
-            "conf": {
-              "DEFAULT": {
-                "debug": true
-              }
-            }
           }
         }
       }
