@@ -14,6 +14,7 @@
     "chef-sugar": "= 4.0.0",
     "cluster-search": "= 1.5.0",
     "compat_resource": "= 12.19.0",
+    "crowd": "= 1.0.1",
     "build-essential": "= 8.1.1",
     "docker": "= 4.9.2",
     "git": "= 9.0.1",
@@ -60,7 +61,7 @@
     "yum-plugin-versionlock": "= 0.2.1",
     "yum-repoforge": "= 2.0.1",
     "yumgroup": "= 0.6.0",
-    "proj-phpbb": "= 4.0.6",
+    "proj-phpbb": "= 4.0.7",
     "rdiff-backup": "= 3.0.2"
   },
   "default_attributes": {
