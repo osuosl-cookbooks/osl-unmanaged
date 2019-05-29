@@ -1,3 +1,5 @@
+require 'mixlib/shellout'
+
 task default: ['test']
 
 desc 'Default gate tests to run'
@@ -22,7 +24,7 @@ end
 
 desc 'Destroy machines'
 task :destroy_machines do
-  run_command("chef-client #{client_options} #{PROV_PATH}/destroy_all.rb")
+  run_command('terraform destroy -auto-approve')
 end
 
 desc 'Vendor your cookbooks/'
@@ -31,12 +33,28 @@ task :berks_vendor do
   run_command('berks vendor cookbooks')
 end
 
+desc 'Upload data to chef-zero server'
+task knife_upload: [:berks_vendor, :chef_zero] do
+  if ENV['CHEF_SERVER'].nil?
+    chef_zero = Mixlib::ShellOut.new('terraform output chef_zero')
+    chef_zero.run_command
+    chef_zero.error!
+    ENV['CHEF_SERVER'] = chef_zero.stdout.chomp
+  end
+  run_command('knife upload . --force -c .chef/knife.rb')
+end
+
 desc 'Create Chef Key'
 task :create_key do
   unless File.exist?('.chef/validator.pem')
     sh %(chef exec ruby -e "require 'openssl';
 File.binwrite('.chef/validator.pem', OpenSSL::PKey::RSA.new(2048).to_pem)")
   end
+end
+
+desc 'Chef-zero VM'
+task :chef_zero do
+  run_command('terraform apply -auto-approve')
 end
 
 desc 'OpenStack HAProxy'
@@ -53,8 +71,8 @@ task openstack_x86:
     ]
 
 desc 'OpenStack Staging Controller (x86)'
-task openstack_x86_controller: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_x86_controller.rb")
+task openstack_x86_controller: [:create_key, :chef_zero] do
+  run_command()
 end
 
 desc 'OpenStack Staging Compute (x86)'

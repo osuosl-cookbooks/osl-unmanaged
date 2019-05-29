@@ -1,5 +1,5 @@
 {
-  "id": "openpower8-osuosl-bak",
+  "id": "openpower4-osuosl-bak",
   "resources": [
     {
       "resource": "osl_ifconfig",
