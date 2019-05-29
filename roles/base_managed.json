@@ -29,7 +29,6 @@
     "nagios": {
       "multi_environment_monitoring": true,
       "monitored_environments": [
-        "openstack_ocata",
         "openstack_pike",
         "phpbb",
         "production"
@@ -37,7 +36,6 @@
     },
     "munin": {
       "multi_environment_monitoring": [
-        "openstack_ocata",
         "openstack_pike",
         "phpbb",
         "production"
