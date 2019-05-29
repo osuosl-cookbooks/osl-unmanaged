@@ -41,6 +41,9 @@
         ":Sessions"
       ]
     },
+    "timezone_iii": {
+      "timezone": "US/Pacific"
+    },
     "workstation": {
       "python_packages": [
         "climesync",
