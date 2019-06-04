@@ -142,8 +142,13 @@ task openstack_ppc64_compute: [:create_key, :chef_zero, :chef_server_env] do
 end
 
 desc 'Ganeti'
-task ganeti: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/ganeti.rb")
+task ganeti: [:create_key, :chef_zero, :chef_server_env] do
+  run_list = %w(
+    role[base_managed]
+    recipe[osl-ganeti::osuosl_test]
+  )
+  run_command("knife bootstrap gtest2.osuosl.bak #{bootstrap_options} -r #{run_list.join(',')}")
+  run_command("knife bootstrap gtest3.osuosl.bak #{bootstrap_options} -r #{run_list.join(',')}")
 end
 
 desc 'Blow everything away'
