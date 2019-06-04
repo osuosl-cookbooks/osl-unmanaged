@@ -141,43 +141,9 @@ task openstack_ppc64_compute: [:create_key, :chef_zero, :chef_server_env] do
   run_command("knife bootstrap openpower8.osuosl.bak #{bootstrap_options} -j #{attributes} -r #{run_list.join(',')}")
 end
 
-desc 'DNS Master/Slave/Jenkins'
-task dns_all:
-    [
-      :create_key,
-      :dns_master,
-      :dns_slave,
-      :dns_jenkins,
-    ]
-
-desc 'DNS Master'
-task dns_master: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/dns_master.rb")
-end
-
-desc 'DNS Slave'
-task dns_slave: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/dns_slave.rb")
-end
-
-desc 'DNS Jenkins'
-task dns_jenkins: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/dns_jenkins.rb")
-end
-
-desc 'Omnibus'
-task omnibus: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/omnibus.rb")
-end
-
 desc 'Ganeti'
 task ganeti: [:create_key] do
   run_command("chef-client #{client_options} #{PROV_PATH}/ganeti.rb")
-end
-
-desc 'Ceph (ppc64)'
-task ceph_ppc64: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/ceph_ppc64.rb")
 end
 
 desc 'Blow everything away'
