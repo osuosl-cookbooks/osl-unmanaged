@@ -26,6 +26,8 @@ Berksfile.lock
 /provisioning/clients
 /provisioning/vendor
 /provisioning/Berksfile.lock
+/provisioning/terraform.tfstate*
+/provisioning/.terraform
 
 # allow local berkshelf settings
 .berkshelf/
