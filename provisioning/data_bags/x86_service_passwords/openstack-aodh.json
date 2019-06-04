@@ -1,0 +1,10 @@
+{
+  "id": "openstack-aodh",
+  "openstack-aodh": {
+    "encrypted_data": "bdK2Z9ONnFgU7ADCufNgLrqN5RgKKm8fpnN6owz3Yc4u\n",
+    "iv": "y3b/2kP/avCZJ76C\n",
+    "auth_tag": "iB8Wxx4WXiim6F3NczaYKg==\n",
+    "version": 3,
+    "cipher": "aes-256-gcm"
+  }
+}

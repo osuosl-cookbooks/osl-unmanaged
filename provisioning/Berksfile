@@ -19,7 +19,7 @@ cookbook 'osl-ganeti', git: 'git@github.com:osuosl-cookbooks/osl-ganeti'
 cookbook 'osl-letsencrypt-boulder-server', git: 'git@github.com:osuosl-cookbooks/osl-letsencrypt-boulder-server'
 cookbook 'osl-munin', git: 'git@github.com:osuosl-cookbooks/osl-munin'
 cookbook 'osl-nrpe', git: 'git@github.com:osuosl-cookbooks/osl-nrpe'
-cookbook 'osl-openstack', git: 'git@github.com:osuosl-cookbooks/osl-openstack', branch: 'stable/pike'
+cookbook 'osl-openstack', git: 'git@github.com:osuosl-cookbooks/osl-openstack', branch: 'stable/queens'
 cookbook 'osl-php', git: 'git@github.com:osuosl-cookbooks/osl-php'
 cookbook 'osl-rsync', git: 'git@github.com:osuosl-cookbooks/osl-rsync'
 cookbook 'osl-selinux', git: 'git@github.com:osuosl-cookbooks/osl-selinux'
@@ -31,18 +31,18 @@ cookbook 'yum-qemu-ev', git: 'git@github.com:osuosl-cookbooks/yum-qemu-ev.git'
 cookbook 'provision_test', path: 'test/cookbooks/provision_test'
 
 # WIP patches
-%w(
-  compute
-).each do |cb|
-  cookbook "openstack-#{cb}",
-           github: "osuosl-cookbooks/cookbook-openstack-#{cb}",
-           branch: 'stable/pike'
-end
+# %w(
+# ).each do |cb|
+#   cookbook "openstack-#{cb}",
+#            github: "osuosl-cookbooks/cookbook-openstack-#{cb}",
+#            branch: 'stable/pike'
+# end
 
 # Openstack deps
 %w(
   block-storage
   common
+  compute
   dashboard
   identity
   image
@@ -55,7 +55,7 @@ end
 ).each do |cb|
   cookbook "openstack-#{cb}",
            github: "openstack/cookbook-openstack-#{cb}",
-           branch: 'stable/pike'
+           branch: 'stable/queens'
 end
 
 metadata
