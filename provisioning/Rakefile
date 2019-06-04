@@ -14,7 +14,6 @@ def run_command(command)
 end
 
 PROV_PATH = '.'.freeze
-client_options = '--force-formatter -z --local-mode --listen '
 bootstrap_options = '-x osuadmin --sudo --bootstrap-version 13.8.5'
 
 task :destroy_all do
