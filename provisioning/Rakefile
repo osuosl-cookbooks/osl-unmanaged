@@ -97,7 +97,7 @@ task openstack_x86_compute: [:create_key, :chef_zero, :chef_server_env] do
     recipe[osl-openstack::compute]
   )
   run_command("knife bootstrap otest2.osuosl.bak #{bootstrap_options} -j #{attributes} -r #{run_list.join(',')}")
-  run_command("knife bootstrap otest2.osuosl.bak #{bootstrap_options} -j #{attributes} -r #{run_list.join(',')}")
+  run_command("knife bootstrap otest3.osuosl.bak #{bootstrap_options} -j #{attributes} -r #{run_list.join(',')}")
 end
 
 desc 'OpenStack Staging (ppc64)'
