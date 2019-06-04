@@ -15,6 +15,7 @@ end
 
 PROV_PATH = '.'.freeze
 client_options = '--force-formatter -z --local-mode --listen '
+bootstrap_options = '-x osuadmin --sudo --bootstrap-version 13.8.5'
 
 task :destroy_all do
   Rake::Task[:destroy_machines].invoke
@@ -33,14 +34,16 @@ task :berks_vendor do
   run_command('berks vendor cookbooks')
 end
 
+desc 'Set CHEF_SERVER env var'
+task :chef_server_env do
+  chef_zero = Mixlib::ShellOut.new('terraform output chef_zero')
+  chef_zero.run_command
+  chef_zero.error!
+  ENV['CHEF_SERVER'] = chef_zero.stdout.chomp
+end
+
 desc 'Upload data to chef-zero server'
-task knife_upload: [:berks_vendor, :chef_zero] do
-  if ENV['CHEF_SERVER'].nil?
-    chef_zero = Mixlib::ShellOut.new('terraform output chef_zero')
-    chef_zero.run_command
-    chef_zero.error!
-    ENV['CHEF_SERVER'] = chef_zero.stdout.chomp
-  end
+task knife_upload: [:berks_vendor, :chef_zero, :chef_server_env] do
   run_command('knife upload . --force -c .chef/knife.rb')
 end
 
@@ -57,11 +60,6 @@ task :chef_zero do
   run_command('terraform apply -auto-approve')
 end
 
-desc 'OpenStack HAProxy'
-task openstack_haproxy: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_haproxy.rb")
-end
-
 desc 'OpenStack Staging (x86)'
 task openstack_x86:
     [
@@ -71,13 +69,36 @@ task openstack_x86:
     ]
 
 desc 'OpenStack Staging Controller (x86)'
-task openstack_x86_controller: [:create_key, :chef_zero] do
-  run_command()
+task openstack_x86_controller: [:create_key, :chef_zero, :chef_server_env] do
+  attributes = '\'{ "ceph": { "fsid-secret": "ae3f1d03-bacd-4a90-b869-1a4fabb107f2" } }\''
+  run_list = %w(
+    role[base_managed]
+    role[ceph]
+    role[ceph_mon]
+    role[ceph_mgr]
+    role[ceph_osd]
+    role[ceph_setup]
+    role[openstack_provisioning]
+    recipe[osl-openstack::ops_database]
+    recipe[osl-openstack::controller]
+    role[openstack_cinder]
+    recipe[provision_test::orchestration]
+    recipe[provision_test::tempest_x86]
+    recipe[provision_test::tempest]
+  )
+  run_command("knife bootstrap otest-controller.osuosl.org #{bootstrap_options} -j #{attributes} -r #{run_list.join(',')}")
 end
 
 desc 'OpenStack Staging Compute (x86)'
-task openstack_x86_compute: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_x86_compute.rb")
+task openstack_x86_compute: [:create_key, :chef_zero, :chef_server_env] do
+  attributes = '\'{ "ceph": { "fsid-secret": "ae3f1d03-bacd-4a90-b869-1a4fabb107f2" } }\''
+  run_list = %w(
+    role[base_managed]
+    role[openstack_provisioning]
+    recipe[osl-openstack::compute]
+  )
+  run_command("knife bootstrap otest2.osuosl.bak #{bootstrap_options} -j #{attributes} -r #{run_list.join(',')}")
+  run_command("knife bootstrap otest2.osuosl.bak #{bootstrap_options} -j #{attributes} -r #{run_list.join(',')}")
 end
 
 desc 'OpenStack Staging (ppc64)'
@@ -89,13 +110,35 @@ task openstack_ppc64:
     ]
 
 desc 'OpenStack Staging Controller (ppc64)'
-task openstack_ppc64_controller: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_ppc64_controller.rb")
+task openstack_ppc64_controller: [:create_key, :chef_zero, :chef_server_env] do
+  attributes = '\'{ "ceph": { "fsid-secret": "ae3f1d03-bacd-4a90-b869-1a4fabb107f2" } }\''
+  run_list = %w(
+    role[base_managed]
+    role[ceph]
+    role[ceph_mon]
+    role[ceph_mgr]
+    role[ceph_osd]
+    role[ceph_setup]
+    role[openstack_provisioning_ppc64]
+    recipe[osl-openstack::ops_database]
+    recipe[osl-openstack::controller]
+    role[openstack_cinder]
+    recipe[provision_test::orchestration]
+    recipe[provision_test::tempest_ppc64]
+    recipe[provision_test::tempest]
+  )
+  run_command("knife bootstrap otest-openpower-controller.osuosl.org #{bootstrap_options} -j #{attributes} -r #{run_list.join(',')}")
 end
 
 desc 'OpenStack Staging Compute (ppc64)'
-task openstack_ppc64_compute: [:create_key] do
-  run_command("chef-client #{client_options} #{PROV_PATH}/openstack_ppc64_compute.rb")
+task openstack_ppc64_compute: [:create_key, :chef_zero, :chef_server_env] do
+  attributes = '\'{ "ceph": { "fsid-secret": "ae3f1d03-bacd-4a90-b869-1a4fabb107f2" } }\''
+  run_list = %w(
+    role[base_managed]
+    role[openstack_provisioning_ppc64]
+    recipe[osl-openstack::compute]
+  )
+  run_command("knife bootstrap openpower8.osuosl.bak #{bootstrap_options} -j #{attributes} -r #{run_list.join(',')}")
 end
 
 desc 'DNS Master/Slave/Jenkins'
