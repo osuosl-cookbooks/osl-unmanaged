@@ -8,6 +8,7 @@ version          '0.0.1'
 
 depends 'base'
 depends 'firewall'
+depends 'osl-fail2ban'
 depends 'osl-ganeti'
 depends 'osl-openstack'
 depends 'osl-selinux'

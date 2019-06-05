@@ -4,6 +4,7 @@
     "recipe[base::resolver]",
     "recipe[base::mailhandler]",
     "recipe[base::packages]",
+    "recipe[osl-fail2ban]",
     "recipe[base::environment]",
     "recipe[base::users]",
     "recipe[provision_test::users]"
