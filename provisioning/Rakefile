@@ -69,7 +69,7 @@ task openstack_x86:
 
 desc 'OpenStack Staging Controller (x86)'
 task openstack_x86_controller: [:create_key, :chef_zero, :chef_server_env] do
-  attributes = '\'{ "ceph": { "fsid-secret": "ae3f1d03-bacd-4a90-b869-1a4fabb107f2" } }\''
+  attributes = '\'{ "ceph": { "fsid-secret": "ae3f1d03-bacd-4a90-b869-1a4fabb107f2" }, "osl-openstack": { "node_type": "controller" } }\''
   run_list = %w(
     role[base_managed]
     role[ceph]
@@ -110,7 +110,7 @@ task openstack_ppc64:
 
 desc 'OpenStack Staging Controller (ppc64)'
 task openstack_ppc64_controller: [:create_key, :chef_zero, :chef_server_env] do
-  attributes = '\'{ "ceph": { "fsid-secret": "ae3f1d03-bacd-4a90-b869-1a4fabb107f2" } }\''
+  attributes = '\'{ "ceph": { "fsid-secret": "ae3f1d03-bacd-4a90-b869-1a4fabb107f2" }, "osl-openstack": { "node_type": "controller" } }\''
   run_list = %w(
     role[base_managed]
     role[ceph]
