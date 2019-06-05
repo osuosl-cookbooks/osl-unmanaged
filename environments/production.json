@@ -90,7 +90,7 @@
     "osl-imap": "= 1.0.2",
     "osl-jenkins": "= 2.2.7",
     "osl-keepalived": "= 0.2.4",
-    "osl-mailman": "= 1.0.1",
+    "osl-mailman": "= 1.0.2",
     "osl-memcached": "= 2.0.1",
     "osl-mirror": "= 1.0.3",
     "osl-munin": "= 2.0.1",
