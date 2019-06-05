@@ -96,7 +96,7 @@
     "osl-munin": "= 2.0.1",
     "osl-mysql": "= 2.0.6",
     "osl-netboot": "= 2.0.6",
-    "osl-nfs": "= 1.0.1",
+    "osl-nfs": "= 1.0.2",
     "osl-nodes": "= 1.5.3",
     "osl-nrpe": "= 3.0.9",
     "osl-openstack": "= 6.0.3",
