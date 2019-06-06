@@ -33,6 +33,7 @@
     "etcd": "= 3.2.5",
     "firewall": "= 5.2.2",
     "git": "= 9.0.1",
+    "gitlab-ci-runner": "= 1.5.0",
     "gitlab_omnibus": "= 1.2.0",
     "grafana": "= 3.0.1",
     "haproxy": "= 3.0.2",

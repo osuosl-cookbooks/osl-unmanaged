@@ -35,6 +35,8 @@
     "ganeti": "= 2.0.0",
     "ganeti_webmgr": "= 1.0.0",
     "git": "= 9.0.0",
+    "gitlab-ci-runner": "= 1.5.0",
+    "gitlab_omnibus": "= 1.2.0",
     "glusterfs": "= 0.1.1",
     "golang": "= 1.7.0",
     "grafana": "= 3.0.1",
