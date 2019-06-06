@@ -87,7 +87,7 @@
     "osl-docker": "= 2.4.1",
     "osl-fail2ban": "= 1.0.2",
     "osl-git": "= 1.0.2",
-    "osl-gitlab": "= 1.0.3",
+    "osl-gitlab": "= 1.1.0",
     "osl-grafana": "= 1.0.1",
     "osl-haproxy": "= 4.2.5",
     "osl-jenkins": "= 2.2.7",
