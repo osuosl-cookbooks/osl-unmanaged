@@ -30,6 +30,7 @@
       "multi_environment_monitoring": true,
       "monitored_environments": [
         "openstack_pike",
+        "openstack_queens",
         "phpbb",
         "production"
         ]
