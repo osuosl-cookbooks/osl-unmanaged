@@ -1,6 +1,6 @@
 {
-  "name": "openstack_queen",
-  "description": "Openstack Queen Environment",
+  "name": "openstack_queens",
+  "description": "Openstack Queens Environment",
   "cookbook_versions": {
     "acme": "= 4.0.0",
     "apache2": "= 4.0.0",
