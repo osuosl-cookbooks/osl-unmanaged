@@ -1,5 +1,6 @@
 {
   "name": "_default",
   "description": "The default Chef environment",
-  "cookbook_versions": {}
+  "cookbook_versions": {
+  }
 }
