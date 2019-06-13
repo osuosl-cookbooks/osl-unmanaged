@@ -90,7 +90,7 @@
     "osl-grafana": "= 1.0.1",
     "osl-haproxy": "= 4.2.5",
     "osl-imap": "= 1.0.2",
-    "osl-jenkins": "= 2.2.8",
+    "osl-jenkins": "= 2.2.9",
     "osl-keepalived": "= 0.2.4",
     "osl-mailman": "= 1.0.3",
     "osl-memcached": "= 2.0.1",
