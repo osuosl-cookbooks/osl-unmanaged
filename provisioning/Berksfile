@@ -34,7 +34,7 @@ cookbook 'provision_test', path: 'test/cookbooks/provision_test'
 # ).each do |cb|
 #   cookbook "openstack-#{cb}",
 #            github: "osuosl-cookbooks/cookbook-openstack-#{cb}",
-#            branch: 'stable/pike'
+#            branch: 'stable/queens'
 # end
 
 # Openstack deps

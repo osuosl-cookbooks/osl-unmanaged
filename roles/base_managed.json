@@ -29,7 +29,6 @@
     "nagios": {
       "multi_environment_monitoring": true,
       "monitored_environments": [
-        "openstack_pike",
         "openstack_queens",
         "phpbb",
         "production"
@@ -37,7 +36,7 @@
     },
     "munin": {
       "multi_environment_monitoring": [
-        "openstack_pike",
+        "openstack_queens",
         "phpbb",
         "production"
       ]
