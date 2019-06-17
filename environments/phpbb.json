@@ -7,7 +7,7 @@
     "acme": "= 4.0.0",
     "apache2": "= 4.0.0",
     "apt": "= 7.1.1",
-    "base": "= 3.6.1",
+    "base": "= 3.6.2",
     "camo": "= 0.9.3",
     "chef-client": "= 11.0.5",
     "chef_client_updater": "= 3.5.1",
