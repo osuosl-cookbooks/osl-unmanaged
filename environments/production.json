@@ -76,7 +76,7 @@
     "osl-acme": "= 2.0.0",
     "osl-admin": "= 1.0.0",
     "osl-apache": "= 3.0.3",
-    "osl-app": "= 2.0.7",
+    "osl-app": "= 2.0.8",
     "osl-backup": "= 1.0.4",
     "osl-ceph": "= 3.0.0",
     "osl-dhcp": "= 1.0.3",
