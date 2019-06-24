@@ -166,10 +166,5 @@
         "140.211.167.157"
       ]
     }
-  },
-  "override_attributes": {
-    "omnibus_updater": {
-      "version": "13.8.5"
-    }
   }
 }
