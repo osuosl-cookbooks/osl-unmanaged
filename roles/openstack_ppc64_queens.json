@@ -72,6 +72,7 @@
       }
     },
     "osl-openstack": {
+      "cluster_role": "openstack_ppc64_queens",
       "ceph": true,
       "ceph_item": "openstack_ppc64",
       "database_suffix": "ppc64",
