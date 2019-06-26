@@ -66,6 +66,7 @@
       }
     },
     "osl-openstack": {
+      "cluster_role": "openstack_x86_queens",
       "ceph": true,
       "ceph_item": "openstack_x86",
       "database_suffix": "x86",
