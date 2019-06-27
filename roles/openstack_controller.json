@@ -17,6 +17,7 @@
     },
     "run_list": [
         "recipe[osl-openstack::controller]",
-        "role[apache]"
+        "role[apache]",
+        "recipe[osl-prometheus::memcached]"
     ]
 }
