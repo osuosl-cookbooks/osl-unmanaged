@@ -95,7 +95,7 @@
     "osl-mailman": "= 1.0.7",
     "osl-memcached": "= 2.0.2",
     "osl-mirror": "= 1.0.3",
-    "osl-munin": "= 2.0.1",
+    "osl-munin": "= 2.0.2",
     "osl-mysql": "= 2.0.6",
     "osl-nagios": "= 3.0.1",
     "osl-netboot": "= 2.0.6",
