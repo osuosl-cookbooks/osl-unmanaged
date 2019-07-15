@@ -10,6 +10,9 @@
   "default_attributes": {
     "rdiff-backup": {
       "client": {
+        "ssh_keys": [
+          "no-port-forwarding,no-X11-forwarding,no-agent-forwarding,command=\"sudo rdiff-backup --server --restrict-read-only /\" ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAta0KxHwwq7mJzFCSttWuRx5XcA2iuMynl1oPbNIRGjBnPDMwbd7mGpN4AspOmXNtYC/Tsv2wQ7t7uwwHhF5saUiIf4OjjWJZcf24oJVTIi/d/UG77RvDJcWb98c3KxUceGveDWixF/CTokmVlzbh22HuGfis9IhToDVmc/F7F3EDUo2PEjz2a6w04VMt/ZZrD9qMdQWEZGizXgnhAxQ8+EjYBs36zJm9Wg6wsHvFGniFZ2G3DrUyv+4ipzQjbEmdN03/1xUYTkKW9IxnBoS/fg/z4z/thCAqwjIOiWp5jcCzp7m+9DreRNo8DgKGVd+o6JPOG6I8iZiMjlpPbI0vzUl2KvcX67nTGSwLaw8+9m+atjPURf9cv+rzaWChnA9quOTgpohJIoZo0bkcbJELJe01dILhJF8oja7oBg/5LsJBEGBWT9yvKe4ju5b9s2erF1D7KFXptar8+0//Ep1BIgHvqBewDL1na2MaspmJtYzXyUZSV7PS5ZMbsRW4rVftVPHty6DOr0ckg147HQ46LuZRt+4vCCzQQPNrHBF8oCUx+qMl1Ac4c6q2U6gw1K8h6xJprJK1eDSMRXG8/m00kCg95+hbslP1Gc7VDRDw2tbAl3BFuiwJXMXiGuMObqcW9otKeNLtGFDO3YQvAUJOvNc1tqNswcGx0tC8+ujGYZ8= rdiff-backup-server@backup3.osuosl.org"
+        ],
         "jobs": {
           "default": {
             "user": "rdiff-backup-client",
