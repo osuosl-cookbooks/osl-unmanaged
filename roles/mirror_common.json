@@ -1,11 +1,17 @@
 {
-    "chef_type": "role", 
-    "override_attributes": {}, 
-    "description": "OSL Common Mirror Role", 
-    "env_run_lists": {}, 
-    "json_class": "Chef::Role", 
-    "name": "mirror_common", 
-    "default_attributes": {}, 
+    "chef_type": "role",
+    "override_attributes": {},
+    "description": "OSL Common Mirror Role",
+    "env_run_lists": {},
+    "json_class": "Chef::Role",
+    "name": "mirror_common",
+    "default_attributes": {
+      "osl-mirror": {
+        "trigger_ssh_key": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDamohFYmvwxiCe1O1W7wdnXLZD6HuNfUeXgFxPHQT2cGhflfZwsJN0EbunNjY2gXClFbD3NzAw5WmmWUSlV4bIN8xCYKrkcoObmGOjBnVXMMj2OO4qB6AveoNoenMeAz1AC4UkmZKyyfasKB1Zpck2sH2dotCoUubhVPYyD41rkWIMoMWX6v4m29nCMPZ9wxmAM6ixwoCNZKr0mZD7mNJVbQKde6kTQSn5BMZNvvA/5SK/4CTkc+NRq51x07PXR2WM4t7PdqqxxroH6lfjZyuxcZzNjOPgPBU+2CAH7gXHAM/y7Bmr07F2TfgQWobTJ2n46WRYD3fnYZWESdq4bT7N trigger@ftp-osl"
+        ]
+      }
+    },
     "run_list": [
       "recipe[osl-mirror]",
       "recipe[osl-mirror::ftpsync]",
