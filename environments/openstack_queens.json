@@ -79,7 +79,7 @@
     "osl-git": "= 1.0.2",
     "osl-gitlab": "= 1.1.1",
     "osl-haproxy": "= 4.2.7",
-    "osl-jenkins": "= 2.2.9",
+    "osl-jenkins": "= 2.3.0",
     "osl-letsencrypt-boulder-server": "= 3.0.1",
     "osl-munin": "= 2.0.2",
     "osl-mysql": "= 2.0.6",
