@@ -109,7 +109,7 @@
     "osl-postgresql": "= 1.0.3",
     "osl-prometheus": "= 1.4.0",
     "osl-rancid": "= 1.0.6",
-    "osl-rsync": "= 1.0.3",
+    "osl-rsync": "= 1.0.4",
     "osl-selinux": "= 1.0.1",
     "osl-slapd": "= 1.0.0",
     "osl-sudo": "= 0.1.0",
