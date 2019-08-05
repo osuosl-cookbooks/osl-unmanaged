@@ -103,7 +103,7 @@
     "osl-nginx": "= 3.0.1",
     "osl-nodejs": "= 1.0.0",
     "osl-nodes": "= 1.5.3",
-    "osl-nrpe": "= 3.0.9",
+    "osl-nrpe": "= 3.0.10",
     "osl-php": "= 3.2.1",
     "osl-postfix": "= 1.0.2",
     "osl-postgresql": "= 1.0.3",
