@@ -86,7 +86,7 @@
     "osl-nfs": "= 1.0.2",
     "osl-nrpe": "= 3.0.11",
     "osl-openstack": "= 7.0.3",
-    "osl-php": "= 3.2.1",
+    "osl-php": "= 4.0.0",
     "osl-postfix": "= 1.0.2",
     "osl-postgresql": "= 1.0.3",
     "osl-prometheus": "= 1.4.0",
