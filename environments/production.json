@@ -87,7 +87,7 @@
     "osl-ganeti": "= 2.0.32",
     "osl-git": "= 1.0.2",
     "osl-gitlab": "= 1.1.1",
-    "osl-grafana": "= 1.0.1",
+    "osl-grafana": "= 1.0.2",
     "osl-haproxy": "= 4.2.7",
     "osl-imap": "= 1.0.2",
     "osl-jenkins": "= 2.3.0",
