@@ -130,6 +130,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-docker.git
 [osuosl-cookbooks/osl-fail2ban]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-fail2ban.git
 
+[osuosl-cookbooks/osl-ganeti]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-ganeti.git
+
 [osuosl-cookbooks/osl-git]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-git.git
 
