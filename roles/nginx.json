@@ -1,7 +1,6 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[base::http]",
     "recipe[firewall::http]",
     "recipe[osl-nginx::mon]"
   ],
