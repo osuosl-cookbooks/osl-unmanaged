@@ -39,7 +39,7 @@
     "osl-mysql": "= 2.0.6",
     "osl-php": "= 3.2.1",
     "osl-postfix": "= 1.0.2",
-    "osl-prometheus": "= 1.4.2",
+    "osl-prometheus": "= 1.5.0",
     "osl-selinux": "= 1.0.1",
     "osl-syslog": "= 2.1.2",
     "php": "= 4.5.0",
