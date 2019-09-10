@@ -4,7 +4,6 @@
     "recipe[base]",
     "recipe[osl-postfix]",
     "recipe[base::mailhandler]",
-    "recipe[base::rhsm]",
     "recipe[base::packages]",
     "recipe[osl-fail2ban]",
     "recipe[base::environment]",
