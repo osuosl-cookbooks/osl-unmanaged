@@ -32,7 +32,7 @@
     "erlang": "= 1.5.4",
     "firewall": "= 6.0.1",
     "formsender": "= 0.1.6",
-    "ganeti": "= 2.0.0",
+    "ganeti": "= 2.1.0",
     "ganeti_webmgr": "= 1.0.0",
     "git": "= 9.0.0",
     "gitlab-ci-runner": "= 1.5.0",
