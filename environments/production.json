@@ -45,7 +45,7 @@
     "homebrew": "= 5.0.4",
     "htpasswd": "= 0.3.0",
     "iptables": "= 0.13.0",
-    "iptables-ng": "= 3.0.0",
+    "iptables-ng": "= 4.0.0",
     "java": "= 1.39.0",
     "jenkins": "= 6.2.1",
     "line": "= 2.2.0",
