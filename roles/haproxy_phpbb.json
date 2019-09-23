@@ -1,6 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "recipe[osl-nfs]",
     "recipe[proj-phpbb::haproxy]",
     "recipe[osl-haproxy::mon]",
     "recipe[osl-keepalived::haproxy_phpbb]"
