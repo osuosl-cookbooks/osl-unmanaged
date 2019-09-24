@@ -29,7 +29,7 @@
     "sudo": "= 2.9.0",
     "systemd": "= 2.0.0",
     "timezone_iii": "= 1.1.7",
-    "workstation": "= 5.2.2",
+    "workstation": "= 5.2.3",
     "virtualbox": "= 1.0.2",
     "yum-ius": "= 0.4.5"
   },
