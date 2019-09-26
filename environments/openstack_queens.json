@@ -74,7 +74,7 @@
     "osl-apache": "= 3.0.4",
     "osl-backup": "= 1.1.1",
     "osl-ceph": "= 3.0.0",
-    "osl-docker": "= 2.6.0",
+    "osl-docker": "= 2.6.1",
     "osl-fail2ban": "= 1.0.2",
     "osl-git": "= 1.0.2",
     "osl-gitlab": "= 1.1.1",
