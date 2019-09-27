@@ -129,7 +129,7 @@
     "postgresql": "= 6.1.4",
     "proj-deluge": "= 2.0.1",
     "proj-drupalorg": "= 0.1.8",
-    "proj-lf": "= 0.9.0",
+    "proj-lf": "= 0.10.0",
     "proj-misc": "= 1.8.1",
     "proj-ros": "= 3.3.2",
     "proj-webdav": "= 2.0.0",
