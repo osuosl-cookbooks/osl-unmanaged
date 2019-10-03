@@ -192,6 +192,7 @@
         "pep8",
         "pianobar",
         "pigz",
+        "pinentry-tty",
         "postgresql-client",
         "pulseaudio",
         "pulseaudio-module-bluetooth",
