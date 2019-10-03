@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "acme": "= 4.0.0",
     "apt": "= 7.1.1",
-    "base": "= 4.0.4",
+    "base": "= 4.0.5",
     "celery": "= 0.1.5",
     "chef-apt-docker": "= 2.0.6",
     "chef-client": "= 11.0.5",
@@ -26,7 +26,7 @@
     "poise-python": "= 1.7.0",
     "postfix": "= 5.3.1",
     "resolver": "= 2.0.1",
-    "sudo": "= 2.9.0",
+    "sudo": "= 5.4.4",
     "systemd": "= 2.0.0",
     "timezone_iii": "= 1.1.7",
     "workstation": "= 5.2.3",
