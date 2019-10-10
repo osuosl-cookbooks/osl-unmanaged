@@ -135,7 +135,7 @@
     "yum-nvidia": "= 1.0.0",
     "yum-osuosl": "= 1.0.1",
     "yum-plugin-versionlock": "= 0.2.1",
-    "yum-qemu-ev": "= 2.2.1",
+    "yum-qemu-ev": "= 2.3.0",
     "yum-repoforge": "= 3.0.0",
     "yum-scl": "= 0.2.0",
     "yumgroup": "= 0.6.0",
