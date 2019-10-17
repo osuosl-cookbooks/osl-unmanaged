@@ -42,6 +42,14 @@
     },
     "mysql": {
       "version": "5.5"
+    },
+    "yum": {
+      "ius": {
+        "exclude": "python34*"
+      },
+      "ius-archive": {
+        "exclude": "python34*"
+      }
     }
   },
   "json_class": "Chef::Role",
