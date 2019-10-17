@@ -2,7 +2,7 @@
   "name": "production",
   "description": "The production environment",
   "cookbook_versions": {
-    "acme": "= 4.0.0",
+    "acme": "= 4.1.1",
     "apache2": "= 4.0.0",
     "apt": "= 7.1.1",
     "aws": "= 2.1.1",
@@ -73,7 +73,7 @@
     "openssh": "= 1.4.0",
     "openssl": "= 8.5.5",
     "openvpn": "= 4.0.0",
-    "osl-acme": "= 2.1.0",
+    "osl-acme": "= 2.2.0",
     "osl-admin": "= 1.0.0",
     "osl-apache": "= 3.1.0",
     "osl-app": "= 2.1.0",
