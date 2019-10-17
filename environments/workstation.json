@@ -17,7 +17,7 @@
     "nodejs": "= 3.0.0",
     "ntp": "= 1.6.2",
     "openssh": "= 1.4.0",
-    "osl-acme": "= 2.1.0",
+    "osl-acme": "= 2.2.0",
     "osl-docker": "= 2.6.1",
     "osl-fail2ban": "= 1.0.2",
     "osl-postfix": "= 1.0.2",
