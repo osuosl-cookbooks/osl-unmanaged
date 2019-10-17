@@ -91,6 +91,11 @@
           "default": "ens802f0.42"
         }
       },
+      "external_networks": [
+        "public1",
+        "public2",
+        "vlan42"
+      ],
       "physical_interface_mappings": [
         {
           "name": "public1",
