@@ -16,6 +16,7 @@
     "compat_resource": "= 12.19.0",
     "crowd": "= 1.0.1",
     "build-essential": "= 8.1.1",
+    "dnf-automatic": "= 1.0.0",
     "docker": "= 4.9.2",
     "git": "= 9.0.1",
     "golang": "= 1.7.0",
