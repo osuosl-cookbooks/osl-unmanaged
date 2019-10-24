@@ -92,7 +92,7 @@
     "osl-postgresql": "= 1.0.3",
     "osl-prometheus": "= 1.5.2",
     "osl-rsync": "= 1.0.4",
-    "osl-selinux": "= 1.0.1",
+    "osl-selinux": "= 1.1.0",
     "osl-syslog": "= 2.1.2",
     "osl-vpn": "= 2.1.0",
     "packagecloud": "= 0.3.0",
