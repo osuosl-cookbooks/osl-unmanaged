@@ -1,11 +1,20 @@
 [osuosl-cookbooks/apt-osuosl]
 checkout = git clone git@github.com:osuosl-cookbooks/apt-osuosl.git
 
+[osuosl-cookbooks/aliases]
+checkout = git clone git@github.com:osuosl-cookbooks/aliases.git
+
 [osuosl-cookbooks/autofs]
 checkout = git clone git@github.com:osuosl-cookbooks/autofs.git
 
 [osuosl-cookbooks/base]
 checkout = git clone git@github.com:osuosl-cookbooks/base.git
+
+[osuosl-cookbooks/celery]
+checkout = git clone git@github.com:osuosl-cookbooks/celery.git
+
+[osuosl-cookbooks/ceph-chef]
+checkout = git clone git@github.com:osuosl-cookbooks/ceph-chef.git
 
 [osuosl-cookbooks/ceph-cookbook]
 checkout = git clone git@github.com:osuosl-cookbooks/ceph-cookbook.git
@@ -15,6 +24,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/code_generator.git
 
 [osuosl-cookbooks/cookbook-openstack-block-storage]
 checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-block-storage.git
+
+[osuosl-cookbooks/cookbook-openstack-common]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-common.git
 
 [osuosl-cookbooks/cookbook-openstack-compute]
 checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-compute.git
@@ -28,14 +40,44 @@ checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-identity
 [osuosl-cookbooks/cookbook-openstack-image]
 checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-image.git
 
-[osuosl-cookbooks/cookbook-openstack-mellanox]
-checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-mellanox.git
+[osuosl-cookbooks/cookbook-openstack-integration-test]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-integration-test.git
 
 [osuosl-cookbooks/cookbook-openstack-network]
 checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-network.git
 
+[osuosl-cookbooks/cookbook-openstack-ops-database]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-ops-database.git
+
+[osuosl-cookbooks/cookbook-openstack-ops-messaging]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-ops-messaging.git
+
+[osuosl-cookbooks/cookbook-openstack-orchestration]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-orchestration.git
+
+[osuosl-cookbooks/cookbook-openstack-telemetry]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstack-telemetry.git
+
+[osuosl-cookbooks/cookbook-openstackclient]
+checkout = git clone git@github.com:osuosl-cookbooks/cookbook-openstackclient.git
+
 [osuosl-cookbooks/crowd]
 checkout = git clone git@github.com:osuosl-cookbooks/crowd.git
+
+[osuosl-cookbooks/dnf-automatic]
+checkout = git clone git@github.com:osuosl-cookbooks/dnf-automatic.git
+
+[osuosl-cookbooks/dobc]
+checkout = git clone git@github.com:osuosl-cookbooks/dobc.git
+
+[osuosl-cookbooks/dovecot-cookbook]
+checkout = git clone git@github.com:osuosl-cookbooks/dovecot-cookbook.git
+
+[osuosl-cookbooks/etherpad-lite-cookbook]
+checkout = git clone git@github.com:osuosl-cookbooks/etherpad-lite-cookbook.git
+
+[osuosl-cookbooks/fenestra]
+checkout = git clone git@github.com:osuosl-cookbooks/fenestra.git
 
 [osuosl-cookbooks/firewall]
 checkout = git clone git@github.com:osuosl-cookbooks/firewall.git
@@ -49,8 +91,47 @@ checkout = git clone git@github.com:osuosl-cookbooks/ganeti_webmgr.git
 [osuosl-cookbooks/ibm-power]
 checkout = git clone git@github.com:osuosl-cookbooks/ibm-power.git
 
+[osuosl-cookbooks/generic-vhosts]
+checkout = git clone git@github.com:osuosl-cookbooks/generic-vhosts.git
+
+[osuosl-cookbooks/glusterfs]
+checkout = git clone git@github.com:osuosl-cookbooks/glusterfs.git
+
+[osuosl-cookbooks/haskell-platform]
+checkout = git clone git@github.com:osuosl-cookbooks/haskell-platform.git
+
+[osuosl-cookbooks/ibm-power]
+checkout = git clone git@github.com:osuosl-cookbooks/ibm-power.git
+
+[osuosl-cookbooks/maintain-dns]
+checkout = git clone git@github.com:osuosl-cookbooks/maintain-dns.git
+
+[osuosl-cookbooks/modules]
+checkout = git clone git@github.com:osuosl-cookbooks/modules-cookbook modules
+
+[osuosl-cookbooks/monitoring]
+checkout = git clone git@github.com:osuosl-cookbooks/monitoring.git
+
+[osuosl-cookbooks/munin]
+checkout = git clone git@github.com:osuosl-cookbooks/munin.git
+
+[osuosl-cookbooks/networkmanager]
+checkout = git clone git@github.com:osuosl-cookbooks/networkmanager.git
+
+[osuosl-cookbooks/nodejs-webapp]
+checkout = git clone git@github.com:osuosl-cookbooks/nodejs-webapp.git
+
+[osuosl-cookbooks/openstack-container]
+checkout = git clone git@github.com:osuosl-cookbooks/openstack-container.git
+
 [osuosl-cookbooks/openvpn]
 checkout = git clone git@github.com:osuosl-cookbooks/openvpn.git
+
+[osuosl-cookbooks/orvsd-web]
+checkout = git clone git@github.com:osuosl-cookbooks/orvsd-web.git
+
+[osuosl-cookbooks/orvsd_central]
+checkout = git clone git@github.com:osuosl-cookbooks/orvsd_central.git
 
 [osuosl-cookbooks/osl-acme]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-acme.git
@@ -79,6 +160,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-dns.git
 [osuosl-cookbooks/osl-docker]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-docker.git
 
+[osuosl-cookbooks/osl-drupal]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-drupal.git
+
 [osuosl-cookbooks/osl-fail2ban]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-fail2ban.git
 
@@ -90,6 +174,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-git.git
 
 [osuosl-cookbooks/osl-gitlab]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-gitlab.git
+
+[osuosl-cookbooks/osl-grafana]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-grafana.git
 
 [osuosl-cookbooks/osl-haproxy]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-haproxy.git
@@ -127,6 +214,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-mysql.git
 [osuosl-cookbooks/osl-nagios]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-nagios.git
 
+[osuosl-cookbooks/osl-netboot]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-netboot.git
+
 [osuosl-cookbooks/osl-nfs]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-nfs.git
 
@@ -153,6 +243,12 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-postfix.git
 
 [osuosl-cookbooks/osl-postgresql]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-postgresql.git
+
+[osuosl-cookbooks/osl-prometheus]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-prometheus.git
+
+[osuosl-cookbooks/osl-rancid]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-rancid.git
 
 [osuosl-cookbooks/osl-rsync]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-rsync.git
@@ -181,11 +277,29 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-varnish.git
 [osuosl-cookbooks/osl-vpn]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-vpn.git
 
-[osuosl-cookbooks/osl-netboot]
-checkout = git clone git@github.com:osuosl-cookbooks/osl-netboot.git
+[osuosl-cookbooks/percona]
+checkout = git clone git@github.com:osuosl-cookbooks/percona.git
+
+[osuosl-cookbooks/pgd]
+checkout = git clone git@github.com:osuosl-cookbooks/pgd.git
 
 [osuosl-cookbooks/proj-deluge]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-deluge.git
+
+[osuosl-cookbooks/production-roles]
+checkout = git clone git@github.com:osuosl-cookbooks/production-roles.git
+
+[osuosl-cookbooks/proj-ajats]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-ajats.git
+
+[osuosl-cookbooks/proj-deluge]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-deluge.git
+
+[osuosl-cookbooks/proj-drupalorg]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-drupalorg.git
+
+[osuosl-cookbooks/proj-facebook]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-facebook.git
 
 [osuosl-cookbooks/proj-lf]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-lf.git
@@ -199,6 +313,12 @@ checkout = git clone git@github.com:osuosl-cookbooks/proj-phpbb.git
 [osuosl-cookbooks/proj-ros]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-ros.git
 
+[osuosl-cookbooks/proj-rtv]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-rtv.git
+
+[osuosl-cookbooks/proj-snowdrift]
+checkout = git clone git@github.com:osuosl-cookbooks/proj-snowdrift.git
+
 [osuosl-cookbooks/proj-webdav]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-webdav.git
 
@@ -210,6 +330,39 @@ checkout = git clone git@github.com:osuosl-cookbooks/rdiff-backup.git
 
 [osuosl-cookbooks/resource_from_hash]
 checkout = git clone git@github.com:osuosl-cookbooks/resource_from_hash.git
+
+[osuosl-cookbooks/ros-docs]
+checkout = git clone git@github.com:osuosl-cookbooks/ros-docs.git
+
+[osuosl-cookbooks/ros]
+checkout = git clone git@github.com:osuosl-cookbooks/ros.git
+
+[osuosl-cookbooks/rsync]
+checkout = git clone git@github.com:osuosl-cookbooks/rsync.git
+
+[osuosl-cookbooks/sencha-sdk]
+checkout = git clone git@github.com:osuosl-cookbooks/sencha-sdk.git
+
+[osuosl-cookbooks/ssh-ldap]
+checkout = git clone git@github.com:osuosl-cookbooks/ssh-ldap.git
+
+[osuosl-cookbooks/test-cookbook]
+checkout = git clone git@github.com:osuosl-cookbooks/test-cookbook.git
+
+[osuosl-cookbooks/test-jenkins]
+checkout = git clone git@github.com:osuosl-cookbooks/test-jenkins.git
+
+[osuosl-cookbooks/timesync]
+checkout = git clone git@github.com:osuosl-cookbooks/timesync.git
+
+[osuosl-cookbooks/ucarp]
+checkout = git clone git@github.com:osuosl-cookbooks/ucarp.git
+
+[osuosl-cookbooks/whats-fresh]
+checkout = git clone git@github.com:osuosl-cookbooks/whats-fresh.git
+
+[osuosl-cookbooks/working-waterfronts]
+checkout = git clone git@github.com:osuosl-cookbooks/working-waterfronts.git
 
 [osuosl-cookbooks/workstation]
 checkout = git clone git@github.com:osuosl-cookbooks/workstation.git
