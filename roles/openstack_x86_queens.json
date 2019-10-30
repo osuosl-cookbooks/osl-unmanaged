@@ -49,7 +49,7 @@
       "compute": {
         "conf": {
           "DEFAULT": {
-            "cpu_allocation_ratio": "128.0",
+            "cpu_allocation_ratio": "1.5",
             "ram_allocation_ratio": "1.5"
           }
         }
