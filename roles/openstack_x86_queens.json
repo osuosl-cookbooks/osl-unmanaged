@@ -45,6 +45,13 @@
         "image_upload": true,
         "upload_image": {},
         "upload_images": []
+      },
+      "compute": {
+        "conf": {
+          "DEFAULT": {
+            "cpu_allocation_ratio": "32.0"
+          }
+        }
       }
     }
   },
