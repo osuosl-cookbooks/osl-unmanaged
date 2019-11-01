@@ -100,6 +100,7 @@
         }
       },
       "external_networks": [
+        "general_servers1",
         "public1",
         "public2",
         "vlan42"
@@ -107,6 +108,8 @@
       "physical_interface_mappings": [
         {
           "name": "general_servers1",
+          "subnet": "140.211.166.0/25",
+          "uuid": "e52f5435-0e93-4749-9317-ee350046a31d",
           "controller": {
             "default": "eth7"
           },
