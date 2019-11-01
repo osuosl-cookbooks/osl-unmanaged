@@ -106,6 +106,15 @@
       ],
       "physical_interface_mappings": [
         {
+          "name": "general_servers1",
+          "controller": {
+            "default": "eth7"
+          },
+          "compute": {
+            "default": "ens802f1.100"
+          }
+        },
+        {
           "name": "public1",
           "subnet": "140.211.167.0/27",
           "uuid": "9f939457-9820-4b1d-a519-bc87e9b59b3e",
