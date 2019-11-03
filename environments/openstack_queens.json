@@ -76,7 +76,7 @@
     "osl-backup": "= 1.1.1",
     "osl-ceph": "= 3.1.0",
     "osl-docker": "= 2.6.1",
-    "osl-fail2ban": "= 1.1.0",
+    "osl-fail2ban": "= 1.1.1",
     "osl-git": "= 1.0.2",
     "osl-gitlab": "= 1.1.1",
     "osl-haproxy": "= 4.3.6",
