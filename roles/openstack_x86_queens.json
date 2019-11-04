@@ -50,7 +50,7 @@
         "conf": {
           "DEFAULT": {
             "cpu_allocation_ratio": "64.0",
-            "ram_allocation_ratio": "1.5"
+            "ram_allocation_ratio": "1"
           }
         }
       }
