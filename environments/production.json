@@ -156,7 +156,7 @@
     "sudo": "= 5.4.4",
     "supervisor": "= 0.4.12",
     "sysctl": "= 1.0.5",
-    "systemd": "= 2.0.0",
+    "systemd": "= 3.2.4",
     "tar": "= 2.1.1",
     "timezone_iii": "= 1.1.7",
     "user": "= 0.7.0",
