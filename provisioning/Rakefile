@@ -78,6 +78,7 @@ task openstack_x86_controller: [:create_key, :chef_zero, :chef_server_env] do
     role[ceph_osd]
     role[ceph_setup]
     role[openstack_provisioning]
+    recipe[osl-prometheus::server]
     recipe[osl-openstack::ops_database]
     recipe[osl-openstack::controller]
     role[openstack_cinder]

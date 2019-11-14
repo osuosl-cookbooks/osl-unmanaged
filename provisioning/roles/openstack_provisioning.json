@@ -15,6 +15,13 @@
           "cirros": "http://download.cirros-cloud.net/daily/20150923/cirros-d150923-x86_64-disk.img"
         },
         "upload_images": []
+      },
+      "telemetry": {
+        "pipeline": {
+          "publishers": [
+            "prometheus://otest-controller.osuosl.org:9091/metrics/job/ceilometer"
+          ]
+        }
       }
     }
   },
