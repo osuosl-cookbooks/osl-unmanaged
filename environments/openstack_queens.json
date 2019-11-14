@@ -113,7 +113,7 @@
     "rhsm": "= 1.0.0",
     "rsyslog": "= 6.0.7",
     "runit": "= 5.0.1",
-    "selinux": "= 3.0.0",
+    "selinux": "= 3.0.1",
     "selinux_policy": "= 2.3.4",
     "seven_zip": "= 3.1.0",
     "ssh-keys": "= 1.2.7",
