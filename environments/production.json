@@ -59,7 +59,7 @@
     "mariadb": "= 0.3.0",
     "modules": "= 0.2.4",
     "monit": "= 0.7.1",
-    "munin": "= 1.4.3",
+    "munin": "= 1.4.4",
     "mysql2_chef_gem": "= 2.1.0",
     "mysql": "= 8.5.1",
     "nagios": "= 8.1.0",
