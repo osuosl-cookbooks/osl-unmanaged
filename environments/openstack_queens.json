@@ -90,7 +90,7 @@
     "osl-php": "= 4.0.3",
     "osl-postfix": "= 1.0.2",
     "osl-postgresql": "= 2.0.0",
-    "osl-prometheus": "= 1.7.0",
+    "osl-prometheus": "= 1.7.1",
     "osl-rsync": "= 1.0.4",
     "osl-selinux": "= 1.2.0",
     "osl-syslog": "= 2.2.0",
