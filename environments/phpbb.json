@@ -24,7 +24,7 @@
     "htpasswd": "= 0.3.0",
     "jira": "1.0.2",
     "mariadb": "= 0.3.1",
-    "memcached": "= 3.0.0",
+    "memcached": "= 5.1.1",
     "mysql": "= 8.5.1",
     "nagios": "= 8.1.0",
     "nodejs": "= 6.0.0",
@@ -67,7 +67,7 @@
     "yum-plugin-versionlock": "= 0.2.1",
     "yum-repoforge": "= 2.0.1",
     "yumgroup": "= 0.6.0",
-    "proj-phpbb": "= 5.5.2",
+    "proj-phpbb": "= 5.6.0",
     "rdiff-backup": "= 3.1.0"
   },
   "default_attributes": {
