@@ -14,7 +14,7 @@ def run_command(command)
 end
 
 PROV_PATH = '.'.freeze
-bootstrap_options = '-x osuadmin --sudo --bootstrap-version 13.12.14'
+bootstrap_options = '-x osuadmin --sudo --bootstrap-version 14'
 
 task :destroy_all do
   Rake::Task[:destroy_machines].invoke

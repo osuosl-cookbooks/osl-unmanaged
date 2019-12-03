@@ -3,9 +3,9 @@ execute 'create public network' do
     source /root/openrc
     openstack network create --share --provider-network-type=flat --provider-physical-network=public \
       --external --default public
-    openstack subnet create public --network public --subnet-range=140.211.169.128/26 \
-      --allocation-pool=start=140.211.169.160,end=140.211.169.180 --dns-nameserver 140.211.166.130 \
-      --dns-nameserver 140.211.166.131 --gateway 140.211.169.129
+    openstack subnet create public --network public --subnet-range=140.211.167.64/27 \
+      --allocation-pool=start=140.211.167.66,end=140.211.167.94 --dns-nameserver 140.211.166.130 \
+      --dns-nameserver 140.211.166.131 --gateway 140.211.167.65
       openstack network show -c id -f value public > /var/tmp/public_network
   EOF
   creates '/var/tmp/public_network'

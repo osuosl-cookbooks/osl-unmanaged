@@ -37,11 +37,11 @@
     },
     {
       "resource": "osl_ifconfig",
-      "name": "enp2s0.112",
+      "name": "enp2s0.107",
       "attributes": {
         "target": "",
         "bootproto": "none",
-        "device": "enp2s0.112",
+        "device": "enp2s0.107",
         "onboot": "yes",
         "userctl": "no",
         "vlan": "yes"
