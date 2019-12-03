@@ -145,6 +145,11 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
+    "base": {
+      "chef_client": {
+        "version": "14.14.29"
+      }
+    },
     "ohai": {
       "disabled_plugins": [
         ":Sessions"
