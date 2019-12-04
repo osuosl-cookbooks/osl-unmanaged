@@ -147,7 +147,7 @@
     "rsync": "= 1.0.3",
     "rsyslog": "= 6.0.7",
     "ruby-helper": "= 0.0.1",
-    "runit": "= 1.8.0",
+    "runit": "= 4.3.1",
     "sbp_packer": "= 1.4.7",
     "selinux": "= 3.0.1",
     "selinux_policy": "= 2.3.4",
