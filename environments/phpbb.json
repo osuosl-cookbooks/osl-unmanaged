@@ -36,7 +36,7 @@
     "osl-haproxy": "= 4.3.10",
     "osl-imap": "= 1.1.1",
     "osl-keepalived": "= 0.2.4",
-    "osl-nagios": "= 3.1.0",
+    "osl-nagios": "= 3.1.1",
     "osl-nodes": "= 1.5.5",
     "osl-mysql": "= 2.2.3",
     "osl-php": "= 4.0.3",
