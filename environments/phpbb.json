@@ -99,8 +99,10 @@
         "banner": "none"
       }
     },
-    "omnibus_updater": {
-      "version": "12.18.31"
+    "base": {
+      "chef_client": {
+        "version": "14.14.29"
+      }
     }
   }
 }
