@@ -32,7 +32,7 @@
     "docker": "= 4.9.2",
     "erlang": "= 1.5.4",
     "fail2ban": "= 6.0.0",
-    "firewall": "= 6.2.1",
+    "firewall": "= 6.2.2",
     "formsender": "= 0.1.6",
     "ganeti": "= 2.1.0",
     "ganeti_webmgr": "= 1.1.0",
