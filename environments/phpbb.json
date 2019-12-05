@@ -98,11 +98,6 @@
       "server": {
         "banner": "none"
       }
-    },
-    "base": {
-      "chef_client": {
-        "version": "14.14.29"
-      }
     }
   }
 }

@@ -213,9 +213,5 @@
       ]
     }
   },
-  "override_attributes": {
-    "omnibus_updater": {
-      "version": "12.18.31"
-    }
-  }
+  "override_attributes": {}
 }
