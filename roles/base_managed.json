@@ -30,14 +30,16 @@
       "monitored_environments": [
         "openstack_queens",
         "phpbb",
-        "production"
+        "production",
+        "production_centos6"
         ]
     },
     "munin": {
       "multi_environment_monitoring": [
         "openstack_queens",
         "phpbb",
-        "production"
+        "production",
+        "production_centos6"
       ]
     },
     "mysql": {
