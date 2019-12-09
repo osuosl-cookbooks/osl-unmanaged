@@ -3,7 +3,7 @@
   "description": "Openstack Queens Environment",
   "cookbook_versions": {
     "acme": "= 4.1.1",
-    "apache2": "= 4.0.0",
+    "apache2": "= 5.0.1",
     "apt": "= 7.1.1",
     "ark": "= 3.1.0",
     "base": "= 5.0.1",
