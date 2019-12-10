@@ -88,7 +88,7 @@
     "osl-mysql": "= 2.2.3",
     "osl-nfs": "= 1.0.2",
     "osl-nrpe": "= 3.2.0",
-    "osl-openstack": "= 8.0.0",
+    "osl-openstack": "= 8.0.1",
     "osl-php": "= 4.0.3",
     "osl-postfix": "= 1.0.2",
     "osl-postgresql": "= 2.0.0",
