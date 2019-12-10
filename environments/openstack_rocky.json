@@ -95,7 +95,7 @@
     "osl-prometheus": "= 1.7.2",
     "osl-rsync": "= 1.0.4",
     "osl-selinux": "= 1.2.0",
-    "osl-syslog": "= 2.2.0",
+    "osl-syslog": "= 2.3.0",
     "osl-vpn": "= 2.1.0",
     "packagecloud": "= 0.3.0",
     "percona": "= 0.16.5",
