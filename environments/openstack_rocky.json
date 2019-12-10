@@ -74,7 +74,7 @@
     "openstack-telemetry": "= 18.0.0",
     "openstackclient": "= 18.0.0",
     "openvpn": "= 4.0.0",
-    "osl-acme": "= 3.0.0",
+    "osl-acme": "= 3.0.1",
     "osl-apache": "= 4.0.0",
     "osl-backup": "= 1.1.1",
     "osl-ceph": "= 3.2.0",
