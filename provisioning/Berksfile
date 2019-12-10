@@ -10,6 +10,7 @@ cookbook 'ganeti', git: 'git@github.com:osuosl-cookbooks/ganeti'
 cookbook 'ibm-power', git: 'git@github.com:osuosl-cookbooks/ibm-power'
 cookbook 'modules', git: 'git@github.com:osuosl-cookbooks/modules-cookbook'
 cookbook 'munin', git: 'git@github.com:osuosl-cookbooks/munin'
+cookbook 'openstackclient', github: 'openstack/cookbook-openstackclient'
 cookbook 'osl-acme', git: 'git@github.com:osuosl-cookbooks/osl-acme'
 cookbook 'osl-apache', git: 'git@github.com:osuosl-cookbooks/osl-apache'
 cookbook 'osl-ceph', git: 'git@github.com:osuosl-cookbooks/osl-ceph'
@@ -19,21 +20,22 @@ cookbook 'osl-ganeti', git: 'git@github.com:osuosl-cookbooks/osl-ganeti'
 cookbook 'osl-letsencrypt-boulder-server', git: 'git@github.com:osuosl-cookbooks/osl-letsencrypt-boulder-server'
 cookbook 'osl-munin', git: 'git@github.com:osuosl-cookbooks/osl-munin'
 cookbook 'osl-nrpe', git: 'git@github.com:osuosl-cookbooks/osl-nrpe'
-cookbook 'osl-openstack', git: 'git@github.com:osuosl-cookbooks/osl-openstack', branch: 'stable/queens'
+cookbook 'osl-openstack', git: 'git@github.com:osuosl-cookbooks/osl-openstack', branch: 'stable/rocky'
 cookbook 'osl-php', git: 'git@github.com:osuosl-cookbooks/osl-php'
+cookbook 'osl-prometheus', git: 'git@github.com:osuosl-cookbooks/osl-prometheus'
 cookbook 'osl-rsync', git: 'git@github.com:osuosl-cookbooks/osl-rsync'
 cookbook 'osl-selinux', git: 'git@github.com:osuosl-cookbooks/osl-selinux'
+cookbook 'provision_test', path: 'test/cookbooks/provision_test'
 cookbook 'resource_from_hash', git: 'git@github.com:osuosl-cookbooks/resource_from_hash'
 cookbook 'yum-kernel-osuosl', git: 'git@github.com:osuosl-cookbooks/yum-kernel-osuosl.git'
 cookbook 'yum-qemu-ev', git: 'git@github.com:osuosl-cookbooks/yum-qemu-ev.git'
-cookbook 'provision_test', path: 'test/cookbooks/provision_test'
 
 # WIP patches
 # %w(
 # ).each do |cb|
 #   cookbook "openstack-#{cb}",
 #            github: "osuosl-cookbooks/cookbook-openstack-#{cb}",
-#            branch: 'stable/queens'
+#            branch: 'osuosl/rocky'
 # end
 
 # Openstack deps
@@ -53,7 +55,7 @@ cookbook 'provision_test', path: 'test/cookbooks/provision_test'
 ).each do |cb|
   cookbook "openstack-#{cb}",
            github: "openstack/cookbook-openstack-#{cb}",
-           branch: 'stable/queens'
+           branch: 'master'
 end
 
 metadata
