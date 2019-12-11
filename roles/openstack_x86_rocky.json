@@ -159,6 +159,6 @@
     }
    },
   "json_class": "Chef::Role",
-  "description": "Openstack x86 Queens Role",
+  "description": "Openstack x86 Rocky Role",
   "name": "openstack_x86_rocky"
 }
