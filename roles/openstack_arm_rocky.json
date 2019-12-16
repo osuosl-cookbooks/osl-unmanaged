@@ -112,8 +112,19 @@
         }
       },
       "external_networks": [
+        "public4"
       ],
       "physical_interface_mappings": [
+        {
+          "name": "public4",
+          "subnet": "140.211.167.64/27",
+          "controller": {
+            "default": "eth3"
+          },
+          "compute": {
+            "default": "enp1s0.107"
+          }
+        }
       ]
     },
     "osl-prometheus": {
