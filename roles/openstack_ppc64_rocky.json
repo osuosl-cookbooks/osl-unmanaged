@@ -51,6 +51,13 @@
             "allow_resize_to_same_host": true
           }
         }
+      },
+      "telemetry": {
+        "pipeline": {
+          "publishers": [
+            "prometheus://prometheus.osuosl.org:9091/metrics/job/ceilometer_ppc64"
+          ]
+        }
       }
     }
   },
