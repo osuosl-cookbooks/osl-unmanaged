@@ -118,6 +118,7 @@
         {
           "name": "public4",
           "subnet": "140.211.167.64/27",
+          "uuid": "48bfc43c-c99e-4395-afbd-97d02ef0116a",
           "controller": {
             "default": "eth3"
           },
