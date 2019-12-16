@@ -53,6 +53,13 @@
             "ram_allocation_ratio": "1"
           }
         }
+      },
+      "telemetry": {
+        "pipeline": {
+          "publishers": [
+            "prometheus://prometheus.osuosl.org:9091/metrics/job/ceilometer_x86"
+          ]
+        }
       }
     }
   },
