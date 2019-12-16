@@ -49,7 +49,7 @@
       "telemetry": {
         "pipeline": {
           "publishers": [
-            "prometheus://prometheus.osuosl.org:9091/metrics/job/ceilometer_arm"
+            "prometheus://mon3.osuosl.org:9091/metrics/job/ceilometer_arm"
           ]
         }
       }
