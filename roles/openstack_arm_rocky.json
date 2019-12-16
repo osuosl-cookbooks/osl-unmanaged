@@ -45,6 +45,13 @@
         "image_upload": true,
         "upload_image": {},
         "upload_images": []
+      },
+      "telemetry": {
+        "pipeline": {
+          "publishers": [
+            "prometheus://prometheus.osuosl.org:9091/metrics/job/ceilometer_arm"
+          ]
+        }
       }
     }
   },
