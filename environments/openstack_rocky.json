@@ -85,7 +85,7 @@
     "osl-haproxy": "= 4.3.10",
     "osl-jenkins": "= 2.5.4",
     "osl-munin": "= 2.2.2",
-    "osl-mysql": "= 2.2.3",
+    "osl-mysql": "= 2.2.4",
     "osl-nfs": "= 1.0.2",
     "osl-nrpe": "= 3.2.0",
     "osl-openstack": "= 8.0.1",
