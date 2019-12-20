@@ -103,7 +103,7 @@
     "osl-netboot": "= 2.1.0",
     "osl-nfs": "= 1.0.2",
     "osl-nginx": "= 3.1.0",
-    "osl-nodejs": "= 1.0.0",
+    "osl-nodejs": "= 1.0.1",
     "osl-nodes": "= 1.5.5",
     "osl-nrpe": "= 3.2.0",
     "osl-php": "= 4.0.3",
