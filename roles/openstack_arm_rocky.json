@@ -108,7 +108,7 @@
           "default": "eth1"
         },
         "compute": {
-          "default": "ens802f0.42"
+          "default": "enp1s0"
         }
       },
       "external_networks": [
