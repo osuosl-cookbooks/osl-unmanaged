@@ -84,7 +84,7 @@
     "osl-dns": "= 2.2.0",
     "osl-docker": "= 2.7.0",
     "osl-drupal": "= 0.2.2",
-    "osl-fail2ban": "= 1.2.1",
+    "osl-fail2ban": "= 1.2.2",
     "osl-ganeti": "= 2.0.39",
     "osl-git": "= 1.0.2",
     "osl-gitlab": "= 1.1.2",
