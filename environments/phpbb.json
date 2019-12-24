@@ -37,7 +37,7 @@
     "osl-imap": "= 1.1.2",
     "osl-keepalived": "= 0.2.5",
     "osl-nagios": "= 3.1.2",
-    "osl-nodes": "= 1.5.5",
+    "osl-nodes": "= 1.5.6",
     "osl-mysql": "= 2.2.4",
     "osl-php": "= 4.1.0",
     "osl-postfix": "= 1.0.2",
