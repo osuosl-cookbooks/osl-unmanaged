@@ -104,7 +104,7 @@
     "osl-nginx": "= 3.1.1",
     "osl-nodejs": "= 1.0.1",
     "osl-nodes": "= 1.5.7",
-    "osl-nrpe": "= 3.2.0",
+    "osl-nrpe": "= 3.3.0",
     "osl-php": "= 4.1.0",
     "osl-postfix": "= 1.0.2",
     "osl-postgresql": "= 2.0.0",
