@@ -90,7 +90,7 @@
     "osl-nrpe": "= 3.3.0",
     "osl-openstack": "= 8.1.0",
     "osl-php": "= 4.1.0",
-    "osl-postfix": "= 1.0.2",
+    "osl-postfix": "= 1.0.3",
     "osl-postgresql": "= 2.0.0",
     "osl-prometheus": "= 1.7.5",
     "osl-rsync": "= 1.0.4",
