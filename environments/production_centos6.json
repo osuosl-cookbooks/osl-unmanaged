@@ -133,7 +133,7 @@
     "proj-drupalorg": "= 0.1.8",
     "proj-lf": "= 0.11.4",
     "proj-misc": "= 1.11.1",
-    "proj-ros": "= 3.4.1",
+    "proj-ros": "= 3.4.3",
     "proj-snowdrift": "= 1.1.0",
     "proj-webdav": "= 2.0.1",
     "prometheus-platform": "= 2.1.0",
