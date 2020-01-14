@@ -154,6 +154,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-postgresql.git
 [osuosl-cookbooks/osl-rsync]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-rsync.git
 
+[osuosl-cookbooks/osl-scponly]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-scponly.git
+
 [osuosl-cookbooks/osl-selinux]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-selinux.git
 
