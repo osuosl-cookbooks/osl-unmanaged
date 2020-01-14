@@ -34,7 +34,7 @@
     "fail2ban": "= 6.0.0",
     "firewall": "= 6.2.6",
     "formsender": "= 0.1.6",
-    "ganeti": "= 2.2.0",
+    "ganeti": "= 2.3.0",
     "git": "= 9.0.0",
     "gitlab-ci-runner": "= 1.5.0",
     "gitlab_omnibus": "= 1.2.0",
