@@ -91,7 +91,7 @@
     "osl-openstack": "= 8.1.0",
     "osl-php": "= 4.1.0",
     "osl-postfix": "= 1.0.3",
-    "osl-postgresql": "= 2.0.0",
+    "osl-postgresql": "= 2.0.1",
     "osl-prometheus": "= 1.7.5",
     "osl-rsync": "= 1.0.4",
     "osl-scponly": "= 1.0.0",
