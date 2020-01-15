@@ -132,7 +132,7 @@
     "proj-deluge": "= 2.1.3",
     "proj-drupalorg": "= 0.1.8",
     "proj-lf": "= 0.12.2",
-    "proj-misc": "= 1.11.5",
+    "proj-misc": "= 1.11.6",
     "proj-snowdrift": "= 1.1.0",
     "proj-webdav": "= 2.0.1",
     "prometheus-platform": "= 2.1.0",
