@@ -109,7 +109,7 @@
     "osl-postfix": "= 1.0.3",
     "osl-postgresql": "= 2.0.1",
     "osl-prometheus": "= 1.7.5",
-    "osl-rancid": "= 1.0.6",
+    "osl-rancid": "= 1.0.7",
     "osl-rsync": "= 1.0.4",
     "osl-scponly": "= 1.0.0",
     "osl-selinux": "= 1.2.0",
