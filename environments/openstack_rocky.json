@@ -75,7 +75,7 @@
     "openstackclient": "= 18.0.0",
     "openvpn": "= 4.0.0",
     "osl-acme": "= 3.0.1",
-    "osl-apache": "= 4.0.0",
+    "osl-apache": "= 4.1.0",
     "osl-backup": "= 1.1.2",
     "osl-ceph": "= 3.2.1",
     "osl-docker": "= 2.8.1",
