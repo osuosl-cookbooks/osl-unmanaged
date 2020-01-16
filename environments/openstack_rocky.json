@@ -132,7 +132,7 @@
     "xinetd": "= 1.0.2",
     "yum": "= 5.1.0",
     "yum-centos": "= 3.2.0",
-    "yum-cron": "= 1.1.0",
+    "yum-cron": "= 1.1.1",
     "yum-epel": "= 3.3.0",
     "yum-erlang_solutions": "= 2.0.0",
     "yum-ius": "= 3.1.0",
