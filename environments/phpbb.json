@@ -42,7 +42,7 @@
     "osl-php": "= 4.1.0",
     "osl-postfix": "= 1.0.3",
     "osl-postgresql": "= 2.0.1",
-    "osl-prometheus": "= 1.7.5",
+    "osl-prometheus": "= 1.8.0",
     "osl-scponly": "= 1.0.1",
     "osl-selinux": "= 1.2.1",
     "osl-syslog": "= 2.3.0",
