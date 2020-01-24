@@ -42,7 +42,7 @@
     "java": "= 4.3.0",
     "jenkins": "= 7.1.0",
     "kernel-modules": "= 2.0.3",
-    "line": "= 2.2.0",
+    "line": "= 2.7.0",
     "logrotate": "= 2.2.2",
     "lvm": "= 4.5.3",
     "magic_shell": "= 1.0.0",
