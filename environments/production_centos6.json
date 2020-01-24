@@ -50,7 +50,7 @@
     "iptables-ng": "= 4.0.0",
     "java": "= 4.3.0",
     "jenkins": "= 7.1.0",
-    "line": "= 2.2.0",
+    "line": "= 2.7.0",
     "logrotate": "= 2.2.2",
     "logstash": "= 0.8.1",
     "lvm": "= 4.1.6",
