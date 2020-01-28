@@ -115,7 +115,7 @@
     "osl-scponly": "= 1.0.2",
     "osl-selinux": "= 1.2.1",
     "osl-slapd": "= 1.0.1",
-    "osl-sudo": "= 0.1.0",
+    "osl-sudo": "= 0.1.2",
     "osl-syslog": "= 2.3.0",
     "osl-varnish": "= 1.0.1",
     "osl-vpn": "= 2.1.1",
