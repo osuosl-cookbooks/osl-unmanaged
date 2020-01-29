@@ -1,3 +1,6 @@
+[osuosl-cookbooks/apt-osuosl]
+checkout = git clone git@github.com:osuosl-cookbooks/apt-osuosl.git
+
 [osuosl-cookbooks/autofs]
 checkout = git clone git@github.com:osuosl-cookbooks/autofs.git
 
