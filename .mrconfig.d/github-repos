@@ -202,6 +202,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/proj-ros.git
 [osuosl-cookbooks/proj-webdav]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-webdav.git
 
+[osuosl-cookbooks/proxytrack]
+checkout = git clone git@github.com:osuosl-cookbooks/proxytrack.git
+
 [osuosl-cookbooks/rdiff-backup]
 checkout = git clone git@github.com:osuosl-cookbooks/rdiff-backup.git
 
