@@ -47,30 +47,10 @@
       "timezone": "US/Pacific"
     },
     "workstation": {
-      "python_packages": [
-        "climesync",
-        "httpie",
-        "pymesync",
-        "python-glanceclient",
-        "python-novaclient",
-        "setuptools"
-      ],
-      "python3_packages": [
-        "python-keystoneclient",
-        "python-openstackclient"
-      ],
       "packages_stretch": [
         "default-libmysqlclient-dev",
         "golang-1.7",
         "hexchat"
-      ],
-      "packages_jessie": [
-        "cone",
-        "golang-1.6",
-        "libmysqlclient-dev",
-        "opera",
-        "spotify-client",
-        "xchat"
       ],
       "packages": [
         "ack-grep",
