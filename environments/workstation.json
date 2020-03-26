@@ -30,7 +30,7 @@
     "sudo": "= 5.4.4",
     "systemd": "= 3.2.4",
     "timezone_iii": "= 1.1.7",
-    "workstation": "= 5.4.2",
+    "workstation": "= 5.4.3",
     "vagrant": "= 0.9.1",
     "virtualbox": "= 1.0.2",
     "yum-ius": "= 3.1.0"
@@ -47,30 +47,10 @@
       "timezone": "US/Pacific"
     },
     "workstation": {
-      "python_packages": [
-        "climesync",
-        "httpie",
-        "pymesync",
-        "python-glanceclient",
-        "python-novaclient",
-        "setuptools"
-      ],
-      "python3_packages": [
-        "python-keystoneclient",
-        "python-openstackclient"
-      ],
       "packages_stretch": [
         "default-libmysqlclient-dev",
         "golang-1.7",
         "hexchat"
-      ],
-      "packages_jessie": [
-        "cone",
-        "golang-1.6",
-        "libmysqlclient-dev",
-        "opera",
-        "spotify-client",
-        "xchat"
       ],
       "packages": [
         "ack-grep",
