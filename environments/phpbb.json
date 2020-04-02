@@ -31,7 +31,7 @@
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
     "osl-acme": "= 3.0.1",
-    "osl-apache": "= 3.1.0",
+    "osl-apache": "= 3.1.1",
     "osl-fail2ban": "= 1.2.2",
     "osl-haproxy": "= 5.0.5",
     "osl-imap": "= 1.1.2",
