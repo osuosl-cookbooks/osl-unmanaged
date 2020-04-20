@@ -5,7 +5,7 @@
   "json_class": "Chef::Role",
   "env_run_lists": {},
   "run_list": [
-    "recipe[rdiff-backup::client]"
+    "recipe[osl-backup::rdiff-backup-client]"
   ],
   "default_attributes": {
     "rdiff-backup": {
