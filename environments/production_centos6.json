@@ -130,7 +130,7 @@
     "postgresql": "= 7.1.4",
     "proj-drupalorg": "= 0.1.8",
     "proj-lf": "= 0.13.0",
-    "proj-misc": "= 1.12.0",
+    "proj-misc": "= 1.12.1",
     "proj-ros": "= 3.5.4",
     "proj-snowdrift": "= 1.1.5",
     "proj-webdav": "= 2.0.1",
