@@ -31,16 +31,14 @@
       "monitored_environments": [
         "openstack_rocky",
         "phpbb",
-        "production",
-        "production_centos6"
+        "production"
         ]
     },
     "munin": {
       "multi_environment_monitoring": [
         "openstack_rocky",
         "phpbb",
-        "production",
-        "production_centos6"
+        "production"
       ]
     },
     "mysql": {
