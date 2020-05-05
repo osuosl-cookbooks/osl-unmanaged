@@ -47,10 +47,14 @@
       "timezone": "US/Pacific"
     },
     "workstation": {
+      "packages_buster": [
+        "golang-1.11",
+        "taskwarrior"
+      ],
       "packages_stretch": [
-        "default-libmysqlclient-dev",
         "golang-1.7",
-        "hexchat"
+        "hexchat",
+        "task"
       ],
       "packages": [
         "ack-grep",
@@ -76,6 +80,7 @@
         "curl",
         "debian-goodies",
         "debootstrap",
+        "default-libmysqlclient-dev",
         "dmz-cursor-theme",
         "dnsutils",
         "dsh",
@@ -109,6 +114,7 @@
         "graphviz",
         "hdparm",
         "herbstluftwm",
+        "hexchat",
         "htop",
         "httping",
         "httrack",
