@@ -99,7 +99,7 @@
     "osl-munin": "= 2.2.3",
     "osl-mysql": "= 2.3.1",
     "osl-nagios": "= 3.1.7",
-    "osl-netboot": "= 2.2.3",
+    "osl-netboot": "= 2.2.4",
     "osl-nfs": "= 1.0.4",
     "osl-nginx": "= 3.1.1",
     "osl-nodejs": "= 1.0.1",
