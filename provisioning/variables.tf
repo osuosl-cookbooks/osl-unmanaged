@@ -11,5 +11,5 @@ variable "ssh_user_name" {
 }
 
 variable "network" {
-    default = "public2"
+    default = "general_servers1"
 }
