@@ -107,7 +107,7 @@
     "osl-nrpe": "= 3.4.1",
     "osl-php": "= 5.1.0",
     "osl-postfix": "= 1.0.3",
-    "osl-postgresql": "= 2.0.1",
+    "osl-postgresql": "= 2.0.2",
     "osl-prometheus": "= 1.8.0",
     "osl-rancid": "= 1.0.7",
     "osl-rsync": "= 1.2.1",
