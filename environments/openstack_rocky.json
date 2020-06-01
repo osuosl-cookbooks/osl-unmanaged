@@ -111,7 +111,7 @@
     "rabbitmq": "= 5.8.2",
     "rdiff-backup": "= 3.1.0",
     "resolver": "= 2.1.0",
-    "resource_from_hash": "= 1.1.1",
+    "resource_from_hash": "= 1.2.0",
     "rhsm": "= 1.0.0",
     "rsyslog": "= 6.0.7",
     "runit": "= 5.0.1",
