@@ -24,7 +24,7 @@
     "osl-acme": "= 3.1.0",
     "osl-docker": "= 2.8.3",
     "osl-fail2ban": "= 1.2.2",
-    "osl-postfix": "= 1.0.3",
+    "osl-postfix": "= 1.1.0",
     "poise": "= 2.8.1",
     "poise-languages": "= 2.1.2",
     "poise-python": "= 1.7.0",
