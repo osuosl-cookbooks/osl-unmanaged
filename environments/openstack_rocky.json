@@ -22,7 +22,7 @@
     "composer": "= 2.6.1",
     "cpu": "= 2.0.0",
     "cron": "= 6.3.0",
-    "dnf-automatic": "= 1.0.1",
+    "dnf-automatic": "= 1.1.0",
     "docker": "= 4.9.2",
     "dpkg_autostart": "= 0.2.0",
     "erlang": "= 8.0.0",
