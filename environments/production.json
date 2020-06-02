@@ -166,7 +166,7 @@
     "yum-kernel-osuosl": "= 2.1.0",
     "yum-nvidia": "= 1.1.1",
     "yum-plugin-versionlock": "= 0.2.1",
-    "yum-qemu-ev": "= 2.4.2",
+    "yum-qemu-ev": "= 2.5.0",
     "yum-repoforge": "= 2.0.1",
     "yumgroup": "= 0.6.0",
     "zlib": "= 2.0.0",
