@@ -81,7 +81,7 @@
     "osl-fail2ban": "= 2.0.0",
     "osl-git": "= 1.0.4",
     "osl-gitlab": "= 1.1.3",
-    "osl-haproxy": "= 5.1.11",
+    "osl-haproxy": "= 5.1.12",
     "osl-jenkins": "= 2.7.2",
     "osl-munin": "= 2.2.3",
     "osl-mysql": "= 2.3.3",
