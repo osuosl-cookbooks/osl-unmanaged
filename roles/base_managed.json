@@ -29,6 +29,7 @@
     "nagios": {
       "multi_environment_monitoring": true,
       "monitored_environments": [
+        "nagios",
         "openstack_rocky",
         "phpbb",
         "production"
@@ -36,6 +37,7 @@
     },
     "munin": {
       "multi_environment_monitoring": [
+        "nagios",
         "openstack_rocky",
         "phpbb",
         "production"
@@ -43,6 +45,14 @@
     },
     "mysql": {
       "version": "5.5"
+    },
+    "osl-prometheus": {
+      "chef_environments": [
+        "nagios",
+        "openstack_rocky",
+        "phpbb",
+        "production"
+      ]
     },
     "yum": {
       "ius": {

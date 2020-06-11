@@ -5,7 +5,7 @@
   "chef_type": "environment",
   "cookbook_versions": {
     "acme": "= 4.1.1",
-    "apache2": "= 4.0.0",
+    "apache2": "= 8.1.2",
     "apt": "= 7.3.0",
     "ark": "= 5.0.0",
     "base": "= 6.0.0",
@@ -33,7 +33,7 @@
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
     "osl-acme": "= 3.0.1",
-    "osl-apache": "= 3.2.0",
+    "osl-apache": "= 5.0.0",
     "osl-fail2ban": "= 2.0.0",
     "osl-haproxy": "= 5.1.12",
     "osl-imap": "= 1.1.2",
@@ -70,7 +70,7 @@
     "yum-plugin-versionlock": "= 0.2.1",
     "yum-repoforge": "= 2.0.1",
     "yumgroup": "= 0.6.0",
-    "proj-phpbb": "= 5.11.0",
+    "proj-phpbb": "= 6.0.0",
     "rdiff-backup": "= 3.1.0"
   },
   "default_attributes": {
