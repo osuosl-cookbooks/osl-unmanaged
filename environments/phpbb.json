@@ -5,7 +5,7 @@
   "chef_type": "environment",
   "cookbook_versions": {
     "acme": "= 4.1.1",
-    "apache2": "= 4.0.0",
+    "apache2": "= 8.1.2",
     "apt": "= 7.3.0",
     "ark": "= 5.0.0",
     "base": "= 6.0.0",
