@@ -71,7 +71,7 @@
     "openstack-ops-messaging": "= 18.0.0",
     "openstack-orchestration": "= 18.0.0",
     "openstack-telemetry": "= 18.0.0",
-    "openstackclient": "= 18.0.0",
+    "openstackclient": "= 18.1.0",
     "openvpn": "= 5.0.0",
     "osl-acme": "= 3.1.0",
     "osl-apache": "= 4.3.0",
