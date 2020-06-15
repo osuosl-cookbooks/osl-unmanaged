@@ -139,7 +139,7 @@
     "resource_from_hash": "= 1.2.0",
     "rhsm": "= 1.0.1",
     "rsync": "= 1.0.3",
-    "rsyslog": "= 6.0.7",
+    "rsyslog": "= 7.0.1",
     "ruby-helper": "= 0.0.1",
     "runit": "= 5.1.2",
     "sbp_packer": "= 1.4.7",

@@ -53,7 +53,7 @@
     "postgresql": "= 7.1.4",
     "prometheus-platform": "= 2.1.0",
     "resolver": "= 2.1.0",
-    "rsyslog": "= 6.0.7",
+    "rsyslog": "= 7.0.1",
     "selinux": "= 3.0.1",
     "selinux_policy": "= 2.4.0",
     "seven_zip": "= 3.1.0",
