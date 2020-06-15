@@ -107,7 +107,7 @@
     "poise-service": "= 1.5.2",
     "postfix": "= 5.3.1",
     "postgresql": "= 7.1.4",
-    "prometheus-platform": "= 2.1.0",
+    "prometheus-platform": "= 2.2.0",
     "rabbitmq": "= 5.8.2",
     "rdiff-backup": "= 3.2.0",
     "resolver": "= 2.1.0",

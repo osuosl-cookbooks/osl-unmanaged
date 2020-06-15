@@ -51,7 +51,7 @@
     "php": "= 6.1.1",
     "postfix": "= 5.3.1",
     "postgresql": "= 7.1.4",
-    "prometheus-platform": "= 2.1.0",
+    "prometheus-platform": "= 2.2.0",
     "resolver": "= 2.1.0",
     "rsyslog": "= 7.0.1",
     "selinux": "= 3.0.1",
