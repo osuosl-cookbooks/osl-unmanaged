@@ -49,7 +49,7 @@
     "memcached": "= 4.1.0",
     "mingw": "= 2.1.0",
     "modules": "= 0.2.4",
-    "munin": "= 1.4.4",
+    "munin": "= 2.0.0",
     "mysql": "= 8.5.1",
     "mysql2_chef_gem": "= 2.1.0",
     "nfs": "= 2.6.4",
