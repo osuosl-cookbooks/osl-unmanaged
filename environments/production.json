@@ -162,7 +162,7 @@
     "yum-epel": "= 3.3.0",
     "yum-elrepo": "= 1.1.0",
     "yum-ius": "= 3.1.0",
-    "yum-kernel-osuosl": "= 2.1.0",
+    "yum-kernel-osuosl": "= 2.1.1",
     "yum-nvidia": "= 1.1.1",
     "yum-plugin-versionlock": "= 0.2.1",
     "yum-qemu-ev": "= 2.5.0",
