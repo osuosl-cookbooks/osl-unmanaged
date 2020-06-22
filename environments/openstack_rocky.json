@@ -43,7 +43,7 @@
     "jenkins": "= 7.1.0",
     "kernel-modules": "= 2.0.3",
     "line": "= 2.7.0",
-    "logrotate": "= 2.2.2",
+    "logrotate": "= 2.2.3",
     "lvm": "= 4.5.3",
     "mariadb": "= 1.5.4",
     "memcached": "= 4.1.0",
