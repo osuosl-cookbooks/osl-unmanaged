@@ -8,7 +8,7 @@
     "ark": "= 5.0.0",
     "base": "= 6.0.0",
     "build-essential": "= 8.2.1",
-    "ceph-chef": "= 1.1.27",
+    "ceph-chef": "= 2.0.0",
     "certificate": "= 1.0.0",
     "chef-client": "= 11.5.0",
     "chef-sugar": "= 5.0.1",
