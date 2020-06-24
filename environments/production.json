@@ -27,7 +27,7 @@
     "dhcp": "= 5.5.0",
     "dnf-automatic": "= 1.1.0",
     "dobc": "= 2.0.4",
-    "docker": "= 4.9.2",
+    "docker": "= 6.0.3",
     "fail2ban": "= 6.2.1",
     "firewall": "= 7.0.0",
     "ganeti": "= 2.3.1",
