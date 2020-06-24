@@ -137,7 +137,7 @@
     "yum-ius": "= 3.1.0",
     "yum-kernel-osuosl": "= 2.1.1",
     "yum-nvidia": "= 1.1.1",
-    "yum-osuosl": "= 1.0.2",
+    "yum-osuosl": "= 1.1.0",
     "yum-plugin-versionlock": "= 0.2.1",
     "yum-qemu-ev": "= 2.5.0",
     "yum-repoforge": "= 3.0.0",
