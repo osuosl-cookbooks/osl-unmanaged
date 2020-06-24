@@ -2,7 +2,7 @@
   "name": "openstack_rocky",
   "description": "Openstack Rocky Environment",
   "cookbook_versions": {
-    "acme": "= 4.1.1",
+    "acme": "= 4.1.2",
     "apache2": "= 5.0.1",
     "apt": "= 7.3.0",
     "ark": "= 5.0.0",
