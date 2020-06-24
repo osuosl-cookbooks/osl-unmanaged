@@ -2,7 +2,7 @@
   "name": "workstation",
   "description": "workstation environment",
   "cookbook_versions": {
-    "acme": "= 4.1.1",
+    "acme": "= 4.1.2",
     "apt": "= 7.3.0",
     "apt-osuosl": "= 1.1.0",
     "ark": "= 5.0.0",
@@ -21,7 +21,7 @@
     "ntp": "= 1.6.2",
     "ohai": "= 5.3.0",
     "openssh": "= 2.8.1",
-    "osl-acme": "= 3.1.0",
+    "osl-acme": "= 3.2.0",
     "osl-docker": "= 2.8.3",
     "osl-fail2ban": "= 2.0.0",
     "osl-postfix": "= 1.1.0",
