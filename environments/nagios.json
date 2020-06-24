@@ -2,7 +2,7 @@
   "name": "nagios",
   "description": "The nagios environment",
   "cookbook_versions": {
-    "acme": "= 4.1.1",
+    "acme": "= 4.1.2",
     "apache2": "= 5.0.1",
     "apt": "= 7.3.0",
     "ark": "= 5.0.0",
@@ -67,7 +67,7 @@
     "openssh": "= 2.8.1",
     "openssl": "= 8.5.5",
     "openvpn": "= 5.0.0",
-    "osl-acme": "= 3.1.0",
+    "osl-acme": "= 3.2.0",
     "osl-admin": "= 1.0.1",
     "osl-apache": "= 4.3.0",
     "osl-app": "= 2.4.1",

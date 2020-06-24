@@ -2,7 +2,7 @@
   "name": "openstack_rocky",
   "description": "Openstack Rocky Environment",
   "cookbook_versions": {
-    "acme": "= 4.1.1",
+    "acme": "= 4.1.2",
     "apache2": "= 5.0.1",
     "apt": "= 7.3.0",
     "ark": "= 5.0.0",
@@ -73,7 +73,7 @@
     "openstack-telemetry": "= 18.0.0",
     "openstackclient": "= 18.1.0",
     "openvpn": "= 5.0.0",
-    "osl-acme": "= 3.1.0",
+    "osl-acme": "= 3.2.0",
     "osl-apache": "= 4.3.0",
     "osl-backup": "= 1.2.1",
     "osl-ceph": "= 3.3.0",
