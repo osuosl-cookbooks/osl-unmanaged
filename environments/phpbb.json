@@ -50,7 +50,7 @@
     "osl-syslog": "= 2.4.0",
     "php": "= 7.1.0",
     "postfix": "= 5.3.1",
-    "postgresql": "= 7.1.4",
+    "postgresql": "= 7.1.9",
     "prometheus-platform": "= 2.2.0",
     "resolver": "= 2.1.0",
     "rsyslog": "= 7.0.1",
