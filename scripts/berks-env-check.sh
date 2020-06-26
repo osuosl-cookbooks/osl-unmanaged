@@ -47,7 +47,7 @@ function check_env () {
   rm -f Berksfile.lock
   CHEF_ENVIRONMENT=$env berks install $BERKS_OPTS
 }
-ls environments | env_parallel --tag check_env {/.}
+ls environments | env_parallel --tagstring {/.} check_env {/.}
 
 echo "Checking provisioning environment..."
 cd provisioning
