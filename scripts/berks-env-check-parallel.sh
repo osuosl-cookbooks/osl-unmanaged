@@ -29,18 +29,25 @@ if [ -n "${CHEF_ENV}" ] ; then
   exit 0
 fi
 
-echo "Checking environments..."
-
 # NOTE: needs `parallel` installed
+# run original script if no parallel
+if which env_parallel.bash > /dev/null; then
+  echo 'Checking environments with parallel script...'
+else
+  echo 'Checking environments with original script...'
+  ./scripts/berks-env-check.sh
+  exit $?
+fi
+
 source $(which env_parallel.bash)
 function check_env () {
   local env=$1
   export BERKSHELF_PATH="vendor/$env/"
-  #echo "Checking $env..."
+  # echo "> checking $env..."
   rm -f Berksfile.lock
   CHEF_ENVIRONMENT=$env berks install $BERKS_OPTS
 }
-ls environments | sed -e 's/.json//' | env_parallel --lb --tag check_env
+ls environments | env_parallel --tag check_env {/.}
 
 echo "Checking provisioning environment..."
 cd provisioning
