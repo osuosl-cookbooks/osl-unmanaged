@@ -31,11 +31,11 @@ fi
 
 # NOTE: needs `parallel` installed
 # run original script if no parallel
-if which env_parallel.bash > /dev/null; then
+if which env_parallel.bash &> /dev/null; then
   echo 'Checking environments with parallel script...'
 else
-  echo 'Checking environments with original script...'
-  ./scripts/berks-env-check.sh
+  echo 'Parallel not found, using original script...'
+  ./scripts/berks-env-check-original.sh
   exit $?
 fi
 
