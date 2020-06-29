@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -a # autoexport variables for parallel
 
 BERKS_OPTS="-q"
 CHEF_ENV=""
@@ -29,10 +30,8 @@ if [ -n "${CHEF_ENV}" ] ; then
   exit 0
 fi
 
-# NOTE: needs `parallel` installed
-# NOTE2: tried storing `which` result to var & checking that instead of `which`ing twice,
-#        but bash did not like that for whatever reason & crashed. /shrug oh well, this works.
-if which env_parallel.bash &> /dev/null; then
+# NOTE: needs `parallel` installed, will use old script of not installed
+if which parallel &> /dev/null; then
   echo 'Checking environments with parallel script...'
 else
   echo 'Parallel not found, using original script...'
@@ -40,15 +39,14 @@ else
   exit $?
 fi
 
-source $(which env_parallel.bash)
 function check_env () {
   local env=$1
   export BERKSHELF_PATH="vendor/$env/"
-  # echo "> checking $env..."
   rm -f Berksfile.lock
   CHEF_ENVIRONMENT=$env berks install $BERKS_OPTS
 }
-ls environments | env_parallel --tagstring {/.} check_env {/.}
+export -f check_env
+ls environments | parallel --tagstring {/.}: check_env {/.}
 
 echo "Checking provisioning environment..."
 cd provisioning
