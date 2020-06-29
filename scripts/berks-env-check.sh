@@ -30,7 +30,8 @@ if [ -n "${CHEF_ENV}" ] ; then
 fi
 
 # NOTE: needs `parallel` installed
-# run original script if no parallel
+# NOTE2: tried storing `which` result to var & checking that instead of `which`ing twice,
+#        but bash did not like that for whatever reason & crashed. /shrug oh well, this works.
 if which env_parallel.bash &> /dev/null; then
   echo 'Checking environments with parallel script...'
 else
