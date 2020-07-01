@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-set -a # autoexport variables for parallel
 
 BERKS_OPTS="-q"
 CHEF_ENV=""
@@ -30,7 +29,7 @@ if [ -n "${CHEF_ENV}" ] ; then
   exit 0
 fi
 
-# NOTE: needs `parallel` installed, will use old script of not installed
+# NOTE: needs `parallel` installed, will use old script if not installed
 if which parallel &> /dev/null; then
   echo 'Checking environments with parallel script...'
 else
@@ -45,9 +44,11 @@ function check_env () {
   cp Berksfile testing/$1/Berksfile
   cp metadata-paralleltesting.rb testing/$1/metadata.rb
   cd testing/$1
+  export BERKSHELF_PATH="vendor/"
   rm -f Berksfile.lock
   CHEF_ENVIRONMENT=$1 berks install $BERKS_OPTS
 }
+export BERKS_OPTS
 export -f check_env
 ls environments | parallel --tagstring {/.}: check_env {/.}
 
