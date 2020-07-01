@@ -30,7 +30,7 @@
     "fail2ban": "= 6.2.1",
     "firewall": "= 7.0.0",
     "git": "= 9.0.1",
-    "gitlab-ci-runner": "= 1.6.0",
+    "gitlab-ci-runner": "= 1.8.0",
     "gitlab_omnibus": "= 1.2.0",
     "haproxy": "= 8.3.0",
     "homebrew": "= 5.0.8",
