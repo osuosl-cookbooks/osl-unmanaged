@@ -29,14 +29,7 @@ if [ -n "${CHEF_ENV}" ] ; then
   exit 0
 fi
 
-# NOTE: needs `parallel` installed, will use old script if not installed
-if which parallel &> /dev/null; then
-  echo 'Checking environments with parallel script...'
-else
-  echo 'Parallel not found, using original script...'
-  ./scripts/berks-env-check-original.sh
-  exit $?
-fi
+echo 'Checking environments with parallel script...'
 
 rm -rf testing/
 
