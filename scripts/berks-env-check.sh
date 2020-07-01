@@ -39,11 +39,14 @@ else
   exit $?
 fi
 
+# create specific subdirs to separate the berks runs
 function check_env () {
-  local env=$1
-  export BERKSHELF_PATH="vendor/$env/"
+  mkdir -p testing/$1
+  cp Berksfile testing/$1/Berksfile
+  cp metadata-paralleltesting.rb testing/$1/metadata.rb
+  cd testing/$1
   rm -f Berksfile.lock
-  CHEF_ENVIRONMENT=$env berks install $BERKS_OPTS
+  CHEF_ENVIRONMENT=$1 berks install $BERKS_OPTS
 }
 export -f check_env
 ls environments | parallel --tagstring {/.}: check_env {/.}
