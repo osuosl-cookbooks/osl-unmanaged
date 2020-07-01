@@ -38,15 +38,17 @@ else
   exit $?
 fi
 
+rm -rf testing/
+
 # create specific subdirs to separate the berks runs
 function check_env () {
-  mkdir -p testing/$1
-  cp Berksfile testing/$1/Berksfile
-  cp metadata-paralleltesting.rb testing/$1/metadata.rb
-  cd testing/$1
+  local env=$1
+  mkdir -p testing/$env
+  cp Berksfile metadata.rb testing/$env/
+  cd testing/$env
   export BERKSHELF_PATH="vendor/"
   rm -f Berksfile.lock
-  CHEF_ENVIRONMENT=$1 berks install $BERKS_OPTS
+  CHEF_ENVIRONMENT=$env CHEF_ENV_DIR='../../environments' berks install $BERKS_OPTS
 }
 export BERKS_OPTS
 export -f check_env
