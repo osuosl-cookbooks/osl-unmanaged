@@ -48,7 +48,7 @@
     "line": "= 2.7.0",
     "logrotate": "= 2.2.3",
     "lvm": "= 4.1.6",
-    "memcached": "= 5.1.1",
+    "memcached": "= 6.1.0",
     "mariadb": "= 0.3.0",
     "modules": "= 0.2.4",
     "monit": "= 0.7.1",
