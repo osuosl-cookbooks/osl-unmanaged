@@ -29,7 +29,7 @@
     "memcached": "= 6.1.0",
     "mysql": "= 8.5.1",
     "nagios": "= 8.1.0",
-    "nodejs": "= 6.0.0",
+    "nodejs": "= 7.0.1",
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
     "osl-acme": "= 3.2.0",
@@ -71,7 +71,7 @@
     "yum-repoforge": "= 2.0.1",
     "yumgroup": "= 0.6.0",
     "proj-phpbb": "= 6.0.3",
-    "rdiff-backup": "= 3.2.0"
+    "rdiff-backup": "= 4.0.0"
   },
   "default_attributes": {
     "nagios": {
