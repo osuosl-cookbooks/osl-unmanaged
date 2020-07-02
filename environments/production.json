@@ -92,7 +92,7 @@
     "osl-mysql": "= 2.4.1",
     "osl-nagios": "= 3.1.7",
     "osl-netboot": "= 2.3.1",
-    "osl-nfs": "= 1.0.4",
+    "osl-nfs": "= 1.1.0",
     "osl-nginx": "= 3.1.1",
     "osl-nodejs": "= 1.1.0",
     "osl-nodes": "= 1.5.7",
