@@ -13,6 +13,7 @@ node-backup*
 /osuosl-cookbooks
 /community-cookbooks
 /vendor
+/testing
 Berksfile.lock
 
 # chef-provisioner
