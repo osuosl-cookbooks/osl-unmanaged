@@ -121,7 +121,7 @@
     "ssh-keys": "= 1.2.7",
     "statsd": "= 0.1.6",
     "ssh_known_hosts": "= 7.0.0",
-    "sudo": "= 5.4.4",
+    "sudo": "= 5.4.6",
     "sysctl": "= 1.0.5",
     "systemd": "= 3.2.4",
     "timezone_iii": "= 1.1.7",
