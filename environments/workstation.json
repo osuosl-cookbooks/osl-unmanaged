@@ -30,7 +30,7 @@
     "poise-python": "= 1.7.0",
     "postfix": "= 5.3.1",
     "resolver": "= 2.1.0",
-    "sudo": "= 5.4.4",
+    "sudo": "= 5.4.6",
     "systemd": "= 3.2.4",
     "timezone_iii": "= 1.1.7",
     "user": "= 0.7.0",
