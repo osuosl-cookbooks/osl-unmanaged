@@ -82,7 +82,7 @@
     "osl-git": "= 1.2.1",
     "osl-gitlab": "= 1.2.0",
     "osl-haproxy": "= 5.2.6",
-    "osl-jenkins": "= 2.7.2",
+    "osl-jenkins": "= 2.8.0",
     "osl-munin": "= 3.0.0",
     "osl-mysql": "= 2.4.1",
     "osl-nfs": "= 1.1.0",
