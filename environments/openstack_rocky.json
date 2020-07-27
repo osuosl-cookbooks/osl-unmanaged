@@ -80,7 +80,7 @@
     "osl-docker": "= 2.10.0",
     "osl-fail2ban": "= 2.0.0",
     "osl-git": "= 1.2.1",
-    "osl-gitlab": "= 1.2.0",
+    "osl-gitlab": "= 1.2.1",
     "osl-haproxy": "= 5.3.0",
     "osl-jenkins": "= 2.8.0",
     "osl-munin": "= 3.0.0",
