@@ -59,7 +59,7 @@
     "recipe[workstation::nodejs]",
     "recipe[osl-docker::workstation]",
     "recipe[osl-docker::compose]",
-    "recipe[base::chefdk]",
+    "recipe[base::cinc_workstation]",
     "recipe[base::packer]",
     "recipe[workstation::virtualbox]",
     "recipe[workstation::kitchen]",
