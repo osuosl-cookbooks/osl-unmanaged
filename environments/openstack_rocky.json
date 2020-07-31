@@ -72,7 +72,7 @@
     "openstack-orchestration": "= 18.0.0",
     "openstack-telemetry": "= 18.0.0",
     "openstackclient": "= 18.1.0",
-    "openvpn": "= 5.0.0",
+    "openvpn": "= 5.1.1",
     "osl-acme": "= 3.2.1",
     "osl-apache": "= 4.3.0",
     "osl-backup": "= 1.3.1",

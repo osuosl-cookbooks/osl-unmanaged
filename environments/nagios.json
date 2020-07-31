@@ -66,7 +66,7 @@
     "omnibus_updater": "= 3.0.2",
     "openssh": "= 2.8.1",
     "openssl": "= 8.5.5",
-    "openvpn": "= 5.0.0",
+    "openvpn": "= 5.1.1",
     "osl-acme": "= 3.2.1",
     "osl-admin": "= 1.2.0",
     "osl-apache": "= 4.3.0",
