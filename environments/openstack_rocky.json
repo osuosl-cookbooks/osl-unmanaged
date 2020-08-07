@@ -130,7 +130,7 @@
     "windows": "= 6.0.0",
     "xinetd": "= 1.0.2",
     "yum": "= 5.1.0",
-    "yum-centos": "= 3.2.0",
+    "yum-centos": "= 4.0.2",
     "yum-cron": "= 1.2.0",
     "yum-epel": "= 3.3.0",
     "yum-erlang_solutions": "= 2.0.0",
