@@ -88,7 +88,7 @@
     "osl-keepalived": "= 0.4.0",
     "osl-mailman": "= 1.4.0",
     "osl-memcached": "= 2.1.1",
-    "osl-mirror": "= 1.6.0",
+    "osl-mirror": "= 1.7.0",
     "osl-munin": "= 3.0.0",
     "osl-mysql": "= 2.5.0",
     "osl-nagios": "= 3.2.0",
