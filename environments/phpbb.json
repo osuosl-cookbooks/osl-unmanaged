@@ -40,7 +40,7 @@
     "osl-keepalived": "= 0.4.0",
     "osl-nagios": "= 3.1.7",
     "osl-nodes": "= 1.6.0",
-    "osl-mysql": "= 2.5.0",
+    "osl-mysql": "= 2.6.0",
     "osl-php": "= 5.3.2",
     "osl-postfix": "= 1.2.0",
     "osl-postgresql": "= 2.1.0",
