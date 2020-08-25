@@ -30,7 +30,7 @@
     "docker": "= 6.0.3",
     "fail2ban": "= 6.2.1",
     "firewall": "= 7.0.1",
-    "ganeti": "= 3.0.0",
+    "ganeti": "= 3.1.0",
     "git": "= 9.0.1",
     "gitlab-ci-runner": "= 1.8.0",
     "gitlab_omnibus": "= 1.2.0",
