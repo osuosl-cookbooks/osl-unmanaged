@@ -85,7 +85,7 @@
     "osl-jenkins": "= 2.8.3",
     "osl-munin": "= 3.0.0",
     "osl-mysql": "= 2.6.0",
-    "osl-nfs": "= 1.1.0",
+    "osl-nfs": "= 1.1.1",
     "osl-nrpe": "= 3.5.1",
     "osl-openstack": "= 8.3.2",
     "osl-php": "= 5.3.2",
