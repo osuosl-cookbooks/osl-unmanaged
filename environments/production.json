@@ -15,7 +15,7 @@
     "certificate": "= 1.0.0",
     "ceph-chef": "= 2.0.0",
     "cluster-search": "= 1.5.0",
-    "chef-client": "~> 12.1.0",
+    "chef-client": "= 12.1.0",
     "chef_client_updater": "= 3.10.1",
     "chef_handler": "= 2.1.2",
     "chef_nginx": "= 6.2.0",
