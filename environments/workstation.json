@@ -10,7 +10,7 @@
     "celery": "= 0.1.5",
     "certificate": "= 1.0.0",
     "chef-apt-docker": "= 2.0.6",
-    "chef-client": "= 12.1.0",
+    "chef-client": "= 12.2.0",
     "chef_client_updater": "= 3.10.1",
     "chef_gem": "= 0.1.0",
     "compat_resource": "= 12.19.0",
