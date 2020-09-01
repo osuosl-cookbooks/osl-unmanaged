@@ -130,7 +130,7 @@
     "proj-snowdrift": "= 1.6.10",
     "proj-webdav": "= 2.2.1",
     "prometheus-platform": "= 2.2.0",
-    "proxytrack": "= 1.0.3",
+    "proxytrack": "= 1.0.4",
     "python": "= 1.4.6",
     "rabbitmq": "= 5.2.0",
     "racktables": "= 1.3.3",
