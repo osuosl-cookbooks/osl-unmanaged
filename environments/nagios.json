@@ -101,7 +101,7 @@
     "osl-php": "= 5.3.0",
     "osl-postfix": "= 1.2.1",
     "osl-postgresql": "= 2.1.0",
-    "osl-prometheus": "= 1.10.0",
+    "osl-prometheus": "= 1.10.1",
     "osl-rancid": "= 1.1.1",
     "osl-rsync": "= 1.4.0",
     "osl-scponly": "= 1.1.0",
