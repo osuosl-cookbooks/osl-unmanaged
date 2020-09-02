@@ -79,7 +79,7 @@
     "osl-ceph": "= 3.3.0",
     "osl-docker": "= 2.10.0",
     "osl-fail2ban": "= 2.0.1",
-    "osl-git": "= 1.3.1",
+    "osl-git": "= 1.4.0",
     "osl-gitlab": "= 1.2.1",
     "osl-haproxy": "= 5.4.10",
     "osl-jenkins": "= 2.8.3",
