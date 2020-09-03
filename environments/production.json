@@ -120,7 +120,7 @@
     "poise-python": "= 1.7.0",
     "poise-service": "= 1.4.2",
     "postfix": "= 5.3.1",
-    "postgresql": "= 7.1.9",
+    "postgresql": "= 8.0.0",
     "proj-deluge": "= 2.3.0",
     "proj-drupalorg": "= 0.1.8",
     "proj-lf": "= 0.16.1",
