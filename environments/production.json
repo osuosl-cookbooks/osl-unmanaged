@@ -84,7 +84,7 @@
     "osl-haproxy": "= 5.4.11",
     "osl-imap": "= 1.2.0",
     "osl-jenkins": "= 2.8.3",
-    "osl-keepalived": "= 0.4.0",
+    "osl-keepalived": "= 1.0.0",
     "osl-mailman": "= 1.4.0",
     "osl-memcached": "= 2.1.1",
     "osl-mirror": "= 1.7.0",
