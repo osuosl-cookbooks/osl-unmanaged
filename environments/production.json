@@ -50,7 +50,7 @@
     "logrotate": "= 2.2.3",
     "lvm": "= 4.1.6",
     "memcached": "= 6.1.0",
-    "mariadb": "= 0.3.0",
+    "mariadb": "= 4.1.0",
     "modules": "= 0.2.4",
     "monit": "= 0.7.1",
     "munin": "= 2.1.0",
