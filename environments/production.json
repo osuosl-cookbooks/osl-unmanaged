@@ -53,7 +53,7 @@
     "mariadb": "= 4.1.0",
     "modules": "= 0.2.4",
     "monit": "= 0.7.1",
-    "munin": "= 2.1.0",
+    "munin": "= 3.0.0",
     "mysql2_chef_gem": "= 2.1.0",
     "mysql": "= 8.5.1",
     "newrelic": "= 2.39.1",
