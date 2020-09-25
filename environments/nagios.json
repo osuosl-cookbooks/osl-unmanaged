@@ -26,7 +26,7 @@
     "database": "= 4.0.6",
     "dhcp": "= 7.2.0",
     "dnf-automatic": "= 1.1.0",
-    "dobc": "= 2.0.4",
+    "dobc": "= 2.1.0",
     "docker": "= 6.0.3",
     "fail2ban": "= 6.2.1",
     "firewall": "= 7.0.1",
