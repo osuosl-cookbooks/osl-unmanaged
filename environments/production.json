@@ -167,7 +167,7 @@
     "yum-nvidia": "= 1.2.1",
     "yum-plugin-versionlock": "= 0.2.1",
     "yum-qemu-ev": "= 2.5.1",
-    "yum-repoforge": "= 2.0.1",
+    "yum-repoforge": "= 3.0.0",
     "yumgroup": "= 0.6.0",
     "zlib": "= 2.0.0",
     "zypper": "= 0.4.0"
