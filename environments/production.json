@@ -78,7 +78,7 @@
     "osl-docker": "= 2.10.0",
     "osl-drupal": "= 0.2.2",
     "osl-fail2ban": "= 2.0.1",
-    "osl-ganeti": "= 2.4.0",
+    "osl-ganeti": "= 2.4.1",
     "osl-git": "= 1.5.0",
     "osl-gitlab": "= 1.2.1",
     "osl-grafana": "= 1.0.6",
