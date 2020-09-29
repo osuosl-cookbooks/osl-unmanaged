@@ -23,7 +23,7 @@
     "fail2ban": "= 6.2.1",
     "git": "= 10.0.0",
     "golang": "= 1.7.0",
-    "htpasswd": "= 0.3.0",
+    "htpasswd": "= 1.0.0",
     "jira": "1.0.2",
     "keepalived": "= 5.1.0",
     "mariadb": "= 4.1.0",
