@@ -10,19 +10,17 @@ cookbook 'ganeti', git: 'git@github.com:osuosl-cookbooks/ganeti'
 cookbook 'ibm-power', git: 'git@github.com:osuosl-cookbooks/ibm-power'
 cookbook 'modules', git: 'git@github.com:osuosl-cookbooks/modules-cookbook'
 cookbook 'munin', git: 'git@github.com:osuosl-cookbooks/munin'
-cookbook 'openstackclient', github: 'openstack/cookbook-openstackclient', branch: 'stable/rocky'
 cookbook 'osl-acme', git: 'git@github.com:osuosl-cookbooks/osl-acme'
-cookbook 'osl-apache', git: 'git@github.com:osuosl-cookbooks/osl-apache', branch: 'stable/4.x'
+cookbook 'osl-apache', git: 'git@github.com:osuosl-cookbooks/osl-apache'
 cookbook 'osl-ceph', git: 'git@github.com:osuosl-cookbooks/osl-ceph'
 cookbook 'osl-docker', git: 'git@github.com:osuosl-cookbooks/osl-docker'
 cookbook 'osl-fail2ban', git: 'git@github.com:osuosl-cookbooks/osl-fail2ban'
 cookbook 'osl-firewall', git: 'git@github.com:osuosl-cookbooks/osl-firewall'
 cookbook 'osl-ganeti', git: 'git@github.com:osuosl-cookbooks/osl-ganeti'
 cookbook 'osl-git', git: 'git@github.com:osuosl-cookbooks/osl-git'
-cookbook 'osl-letsencrypt-boulder-server', git: 'git@github.com:osuosl-cookbooks/osl-letsencrypt-boulder-server'
 cookbook 'osl-munin', git: 'git@github.com:osuosl-cookbooks/osl-munin'
 cookbook 'osl-nrpe', git: 'git@github.com:osuosl-cookbooks/osl-nrpe'
-cookbook 'osl-openstack', git: 'git@github.com:osuosl-cookbooks/osl-openstack', branch: 'stable/rocky'
+cookbook 'osl-openstack', git: 'git@github.com:osuosl-cookbooks/osl-openstack'
 cookbook 'osl-php', git: 'git@github.com:osuosl-cookbooks/osl-php'
 cookbook 'osl-prometheus', git: 'git@github.com:osuosl-cookbooks/osl-prometheus'
 cookbook 'osl-rsync', git: 'git@github.com:osuosl-cookbooks/osl-rsync'
@@ -37,27 +35,7 @@ cookbook 'yum-qemu-ev', git: 'git@github.com:osuosl-cookbooks/yum-qemu-ev.git'
 # ).each do |cb|
 #   cookbook "openstack-#{cb}",
 #            github: "osuosl-cookbooks/cookbook-openstack-#{cb}",
-#            branch: 'osuosl/rocky'
+#            branch: 'osuosl/stein'
 # end
-
-# Openstack deps
-%w(
-  block-storage
-  common
-  compute
-  dashboard
-  identity
-  image
-  integration-test
-  network
-  ops-database
-  ops-messaging
-  orchestration
-  telemetry
-).each do |cb|
-  cookbook "openstack-#{cb}",
-           github: "openstack/cookbook-openstack-#{cb}",
-           branch: 'stable/rocky'
-end
 
 metadata

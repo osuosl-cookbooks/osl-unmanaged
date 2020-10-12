@@ -1,0 +1,10 @@
+{
+  "id": "placement",
+  "placement": {
+    "encrypted_data": "hCok4S5Ux1lG+utIgr0y8jc9Yg2p6BGP94UGB2j0Q64=\n",
+    "hmac": "EqxF4tRtF7oS+tXOOjYwY1RHFH6DlU6/H2HAnhFUCLM=\n",
+    "iv": "VHhYow7lNzCVjwFyoYI+NA==\n",
+    "version": 2,
+    "cipher": "aes-256-cbc"
+  }
+}
