@@ -32,7 +32,7 @@
     "firewall": "= 7.0.2",
     "ganeti": "= 3.1.0",
     "git": "= 10.0.0",
-    "gitlab-ci-runner": "= 1.8.0",
+    "gitlab-ci-runner": "= 2.1.0",
     "gitlab_omnibus": "= 1.2.0",
     "glusterfs": "= 0.1.1",
     "golang": "= 1.7.0",
