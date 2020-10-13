@@ -33,7 +33,7 @@
     "ganeti": "= 3.1.0",
     "git": "= 10.0.0",
     "gitlab-ci-runner": "= 2.1.0",
-    "gitlab_omnibus": "= 1.2.0",
+    "gitlab_omnibus": "= 2.0.0",
     "glusterfs": "= 0.1.1",
     "golang": "= 1.7.0",
     "grafana": "= 3.0.1",

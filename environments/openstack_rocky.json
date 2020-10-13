@@ -31,7 +31,7 @@
     "firewall": "= 7.0.2",
     "git": "= 10.0.0",
     "gitlab-ci-runner": "= 2.1.0",
-    "gitlab_omnibus": "= 1.2.0",
+    "gitlab_omnibus": "= 2.0.0",
     "haproxy": "= 9.0.1",
     "homebrew": "= 5.0.8",
     "htpasswd": "= 0.3.0",
