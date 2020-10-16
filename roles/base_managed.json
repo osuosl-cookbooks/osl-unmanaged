@@ -31,6 +31,7 @@
       "monitored_environments": [
         "nagios",
         "openstack_rocky",
+        "openstack_stein",
         "phpbb",
         "production"
         ]
@@ -39,6 +40,7 @@
       "multi_environment_monitoring": [
         "nagios",
         "openstack_rocky",
+        "openstack_stein",
         "phpbb",
         "production"
       ]
@@ -50,6 +52,7 @@
       "chef_environments": [
         "nagios",
         "openstack_rocky",
+        "openstack_stein",
         "phpbb",
         "production"
       ]
