@@ -9,12 +9,12 @@ def run_command(command)
   if File.exist?('Gemfile.lock')
     sh %(bundle exec #{command})
   else
-    sh %(chef exec #{command})
+    sh %(cinc exec #{command})
   end
 end
 
 PROV_PATH = '.'.freeze
-bootstrap_options = '-x osuadmin --sudo --bootstrap-version 14'
+bootstrap_options = '-U osuadmin --sudo --bootstrap-version 15'
 
 task :destroy_all do
   Rake::Task[:destroy_machines].invoke
@@ -43,7 +43,7 @@ end
 
 desc 'Upload data to chef-zero server'
 task knife_upload: [:berks_vendor, :chef_zero, :chef_server_env] do
-  run_command('knife upload . --force -c .chef/knife.rb')
+  run_command('knife upload . --force -c .chef/knife.rb --concurrency 1')
 end
 
 desc 'Create Chef Key'

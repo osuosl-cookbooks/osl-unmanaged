@@ -1,6 +1,8 @@
 .rake_test_cache
 .kitchen
 .chef/*.pem
+.cinc/*.pem
+.cinc/cinc_guid
 /data_bags
 /data_bags/*
 node-backup*
@@ -22,6 +24,11 @@ Berksfile.lock
 /provisioning/.chef/clients
 /provisioning/.chef/nodes
 /provisioning/.chef/provisioning
+/provisioning/.cinc/*.pem
+/provisioning/.cinc/local-mode-cache
+/provisioning/.cinc/clients
+/provisioning/.cinc/nodes
+/provisioning/.cinc/provisioning
 /provisioning/nodes
 /provisioning/cookbooks
 /provisioning/clients
