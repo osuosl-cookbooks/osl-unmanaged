@@ -105,7 +105,7 @@
     "poise-languages": "= 2.1.2",
     "poise-python": "= 1.7.0",
     "poise-service": "= 1.5.2",
-    "postfix": "= 5.4.0",
+    "postfix": "= 5.4.1",
     "postgresql": "= 8.0.0",
     "prometheus-platform": "= 2.2.0",
     "rabbitmq": "= 5.8.2",
