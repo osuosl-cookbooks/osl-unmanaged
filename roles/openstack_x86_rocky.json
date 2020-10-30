@@ -30,9 +30,6 @@
             "10.1.2.0/23"
           ]
         }
-      },
-      "secret": {
-        "key_path": "/etc/cinc/encrypted_data_bag_secret"
       }
     },
     "openstack": {
@@ -56,6 +53,9 @@
             "ram_allocation_ratio": "1"
           }
         }
+      },
+      "secret": {
+        "key_path": "/etc/cinc/encrypted_data_bag_secret"
       },
       "telemetry": {
         "pipeline": {
