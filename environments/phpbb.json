@@ -43,7 +43,7 @@
     "osl-nodes": "= 1.6.0",
     "osl-mysql": "= 3.1.0",
     "osl-php": "= 5.5.1",
-    "osl-postfix": "= 1.2.2",
+    "osl-postfix": "= 1.2.3",
     "osl-postgresql": "= 3.0.1",
     "osl-prometheus": "= 1.10.1",
     "osl-scponly": "= 1.2.0",
