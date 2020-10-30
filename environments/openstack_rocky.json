@@ -87,7 +87,7 @@
     "osl-munin": "= 4.0.0",
     "osl-mysql": "= 2.7.0",
     "osl-nfs": "= 1.1.1",
-    "osl-nrpe": "= 3.5.1",
+    "osl-nrpe": "= 3.5.2",
     "osl-openstack": "= 8.3.4",
     "osl-php": "= 5.5.1",
     "osl-postfix": "= 1.2.3",
