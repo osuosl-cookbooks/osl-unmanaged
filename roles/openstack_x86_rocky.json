@@ -103,7 +103,11 @@
           "default": "eth1"
         },
         "compute": {
-          "default": "ens802f0.42"
+          "default": "ens802f0.42",
+          "oprod1.osuosl.bak": "p1p1.42",
+          "oprod2.osuosl.bak": "p1p1.42",
+          "oprod3.osuosl.bak": "p1p1.42",
+          "oprod4.osuosl.bak": "p1p1.42"
         }
       },
       "external_networks": [
@@ -121,7 +125,11 @@
             "default": "eth7"
           },
           "compute": {
-            "default": "ens802f1.100"
+            "default": "ens802f1.100",
+            "oprod1.osuosl.bak": "p1p2.100",
+            "oprod2.osuosl.bak": "p1p2.100",
+            "oprod3.osuosl.bak": "p1p2.100",
+            "oprod4.osuosl.bak": "p1p2.100"
           }
         },
         {
@@ -132,7 +140,11 @@
             "default": "eth5"
           },
           "compute": {
-            "default": "ens802f1.106"
+            "default": "ens802f1.106",
+            "oprod1.osuosl.bak": "p1p2.106",
+            "oprod2.osuosl.bak": "p1p2.106",
+            "oprod3.osuosl.bak": "p1p2.106",
+            "oprod4.osuosl.bak": "p1p2.106"
           }
         },
         {
@@ -143,7 +155,11 @@
             "default": "eth6"
           },
           "compute": {
-            "default": "ens802f1.121"
+            "default": "ens802f1.121",
+            "oprod1.osuosl.bak": "p1p2.121",
+            "oprod2.osuosl.bak": "p1p2.121",
+            "oprod3.osuosl.bak": "p1p2.121",
+            "oprod4.osuosl.bak": "p1p2.121"
           }
         },
         {
@@ -154,7 +170,11 @@
             "default": "eth3"
           },
           "compute": {
-            "default": "ens802f1.42"
+            "default": "ens802f1.42",
+            "oprod1.osuosl.bak": "p1p2.42",
+            "oprod2.osuosl.bak": "p1p2.42",
+            "oprod3.osuosl.bak": "p1p2.42",
+            "oprod4.osuosl.bak": "p1p2.42"
           }
         }
       ]
