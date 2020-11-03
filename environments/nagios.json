@@ -43,7 +43,7 @@
     "htpasswd": "= 0.3.0",
     "iptables": "= 7.1.0",
     "iptables-ng": "= 4.0.0",
-    "java": "= 4.3.0",
+    "java": "= 8.4.0",
     "jenkins": "= 8.0.2",
     "line": "= 2.9.0",
     "logrotate": "= 2.2.3",
