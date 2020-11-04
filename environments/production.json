@@ -29,7 +29,7 @@
     "dobc": "= 2.1.0",
     "docker": "= 6.0.3",
     "fail2ban": "= 6.2.1",
-    "firewall": "= 7.0.2",
+    "firewall": "= 7.0.3",
     "ganeti": "= 3.1.0",
     "git": "= 10.0.0",
     "gitlab-ci-runner": "= 2.1.0",

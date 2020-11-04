@@ -28,7 +28,7 @@
     "erlang": "= 8.0.0",
     "etcd": "= 5.6.0",
     "fail2ban": "= 6.2.1",
-    "firewall": "= 7.0.2",
+    "firewall": "= 7.0.3",
     "git": "= 10.0.0",
     "gitlab-ci-runner": "= 2.1.0",
     "gitlab_omnibus": "= 2.0.0",
