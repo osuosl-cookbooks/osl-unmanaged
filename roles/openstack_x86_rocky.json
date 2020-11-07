@@ -87,6 +87,7 @@
       "cluster_role": "openstack_x86_rocky",
       "ceph": true,
       "ceph_item": "openstack_x86",
+      "cluster_name": "x86",
       "database_suffix": "x86",
       "databag_prefix": "x86",
       "endpoint_hostname": "oprod-controller1.osuosl.org",

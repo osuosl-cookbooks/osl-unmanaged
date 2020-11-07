@@ -82,6 +82,7 @@
       "cluster_role": "openstack_ppc64_rocky",
       "ceph": true,
       "ceph_item": "openstack_ppc64",
+      "cluster_name": "ppc64",
       "database_suffix": "ppc64",
       "databag_prefix": "ppc64",
       "endpoint_hostname": "openpower-controller.osuosl.org",
