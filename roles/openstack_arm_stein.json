@@ -76,6 +76,7 @@
       "cluster_role": "openstack_arm_stein",
       "ceph": true,
       "ceph_item": "openstack_arm",
+      "cluster_name": "arm",
       "database_suffix": "arm",
       "databag_prefix": "arm",
       "endpoint_hostname": "arm-openstack.osuosl.org",
