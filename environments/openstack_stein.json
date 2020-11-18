@@ -63,7 +63,7 @@
     "openstack-telemetry": "= 19.1.0",
     "openstackclient": "= 19.1.0",
     "openvpn": "= 5.1.1",
-    "osl-apache": "= 5.4.0",
+    "osl-apache": "= 5.5.0",
     "osl-backup": "= 1.4.0",
     "osl-ceph": "= 3.4.0",
     "osl-docker": "= 2.10.0",
