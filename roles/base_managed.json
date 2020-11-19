@@ -30,7 +30,6 @@
       "multi_environment_monitoring": true,
       "monitored_environments": [
         "nagios",
-        "openstack_rocky",
         "openstack_stein",
         "phpbb",
         "production"
@@ -39,7 +38,6 @@
     "munin": {
       "multi_environment_monitoring": [
         "nagios",
-        "openstack_rocky",
         "openstack_stein",
         "phpbb",
         "production"
@@ -51,7 +49,6 @@
     "osl-prometheus": {
       "chef_environments": [
         "nagios",
-        "openstack_rocky",
         "openstack_stein",
         "phpbb",
         "production"
