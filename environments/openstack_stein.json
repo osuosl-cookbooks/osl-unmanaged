@@ -2,7 +2,7 @@
   "name": "openstack_stein",
   "description": "Openstack Stein Environment",
   "cookbook_versions": {
-    "apache2": "= 8.5.1",
+    "apache2": "= 8.6.0",
     "apt": "= 7.3.0",
     "apt-osuosl": "= 1.1.0",
     "ark": "= 5.0.0",
@@ -63,7 +63,7 @@
     "openstack-telemetry": "= 19.1.0",
     "openstackclient": "= 19.1.0",
     "openvpn": "= 5.1.1",
-    "osl-apache": "= 5.5.0",
+    "osl-apache": "= 5.6.0",
     "osl-backup": "= 1.4.0",
     "osl-ceph": "= 3.4.0",
     "osl-docker": "= 2.10.1",
