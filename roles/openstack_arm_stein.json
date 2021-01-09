@@ -126,6 +126,15 @@
           "compute": {
             "default": "enp1s0.107"
           }
+        },
+        {
+          "name": "public5",
+          "controller": {
+            "default": "eth4"
+          },
+          "compute": {
+            "default": "enp1s0.117"
+          }
         }
       ]
     },
