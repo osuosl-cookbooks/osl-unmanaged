@@ -129,6 +129,8 @@
         },
         {
           "name": "public5",
+          "subnet": "140.211.169.0/26",
+          "uuid": "2d0425cd-5898-434f-8669-f8ab2d5d0f72",
           "controller": {
             "default": "eth4"
           },
