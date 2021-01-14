@@ -70,7 +70,7 @@
     "osl-fail2ban": "= 2.1.0",
     "osl-firewall": "= 1.0.3",
     "osl-git": "= 1.5.0",
-    "osl-haproxy": "= 5.6.2",
+    "osl-haproxy": "= 5.6.3",
     "osl-jenkins": "= 2.11.2",
     "osl-munin": "= 4.0.0",
     "osl-mysql": "= 2.7.1",
