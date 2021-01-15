@@ -36,7 +36,7 @@
     "osl-acme": "= 3.2.1",
     "osl-apache": "= 5.6.0",
     "osl-fail2ban": "= 2.1.0",
-    "osl-haproxy": "= 5.6.4",
+    "osl-haproxy": "= 5.6.5",
     "osl-imap": "= 1.2.1",
     "osl-keepalived": "= 1.0.0",
     "osl-nagios": "= 3.1.7",
