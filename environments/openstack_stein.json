@@ -82,7 +82,7 @@
     "osl-postgresql": "= 3.0.1",
     "osl-prometheus": "= 1.10.4",
     "osl-rsync": "= 1.4.0",
-    "osl-scponly": "= 1.2.0",
+    "osl-scponly": "= 1.2.1",
     "osl-selinux": "= 1.3.3",
     "osl-syslog": "= 3.0.0",
     "osl-vpn": "= 2.5.0",
