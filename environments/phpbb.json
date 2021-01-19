@@ -38,7 +38,7 @@
     "osl-fail2ban": "= 2.1.0",
     "osl-haproxy": "= 5.6.5",
     "osl-imap": "= 1.2.1",
-    "osl-keepalived": "= 1.0.0",
+    "osl-keepalived": "= 1.0.1",
     "osl-nagios": "= 3.1.7",
     "osl-nodes": "= 1.8.1",
     "osl-mysql": "= 3.1.1",
