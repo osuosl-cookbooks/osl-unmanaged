@@ -73,7 +73,7 @@
     "yum-repoforge": "= 3.0.0",
     "yumgroup": "= 0.6.0",
     "proj-phpbb": "= 6.4.10",
-    "rdiff-backup": "= 4.2.1"
+    "rdiff-backup": "= 4.3.0"
   },
   "default_attributes": {
     "nagios": {
