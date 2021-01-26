@@ -17,7 +17,7 @@
     "composer": "= 2.6.1",
     "cron": "= 6.3.0",
     "dnf-automatic": "= 1.1.0",
-    "docker": "= 6.0.3",
+    "docker": "= 7.6.1",
     "dpkg_autostart": "= 0.2.0",
     "erlang": "= 8.1.0",
     "etcd": "= 6.1.0",
