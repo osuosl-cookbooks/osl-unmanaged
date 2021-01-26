@@ -69,7 +69,7 @@
     "yum-epel": "= 3.3.0",
     "yum-ius": "= 3.1.0",
     "yum-kernel-osuosl": "= 2.1.2",
-    "yum-plugin-versionlock": "= 0.2.1",
+    "yum-plugin-versionlock": "= 0.2.2",
     "yum-repoforge": "= 3.0.0",
     "yumgroup": "= 0.6.0",
     "proj-phpbb": "= 6.4.10",
