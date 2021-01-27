@@ -35,7 +35,7 @@
     "omnibus_updater": "= 3.0.2",
     "osl-acme": "= 3.2.1",
     "osl-apache": "= 5.6.1",
-    "osl-fail2ban": "= 2.1.0",
+    "osl-fail2ban": "= 2.2.0",
     "osl-haproxy": "= 5.6.5",
     "osl-imap": "= 1.2.1",
     "osl-keepalived": "= 1.0.1",
