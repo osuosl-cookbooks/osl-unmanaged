@@ -67,7 +67,7 @@
     "varnish": "= 3.3.1",
     "yum": "= 5.1.0",
     "yum-centos": "= 4.0.2",
-    "yum-elrepo": "2.0.0",
+    "yum-elrepo": "= 2.0.0",
     "yum-epel": "= 3.3.0",
     "yum-ius": "= 3.1.0",
     "yum-kernel-osuosl": "= 2.1.2",
