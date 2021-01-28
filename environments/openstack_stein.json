@@ -110,6 +110,7 @@
     "yum": "= 5.1.0",
     "yum-centos": "= 4.0.2",
     "yum-cron": "= 1.2.1",
+    "yum-elrepo": "2.0.0",
     "yum-epel": "= 3.3.0",
     "yum-erlang_solutions": "= 2.0.0",
     "yum-ius": "= 3.1.0",
