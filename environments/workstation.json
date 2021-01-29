@@ -6,7 +6,7 @@
     "apt": "= 7.3.0",
     "apt-osuosl": "= 1.1.0",
     "ark": "= 5.0.0",
-    "base": "= 7.1.1",
+    "base": "= 7.2.0",
     "celery": "= 0.1.5",
     "certificate": "= 1.0.0",
     "chef-apt-docker": "= 2.0.6",
