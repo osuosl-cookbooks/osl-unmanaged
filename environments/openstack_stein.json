@@ -13,6 +13,7 @@
     "chef-client": "= 12.2.0",
     "chef-vault": "= 4.0.3",
     "chef_client_updater": "= 3.10.1",
+    "chef-ingredient": "= 3.3.0",
     "cluster-search": "= 1.5.0",
     "composer": "= 2.6.1",
     "cron": "= 6.3.0",
