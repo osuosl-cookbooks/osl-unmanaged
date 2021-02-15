@@ -1,9 +1,16 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "recipe[osl-prometheus::mysqld]"
   ],
   "chef_type": "role",
-  "override_attributes": {},
+  "override_attributes": {
+    "osl-prometheus": {
+      "mysqld": {
+	"cluster": "mysql-vip2"
+      }
+    }
+  },
   "default_attributes": {
   },
   "json_class": "Chef::Role",
