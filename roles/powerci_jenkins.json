@@ -1,7 +1,8 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[osl-jenkins::powerci]"
+    "recipe[osl-jenkins::powerci]",
+    "role[haproxy]"
   ],
   "chef_type": "role",
   "override_attributes": {},

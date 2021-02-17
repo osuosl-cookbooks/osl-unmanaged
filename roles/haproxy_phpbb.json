@@ -4,24 +4,25 @@
     "recipe[osl-nfs]",
     "recipe[proj-phpbb::haproxy]",
     "recipe[osl-haproxy::mon]",
-    "recipe[osl-keepalived::haproxy_phpbb]"
+    "recipe[osl-keepalived::haproxy_phpbb]",
+    "role[haproxy]"
   ],
   "chef_type": "role",
   "override_attributes": {
-      "sysctl": {
-        "params": {
-          "net": {
-            "netfilter.nf_conntrack_max": "256000",
-            "nf_conntrack_max": "256000"
-          }
-        }
-      },
-      "ucarp": {
-        "data_bag": {
-          "cluster": "vip-phpbb-lb1"
+    "sysctl": {
+      "params": {
+        "net": {
+          "netfilter.nf_conntrack_max": "256000",
+          "nf_conntrack_max": "256000"
         }
       }
-   },
+    },
+    "ucarp": {
+      "data_bag": {
+        "cluster": "vip-phpbb-lb1"
+      }
+    }
+  },
   "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "haproxy configuration for phpbb",

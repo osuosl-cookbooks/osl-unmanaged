@@ -4,27 +4,28 @@
     "recipe[osl-haproxy::osuosl_lb]",
     "recipe[firewall::http]",
     "recipe[osl-keepalived::haproxy_osuosl]",
-    "recipe[osl-haproxy::mon]"
+    "recipe[osl-haproxy::mon]",
+    "role[haproxy]"
   ],
   "chef_type": "role",
   "override_attributes": {
-      "sysctl": {
-        "params": {
-          "net": {
-            "netfilter.nf_conntrack_max": "256000",
-            "nf_conntrack_max": "256000"
-          }
-        }
-      },
-      "osl-haproxy": {
-        "cluster": "osuosl"
-      },
-      "ucarp": {
-        "data_bag": {
-          "cluster": "vip-lb1"
+    "sysctl": {
+      "params": {
+        "net": {
+          "netfilter.nf_conntrack_max": "256000",
+          "nf_conntrack_max": "256000"
         }
       }
-   },
+    },
+    "osl-haproxy": {
+      "cluster": "osuosl"
+    },
+    "ucarp": {
+      "data_bag": {
+        "cluster": "vip-lb1"
+      }
+    }
+  },
   "default_attributes": {},
   "json_class": "Chef::Role",
   "description": "haproxy configuration for osuosl central load balancer",
