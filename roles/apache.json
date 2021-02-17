@@ -2,6 +2,7 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[osl-apache::mon]",
+    "recipe[osl-prometheus::apache]",
     "recipe[osl-rsync::apache]"
   ],
   "chef_type": "role",
