@@ -38,11 +38,7 @@
     },
     "munin": {
       "multi_environment_monitoring": [
-        "nagios",
-        "openstack_stein",
-        "phpbb",
-        "production",
-        "production_centos6"
+        "_default"
       ]
     },
     "mysql": {
