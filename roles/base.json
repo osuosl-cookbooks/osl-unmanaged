@@ -7,7 +7,7 @@
     "recipe[base::packages]",
     "recipe[osl-fail2ban]",
     "recipe[base::environment]",
-    "recipe[osl-munin::client]"
+    "recipe[osl-munin::remove]"
   ],
   "env_run_lists": {
   },
