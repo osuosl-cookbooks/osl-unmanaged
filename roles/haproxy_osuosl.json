@@ -4,7 +4,6 @@
     "recipe[osl-haproxy::osuosl_lb]",
     "recipe[firewall::http]",
     "recipe[osl-keepalived::haproxy_osuosl]",
-    "recipe[osl-haproxy::mon]",
     "role[haproxy]"
   ],
   "chef_type": "role",
