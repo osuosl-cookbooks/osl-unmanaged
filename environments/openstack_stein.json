@@ -94,7 +94,7 @@
     "postgresql": "= 8.2.1",
     "prometheus-platform": "= 2.2.0",
     "rabbitmq": "= 5.8.5",
-    "rdiff-backup": "= 4.3.0",
+    "rdiff-backup": "= 4.3.1",
     "resolver": "= 2.1.0",
     "resource_from_hash": "= 1.2.1",
     "rsyslog": "= 7.0.1",
