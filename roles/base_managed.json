@@ -38,7 +38,7 @@
     },
     "munin": {
       "multi_environment_monitoring": [
-        "_default"
+        "production_centos6"
       ]
     },
     "mysql": {
