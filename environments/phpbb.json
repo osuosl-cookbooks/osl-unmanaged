@@ -34,7 +34,7 @@
     "nodejs": "= 7.0.1",
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
-    "osl-acme": "= 3.2.1",
+    "osl-acme": "= 3.2.2",
     "osl-apache": "= 5.8.0",
     "osl-fail2ban": "= 2.2.0",
     "osl-haproxy": "= 5.8.0",
