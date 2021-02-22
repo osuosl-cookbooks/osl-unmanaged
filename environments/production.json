@@ -89,7 +89,7 @@
     "osl-jenkins": "= 2.11.3",
     "osl-keepalived": "= 1.0.1",
     "osl-mailman": "= 1.5.0",
-    "osl-mailrelay": "= 1.1.7",
+    "osl-mailrelay": "= 1.1.8",
     "osl-memcached": "= 2.2.0",
     "osl-mirror": "= 1.8.0",
     "osl-munin": "= 5.2.1",
