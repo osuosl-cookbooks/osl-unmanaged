@@ -22,7 +22,7 @@
     "dpkg_autostart": "= 0.2.0",
     "erlang": "= 8.1.0",
     "etcd": "= 6.1.0",
-    "fail2ban": "= 6.3.1",
+    "fail2ban": "= 6.3.2",
     "firewall": "= 7.0.4",
     "git": "= 10.0.0",
     "gitlab-ci-runner": "= 2.1.0",
