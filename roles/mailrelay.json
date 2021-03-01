@@ -3,6 +3,7 @@
   "run_list": [
     "recipe[osl-mailrelay::default]",
     "role[base_managed]",
+    "recipe[osl-fail2ban::postfix]",
     "role[smtp]",
     "role[prometheus-platform]"
   ],
