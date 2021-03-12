@@ -6,8 +6,7 @@
     "recipe[base::mailhandler]",
     "recipe[base::packages]",
     "recipe[osl-fail2ban]",
-    "recipe[base::environment]",
-    "recipe[osl-munin::remove]"
+    "recipe[base::environment]"
   ],
   "env_run_lists": {
   },

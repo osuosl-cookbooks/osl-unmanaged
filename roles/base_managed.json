@@ -36,11 +36,6 @@
         "production_centos6"
         ]
     },
-    "munin": {
-      "multi_environment_monitoring": [
-        "production_centos6"
-      ]
-    },
     "mysql": {
       "version": "5.5"
     },

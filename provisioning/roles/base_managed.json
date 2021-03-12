@@ -20,13 +20,6 @@
         "phpbb"
         ]
     },
-    "munin": {
-      "multi_environment_monitoring": [
-        "production",
-        "openstack_production",
-        "phpbb"
-      ]
-    },
     "mysql": {
       "version": "5.5"
     }
