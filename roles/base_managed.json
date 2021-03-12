@@ -29,7 +29,6 @@
     "nagios": {
       "multi_environment_monitoring": true,
       "monitored_environments": [
-        "nagios",
         "openstack_stein",
         "phpbb",
         "production",
@@ -41,7 +40,6 @@
     },
     "osl-prometheus": {
       "chef_environments": [
-        "nagios",
         "openstack_stein",
         "phpbb",
         "production",
