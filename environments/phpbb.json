@@ -44,7 +44,7 @@
     "osl-nodes": "= 1.9.1",
     "osl-mysql": "= 4.1.0",
     "osl-php": "= 5.6.0",
-    "osl-postfix": "= 1.5.0",
+    "osl-postfix": "= 1.5.1",
     "osl-postgresql": "= 4.2.1",
     "osl-prometheus": "= 2.0.1",
     "osl-repos": "= 1.0.3",
