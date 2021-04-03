@@ -65,7 +65,7 @@
     "openstackclient": "= 19.1.0",
     "openvpn": "= 5.1.1",
     "osl-apache": "= 5.8.4",
-    "osl-backup": "= 1.8.3",
+    "osl-backup": "= 1.8.4",
     "osl-ceph": "= 3.4.1",
     "osl-docker": "= 2.12.1",
     "osl-fail2ban": "= 2.3.0",
