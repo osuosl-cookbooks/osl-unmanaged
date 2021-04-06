@@ -35,7 +35,7 @@
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
     "openldap": "= 5.0.0",
-    "osl-acme": "= 3.2.2",
+    "osl-acme": "= 3.3.0",
     "osl-apache": "= 5.8.4",
     "osl-fail2ban": "= 2.3.0",
     "osl-haproxy": "= 5.8.2",
