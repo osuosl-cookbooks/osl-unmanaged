@@ -76,7 +76,7 @@
     "osl-backup": "= 1.9.0",
     "osl-ceph": "= 3.5.0",
     "osl-dhcp": "= 2.3.0",
-    "osl-dns": "= 2.4.2",
+    "osl-dns": "= 2.5.0",
     "osl-docker": "= 2.12.1",
     "osl-drupal": "= 0.2.2",
     "osl-fail2ban": "= 2.3.0",
