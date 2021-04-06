@@ -93,7 +93,7 @@
     "osl-mailman": "= 1.6.0",
     "osl-mailrelay": "= 1.2.0",
     "osl-memcached": "= 2.2.0",
-    "osl-mirror": "= 1.8.3",
+    "osl-mirror": "= 1.9.0",
     "osl-mysql": "= 4.1.0",
     "osl-nagios": "= 3.4.0",
     "osl-netboot": "= 2.5.2",
