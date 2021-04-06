@@ -25,7 +25,7 @@
     "openssh": "= 2.8.1",
     "osl-acme": "= 3.3.0",
     "osl-docker": "= 2.13.0",
-    "osl-fail2ban": "= 2.3.0",
+    "osl-fail2ban": "= 2.4.0",
     "osl-ldap": "= 1.0.1",
     "osl-postfix": "= 1.5.2",
     "poise": "= 2.8.1",
