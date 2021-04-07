@@ -73,7 +73,7 @@
     "yum-elrepo": "= 2.0.0",
     "yum-epel": "= 3.3.0",
     "yum-ius": "= 3.1.0",
-    "yum-kernel-osuosl": "= 2.1.2",
+    "yum-kernel-osuosl": "= 2.2.0",
     "yum-plugin-versionlock": "= 0.4.0",
     "yum-repoforge": "= 3.0.0",
     "yumgroup": "= 0.6.0",
