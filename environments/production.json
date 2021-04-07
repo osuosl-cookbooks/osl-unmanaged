@@ -127,7 +127,7 @@
     "poise-service": "= 1.4.2",
     "postfix": "= 5.4.1",
     "postgresql": "= 8.3.0",
-    "proj-deluge": "= 2.4.0",
+    "proj-deluge": "= 2.5.0",
     "proj-drupalorg": "= 0.1.8",
     "proj-lf": "= 0.17.1",
     "proj-misc": "= 1.15.14",
