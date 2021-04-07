@@ -113,7 +113,7 @@
     "osl-selinux": "= 1.5.0",
     "osl-slapd": "= 1.1.1",
     "osl-sudo": "= 0.1.2",
-    "osl-syslog": "= 3.1.0",
+    "osl-syslog": "= 3.2.0",
     "osl-varnish": "= 1.0.1",
     "osl-vpn": "= 2.6.0",
     "packagecloud": "= 0.3.0",
