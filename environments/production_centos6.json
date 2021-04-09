@@ -42,6 +42,7 @@
     "helpers-databags": "= 1.0.0",
     "homebrew": "= 5.0.4",
     "htpasswd": "= 1.0.0",
+    "ibm-power": "= 2.4.2",
     "iptables": "= 7.1.0",
     "iptables-ng": "= 4.0.0",
     "java": "= 8.4.0",
