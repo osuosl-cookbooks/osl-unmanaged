@@ -43,7 +43,7 @@
     "osl-keepalived": "= 1.1.0",
     "osl-ldap": "= 1.1.0",
     "osl-nagios": "= 3.5.0",
-    "osl-nodes": "= 1.11.1",
+    "osl-nodes": "= 1.11.2",
     "osl-mysql": "= 4.2.0",
     "osl-php": "= 5.8.0",
     "osl-postfix": "= 1.6.0",
