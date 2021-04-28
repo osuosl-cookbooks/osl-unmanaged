@@ -82,7 +82,7 @@
     "osl-postfix": "= 1.6.0",
     "osl-postgresql": "= 4.3.0",
     "osl-prometheus": "= 2.1.0",
-    "osl-repos": "= 1.1.0",
+    "osl-repos": "= 1.1.2",
     "osl-rsync": "= 2.1.0",
     "osl-scponly": "= 1.4.0",
     "osl-selinux": "= 1.5.0",
