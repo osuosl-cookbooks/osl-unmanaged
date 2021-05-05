@@ -100,7 +100,7 @@
     "osl-nfs": "= 1.3.0",
     "osl-nginx": "= 5.1.0",
     "osl-nodejs": "= 1.3.0",
-    "osl-nodes": "= 1.11.2",
+    "osl-nodes": "= 1.12.0",
     "osl-nrpe": "= 4.2.0",
     "osl-php": "= 5.8.1",
     "osl-postfix": "= 1.6.0",
