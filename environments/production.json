@@ -87,7 +87,7 @@
     "osl-grafana": "= 1.1.0",
     "osl-haproxy": "= 5.9.2",
     "osl-imap": "= 1.3.0",
-    "osl-jenkins": "= 2.13.2",
+    "osl-jenkins": "= 2.13.3",
     "osl-keepalived": "= 1.1.0",
     "osl-ldap": "= 1.1.0",
     "osl-mailman": "= 1.6.0",
