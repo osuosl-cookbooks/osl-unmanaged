@@ -96,7 +96,7 @@
     "osl-mirror": "= 2.0.0",
     "osl-mysql": "= 5.0.0",
     "osl-nagios": "= 3.5.2",
-    "osl-netboot": "= 2.6.1",
+    "osl-netboot": "= 3.0.0",
     "osl-nfs": "= 1.3.0",
     "osl-nginx": "= 5.1.0",
     "osl-nodejs": "= 1.3.0",
