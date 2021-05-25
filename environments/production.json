@@ -79,7 +79,7 @@
     "osl-dns": "= 3.0.0",
     "osl-docker": "= 3.0.0",
     "osl-drupal": "= 0.2.2",
-    "osl-fail2ban": "= 2.4.0",
+    "osl-fail2ban": "= 3.0.0",
     "osl-firewall": "= 1.2.1",
     "osl-ganeti": "= 2.6.0",
     "osl-git": "= 1.6.0",
