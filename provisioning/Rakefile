@@ -72,7 +72,7 @@ task openstack_x86_controller: [:create_key, :chef_zero, :chef_server_env] do
   attributes = '\'{ "ceph": { "fsid-secret": "ae3f1d03-bacd-4a90-b869-1a4fabb107f2" }, "osl-openstack": { "node_type": "controller" } }\''
   run_list = %w(
     role[base_managed]
-    recipe[firewall::osl_only]
+    recipe[osl-firewall::osl_only]
     role[ceph]
     role[ceph_mon]
     role[ceph_mgr]
