@@ -92,7 +92,7 @@
     "osl-ldap": "= 1.1.0",
     "osl-mailman": "= 1.6.0",
     "osl-mailrelay": "= 1.2.0",
-    "osl-memcached": "= 2.3.0",
+    "osl-memcached": "= 3.0.0",
     "osl-mirror": "= 1.9.0",
     "osl-mysql": "= 4.2.0",
     "osl-nagios": "= 3.5.2",
