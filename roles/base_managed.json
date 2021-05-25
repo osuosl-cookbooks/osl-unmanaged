@@ -18,7 +18,7 @@
     "recipe[base::tuned]",
     "recipe[base::users]",
     "recipe[base::gitlfs]",
-    "recipe[firewall]"
+    "recipe[osl-firewall]"
   ],
   "chef_type": "role",
   "override_attributes": {},
