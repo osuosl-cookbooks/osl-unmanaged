@@ -85,7 +85,7 @@
     "osl-git": "= 1.6.0",
     "osl-gitlab": "= 2.0.0",
     "osl-grafana": "= 2.0.0",
-    "osl-haproxy": "= 5.9.3",
+    "osl-haproxy": "= 6.0.0",
     "osl-imap": "= 1.3.0",
     "osl-jenkins": "= 2.13.3",
     "osl-keepalived": "= 1.1.0",
