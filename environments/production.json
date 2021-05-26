@@ -95,7 +95,7 @@
     "osl-memcached": "= 3.0.0",
     "osl-mirror": "= 2.0.0",
     "osl-mysql": "= 5.0.0",
-    "osl-nagios": "= 3.5.2",
+    "osl-nagios": "= 3.5.3",
     "osl-netboot": "= 3.0.0",
     "osl-nfs": "= 2.0.0",
     "osl-nginx": "= 6.0.0",
