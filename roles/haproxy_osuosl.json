@@ -2,7 +2,6 @@
   "env_run_lists": {},
   "run_list": [
     "recipe[osl-haproxy::osuosl_lb]",
-    "recipe[firewall::http]",
     "recipe[osl-keepalived::haproxy_osuosl]",
     "role[haproxy]"
   ],
