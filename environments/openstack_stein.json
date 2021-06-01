@@ -51,7 +51,7 @@
     "openssh": "= 2.8.1",
     "openstack-block-storage": "= 19.1.0",
     "openstack-common": "= 19.2.1",
-    "openstack-compute": "= 19.3.0",
+    "openstack-compute": "= 19.5.0",
     "openstack-dashboard": "= 19.1.0",
     "openstack-dns": "= 19.2.0",
     "openstack-identity": "= 19.1.0",
