@@ -204,6 +204,13 @@
       "disabled_plugins": [
         ":Sessions"
       ]
+    },
+    "openssh": {
+      "server": {
+        "ciphers": "aes256-ctr,aes192-ctr,aes128-ctr",
+        "kex_algorithms": "diffie-hellman-group-exchange-sha256",
+        "m_a_cs": "hmac-sha2-512,hmac-sha2-256"
+      }
     }
   },
   "override_attributes": {
