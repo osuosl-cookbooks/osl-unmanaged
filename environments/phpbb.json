@@ -50,7 +50,7 @@
     "osl-postgresql": "= 5.0.0",
     "osl-prometheus": "= 3.0.0",
     "osl-repos": "= 1.1.2",
-    "osl-scponly": "= 1.4.0",
+    "osl-scponly": "= 1.5.0",
     "osl-selinux": "= 1.5.0",
     "osl-syslog": "= 3.2.0",
     "percona": "= 2.1.0",
