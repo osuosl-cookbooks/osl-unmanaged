@@ -37,7 +37,7 @@
     "openldap": "= 5.0.0",
     "osl-acme": "= 3.3.1",
     "osl-apache": "= 6.1.0",
-    "osl-fail2ban": "= 3.0.0",
+    "osl-fail2ban": "= 3.1.0",
     "osl-haproxy": "= 6.0.3",
     "osl-imap": "= 2.0.1",
     "osl-keepalived": "= 2.0.0",
