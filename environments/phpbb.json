@@ -21,7 +21,7 @@
     "build-essential": "= 8.2.1",
     "dnf-automatic": "= 2.0.0",
     "docker": "= 7.6.1",
-    "fail2ban": "= 6.3.2",
+    "fail2ban": "= 7.0.0",
     "git": "= 10.0.0",
     "golang": "= 1.7.0",
     "htpasswd": "= 1.0.0",
