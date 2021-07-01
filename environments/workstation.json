@@ -16,7 +16,7 @@
     "chef-ingredient": "= 3.3.0",
     "compat_resource": "= 12.19.0",
     "cron": "= 6.3.0",
-    "docker": "= 7.7.1",
+    "docker": "= 7.7.2",
     "golang": "= 1.7.0",
     "nodejs": "= 7.0.1",
     "ntp": "= 1.6.2",
