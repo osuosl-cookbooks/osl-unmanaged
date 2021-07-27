@@ -132,7 +132,7 @@
     "proj-lf": "= 1.0.0",
     "proj-misc": "= 1.16.7",
     "proj-ros": "= 5.1.2",
-    "proj-snowdrift": "= 2.0.3",
+    "proj-snowdrift": "= 2.1.0",
     "proj-webdav": "= 2.3.0",
     "prometheus-platform": "= 2.2.0",
     "proxytrack": "= 1.2.0",
