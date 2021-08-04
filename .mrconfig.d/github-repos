@@ -196,9 +196,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-slapd.git
 [osuosl-cookbooks/osl-sudo]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-sudo.git
 
-[osuosl-cookbooks/osl-supermarket]
-checkout = git clone git@github.com:osuosl-cookbooks/osl-supermarket.git
-
 [osuosl-cookbooks/osl-syslog]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-syslog.git
 
@@ -207,9 +204,6 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-varnish.git
 
 [osuosl-cookbooks/osl-vpn]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-vpn.git
-
-[osuosl-cookbooks/percona]
-checkout = git clone git@github.com:osuosl-cookbooks/percona.git
 
 [osuosl-cookbooks/proj-deluge]
 checkout = git clone git@github.com:osuosl-cookbooks/proj-deluge.git
