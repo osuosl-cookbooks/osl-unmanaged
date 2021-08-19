@@ -76,7 +76,7 @@
     "osl-ldap": "= 1.1.0",
     "osl-mysql": "= 2.7.1",
     "osl-nfs": "= 2.0.0",
-    "osl-nrpe": "= 5.2.0",
+    "osl-nrpe": "= 5.2.1",
     "osl-openstack": "= 10.2.1",
     "osl-php": "= 5.10.1",
     "osl-postfix": "= 2.1.1",
