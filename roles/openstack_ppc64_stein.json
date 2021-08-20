@@ -75,7 +75,9 @@
     "openstack": {
       "dashboard": {
         "server_hostname": "openpower-openstack.osuosl.org",
-        "server_aliases": [ "openpower-controller.osuosl.org" ]
+        "server_aliases": [
+          "openpower-controller.osuosl.org"
+        ]
       }
     },
     "osl-openstack": {
@@ -100,7 +102,9 @@
           "openpower4.osuosl.bak": "enP48p1s0f0.42",
           "openpower7.osuosl.bak": "enP48p1s0f0.42",
           "openpower9.osuosl.bak": "enP48p1s0f0.42",
-          "openpower10.osuosl.bak": "enP48p1s0f0.42"
+          "openpower10.osuosl.bak": "enP48p1s0f0.42",
+          "openpower11.osuosl.bak": "enP48p1s0f0.42",
+          "openpower12.osuosl.bak": "enP48p1s0f0.42"
         }
       },
       "external_networks": [
@@ -120,7 +124,9 @@
             "openpower4.osuosl.bak": "enP48p1s0f0.108",
             "openpower7.osuosl.bak": "enP48p1s0f0.108",
             "openpower9.osuosl.bak": "enP48p1s0f0.108",
-            "openpower10.osuosl.bak": "enP48p1s0f0.108"
+            "openpower10.osuosl.bak": "enP48p1s0f0.108",
+            "openpower11.osuosl.bak": "enP48p1s0f0.108",
+            "openpower12.osuosl.bak": "enP48p1s0f0.108"
           }
         },
         {
@@ -135,7 +141,9 @@
             "openpower4.osuosl.bak": "enP48p1s0f0.112",
             "openpower7.osuosl.bak": "enP48p1s0f0.112",
             "openpower9.osuosl.bak": "enP48p1s0f0.112",
-            "openpower10.osuosl.bak": "enP48p1s0f0.112"
+            "openpower10.osuosl.bak": "enP48p1s0f0.112",
+            "openpower11.osuosl.bak": "enP48p1s0f0.112",
+            "openpower12.osuosl.bak": "enP48p1s0f0.112"
           }
         }
       ]
@@ -145,7 +153,7 @@
         "cloud": "ppc64"
       }
     }
-   },
+  },
   "json_class": "Chef::Role",
   "description": "Openstack ppc64 Stein Role",
   "name": "openstack_ppc64_stein"
