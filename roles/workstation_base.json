@@ -50,7 +50,6 @@
     "recipe[workstation::repos]",
     "recipe[resolver::default]",
     "recipe[workstation]",
-    "recipe[workstation::blacklist]",
     "recipe[workstation::packages]",
     "recipe[workstation::xrandr]",
     "recipe[workstation::dsh]",
