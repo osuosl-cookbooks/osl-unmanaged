@@ -70,7 +70,7 @@
     "osl-docker": "= 4.2.1",
     "osl-fail2ban": "= 3.1.0",
     "osl-firewall": "= 1.4.0",
-    "osl-git": "= 1.8.0",
+    "osl-git": "= 1.9.0",
     "osl-haproxy": "= 6.0.9",
     "osl-jenkins": "= 2.13.4",
     "osl-ldap": "= 1.1.0",
