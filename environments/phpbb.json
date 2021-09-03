@@ -45,7 +45,7 @@
     "osl-nagios": "= 3.8.1",
     "osl-nodes": "= 2.2.1",
     "osl-mysql": "= 5.0.1",
-    "osl-php": "= 5.10.1",
+    "osl-php": "= 5.10.2",
     "osl-postfix": "= 2.1.1",
     "osl-postgresql": "= 5.0.0",
     "osl-prometheus": "= 3.1.0",
