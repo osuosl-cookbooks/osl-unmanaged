@@ -28,6 +28,7 @@
     "osl-fail2ban": "= 3.1.0",
     "osl-ldap": "= 1.1.0",
     "osl-postfix": "= 2.1.2",
+    "osl-resources": "= 1.0.0",
     "poise": "= 2.8.1",
     "poise-languages": "= 2.1.2",
     "poise-python": "= 1.7.0",
