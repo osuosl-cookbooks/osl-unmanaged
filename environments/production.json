@@ -42,7 +42,7 @@
     "helpers-databags": "= 1.0.0",
     "homebrew": "= 5.0.4",
     "htpasswd": "= 1.0.0",
-    "iptables": "= 7.1.0",
+    "iptables": "= 8.0.0",
     "iptables-ng": "= 4.0.0",
     "java": "= 8.4.0",
     "jenkins": "= 8.0.2",
