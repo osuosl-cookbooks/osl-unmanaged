@@ -36,7 +36,7 @@
     "omnibus_updater": "= 3.0.2",
     "openldap": "= 5.0.0",
     "osl-acme": "= 4.0.0",
-    "osl-apache": "= 6.1.0",
+    "osl-apache": "= 7.0.0",
     "osl-fail2ban": "= 3.1.0",
     "osl-haproxy": "= 6.0.13",
     "osl-imap": "= 2.0.1",
