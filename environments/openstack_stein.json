@@ -100,7 +100,6 @@
     "resource_from_hash": "= 2.1.0",
     "rsyslog": "= 7.0.1",
     "selinux": "= 6.0.0",
-    "selinux_policy": "= 2.4.0",
     "seven_zip": "= 3.1.0",
     "sudo": "= 5.4.6",
     "sysctl": "= 1.0.5",
