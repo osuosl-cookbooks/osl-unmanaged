@@ -61,7 +61,11 @@
     "osl-openstack": {
       "database_suffix": "x86",
       "databag_prefix": "x86",
-      "ceph": true,
+      "ceph": {
+        "image": true,
+        "compute": true,
+        "volume": true
+      },
       "endpoint_hostname": "openpower-openstack.testing.osuosl.org",
       "db_hostname": "openpower-openstack.testing.osuosl.org",
       "image": {

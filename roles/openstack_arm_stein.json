@@ -74,7 +74,11 @@
     },
     "osl-openstack": {
       "cluster_role": "openstack_arm_stein",
-      "ceph": true,
+      "ceph": {
+        "image": true,
+        "compute": true,
+        "volume": true
+      },
       "ceph_item": "openstack_arm",
       "cluster_name": "arm",
       "database_suffix": "arm",

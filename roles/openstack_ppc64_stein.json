@@ -82,7 +82,11 @@
     },
     "osl-openstack": {
       "cluster_role": "openstack_ppc64_stein",
-      "ceph": true,
+      "ceph": {
+        "image": true,
+        "compute": true,
+        "volume": true
+      },
       "ceph_item": "openstack_ppc64",
       "cluster_name": "ppc64",
       "database_suffix": "ppc64",

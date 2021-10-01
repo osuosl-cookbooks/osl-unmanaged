@@ -85,7 +85,11 @@
     },
     "osl-openstack": {
       "cluster_role": "openstack_x86_stein",
-      "ceph": true,
+      "ceph": {
+        "image": true,
+        "compute": true,
+        "volume": true
+      },
       "ceph_item": "openstack_x86",
       "cluster_name": "x86",
       "database_suffix": "x86",
