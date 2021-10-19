@@ -1,0 +1,16 @@
+{
+  "chef_type": "role",
+  "default_attributes": {},
+  "description": "OSL Primary Mirror Role",
+  "env_run_lists": {},
+  "json_class": "Chef::Role",
+  "name": "mirror_primary",
+  "override_attributes": {
+    "osl-mirror": {
+      "primary": true
+    }
+  },
+  "run_list": [
+    "role[mirror_common]"
+  ]
+}
