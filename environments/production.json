@@ -19,7 +19,7 @@
     "chef_client_updater": "= 3.10.1",
     "chef_handler": "= 2.1.2",
     "chef_nginx": "= 6.2.0",
-    "chef-ingredient": "= 3.3.0",
+    "chef-ingredient": "= 3.4.0",
     "chef-sugar": "= 4.0.0",
     "compat_resource": "= 12.19.0",
     "cpu": "= 0.2.0",

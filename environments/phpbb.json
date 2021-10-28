@@ -13,7 +13,7 @@
     "certificate": "= 1.0.0",
     "chef-client": "= 12.2.0",
     "chef_client_updater": "= 3.10.1",
-    "chef-ingredient": "= 3.3.0",
+    "chef-ingredient": "= 3.4.0",
     "chef-sugar": "= 4.0.0",
     "cluster-search": "= 1.5.0",
     "compat_resource": "= 12.19.0",
