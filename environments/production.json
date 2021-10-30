@@ -32,7 +32,7 @@
     "fail2ban": "= 7.0.0",
     "firewall": "= 7.2.0",
     "ganeti": "= 5.0.0",
-    "git": "= 10.0.0",
+    "git": "= 11.0.1",
     "gitlab-ci-runner": "= 3.2.0",
     "gitlab_omnibus": "= 2.0.0",
     "glusterfs": "= 0.1.1",
