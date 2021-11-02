@@ -36,7 +36,7 @@
     "java": "= 8.4.0",
     "jenkins": "= 8.0.2",
     "line": "= 4.3.0",
-    "logrotate": "= 2.2.3",
+    "logrotate": "= 3.0.4",
     "lvm": "= 4.5.3",
     "mariadb": "= 3.2.0",
     "memcached": "= 6.1.0",
