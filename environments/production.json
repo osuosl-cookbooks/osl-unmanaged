@@ -23,7 +23,7 @@
     "chef-sugar": "= 4.0.0",
     "compat_resource": "= 12.19.0",
     "cpu": "= 0.2.0",
-    "cron": "= 6.3.0",
+    "cron": "= 7.0.3",
     "database": "= 4.0.6",
     "dhcp": "= 8.1.0",
     "dnf-automatic": "= 2.0.0",
