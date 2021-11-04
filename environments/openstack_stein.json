@@ -73,7 +73,7 @@
     "osl-git": "= 1.9.0",
     "osl-haproxy": "= 6.0.14",
     "osl-jenkins": "= 2.15.2",
-    "osl-ldap": "= 1.1.0",
+    "osl-ldap": "= 1.2.0",
     "osl-mysql": "= 2.7.1",
     "osl-nfs": "= 2.1.0",
     "osl-nrpe": "= 6.0.1",
