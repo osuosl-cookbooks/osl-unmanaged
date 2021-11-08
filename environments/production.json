@@ -12,7 +12,7 @@
     "bluepill": "= 2.3.1",
     "build-essential": "= 8.2.1",
     "celery": "= 0.1.5",
-    "certificate": "= 1.0.0",
+    "certificate": "= 2.0.2",
     "ceph-chef": "= 4.0.0",
     "cluster-search": "= 1.5.0",
     "chef-client": "= 12.2.0",
