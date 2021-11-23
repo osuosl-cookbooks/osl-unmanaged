@@ -82,7 +82,7 @@
     "osl-fail2ban": "= 3.1.0",
     "osl-firewall": "= 1.5.0",
     "osl-ganeti": "= 3.3.1",
-    "osl-git": "= 1.9.0",
+    "osl-git": "= 1.9.1",
     "osl-gitlab": "= 2.1.1",
     "osl-grafana": "= 3.0.2",
     "osl-haproxy": "= 6.0.16",
