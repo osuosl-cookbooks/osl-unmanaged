@@ -19,7 +19,7 @@
     "compat_resource": "= 12.19.0",
     "crowd": "= 1.1.1",
     "build-essential": "= 8.2.1",
-    "dnf-automatic": "= 2.0.0",
+    "dnf-automatic": "= 2.0.1",
     "docker": "= 7.7.2",
     "fail2ban": "= 7.0.0",
     "git": "= 11.0.1",
