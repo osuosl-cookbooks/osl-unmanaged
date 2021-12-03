@@ -80,7 +80,7 @@
     "osl-openstack": "= 10.3.3",
     "osl-php": "= 5.10.2",
     "osl-postfix": "= 2.1.2",
-    "osl-postgresql": "= 5.0.0",
+    "osl-postgresql": "= 5.1.0",
     "osl-prometheus": "= 3.1.0",
     "osl-repos": "= 2.0.0",
     "osl-resources": "= 1.0.0",
