@@ -118,6 +118,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-jenkins.git
 [osuosl-cookbooks/osl-keepalived]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-keepalived.git
 
+[osuosl-cookbooks/osl-ldap]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-ldap.git
+
 [osuosl-cookbooks/osl-letsencrypt-boulder-server]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-letsencrypt-boulder-server.git
 
