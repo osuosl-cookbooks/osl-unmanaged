@@ -34,7 +34,7 @@
     "nodejs": "= 7.0.1",
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
-    "openldap": "= 5.0.0",
+    "openldap": "= 6.0.1",
     "osl-acme": "= 4.0.0",
     "osl-apache": "= 7.1.0",
     "osl-fail2ban": "= 3.1.0",

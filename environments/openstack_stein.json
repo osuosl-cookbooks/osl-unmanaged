@@ -47,7 +47,7 @@
     "nginx": "= 10.3.2",
     "nrpe": "= 3.0.1",
     "ohai": "= 5.3.0",
-    "openldap": "= 5.0.0",
+    "openldap": "= 6.0.1",
     "openssh": "= 2.8.1",
     "openstack-block-storage": "= 19.1.0",
     "openstack-common": "= 19.2.1",

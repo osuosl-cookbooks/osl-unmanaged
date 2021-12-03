@@ -65,7 +65,7 @@
     "ntp": "= 1.6.2",
     "ohai": "= 5.3.0",
     "omnibus_updater": "= 3.0.2",
-    "openldap": "= 5.0.0",
+    "openldap": "= 6.0.1",
     "openssh": "= 2.8.1",
     "openssl": "= 8.5.5",
     "openvpn": "= 5.1.1",
