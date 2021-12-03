@@ -92,7 +92,7 @@
     "percona": "= 1.1.0",
     "php": "= 8.0.1",
     "postfix": "= 5.4.1",
-    "postgresql": "= 8.3.0",
+    "postgresql": "= 10.0.0",
     "prometheus-platform": "= 2.2.0",
     "rabbitmq": "= 5.8.5",
     "rdiff-backup": "= 5.1.1",
