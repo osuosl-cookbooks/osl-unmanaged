@@ -2,7 +2,7 @@
   "name": "openstack_stein",
   "description": "Openstack Stein Environment",
   "cookbook_versions": {
-    "apache2": "= 8.6.0",
+    "apache2": "= 8.14.0",
     "apt": "= 7.3.0",
     "apt-osuosl": "= 2.0.1",
     "ark": "= 6.0.3",
@@ -28,7 +28,7 @@
     "gitlab-ci-runner": "= 3.2.0",
     "gitlab_omnibus": "= 2.0.0",
     "haproxy": "= 9.0.1",
-    "htpasswd": "= 1.0.0",
+    "htpasswd": "= 2.0.4",
     "ibm-power": "= 4.0.0",
     "inifile_chef_gem": "= 0.1.0",
     "iptables": "= 8.0.0",
