@@ -55,14 +55,15 @@
       "timezone": "US/Pacific"
     },
     "workstation": {
-      "packages_buster": [
-        "golang-1.11",
-        "taskwarrior"
+      "packages_bullseye": [
+        "createrepo-c",
+        "golang-1.17"
       ],
-      "packages_stretch": [
-        "golang-1.7",
-        "hexchat",
-        "task"
+      "packages_buster": [
+        "createrepo",
+        "golang-1.11",
+        "obmenu",
+        "synergy"
       ],
       "packages": [
         "ack-grep",
@@ -84,7 +85,6 @@
         "cmake-data",
         "colordiff",
         "crack-attack",
-        "createrepo",
         "curl",
         "debian-goodies",
         "debootstrap",
@@ -136,7 +136,7 @@
         "ipcalc",
         "ipmitool",
         "iptables-persistent",
-        "ipython",
+        "ipython3",
         "irssi",
         "jq",
         "kde-plasma-desktop",
@@ -170,9 +170,9 @@
         "mosh",
         "mpd",
         "mplayer2",
-        "mr",
         "mtr",
         "mutt",
+        "myrepos",
         "mysql-client",
         "ncdu",
         "ncmpcpp",
@@ -181,7 +181,6 @@
         "nitrokey-app",
         "nmap",
         "obconf",
-        "obmenu",
         "openbox",
         "openvpn",
         "pass",
@@ -198,9 +197,9 @@
         "pwgen",
         "python3",
         "python3-dev",
-        "python-sphinx",
+        "python3-sphinx",
         "qemu",
-        "qemu-kvm",
+        "qemu-system-x86",
         "racket",
         "racket-doc",
         "rdesktop",
@@ -229,9 +228,9 @@
         "subversion",
         "subversion-tools",
         "suckless-tools",
-        "synergy",
         "sysstat",
         "system-config-printer",
+        "taskwarrior",
         "terminator",
         "texlive-full",
         "tig",
