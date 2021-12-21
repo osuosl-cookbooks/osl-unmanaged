@@ -48,7 +48,7 @@
     "recipe[osl-postfix]",
     "recipe[workstation::cron_apt]",
     "recipe[workstation::repos]",
-    "recipe[resolver::default]",
+    "recipe[base::resolver]",
     "recipe[workstation]",
     "recipe[workstation::packages]",
     "recipe[workstation::xrandr]",
