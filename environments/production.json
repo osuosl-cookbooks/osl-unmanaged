@@ -51,7 +51,7 @@
     "lvm": "= 4.1.6",
     "nagios": "= 10.0.0",
     "memcached": "= 6.1.0",
-    "mariadb": "= 4.1.0",
+    "mariadb": "= 5.2.1",
     "modules": "= 0.2.4",
     "monit": "= 0.7.1",
     "mysql2_chef_gem": "= 2.1.0",
