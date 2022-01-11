@@ -4,6 +4,7 @@
   "cookbook_versions": {
     "acme": "= 4.1.2",
     "apache2": "= 8.14.0",
+    "apparmor": "= 4.1.0",
     "apt": "= 7.3.0",
     "ark": "= 6.0.3",
     "aws": "= 2.1.1",
@@ -55,7 +56,7 @@
     "modules": "= 0.2.4",
     "monit": "= 0.7.1",
     "mysql2_chef_gem": "= 2.1.0",
-    "mysql": "= 8.5.1",
+    "mysql": "= 11.0.1",
     "newrelic": "= 2.39.1",
     "nfs": "= 5.0.0",
     "nginx": "= 12.0.4",
