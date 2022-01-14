@@ -4,7 +4,7 @@
   "cookbook_versions": {
     "acme": "= 4.1.2",
     "apt": "= 7.3.0",
-    "apt-osuosl": "= 2.0.1",
+    "apt-osuosl": "= 2.1.0",
     "ark": "= 6.0.3",
     "base": "= 8.11.3",
     "celery": "= 0.1.5",
