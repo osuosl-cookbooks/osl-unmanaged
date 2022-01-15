@@ -48,7 +48,7 @@
     "jenkins": "= 8.0.2",
     "keepalived": "= 5.1.0",
     "line": "4.3.0",
-    "logrotate": "= 3.0.4",
+    "logrotate": "= 3.0.6",
     "lvm": "= 4.1.6",
     "nagios": "= 10.0.0",
     "memcached": "= 6.1.0",
