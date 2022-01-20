@@ -81,7 +81,7 @@
     "osl-drupal": "= 0.2.2",
     "osl-fail2ban": "= 3.1.0",
     "osl-firewall": "= 1.6.1",
-    "osl-ganeti": "= 3.3.1",
+    "osl-ganeti": "= 3.3.2",
     "osl-git": "= 1.9.1",
     "osl-gitlab": "= 2.2.0",
     "osl-grafana": "= 3.0.2",
