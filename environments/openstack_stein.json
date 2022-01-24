@@ -90,7 +90,7 @@
     "osl-syslog": "= 4.0.2",
     "osl-vpn": "= 3.2.0",
     "percona": "= 1.1.0",
-    "php": "= 8.0.1",
+    "php": "= 9.1.0",
     "postfix": "= 5.4.1",
     "postgresql": "= 10.0.0",
     "prometheus-platform": "= 2.2.0",
