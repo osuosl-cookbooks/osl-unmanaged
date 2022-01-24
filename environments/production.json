@@ -65,6 +65,7 @@
     "ntp": "= 1.6.2",
     "ohai": "= 5.3.0",
     "omnibus_updater": "= 3.0.2",
+    "ondrej_ppa_ubuntu": "= 0.1.0",
     "openldap": "= 6.0.1",
     "openssh": "= 2.8.1",
     "openssl": "= 8.5.5",
