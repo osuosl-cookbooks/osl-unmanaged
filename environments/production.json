@@ -51,7 +51,7 @@
     "logrotate": "= 3.0.6",
     "lvm": "= 4.1.6",
     "nagios": "= 10.0.0",
-    "memcached": "= 6.1.0",
+    "memcached": "= 7.0.3",
     "mariadb": "= 5.2.1",
     "modules": "= 0.2.4",
     "monit": "= 0.7.1",
