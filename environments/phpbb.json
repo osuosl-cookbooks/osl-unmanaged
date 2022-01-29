@@ -45,7 +45,7 @@
     "osl-ldap": "= 1.4.0",
     "osl-nagios": "= 3.8.1",
     "osl-nodes": "= 2.5.0",
-    "osl-mysql": "= 6.2.0",
+    "osl-mysql": "= 6.3.0",
     "osl-php": "= 6.0.0",
     "osl-postfix": "= 2.2.0",
     "osl-postgresql": "= 5.1.0",
