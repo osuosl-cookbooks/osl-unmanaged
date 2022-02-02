@@ -9,7 +9,7 @@
     "base": "= 8.13.3",
     "build-essential": "= 8.2.1",
     "ceph-chef": "= 4.0.0",
-    "certificate": "= 2.0.2",
+    "certificate": "= 2.0.3",
     "chef-client": "= 12.2.0",
     "chef-vault": "= 4.0.3",
     "chef_client_updater": "= 3.10.1",

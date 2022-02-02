@@ -11,7 +11,7 @@
     "ark": "= 6.0.3",
     "base": "= 8.13.3",
     "camo": "= 0.9.3",
-    "certificate": "= 2.0.2",
+    "certificate": "= 2.0.3",
     "chef-client": "= 12.2.0",
     "chef_client_updater": "= 3.10.1",
     "chef-ingredient": "= 3.4.0",

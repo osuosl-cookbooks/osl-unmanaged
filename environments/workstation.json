@@ -8,7 +8,7 @@
     "ark": "= 6.0.3",
     "base": "= 8.13.3",
     "celery": "= 0.1.5",
-    "certificate": "= 2.0.2",
+    "certificate": "= 2.0.3",
     "chef-apt-docker": "= 2.0.6",
     "chef-client": "= 12.2.0",
     "chef_client_updater": "= 3.10.1",
