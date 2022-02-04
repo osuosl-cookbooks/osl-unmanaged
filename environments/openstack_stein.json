@@ -72,7 +72,7 @@
     "osl-fail2ban": "= 3.1.0",
     "osl-firewall": "= 1.6.1",
     "osl-git": "= 1.9.1",
-    "osl-haproxy": "= 6.0.23",
+    "osl-haproxy": "= 6.0.24",
     "osl-jenkins": "= 2.15.2",
     "osl-ldap": "= 1.4.0",
     "osl-mysql": "= 2.7.1",
