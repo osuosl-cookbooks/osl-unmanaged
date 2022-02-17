@@ -30,7 +30,7 @@
     "mariadb": "= 5.2.1",
     "memcached": "= 6.1.0",
     "mysql": "= 11.0.1",
-    "nagios": "= 10.0.0",
+    "nagios": "= 11.0.0",
     "nodejs": "= 7.0.1",
     "ntp": "= 1.6.2",
     "omnibus_updater": "= 3.0.2",
