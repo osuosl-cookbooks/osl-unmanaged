@@ -78,7 +78,7 @@
     "osl-ceph": "= 4.5.0",
     "osl-dhcp": "= 3.3.0",
     "osl-dns": "= 5.0.0",
-    "osl-docker": "= 4.3.2",
+    "osl-docker": "= 4.4.0",
     "osl-drupal": "= 0.2.2",
     "osl-fail2ban": "= 3.1.0",
     "osl-firewall": "= 1.6.1",
