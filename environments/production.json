@@ -146,7 +146,7 @@
     "resource_from_hash": "= 2.1.0",
     "rhsm": "= 1.0.1",
     "rsync": "= 1.0.3",
-    "rsyslog": "= 7.0.1",
+    "rsyslog": "= 9.1.0",
     "ruby-helper": "= 0.0.1",
     "runit": "= 5.1.2",
     "selinux": "= 6.0.1",
