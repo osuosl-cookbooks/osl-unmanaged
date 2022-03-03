@@ -44,7 +44,7 @@
     "htpasswd": "= 2.0.4",
     "iptables": "= 8.0.0",
     "iptables-ng": "= 4.0.0",
-    "java": "= 8.4.0",
+    "java": "= 11.0.1",
     "jenkins": "= 8.0.2",
     "keepalived": "= 6.0.1",
     "line": "4.3.0",
