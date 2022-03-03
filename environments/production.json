@@ -175,7 +175,7 @@
     "yum-qemu-ev": "= 2.6.0",
     "yum-remi-chef": "= 6.1.0",
     "yum-repoforge": "= 3.0.0",
-    "yumgroup": "= 0.6.0",
+    "yumgroup": "= 0.7.0",
     "zlib": "= 2.0.0",
     "zypper": "= 0.4.0"
   },
