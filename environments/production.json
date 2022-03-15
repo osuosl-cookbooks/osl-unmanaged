@@ -23,6 +23,7 @@
     "chef-ingredient": "= 3.4.0",
     "chef-sugar": "= 4.0.0",
     "compat_resource": "= 12.19.0",
+    "composer": "= 3.0.0",
     "cpu": "= 0.2.0",
     "cron": "= 7.0.3",
     "database": "= 4.0.6",

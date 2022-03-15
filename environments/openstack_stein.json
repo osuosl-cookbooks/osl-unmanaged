@@ -15,7 +15,7 @@
     "chef_client_updater": "= 3.12.2",
     "chef-ingredient": "= 3.4.0",
     "cluster-search": "= 1.5.0",
-    "composer": "= 2.6.1",
+    "composer": "= 3.0.0",
     "cron": "= 7.0.3",
     "dnf-automatic": "= 2.0.1",
     "docker": "= 7.7.2",
