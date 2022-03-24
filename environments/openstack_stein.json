@@ -120,7 +120,7 @@
     "yum-nvidia": "= 3.0.0",
     "yum-osuosl": "= 2.0.0",
     "yum-plugin-versionlock": "= 0.4.0",
-    "yum-qemu-ev": "= 2.6.0",
+    "yum-qemu-ev": "= 2.7.0",
     "yum-remi-chef": "= 6.1.0",
     "yum-repoforge": "= 3.0.0",
     "yum-scl": "= 0.2.0",
