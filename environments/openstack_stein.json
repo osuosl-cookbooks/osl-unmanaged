@@ -70,7 +70,7 @@
     "osl-ceph": "= 4.5.0",
     "osl-docker": "= 4.4.0",
     "osl-fail2ban": "= 3.1.0",
-    "osl-firewall": "= 1.6.1",
+    "osl-firewall": "= 1.7.0",
     "osl-git": "= 1.9.1",
     "osl-haproxy": "= 6.0.30",
     "osl-jenkins": "= 2.16.0",
