@@ -85,7 +85,7 @@
     "osl-firewall": "= 1.7.0",
     "osl-ganeti": "= 3.3.2",
     "osl-git": "= 1.9.1",
-    "osl-gitlab": "= 2.3.0",
+    "osl-gitlab": "= 2.4.0",
     "osl-grafana": "= 3.0.2",
     "osl-haproxy": "= 6.0.31",
     "osl-imap": "= 2.0.1",
