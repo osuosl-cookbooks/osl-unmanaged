@@ -45,7 +45,7 @@
     "osl-keepalived": "= 2.2.0",
     "osl-ldap": "= 1.4.0",
     "osl-nagios": "= 3.9.0",
-    "osl-nodes": "= 2.7.0",
+    "osl-nodes": "= 2.8.0",
     "osl-memcached": "= 3.2.0",
     "osl-mysql": "= 6.3.0",
     "osl-php": "= 6.2.0",
