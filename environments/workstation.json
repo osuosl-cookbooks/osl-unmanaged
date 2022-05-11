@@ -17,7 +17,7 @@
     "compat_resource": "= 12.19.0",
     "cron": "= 7.0.3",
     "docker": "= 7.7.2",
-    "nodejs": "= 7.0.1",
+    "nodejs": "= 9.0.2",
     "ntp": "= 1.6.2",
     "ohai": "= 5.3.0",
     "openldap": "= 6.0.1",
