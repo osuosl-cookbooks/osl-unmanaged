@@ -113,7 +113,7 @@
     "osl-resources": "= 1.2.0",
     "osl-rsync": "= 4.2.0",
     "osl-scponly": "= 1.5.0",
-    "osl-selinux": "= 2.1.0",
+    "osl-selinux": "= 2.1.1",
     "osl-slapd": "= 1.1.1",
     "osl-sudo": "= 0.1.2",
     "osl-syslog": "= 4.1.0",

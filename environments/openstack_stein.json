@@ -87,7 +87,7 @@
     "osl-resources": "= 1.2.0",
     "osl-rsync": "= 4.2.0",
     "osl-scponly": "= 1.5.0",
-    "osl-selinux": "= 2.1.0",
+    "osl-selinux": "= 2.1.1",
     "osl-syslog": "= 4.1.0",
     "osl-vpn": "= 3.3.0",
     "percona": "= 1.1.0",
