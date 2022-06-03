@@ -39,6 +39,7 @@
     "gitlab-ci-runner": "= 3.3.0",
     "gitlab_omnibus": "= 2.0.0",
     "glusterfs": "= 0.1.1",
+    "gpg": "= 2.0.2",
     "grafana": "= 9.7.0",
     "haproxy": "= 9.0.1",
     "helpers-databags": "= 1.0.0",
