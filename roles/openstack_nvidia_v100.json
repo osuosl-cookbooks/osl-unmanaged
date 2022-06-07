@@ -1,0 +1,20 @@
+{
+  "env_run_lists": {},
+  "run_list": [],
+  "chef_type": "role",
+  "override_attributes": {
+    "openstack": {
+      "compute": {
+        "conf": {
+          "pci": {
+            "passthrough_whitelist": "{ \"vendor_id\": \"10de\", \"product_id\": \"1db5\" }"
+
+          }
+        }
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "Openstack NVIDIA V100 Role",
+  "name": "openstack_nvidia_v100"
+}
