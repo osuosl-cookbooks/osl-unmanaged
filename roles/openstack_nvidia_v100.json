@@ -7,6 +7,7 @@
       "compute": {
         "conf": {
           "pci": {
+            "alias": "{ \"vendor_id\": \"10de\", \"product_id\": \"1db5\", \"device_type\": \"type-PCI\", \"name\": \"gpu_nvidia_v100\" }",
             "passthrough_whitelist": "{ \"vendor_id\": \"10de\", \"product_id\": \"1db5\" }"
 
           }
