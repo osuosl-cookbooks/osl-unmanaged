@@ -1,0 +1,131 @@
+#!/usr/bin/python3.9
+import json
+import argparse
+import os
+import csv
+import sys
+import re
+import ipaddress
+
+# Parse whole users.json file
+# into seperate lists containing user details (ip, name, etc..)
+
+# Lists:
+used_client_ips       = []
+used_client_usernames = []
+used_client_emails    = []
+
+# Open and load Databag item file
+users_dbi = open("../data_bags/vpn_users/users.json", 'r+')
+
+vpn_user_file_json  = json.load(users_dbi)
+
+vpn_file_users_list = vpn_user_file_json['users']
+
+# Add values to list
+for user in vpn_file_users_list:
+  used_client_usernames.append(user['username'])
+  used_client_ips.append(user['client_ip'])
+
+# Get user input about new vpn user, checking to make sure there are no
+# conflicts
+
+u_name         = input("Enter users name: ")
+u_username     = input("Enter users username: ")
+for username in used_client_usernames:
+  if u_username == username:
+    print("WARNING: Username already in use")
+u_email        = input("Enter users email: ")
+for email in used_client_emails:
+  if u_email == email:
+    print("WARNING: Email already in use")
+u_orginization = input("Enter users orginization (Leave blank if N/A or staff): ")
+
+# Give the user an IP:
+# First, choose a subnet
+valid = False
+u_subnet = ""
+while(not valid):
+  u_subnet      = input("Enter users IP subnet (1: staff, 2: other): ")
+  if u_subnet == '1':
+    valid = True
+  elif u_subnet == '2':
+    valid = True
+  else:
+    print("Invalid user ip")
+
+# Depending on the subnet, find the next ip in the subnet that isn't being used already
+# Done by generating a list of all ips in subnet, then checking if they're in the 
+# used_client_ips list
+
+client_ip = ""
+if u_subnet == '1':
+  ip_range = list(ipaddress.ip_network('10.2.1.0/24').hosts())      # List of ips in subnet
+  for possible_ip_address in ip_range:
+    ip_taken = False
+    for taken_ip_address in used_client_ips:                           # Checks if Ip is already being used by a client
+      taken_IPv4_address = ipaddress.ip_address(taken_ip_address)
+      if taken_IPv4_address == possible_ip_address:
+        ip_taken = True
+        break
+    if not ip_taken:
+      client_ip = possible_ip_address
+      break
+
+# Same logic for both subnets
+elif u_subnet == '2':
+  ip_range = list(ipaddress.ip_network('10.2.2.0/24').hosts())     
+  for possible_ip_address in ip_range:
+    ip_taken = False
+    for taken_ip_address in used_client_ips:                          
+      taken_IPv4_address = ipaddress.ip_address(taken_ip_address)
+      if taken_IPv4_address == possible_ip_address:
+        ip_taken = True
+        break
+    if not ip_taken:
+      client_ip = possible_ip_address
+      break
+else:
+  print("Error: Invalid subnet!")
+
+# Final user json data
+new_user_json = {
+                  'name': u_name,
+                  'username': u_username,
+                  'email': u_email,
+                  'OU': u_orginization,
+                  'client_ip': str(client_ip)
+                }
+
+# Confirm user to be written
+print(new_user_json)
+
+'''
+GET RID OF CSV, NOT NEEDED - Lance
+'''
+
+write_to_file = False
+user_input_confirm_write = input("Confirm this user to be written to file(s)? (Y/N): ")
+if user_input_confirm_write == 'Y' or user_input_confirm_write == 'y':
+
+  # Write new user back to file
+  vpn_user_file_json['users'].append(new_user_json)
+  users_dbi.seek(0)
+  json.dump(vpn_user_file_json, users_dbi, indent = 4)
+
+    # Write user to docs csv file
+  if u_subnet == '1':
+    with open("openvpn-employeelist.csv", 'a', newline='\n') as csvfile:
+      fieldnames = ['IP', 'Name', 'cname']
+      writer = csv.DictWriter(csvfile, fieldnames=fieldnames, lineterminator='\n')
+      writer.writerow({'IP': str(client_ip).split('.')[-1], 'Name': u_name, 'cname': u_username})
+      csvfile.close()
+  elif u_subnet == '2':
+    u_notes = input("Notes on user for docs file: ")
+    with open("openvpn-clientlist.csv", 'a', newline='\n') as csvfile:
+      fieldnames = ['IP', 'Name', 'cname','Project', 'Notes']
+      writer = csv.DictWriter(csvfile, fieldnames=fieldnames, lineterminator='\n')
+      writer.writerow({'IP': str(client_ip).split('.')[-1], 'Name': u_name, 'cname': u_username, 'Project': u_orginization, 'Notes': u_notes})
+      csvfile.close()
+  
+
