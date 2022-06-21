@@ -1,0 +1,10 @@
+{
+  "chef_type": "role",
+  "override_attributes": {},
+  "description": "MySQL Role",
+  "env_run_lists": {},
+  "json_class": "Chef::Role",
+  "name": "mysql",
+  "default_attributes": {},
+  "run_list": []
+}
