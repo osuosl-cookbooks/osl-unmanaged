@@ -30,6 +30,11 @@
         }
       }
     },
+    "ibm-power": {
+      "ibm-power-tools": {
+        "skip_if_unavailable": true
+      }
+    },
     "openstack": {
       "mq": {
         "user": "admin"
