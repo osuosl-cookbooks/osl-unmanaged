@@ -159,6 +159,22 @@
             "openpower12.osuosl.bak": "enP48p1s0f0.112",
             "oph1.osuosl.bak": "enp1s0f1.112"
           }
+        },
+        {
+          "name": "public6",
+          "controller": {
+            "default": "eth4"
+          },
+          "compute": {
+            "default": "enP4p1s0.116",
+            "openpower4.osuosl.bak": "enP48p1s0f0.116",
+            "openpower7.osuosl.bak": "enP48p1s0f0.116",
+            "openpower9.osuosl.bak": "enP48p1s0f0.116",
+            "openpower10.osuosl.bak": "enP48p1s0f0.116",
+            "openpower11.osuosl.bak": "enP48p1s0f0.116",
+            "openpower12.osuosl.bak": "enP48p1s0f0.116",
+            "oph1.osuosl.bak": "enp1s0f1.116"
+          }
         }
       ]
     },
