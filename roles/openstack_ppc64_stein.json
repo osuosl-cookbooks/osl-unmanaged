@@ -34,6 +34,7 @@
       "ibm-power-tools": {
         "skip_if_unavailable": true,
         "retries": 1,
+        "enabled": 0,
         "timeout": "10"
       }
     },
