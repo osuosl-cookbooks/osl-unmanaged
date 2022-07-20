@@ -121,7 +121,8 @@
           "oph2.osuosl.bak": "enp1s0f0",
           "oph3.osuosl.bak": "enp1s0f0",
           "oph4.osuosl.bak": "enp1s0f0",
-          "oph5.osuosl.bak": "enp1s0f0"
+          "oph5.osuosl.bak": "enp1s0f0",
+          "oph6.osuosl.bak": "enp1s0f0"
         }
       },
       "external_networks": [
@@ -149,7 +150,8 @@
             "oph2.osuosl.bak": "enp1s0f1.108",
             "oph3.osuosl.bak": "enp1s0f1.108",
             "oph4.osuosl.bak": "enp1s0f0.108",
-            "oph5.osuosl.bak": "enp1s0f0.108"
+            "oph5.osuosl.bak": "enp1s0f0.108",
+            "oph6.osuosl.bak": "enp1s0f0.108"
           }
         },
         {
@@ -171,7 +173,8 @@
             "oph2.osuosl.bak": "enp1s0f1.112",
             "oph3.osuosl.bak": "enp1s0f1.112",
             "oph4.osuosl.bak": "enp1s0f0.112",
-            "oph5.osuosl.bak": "enp1s0f0.112"
+            "oph5.osuosl.bak": "enp1s0f0.112",
+            "oph6.osuosl.bak": "enp1s0f0.112"
           }
         },
         {
@@ -193,7 +196,8 @@
             "oph2.osuosl.bak": "enp1s0f1.116",
             "oph3.osuosl.bak": "enp1s0f1.116",
             "oph4.osuosl.bak": "enp1s0f0.116",
-            "oph5.osuosl.bak": "enp1s0f0.116"
+            "oph5.osuosl.bak": "enp1s0f0.116",
+            "oph6.osuosl.bak": "enp1s0f0.116"
           }
         }
       ]
