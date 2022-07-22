@@ -73,7 +73,7 @@
     "osl-firewall": "= 1.7.0",
     "osl-git": "= 1.9.1",
     "osl-haproxy": "= 6.0.36",
-    "osl-jenkins": "= 2.16.0",
+    "osl-jenkins": "= 2.16.1",
     "osl-ldap": "= 1.4.0",
     "osl-mysql": "= 2.7.1",
     "osl-nfs": "= 2.1.0",
