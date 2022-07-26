@@ -116,8 +116,8 @@
           "oprod2.osuosl.bak": "p1p1.42",
           "oprod3.osuosl.bak": "p1p1.42",
           "oprod4.osuosl.bak": "p1p1.42",
-          "oprod13.osuosl.bak": "ens4.42",
-          "oprod14.osuosl.bak": "ens4.42"
+          "oprod13.osuosl.bak": "enp3s0",
+          "oprod14.osuosl.bak": "enp3s0"
         }
       },
       "external_networks": [
