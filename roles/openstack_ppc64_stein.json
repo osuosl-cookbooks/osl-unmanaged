@@ -123,6 +123,7 @@
           "oph4.osuosl.bak": "enp1s0f0",
           "oph5.osuosl.bak": "enp1s0f0",
           "oph6.osuosl.bak": "enp1s0f0",
+          "oph7.osuosl.bak": "ens7f0",
           "oph10.osuosl.bak": "ens7f0"
         }
       },
@@ -153,6 +154,7 @@
             "oph4.osuosl.bak": "enp1s0f0.108",
             "oph5.osuosl.bak": "enp1s0f0.108",
             "oph6.osuosl.bak": "enp1s0f0.108",
+            "oph7.osuosl.bak": "ens7f0.108",
             "oph10.osuosl.bak": "ens7f1.108"
           }
         },
@@ -177,6 +179,7 @@
             "oph4.osuosl.bak": "enp1s0f0.112",
             "oph5.osuosl.bak": "enp1s0f0.112",
             "oph6.osuosl.bak": "enp1s0f0.112",
+            "oph7.osuosl.bak": "ens7f0.112",
             "oph10.osuosl.bak": "ens7f1.112"
           }
         },
@@ -201,6 +204,7 @@
             "oph4.osuosl.bak": "enp1s0f0.116",
             "oph5.osuosl.bak": "enp1s0f0.116",
             "oph6.osuosl.bak": "enp1s0f0.116",
+            "oph7.osuosl.bak": "ens7f0.116",
             "oph10.osuosl.bak": "ens7f1.116"
           }
         }
