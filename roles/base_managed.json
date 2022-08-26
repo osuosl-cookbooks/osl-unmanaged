@@ -17,7 +17,7 @@
     "recipe[osl-selinux]",
     "recipe[base::tuned]",
     "recipe[base::users]",
-    "recipe[base::gitlfs]",
+    "recipe[osl-git::gitlfs]",
     "recipe[osl-firewall]"
   ],
   "chef_type": "role",
