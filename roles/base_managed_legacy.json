@@ -1,0 +1,61 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "recipe[base::fix_rpmdb]",
+    "recipe[base::resolver]",
+    "recipe[base::chef_client]",
+    "recipe[base::ifconfig]",
+    "recipe[osl-syslog]",
+    "role[base]",
+    "recipe[osl-nrpe]",
+    "recipe[osl-nrpe::check_chef_client]",
+    "recipe[osl-nrpe::check_cron]",
+    "recipe[osl-nrpe::check_raid]",
+    "recipe[osl-nrpe::check_ipmi]",
+    "recipe[base::issue]",
+    "recipe[base::security]",
+    "recipe[osl-selinux]",
+    "recipe[base::tuned]",
+    "recipe[base::users]",
+    "recipe[base::gitlfs]",
+    "recipe[osl-firewall]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "poise-python": {
+      "provider": "system"
+    },
+    "nagios": {
+      "multi_environment_monitoring": true,
+      "monitored_environments": [
+        "openstack_stein",
+        "phpbb",
+        "production",
+        "production_centos6"
+        ]
+    },
+    "mysql": {
+      "version": "5.5"
+    },
+    "osl-prometheus": {
+      "chef_environments": [
+        "openstack_stein",
+        "phpbb",
+        "production",
+        "production_centos6"
+      ]
+    },
+    "yum": {
+      "ius": {
+        "exclude": "python34*"
+      },
+      "ius-archive": {
+        "exclude": "python34*"
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "description": "base managed legacy role for all managed systems",
+  "name": "base_managed_legacy"
+}
