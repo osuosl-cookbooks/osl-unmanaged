@@ -1,7 +1,6 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "role[base_managed]",
     "recipe[osl-slapd::server]",
     "recipe[osl-slapd::client]",
     "recipe[firewall::osl_only]",
