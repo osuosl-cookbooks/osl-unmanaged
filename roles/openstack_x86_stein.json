@@ -116,8 +116,6 @@
           "oprod2.osuosl.bak": "p1p1.42",
           "oprod3.osuosl.bak": "p1p1.42",
           "oprod4.osuosl.bak": "p1p1.42",
-          "oprod13.osuosl.bak": "enp3s0",
-          "oprod14.osuosl.bak": "enp3s0",
           "oprod15.osuosl.bak": "p6p1.42",
           "oprod16.osuosl.bak": "p6p1.42"
         }
@@ -142,8 +140,6 @@
             "oprod2.osuosl.bak": "p1p2.100",
             "oprod3.osuosl.bak": "p1p2.100",
             "oprod4.osuosl.bak": "p1p2.100",
-            "oprod13.osuosl.bak": "ens4.100",
-            "oprod14.osuosl.bak": "ens4.100",
             "oprod15.osuosl.bak": "p6p2.100",
             "oprod16.osuosl.bak": "p6p2.100"
           }
@@ -161,8 +157,6 @@
             "oprod2.osuosl.bak": "p1p2.106",
             "oprod3.osuosl.bak": "p1p2.106",
             "oprod4.osuosl.bak": "p1p2.106",
-            "oprod13.osuosl.bak": "ens4.106",
-            "oprod14.osuosl.bak": "ens4.106",
             "oprod15.osuosl.bak": "p6p2.106",
             "oprod16.osuosl.bak": "p6p2.106"
           }
@@ -180,8 +174,6 @@
             "oprod2.osuosl.bak": "p1p2.121",
             "oprod3.osuosl.bak": "p1p2.121",
             "oprod4.osuosl.bak": "p1p2.121",
-            "oprod13.osuosl.bak": "ens4.121",
-            "oprod14.osuosl.bak": "ens4.121",
             "oprod15.osuosl.bak": "p6p2.121",
             "oprod16.osuosl.bak": "p6p2.121"
           }
@@ -199,8 +191,6 @@
             "oprod2.osuosl.bak": "p1p2.42",
             "oprod3.osuosl.bak": "p1p2.42",
             "oprod4.osuosl.bak": "p1p2.42",
-            "oprod13.osuosl.bak": "ens4.42",
-            "oprod14.osuosl.bak": "ens4.42",
             "oprod15.osuosl.bak": "p6p2.42",
             "oprod16.osuosl.bak": "p6p2.42"
           }
