@@ -124,7 +124,7 @@
         "general_servers1",
         "public1",
         "public2",
-        "vlan42"
+        "backend"
       ],
       "physical_interface_mappings": [
         {
@@ -179,20 +179,20 @@
           }
         },
         {
-          "name": "vlan42",
+          "name": "backend",
           "subnet": "10.1.100.0/22",
           "uuid": "44ba0b36-1c69-46ce-9993-97e36dbd4ede",
           "controller": {
-            "default": "eth3"
+            "default": "eth2"
           },
           "compute": {
-            "default": "ens802f1.42",
-            "oprod1.osuosl.bak": "p1p2.42",
-            "oprod2.osuosl.bak": "p1p2.42",
-            "oprod3.osuosl.bak": "p1p2.42",
-            "oprod4.osuosl.bak": "p1p2.42",
-            "oprod15.osuosl.bak": "p6p2.42",
-            "oprod16.osuosl.bak": "p6p2.42"
+            "default": "ens802f1.43",
+            "oprod1.osuosl.bak": "p1p2.43",
+            "oprod2.osuosl.bak": "p1p2.43",
+            "oprod3.osuosl.bak": "p1p2.43",
+            "oprod4.osuosl.bak": "p1p2.43",
+            "oprod15.osuosl.bak": "p6p2.43",
+            "oprod16.osuosl.bak": "p6p2.43"
           }
         }
       ]
