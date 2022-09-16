@@ -179,9 +179,26 @@
           }
         },
         {
-          "name": "backend",
+          "name": "vlan42",
           "subnet": "10.1.100.0/22",
           "uuid": "44ba0b36-1c69-46ce-9993-97e36dbd4ede",
+          "controller": {
+            "default": "eth3"
+          },
+          "compute": {
+            "default": "ens802f1.42",
+            "oprod1.osuosl.bak": "p1p2.42",
+            "oprod2.osuosl.bak": "p1p2.42",
+            "oprod3.osuosl.bak": "p1p2.42",
+            "oprod4.osuosl.bak": "p1p2.42",
+            "oprod15.osuosl.bak": "p6p2.42",
+            "oprod16.osuosl.bak": "p6p2.42"
+          }
+        },
+        {
+          "name": "backend",
+          "subnet": "10.1.100.0/22",
+          "uuid": "5cf8ef3e-cfa5-47ce-9da0-72fbcb9a9e5b",
           "controller": {
             "default": "eth2"
           },
