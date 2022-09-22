@@ -1,6 +1,8 @@
 {
   "env_run_lists": {},
-  "run_list": [],
+  "run_list": [
+    "recipe[osl-gpu]"
+  ],
   "chef_type": "role",
   "override_attributes": {
     "openstack": {
