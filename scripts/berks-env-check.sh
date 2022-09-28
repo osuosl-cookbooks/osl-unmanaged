@@ -46,9 +46,3 @@ function check_env () {
 export BERKS_OPTS
 export -f check_env
 ls environments | parallel --tagstring {/.}: check_env {/.}
-
-echo "Checking provisioning environment..."
-cd provisioning
-export BERKSHELF_PATH="vendor/"
-rm -f Berksfile.lock
-berks install ${BERKS_OPTS}
