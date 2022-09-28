@@ -101,7 +101,7 @@
     "resolver": "= 4.0.3",
     "resource_from_hash": "= 2.1.0",
     "rsyslog": "= 9.1.0",
-    "selinux": "= 6.0.1",
+    "selinux": "= 6.0.6",
     "seven_zip": "= 4.2.2",
     "sudo": "= 5.4.6",
     "sysctl": "= 1.0.5",

@@ -65,7 +65,7 @@
     "prometheus-platform": "= 2.2.0",
     "resolver": "= 4.0.3",
     "rsyslog": "= 9.1.0",
-    "selinux": "= 6.0.1",
+    "selinux": "= 6.0.6",
     "seven_zip": "= 4.2.2",
     "sysctl": "= 1.0.5",
     "timezone_iii": "= 1.1.7",
