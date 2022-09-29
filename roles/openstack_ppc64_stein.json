@@ -207,6 +207,17 @@
             "oph7.osuosl.bak": "ens7f0.116",
             "oph10.osuosl.bak": "ens7f1.116"
           }
+        },
+        {
+          "name": "oph_openshift",
+          "controller": {
+            "default": "disabled"
+          },
+          "compute": {
+            "default": "disabled",
+            "oph7.osuosl.bak": "ens7f0.31",
+            "oph10.osuosl.bak": "ens7f1.31"
+          }
         }
       ]
     },
