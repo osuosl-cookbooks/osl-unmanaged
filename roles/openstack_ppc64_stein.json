@@ -211,7 +211,7 @@
         {
           "name": "oph_openshift",
           "controller": {
-            "default": "disabled"
+            "default": "eth5"
           },
           "compute": {
             "default": "disabled",
