@@ -96,7 +96,7 @@
     "osl-keepalived": "= 2.2.0",
     "osl-ldap": "= 1.5.0",
     "osl-mailman": "= 2.0.0",
-    "osl-mailrelay": "= 1.6.6",
+    "osl-mailrelay": "= 1.6.7",
     "osl-memcached": "= 3.2.0",
     "osl-mirror": "= 3.3.1",
     "osl-mysql": "= 6.5.0",
