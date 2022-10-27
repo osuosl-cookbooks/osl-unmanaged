@@ -124,7 +124,8 @@
           "oph5.osuosl.bak": "enp1s0f0",
           "oph6.osuosl.bak": "enp1s0f0",
           "oph7.osuosl.bak": "ens7f0",
-          "oph10.osuosl.bak": "ens7f0"
+          "oph10.osuosl.bak": "ens7f0",
+          "oph-oc-builder1.osuosl.bak": "em1"
         }
       },
       "external_networks": [
@@ -155,7 +156,8 @@
             "oph5.osuosl.bak": "enp1s0f0.108",
             "oph6.osuosl.bak": "enp1s0f0.108",
             "oph7.osuosl.bak": "ens7f0.108",
-            "oph10.osuosl.bak": "ens7f1.108"
+            "oph10.osuosl.bak": "ens7f1.108",
+            "oph-oc-builder1.osuosl.bak": "em1.108"
           }
         },
         {
@@ -180,7 +182,8 @@
             "oph5.osuosl.bak": "enp1s0f0.112",
             "oph6.osuosl.bak": "enp1s0f0.112",
             "oph7.osuosl.bak": "ens7f0.112",
-            "oph10.osuosl.bak": "ens7f1.112"
+            "oph10.osuosl.bak": "ens7f1.112",
+            "oph-oc-builder1.osuosl.bak": "em1.112"
           }
         },
         {
@@ -205,7 +208,8 @@
             "oph5.osuosl.bak": "enp1s0f0.116",
             "oph6.osuosl.bak": "enp1s0f0.116",
             "oph7.osuosl.bak": "ens7f0.116",
-            "oph10.osuosl.bak": "ens7f1.116"
+            "oph10.osuosl.bak": "ens7f1.116",
+            "oph-oc-builder1.osuosl.bak": "em1.116"
           }
         },
         {
@@ -216,7 +220,8 @@
           "compute": {
             "default": "disabled",
             "oph7.osuosl.bak": "ens7f0.31",
-            "oph10.osuosl.bak": "ens7f1.31"
+            "oph10.osuosl.bak": "ens7f1.31",
+            "oph-oc-builder1.osuosl.bak": "em1.31"
           }
         }
       ]
