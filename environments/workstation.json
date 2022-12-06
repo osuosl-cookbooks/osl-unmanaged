@@ -258,6 +258,7 @@
         "xsel",
         "xterm",
         "xtightvncviewer",
+        "yamllint",
         "zathura",
         "zsh"
       ],
