@@ -1,4 +1,5 @@
-include_recipe 'packer_templates::default'
+include_recipe 'osl-unmanaged::default'
+include_recipe 'osl-unmanaged::network'
 
 package powervs_pkgs
 
@@ -120,4 +121,4 @@ end
   end
 end
 
-include_recipe 'packer_templates::cleanup'
+include_recipe 'osl-unmanaged::cleanup'

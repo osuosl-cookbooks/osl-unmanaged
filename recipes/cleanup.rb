@@ -1,4 +1,4 @@
-include_recipe 'packer_templates::chrony'
+include_recipe 'osl-unmanaged::chrony'
 
 package cleanup_pkgs do
   action :remove

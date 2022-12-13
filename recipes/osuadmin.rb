@@ -1,8 +1,8 @@
-include_recipe 'packer_templates::sudo'
+include_recipe 'osl-unmanaged::sudo'
 
 osuadmin_passwd =
   if ENV['OSUADMIN_PASSWD'].nil?
-    node['package_template']['osuadmin']['password']
+    node['osl-unmanaged']['osuadmin']['password']
   else
     ENV['OSUADMIN_PASSWD']
   end
@@ -28,7 +28,7 @@ end
 
 # Setup root user initially with our keys
 user 'root' do
-  password node['package_template']['osuadmin']['password']
+  password node['osl-unmanaged']['osuadmin']['password']
   sensitive true
 end
 

@@ -1,4 +1,4 @@
-packer_sshd_config.each do |key, value|
+unmanaged_sshd_config.each do |key, value|
   replace_or_add key do
     path '/etc/ssh/sshd_config'
     pattern "^#{key}.*"

@@ -1,15 +1,17 @@
-module PackerTemplates
+module OslUnmanaged
   module Cookbook
     module Helpers
-      def packer_sshd_config
+      def unmanaged_sshd_config
         {
           'ChallengeResponseAuthentication' => 'no',
           'Ciphers' => 'chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr',
           'GSSAPIAuthentication' => 'no',
+          'HostKeyAlgorithms' => '+ssh-rsa',
           'KbdInteractiveAuthentication' => 'no',
           'KexAlgorithms' => 'curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256',
           'PasswordAuthentication' => 'no',
           'PermitRootLogin' => 'no',
+          'PubkeyAcceptedKeyTypes' => '+ssh-rsa',
           'UseDNS' => 'no',
         }
       end
@@ -228,5 +230,5 @@ module PackerTemplates
     end
   end
 end
-Chef::DSL::Recipe.include ::PackerTemplates::Cookbook::Helpers
-Chef::Resource.include ::PackerTemplates::Cookbook::Helpers
+Chef::DSL::Recipe.include ::OslUnmanaged::Cookbook::Helpers
+Chef::Resource.include ::OslUnmanaged::Cookbook::Helpers

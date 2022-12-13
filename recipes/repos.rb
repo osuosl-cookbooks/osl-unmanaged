@@ -149,18 +149,24 @@ elsif platform?('ubuntu')
     filters(
       [
         { substitute: [
-            %r{http://us\.archive\.ubuntu\.com/ubuntu},
-            %r{http://us\.archive\.ubuntu\.com/ubuntu},
+            %r{http://us\.ubuntu\.com/ubuntu},
+            %r{http://us\.ubuntu\.com/ubuntu/},
+            'https://ubuntu.osuosl.org/ubuntu',
+          ],
+        },
+        { substitute: [
+            %r{http://nova\.clouds\.archive\.ubuntu\.com/ubuntu},
+            %r{http://nova\.clouds\.archive\.ubuntu\.com/ubuntu/},
             'https://ubuntu.osuosl.org/ubuntu',
           ],
         },
       ]
     )
     sensitive false
-    notifies :update, 'apt_update[packer]', :immediately
+    notifies :update, 'apt_update[osl-unmanaged]', :immediately
   end
 
-  apt_update 'packer' do
+  apt_update 'osl-unmanaged' do
     action :nothing
   end
 end

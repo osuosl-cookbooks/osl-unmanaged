@@ -1,5 +1,5 @@
 #
-# Cookbook:: packer_templates
+# Cookbook:: osl-unmanaged
 # Recipe:: default
 #
 # Copyright:: 2022, Oregon State University
@@ -15,12 +15,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-include_recipe 'packer_templates::repos'
-include_recipe 'packer_templates::ssh'
-include_recipe 'packer_templates::sudo'
-include_recipe 'packer_templates::osuadmin'
-include_recipe 'packer_templates::network'
-include_recipe 'packer_templates::chrony'
+include_recipe 'osl-unmanaged::repos'
+include_recipe 'osl-unmanaged::ssh'
+include_recipe 'osl-unmanaged::sudo'
+include_recipe 'osl-unmanaged::osuadmin'
+include_recipe 'osl-unmanaged::chrony'
 
 package 'postfix'
 

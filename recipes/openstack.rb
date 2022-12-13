@@ -1,5 +1,5 @@
 #
-# Cookbook:: packer_templates
+# Cookbook:: osl-unmanaged
 # Recipe:: openstack
 #
 # Copyright:: 2022, Oregon State University
@@ -17,7 +17,8 @@
 # limitations under the License.
 apt_update 'openstack' if platform_family?('debian')
 
-include_recipe 'packer_templates::default'
+include_recipe 'osl-unmanaged::default'
+include_recipe 'osl-unmanaged::network'
 
 package openstack_pkgs
 
