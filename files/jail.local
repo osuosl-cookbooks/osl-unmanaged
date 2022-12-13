@@ -1,0 +1,23 @@
+[DEFAULT]
+ignoreip = fir.osuosl.org nagios.osuosl.org nagios2.osuosl.org
+findtime = 25d
+bantime = 5d
+maxretry = 5
+destemail = root@osuosl.org
+sendername = Fail2Ban
+banaction = iptables-multiport
+mta = sendmail
+protocol = tcp
+chain = INPUT
+
+action_ = %(banaction)s[name=%(__name__)s, port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+action_mw = %(banaction)s[name=%(__name__)s, port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+              %(mta)s-whois[name=%(__name__)s, dest="%(destemail)s", protocol="%(protocol)s", chain="%(chain)s", sendername="%(sendername)s"]
+action_mwl = %(banaction)s[name=%(__name__)s, port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+               %(mta)s-whois-lines[name=%(__name__)s, dest="%(destemail)s", logpath=%(logpath)s, chain="%(chain)s", sendername="%(sendername)s"]
+
+action = %(action_)s
+
+[sshd]
+enabled = true
+filter = sshd
