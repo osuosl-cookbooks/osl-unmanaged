@@ -72,7 +72,6 @@
         "apt-file",
         "aptitude",
         "arandr",
-        "atom",
         "autoconf",
         "awesome",
         "bash",
@@ -80,6 +79,7 @@
         "bluez-firmware",
         "build-essential",
         "bzr",
+        "code",
         "chromium",
         "cmake",
         "cmake-data",
@@ -263,6 +263,7 @@
         "zsh"
       ],
       "purge": [
+        "atom",
         "docker.io*",
         "nova-api",
         "resolvconf"
