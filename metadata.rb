@@ -14,6 +14,6 @@ environment['cookbook_versions'].each do |cb, ver|
   depends cb, ver
 end
 
-supports         'centos', '~> 6.0'
 supports         'centos', '~> 7.0'
+supports         'centos_stream', '~> 8.0'
 supports         'debian'
