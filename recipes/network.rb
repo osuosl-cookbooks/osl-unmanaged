@@ -1,7 +1,25 @@
+#
+# Cookbook:: osl-unmanaged
+# Recipe:: network
+#
+# Copyright:: 2022-2023, Oregon State University
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 case node['platform_family']
 when 'debian'
   apt_update 'network'
-  package %w(network-manager isc-dhcp-client)
+  package %w(network-manager isc-dhcp-client netplan.io)
 
   filter_lines '/etc/NetworkManager/NetworkManager.conf' do
     filters(
@@ -74,17 +92,11 @@ when 'debian'
     manage_symlink_source
     only_if { ::File.symlink?('/etc/resolv.conf') }
     notifies :restart, 'service[NetworkManager]', :immediately
-    notifies :run, 'execute[nmcli up]', :immediately
     action :delete
   end
 
   execute 'cloud-init clean' do
     only_if { ::File.exist?('/var/lib/cloud/data/instance-id') }
-  end
-
-  execute 'nmcli up' do
-    command "nmcli c up #{node['network']['default_interface']}"
-    action :nothing
   end
 
   service 'systemd-resolved.service' do
@@ -103,7 +115,7 @@ when 'debian'
     action :nothing
   end
 when 'rhel'
-  package 'dhcp-client'
+  package %w(dhcp-client NetworkManager)
 
   file '/etc/NetworkManager/conf.d/dhcp.conf' do
     content "[main]\ndhcp=internal\n"

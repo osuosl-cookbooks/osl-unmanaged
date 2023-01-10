@@ -1,0 +1,7 @@
+---
+name: osl-unmanaged
+inputs:
+  - name: cleanup
+    value: false
+  - name: packer
+    value: false
