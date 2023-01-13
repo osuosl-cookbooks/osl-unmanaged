@@ -1,8 +1,10 @@
 family = os.family
 arch = os.arch
 ppc64le = os.arch == 'ppc64le'
+rsct = input('rsct', value: false)
 
 control 'rsct' do
+  only_if { rsct }
   case family
   when 'redhat'
     %w(

@@ -185,3 +185,5 @@ suites:
     verifier:
       controls:
         - rsct
+      inputs:
+        rsct: true
