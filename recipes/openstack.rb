@@ -1,8 +1,8 @@
 #
-# Cookbook:: packer_templates
+# Cookbook:: osl-unmanaged
 # Recipe:: openstack
 #
-# Copyright:: 2022, Oregon State University
+# Copyright:: 2022-2023, Oregon State University
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,9 +17,11 @@
 # limitations under the License.
 apt_update 'openstack' if platform_family?('debian')
 
-include_recipe 'packer_templates::default'
+include_recipe 'osl-unmanaged::default'
 
 package openstack_pkgs
+
+include_recipe 'osl-unmanaged::network'
 
 replace_or_add 'GRUB_TIMEOUT' do
   path '/etc/default/grub'
@@ -56,14 +58,17 @@ elsif platform?('ubuntu')
   end
 end
 
-cookbook_file '/etc/cloud/cloud.cfg.d/91_openstack_override.cfg'
+cookbook_file '/etc/cloud/cloud.cfg.d/91_openstack_override.cfg' do
+  case node['platform_family']
+  when 'debian'
+    source '91_openstack_override.cfg-debian'
+  when 'rhel'
+    source '91_openstack_override.cfg-rhel'
+  end
+end
 
 execute 'rebuild initramfs' do
-  if platform_family?('rhel')
-    command openstack_grub_mkconfig
-  else
-    command 'update-grub'
-  end
+  command openstack_grub_mkconfig
   live_stream true
   action :nothing
 end

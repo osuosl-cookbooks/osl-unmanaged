@@ -1,21 +1,32 @@
-module PackerTemplates
+module OslUnmanaged
   module Cookbook
     module Helpers
-      def packer_sshd_config
+      def unmanaged_sshd_config
         {
           'ChallengeResponseAuthentication' => 'no',
           'Ciphers' => 'chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr',
+          'ClientAliveInterval' => '60',
           'GSSAPIAuthentication' => 'no',
+          'HostKeyAlgorithms' => '+ssh-rsa',
           'KbdInteractiveAuthentication' => 'no',
           'KexAlgorithms' => 'curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256',
           'PasswordAuthentication' => 'no',
-          'PermitRootLogin' => 'no',
+          'PermitRootLogin' => 'prohibit-password',
+          'PubkeyAcceptedKeyTypes' => '+ssh-rsa',
           'UseDNS' => 'no',
         }
       end
 
       def ifcfg_files
         Dir['/etc/sysconfig/network-scripts/ifcfg-*'].reject { |f| File.basename(f).match('ifcfg-lo') }
+      end
+
+      def openssh_pkgs
+        if platform_family?('rhel')
+          %w(openssh-server openssh-clients)
+        else
+          %w(openssh-server openssh-client)
+        end
       end
 
       def openstack_pkgs
@@ -56,37 +67,19 @@ module PackerTemplates
       end
 
       def ibm_pkgs
-        if node['kernel']['machine'] == 'ppc64le'
-          if platform_family?('rhel')
-            %w(
-              devices.chrp.base.ServiceRM
-              DynamicRM
-              librtas
-              powerpc-utils
-              rsct.basic
-              rsct.core
-              rsct.opt.storagerm
-              src
-            )
-          else
-            %w(
-              devices.chrp.base.servicerm
-              dynamicrm
-              librtas2
-              powerpc-utils
-              rsct.basic
-              rsct.core
-              rsct.core.utils
-              rsct.opt.storagerm
-              src
-            )
-          end
-        elsif node['kernel']['machine'] == 'x86_64'
-          if platform_family?('rhel')
-            'pipestat'
-          else
-            []
-          end
+        # https://www.ibm.com/docs/en/rsct/3.3?topic=installation-verifying-linux-nodes
+        if platform_family?('rhel')
+          %w(
+            rsct.basic
+            rsct.core
+            src
+          )
+        else
+          %w(
+            rsct.core
+            rsct.core.utils
+            src
+          )
         end
       end
 
@@ -109,7 +102,11 @@ module PackerTemplates
       end
 
       def openstack_grub_mkconfig
-        if node['kernel']['machine'] == 'aarch64'
+        if docker?
+          'true'
+        elsif platform_family?('debian')
+          'update-grub'
+        elsif node['kernel']['machine'] == 'aarch64'
           'grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg'
         else
           'grub2-mkconfig -o /boot/grub2/grub.cfg'
@@ -154,7 +151,33 @@ module PackerTemplates
         if platform_family?('rhel')
           %w(gcc cpp kernel-devel kernel-headers)
         elsif platform_family?('debian')
-          if platform?('ubuntu')
+          if platform?('debian')
+            case node['platform_version']
+            when '11'
+              %w(
+                build-essential
+                command-not-found
+                friendly-recovery
+                gcc
+                g++
+                installation-report
+                laptop-detect
+                libc6-dev
+                libx11-6
+                libx11-data
+                libxcb1
+                libxext6
+                libxmuu1
+                make
+                popularity-contest
+                ppp
+                pppconfig
+                pppoeconf
+                wireless-regdb
+                xauth
+              )
+            end
+          elsif platform?('ubuntu')
             case node['platform_version']
             when '20.04'
               %w(
@@ -223,10 +246,29 @@ module PackerTemplates
         reinstall_pkgs = Mixlib::ShellOut.new('dpkg-query -S /lib/firmware')
         reinstall_pkgs.run_command
         reinstall_pkgs.error!
-        reinstall_pkgs.stdout.gsub(/:.*/, '').split(',')
+        pkgs = reinstall_pkgs.stdout.gsub(/:.*/, '').split(',').chomp
+        pkgs.delete('wireless-regdb')
+        pkgs
+      rescue
+        []
+      end
+
+      def raid_pkg
+        pkgs = []
+        pkgs << 'megacli' if node['kernel']['modules'].key?('megaraid_sas') && platform_family?('debian')
+        pkgs << 'mdadm' if node.key?('mdadm')
+        pkgs
+      end
+
+      def mdadm_conf
+        if platform_family?('rhel')
+          '/etc/mdadm.conf'
+        else
+          '/etc/mdadm/mdadm.conf'
+        end
       end
     end
   end
 end
-Chef::DSL::Recipe.include ::PackerTemplates::Cookbook::Helpers
-Chef::Resource.include ::PackerTemplates::Cookbook::Helpers
+Chef::DSL::Recipe.include ::OslUnmanaged::Cookbook::Helpers
+Chef::Resource.include ::OslUnmanaged::Cookbook::Helpers

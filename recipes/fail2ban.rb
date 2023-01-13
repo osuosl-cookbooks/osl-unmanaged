@@ -1,6 +1,6 @@
 #
 # Cookbook:: osl-unmanaged
-# Recipe:: ssh
+# Recipe:: fail2ban
 #
 # Copyright:: 2022-2023, Oregon State University
 #
@@ -15,18 +15,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-package openssh_pkgs
+include_recipe 'osl-unmanaged::postfix'
+include_recipe 'osl-unmanaged::repos'
 
-unmanaged_sshd_config.each do |key, value|
-  replace_or_add key do
-    path '/etc/ssh/sshd_config'
-    pattern "^#{key}.*"
-    line "#{key} #{value}"
-    sensitive false
-    notifies :restart, 'service[sshd]'
-  end
-end
+package %w(fail2ban iptables)
 
-service 'sshd' do
+cookbook_file '/etc/fail2ban/jail.local'
+
+file '/var/log/auth.log' do
+  action :create_if_missing
+end if docker?
+
+service 'fail2ban' do
   action [:enable, :start]
 end

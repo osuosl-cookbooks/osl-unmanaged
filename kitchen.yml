@@ -5,84 +5,104 @@ driver:
 verifier:
   name: inspec
   inspec_tests:
-    - path: inspec
+    - path: test/integration/inspec
 
 provisioner:
   name: chef_infra
-  product_name: cinc
   enforce_idempotency: true
   multiple_converge: 2
   deprecations_as_errors: true
 
 platforms:
   - name: centos-stream-8
-    driver:
-      box: osuosl/centos-stream-8
-      box_url: https://ftp.osuosl.org/pub/osl/vagrant/centos-stream-8.box
+  - name: debian-11
   - name: ubuntu-20.04
-    driver:
-      box: osuosl/ubuntu-20.04
-      box_url: https://ftp.osuosl.org/pub/osl/vagrant/ubuntu-20.04.box
   - name: ubuntu-22.04
-    driver:
-      box: osuosl/ubuntu-22.04
-      box_url: https://ftp.osuosl.org/pub/osl/vagrant/ubuntu-22.04.box
+    # TODO: This should be removed on the next Cinc Workstation release which
+    # includes a proper fix
+    transport:
+      name: ssh
+      username: vagrant
+      password: vagrant
 
 suites:
   - name: default
     run_list:
-      - recipe[packer_templates::default]
+      - recipe[osl-unmanaged::default]
     verifier:
       controls:
         - chrony
-        - default
-        - network
+        - fail2ban
         - osuadmin
+        - postfix
+        - raid
         - repos
         - ssh
         - sudo
   - name: default-cleanup
     run_list:
-      - recipe[packer_templates::default]
-      - recipe[packer_templates::cleanup]
+      - recipe[osl-unmanaged::default]
+      - recipe[osl-unmanaged::network]
+      - recipe[osl-unmanaged::cleanup]
     verifier:
       controls:
         - chrony
+        - cleanup
         - default
+        - fail2ban
         - network
         - osuadmin
+        - postfix
+        - raid
         - repos
         - ssh
         - sudo
-        - cleanup
       inputs:
         cleanup: true
+    provisioner:
+      enforce_idempotency: false
+      multiple_converge: 1
   - name: chrony
     run_list:
-      - recipe[packer_templates::chrony]
+      - recipe[osl-unmanaged::chrony]
     verifier:
       controls:
         - chrony
   - name: cleanup
     run_list:
-      - recipe[packer_templates::cleanup]
+      - recipe[osl-unmanaged::cleanup]
     verifier:
       controls:
         - cleanup
+    provisioner:
+      enforce_idempotency: false
+      multiple_converge: 1
+  - name: fail2ban
+    run_list:
+      - recipe[osl-unmanaged::fail2ban]
+    verifier:
+      controls:
+        - fail2ban
+        - postfix
+        - repos
   - name: network
     run_list:
-      - recipe[packer_templates::network]
+      - recipe[osl-unmanaged::network]
     verifier:
       controls:
         - network
   - name: openstack
     run_list:
-      - recipe[packer_templates::openstack]
+      - recipe[osl-unmanaged::openstack]
     verifier:
       controls:
-        - openstack
+        - chrony
+        - fail2ban
         - network
+        - openstack
         - osuadmin
+        - postfix
+        - raid
         - repos
         - ssh
         - sudo
@@ -90,40 +110,80 @@ suites:
         openstack: true
   - name: osuadmin
     run_list:
-      - recipe[packer_templates::osuadmin]
+      - recipe[osl-unmanaged::osuadmin]
     verifier:
       controls:
         - osuadmin
+  - name: postfix
+    run_list:
+      - recipe[osl-unmanaged::postfix]
+    verifier:
+      controls:
+        - postfix
   - name: powervs
     run_list:
-      - recipe[packer_templates::powervs]
+      - recipe[osl-unmanaged::powervs]
     verifier:
       controls:
-        - cleanup
+        - chrony
         - default
+        - fail2ban
         - network
         - osuadmin
+        - postfix
         - powervs
+        - raid
         - repos
         - ssh
         - sudo
       inputs:
         powervs: true
+  - name: raid-mdadm
+    run_list:
+      - recipe[osl-unmanaged::raid]
+    attributes:
+      mdadm:
+    verifier:
+      controls:
+        - postfix
+        - raid
+      inputs:
+        mdadm: true
+  - name: raid-megacli
+    run_list:
+      - recipe[osl-unmanaged::raid]
+    attributes:
+      kernel:
+        modules:
+          megaraid_sas:
+    verifier:
+      controls:
+        - raid
+      inputs:
+        megacli: true
   - name: ssh
     run_list:
-      - recipe[packer_templates::ssh]
+      - recipe[osl-unmanaged::ssh]
     verifier:
       controls:
         - ssh
   - name: sudo
     run_list:
-      - recipe[packer_templates::sudo]
+      - recipe[osl-unmanaged::sudo]
     verifier:
       controls:
         - sudo
   - name: repos
     run_list:
-      - recipe[packer_templates::repos]
+      - recipe[osl-unmanaged::repos]
     verifier:
       controls:
         - repos
+  - name: rsct
+    run_list:
+      - recipe[osl-unmanaged::rsct]
+    verifier:
+      controls:
+        - rsct
+      inputs:
+        rsct: true

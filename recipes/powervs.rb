@@ -1,39 +1,29 @@
-include_recipe 'packer_templates::default'
+#
+# Cookbook:: osl-unmanaged
+# Recipe:: powervs
+#
+# Copyright:: 2022-2023, Oregon State University
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+include_recipe 'osl-unmanaged::default'
+include_recipe 'osl-unmanaged::postfix'
 
 package powervs_pkgs
 
-if platform_family?('rhel')
-  remote_file "#{Chef::Config[:file_cache_path]}/ibm-power-repo.rpm" do
-    source 'http://public.dhe.ibm.com/software/server/POWER/Linux/yum/download/ibm-power-repo-latest.noarch.rpm'
-    not_if { ::File.exist?('/opt/ibm/lop/configure') }
-  end
+include_recipe 'osl-unmanaged::network'
+include_recipe 'osl-unmanaged::rsct'
 
-  package 'ibm-power-repo' do
-    source "#{Chef::Config[:file_cache_path]}/ibm-power-repo.rpm"
-    not_if { ::File.exist?('/opt/ibm/lop/configure') }
-  end
-
-  file "#{Chef::Config[:file_cache_path]}/ibm-power-repo.rpm" do
-    action :delete
-  end
-
-  file '/etc/motd' do
-    content ''
-  end
-
-  yum_repository 'IBM_Power_Tools' do
-    baseurl 'https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/RHEL/$releasever/$basearch'
-    gpgkey 'file:///opt/ibm/lop/gpg/RPM-GPG-KEY-ibm-power'
-  end
-else
-  apt_repository 'IBM_Power_Tools' do
-    uri 'ppa:ibmpackages/rsct'
-  end
-end
-
-package ibm_pkgs
-
-package "linux-modules-extra-#{node['kernel']['release']}" if platform_family?('debian')
+package "linux-modules-extra-#{node['kernel']['release']}" if platform_family?('debian') && !docker?
 
 cookbook_file '/etc/multipath.conf'
 
@@ -47,7 +37,7 @@ replace_or_add 'GRUB_TIMEOUT' do
   line 'GRUB_TIMEOUT=0'
   sensitive false
   notifies :run, 'execute[rebuild initramfs]'
-end
+end unless docker?
 
 replace_or_add 'GRUB_CMDLINE_LINUX' do
   path '/etc/default/grub'
@@ -56,12 +46,14 @@ replace_or_add 'GRUB_CMDLINE_LINUX' do
   replace_only true
   line powervs_grub_cmdline
   notifies :run, 'execute[rebuild initramfs]'
-end
+end unless docker?
 
 if platform_family?('rhel')
+  package 'dracut'
+
   file '/etc/dracut.conf.d/10-multipath.conf' do
     content 'force_drivers+=" dm-multipath "'
-    notifies :run, 'execute[rebuild initramfs]'
+    notifies :run, 'execute[rebuild initramfs]' unless docker?
   end
 
   file '/etc/dracut.conf.d/99-powervm.conf' do
@@ -70,12 +62,14 @@ if platform_family?('rhel')
     only_if { node['kernel']['machine'] == 'ppc64le' }
   end
 elsif platform_family?('debian')
+  package 'initramfs-tools'
+
   powervs_modules.each do |m|
     append_if_no_line m do
       path '/etc/initramfs-tools/modules'
       line m
       sensitive false
-      notifies :run, 'execute[rebuild initramfs]'
+      notifies :run, 'execute[rebuild initramfs]' unless docker?
     end
   end
 
@@ -84,7 +78,7 @@ elsif platform_family?('debian')
     pattern /^MODULES=.*/
     line 'MODULES=dep'
     sensitive false
-    notifies :run, 'execute[rebuild initramfs]'
+    notifies :run, 'execute[rebuild initramfs]' unless docker?
   end
 end
 
@@ -119,5 +113,3 @@ end
     action [:stop, :enable]
   end
 end
-
-include_recipe 'packer_templates::cleanup'
