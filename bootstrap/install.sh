@@ -21,7 +21,7 @@ curl -L -o /tmp/cinc/osl-unmanaged.zip \
   https://github.com/osuosl-cookbooks/osl-unmanaged/archive/refs/heads/main.zip
 cd /tmp/cinc
 unzip osl-unmanaged.zip
-mv osl-unmanaged-ramereth-initial osl-unmanaged
+mv osl-unmanaged-main osl-unmanaged
 cd osl-unmanaged
 /opt/cinc/embedded/bin/berks vendor /tmp/cinc/cookbooks
 cp bootstrap/client.rb /tmp/cinc/client.rb
