@@ -70,17 +70,17 @@ control 'repos' do
         it { should exist }
         it { should be_enabled }
       end
+
+      describe file '/etc/apt/sources.list' do
+        its('content') { should match /ubuntu #{codename} (main|universe|multiverse)/ }
+        its('content') { should match /ubuntu #{codename}-security (main|universe|multiverse)/ }
+      end if
     when 'ppc64le'
       describe apt 'http://ports.ubuntu.com/ubuntu-ports/' do
         it { should exist }
         it { should be_enabled }
       end
     end
-
-    describe file '/etc/apt/sources.list' do
-      its('content') { should match /ubuntu #{codename} (main|universe|multiverse)/ }
-      its('content') { should match /ubuntu #{codename}-security (main|universe|multiverse)/ }
-    end if arch == 'x86_64'
   when 'centos'
     describe yum.repo 'appstream' do
       it { should exist }
