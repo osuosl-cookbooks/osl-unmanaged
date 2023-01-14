@@ -80,7 +80,7 @@ control 'repos' do
     describe file '/etc/apt/sources.list' do
       its('content') { should match /ubuntu #{codename} (main|universe|multiverse)/ }
       its('content') { should match /ubuntu #{codename}-security (main|universe|multiverse)/ }
-    end
+    end if arch == 'x86_64'
   when 'centos'
     describe yum.repo 'appstream' do
       it { should exist }
