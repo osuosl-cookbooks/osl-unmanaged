@@ -74,9 +74,9 @@ control 'repos' do
       describe file '/etc/apt/sources.list' do
         its('content') { should match /ubuntu #{codename} (main|universe|multiverse)/ }
         its('content') { should match /ubuntu #{codename}-security (main|universe|multiverse)/ }
-      end if
-    when 'ppc64le'
-      describe apt 'http://ports.ubuntu.com/ubuntu-ports/' do
+      end
+    when 'ppc64le', 'aarch64'
+      describe apt 'http://ports.ubuntu.com/ubuntu-ports' do
         it { should exist }
         it { should be_enabled }
       end
