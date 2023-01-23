@@ -226,6 +226,12 @@ elsif platform_family?('debian')
               'https://ubuntu.osuosl.org/ubuntu ',
             ],
           },
+          { substitute: [
+              %r{^deb http://ports.ubuntu.com/ubuntu-ports/\s},
+              %r{http://ports.ubuntu.com/ubuntu-ports/\s},
+              'http://ports.ubuntu.com/ubuntu-ports ',
+            ],
+          },
         ]
       )
       sensitive false
