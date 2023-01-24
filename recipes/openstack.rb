@@ -46,7 +46,7 @@ if platform_family?('rhel')
     pattern /name: cloud-user$/
     sensitive false
     replace_only true
-    line '    name: centos'
+    line '     name: centos'
   end
 elsif platform?('ubuntu')
   replace_or_add 'package_mirrors_primary' do
