@@ -24,6 +24,7 @@ control 'openstack' do
       cloud-init
       cloud-utils-growpart
       gdisk
+      yamllint
     ).each do |p|
       describe package p do
         it { should be_installed }
@@ -47,6 +48,7 @@ control 'openstack' do
       cloud-utils
       cloud-init
       cloud-initramfs-growroot
+      yamllint
     ).each do |p|
       describe package p do
         it { should be_installed }

@@ -36,6 +36,7 @@ module OslUnmanaged
             cloud-init
             cloud-utils-growpart
             gdisk
+            yamllint
           )
           pkgs << 'ppc64-diag' if node['kernel']['machine'] == 'ppc64le'
         else
@@ -43,6 +44,7 @@ module OslUnmanaged
             cloud-utils
             cloud-init
             cloud-initramfs-growroot
+            yamllint
           )
           pkgs << 'powerpc-utils' if node['kernel']['machine'] == 'ppc64le'
         end
