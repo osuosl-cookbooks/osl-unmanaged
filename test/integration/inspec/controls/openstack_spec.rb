@@ -87,13 +87,17 @@ control 'openstack' do
     end
   end unless docker
 
+  describe command 'yamllint --no-warnings -d relaxed /etc/cloud/cloud.cfg /etc/cloud/cloud.cfg.d/91_*.cfg' do
+    its('exit_status') { should eq 0 }
+  end
+
   describe file '/etc/cloud/cloud.cfg' do
     case os_name
     when 'centos'
       its('content') { should_not match /name: cloud-user/ }
       its('content') { should match /name: centos/ }
     when 'ubuntu'
-      its('content') { should match %r{primary: https://ubuntu.osuosl.org/ubuntu} }
+      its('content') { should match %r{primary: https://ubuntu.osuosl.org/ubuntu$} }
     end
   end
 
@@ -102,10 +106,10 @@ control 'openstack' do
     its('content') { should match %r{metadata_urls: \['http://169.254.169.254'\]} }
     case os_family
     when 'debian'
-      its('content') { should match /cloud-init-per once systemctl enable --now unattended-upgrades.service/ }
-      its('content') { should match /cloud-init-per once systemctl enable --now apt-daily-upgrade.timer/ }
+      its('content') { should match /cloud-init-per, once, unattended-upgrades, systemctl, enable, --now, unattended-upgrades.service/ }
+      its('content') { should match /cloud-init-per, once, apt-daily-upgrade, systemctl, enable, --now, apt-daily-upgrade.timer/ }
     when 'redhat'
-      its('content') { should match /cloud-init-per once systemctl enable --now dnf-automatic-install.timer/ }
+      its('content') { should match /cloud-init-per, once, dnf-automatic, systemctl, enable, --now, dnf-automatic-install.timer/ }
     end
   end
 

@@ -41,20 +41,43 @@ replace_or_add 'GRUB_CMDLINE_LINUX' do
 end
 
 if platform_family?('rhel')
-  replace_or_add 'cloud-user' do
-    path '/etc/cloud/cloud.cfg'
-    pattern /name: cloud-user$/
+  filter_lines '/etc/cloud/cloud.cfg' do
+    filters(
+      [
+        { substitute: [/name: cloud-user$/, /cloud-user/, 'centos'],
+        },
+      ]
+    )
     sensitive false
-    replace_only true
-    line '     name: centos'
   end
 elsif platform?('ubuntu')
-  replace_or_add 'package_mirrors_primary' do
-    path '/etc/cloud/cloud.cfg'
-    pattern %r{primary: http://archive.ubuntu.com/ubuntu}
+  filter_lines '/etc/cloud/cloud.cfg' do
+    filters(
+      [
+        { substitute: [
+            %r{primary: https?://archive.ubuntu.com/ubuntu},
+            %r{https?://archive.ubuntu.com/ubuntu/?},
+            'https://ubuntu.osuosl.org/ubuntu',
+          ],
+        },
+      ]
+    )
     sensitive false
-    replace_only true
-    line '         primary: https://ubuntu.osuosl.org/ubuntu'
+  end
+elsif platform?('debian')
+  filter_lines '/etc/cloud/cloud.cfg' do
+    filters(
+      [
+        # Remove trailing white space
+        { substitute: [
+            /\s$/,
+            /\s$/,
+            '',
+          ],
+        },
+      ]
+    )
+    sensitive false
   end
 end
 

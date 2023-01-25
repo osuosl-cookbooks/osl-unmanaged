@@ -94,6 +94,7 @@ suites:
   - name: openstack
     run_list:
       - recipe[osl-unmanaged::openstack]
+      - recipe[osl-unmanaged-test::openstack]
     verifier:
       controls:
         - chrony

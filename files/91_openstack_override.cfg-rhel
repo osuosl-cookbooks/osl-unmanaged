@@ -13,4 +13,4 @@ users:
   - name: root
     lock_passwd: true
 bootcmd:
-  - cloud-init-per once systemctl enable --now dnf-automatic-install.timer
+  - [cloud-init-per, once, dnf-automatic, systemctl, enable, --now, dnf-automatic-install.timer]
