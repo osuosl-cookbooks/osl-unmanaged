@@ -29,9 +29,10 @@ control 'repos' do
     end
 
     describe service 'apt-daily-upgrade.timer' do
-      it { should be_enabled }
       if packer
         it { should_not be_enabled }
+      else
+        it { should be_enabled }
       end
     end
   when 'redhat'
