@@ -169,6 +169,7 @@
     "xfs": "= 1.1.0",
     "xml": "= 1.2.4",
     "yum": "= 7.3.0",
+    "yum-almalinux": "= 1.0.0",
     "yum-centos": "= 5.2.0",
     "yum-elrepo": "= 2.0.0",
     "yum-epel": "= 4.5.0",

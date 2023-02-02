@@ -72,6 +72,7 @@
     "users": "= 8.1.1",
     "varnish": "= 3.3.1",
     "yum": "= 7.3.0",
+    "yum-almalinux": "= 1.0.0",
     "yum-centos": "= 5.2.0",
     "yum-elrepo": "= 2.0.0",
     "yum-epel": "= 4.5.0",
