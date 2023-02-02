@@ -171,7 +171,7 @@
     "yum": "= 7.3.0",
     "yum-centos": "= 5.2.0",
     "yum-elrepo": "= 2.0.0",
-    "yum-epel": "= 4.2.3",
+    "yum-epel": "= 4.5.0",
     "yum-ius": "= 3.1.0",
     "yum-kernel-osuosl": "= 2.3.0",
     "yum-nvidia": "= 3.0.0",
