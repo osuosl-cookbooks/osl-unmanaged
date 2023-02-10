@@ -29,7 +29,7 @@
     "gitlab_omnibus": "= 2.0.0",
     "haproxy": "= 9.0.1",
     "htpasswd": "= 2.0.4",
-    "ibm-power": "= 4.0.0",
+    "ibm-power": "= 4.0.1",
     "inifile_chef_gem": "= 0.1.0",
     "iptables": "= 8.0.0",
     "iptables-ng": "= 4.0.0",
