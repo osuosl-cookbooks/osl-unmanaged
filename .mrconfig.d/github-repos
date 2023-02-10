@@ -103,6 +103,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-git.git
 [osuosl-cookbooks/osl-gitlab]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-gitlab.git
 
+[osuosl-cookbooks/osl-gpu]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-gpu.git
+
 [osuosl-cookbooks/osl-grafana]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-grafana.git
 
