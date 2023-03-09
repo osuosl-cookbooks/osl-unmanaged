@@ -74,7 +74,7 @@
     "osl-git": "= 1.10.0",
     "osl-gpu": "= 1.0.0",
     "osl-haproxy": "= 6.2.5",
-    "osl-jenkins": "= 2.16.2",
+    "osl-jenkins": "= 2.16.3",
     "osl-ldap": "= 1.5.0",
     "osl-mysql": "= 2.7.1",
     "osl-nfs": "= 2.1.1",
