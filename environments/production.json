@@ -147,7 +147,7 @@
     "python": "= 1.4.6",
     "rabbitmq": "= 5.2.0",
     "racktables": "= 1.3.3",
-    "rdiff-backup": "= 5.2.0",
+    "rdiff-backup": "= 5.2.1",
     "resolver": "= 4.0.3",
     "resource_from_hash": "= 2.1.0",
     "rhsm": "= 1.0.1",
