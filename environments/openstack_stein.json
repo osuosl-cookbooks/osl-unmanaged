@@ -86,7 +86,7 @@
     "osl-prometheus": "= 3.2.4",
     "osl-repos": "= 3.0.0",
     "osl-resources": "= 1.5.0",
-    "osl-rsync": "= 4.2.0",
+    "osl-rsync": "= 4.2.1",
     "osl-scponly": "= 1.5.0",
     "osl-selinux": "= 2.1.2",
     "osl-syslog": "= 4.1.1",
