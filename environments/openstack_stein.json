@@ -89,7 +89,7 @@
     "osl-rsync": "= 4.2.1",
     "osl-scponly": "= 1.5.0",
     "osl-selinux": "= 2.1.2",
-    "osl-syslog": "= 4.1.1",
+    "osl-syslog": "= 4.1.2",
     "osl-vpn": "= 3.4.0",
     "percona": "= 1.1.0",
     "php": "= 9.1.0",
