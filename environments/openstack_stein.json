@@ -71,7 +71,7 @@
     "osl-docker": "= 4.8.0",
     "osl-fail2ban": "= 3.1.1",
     "osl-firewall": "= 1.9.1",
-    "osl-git": "= 1.10.0",
+    "osl-git": "= 1.10.1",
     "osl-gpu": "= 1.1.0",
     "osl-haproxy": "= 6.2.5",
     "osl-jenkins": "= 2.16.3",
