@@ -26,7 +26,7 @@
     "osl-acme": "= 4.2.0",
     "osl-docker": "= 4.8.0",
     "osl-fail2ban": "= 3.1.1",
-    "osl-ldap": "= 1.5.0",
+    "osl-ldap": "= 1.6.0",
     "osl-postfix": "= 2.2.1",
     "osl-resources": "= 1.5.0",
     "poise": "= 2.8.1",
