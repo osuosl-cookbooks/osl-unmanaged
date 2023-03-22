@@ -73,7 +73,7 @@
     "openssh": "= 2.9.2",
     "openssl": "= 8.5.5",
     "openvpn": "= 6.1.0",
-    "osl-acme": "= 4.2.0",
+    "osl-acme": "= 4.2.1",
     "osl-admin": "= 1.6.7",
     "osl-apache": "= 7.6.0",
     "osl-app": "= 4.2.3",

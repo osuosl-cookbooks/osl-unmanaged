@@ -23,7 +23,7 @@
     "ohai": "= 5.3.0",
     "openldap": "= 6.0.1",
     "openssh": "= 2.9.2",
-    "osl-acme": "= 4.2.0",
+    "osl-acme": "= 4.2.1",
     "osl-docker": "= 4.8.0",
     "osl-fail2ban": "= 3.1.1",
     "osl-ldap": "= 1.6.0",

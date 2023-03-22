@@ -38,7 +38,7 @@
     "omnibus_updater": "= 3.0.2",
     "ondrej_ppa_ubuntu": "= 0.1.0",
     "openldap": "= 6.0.1",
-    "osl-acme": "= 4.2.0",
+    "osl-acme": "= 4.2.1",
     "osl-apache": "= 7.6.0",
     "osl-fail2ban": "= 3.1.1",
     "osl-haproxy": "= 6.2.5",
