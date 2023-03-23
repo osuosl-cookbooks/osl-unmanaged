@@ -79,7 +79,7 @@
     "osl-app": "= 4.2.3",
     "osl-backup": "= 2.2.4",
     "osl-ceph": "= 4.7.1",
-    "osl-dhcp": "= 3.4.2",
+    "osl-dhcp": "= 3.5.0",
     "osl-dns": "= 6.0.2",
     "osl-docker": "= 4.8.0",
     "osl-drupal": "= 0.2.2",
