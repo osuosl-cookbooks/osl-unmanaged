@@ -148,6 +148,7 @@
         {
           "name": "general_servers2",
           "subnet": "140.211.167.128/25",
+          "uuid": "bcfb335b-cf70-4acf-8cb7-fcf15f890a0f",
           "controller": {
             "default": "eth3"
           },
