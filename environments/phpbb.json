@@ -82,7 +82,7 @@
     "yum-remi-chef": "= 6.1.0",
     "yum-repoforge": "= 3.0.0",
     "yumgroup": "= 0.7.0",
-    "proj-phpbb": "= 7.5.2",
+    "proj-phpbb": "= 7.5.3",
     "rdiff-backup": "= 5.2.1"
   },
   "default_attributes": {
