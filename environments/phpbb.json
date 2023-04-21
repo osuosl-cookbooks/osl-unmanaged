@@ -29,7 +29,7 @@
     "htpasswd": "= 2.0.4",
     "jira": "1.0.2",
     "keepalived": "= 6.0.1",
-    "mariadb": "= 5.2.4",
+    "mariadb": "= 5.2.19",
     "memcached": "= 7.0.3",
     "mysql": "= 11.0.5",
     "nagios": "= 11.1.0",
