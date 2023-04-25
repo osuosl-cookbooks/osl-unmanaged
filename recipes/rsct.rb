@@ -17,7 +17,7 @@
 # limitations under the License.
 if platform_family?('rhel')
   remote_file "#{Chef::Config[:file_cache_path]}/ibm-power-repo.rpm" do
-    source 'http://public.dhe.ibm.com/software/server/POWER/Linux/yum/download/ibm-power-repo-latest.noarch.rpm'
+    source 'https://public.dhe.ibm.com/software/server/POWER/Linux/yum/download/ibm-power-repo-latest.noarch.rpm'
     not_if { ::File.exist?('/opt/ibm/lop/configure') }
   end
 

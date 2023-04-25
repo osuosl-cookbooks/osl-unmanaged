@@ -89,7 +89,7 @@ control 'network' do
     describe port 53  do
       it { should_not be_listening }
     end
-  when 'centos'
+  when 'centos', 'almalinux'
     describe package 'dhcp-client' do
       it { should be_installed }
     end

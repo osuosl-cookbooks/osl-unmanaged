@@ -109,7 +109,7 @@ module OslUnmanaged
         elsif platform_family?('debian')
           'update-grub'
         elsif node['kernel']['machine'] == 'aarch64'
-          'grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg'
+          "grub2-mkconfig -o /boot/efi/EFI/#{node['platform']}/grub.cfg"
         else
           'grub2-mkconfig -o /boot/grub2/grub.cfg'
         end
@@ -257,7 +257,7 @@ module OslUnmanaged
 
       def raid_pkg
         pkgs = []
-        pkgs << 'megacli' if node['kernel']['modules'].key?('megaraid_sas') && platform_family?('debian')
+        pkgs << 'megacli' if node['kernel']['modules'].key?('megaraid_sas')
         pkgs << 'mdadm' if node.key?('mdadm')
         pkgs
       end

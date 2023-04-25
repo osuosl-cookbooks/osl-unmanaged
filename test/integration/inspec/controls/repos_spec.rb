@@ -101,12 +101,6 @@ control 'repos' do
       its('baseurl') { should cmp "https://epel.osuosl.org/8/Everything/#{arch}/" }
     end
 
-    describe yum.repo 'epel-modular' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://epel.osuosl.org/8/Modular/#{arch}/" }
-    end
-
     describe yum.repo 'epel-next' do
       it { should exist }
       it { should be_enabled }
@@ -123,6 +117,36 @@ control 'repos' do
       it { should exist }
       it { should be_enabled }
       its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/PowerTools/#{arch}/os/" }
+    end
+  when 'almalinux'
+    describe yum.repo 'appstream' do
+      it { should exist }
+      it { should be_enabled }
+      its('baseurl') { should cmp "https://almalinux.osuosl.org/8/AppStream/#{arch}/os/" }
+    end
+
+    describe yum.repo 'baseos' do
+      it { should exist }
+      it { should be_enabled }
+      its('baseurl') { should cmp "https://almalinux.osuosl.org/8/BaseOS/#{arch}/os/" }
+    end
+
+    describe yum.repo 'epel' do
+      it { should exist }
+      it { should be_enabled }
+      its('baseurl') { should cmp "https://epel.osuosl.org/8/Everything/#{arch}/" }
+    end
+
+    describe yum.repo 'extras' do
+      it { should exist }
+      it { should be_enabled }
+      its('baseurl') { should cmp "https://almalinux.osuosl.org/8/extras/#{arch}/os/" }
+    end
+
+    describe yum.repo 'powertools' do
+      it { should exist }
+      it { should be_enabled }
+      its('baseurl') { should cmp "https://almalinux.osuosl.org/8/PowerTools/#{arch}/os/" }
     end
   end
 end

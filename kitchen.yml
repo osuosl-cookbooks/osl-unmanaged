@@ -14,6 +14,7 @@ provisioner:
   deprecations_as_errors: true
 
 platforms:
+  - name: almalinux-8
   - name: centos-stream-8
   - name: debian-11
   - name: ubuntu-20.04

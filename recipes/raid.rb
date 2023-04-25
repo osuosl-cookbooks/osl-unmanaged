@@ -58,7 +58,7 @@ unless raid_pkg.empty?
     end
   end
 
-  package raid_pkg
+  package raid_pkg if platform_family?('debian')
 
   if raid_pkg.include?('mdadm')
     file mdadm_conf do
