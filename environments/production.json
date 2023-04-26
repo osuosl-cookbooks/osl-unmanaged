@@ -141,7 +141,7 @@
     "proj-ros": "= 5.3.7",
     "proj-seagl": "= 1.1.0",
     "proj-snowdrift": "= 4.2.0",
-    "proj-webdav": "= 3.1.0",
+    "proj-webdav": "= 3.2.0",
     "prometheus-platform": "= 2.2.0",
     "proxytrack": "= 1.2.0",
     "python": "= 1.4.6",
