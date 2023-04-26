@@ -53,7 +53,7 @@
     "line": "4.3.0",
     "logrotate": "= 3.0.6",
     "lvm": "= 4.1.6",
-    "nagios": "= 11.1.0",
+    "nagios": "= 11.2.0",
     "memcached": "= 7.0.3",
     "mariadb": "= 5.2.19",
     "modules": "= 0.2.4",
