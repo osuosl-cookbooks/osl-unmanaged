@@ -202,6 +202,7 @@
         "renameutils",
         "reprepro",
         "reptyr",
+        "ripgrep",
         "rsync",
         "rsyslog-gnutls",
         "ruby",
