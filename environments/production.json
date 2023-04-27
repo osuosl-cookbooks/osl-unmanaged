@@ -93,7 +93,7 @@
     "osl-haproxy": "= 6.4.0",
     "osl-imap": "= 2.0.2",
     "osl-jenkins": "= 2.16.3",
-    "osl-keepalived": "= 2.2.0",
+    "osl-keepalived": "= 2.3.0",
     "osl-ldap": "= 1.6.0",
     "osl-mailman": "= 2.1.0",
     "osl-mailrelay": "= 1.7.1",
