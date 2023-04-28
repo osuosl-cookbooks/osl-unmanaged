@@ -122,21 +122,6 @@ if platform_family?('rhel')
       notifies :run, 'execute[dnf makecache]', :immediately
     end
 
-    filter_lines '/etc/yum.repos.d/epel-modular.repo' do
-      filters(
-        [
-          { comment: [/^metalink.*repo=epel-modular-\$releasever.*/, '#', ''] },
-          { replace: [
-              /^#baseurl=.*basearch$/,
-              'baseurl=https://epel.osuosl.org/$releasever/Modular/$basearch/',
-            ],
-          },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[dnf makecache]', :immediately
-    end
-
     filter_lines '/etc/yum.repos.d/epel-next.repo' do
       filters(
         [
@@ -144,6 +129,94 @@ if platform_family?('rhel')
           { replace: [
               %r{^#baseurl=.*basearch/$},
               'baseurl=https://epel.osuosl.org/next/$releasever/Everything/$basearch/',
+            ],
+          },
+        ]
+      )
+      sensitive false
+      notifies :run, 'execute[dnf makecache]', :immediately
+    end
+  elsif platform?('almalinux')
+    filter_lines '/etc/yum.repos.d/almalinux.repo' do
+      filters(
+        [
+          { comment: [%r{^mirrorlist.*/baseos$}, '#', ''] },
+          { replace: [%r{^# baseurl.*/BaseOS.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/BaseOS/$basearch/os/'] },
+          { comment: [%r{^mirrorlist.*/appstream$}, '#', ''] },
+          { replace: [%r{^# baseurl.*/AppStream.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/AppStream/$basearch/os/'] },
+          { comment: [%r{^mirrorlist.*/extras$}, '#', ''] },
+          { replace: [%r{^# baseurl.*/extras.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/extras/$basearch/os/'] },
+        ]
+      )
+      sensitive false
+      notifies :run, 'execute[dnf makecache]', :immediately
+    end
+
+    filter_lines '/etc/yum.repos.d/almalinux-powertools.repo' do
+      filters(
+        [
+          { comment: [%r{^mirrorlist.*/powertools$}, '#', ''] },
+          { replace: [%r{^# baseurl.*/PowerTools.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/PowerTools/$basearch/os/'] },
+          { replace: [/^enabled=0$/, 'enabled=1'] },
+        ]
+      )
+      sensitive false
+      notifies :run, 'execute[dnf makecache]', :immediately
+    end
+
+    filter_lines '/etc/yum.repos.d/almalinux-ha.repo' do
+      filters(
+        [
+          { comment: [%r{^mirrorlist.*/ha$}, '#', ''] },
+          { replace: [%r{^# baseurl.*/HighAvailability.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/HighAvailability/$basearch/os/'] },
+        ]
+      )
+      sensitive false
+      notifies :run, 'execute[dnf makecache]', :immediately
+    end
+
+    filter_lines '/etc/yum.repos.d/almalinux-rt.repo' do
+      filters(
+        [
+          { comment: [%r{^mirrorlist.*/rt$}, '#', ''] },
+          { replace: [%r{^# baseurl.*/RT.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/RT/$basearch/os/'] },
+        ]
+      )
+      sensitive false
+      notifies :run, 'execute[dnf makecache]', :immediately
+    end
+
+    filter_lines '/etc/yum.repos.d/almalinux-resilientstorage.repo' do
+      filters(
+        [
+          { comment: [%r{^mirrorlist.*/resilientstorage$}, '#', ''] },
+          { replace: [%r{^# baseurl.*/ResilientStorage.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/ResilientStorage/$basearch/os/'] },
+        ]
+      )
+      sensitive false
+      notifies :run, 'execute[dnf makecache]', :immediately
+    end
+
+    execute 'dnf makecache' do
+      action :nothing
+    end
+
+    package 'epel-release' do
+      notifies :run, 'execute[import epel key]', :immediately
+    end
+
+    execute 'import epel key' do
+      command 'rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8'
+      action :nothing
+    end
+
+    filter_lines '/etc/yum.repos.d/epel.repo' do
+      filters(
+        [
+          { comment: [/^metalink.*repo=epel-\$releasever.*/, '#', ''] },
+          { replace: [
+              /^#baseurl=.*basearch$/,
+              'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
             ],
           },
         ]

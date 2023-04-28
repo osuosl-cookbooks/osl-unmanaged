@@ -6,7 +6,7 @@ grub_path =
   case os_family
   when 'redhat'
     if aarch64
-      '/boot/efi/EFI/centos'
+      "/boot/efi/EFI/#{os_name}"
     else
       '/boot/grub2'
     end
@@ -98,6 +98,9 @@ control 'openstack' do
     when 'centos'
       its('content') { should_not match /name: cloud-user/ }
       its('content') { should match /name: centos/ }
+    when 'almalinux'
+      its('content') { should_not match /name: cloud-user/ }
+      its('content') { should match /name: almalinux/ }
     when 'ubuntu'
       its('content') { should match %r{primary: https://ubuntu.osuosl.org/ubuntu$} }
     end

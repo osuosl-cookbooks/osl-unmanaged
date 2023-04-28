@@ -44,7 +44,7 @@ if platform_family?('rhel')
   filter_lines '/etc/cloud/cloud.cfg' do
     filters(
       [
-        { substitute: [/name: cloud-user$/, /cloud-user/, 'centos'],
+        { substitute: [/name: cloud-user$/, /cloud-user/, node['platform']],
         },
       ]
     )
