@@ -21,7 +21,7 @@ package cleanup_pkgs do
   action :remove
 end
 
-if platform_family?('rhel')
+if platform_family?('rhel', 'fedora')
   iwl_firmware_pkgs = node['packages'].keys.select { |k, _v| k =~ /iwl.*firmware/ }
 
   package iwl_firmware_pkgs do

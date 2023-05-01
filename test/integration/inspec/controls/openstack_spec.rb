@@ -101,6 +101,9 @@ control 'openstack' do
     when 'almalinux'
       its('content') { should_not match /name: cloud-user/ }
       its('content') { should match /name: almalinux/ }
+    when 'fedora'
+      its('content') { should_not match /name: cloud-user/ }
+      its('content') { should match /name: fedora/ }
     when 'ubuntu'
       its('content') { should match %r{primary: https://ubuntu.osuosl.org/ubuntu$} }
     end

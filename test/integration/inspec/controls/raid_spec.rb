@@ -3,7 +3,7 @@ mdadm = input('mdadm', value: false)
 os_family = os.family
 mdadm_conf =
   case os_family
-  when 'redhat'
+  when 'redhat', 'fedora'
     '/etc/mdadm.conf'
   when 'debian'
     '/etc/mdadm/mdadm.conf'
@@ -19,7 +19,8 @@ control 'raid' do
       its('content') { should match /^MAILADDR mdadm@osuosl.org$/ }
     end
 
-    if os_family == 'redhat'
+    case os_family
+    when 'redhat', 'fedora'
       describe service 'mdmonitor-oneshot.timer' do
         it { should be_enabled }
         it { should be_running }

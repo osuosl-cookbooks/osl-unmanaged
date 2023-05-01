@@ -15,7 +15,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-if platform_family?('rhel')
+if platform_family?('rhel', 'fedora')
   remote_file "#{Chef::Config[:file_cache_path]}/ibm-power-repo.rpm" do
     source 'https://public.dhe.ibm.com/software/server/POWER/Linux/yum/download/ibm-power-repo-latest.noarch.rpm'
     not_if { ::File.exist?('/opt/ibm/lop/configure') }
@@ -35,7 +35,7 @@ if platform_family?('rhel')
   end
 
   yum_repository 'IBM_Power_Tools' do
-    baseurl 'https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/RHEL/$releasever/$basearch'
+    baseurl ibm_yum_repo_url
     gpgkey 'file:///opt/ibm/lop/gpg/RPM-GPG-KEY-ibm-power'
   end
 

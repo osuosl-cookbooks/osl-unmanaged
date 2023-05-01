@@ -22,7 +22,7 @@ module OslUnmanaged
       end
 
       def openssh_pkgs
-        if platform_family?('rhel')
+        if platform_family?('rhel', 'fedora')
           %w(openssh-server openssh-clients)
         else
           %w(openssh-server openssh-client)
@@ -31,7 +31,7 @@ module OslUnmanaged
 
       def openstack_pkgs
         pkgs = []
-        if platform_family?('rhel')
+        if platform_family?('rhel', 'fedora')
           pkgs = %w(
             cloud-init
             cloud-utils-growpart
@@ -52,7 +52,7 @@ module OslUnmanaged
       end
 
       def powervs_pkgs
-        if platform_family?('rhel')
+        if platform_family?('rhel', 'fedora')
           %w(
             cloud-init
             cloud-utils-growpart
@@ -68,9 +68,17 @@ module OslUnmanaged
         end
       end
 
+      def ibm_yum_repo_url
+        if platform_family?('fedora')
+          'https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/Fedora/$basearch'
+        else
+          'https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/RHEL/$releasever/$basearch'
+        end
+      end
+
       def ibm_pkgs
         # https://www.ibm.com/docs/en/rsct/3.3?topic=installation-verifying-linux-nodes
-        if platform_family?('rhel')
+        if platform_family?('rhel', 'fedora')
           %w(
             rsct.basic
             rsct.core
@@ -86,7 +94,7 @@ module OslUnmanaged
       end
 
       def openstack_grub_cmdline
-        if platform_family?('rhel')
+        if platform_family?('rhel', 'fedora')
           case node['kernel']['machine']
           when 'ppc64le'
             'GRUB_CMDLINE_LINUX="console=hvc0,115200n8 console=tty0 crashkernel=auto rhgb quiet"'
@@ -116,7 +124,7 @@ module OslUnmanaged
       end
 
       def powervs_grub_cmdline
-        if platform_family?('rhel')
+        if platform_family?('rhel', 'fedora')
           case node['kernel']['machine']
           when 'ppc64le'
             'GRUB_CMDLINE_LINUX="console=tty0 console=hvc0,115200n8 crashkernel=auto rd.shell rd.driver.pre=dm_multipath log_buf_len=1M"'
@@ -150,7 +158,7 @@ module OslUnmanaged
       end
 
       def cleanup_pkgs
-        if platform_family?('rhel')
+        if platform_family?('rhel', 'fedora')
           %w(gcc cpp kernel-devel kernel-headers)
         elsif platform_family?('debian')
           if platform?('debian')
@@ -235,7 +243,7 @@ module OslUnmanaged
       end
 
       def chrony_conf
-        if platform_family?('rhel')
+        if platform_family?('rhel', 'fedora')
           '/etc/chrony.conf'
         else
           '/etc/chrony/chrony.conf'
@@ -263,7 +271,7 @@ module OslUnmanaged
       end
 
       def mdadm_conf
-        if platform_family?('rhel')
+        if platform_family?('rhel', 'fedora')
           '/etc/mdadm.conf'
         else
           '/etc/mdadm/mdadm.conf'

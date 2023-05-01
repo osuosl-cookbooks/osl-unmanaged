@@ -6,7 +6,7 @@ rsct = input('rsct', value: false)
 control 'rsct' do
   only_if { rsct }
   case family
-  when 'redhat'
+  when 'redhat', 'fedora'
     %w(
       DynamicRM
       rsct.basic
@@ -20,8 +20,12 @@ control 'rsct' do
 
     describe yum.repo 'IBM_Power_Tools' do
       it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/RHEL/8/#{arch}" }
+      it { should be_enabled } unless family == 'fedora' && arch == 'x86_64'
+      if family == 'fedora'
+        its('baseurl') { should cmp "https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/Fedora/#{arch}" }
+      else
+        its('baseurl') { should cmp "https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/RHEL/8/#{arch}" }
+      end
     end
   when 'debian'
     %w(

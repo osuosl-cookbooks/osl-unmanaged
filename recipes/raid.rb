@@ -26,7 +26,7 @@ unless raid_pkg.empty?
       key %w(https://hwraid.le-vert.net/debian/hwraid.le-vert.net.gpg.key)
       only_if { raid_pkg.include?('megacli') }
     end
-  elsif platform_family?('rhel')
+  elsif platform_family?('rhel', 'fedora')
     remote_file "#{Chef::Config[:file_cache_path]}/megacli.zip" do
       source 'https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/8-07-14_MegaCLI.zip'
       not_if { ::File.exist?('/usr/bin/megacli') }
@@ -61,6 +61,8 @@ unless raid_pkg.empty?
   package raid_pkg if platform_family?('debian')
 
   if raid_pkg.include?('mdadm')
+    package 'mdadm'
+
     file mdadm_conf do
       action :create_if_missing
     end
@@ -72,7 +74,7 @@ unless raid_pkg.empty?
       sensitive false
     end
 
-    if platform_family?('rhel')
+    if platform_family?('rhel', 'fedora')
       service 'mdmonitor-oneshot.service' do
         action :enable
       end

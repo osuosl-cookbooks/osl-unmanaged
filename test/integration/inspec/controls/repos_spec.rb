@@ -35,7 +35,7 @@ control 'repos' do
         it { should be_enabled }
       end
     end
-  when 'redhat'
+  when 'redhat', 'fedora'
     describe package 'dnf-automatic' do
       it { should be_installed }
     end
