@@ -40,11 +40,18 @@ replace_or_add 'GRUB_CMDLINE_LINUX' do
   notifies :run, 'execute[rebuild initramfs]'
 end
 
-if platform_family?('rhel')
+if platform_family?('rhel', 'fedora')
   filter_lines '/etc/cloud/cloud.cfg' do
     filters(
       [
         { substitute: [/name: cloud-user$/, /cloud-user/, node['platform']],
+        },
+        # Remove trailing white space
+        { substitute: [
+            /\s$/,
+            /\s$/,
+            '',
+          ],
         },
       ]
     )
@@ -85,8 +92,19 @@ cookbook_file '/etc/cloud/cloud.cfg.d/91_openstack_override.cfg' do
   case node['platform_family']
   when 'debian'
     source '91_openstack_override.cfg-debian'
-  when 'rhel'
+  when 'rhel', 'fedora'
     source '91_openstack_override.cfg-rhel'
+  end
+end
+
+%w(
+  cloud-init-local
+  cloud-init
+  cloud-config
+  cloud-final
+).each do |s|
+  service s do
+    action :enable
   end
 end
 

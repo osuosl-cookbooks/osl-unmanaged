@@ -114,10 +114,34 @@ when 'debian'
   service 'systemd-networkd' do
     action :nothing
   end
-when 'rhel'
+when 'rhel', 'fedora'
   package %w(dhcp-client NetworkManager)
 
-  file '/etc/NetworkManager/conf.d/dhcp.conf' do
-    content "[main]\ndhcp=internal\n"
+  filter_lines '/etc/NetworkManager/NetworkManager.conf' do
+    filters(
+      [
+        { after: [/\[main\]$/, 'dhcp=internal'] },
+        { after: [/\[main\]$/, 'dns=default'] },
+        { after: [/\[main\]$/, 'systemd-resolved=false'] },
+      ]
+    )
+    sensitive false
+    notifies :restart, 'service[NetworkManager]'
+  end
+
+  replace_or_add 'disable DNSStubListener' do
+    path '/etc/systemd/resolved.conf'
+    pattern '^#DNSStubListener=.*'
+    line 'DNSStubListener=no'
+    sensitive false
+    notifies :restart, 'service[NetworkManager]'
+  end
+
+  service 'systemd-resolved.service' do
+    action [:stop, :disable]
+  end
+
+  service 'NetworkManager' do
+    action [:enable, :start]
   end
 end

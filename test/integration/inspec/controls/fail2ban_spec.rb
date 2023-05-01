@@ -1,5 +1,7 @@
+iptables_pkg = os.name == 'fedora' ? 'iptables-legacy' : 'iptables'
+
 control 'fail2ban' do
-  %w(fail2ban iptables).each do |p|
+  ['fail2ban', iptables_pkg].each do |p|
     describe package p do
       it { should be_installed }
     end

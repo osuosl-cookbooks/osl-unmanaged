@@ -18,7 +18,11 @@
 include_recipe 'osl-unmanaged::postfix'
 include_recipe 'osl-unmanaged::repos'
 
-package %w(fail2ban iptables)
+if platform_family?('fedora')
+  package %w(fail2ban iptables-legacy)
+else
+  package %w(fail2ban iptables)
+end
 
 cookbook_file '/etc/fail2ban/jail.local'
 
