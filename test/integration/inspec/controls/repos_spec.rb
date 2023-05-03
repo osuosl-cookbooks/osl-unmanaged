@@ -58,11 +58,6 @@ control 'repos' do
         it { should exist }
         it { should be_enabled }
       end if docker
-    when 'ppc64le'
-      describe apt 'http://ports.ubuntu.com/ubuntu-ports/' do
-        it { should exist }
-        it { should be_enabled }
-      end
     end
   when 'ubuntu'
     case arch
