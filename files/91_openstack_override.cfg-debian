@@ -12,6 +12,3 @@ users:
   - default
   - name: root
     lock_passwd: true
-bootcmd:
-  - [cloud-init-per, once, unattended-upgrades, systemctl, enable, --now, unattended-upgrades.service]
-  - [cloud-init-per, once, apt-daily-upgrade, systemctl, enable, --now, apt-daily-upgrade.timer]

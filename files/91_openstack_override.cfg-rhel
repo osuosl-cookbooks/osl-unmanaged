@@ -12,5 +12,3 @@ users:
   - default
   - name: root
     lock_passwd: true
-bootcmd:
-  - [cloud-init-per, once, dnf-automatic, systemctl, enable, --now, dnf-automatic-install.timer]

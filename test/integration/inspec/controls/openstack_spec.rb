@@ -112,13 +112,6 @@ control 'openstack' do
   describe file '/etc/cloud/cloud.cfg.d/91_openstack_override.cfg' do
     its('content') { should match /datasource_list: \['OpenStack'\]/ }
     its('content') { should match %r{metadata_urls: \['http://169.254.169.254'\]} }
-    case os_family
-    when 'debian'
-      its('content') { should match /cloud-init-per, once, unattended-upgrades, systemctl, enable, --now, unattended-upgrades.service/ }
-      its('content') { should match /cloud-init-per, once, apt-daily-upgrade, systemctl, enable, --now, apt-daily-upgrade.timer/ }
-    when 'redhat'
-      its('content') { should match /cloud-init-per, once, dnf-automatic, systemctl, enable, --now, dnf-automatic-install.timer/ }
-    end
   end
 
   %w(

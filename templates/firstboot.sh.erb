@@ -1,0 +1,12 @@
+#!/bin/bash
+set -ex
+<% if node['platform_family'] == 'rhel' -%>
+systemctl enable --now dnf-automatic-install.timer
+<% elsif node['platform_family'] == 'debian' -%>
+systemctl unmask apt-daily-upgrade.service apt-daily.service
+systemctl enable --now unattended-upgrades.service apt-daily-upgrade.timer apt-daily-upgrade.service
+<% end -%>
+systemctl disable osuosl-firstboot
+rm -rf /etc/systemd/system/osuosl-firstboot.service
+rm -rf /usr/local/libexec/firstboot.sh
+systemctl daemon-reload
