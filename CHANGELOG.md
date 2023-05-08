@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the osl-unmanaged cookbook.
 
+2.2.1 (2023-05-08)
+------------------
+- Refactor first boot setup
+
 2.2.0 (2023-05-01)
 ------------------
 - Add support for Fedora
