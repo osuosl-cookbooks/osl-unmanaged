@@ -355,3 +355,26 @@ elsif platform_family?('debian')
     action :nothing
   end
 end
+
+directory '/usr/local/libexec'
+
+template '/usr/local/libexec/firstboot.sh' do
+  mode '0755'
+end
+
+systemd_unit 'osuosl-firstboot.service' do
+  content <<~EOU
+    [Unit]
+    Description=OSUOSL First Boot script /usr/local/libexec/firstboot.sh
+    After=network-online.target
+    Wants=network-online.target
+
+    [Service]
+    Type=oneshot
+    ExecStart=/usr/local/libexec/firstboot.sh
+
+    [Install]
+    WantedBy=multi-user.target
+  EOU
+  action [:create, :enable]
+end

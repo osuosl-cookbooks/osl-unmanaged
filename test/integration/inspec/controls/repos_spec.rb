@@ -6,6 +6,24 @@ packer = input('packer')
 docker = inspec.command('test -e /.dockerenv')
 
 control 'repos' do
+  describe service 'osuosl-firstboot.service' do
+    it { should be_enabled }
+    it { should_not be_running }
+  end
+
+  describe file '/usr/local/libexec/firstboot.sh' do
+    its('mode') { should cmp '0755' }
+    case family
+    when 'debian'
+      its('content') { should match /systemctl unmask apt-daily-upgrade.service apt-daily.service/ }
+      its('content') do
+        should match /systemctl enable --now unattended-upgrades.service apt-daily-upgrade.timer apt-daily-upgrade.service/
+      end
+    when 'redhat', 'fedora'
+      its('content') { should match /systemctl enable --now dnf-automatic-install.timer/ }
+    end
+  end
+
   case family
   when 'debian'
     %w(
