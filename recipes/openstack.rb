@@ -113,3 +113,10 @@ execute 'rebuild initramfs' do
   live_stream true
   action :nothing
 end
+
+# TODO: Workaround issue with Debian booting on aarch64
+directory '/boot/efi/EFI/boot' if ::File.exist?('/boot/efi/EFI/debian/grubaa64.efi')
+
+remote_file '/boot/efi/EFI/boot/bootaa64.efi' do
+  source 'file:///boot/efi/EFI/debian/grubaa64.efi'
+end if ::File.exist?('/boot/efi/EFI/debian/grubaa64.efi')
