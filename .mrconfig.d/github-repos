@@ -208,6 +208,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-sudo.git
 [osuosl-cookbooks/osl-syslog]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-syslog.git
 
+[osuosl-cookbooks/osl-unmanaged]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-unmanaged.git
+
 [osuosl-cookbooks/osl-varnish]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-varnish.git
 
