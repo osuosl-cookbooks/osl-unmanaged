@@ -15,7 +15,6 @@ provisioner:
 
 platforms:
   - name: almalinux-8
-  - name: centos-stream-8
   - name: debian-11
   - name: fedora-latest
   - name: ubuntu-20.04

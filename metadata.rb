@@ -10,9 +10,8 @@ version           '2.2.1'
 
 # supports          'centos', '~> 7.0'
 supports          'almalinux', '~> 8.0'
-supports          'centos_stream', '~> 8.0'
 supports          'debian', '11.0'
 supports          'ubuntu', '~> 20.04'
 supports          'ubuntu', '~> 22.04'
 
-depends 'line'
+depends           'line'

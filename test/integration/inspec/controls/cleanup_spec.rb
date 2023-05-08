@@ -27,7 +27,7 @@ control 'cleanup' do
   end
 
   case platform
-  when 'centos'
+  when 'almalinux', 'fedora', 'centos'
     %w(gcc cpp kernel-devel kernel-headers).each do |pkg|
       describe package pkg do
         it { should_not be_installed }
