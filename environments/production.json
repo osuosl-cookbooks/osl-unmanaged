@@ -29,7 +29,7 @@
     "cron": "= 7.0.3",
     "database": "= 4.0.6",
     "dhcp": "= 8.1.5",
-    "dnf-automatic": "= 2.0.3",
+    "dnf-automatic": "= 2.0.4",
     "dobc": "= 2.2.0",
     "docker": "= 7.7.2",
     "fail2ban": "= 7.0.0",
