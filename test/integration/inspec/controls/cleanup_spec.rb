@@ -124,7 +124,7 @@ control 'cleanup' do
     end unless docker
 
     describe command 'du -s /var/cache/apt/archives' do
-      its('stdout') { should match /^(8|12|16|24)/ }
+      its('stdout') { should match /^(8|12|16|20|24)/ }
     end
   end
 end

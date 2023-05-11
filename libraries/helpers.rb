@@ -186,6 +186,29 @@ module OslUnmanaged
                 wireless-regdb
                 xauth
               )
+            when '12'
+              %w(
+                build-essential
+                command-not-found
+                friendly-recovery
+                gcc
+                g++
+                installation-report
+                laptop-detect
+                libc6-dev
+                libx11-6
+                libx11-data
+                libxcb1
+                libxext6
+                libxmuu1
+                make
+                popularity-contest
+                ppp
+                pppconfig
+                pppoeconf
+                wireless-regdb
+                xauth
+              )
             end
           elsif platform?('ubuntu')
             case node['platform_version']
