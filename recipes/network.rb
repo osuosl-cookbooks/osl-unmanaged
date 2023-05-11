@@ -72,6 +72,7 @@ when 'debian'
     line 'DNSStubListener=no'
     sensitive false
     notifies :restart, 'service[NetworkManager]'
+    only_if { ::File.exist?('/etc/systemd/resolved.conf') }
   end
 
   # https://bugs.launchpad.net/ubuntu/+source/isc-dhcp/+bug/1905800
@@ -135,6 +136,7 @@ when 'rhel', 'fedora'
     line 'DNSStubListener=no'
     sensitive false
     notifies :restart, 'service[NetworkManager]'
+    only_if { ::File.exist?('/etc/systemd/resolved.conf') }
   end
 
   service 'systemd-resolved.service' do

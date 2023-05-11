@@ -4,6 +4,7 @@ arch = os.arch
 codename = inspec.command('lsb_release -cs').stdout.strip
 packer = input('packer')
 docker = inspec.command('test -e /.dockerenv')
+sources_list = inspec.file('/etc/apt/sources.list').exist?
 
 control 'repos' do
   describe service 'osuosl-firstboot.service' do
@@ -71,11 +72,11 @@ control 'repos' do
       describe apt 'https://debian.osuosl.org/debian' do
         it { should exist }
         it { should be_enabled }
-      end
+      end if sources_list
       describe apt 'https://deb.debian.org/debian-security' do
         it { should exist }
         it { should be_enabled }
-      end if docker
+      end if docker && sources_list
     end
   when 'ubuntu'
     case arch

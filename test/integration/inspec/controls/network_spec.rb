@@ -1,6 +1,7 @@
 platform = os.name
 cleanup = input('cleanup')
 docker = inspec.command('test -e /.dockerenv')
+resolved = inspec.command('test -e /etc/systemd/resolved.conf')
 
 control 'network' do
   case platform
@@ -51,7 +52,7 @@ control 'network' do
 
     describe ini '/etc/systemd/resolved.conf' do
       its('Resolve.DNSStubListener') { should cmp 'no' }
-    end
+    end if resolved
 
     describe file '/etc/apparmor.d/sbin.dhclient' do
       its('content') { should match %r{/run/NetworkManager/dhclient\{,6\}-\*\.pid lrw,$} }
