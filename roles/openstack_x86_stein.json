@@ -116,8 +116,12 @@
           "oprod2.osuosl.bak": "p1p1.42",
           "oprod3.osuosl.bak": "p1p1.42",
           "oprod4.osuosl.bak": "p1p1.42",
+          "oprod13.osuosl.bak": "p2p1.42",
+          "oprod14.osuosl.bak": "p2p1.42",
           "oprod15.osuosl.bak": "p6p1.42",
-          "oprod16.osuosl.bak": "p6p1.42"
+          "oprod16.osuosl.bak": "p6p1.42",
+          "oprod17.osuosl.bak": "p3p1.42",
+          "oprod18.osuosl.bak": "p3p1.42"
         }
       },
       "external_networks": [
@@ -141,8 +145,12 @@
             "oprod2.osuosl.bak": "p1p2.100",
             "oprod3.osuosl.bak": "p1p2.100",
             "oprod4.osuosl.bak": "p1p2.100",
+            "oprod13.osuosl.bak": "p2p2.100",
+            "oprod14.osuosl.bak": "p2p2.100",
             "oprod15.osuosl.bak": "p6p2.100",
-            "oprod16.osuosl.bak": "p6p2.100"
+            "oprod16.osuosl.bak": "p6p2.100",
+            "oprod17.osuosl.bak": "p3p2.100",
+            "oprod18.osuosl.bak": "p3p2.100"
           }
         },
         {
@@ -158,8 +166,12 @@
             "oprod2.osuosl.bak": "p1p2.109",
             "oprod3.osuosl.bak": "p1p2.109",
             "oprod4.osuosl.bak": "p1p2.109",
+            "oprod13.osuosl.bak": "p2p2.109",
+            "oprod14.osuosl.bak": "p2p2.109",
             "oprod15.osuosl.bak": "p6p2.109",
-            "oprod16.osuosl.bak": "p6p2.109"
+            "oprod16.osuosl.bak": "p6p2.109",
+            "oprod17.osuosl.bak": "p3p2.109",
+            "oprod18.osuosl.bak": "p3p2.109"
           }
         },
         {
@@ -175,8 +187,12 @@
             "oprod2.osuosl.bak": "p1p2.106",
             "oprod3.osuosl.bak": "p1p2.106",
             "oprod4.osuosl.bak": "p1p2.106",
+            "oprod13.osuosl.bak": "p2p2.106",
+            "oprod14.osuosl.bak": "p2p2.106",
             "oprod15.osuosl.bak": "p6p2.106",
-            "oprod16.osuosl.bak": "p6p2.106"
+            "oprod16.osuosl.bak": "p6p2.106",
+            "oprod17.osuosl.bak": "p3p2.106",
+            "oprod18.osuosl.bak": "p3p2.106"
           }
         },
         {
@@ -192,8 +208,12 @@
             "oprod2.osuosl.bak": "p1p2.121",
             "oprod3.osuosl.bak": "p1p2.121",
             "oprod4.osuosl.bak": "p1p2.121",
+            "oprod13.osuosl.bak": "p2p2.121",
+            "oprod14.osuosl.bak": "p2p2.121",
             "oprod15.osuosl.bak": "p6p2.121",
-            "oprod16.osuosl.bak": "p6p2.121"
+            "oprod16.osuosl.bak": "p6p2.121",
+            "oprod17.osuosl.bak": "p3p2.121",
+            "oprod18.osuosl.bak": "p3p2.121"
           }
         },
         {
@@ -209,8 +229,12 @@
             "oprod2.osuosl.bak": "p1p2.43",
             "oprod3.osuosl.bak": "p1p2.43",
             "oprod4.osuosl.bak": "p1p2.43",
+            "oprod13.osuosl.bak": "p3p2.43",
+            "oprod14.osuosl.bak": "p3p2.43",
             "oprod15.osuosl.bak": "p6p2.43",
-            "oprod16.osuosl.bak": "p6p2.43"
+            "oprod16.osuosl.bak": "p6p2.43",
+            "oprod17.osuosl.bak": "p3p2.43",
+            "oprod18.osuosl.bak": "p3p2.43"
           }
         }
       ]
