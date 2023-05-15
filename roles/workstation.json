@@ -23,7 +23,7 @@
     "recipe[workstation::users]",
     "recipe[workstation::vimrc]",
     "recipe[workstation::scripts]",
-    "recipe[workstation::cgroups_v1]",
+    "recipe[base::grub]",
     "recipe[workstation::systemd]"
   ],
   "env_run_lists": {
