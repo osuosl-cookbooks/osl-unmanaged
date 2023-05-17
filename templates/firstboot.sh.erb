@@ -1,7 +1,11 @@
 #!/bin/bash
 set -ex
 <% if %w(rhel fedora).include?(node['platform_family']) -%>
+<% if node['platform_version'].to_i >= 8 -%>
 systemctl enable --now dnf-automatic-install.timer
+<% else -%>
+systemctl enable --now yum-cron.service
+<% end -%>
 <% elsif node['platform_family'] == 'debian' -%>
 systemctl unmask apt-daily-upgrade.service apt-daily.service
 systemctl enable --now unattended-upgrades.service apt-daily-upgrade.timer apt-daily-upgrade.service

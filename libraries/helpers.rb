@@ -315,6 +315,38 @@ module OslUnmanaged
           %w(fail2ban iptables)
         end
       end
+
+      def network_pkgs
+        case node['platform_family']
+        when 'fedora'
+          %w(dhcp-client NetworkManager)
+        when 'rhel'
+          if node['platform_version'].to_i >= 8
+            %w(dhcp-client NetworkManager)
+          else
+            %w(dhclient NetworkManager)
+          end
+        when 'debian'
+          %w(network-manager isc-dhcp-client netplan.io)
+        end
+      end
+
+      def centos_url
+        case node['kernel']['machine']
+        when 'aarch64', 'ppc64le'
+          'https://centos-altarch.osuosl.org'
+        else
+          'https://centos.osuosl.org'
+        end
+      end
+
+      def base_arch
+        if node['cpu']['model_name'].match?(/POWER9/)
+          'power9'
+        else
+          '$basearch'
+        end
+      end
     end
   end
 end

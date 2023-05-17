@@ -52,7 +52,7 @@ unless raid_pkg.empty?
         file "#{Chef::Config[:file_cache_path]}/ncurses-compat-libs.rpm" do
           action :delete
         end
-      else
+      elsif node['platform_version'].to_i == 8
         package 'ncurses-compat-libs'
       end
 

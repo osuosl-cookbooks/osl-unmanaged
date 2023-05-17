@@ -19,7 +19,7 @@
 case node['platform_family']
 when 'debian'
   apt_update 'network'
-  package %w(network-manager isc-dhcp-client netplan.io)
+  package network_pkgs
 
   filter_lines '/etc/NetworkManager/NetworkManager.conf' do
     filters(
@@ -116,7 +116,7 @@ when 'debian'
     action :nothing
   end
 when 'rhel', 'fedora'
-  package %w(dhcp-client NetworkManager)
+  package network_pkgs
 
   filter_lines '/etc/NetworkManager/NetworkManager.conf' do
     filters(
