@@ -91,7 +91,7 @@
     "osl-gpu": "= 1.1.0",
     "osl-grafana": "= 3.0.5",
     "osl-haproxy": "= 6.4.3",
-    "osl-imap": "= 2.0.2",
+    "osl-imap": "= 2.0.3",
     "osl-jenkins": "= 2.16.3",
     "osl-keepalived": "= 2.4.1",
     "osl-ldap": "= 1.6.0",
