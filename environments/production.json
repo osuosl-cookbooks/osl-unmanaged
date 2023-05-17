@@ -136,7 +136,7 @@
     "postgresql": "= 10.0.0",
     "proj-deluge": "= 3.4.0",
     "proj-drupalorg": "= 0.1.8",
-    "proj-lf": "= 2.6.1",
+    "proj-lf": "= 2.7.0",
     "proj-misc": "= 3.4.1",
     "proj-ros": "= 5.4.0",
     "proj-seagl": "= 1.1.0",
