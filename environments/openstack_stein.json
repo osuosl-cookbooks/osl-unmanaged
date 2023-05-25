@@ -76,7 +76,7 @@
     "osl-haproxy": "= 6.4.3",
     "osl-jenkins": "= 2.16.3",
     "osl-ldap": "= 1.6.0",
-    "osl-mysql": "= 6.8.2",
+    "osl-mysql": "= 2.7.1",
     "osl-nfs": "= 2.1.1",
     "osl-nrpe": "= 6.4.1",
     "osl-openstack": "= 10.4.6",
