@@ -1,0 +1,10 @@
+{
+  "env_run_lists": {},
+  "run_list": [],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "vip_mysql1 server role",
+  "name": "vip_mysql1"
+}
