@@ -113,7 +113,7 @@
     "osl-postgresql": "= 5.2.0",
     "osl-prometheus": "= 3.2.6",
     "osl-rancid": "= 1.4.2",
-    "osl-repos": "= 4.1.0",
+    "osl-repos": "= 4.2.0",
     "osl-resources": "= 1.5.2",
     "osl-rsync": "= 4.2.1",
     "osl-scponly": "= 1.5.1",
