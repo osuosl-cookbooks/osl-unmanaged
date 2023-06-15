@@ -1,6 +1,7 @@
 platform = os.name
 family = os.family
 arch = os.arch
+release = os.release.to_i
 codename = inspec.command('lsb_release -cs').stdout.strip
 packer = input('packer')
 docker = inspec.command('test -e /.dockerenv')
@@ -136,31 +137,37 @@ control 'repos' do
     describe yum.repo 'appstream' do
       it { should exist }
       it { should be_enabled }
-      its('baseurl') { should cmp "https://almalinux.osuosl.org/8/AppStream/#{arch}/os/" }
+      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/AppStream/#{arch}/os/" }
     end
 
     describe yum.repo 'baseos' do
       it { should exist }
       it { should be_enabled }
-      its('baseurl') { should cmp "https://almalinux.osuosl.org/8/BaseOS/#{arch}/os/" }
+      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/BaseOS/#{arch}/os/" }
     end
 
     describe yum.repo 'epel' do
       it { should exist }
       it { should be_enabled }
-      its('baseurl') { should cmp "https://epel.osuosl.org/8/Everything/#{arch}/" }
+      its('baseurl') { should cmp "https://epel.osuosl.org/#{release}/Everything/#{arch}/" }
     end
 
     describe yum.repo 'extras' do
       it { should exist }
       it { should be_enabled }
-      its('baseurl') { should cmp "https://almalinux.osuosl.org/8/extras/#{arch}/os/" }
+      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/extras/#{arch}/os/" }
     end
 
     describe yum.repo 'powertools' do
       it { should exist }
       it { should be_enabled }
-      its('baseurl') { should cmp "https://almalinux.osuosl.org/8/PowerTools/#{arch}/os/" }
-    end
+      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/PowerTools/#{arch}/os/" }
+    end if release == 8
+
+    describe yum.repo 'crb' do
+      it { should exist }
+      it { should be_enabled }
+      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/CRB/#{arch}/os/" }
+    end if release >= 9
   end
 end
