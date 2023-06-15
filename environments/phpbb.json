@@ -54,7 +54,7 @@
     "osl-postgresql": "= 5.2.0",
     "osl-prometheus": "= 3.2.6",
     "osl-repos": "= 4.2.1",
-    "osl-resources": "= 1.5.2",
+    "osl-resources": "= 1.6.0",
     "osl-scponly": "= 1.5.1",
     "osl-selinux": "= 2.1.2",
     "osl-syslog": "= 4.1.3",
