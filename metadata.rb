@@ -6,7 +6,7 @@ description       'Installs/Configures osl-unmanaged'
 issues_url        'https://github.com/osuosl-cookbooks/osl-unmanaged/issues'
 source_url        'https://github.com/osuosl-cookbooks/osl-unmanaged'
 chef_version      '>= 16.0'
-version           '2.2.1'
+version           '2.3.0'
 
 # supports          'centos', '~> 7.0'
 supports          'almalinux', '~> 8.0'
