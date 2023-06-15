@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ex
-<% if node['platform_family'] == 'rhel' -%>
+<% if %w(rhel fedora).include?(node['platform_family']) -%>
 systemctl enable --now dnf-automatic-install.timer
 <% elsif node['platform_family'] == 'debian' -%>
 systemctl unmask apt-daily-upgrade.service apt-daily.service

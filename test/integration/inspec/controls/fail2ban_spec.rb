@@ -1,4 +1,16 @@
-iptables_pkg = os.name == 'fedora' ? 'iptables-legacy' : 'iptables'
+iptables_pkg =
+  case os.family
+  when 'fedora'
+    'iptables-legacy'
+  when 'redhat'
+    if os.release.to_i >= 9
+      'iptables-legacy'
+    else
+      'iptables'
+    end
+  else
+    'iptables'
+  end
 
 control 'fail2ban' do
   ['fail2ban', iptables_pkg].each do |p|

@@ -18,50 +18,68 @@
 include_recipe 'osl-unmanaged::postfix' if raid_pkg.include?('mdadm')
 
 unless raid_pkg.empty?
-  if platform_family?('debian')
-    apt_repository 'hwraid' do
-      uri 'https://hwraid.le-vert.net/debian'
-      components %w(main)
-      distribution 'bullseye' if platform?('ubuntu')
-      key %w(https://hwraid.le-vert.net/debian/hwraid.le-vert.net.gpg.key)
-      only_if { raid_pkg.include?('megacli') }
-    end
-  elsif platform_family?('rhel', 'fedora')
-    remote_file "#{Chef::Config[:file_cache_path]}/megacli.zip" do
-      source 'https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/8-07-14_MegaCLI.zip'
-      not_if { ::File.exist?('/usr/bin/megacli') }
+  if raid_pkg.include?('megacli')
+    if platform_family?('debian')
+      apt_repository 'hwraid' do
+        uri 'https://hwraid.le-vert.net/debian'
+        components %w(main)
+        distribution 'bullseye' if platform?('ubuntu') || node['platform_version'].to_i == 12
+        key %w(https://hwraid.le-vert.net/debian/hwraid.le-vert.net.gpg.key)
+        only_if { raid_pkg.include?('megacli') }
+      end
+    elsif platform_family?('rhel', 'fedora')
+      remote_file "#{Chef::Config[:file_cache_path]}/megacli.zip" do
+        source 'https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/8-07-14_MegaCLI.zip'
+        not_if { ::File.exist?('/usr/bin/megacli') }
+      end
+
+      archive_file "#{Chef::Config[:file_cache_path]}/megacli.zip" do
+        destination "#{Chef::Config[:file_cache_path]}/megacli"
+        not_if { ::File.exist?('/usr/bin/megacli') }
+      end
+
+      if platform_family?('rhel') && node['platform_version'].to_i >= 9
+        remote_file "#{Chef::Config[:file_cache_path]}/ncurses-compat-libs.rpm" do
+          source 'https://ftp.osuosl.org/pub/osl/repos/yum/9/x86_64/ncurses-compat-libs-6.2-8.20210508.el9.x86_64.rpm'
+          not_if { ::File.exist?('/usr/lib64/libncurses.so.5') }
+        end
+
+        package 'ncurses-compat-libs' do
+          source "#{Chef::Config[:file_cache_path]}/ncurses-compat-libs.rpm"
+          not_if { ::File.exist?('/usr/lib64/libncurses.so.5') }
+        end
+
+        file "#{Chef::Config[:file_cache_path]}/ncurses-compat-libs.rpm" do
+          action :delete
+        end
+      else
+        package 'ncurses-compat-libs'
+      end
+
+      package 'megacli' do
+        source "#{Chef::Config[:file_cache_path]}/megacli/Linux/MegaCli-8.07.14-1.noarch.rpm"
+        not_if { ::File.exist?('/usr/bin/megacli') }
+      end
+
+      execute 'megacli alternatives' do
+        command <<~EOL
+          alternatives --install '/usr/bin/MegaCli64' 'MegaCli64' '/opt/MegaRAID/MegaCli/MegaCli64' 1
+          alternatives --install '/usr/bin/MegaCli' 'MegaCli' '/opt/MegaRAID/MegaCli/MegaCli64' 1
+          alternatives --install '/usr/bin/megacli' 'megacli' '/opt/MegaRAID/MegaCli/MegaCli64' 1
+        EOL
+        creates '/usr/bin/megacli'
+      end
+
+      file "#{Chef::Config[:file_cache_path]}/megacli.rpm" do
+        action :delete
+      end
     end
 
-    archive_file "#{Chef::Config[:file_cache_path]}/megacli.zip" do
-      destination "#{Chef::Config[:file_cache_path]}/megacli"
-      not_if { ::File.exist?('/usr/bin/megacli') }
-    end
-
-    package 'ncurses-compat-libs'
-
-    package 'megacli' do
-      source "#{Chef::Config[:file_cache_path]}/megacli/Linux/MegaCli-8.07.14-1.noarch.rpm"
-      not_if { ::File.exist?('/usr/bin/megacli') }
-    end
-
-    execute 'megacli alternatives' do
-      command <<~EOL
-        alternatives --install '/usr/bin/MegaCli64' 'MegaCli64' '/opt/MegaRAID/MegaCli/MegaCli64' 1
-        alternatives --install '/usr/bin/MegaCli' 'MegaCli' '/opt/MegaRAID/MegaCli/MegaCli64' 1
-        alternatives --install '/usr/bin/megacli' 'megacli' '/opt/MegaRAID/MegaCli/MegaCli64' 1
-      EOL
-      creates '/usr/bin/megacli'
-    end
-
-    file "#{Chef::Config[:file_cache_path]}/megacli.rpm" do
-      action :delete
-    end
+    package raid_pkg if platform_family?('debian')
   end
 
-  package raid_pkg if platform_family?('debian')
-
   if raid_pkg.include?('mdadm')
-    package 'mdadm'
+    package raid_pkg
 
     file mdadm_conf do
       action :create_if_missing

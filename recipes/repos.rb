@@ -137,31 +137,79 @@ if platform_family?('rhel', 'fedora')
       notifies :run, 'execute[dnf makecache]', :immediately
     end
   elsif platform?('almalinux')
-    filter_lines '/etc/yum.repos.d/almalinux.repo' do
-      filters(
-        [
-          { comment: [%r{^mirrorlist.*/baseos$}, '#', ''] },
-          { replace: [%r{^# baseurl.*/BaseOS.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/BaseOS/$basearch/os/'] },
-          { comment: [%r{^mirrorlist.*/appstream$}, '#', ''] },
-          { replace: [%r{^# baseurl.*/AppStream.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/AppStream/$basearch/os/'] },
-          { comment: [%r{^mirrorlist.*/extras$}, '#', ''] },
-          { replace: [%r{^# baseurl.*/extras.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/extras/$basearch/os/'] },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[dnf makecache]', :immediately
-    end
+    case node['platform_version'].to_i
+    when 8
+      filter_lines '/etc/yum.repos.d/almalinux.repo' do
+        filters(
+          [
+            { comment: [%r{^mirrorlist.*/baseos$}, '#', ''] },
+            { replace: [%r{^# baseurl.*/BaseOS.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/BaseOS/$basearch/os/'] },
+            { comment: [%r{^mirrorlist.*/appstream$}, '#', ''] },
+            { replace: [%r{^# baseurl.*/AppStream.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/AppStream/$basearch/os/'] },
+            { comment: [%r{^mirrorlist.*/extras$}, '#', ''] },
+            { replace: [%r{^# baseurl.*/extras.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/extras/$basearch/os/'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
 
-    filter_lines '/etc/yum.repos.d/almalinux-powertools.repo' do
-      filters(
-        [
-          { comment: [%r{^mirrorlist.*/powertools$}, '#', ''] },
-          { replace: [%r{^# baseurl.*/PowerTools.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/PowerTools/$basearch/os/'] },
-          { replace: [/^enabled=0$/, 'enabled=1'] },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[dnf makecache]', :immediately
+      filter_lines '/etc/yum.repos.d/almalinux-powertools.repo' do
+        filters(
+          [
+            { comment: [%r{^mirrorlist.*/powertools$}, '#', ''] },
+            { replace: [%r{^# baseurl.*/PowerTools.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/PowerTools/$basearch/os/'] },
+            { replace: [/^enabled=0$/, 'enabled=1'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
+    when 9
+      filter_lines '/etc/yum.repos.d/almalinux-baseos.repo' do
+        filters(
+          [
+            { comment: [%r{^mirrorlist.*/baseos$}, '#', ''] },
+            { replace: [%r{^# baseurl.*/BaseOS.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/BaseOS/$basearch/os/'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
+
+      filter_lines '/etc/yum.repos.d/almalinux-appstream.repo' do
+        filters(
+          [
+            { comment: [%r{^mirrorlist.*/appstream$}, '#', ''] },
+            { replace: [%r{^# baseurl.*/AppStream.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/AppStream/$basearch/os/'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
+
+      filter_lines '/etc/yum.repos.d/almalinux-extras.repo' do
+        filters(
+          [
+            { comment: [%r{^mirrorlist.*/extras$}, '#', ''] },
+            { replace: [%r{^# baseurl.*/extras.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/extras/$basearch/os/'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
+
+      filter_lines '/etc/yum.repos.d/almalinux-crb.repo' do
+        filters(
+          [
+            { comment: [%r{^mirrorlist.*/crb$}, '#', ''] },
+            { replace: [%r{^# baseurl.*/CRB.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/CRB/$basearch/os/'] },
+            { replace: [/^enabled=0$/, 'enabled=1'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
     end
 
     filter_lines '/etc/yum.repos.d/almalinux-ha.repo' do
@@ -206,7 +254,7 @@ if platform_family?('rhel', 'fedora')
     end
 
     execute 'import epel key' do
-      command 'rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8'
+      command "rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-#{node['platform_version'].to_i}"
       action :nothing
     end
 
@@ -215,7 +263,7 @@ if platform_family?('rhel', 'fedora')
         [
           { comment: [/^metalink.*repo=epel-\$releasever.*/, '#', ''] },
           { replace: [
-              /^#baseurl=.*basearch$/,
+              %r{^#baseurl=.*basearch/?$},
               'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
             ],
           },

@@ -300,6 +300,21 @@ module OslUnmanaged
           '/etc/mdadm/mdadm.conf'
         end
       end
+
+      def fail2ban_pkgs
+        case node['platform_family']
+        when 'fedora'
+          %w(fail2ban iptables-legacy)
+        when 'rhel'
+          if node['platform_version'].to_i >= 9
+            %w(fail2ban iptables-legacy)
+          else
+            %w(fail2ban iptables)
+          end
+        else
+          %w(fail2ban iptables)
+        end
+      end
     end
   end
 end

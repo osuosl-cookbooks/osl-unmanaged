@@ -19,6 +19,10 @@ control 'raid' do
       its('content') { should match /^MAILADDR mdadm@osuosl.org$/ }
     end
 
+    describe file '/usr/bin/megacli' do
+      it { should_not exist }
+    end
+
     case os_family
     when 'redhat', 'fedora'
       describe service 'mdmonitor-oneshot.timer' do
