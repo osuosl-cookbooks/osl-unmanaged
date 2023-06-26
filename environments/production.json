@@ -30,7 +30,7 @@
     "database": "= 4.0.6",
     "dhcp": "= 8.1.5",
     "dnf-automatic": "= 2.0.4",
-    "dobc": "= 2.2.0",
+    "dobc": "= 3.0.0",
     "docker": "= 11.1.0",
     "fail2ban": "= 7.0.0",
     "firewall": "= 7.2.0",
