@@ -190,6 +190,9 @@ checkout = git clone git@github.com:osuosl-cookbooks/osl-repos.git
 [osuosl-cookbooks/osl-resources]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-resources.git
 
+[osuosl-cookbooks/osl-rt]
+checkout = git clone git@github.com:osuosl-cookbooks/osl-rt.git
+
 [osuosl-cookbooks/osl-rsync]
 checkout = git clone git@github.com:osuosl-cookbooks/osl-rsync.git
 
