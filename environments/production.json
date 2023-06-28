@@ -75,7 +75,7 @@
     "openvpn": "= 6.1.0",
     "osl-acme": "= 4.2.1",
     "osl-admin": "= 1.7.0",
-    "osl-apache": "= 8.0.0",
+    "osl-apache": "= 8.0.1",
     "osl-app": "= 4.4.1",
     "osl-backup": "= 2.2.7",
     "osl-ceph": "= 4.7.1",
