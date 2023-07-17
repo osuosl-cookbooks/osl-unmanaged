@@ -83,7 +83,7 @@
     "osl-php": "= 6.4.3",
     "osl-postfix": "= 2.2.1",
     "osl-postgresql": "= 5.2.0",
-    "osl-prometheus": "= 3.2.7",
+    "osl-prometheus": "= 3.2.8",
     "osl-repos": "= 4.2.1",
     "osl-resources": "= 1.7.0",
     "osl-rsync": "= 4.2.1",
