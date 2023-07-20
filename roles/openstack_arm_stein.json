@@ -145,7 +145,6 @@
         {
           "name": "public7",
           "subnet": "140.211.11.0/24",
-          "uuid": "",
           "controller": {
             "default": "eth5"
           },
