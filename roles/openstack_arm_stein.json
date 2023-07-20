@@ -141,6 +141,17 @@
           "compute": {
             "default": "enp1s0.117"
           }
+        },
+        {
+          "name": "public7",
+          "subnet": "140.211.11.0/24",
+          "uuid": "",
+          "controller": {
+            "default": "eth5"
+          },
+          "compute": {
+            "default": "enp1s0.105"
+          }
         }
       ]
     },
