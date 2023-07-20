@@ -144,6 +144,8 @@
         },
         {
           "name": "public7",
+          "subnet": "140.211.11.0/24",
+          "uuid": "e864edaf-76cb-4f77-b7c7-56570459178c",
           "controller": {
             "default": "eth5"
           },
