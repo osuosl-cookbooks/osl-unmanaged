@@ -144,7 +144,6 @@
         },
         {
           "name": "public7",
-          "subnet": "140.211.11.0/24",
           "controller": {
             "default": "eth5"
           },
