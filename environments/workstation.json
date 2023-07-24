@@ -24,7 +24,7 @@
     "openldap": "= 6.0.1",
     "openssh": "= 2.9.2",
     "osl-acme": "= 4.2.1",
-    "osl-docker": "= 4.9.0",
+    "osl-docker": "= 4.10.0",
     "osl-fail2ban": "= 3.1.1",
     "osl-ldap": "= 1.6.0",
     "osl-postfix": "= 2.2.1",
