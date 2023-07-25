@@ -104,7 +104,7 @@
     "osl-netboot": "= 3.4.7",
     "osl-nextcloud": "= 2.0.1",
     "osl-nfs": "= 2.1.1",
-    "osl-nginx": "= 6.6.0",
+    "osl-nginx": "= 6.6.1",
     "osl-nodejs": "= 2.0.1",
     "osl-nodes": "= 2.14.0",
     "osl-nrpe": "= 6.4.1",
