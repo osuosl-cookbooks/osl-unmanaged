@@ -103,7 +103,7 @@
     "osl-mysql": "= 6.9.1",
     "osl-nagios": "= 3.11.0",
     "osl-netboot": "= 3.4.7",
-    "osl-nextcloud": "= 2.0.1",
+    "osl-nextcloud": "= 2.0.2",
     "osl-nfs": "= 2.1.1",
     "osl-nginx": "= 6.6.1",
     "osl-nodejs": "= 2.0.1",
