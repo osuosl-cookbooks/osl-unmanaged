@@ -36,7 +36,7 @@
     "firewall": "= 7.2.0",
     "ganeti": "= 5.0.0",
     "git": "= 11.0.1",
-    "gitlab-ci-runner": "= 3.3.0",
+    "gitlab-ci-runner": "= 3.4.0",
     "gitlab_omnibus": "= 2.0.0",
     "glusterfs": "= 0.1.1",
     "gpg": "= 2.0.2",
