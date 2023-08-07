@@ -90,7 +90,7 @@
     "osl-gitlab": "= 2.5.4",
     "osl-gpu": "= 1.1.0",
     "osl-grafana": "= 3.0.5",
-    "osl-haproxy": "= 6.4.10",
+    "osl-haproxy": "= 6.4.11",
     "osl-imap": "= 2.0.3",
     "osl-jenkins": "= 2.16.3",
     "osl-keepalived": "= 2.4.1",
