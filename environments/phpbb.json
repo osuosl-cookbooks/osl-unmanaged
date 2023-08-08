@@ -50,7 +50,7 @@
     "osl-memcached": "= 3.2.0",
     "osl-mysql": "= 6.9.1",
     "osl-php": "= 6.4.3",
-    "osl-postfix": "= 2.2.1",
+    "osl-postfix": "= 2.2.2",
     "osl-postgresql": "= 5.2.0",
     "osl-prometheus": "= 3.2.10",
     "osl-repos": "= 4.2.1",
