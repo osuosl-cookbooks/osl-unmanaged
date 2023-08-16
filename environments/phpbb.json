@@ -57,7 +57,7 @@
     "osl-resources": "= 1.7.1",
     "osl-scponly": "= 1.5.1",
     "osl-selinux": "= 2.1.2",
-    "osl-syslog": "= 4.1.3",
+    "osl-syslog": "= 4.2.0",
     "percona": "= 3.4.1",
     "php": "= 9.1.0",
     "postfix": "= 5.4.1",
