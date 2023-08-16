@@ -80,7 +80,7 @@
     "osl-backup": "= 2.2.7",
     "osl-ceph": "= 4.7.1",
     "osl-dhcp": "= 3.5.0",
-    "osl-dns": "= 6.1.0",
+    "osl-dns": "= 6.1.1",
     "osl-docker": "= 4.11.0",
     "osl-drupal": "= 0.2.2",
     "osl-fail2ban": "= 3.1.1",
