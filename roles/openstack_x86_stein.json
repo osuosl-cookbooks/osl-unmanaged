@@ -51,6 +51,9 @@
           "DEFAULT": {
             "cpu_allocation_ratio": "64.0",
             "ram_allocation_ratio": "1"
+          },
+          "libvirt": {
+            "cpu_model_extra_flags": "VMX"
           }
         }
       },
