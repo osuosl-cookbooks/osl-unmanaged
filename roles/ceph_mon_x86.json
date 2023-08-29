@@ -1,8 +1,8 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[osl-ceph::mon]",
-    "recipe[ceph-chef::bootstrap_osd_key]"
+    "role[ceph_x86]",
+    "recipe[osl-ceph::mon]"
   ],
   "chef_type": "role",
   "override_attributes": {},

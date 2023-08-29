@@ -1,6 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "role[ceph_ppc64]",
     "recipe[osl-ceph::osd]"
   ],
   "chef_type": "role",

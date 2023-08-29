@@ -1,42 +1,14 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "recipe[osl-ceph]",
+    "role[ceph_x86_client]",
     "recipe[osl-ceph::monitoring]"
   ],
   "chef_type": "role",
   "override_attributes": {},
   "default_attributes": {
-    "ceph": {
-      "admin": {
-        "tag": "ceph-admin-x86"
-      },
-      "mds": {
-        "role": "ceph_mds_x86",
-        "tag": "ceph-mds-x86"
-      },
-      "mon": {
-        "role": "ceph_mon_x86",
-        "tag": "ceph-mon-x86"
-      },
-      "osd": {
-        "role": "ceph_osd_x86",
-        "tag": "ceph-osd-x86"
-      },
-      "network": {
-        "public": {
-          "cidr": [
-            "10.1.0.0/23",
-            "10.1.2.0/23"
-          ]
-        },
-        "cluster": {
-          "cidr": [
-            "10.1.0.0/23",
-            "10.1.2.0/23"
-          ]
-        }
-      }
+    "osl-ceph": {
+      "data_bag_item": "cluster_x86"
     }
   },
   "json_class": "Chef::Role",

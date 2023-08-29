@@ -6,35 +6,27 @@
   "chef_type": "role",
   "override_attributes": {},
   "default_attributes": {
-    "ceph": {
-      "admin": {
-        "tag": "ceph-admin-x86"
-      },
-      "mds": {
-        "role": "ceph_mds_x86",
-        "tag": "ceph-mds-x86"
-      },
-      "mon": {
-        "role": "ceph_mon_x86",
-        "tag": "ceph-mon-x86"
-      },
-      "osd": {
-        "role": "ceph_osd_x86",
-        "tag": "ceph-osd-x86"
-      },
-      "network": {
-        "public": {
-          "cidr": [
-            "10.1.0.0/23",
-            "10.1.2.0/23"
-          ]
-        },
-        "cluster": {
-          "cidr": [
-            "10.1.0.0/23",
-            "10.1.2.0/23"
-          ]
-        }
+    "osl-ceph": {
+      "config": {
+        "fsid": "8c4c4cff-88c6-4452-86b3-5fdb857a2dad",
+        "mon_initial_members": [
+          "fs-mon1",
+          "fs-mon2",
+          "fs-mon3"
+        ],
+        "mon_host": [
+          "10.1.0.103",
+          "10.1.0.175",
+          "10.1.0.198"
+        ],
+        "public_network": [
+          "10.1.0.0/23",
+          "10.1.2.0/23"
+        ],
+        "cluster_network": [
+          "10.1.0.0/23",
+          "10.1.2.0/23"
+        ]
       }
     }
   },
