@@ -1,7 +1,7 @@
 {
   "env_run_lists": {},
   "run_list": [
-    "role[ceph_pp64_client]",
+    "role[ceph_ppc64_client]",
     "recipe[osl-ceph::monitoring]"
   ],
   "chef_type": "role",
