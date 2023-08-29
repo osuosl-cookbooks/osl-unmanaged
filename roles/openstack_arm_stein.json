@@ -1,37 +1,11 @@
 {
   "env_run_lists": {},
   "run_list": [
+    "role[ceph_x86_client]",
     "recipe[osl-openstack]"
   ],
   "chef_type": "role",
   "override_attributes": {
-    "ceph": {
-      "admin": {
-        "tag": "ceph-admin-x86"
-      },
-      "mon": {
-        "role": "ceph_mon_x86",
-        "tag": "ceph-mon-x86"
-      },
-      "osd": {
-        "role": "ceph_osd_x86",
-        "tag": "ceph-osd-x86"
-      },
-      "network": {
-        "public": {
-          "cidr": [
-            "10.1.0.0/23",
-            "10.1.2.0/23"
-          ]
-        },
-        "cluster": {
-          "cidr": [
-            "10.1.0.0/23",
-            "10.1.2.0/23"
-          ]
-        }
-      }
-    },
     "openstack": {
       "mq": {
         "user": "admin"
