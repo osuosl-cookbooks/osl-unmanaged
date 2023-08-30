@@ -6,7 +6,7 @@
     "apt": "= 7.3.0",
     "apt-osuosl": "= 2.1.1",
     "ark": "= 6.0.3",
-    "base": "= 9.4.0",
+    "base": "= 9.4.1",
     "build-essential": "= 8.2.1",
     "ceph-chef": "= 4.0.0",
     "certificate": "= 2.0.4",
