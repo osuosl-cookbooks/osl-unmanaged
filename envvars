@@ -1,0 +1,4 @@
+cookbook=osl-unmanaged
+version=2.3.0
+envs=~
+pr_link=https://github.com/osuosl-cookbooks/osl-unmanaged/pull/7
