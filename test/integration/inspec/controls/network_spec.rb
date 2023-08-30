@@ -1,4 +1,5 @@
 platform = os.name
+release = os.release.to_i
 cleanup = input('cleanup')
 docker = inspec.command('test -e /.dockerenv')
 resolved = inspec.command('test -e /etc/systemd/resolved.conf')
@@ -91,8 +92,14 @@ control 'network' do
       it { should_not be_listening }
     end
   when 'centos', 'almalinux', 'fedora'
-    describe package 'dhcp-client' do
-      it { should be_installed }
+    if release >= 8
+      describe package 'dhcp-client' do
+        it { should be_installed }
+      end
+    else
+      describe package 'dhclient' do
+        it { should be_installed }
+      end
     end
 
     describe ini '/etc/NetworkManager/NetworkManager.conf' do

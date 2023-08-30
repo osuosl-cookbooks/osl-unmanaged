@@ -1,11 +1,28 @@
 platform = os.name
 family = os.family
+release = os.release
 arch = os.arch
 release = os.release.to_i
 codename = inspec.command('lsb_release -cs').stdout.strip
 packer = input('packer')
 docker = inspec.command('test -e /.dockerenv')
 sources_list = inspec.file('/etc/apt/sources.list').exist?
+power9 = inspec.command('lscpu').stdout.match(/POWER9/)
+
+base_arch =
+  if power9
+    'power9'
+  else
+    arch
+  end
+
+centos7_url =
+  case arch
+  when 'aarch64', 'ppc64le'
+    'https://centos-altarch.osuosl.org'
+  else
+    'https://centos.osuosl.org'
+  end
 
 control 'repos' do
   describe service 'osuosl-firstboot.service' do
@@ -22,7 +39,11 @@ control 'repos' do
         should match /systemctl enable --now unattended-upgrades.service apt-daily-upgrade.timer apt-daily-upgrade.service/
       end
     when 'redhat', 'fedora'
-      its('content') { should match /systemctl enable --now dnf-automatic-install.timer/ }
+      if release.to_i >= 8
+        its('content') { should match /systemctl enable --now dnf-automatic-install.timer/ }
+      else
+        its('content') { should match /systemctl enable --now yum-cron.service/ }
+      end
     end
   end
 
@@ -56,13 +77,24 @@ control 'repos' do
       end
     end
   when 'redhat', 'fedora'
-    describe package 'dnf-automatic' do
-      it { should be_installed }
-    end
+    if release.to_i >= 8
+      describe package 'dnf-automatic' do
+        it { should be_installed }
+      end
 
-    describe service 'dnf-automatic-install.timer' do
-      it { should be_enabled }
-      it { should_not be_running }
+      describe service 'dnf-automatic-install.timer' do
+        it { should be_enabled }
+        it { should_not be_running }
+      end
+    else
+      describe package 'yum-cron' do
+        it { should be_installed }
+      end
+
+      describe service 'yum-cron' do
+        it { should be_enabled }
+        it { should_not be_running }
+      end
     end
   end
 
@@ -98,40 +130,67 @@ control 'repos' do
       end
     end
   when 'centos'
-    describe yum.repo 'appstream' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/AppStream/#{arch}/os/" }
-    end
+    case release.to_i
+    when 7
+      describe yum.repo 'base' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "#{centos7_url}/7/os/#{base_arch}/" }
+      end
 
-    describe yum.repo 'baseos' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/BaseOS/#{arch}/os/" }
-    end
+      describe yum.repo 'epel' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://epel.osuosl.org/7/#{arch}/" }
+      end
 
-    describe yum.repo 'epel' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://epel.osuosl.org/8/Everything/#{arch}/" }
-    end
+      describe yum.repo 'extras' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "#{centos7_url}/7/extras/#{base_arch}/" }
+      end
 
-    describe yum.repo 'epel-next' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://epel.osuosl.org/next/8/Everything/#{arch}/" }
-    end
+      describe yum.repo 'updates' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "#{centos7_url}/7/updates/#{base_arch}/" }
+      end
+    when 8
+      describe yum.repo 'appstream' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/AppStream/#{arch}/os/" }
+      end
 
-    describe yum.repo 'extras' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/extras/#{arch}/os/" }
-    end
+      describe yum.repo 'baseos' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/BaseOS/#{arch}/os/" }
+      end
 
-    describe yum.repo 'powertools' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/PowerTools/#{arch}/os/" }
+      describe yum.repo 'epel' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://epel.osuosl.org/8/Everything/#{arch}/" }
+      end
+
+      describe yum.repo 'epel-next' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://epel.osuosl.org/next/8/Everything/#{arch}/" }
+      end
+
+      describe yum.repo 'extras' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/extras/#{arch}/os/" }
+      end
+
+      describe yum.repo 'powertools' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/PowerTools/#{arch}/os/" }
+      end
     end
   when 'almalinux'
     describe yum.repo 'appstream' do

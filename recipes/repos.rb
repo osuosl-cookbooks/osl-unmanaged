@@ -16,7 +16,51 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 if platform_family?('rhel', 'fedora')
-  if centos_stream_platform?
+  if centos? && node['platform_version'].to_i == 7
+    filter_lines '/etc/yum.repos.d/CentOS-Base.repo' do
+      filters(
+        [
+          { comment: [%r{http://centos.osuosl.org}, '#', ''] },
+          { comment: [/^mirrorlist.*repo=os.*/, '#', ''] },
+          { replace: [%r{^#baseurl=.*/os/}, "baseurl=#{centos_url}/$releasever/os/#{base_arch}/"] },
+          { comment: [/^mirrorlist.*repo=updates.*/, '#', ''] },
+          { replace: [%r{^#baseurl=.*/updates/}, "baseurl=#{centos_url}/$releasever/updates/#{base_arch}/"] },
+          { comment: [/^mirrorlist.*repo=extras.*/, '#', ''] },
+          { replace: [%r{^#baseurl=.*/extras/}, "baseurl=#{centos_url}/$releasever/extras/#{base_arch}/"] },
+        ]
+      )
+      sensitive false
+      notifies :run, 'execute[yum makecache]', :immediately
+    end
+
+    execute 'yum makecache' do
+      action :nothing
+    end
+
+    package 'epel-release' do
+      notifies :run, 'execute[import epel key]', :immediately
+    end
+
+    execute 'import epel key' do
+      command 'rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7'
+      action :nothing
+    end
+
+    filter_lines '/etc/yum.repos.d/epel.repo' do
+      filters(
+        [
+          { comment: [/^metalink.*repo=epel-\$releasever.*/, '#', ''] },
+          { replace: [
+              /^#baseurl=.*basearch$/,
+              'baseurl=https://epel.osuosl.org/$releasever/$basearch/',
+            ],
+          },
+        ]
+      )
+      sensitive false
+      notifies :run, 'execute[yum makecache]', :immediately
+    end
+  elsif centos_stream_platform?
     filter_lines '/etc/yum.repos.d/CentOS-Stream-AppStream.repo' do
       filters(
         [
@@ -274,13 +318,25 @@ if platform_family?('rhel', 'fedora')
     end
   end
 
-  package 'dnf-automatic'
+  if node['platform_version'].to_i >= 8
+    package 'dnf-automatic'
 
-  service 'dnf-automatic-install.timer' do
-    if node['osl-unmanaged']['packer']
-      action [:disable, :stop]
-    else
-      action [:enable, :stop]
+    service 'dnf-automatic-install.timer' do
+      if node['osl-unmanaged']['packer']
+        action [:disable, :stop]
+      else
+        action [:enable, :stop]
+      end
+    end
+  else
+    package 'yum-cron'
+
+    service 'yum-cron' do
+      if node['osl-unmanaged']['packer']
+        action [:disable, :stop]
+      else
+        action [:enable, :stop]
+      end
     end
   end
 elsif platform_family?('debian')
