@@ -23,4 +23,4 @@ include_recipe 'osl-unmanaged::chrony'
 include_recipe 'osl-unmanaged::postfix'
 include_recipe 'osl-unmanaged::fail2ban'
 include_recipe 'osl-unmanaged::raid'
-include_recipe 'osl-unmanaged::rsct' if node['osl-unmanaged']['rsct']
+include_recipe 'osl-unmanaged::rsct' if rsct_enabled
