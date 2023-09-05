@@ -39,6 +39,7 @@ suites:
         - chrony
         - fail2ban
         - osuadmin
+        - packages
         - postfix
         - raid
         - repos
@@ -57,6 +58,7 @@ suites:
         - fail2ban
         - network
         - osuadmin
+        - packages
         - postfix
         - raid
         - repos
@@ -119,6 +121,12 @@ suites:
     verifier:
       controls:
         - osuadmin
+  - name: packages
+    run_list:
+      - recipe[osl-unmanaged::packages]
+    verifier:
+      controls:
+        - packages
   - name: postfix
     run_list:
       - recipe[osl-unmanaged::postfix]
