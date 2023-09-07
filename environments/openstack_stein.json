@@ -67,7 +67,7 @@
     "openvpn": "= 6.1.0",
     "osl-apache": "= 7.6.0",
     "osl-backup": "= 2.2.7",
-    "osl-ceph": "= 6.0.0",
+    "osl-ceph": "= 6.0.1",
     "osl-docker": "= 4.11.0",
     "osl-fail2ban": "= 3.1.1",
     "osl-firewall": "= 1.12.2",
