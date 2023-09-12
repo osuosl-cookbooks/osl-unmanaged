@@ -95,11 +95,15 @@ module OslUnmanaged
 
       def openstack_grub_cmdline
         if platform_family?('rhel', 'fedora')
-          case node['kernel']['machine']
-          when 'ppc64le'
-            'GRUB_CMDLINE_LINUX="console=hvc0,115200n8 console=tty0 crashkernel=auto rhgb quiet"'
+          if node['platform_version'].to_i >= 9
+            'GRUB_CMDLINE_LINUX="console=ttyS0,115200n8 console=tty0 no_timer_check"'
           else
-            'GRUB_CMDLINE_LINUX="console=ttyS0,115200n8 console=tty0 crashkernel=auto rhgb quiet"'
+            case node['kernel']['machine']
+            when 'ppc64le'
+              'GRUB_CMDLINE_LINUX="console=hvc0,115200n8 console=tty0 crashkernel=auto rhgb quiet"'
+            else
+              'GRUB_CMDLINE_LINUX="console=ttyS0,115200n8 console=tty0 crashkernel=auto rhgb quiet"'
+            end
           end
         else
           case node['kernel']['machine']
@@ -345,6 +349,14 @@ module OslUnmanaged
           'power9'
         else
           '$basearch'
+        end
+      end
+
+      def rsct_enabled
+        if node['cpu']['model_name']
+          node['cpu']['model_name'].match(/POWER10/)
+        else
+          false
         end
       end
     end
