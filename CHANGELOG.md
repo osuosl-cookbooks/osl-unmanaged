@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the osl-unmanaged cookbook.
 
+2.5.0 (2023-09-12)
+------------------
+- AlmaLinux 9
+
 2.4.0 (2023-08-30)
 ------------------
 - CentOS 7
