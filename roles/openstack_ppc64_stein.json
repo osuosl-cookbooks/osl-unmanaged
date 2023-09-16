@@ -105,11 +105,38 @@
         }
       },
       "external_networks": [
+        "backend",
         "public",
         "public3",
-        "public6"
+        "public6",
+        "public7"
       ],
       "physical_interface_mappings": [
+        {
+          "name": "backend",
+          "subnet": "10.1.104.0/22",
+          "controller": {
+            "default": "eth6"
+          },
+          "compute": {
+            "default": "enP4p1s0.44",
+            "openpower4.osuosl.bak": "enP48p1s0f0.44",
+            "openpower7.osuosl.bak": "enP48p1s0f0.44",
+            "openpower9.osuosl.bak": "enP48p1s0f0.44",
+            "openpower10.osuosl.bak": "enP48p1s0f0.44",
+            "openpower11.osuosl.bak": "enp1s0f2.44",
+            "openpower12.osuosl.bak": "enp1s0f2.44",
+            "oph1.osuosl.bak": "enp1s0f1.44",
+            "oph2.osuosl.bak": "enp1s0f1.44",
+            "oph3.osuosl.bak": "enp1s0f1.44",
+            "oph4.osuosl.bak": "enp1s0f0.44",
+            "oph5.osuosl.bak": "enp1s0f0.44",
+            "oph6.osuosl.bak": "enp1s0f0.44",
+            "oph7.osuosl.bak": "ens7f0.44",
+            "oph10.osuosl.bak": "ens7f1.44",
+            "oph-oc-builder1.osuosl.bak": "em1.44"
+          }
+        },
         {
           "name": "public",
           "subnet": "140.211.168.0/24",
@@ -186,6 +213,31 @@
             "oph7.osuosl.bak": "ens7f0.116",
             "oph10.osuosl.bak": "ens7f1.116",
             "oph-oc-builder1.osuosl.bak": "em1.116"
+          }
+        },
+        {
+          "name": "public7",
+          "subnet": "140.211.11.0/24",
+          "controller": {
+            "default": "eth7"
+          },
+          "compute": {
+            "default": "enP4p1s0.105",
+            "openpower4.osuosl.bak": "enP48p1s0f0.105",
+            "openpower7.osuosl.bak": "enP48p1s0f0.105",
+            "openpower9.osuosl.bak": "enP48p1s0f0.105",
+            "openpower10.osuosl.bak": "enP48p1s0f0.105",
+            "openpower11.osuosl.bak": "enp1s0f2.105",
+            "openpower12.osuosl.bak": "enp1s0f2.105",
+            "oph1.osuosl.bak": "enp1s0f1.105",
+            "oph2.osuosl.bak": "enp1s0f1.105",
+            "oph3.osuosl.bak": "enp1s0f1.105",
+            "oph4.osuosl.bak": "enp1s0f0.105",
+            "oph5.osuosl.bak": "enp1s0f0.105",
+            "oph6.osuosl.bak": "enp1s0f0.105",
+            "oph7.osuosl.bak": "ens7f0.105",
+            "oph10.osuosl.bak": "ens7f1.105",
+            "oph-oc-builder1.osuosl.bak": "em1.105"
           }
         },
         {
