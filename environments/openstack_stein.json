@@ -33,7 +33,7 @@
     "inifile_chef_gem": "= 0.1.0",
     "iptables": "= 8.0.0",
     "iptables-ng": "= 4.0.0",
-    "java": "= 11.0.1",
+    "java": "= 11.2.2",
     "jenkins": "= 9.5.1",
     "line": "= 4.3.0",
     "logrotate": "= 3.0.6",
