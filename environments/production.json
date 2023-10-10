@@ -77,7 +77,7 @@
     "osl-admin": "= 1.7.0",
     "osl-apache": "= 8.0.1",
     "osl-app": "= 4.5.0",
-    "osl-backup": "= 2.2.7",
+    "osl-backup": "= 2.2.8",
     "osl-ceph": "= 6.1.0",
     "osl-dhcp": "= 3.5.1",
     "osl-dns": "= 6.1.6",
