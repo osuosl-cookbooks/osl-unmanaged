@@ -3,7 +3,7 @@
   "description": "The production environment",
   "cookbook_versions": {
     "acme": "= 4.1.5",
-    "apache2": "= 9.0.1",
+    "apache2": "= 9.0.6",
     "apparmor": "= 4.1.0",
     "apt": "= 7.3.0",
     "ark": "= 6.0.3",
