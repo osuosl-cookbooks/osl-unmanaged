@@ -40,7 +40,7 @@
     "ondrej_ppa_ubuntu": "= 0.1.0",
     "openldap": "= 6.0.1",
     "osl-acme": "= 4.2.1",
-    "osl-apache": "= 8.0.1",
+    "osl-apache": "= 8.0.2",
     "osl-fail2ban": "= 3.1.1",
     "osl-haproxy": "= 6.4.14",
     "osl-imap": "= 2.0.3",
