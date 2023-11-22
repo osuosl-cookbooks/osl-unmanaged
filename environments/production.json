@@ -100,7 +100,7 @@
     "osl-memcached": "= 3.3.0",
     "osl-mattermost": "= 1.0.1",
     "osl-mirror": "= 4.2.3",
-    "osl-mysql": "= 6.9.2",
+    "osl-mysql": "= 6.9.3",
     "osl-nagios": "= 3.11.2",
     "osl-netboot": "= 3.4.7",
     "osl-nextcloud": "= 2.0.2",

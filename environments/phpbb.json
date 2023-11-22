@@ -49,7 +49,7 @@
     "osl-nagios": "= 3.11.2",
     "osl-nodes": "= 2.16.2",
     "osl-memcached": "= 3.3.0",
-    "osl-mysql": "= 6.9.2",
+    "osl-mysql": "= 6.9.3",
     "osl-php": "= 6.4.3",
     "osl-postfix": "= 2.2.2",
     "osl-postgresql": "= 5.2.0",
