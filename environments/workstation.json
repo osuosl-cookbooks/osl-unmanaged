@@ -2,7 +2,7 @@
   "name": "workstation",
   "description": "workstation environment",
   "cookbook_versions": {
-    "acme": "= 4.1.5",
+    "acme": "= 4.1.6",
     "apt": "= 7.3.0",
     "apt-osuosl": "= 2.1.2",
     "ark": "= 6.0.3",
