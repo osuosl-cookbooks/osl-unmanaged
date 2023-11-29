@@ -87,7 +87,7 @@
     "osl-firewall": "= 1.12.2",
     "osl-ganeti": "= 3.5.8",
     "osl-git": "= 1.10.2",
-    "osl-gitlab": "= 2.5.7",
+    "osl-gitlab": "= 2.6.0",
     "osl-gpu": "= 1.1.0",
     "osl-grafana": "= 3.0.6",
     "osl-haproxy": "= 6.4.14",
