@@ -117,6 +117,7 @@
     "osl-repos": "= 4.4.0",
     "osl-resources": "= 1.7.1",
     "osl-rsync": "= 4.2.1",
+    "osl-rt": "= 1.0.0",
     "osl-scponly": "= 1.5.1",
     "osl-selinux": "= 2.1.2",
     "osl-slapd": "= 1.1.1",
