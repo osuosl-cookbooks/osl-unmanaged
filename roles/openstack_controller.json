@@ -6,18 +6,14 @@
     "json_class": "Chef::Role",
     "name": "openstack_controller",
     "override_attributes": {
-        "authorization": {
-            "sudo": {
-                "include_sudoers_d": true
-            }
-        },
         "osl-openstack": {
           "node_type": "controller"
         }
     },
     "run_list": [
+        "recipe[osl-openstack::ops_messaging]",
         "recipe[osl-openstack::controller]",
-        "recipe[osl-prometheus::memcached]",
+        "recipe[osl-openstack::block_storage]",
         "role[apache]"
     ]
 }

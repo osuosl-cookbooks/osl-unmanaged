@@ -1,0 +1,22 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[ceph_ppc64_client]",
+    "recipe[osl-ceph]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "base": {
+      "ifconfig": {
+        "network_manager": false
+      }
+    },
+    "osl-openstack": {
+      "databag_item": "ppc64"
+    }
+   },
+  "json_class": "Chef::Role",
+  "description": "Openstack ppc64 Role",
+  "name": "openstack_ppc64"
+}
