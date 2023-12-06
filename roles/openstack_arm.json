@@ -1,0 +1,22 @@
+{
+  "env_run_lists": {},
+  "run_list": [
+    "role[ceph_x86_client]",
+    "recipe[osl-ceph]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {},
+  "default_attributes": {
+    "base": {
+      "ifconfig": {
+        "network_manager": false
+      }
+    },
+    "osl-openstack": {
+      "databag_item": "arm"
+    }
+   },
+  "json_class": "Chef::Role",
+  "description": "Openstack arm Role",
+  "name": "openstack_arm"
+}
