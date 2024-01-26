@@ -191,6 +191,36 @@ control 'repos' do
         it { should be_enabled }
         its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/PowerTools/#{arch}/os/" }
       end
+    when 9
+      describe yum.repo 'appstream' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://centos-stream.osuosl.org/9-stream/AppStream/#{arch}/os/" }
+      end
+
+      describe yum.repo 'baseos' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://centos-stream.osuosl.org/9-stream/BaseOS/#{arch}/os/" }
+      end
+
+      describe yum.repo 'epel' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://epel.osuosl.org/9/Everything/#{arch}/" }
+      end
+
+      describe yum.repo 'epel-next' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://epel.osuosl.org/next/9/Everything/#{arch}/" }
+      end
+
+      describe yum.repo 'extras-common' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://centos-stream.osuosl.org/SIGs/9-stream/extras/#{arch}/extras-common/" }
+      end
     end
   when 'almalinux'
     describe yum.repo 'appstream' do

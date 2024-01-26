@@ -2,7 +2,7 @@
 # Cookbook:: osl-unmanaged
 # Recipe:: repos
 #
-# Copyright:: 2022-2023, Oregon State University
+# Copyright:: 2022-2024, Oregon State University
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -61,81 +61,120 @@ if platform_family?('rhel', 'fedora')
       notifies :run, 'execute[yum makecache]', :immediately
     end
   elsif centos_stream_platform?
-    filter_lines '/etc/yum.repos.d/CentOS-Stream-AppStream.repo' do
-      filters(
-        [
-          { comment: [/^mirrorlist.*/, '#', ''] },
-          { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/AppStream/$basearch/os/'] },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[dnf makecache]', :immediately
-    end
+    case node['platform_version'].to_i
+    when 8
+      filter_lines '/etc/yum.repos.d/CentOS-Stream-AppStream.repo' do
+        filters(
+          [
+            { comment: [/^mirrorlist.*/, '#', ''] },
+            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/AppStream/$basearch/os/'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
 
-    filter_lines '/etc/yum.repos.d/CentOS-Stream-BaseOS.repo' do
-      filters(
-        [
-          { comment: [/^mirrorlist.*/, '#', ''] },
-          { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/BaseOS/$basearch/os/'] },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[dnf makecache]', :immediately
-    end
+      filter_lines '/etc/yum.repos.d/CentOS-Stream-BaseOS.repo' do
+        filters(
+          [
+            { comment: [/^mirrorlist.*/, '#', ''] },
+            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/BaseOS/$basearch/os/'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
 
-    filter_lines '/etc/yum.repos.d/CentOS-Stream-Extras.repo' do
-      filters(
-        [
-          { comment: [/^mirrorlist.*/, '#', ''] },
-          { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/extras/$basearch/os/'] },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[dnf makecache]', :immediately
-    end
+      filter_lines '/etc/yum.repos.d/CentOS-Stream-Extras.repo' do
+        filters(
+          [
+            { comment: [/^mirrorlist.*/, '#', ''] },
+            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/extras/$basearch/os/'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
 
-    filter_lines '/etc/yum.repos.d/CentOS-Stream-HighAvailability.repo' do
-      filters(
-        [
-          { comment: [/^mirrorlist.*/, '#', ''] },
-          { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/HighAvailability/$basearch/os/'] },
-        ]
-      )
-      notifies :run, 'execute[dnf makecache]', :immediately
-    end
+      filter_lines '/etc/yum.repos.d/CentOS-Stream-HighAvailability.repo' do
+        filters(
+          [
+            { comment: [/^mirrorlist.*/, '#', ''] },
+            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/HighAvailability/$basearch/os/'] },
+          ]
+        )
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
 
-    filter_lines '/etc/yum.repos.d/CentOS-Stream-PowerTools.repo' do
-      filters(
-        [
-          { comment: [/^mirrorlist.*/, '#', ''] },
-          { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/PowerTools/$basearch/os/'] },
-          { replace: [/^enabled=0$/, 'enabled=1'] },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[dnf makecache]', :immediately
-    end
+      filter_lines '/etc/yum.repos.d/CentOS-Stream-PowerTools.repo' do
+        filters(
+          [
+            { comment: [/^mirrorlist.*/, '#', ''] },
+            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/PowerTools/$basearch/os/'] },
+            { replace: [/^enabled=0$/, 'enabled=1'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
 
-    filter_lines '/etc/yum.repos.d/CentOS-Stream-RealTime.repo' do
-      filters(
-        [
-          { comment: [/^mirrorlist.*/, '#', ''] },
-          { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/RT/$basearch/os/'] },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[dnf makecache]', :immediately
-    end
+      filter_lines '/etc/yum.repos.d/CentOS-Stream-RealTime.repo' do
+        filters(
+          [
+            { comment: [/^mirrorlist.*/, '#', ''] },
+            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/RT/$basearch/os/'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
 
-    filter_lines '/etc/yum.repos.d/CentOS-Stream-ResilientStorage.repo' do
-      filters(
-        [
-          { comment: [/^mirrorlist.*/, '#', ''] },
-          { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/ResilientStorage/$basearch/os/'] },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[dnf makecache]', :immediately
+      filter_lines '/etc/yum.repos.d/CentOS-Stream-ResilientStorage.repo' do
+        filters(
+          [
+            { comment: [/^mirrorlist.*/, '#', ''] },
+            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/ResilientStorage/$basearch/os/'] },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
+    when 9
+      filter_lines '/etc/yum.repos.d/centos.repo' do
+        filters(
+          [
+            {
+              replace: [
+                /^metalink.*repo=centos-baseos-\$stream/,
+                'baseurl=https://centos-stream.osuosl.org/$stream/BaseOS/$basearch/os/',
+              ],
+            },
+            {
+              replace: [
+                /^metalink.*repo=centos-appstream-\$stream/,
+                'baseurl=https://centos-stream.osuosl.org/$stream/AppStream/$basearch/os/',
+              ],
+            },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
+
+      filter_lines '/etc/yum.repos.d/centos-addons.repo' do
+        filters(
+          [
+            {
+              replace: [
+                /^metalink.*repo=centos-extras-sig-extras-common-\$stream/,
+                'baseurl=https://centos-stream.osuosl.org/SIGs/$stream/extras/$basearch/extras-common/',
+              ],
+            },
+          ]
+        )
+        sensitive false
+        notifies :run, 'execute[dnf makecache]', :immediately
+      end
     end
 
     execute 'dnf makecache' do
@@ -147,7 +186,7 @@ if platform_family?('rhel', 'fedora')
     end
 
     execute 'import epel key' do
-      command 'rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8'
+      command "rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-#{node['platform_version'].to_i}"
       action :nothing
     end
 
@@ -156,7 +195,7 @@ if platform_family?('rhel', 'fedora')
         [
           { comment: [/^metalink.*repo=epel-\$releasever.*/, '#', ''] },
           { replace: [
-              /^#baseurl=.*basearch$/,
+              %r{^#baseurl=.*basearch/?$},
               'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
             ],
           },
@@ -170,6 +209,7 @@ if platform_family?('rhel', 'fedora')
       filters(
         [
           { comment: [/^metalink.*repo=epel-next-8.*/, '#', ''] },
+          { comment: [/^metalink.*repo=epel-next-\$releasever.*/, '#', ''] },
           { replace: [
               %r{^#baseurl=.*basearch/$},
               'baseurl=https://epel.osuosl.org/next/$releasever/Everything/$basearch/',
