@@ -454,6 +454,32 @@ elsif platform_family?('debian')
       sensitive false
       notifies :update, 'apt_update[osl-unmanaged]', :immediately
     end
+    filter_lines '/etc/apt/sources.list.d/ubuntu.sources' do
+      filters(
+        [
+          { substitute: [
+              %r{^URIs: http://.*ubuntu.com/ubuntu/?},
+              %r{http://.*ubuntu.com/ubuntu/?},
+              'https://ubuntu.osuosl.org/ubuntu',
+            ],
+          },
+          { substitute: [
+              %r{^URIs: https://.*ubuntu.com/ubuntu/?},
+              %r{https://.*ubuntu.com/ubuntu/?},
+              'https://ubuntu.osuosl.org/ubuntu',
+            ],
+          },
+          { substitute: [
+              %r{^URIs: http://ports.ubuntu.com/ubuntu-ports/?},
+              %r{http://ports.ubuntu.com/ubuntu-ports/},
+              'http://ports.ubuntu.com/ubuntu-ports',
+            ],
+          },
+        ]
+      )
+      sensitive false
+      notifies :update, 'apt_update[osl-unmanaged]', :immediately
+    end
   elsif platform?('debian')
     filter_lines '/etc/apt/sources.list' do
       filters(

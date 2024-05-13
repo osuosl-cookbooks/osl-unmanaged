@@ -2,7 +2,7 @@
 set -ex
 if [ -e /usr/bin/apt-get ] ; then
   apt-get update
-  apt-get -y install curl unzip
+  apt-get -y install curl unzip build-essential
 elif [ -e /usr/bin/dnf ] ; then
   dnf -y install curl unzip
 elif [ -e /usr/bin/yum ] ; then
@@ -38,7 +38,7 @@ cp bootstrap/runlist/unmanaged.json /tmp/cinc/dna.json
 
 
 if [ -e /usr/bin/apt-get ] ; then
-  apt-get -y purge cinc
+  apt-get -y purge cinc build-essential
 elif [ -e /usr/bin/dnf ] ; then
   dnf -y remove cinc
 elif [ -e /usr/bin/yum ] ; then

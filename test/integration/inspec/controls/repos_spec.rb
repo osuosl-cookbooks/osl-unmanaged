@@ -117,17 +117,31 @@ control 'repos' do
       describe apt 'https://ubuntu.osuosl.org/ubuntu' do
         it { should exist }
         it { should be_enabled }
-      end
+      end if release.to_f < 24
 
       describe file '/etc/apt/sources.list' do
         its('content') { should match /ubuntu #{codename} (main|universe|multiverse)/ }
         its('content') { should match /ubuntu #{codename}-security (main|universe|multiverse)/ }
-      end
+      end if release.to_f < 24
+
+      describe file '/etc/apt/sources.list.d/ubuntu.sources' do
+        its('content') { should match %r{URIs: https://ubuntu.osuosl.org/ubuntu} }
+        its('content') { should match /Suites: #{codename} #{codename}-updates #{codename}-backports/ }
+        its('content') { should match /Suites: #{codename}-security/ }
+        its('content') { should match /Components: main universe restricted multiverse/ }
+      end if release.to_f >= 24
     when 'ppc64le', 'aarch64'
       describe apt 'http://ports.ubuntu.com/ubuntu-ports' do
         it { should exist }
         it { should be_enabled }
-      end
+      end if release.to_f < 24
+
+      describe file '/etc/apt/sources.list.d/ubuntu.sources' do
+        its('content') { should match %r{URIs: https://ubuntu.osuosl.org/ubuntu} }
+        its('content') { should match /Suites: #{codename} #{codename}-updates #{codename}-backports/ }
+        its('content') { should match /Suites: #{codename}-security/ }
+        its('content') { should match /Components: main universe restricted multiverse/ }
+      end if release.to_f >= 24
     end
   when 'centos'
     case release.to_i

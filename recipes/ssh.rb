@@ -28,5 +28,6 @@ unmanaged_sshd_config.each do |key, value|
 end
 
 service 'sshd' do
+  service_name openssh_service
   action [:enable, :start]
 end

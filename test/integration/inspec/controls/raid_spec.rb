@@ -1,6 +1,7 @@
 megacli = input('megacli', value: false)
 mdadm = input('mdadm', value: false)
 os_family = os.family
+release = os.release
 mdadm_conf =
   case os_family
   when 'redhat', 'fedora'
@@ -42,11 +43,11 @@ control 'raid' do
     describe apt 'https://hwraid.le-vert.net/debian' do
       it { should exist }
       it { should be_enabled }
-    end if os_family == 'debian'
+    end if os_family == 'debian' && release.to_f < 24.04
 
     describe command 'megacli -v' do
       its('exit_status') { should eq 0 }
       its('stdout') { should match /MegaCLI SAS RAID Management Tool/ }
-    end
+    end if release.to_f < 24.04
   end
 end

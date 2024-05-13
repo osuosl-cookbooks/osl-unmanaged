@@ -24,12 +24,7 @@ platforms:
   - name: fedora-latest
   - name: ubuntu-20.04
   - name: ubuntu-22.04
-    # TODO: This should be removed on the next Cinc Workstation release which
-    # includes a proper fix
-    transport:
-      name: ssh
-      username: vagrant
-      password: vagrant
+  - name: ubuntu-24.04
 
 suites:
   - name: default

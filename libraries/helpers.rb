@@ -29,6 +29,14 @@ module OslUnmanaged
         end
       end
 
+      def openssh_service
+        if platform?('ubuntu') && node['platform_version'].to_f == 24.04
+          'ssh'
+        else
+          'sshd'
+        end
+      end
+
       def openstack_pkgs
         pkgs = []
         if platform_family?('rhel', 'fedora')
