@@ -39,6 +39,7 @@ cp bootstrap/runlist/unmanaged.json /tmp/cinc/dna.json
 
 if [ -e /usr/bin/apt-get ] ; then
   apt-get -y purge cinc build-essential
+  apt-get -y autoremove
 elif [ -e /usr/bin/dnf ] ; then
   dnf -y remove cinc
 elif [ -e /usr/bin/yum ] ; then
