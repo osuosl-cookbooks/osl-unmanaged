@@ -458,19 +458,19 @@ elsif platform_family?('debian')
       filters(
         [
           { substitute: [
-              %r{^URIs: http://.*ubuntu.com/ubuntu/?},
-              %r{http://.*ubuntu.com/ubuntu/?},
+              %r{^URIs: http://.*ubuntu.com/ubuntu/?^},
+              %r{http://.*ubuntu.com/ubuntu/?^},
               'https://ubuntu.osuosl.org/ubuntu',
             ],
           },
           { substitute: [
-              %r{^URIs: https://.*ubuntu.com/ubuntu/?},
-              %r{https://.*ubuntu.com/ubuntu/?},
+              %r{^URIs: https://.*ubuntu.com/ubuntu/?^},
+              %r{https://.*ubuntu.com/ubuntu/?^},
               'https://ubuntu.osuosl.org/ubuntu',
             ],
           },
           { substitute: [
-              %r{^URIs: http://ports.ubuntu.com/ubuntu-ports/?},
+              %r{^URIs: http://ports.ubuntu.com/ubuntu-ports/?^},
               %r{http://ports.ubuntu.com/ubuntu-ports/},
               'http://ports.ubuntu.com/ubuntu-ports',
             ],
