@@ -128,7 +128,10 @@ control 'repos' do
         its('content') { should match %r{URIs: https://ubuntu.osuosl.org/ubuntu} }
         its('content') { should match /Suites: #{codename} #{codename}-updates #{codename}-backports/ }
         its('content') { should match /Suites: #{codename}-security/ }
-        its('content') { should match /Components: main universe restricted multiverse/ }
+        its('content') { should match /Components:.*main/ }
+        its('content') { should match /Components:.*universe/ }
+        its('content') { should match /Components:.*restricted/ }
+        its('content') { should match /Components:.*multiverse/ }
       end if release.to_f >= 24
     when 'ppc64le', 'aarch64'
       describe apt 'http://ports.ubuntu.com/ubuntu-ports' do
@@ -140,7 +143,10 @@ control 'repos' do
         its('content') { should match %r{URIs: https://ubuntu.osuosl.org/ubuntu} }
         its('content') { should match /Suites: #{codename} #{codename}-updates #{codename}-backports/ }
         its('content') { should match /Suites: #{codename}-security/ }
-        its('content') { should match /Components: main universe restricted multiverse/ }
+        its('content') { should match /Components:.*main/ }
+        its('content') { should match /Components:.*universe/ }
+        its('content') { should match /Components:.*restricted/ }
+        its('content') { should match /Components:.*multiverse/ }
       end if release.to_f >= 24
     end
   when 'centos'
