@@ -104,6 +104,10 @@ when 'debian'
     action [:stop, :disable]
   end
 
+  service 'systemd-networkd-wait-online.service' do
+    action [:stop, :disable]
+  end
+
   service 'NetworkManager' do
     action [:enable, :start]
   end
