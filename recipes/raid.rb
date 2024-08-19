@@ -20,7 +20,7 @@ include_recipe 'osl-unmanaged::postfix' if raid_pkg.include?('mdadm')
 unless raid_pkg.empty?
   if raid_pkg.include?('megacli')
     if platform_family?('debian')
-      return if node['platform'] == 'ubuntu' && node['platform_version'].to_f >= 24.04
+      return if platform?('ubuntu') && node['platform_version'].to_f >= 24.04
       apt_repository 'hwraid' do
         uri 'https://hwraid.le-vert.net/debian'
         components %w(main)
