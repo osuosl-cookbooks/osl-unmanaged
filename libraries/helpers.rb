@@ -272,6 +272,29 @@ module OslUnmanaged
                 pppoeconf
                 xauth
               )
+            when '24.04'
+              %w(
+                build-essential
+                command-not-found
+                fonts-ubuntu-console
+                friendly-recovery
+                gcc
+                g++
+                landscape-common
+                laptop-detect
+                libc6-dev
+                libx11-6
+                libx11-data
+                libxcb1
+                libxext6
+                libxmuu1
+                make
+                popularity-contest
+                ppp
+                pppconfig
+                pppoeconf
+                xauth
+              )
             end
           end
         end
