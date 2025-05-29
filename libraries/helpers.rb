@@ -126,6 +126,8 @@ module OslUnmanaged
           'true'
         elsif platform_family?('debian')
           'update-grub'
+        elsif node['kernel']['machine'] == 'aarch64' && el? && node['platform_version'] >= 10
+          'grub2-mkconfig -o /boot/grub2/grub.cfg'
         elsif node['kernel']['machine'] == 'aarch64'
           "grub2-mkconfig -o /boot/efi/EFI/#{node['platform']}/grub.cfg"
         else
