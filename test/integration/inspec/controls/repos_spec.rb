@@ -211,7 +211,7 @@ control 'repos' do
         it { should be_enabled }
         its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/PowerTools/#{arch}/os/" }
       end
-    when 9
+    when 10, 9
       describe yum.repo 'appstream' do
         it { should exist }
         it { should be_enabled }

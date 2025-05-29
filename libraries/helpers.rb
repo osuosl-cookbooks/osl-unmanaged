@@ -44,7 +44,6 @@ module OslUnmanaged
             cloud-init
             cloud-utils-growpart
             gdisk
-            yamllint
           )
           pkgs << 'ppc64-diag' if node['kernel']['machine'] == 'ppc64le'
         else
@@ -52,7 +51,6 @@ module OslUnmanaged
             cloud-utils
             cloud-init
             cloud-initramfs-growroot
-            yamllint
           )
           pkgs << 'powerpc-utils' if node['kernel']['machine'] == 'ppc64le'
         end
@@ -341,7 +339,10 @@ module OslUnmanaged
         when 'fedora'
           %w(fail2ban iptables-legacy)
         when 'rhel'
-          if node['platform_version'].to_i >= 9
+          case node['platform_version'].to_i
+          when 10
+            %w(fail2ban iptables-nft-services)
+          when 9
             %w(fail2ban iptables-legacy)
           else
             %w(fail2ban iptables)
@@ -356,7 +357,10 @@ module OslUnmanaged
         when 'fedora'
           %w(dhcp-client NetworkManager)
         when 'rhel'
-          if node['platform_version'].to_i >= 8
+          case node['platform_version'].to_i
+          when 10
+            %w(dhcpcd NetworkManager)
+          when 9, 8
             %w(dhcp-client NetworkManager)
           else
             %w(dhclient NetworkManager)

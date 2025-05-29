@@ -2,7 +2,7 @@
 # Cookbook:: osl-unmanaged
 # Recipe:: repos
 #
-# Copyright:: 2022-2024, Oregon State University
+# Copyright:: 2022-2025, Oregon State University
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -249,7 +249,7 @@ if platform_family?('rhel', 'fedora')
         sensitive false
         notifies :run, 'execute[dnf makecache]', :immediately
       end
-    when 9
+    when 10, 9
       filter_lines '/etc/yum.repos.d/almalinux-baseos.repo' do
         filters(
           [

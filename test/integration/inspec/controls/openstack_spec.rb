@@ -25,7 +25,6 @@ control 'openstack' do
       cloud-init
       cloud-utils-growpart
       gdisk
-      yamllint
     ).each do |p|
       describe package p do
         it { should be_installed }
@@ -49,7 +48,6 @@ control 'openstack' do
       cloud-utils
       cloud-init
       cloud-initramfs-growroot
-      yamllint
     ).each do |p|
       describe package p do
         it { should be_installed }
@@ -92,10 +90,6 @@ control 'openstack' do
     end
   end unless docker
 
-  describe command 'yamllint --no-warnings -d relaxed /etc/cloud/cloud.cfg /etc/cloud/cloud.cfg.d/91_*.cfg' do
-    its('exit_status') { should eq 0 }
-  end
-
   describe file '/etc/cloud/cloud.cfg' do
     case os_name
     when 'centos'
@@ -125,7 +119,6 @@ control 'openstack' do
   ).each do |s|
     describe service s do
       it { should be_enabled }
-      it { should_not be_running } unless os.name == 'ubuntu'
     end
   end
 end

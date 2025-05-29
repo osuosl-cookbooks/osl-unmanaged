@@ -3,7 +3,10 @@ iptables_pkg =
   when 'fedora'
     'iptables-legacy'
   when 'redhat'
-    if os.release.to_i >= 9
+    case os.release.to_i
+    when 10
+      'iptables-nft-services'
+    when 9
       'iptables-legacy'
     else
       'iptables'

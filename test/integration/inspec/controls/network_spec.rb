@@ -97,7 +97,12 @@ control 'network' do
       it { should_not be_listening }
     end
   when 'centos', 'almalinux', 'fedora'
-    if release >= 8
+    case release
+    when 10
+      describe package 'dhcpcd' do
+        it { should be_installed }
+      end
+    when 9, 8
       describe package 'dhcp-client' do
         it { should be_installed }
       end
