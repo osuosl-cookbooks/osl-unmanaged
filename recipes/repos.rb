@@ -221,6 +221,7 @@ if platform_family?('rhel', 'fedora')
       notifies :run, 'execute[dnf makecache]', :immediately
     end
   elsif platform?('almalinux')
+    package 'dnf-plugins-core'
     case node['platform_version'].to_i
     when 8
       filter_lines '/etc/yum.repos.d/almalinux.repo' do
@@ -243,11 +244,15 @@ if platform_family?('rhel', 'fedora')
           [
             { comment: [%r{^mirrorlist.*/powertools$}, '#', ''] },
             { replace: [%r{^# baseurl.*/PowerTools.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/PowerTools/$basearch/os/'] },
-            { replace: [/^enabled=0$/, 'enabled=1'] },
           ]
         )
         sensitive false
         notifies :run, 'execute[dnf makecache]', :immediately
+      end
+
+      # Only enable the powertools repo, not debug/source
+      execute 'dnf config-manager --enable powertools' do
+        not_if { File.foreach('/etc/yum.repos.d/almalinux-powertools.repo').any? { |l| l.strip == 'enabled=1' } }
       end
     when 10, 9
       filter_lines '/etc/yum.repos.d/almalinux-baseos.repo' do
@@ -293,8 +298,6 @@ if platform_family?('rhel', 'fedora')
         sensitive false
         notifies :run, 'execute[dnf makecache]', :immediately
       end
-
-      package 'dnf-plugins-core'
 
       # Only enable the crb repo, not debug/source
       execute 'dnf config-manager --enable crb' do
