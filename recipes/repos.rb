@@ -288,11 +288,17 @@ if platform_family?('rhel', 'fedora')
           [
             { comment: [%r{^mirrorlist.*/crb$}, '#', ''] },
             { replace: [%r{^# baseurl.*/CRB.*/os/$}, 'baseurl=https://almalinux.osuosl.org/$releasever/CRB/$basearch/os/'] },
-            { replace: [/^enabled=0$/, 'enabled=1'] },
           ]
         )
         sensitive false
         notifies :run, 'execute[dnf makecache]', :immediately
+      end
+
+      package 'dnf-plugins-core'
+
+      # Only enable the crb repo, not debug/source
+      execute 'dnf config-manager --enable crb' do
+        not_if { File.foreach('/etc/yum.repos.d/almalinux-crb.repo').any? { |l| l.strip == 'enabled=1' } }
       end
     end
 

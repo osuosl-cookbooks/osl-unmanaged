@@ -278,5 +278,20 @@ control 'repos' do
       it { should be_enabled }
       its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/CRB/#{arch}/os/" }
     end if release >= 9
+
+    %w(
+      appstream
+      baseos
+      epel
+      extras
+      powertools
+      crb
+    ).each do |r|
+      %w(debuginfo source).each do |t|
+        describe yum.repo "#{r}-#{t}" do
+          it { should_not be_enabled }
+        end
+      end
+    end
   end
 end
