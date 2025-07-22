@@ -107,7 +107,7 @@ control 'openstack' do
   end
 
   describe file '/etc/cloud/cloud.cfg.d/91_openstack_override.cfg' do
-    its('content') { should match /datasource_list: \['OpenStack'\]/ }
+    its('content') { should match /datasource_list: \[ConfigDrive, OpenStack, None\]/ }
     its('content') { should match %r{metadata_urls: \['http://169.254.169.254'\]} }
   end
 
