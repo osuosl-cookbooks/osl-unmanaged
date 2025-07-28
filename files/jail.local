@@ -1,5 +1,5 @@
 [DEFAULT]
-ignoreip = fir.osuosl.org nagios.osuosl.org nagios2.osuosl.org
+ignoreip = jumphost.osuosl.org nagios.osuosl.org nagios2.osuosl.org
 findtime = 25d
 bantime = 5d
 maxretry = 5
