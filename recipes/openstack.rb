@@ -88,12 +88,12 @@ elsif platform?('debian')
   end
 end
 
-cookbook_file '/etc/cloud/cloud.cfg.d/91_openstack_override.cfg' do
+template '/etc/cloud/cloud.cfg.d/91_openstack_override.cfg' do
   case node['platform_family']
   when 'debian'
-    source '91_openstack_override.cfg-debian'
+    source '91_openstack_override.cfg-debian.erb'
   when 'rhel', 'fedora'
-    source '91_openstack_override.cfg-rhel'
+    source '91_openstack_override.cfg-rhel.erb'
   end
 end
 

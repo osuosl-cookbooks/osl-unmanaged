@@ -1,5 +1,6 @@
 ppc64le = os.arch == 'ppc64le'
 aarch64 = os.arch == 'aarch64'
+x86 = os.arch == 'x86_64'
 os_family = os.family
 os_release = os.release.to_i
 os_name = os.name
@@ -107,7 +108,11 @@ control 'openstack' do
   end
 
   describe file '/etc/cloud/cloud.cfg.d/91_openstack_override.cfg' do
-    its('content') { should match /datasource_list: \[ConfigDrive, OpenStack, None\]/ }
+    if x86
+      its('content') { should match /datasource_list: \[ConfigDrive, OpenStack, None\]/ }
+    else
+      its('content') { should match /datasource_list: \[OpenStack, None\]/ }
+    end
     its('content') { should match %r{metadata_urls: \['http://169.254.169.254'\]} }
   end
 
