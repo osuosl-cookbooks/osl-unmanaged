@@ -37,7 +37,7 @@ if platform_family?('rhel', 'fedora')
       action :nothing
     end
 
-    package 'epel-release' do
+    package epel_pkgs do
       notifies :run, 'execute[import epel key]', :immediately
     end
 
@@ -139,7 +139,7 @@ if platform_family?('rhel', 'fedora')
         sensitive false
         notifies :run, 'execute[dnf makecache]', :immediately
       end
-    when 9
+    when 9, 10
       filter_lines '/etc/yum.repos.d/centos.repo' do
         filters(
           [
@@ -181,7 +181,7 @@ if platform_family?('rhel', 'fedora')
       action :nothing
     end
 
-    package %w(epel-release epel-next-release) do
+    package epel_pkgs do
       notifies :run, 'execute[import epel key]', :immediately
     end
 
@@ -219,7 +219,7 @@ if platform_family?('rhel', 'fedora')
       )
       sensitive false
       notifies :run, 'execute[dnf makecache]', :immediately
-    end
+    end if node['platform_version'].to_i < 10
   elsif platform?('almalinux')
     package 'dnf-plugins-core'
     case node['platform_version'].to_i
@@ -342,7 +342,7 @@ if platform_family?('rhel', 'fedora')
       action :nothing
     end
 
-    package 'epel-release' do
+    package epel_pkgs do
       notifies :run, 'execute[import epel key]', :immediately
     end
 

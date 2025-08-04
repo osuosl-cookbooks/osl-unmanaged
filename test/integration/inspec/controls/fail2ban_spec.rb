@@ -24,6 +24,6 @@ control 'fail2ban' do
 
   describe file '/etc/fail2ban/jail.local' do
     it { should exist }
-    its('content') { should match /^ignoreip = fir.osuosl.org nagios.osuosl.org nagios2.osuosl.org$/ }
+    its('content') { should match /^ignoreip = jumphost.osuosl.org nagios.osuosl.org nagios2.osuosl.org$/ }
   end
 end

@@ -29,6 +29,14 @@ module OslUnmanaged
         end
       end
 
+      def epel_pkgs
+        if centos_stream_platform? && node['platform_version'].to_i < 10
+          %w(epel-release epel-next-release)
+        else
+          'epel-release'
+        end
+      end
+
       def openssh_service
         if platform?('ubuntu') && node['platform_version'].to_f == 24.04
           'ssh'
