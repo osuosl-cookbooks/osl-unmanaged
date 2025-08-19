@@ -249,6 +249,7 @@ module OslUnmanaged
                 wireless-regdb
                 xauth
               )
+            end
           elsif platform?('ubuntu')
             case node['platform_version']
             when '20.04'
