@@ -9,7 +9,7 @@ control 'cleanup' do
   end
 
   # It's OK if dhclient is listening
-  describe port.where { protocol =~ /udp/ && port != 68 && process !~ /dhclient|ntpdate|rmcd/ && address !~ /^127|::1/ } do
+  describe port.where { protocol =~ /udp/ && port != 68 && process !~ /dhclient|dhcpcd||ntpdate|rmcd/ && address !~ /^127|::1/ } do
     it { should_not be_listening }
   end
 
