@@ -38,12 +38,14 @@ control 'repos' do
       its('content') do
         should match /systemctl enable --now unattended-upgrades.service apt-daily-upgrade.timer apt-daily-upgrade.service/
       end
-    when 'redhat', 'fedora'
+    when 'redhat'
       if release.to_i >= 8
         its('content') { should match /systemctl enable --now dnf-automatic-install.timer/ }
       else
         its('content') { should match /systemctl enable --now yum-cron.service/ }
       end
+    when 'fedora'
+      its('content') { should match /systemctl enable --now dnf-automatic.timer/ }
     end
   end
 
@@ -76,7 +78,7 @@ control 'repos' do
         it { should be_enabled }
       end
     end
-  when 'redhat', 'fedora'
+  when 'redhat'
     if release.to_i >= 8
       describe package 'dnf-automatic' do
         it { should be_installed }
@@ -95,6 +97,11 @@ control 'repos' do
         it { should be_enabled }
         it { should_not be_running }
       end
+    end
+  when 'fedora'
+    describe service 'dnf-automatic.timer' do
+      it { should be_enabled }
+      it { should_not be_running }
     end
   end
 

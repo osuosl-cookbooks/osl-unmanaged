@@ -404,6 +404,14 @@ module OslUnmanaged
           false
         end
       end
+
+      def dnf_automatic_service
+        if platform_family?('fedora')
+          'dnf-automatic.timer'
+        else
+          'dnf-automatic-install.timer'
+        end
+      end
     end
   end
 end

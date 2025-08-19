@@ -109,8 +109,12 @@ control 'network' do
     else
       describe package 'dhclient' do
         it { should be_installed }
-      end
+      end unless platform == 'fedora'
     end
+
+    describe package 'dhcp-client' do
+      it { should be_installed }
+    end if platform == 'fedora'
 
     describe ini '/etc/NetworkManager/NetworkManager.conf' do
       its('main.dns') { should cmp 'default' }

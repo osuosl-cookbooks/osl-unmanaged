@@ -370,7 +370,7 @@ if platform_family?('rhel', 'fedora')
   if node['platform_version'].to_i >= 8
     package 'dnf-automatic'
 
-    service 'dnf-automatic-install.timer' do
+    service dnf_automatic_service do
       if node['osl-unmanaged']['packer']
         action [:disable, :stop]
       else
