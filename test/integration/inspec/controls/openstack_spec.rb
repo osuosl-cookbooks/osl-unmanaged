@@ -15,6 +15,24 @@ grub_path =
   when 'debian'
     '/boot/grub'
   end
+openstack_services =
+  if os_name == 'debian' && os_release >= 13
+    %w(
+      cloud-config
+      cloud-final
+      cloud-init-hotplugd
+      cloud-init-local
+      cloud-init-main
+      cloud-init-network
+    )
+  else
+    %w(
+      cloud-config
+      cloud-final
+      cloud-init
+      cloud-init-local
+    )
+  end
 openstack = input('openstack', value: false)
 docker = inspec.command('test -e /.dockerenv')
 
@@ -116,12 +134,7 @@ control 'openstack' do
     its('content') { should match %r{metadata_urls: \['http://169.254.169.254'\]} }
   end
 
-  %w(
-    cloud-init-local
-    cloud-init
-    cloud-config
-    cloud-final
-  ).each do |s|
+  openstack_services.each do |s|
     describe service s do
       it { should be_enabled }
     end

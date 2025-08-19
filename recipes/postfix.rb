@@ -16,6 +16,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+%w(exim4.service exim4-base.timer).each do |s|
+  service s do
+    action [:stop, :disable]
+  end
+end if platform_family?('debian')
+
 package %w(exim4-base exim4-config exim4-daemon-light) do
   action :purge
 end if platform_family?('debian')

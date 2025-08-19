@@ -65,6 +65,26 @@ module OslUnmanaged
         pkgs.sort
       end
 
+      def openstack_services
+        if platform?('debian') && node['platform_version'].to_i >= 13
+          %w(
+            cloud-config
+            cloud-final
+            cloud-init-hotplugd
+            cloud-init-local
+            cloud-init-main
+            cloud-init-network
+          )
+        else
+          %w(
+            cloud-config
+            cloud-final
+            cloud-init
+            cloud-init-local
+          )
+        end
+      end
+
       def powervs_pkgs
         if platform_family?('rhel', 'fedora')
           %w(
@@ -206,7 +226,7 @@ module OslUnmanaged
                 wireless-regdb
                 xauth
               )
-            when '12'
+            when '12', '13'
               %w(
                 build-essential
                 command-not-found
@@ -229,7 +249,6 @@ module OslUnmanaged
                 wireless-regdb
                 xauth
               )
-            end
           elsif platform?('ubuntu')
             case node['platform_version']
             when '20.04'

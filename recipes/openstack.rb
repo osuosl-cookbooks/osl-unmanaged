@@ -97,12 +97,7 @@ template '/etc/cloud/cloud.cfg.d/91_openstack_override.cfg' do
   end
 end
 
-%w(
-  cloud-init-local
-  cloud-init
-  cloud-config
-  cloud-final
-).each do |s|
+openstack_services.each do |s|
   service s do
     action :enable
   end
