@@ -66,7 +66,7 @@ module OslUnmanaged
       end
 
       def openstack_services
-        if platform?('debian') && node['platform_version'].to_i >= 13
+        if platform?('debian') && (node['platform_version'].to_i >= 13 || node['platform_version'].match?(/sid/))
           %w(
             cloud-config
             cloud-final
@@ -226,7 +226,7 @@ module OslUnmanaged
                 wireless-regdb
                 xauth
               )
-            when '12', '13'
+            when '12', '13', /sid/
               %w(
                 build-essential
                 command-not-found
