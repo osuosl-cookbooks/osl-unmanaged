@@ -17,8 +17,6 @@ platforms:
   - name: almalinux-8
   - name: almalinux-9
   - name: almalinux-10
-  - name: centos-7
-  - name: centos-stream-8
   - name: centos-stream-9
   - name: centos-stream-10
   - name: debian-11
@@ -47,7 +45,7 @@ suites:
   - name: default-cleanup
     run_list:
       - recipe[osl-unmanaged::default]
-      - recipe[osl-unmanaged::network]
+      - recipe[osl-unmanaged::openstack]
       - recipe[osl-unmanaged::cleanup]
     verifier:
       controls:
@@ -57,6 +55,7 @@ suites:
         - fail2ban
         - network
         - osuadmin
+        - openstack
         - packages
         - postfix
         - raid
@@ -65,6 +64,7 @@ suites:
         - sudo
       inputs:
         cleanup: true
+        openstack: true
     provisioner:
       enforce_idempotency: false
       multiple_converge: 1
@@ -135,8 +135,6 @@ suites:
   - name: powervs
     run_list:
       - recipe[osl-unmanaged::powervs]
-    excludes:
-      - centos-7
     verifier:
       controls:
         - chrony
@@ -201,5 +199,3 @@ suites:
         - rsct
       inputs:
         rsct: true
-    excludes:
-      - centos-7

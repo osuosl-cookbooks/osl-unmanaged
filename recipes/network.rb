@@ -32,7 +32,7 @@ when 'debian'
       ]
     )
     sensitive false
-    notifies :restart, 'service[NetworkManager]'
+    notifies :restart, 'service[NetworkManager]', :immediately
   end
 
   %w(
@@ -48,7 +48,6 @@ when 'debian'
 
   file '/etc/netplan/00-installer-config.yaml' do
     action :delete
-    notifies :restart, 'service[NetworkManager]'
   end
 
   file '/etc/netplan/01-network-manager.yaml' do
@@ -57,7 +56,7 @@ when 'debian'
         version: 2
         renderer: NetworkManager
     EOF
-    notifies :restart, 'service[NetworkManager]'
+    notifies :restart, 'service[NetworkManager]', :immediately
     notifies :run, 'execute[netplan apply]', :immediately
   end
 
@@ -71,7 +70,7 @@ when 'debian'
     pattern '^#DNSStubListener.*'
     line 'DNSStubListener=no'
     sensitive false
-    notifies :restart, 'service[NetworkManager]'
+    notifies :restart, 'service[NetworkManager]', :immediately
     only_if { ::File.exist?('/etc/systemd/resolved.conf') }
   end
 
@@ -84,7 +83,7 @@ when 'debian'
       ]
     )
     sensitive false
-    notifies :restart, 'service[NetworkManager]'
+    notifies :restart, 'service[NetworkManager]', :immediately
     notifies :restart, 'service[systemd-networkd]'
     notifies :reload, 'service[apparmor]', :immediately
   end
@@ -92,7 +91,6 @@ when 'debian'
   file '/etc/resolv.conf' do
     manage_symlink_source
     only_if { ::File.symlink?('/etc/resolv.conf') }
-    notifies :restart, 'service[NetworkManager]', :immediately
     action :delete
   end
 
@@ -131,7 +129,7 @@ when 'rhel', 'fedora'
       ]
     )
     sensitive false
-    notifies :restart, 'service[NetworkManager]'
+    notifies :restart, 'service[NetworkManager]', :immediately
   end
 
   replace_or_add 'disable DNSStubListener' do
@@ -139,7 +137,7 @@ when 'rhel', 'fedora'
     pattern '^#DNSStubListener=.*'
     line 'DNSStubListener=no'
     sensitive false
-    notifies :restart, 'service[NetworkManager]'
+    notifies :restart, 'service[NetworkManager]', :immediately
     only_if { ::File.exist?('/etc/systemd/resolved.conf') }
   end
 

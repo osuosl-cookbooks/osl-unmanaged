@@ -76,7 +76,7 @@ control 'network' do
 
     describe service 'NetworkManager' do
       it { should be_enabled }
-      it { should be_running }
+      it { should be_running } unless cleanup
     end
 
     describe processes '/lib/systemd/systemd-resolved' do
@@ -106,10 +106,6 @@ control 'network' do
       describe package 'dhcp-client' do
         it { should be_installed }
       end
-    else
-      describe package 'dhclient' do
-        it { should be_installed }
-      end unless platform == 'fedora'
     end
 
     describe package 'dhcp-client' do
@@ -129,7 +125,7 @@ control 'network' do
 
     describe service 'NetworkManager' do
       it { should be_enabled }
-      it { should be_running }
+      it { should be_running } unless cleanup
     end
 
     describe processes '/lib/systemd/systemd-resolved' do

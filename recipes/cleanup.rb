@@ -102,6 +102,12 @@ service 'rpcbind.socket' do
   action [:stop, :disable]
 end
 
+# Ensure /etc/resolv.conf doesn't get overwritten by NetworkManager
+service 'NetworkManager-cleanup' do
+  service_name 'NetworkManager'
+  action :stop
+end
+
 file '/etc/resolv.conf' do
   content "\n"
   notifies :run, 'execute[truncate /etc/resolv.conf]', :delayed

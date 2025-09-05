@@ -4,25 +4,10 @@ release = os.release
 arch = os.arch
 release = os.release.to_i
 codename = inspec.command('lsb_release -cs').stdout.strip
+cleanup = input('cleanup')
 packer = input('packer')
 docker = inspec.command('test -e /.dockerenv')
 sources_list = inspec.file('/etc/apt/sources.list').exist?
-power9 = inspec.command('lscpu').stdout.match(/POWER9/)
-
-base_arch =
-  if power9
-    'power9'
-  else
-    arch
-  end
-
-centos7_url =
-  case arch
-  when 'aarch64', 'ppc64le'
-    'https://centos-altarch.osuosl.org'
-  else
-    'https://centos.osuosl.org'
-  end
 
 control 'repos' do
   describe service 'osuosl-firstboot.service' do
@@ -79,24 +64,13 @@ control 'repos' do
       end
     end
   when 'redhat'
-    if release.to_i >= 8
-      describe package 'dnf-automatic' do
-        it { should be_installed }
-      end
+    describe package 'dnf-automatic' do
+      it { should be_installed }
+    end
 
-      describe service 'dnf-automatic-install.timer' do
-        it { should be_enabled }
-        it { should_not be_running }
-      end
-    else
-      describe package 'yum-cron' do
-        it { should be_installed }
-      end
-
-      describe service 'yum-cron' do
-        it { should be_enabled }
-        it { should_not be_running }
-      end
+    describe service 'dnf-automatic-install.timer' do
+      it { should be_enabled }
+      it { should_not be_running }
     end
   when 'fedora'
     describe service 'dnf-automatic.timer' do
@@ -157,158 +131,69 @@ control 'repos' do
       end if release.to_f >= 24
     end
   when 'centos'
-    case release.to_i
-    when 7
-      describe yum.repo 'base' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "#{centos7_url}/7/os/#{base_arch}/" }
-      end
-
-      describe yum.repo 'epel' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "https://epel.osuosl.org/7/#{arch}/" }
-      end
-
-      describe yum.repo 'extras' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "#{centos7_url}/7/extras/#{base_arch}/" }
-      end
-
-      describe yum.repo 'updates' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "#{centos7_url}/7/updates/#{base_arch}/" }
-      end
-    when 8
+    unless cleanup
       describe yum.repo 'appstream' do
         it { should exist }
         it { should be_enabled }
-        its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/AppStream/#{arch}/os/" }
+        its('baseurl') { should cmp "https://centos-stream.osuosl.org/#{release}-stream/AppStream/#{arch}/os/" }
       end
 
       describe yum.repo 'baseos' do
         it { should exist }
         it { should be_enabled }
-        its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/BaseOS/#{arch}/os/" }
+        its('baseurl') { should cmp "https://centos-stream.osuosl.org/#{release}-stream/BaseOS/#{arch}/os/" }
       end
 
       describe yum.repo 'epel' do
         it { should exist }
         it { should be_enabled }
-        its('baseurl') { should cmp "https://epel.osuosl.org/8/Everything/#{arch}/" }
+        its('baseurl') { should cmp "https://epel.osuosl.org/#{release}/Everything/#{arch}/" }
       end
 
-      describe yum.repo 'epel-next' do
+      describe yum.repo 'extras-common' do
         it { should exist }
         it { should be_enabled }
-        its('baseurl') { should cmp "https://epel.osuosl.org/next/8/Everything/#{arch}/" }
+        its('baseurl') { should cmp "https://centos-stream.osuosl.org/SIGs/#{release}-stream/extras/#{arch}/extras-common/" }
+      end
+    end
+  when 'almalinux'
+    unless cleanup
+      describe yum.repo 'appstream' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/AppStream/#{arch}/os/" }
+      end
+
+      describe yum.repo 'baseos' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/BaseOS/#{arch}/os/" }
+      end
+
+      describe yum.repo 'epel' do
+        it { should exist }
+        it { should be_enabled }
+        its('baseurl') { should cmp "https://epel.osuosl.org/#{release}/Everything/#{arch}/" }
       end
 
       describe yum.repo 'extras' do
         it { should exist }
         it { should be_enabled }
-        its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/extras/#{arch}/os/" }
+        its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/extras/#{arch}/os/" }
       end
 
       describe yum.repo 'powertools' do
         it { should exist }
         it { should be_enabled }
-        its('baseurl') { should cmp "https://centos.osuosl.org/8-stream/PowerTools/#{arch}/os/" }
-      end
-    when 9
-      describe yum.repo 'appstream' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "https://centos-stream.osuosl.org/9-stream/AppStream/#{arch}/os/" }
-      end
+        its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/PowerTools/#{arch}/os/" }
+      end if release == 8
 
-      describe yum.repo 'baseos' do
+      describe yum.repo 'crb' do
         it { should exist }
         it { should be_enabled }
-        its('baseurl') { should cmp "https://centos-stream.osuosl.org/9-stream/BaseOS/#{arch}/os/" }
-      end
-
-      describe yum.repo 'epel' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "https://epel.osuosl.org/9/Everything/#{arch}/" }
-      end
-
-      describe yum.repo 'epel-next' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "https://epel.osuosl.org/next/9/Everything/#{arch}/" }
-      end
-
-      describe yum.repo 'extras-common' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "https://centos-stream.osuosl.org/SIGs/9-stream/extras/#{arch}/extras-common/" }
-      end
-    when 10
-      describe yum.repo 'appstream' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "https://centos-stream.osuosl.org/10-stream/AppStream/#{arch}/os/" }
-      end
-
-      describe yum.repo 'baseos' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "https://centos-stream.osuosl.org/10-stream/BaseOS/#{arch}/os/" }
-      end
-
-      describe yum.repo 'epel' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "https://epel.osuosl.org/10/Everything/#{arch}/" }
-      end
-
-      describe yum.repo 'extras-common' do
-        it { should exist }
-        it { should be_enabled }
-        its('baseurl') { should cmp "https://centos-stream.osuosl.org/SIGs/10-stream/extras/#{arch}/extras-common/" }
-      end
+        its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/CRB/#{arch}/os/" }
+      end if release >= 9
     end
-  when 'almalinux'
-    describe yum.repo 'appstream' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/AppStream/#{arch}/os/" }
-    end
-
-    describe yum.repo 'baseos' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/BaseOS/#{arch}/os/" }
-    end
-
-    describe yum.repo 'epel' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://epel.osuosl.org/#{release}/Everything/#{arch}/" }
-    end
-
-    describe yum.repo 'extras' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/extras/#{arch}/os/" }
-    end
-
-    describe yum.repo 'powertools' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/PowerTools/#{arch}/os/" }
-    end if release == 8
-
-    describe yum.repo 'crb' do
-      it { should exist }
-      it { should be_enabled }
-      its('baseurl') { should cmp "https://almalinux.osuosl.org/#{release}/CRB/#{arch}/os/" }
-    end if release >= 9
 
     %w(
       appstream

@@ -16,129 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 if platform_family?('rhel', 'fedora')
-  if centos? && node['platform_version'].to_i == 7
-    filter_lines '/etc/yum.repos.d/CentOS-Base.repo' do
-      filters(
-        [
-          { comment: [%r{http://centos.osuosl.org}, '#', ''] },
-          { comment: [/^mirrorlist.*repo=os.*/, '#', ''] },
-          { replace: [%r{^#baseurl=.*/os/}, "baseurl=#{centos_url}/$releasever/os/#{base_arch}/"] },
-          { comment: [/^mirrorlist.*repo=updates.*/, '#', ''] },
-          { replace: [%r{^#baseurl=.*/updates/}, "baseurl=#{centos_url}/$releasever/updates/#{base_arch}/"] },
-          { comment: [/^mirrorlist.*repo=extras.*/, '#', ''] },
-          { replace: [%r{^#baseurl=.*/extras/}, "baseurl=#{centos_url}/$releasever/extras/#{base_arch}/"] },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[yum makecache]', :immediately
-    end
-
-    execute 'yum makecache' do
-      action :nothing
-    end
-
-    package epel_pkgs do
-      notifies :run, 'execute[import epel key]', :immediately
-    end
-
-    execute 'import epel key' do
-      command 'rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7'
-      action :nothing
-    end
-
-    filter_lines '/etc/yum.repos.d/epel.repo' do
-      filters(
-        [
-          { comment: [/^metalink.*repo=epel-\$releasever.*/, '#', ''] },
-          { replace: [
-              /^#baseurl=.*basearch$/,
-              'baseurl=https://epel.osuosl.org/$releasever/$basearch/',
-            ],
-          },
-        ]
-      )
-      sensitive false
-      notifies :run, 'execute[yum makecache]', :immediately
-    end
-  elsif centos_stream_platform?
+  if centos_stream_platform?
     case node['platform_version'].to_i
-    when 8
-      filter_lines '/etc/yum.repos.d/CentOS-Stream-AppStream.repo' do
-        filters(
-          [
-            { comment: [/^mirrorlist.*/, '#', ''] },
-            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/AppStream/$basearch/os/'] },
-          ]
-        )
-        sensitive false
-        notifies :run, 'execute[dnf makecache]', :immediately
-      end
-
-      filter_lines '/etc/yum.repos.d/CentOS-Stream-BaseOS.repo' do
-        filters(
-          [
-            { comment: [/^mirrorlist.*/, '#', ''] },
-            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/BaseOS/$basearch/os/'] },
-          ]
-        )
-        sensitive false
-        notifies :run, 'execute[dnf makecache]', :immediately
-      end
-
-      filter_lines '/etc/yum.repos.d/CentOS-Stream-Extras.repo' do
-        filters(
-          [
-            { comment: [/^mirrorlist.*/, '#', ''] },
-            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/extras/$basearch/os/'] },
-          ]
-        )
-        sensitive false
-        notifies :run, 'execute[dnf makecache]', :immediately
-      end
-
-      filter_lines '/etc/yum.repos.d/CentOS-Stream-HighAvailability.repo' do
-        filters(
-          [
-            { comment: [/^mirrorlist.*/, '#', ''] },
-            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/HighAvailability/$basearch/os/'] },
-          ]
-        )
-        notifies :run, 'execute[dnf makecache]', :immediately
-      end
-
-      filter_lines '/etc/yum.repos.d/CentOS-Stream-PowerTools.repo' do
-        filters(
-          [
-            { comment: [/^mirrorlist.*/, '#', ''] },
-            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/PowerTools/$basearch/os/'] },
-            { replace: [/^enabled=0$/, 'enabled=1'] },
-          ]
-        )
-        sensitive false
-        notifies :run, 'execute[dnf makecache]', :immediately
-      end
-
-      filter_lines '/etc/yum.repos.d/CentOS-Stream-RealTime.repo' do
-        filters(
-          [
-            { comment: [/^mirrorlist.*/, '#', ''] },
-            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/RT/$basearch/os/'] },
-          ]
-        )
-        sensitive false
-        notifies :run, 'execute[dnf makecache]', :immediately
-      end
-
-      filter_lines '/etc/yum.repos.d/CentOS-Stream-ResilientStorage.repo' do
-        filters(
-          [
-            { comment: [/^mirrorlist.*/, '#', ''] },
-            { replace: [/^#baseurl.*/, 'baseurl=https://centos.osuosl.org/$stream/ResilientStorage/$basearch/os/'] },
-          ]
-        )
-        sensitive false
-        notifies :run, 'execute[dnf makecache]', :immediately
-      end
     when 9, 10
       filter_lines '/etc/yum.repos.d/centos.repo' do
         filters(
@@ -252,7 +131,13 @@ if platform_family?('rhel', 'fedora')
 
       # Only enable the powertools repo, not debug/source
       execute 'dnf config-manager --enable powertools' do
-        not_if { File.foreach('/etc/yum.repos.d/almalinux-powertools.repo').any? { |l| l.strip == 'enabled=1' } }
+        not_if { File.read('/etc/yum.repos.d/almalinux-powertools.repo').scan(/enabled\s*=\s*(\d)/)[0][0] == '1' }
+      end
+      execute 'dnf config-manager --disable powertools-source' do
+        only_if { File.read('/etc/yum.repos.d/almalinux-powertools.repo').scan(/enabled\s*=\s*(\d)/)[1][0] == '1' }
+      end
+      execute 'dnf config-manager --disable powertools-debuginfo' do
+        only_if { File.read('/etc/yum.repos.d/almalinux-powertools.repo').scan(/enabled\s*=\s*(\d)/)[2][0] == '1' }
       end
     when 10, 9
       filter_lines '/etc/yum.repos.d/almalinux-baseos.repo' do
@@ -367,25 +252,13 @@ if platform_family?('rhel', 'fedora')
     end
   end
 
-  if node['platform_version'].to_i >= 8
-    package 'dnf-automatic'
+  package 'dnf-automatic'
 
-    service dnf_automatic_service do
-      if node['osl-unmanaged']['packer']
-        action [:disable, :stop]
-      else
-        action [:enable, :stop]
-      end
-    end
-  else
-    package 'yum-cron'
-
-    service 'yum-cron' do
-      if node['osl-unmanaged']['packer']
-        action [:disable, :stop]
-      else
-        action [:enable, :stop]
-      end
+  service dnf_automatic_service do
+    if node['osl-unmanaged']['packer']
+      action [:disable, :stop]
+    else
+      action [:enable, :stop]
     end
   end
 elsif platform_family?('debian')
