@@ -250,6 +250,34 @@ if platform_family?('rhel', 'fedora')
       sensitive false
       notifies :run, 'execute[dnf makecache]', :immediately
     end
+  elsif platform?('rocky')
+    execute 'dnf makecache' do
+      action :nothing
+    end
+
+    package epel_pkgs do
+      notifies :run, 'execute[import epel key]', :immediately
+    end
+
+    execute 'import epel key' do
+      command "rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-#{node['platform_version'].to_i}"
+      action :nothing
+    end
+
+    filter_lines '/etc/yum.repos.d/epel.repo' do
+      filters(
+        [
+          { comment: [/^metalink.*repo=epel-\$releasever.*/, '#', ''] },
+          { replace: [
+              %r{^#baseurl=.*basearch/?$},
+              'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
+            ],
+          },
+        ]
+      )
+      sensitive false
+      notifies :run, 'execute[dnf makecache]', :immediately
+    end
   end
 
   package 'dnf-automatic'
