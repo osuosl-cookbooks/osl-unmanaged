@@ -8,7 +8,7 @@ verifier:
     - path: test/integration/inspec
 
 provisioner:
-  name: chef_infra
+  name: cinc_infra
   enforce_idempotency: true
   multiple_converge: 2
   deprecations_as_errors: true

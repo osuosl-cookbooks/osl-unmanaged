@@ -1,6 +1,6 @@
 platform = os.name
 family = os.family
-release = os.release
+os.release
 arch = os.arch
 release = os.release.to_i
 codename = inspec.command('lsb_release -cs').stdout.strip

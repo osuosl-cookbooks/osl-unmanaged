@@ -2,7 +2,7 @@
 # Cookbook:: osl-unmanaged
 # Recipe:: repos
 #
-# Copyright:: 2022-2025, Oregon State University
+# Copyright:: 2022-2026, Oregon State University
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -74,9 +74,9 @@ if platform_family?('rhel', 'fedora')
         [
           { comment: [/^metalink.*repo=epel-\$releasever.*/, '#', ''] },
           { replace: [
-              %r{^#baseurl=.*basearch/?$},
-              'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
-            ],
+            %r{^#baseurl=.*basearch/?$},
+            'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
+          ],
           },
         ]
       )
@@ -90,9 +90,9 @@ if platform_family?('rhel', 'fedora')
           { comment: [/^metalink.*repo=epel-next-8.*/, '#', ''] },
           { comment: [/^metalink.*repo=epel-next-\$releasever.*/, '#', ''] },
           { replace: [
-              %r{^#baseurl=.*basearch/$},
-              'baseurl=https://epel.osuosl.org/next/$releasever/Everything/$basearch/',
-            ],
+            %r{^#baseurl=.*basearch/$},
+            'baseurl=https://epel.osuosl.org/next/$releasever/Everything/$basearch/',
+          ],
           },
         ]
       )
@@ -241,9 +241,9 @@ if platform_family?('rhel', 'fedora')
         [
           { comment: [/^metalink.*repo=epel-\$releasever.*/, '#', ''] },
           { replace: [
-              %r{^#baseurl=.*basearch/?$},
-              'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
-            ],
+            %r{^#baseurl=.*basearch/?$},
+            'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
+          ],
           },
         ]
       )
@@ -269,9 +269,9 @@ if platform_family?('rhel', 'fedora')
         [
           { comment: [/^metalink.*repo=epel-\$releasever.*/, '#', ''] },
           { replace: [
-              %r{^#baseurl=.*basearch/?$},
-              'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
-            ],
+            %r{^#baseurl=.*basearch/?$},
+            'baseurl=https://epel.osuosl.org/$releasever/Everything/$basearch/',
+          ],
           },
         ]
       )
@@ -330,34 +330,34 @@ elsif platform_family?('debian')
       filters(
         [
           { substitute: [
-              %r{^deb http://.*ubuntu.com/ubuntu/?\s},
-              %r{http://.*ubuntu.com/ubuntu/?\s},
-              'https://ubuntu.osuosl.org/ubuntu ',
-            ],
+            %r{^deb http://.*ubuntu.com/ubuntu/?\s},
+            %r{http://.*ubuntu.com/ubuntu/?\s},
+            'https://ubuntu.osuosl.org/ubuntu ',
+          ],
           },
           { substitute: [
-              %r{^deb https://.*ubuntu.com/ubuntu/?\s},
-              %r{https://.*ubuntu.com/ubuntu/?\s},
-              'https://ubuntu.osuosl.org/ubuntu ',
-            ],
+            %r{^deb https://.*ubuntu.com/ubuntu/?\s},
+            %r{https://.*ubuntu.com/ubuntu/?\s},
+            'https://ubuntu.osuosl.org/ubuntu ',
+          ],
           },
           { substitute: [
-              %r{^deb http://ubuntu.osuosl.org/ubuntu/?\s},
-              %r{http://ubuntu.osuosl.org/ubuntu/?\s},
-              'https://ubuntu.osuosl.org/ubuntu ',
-            ],
+            %r{^deb http://ubuntu.osuosl.org/ubuntu/?\s},
+            %r{http://ubuntu.osuosl.org/ubuntu/?\s},
+            'https://ubuntu.osuosl.org/ubuntu ',
+          ],
           },
           { substitute: [
-              %r{^deb https://ubuntu.osuosl.org/ubuntu/\s},
-              %r{https://ubuntu.osuosl.org/ubuntu/\s},
-              'https://ubuntu.osuosl.org/ubuntu ',
-            ],
+            %r{^deb https://ubuntu.osuosl.org/ubuntu/\s},
+            %r{https://ubuntu.osuosl.org/ubuntu/\s},
+            'https://ubuntu.osuosl.org/ubuntu ',
+          ],
           },
           { substitute: [
-              %r{^deb http://ports.ubuntu.com/ubuntu-ports/\s},
-              %r{http://ports.ubuntu.com/ubuntu-ports/\s},
-              'http://ports.ubuntu.com/ubuntu-ports ',
-            ],
+            %r{^deb http://ports.ubuntu.com/ubuntu-ports/\s},
+            %r{http://ports.ubuntu.com/ubuntu-ports/\s},
+            'http://ports.ubuntu.com/ubuntu-ports ',
+          ],
           },
         ]
       )
@@ -369,16 +369,16 @@ elsif platform_family?('debian')
         filters(
           [
             { substitute: [
-                %r{^URIs: http://.*ubuntu.com/ubuntu/?},
-                %r{http://.*ubuntu.com/ubuntu/?},
-                'https://ubuntu.osuosl.org/ubuntu',
-              ],
+              %r{^URIs: http://.*ubuntu.com/ubuntu/?},
+              %r{http://.*ubuntu.com/ubuntu/?},
+              'https://ubuntu.osuosl.org/ubuntu',
+            ],
             },
             { substitute: [
-                %r{^URIs: https://.*ubuntu.com/ubuntu/?},
-                %r{https://.*ubuntu.com/ubuntu/?},
-                'https://ubuntu.osuosl.org/ubuntu',
-              ],
+              %r{^URIs: https://.*ubuntu.com/ubuntu/?},
+              %r{https://.*ubuntu.com/ubuntu/?},
+              'https://ubuntu.osuosl.org/ubuntu',
+            ],
             },
           ]
         )
@@ -386,10 +386,10 @@ elsif platform_family?('debian')
         filters(
           [
             { substitute: [
-                %r{^URIs: http://ports.ubuntu.com/ubuntu-ports/?},
-                %r{http://ports.ubuntu.com/ubuntu-ports/},
-                'http://ports.ubuntu.com/ubuntu-ports',
-              ],
+              %r{^URIs: http://ports.ubuntu.com/ubuntu-ports/?},
+              %r{http://ports.ubuntu.com/ubuntu-ports/},
+              'http://ports.ubuntu.com/ubuntu-ports',
+            ],
             },
           ]
         )
@@ -402,34 +402,34 @@ elsif platform_family?('debian')
       filters(
         [
           { substitute: [
-              %r{^deb https?://deb.debian.org/debian\s},
-              %r{https?://deb.debian.org/debian/?\s},
-              'https://debian.osuosl.org/debian ',
-            ],
+            %r{^deb https?://deb.debian.org/debian\s},
+            %r{https?://deb.debian.org/debian/?\s},
+            'https://debian.osuosl.org/debian ',
+          ],
           },
           { substitute: [
-              %r{^deb http://debian.osuosl.org/debian},
-              %r{http://debian.osuosl.org/debian/?\s},
-              'https://debian.osuosl.org/debian ',
-            ],
+            %r{^deb http://debian.osuosl.org/debian},
+            %r{http://debian.osuosl.org/debian/?\s},
+            'https://debian.osuosl.org/debian ',
+          ],
           },
           { substitute: [
-              %r{^deb https://debian.osuosl.org/debian},
-              %r{https://debian.osuosl.org/debian/\s},
-              'https://debian.osuosl.org/debian ',
-            ],
+            %r{^deb https://debian.osuosl.org/debian},
+            %r{https://debian.osuosl.org/debian/\s},
+            'https://debian.osuosl.org/debian ',
+          ],
           },
           { substitute: [
-              %r{^deb https?://security.debian.org/debian-security\s},
-              %r{https?://security.debian.org/debian-security/?\s},
-              'https://deb.debian.org/debian-security ',
-            ],
+            %r{^deb https?://security.debian.org/debian-security\s},
+            %r{https?://security.debian.org/debian-security/?\s},
+            'https://deb.debian.org/debian-security ',
+          ],
           },
           { substitute: [
-              %r{^deb http://deb.debian.org/debian-security\s},
-              %r{http://deb.debian.org/debian-security/?\s},
-              'https://deb.debian.org/debian-security ',
-            ],
+            %r{^deb http://deb.debian.org/debian-security\s},
+            %r{http://deb.debian.org/debian-security/?\s},
+            'https://deb.debian.org/debian-security ',
+          ],
           },
         ]
       )

@@ -2,7 +2,7 @@
 # Cookbook:: osl-unmanaged
 # Recipe:: openstack
 #
-# Copyright:: 2022-2025, Oregon State University
+# Copyright:: 2022-2026, Oregon State University
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -48,10 +48,10 @@ if platform_family?('rhel', 'fedora')
         },
         # Remove trailing white space
         { substitute: [
-            /\s$/,
-            /\s$/,
-            '',
-          ],
+          /\s$/,
+          /\s$/,
+          '',
+        ],
         },
       ]
     )
@@ -62,10 +62,10 @@ elsif platform?('ubuntu')
     filters(
       [
         { substitute: [
-            %r{primary: https?://archive.ubuntu.com/ubuntu},
-            %r{https?://archive.ubuntu.com/ubuntu/?},
-            'https://ubuntu.osuosl.org/ubuntu',
-          ],
+          %r{primary: https?://archive.ubuntu.com/ubuntu},
+          %r{https?://archive.ubuntu.com/ubuntu/?},
+          'https://ubuntu.osuosl.org/ubuntu',
+        ],
         },
       ]
     )
@@ -77,10 +77,10 @@ elsif platform?('debian')
       [
         # Remove trailing white space
         { substitute: [
-            /\s$/,
-            /\s$/,
-            '',
-          ],
+          /\s$/,
+          /\s$/,
+          '',
+        ],
         },
       ]
     )
