@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the osl-unmanaged cookbook.
 
+2.5.1 (2026-06-30)
+------------------
+- cinc: updated kitchen file
+
 2.5.0 (2023-09-12)
 ------------------
 - AlmaLinux 9
