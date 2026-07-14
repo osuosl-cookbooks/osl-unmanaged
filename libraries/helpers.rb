@@ -65,8 +65,11 @@ module OslUnmanaged
         pkgs.sort
       end
 
+      # cloud-init 24.3 replaced cloud-init.service with cloud-init-main and
+      # cloud-init-network. Debian 13+/sid and Fedora ship it; EL does not yet.
       def openstack_services
-        if platform?('debian') && (node['platform_version'].to_i >= 13 || node['platform_version'].match?(/sid/))
+        if (platform?('debian') && (node['platform_version'].to_i >= 13 || node['platform_version'].match?(/sid/))) ||
+           platform_family?('fedora')
           %w(
             cloud-config
             cloud-final
