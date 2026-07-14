@@ -152,12 +152,16 @@ module OslUnmanaged
         end
       end
 
+      # grub2-mkconfig refuses to write /boot/efi/EFI/<id>/grub.cfg once that file is
+      # a wrapper chaining to /boot/grub2/grub.cfg, which Fedora 37+ ships as well as
+      # EL10+.
       def openstack_grub_mkconfig
         if docker?
           'true'
         elsif platform_family?('debian')
           'update-grub'
-        elsif node['kernel']['machine'] == 'aarch64' && el? && node['platform_version'] >= 10
+        elsif node['kernel']['machine'] == 'aarch64' &&
+              (platform_family?('fedora') || (el? && node['platform_version'] >= 10))
           'grub2-mkconfig -o /boot/grub2/grub.cfg'
         elsif node['kernel']['machine'] == 'aarch64'
           "grub2-mkconfig -o /boot/efi/EFI/#{node['platform']}/grub.cfg"

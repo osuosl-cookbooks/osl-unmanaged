@@ -7,7 +7,9 @@ os_name = os.name
 grub_path =
   case os_family
   when 'redhat'
-    if aarch64
+    # Fedora 37+ makes /boot/efi/EFI/fedora/grub.cfg a wrapper, so the real config
+    # is the one grub2-mkconfig writes at /boot/grub2/grub.cfg.
+    if aarch64 && os_name != 'fedora'
       "/boot/efi/EFI/#{os_name}"
     else
       '/boot/grub2'
