@@ -26,6 +26,7 @@ platforms:
   - name: ubuntu-20.04
   - name: ubuntu-22.04
   - name: ubuntu-24.04
+  - name: ubuntu-26.04
 
 suites:
   - name: default

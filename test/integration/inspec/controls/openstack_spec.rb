@@ -18,7 +18,9 @@ grub_path =
     '/boot/grub'
   end
 openstack_services =
-  if (os_name == 'debian' && (os_release >= 13 || os.release.match?(/sid/))) || os_name == 'fedora'
+  if (os_name == 'debian' && (os_release >= 13 || os.release.match?(/sid/))) ||
+     (os_name == 'ubuntu' && os.release.to_f >= 26.04) ||
+     os_name == 'fedora'
     %w(
       cloud-config
       cloud-final

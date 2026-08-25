@@ -22,5 +22,6 @@ supports          'rocky', '~> 10.0'
 supports          'ubuntu', '~> 20.04'
 supports          'ubuntu', '~> 22.04'
 supports          'ubuntu', '~> 24.04'
+supports          'ubuntu', '~> 26.04'
 
 depends 'line'

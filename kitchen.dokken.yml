@@ -2,14 +2,14 @@
 driver:
   name: dokken
   privileged: true
-  chef_version: <%= ENV['CHEF_VERSION'] || '18' %>
+  chef_version: <%= ENV['CHEF_VERSION'] || '19' %>
 
 transport:
   name: dokken
 
 provisioner:
   name: dokken
-  chef_license: accept-no-persist
+  product_name: cinc
 
 platforms:
   - name: almalinux-8
@@ -86,3 +86,8 @@ platforms:
     driver:
       image: dokken/ubuntu-24.04
       pid_one_command: /bin/systemd
+
+  - name: ubuntu-26.04
+    driver:
+      image: dokken/ubuntu-26.04
+      pid_one_command: /usr/lib/systemd/systemd

@@ -61,7 +61,9 @@ when 'debian'
   end
 
   execute 'netplan apply' do
-    command 'netplan generate && netplan apply'
+    # netplan apply needs udev, which isn't running in containers, and on
+    # 26.04+ netplan errors out instead of warning when it's missing.
+    command docker? ? 'netplan generate' : 'netplan generate && netplan apply'
     action :nothing
   end
 

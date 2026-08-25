@@ -38,7 +38,7 @@ module OslUnmanaged
       end
 
       def openssh_service
-        if platform?('ubuntu') && node['platform_version'].to_f == 24.04
+        if platform?('ubuntu') && node['platform_version'].to_f >= 24.04
           'ssh'
         else
           'sshd'
@@ -66,9 +66,11 @@ module OslUnmanaged
       end
 
       # cloud-init 24.3 replaced cloud-init.service with cloud-init-main and
-      # cloud-init-network. Debian 13+/sid and Fedora ship it; EL does not yet.
+      # cloud-init-network. Debian 13+/sid, Ubuntu 26.04+ and Fedora ship it;
+      # EL does not yet, and Ubuntu <= 24.04 keeps the old unit names via SRU.
       def openstack_services
         if (platform?('debian') && (node['platform_version'].to_i >= 13 || node['platform_version'].match?(/sid/))) ||
+           (platform?('ubuntu') && node['platform_version'].to_f >= 26.04) ||
            platform_family?('fedora')
           %w(
             cloud-config
@@ -329,7 +331,7 @@ module OslUnmanaged
                 pppoeconf
                 xauth
               )
-            when '24.04'
+            when '24.04', '26.04'
               %w(
                 build-essential
                 command-not-found
