@@ -121,7 +121,7 @@ control 'repos' do
       end if release.to_f < 24
 
       describe file '/etc/apt/sources.list.d/ubuntu.sources' do
-        its('content') { should match %r{URIs: http://ports.ubuntu.com/ubuntu-ports} }
+        its('content') { should match %r{URIs: https?://ports.ubuntu.com/ubuntu-ports} }
         its('content') { should match /Suites: #{codename} #{codename}-updates #{codename}-backports/ }
         its('content') { should match /Suites: #{codename}-security/ }
         its('content') { should match /Components:.*main/ }
