@@ -20,17 +20,21 @@ control 'repos' do
     case family
     when 'debian'
       its('content') { should match /systemctl unmask apt-daily-upgrade.service apt-daily.service/ }
+      its('content') { should match /systemctl enable --now unattended-upgrades.service/ }
+      its('content') { should match /systemctl enable apt-daily.timer apt-daily-upgrade.timer/ }
       its('content') do
-        should match /systemctl enable --now unattended-upgrades.service apt-daily-upgrade.timer apt-daily-upgrade.service/
+        should match /systemd-run --on-active=30min systemctl start apt-daily.timer apt-daily-upgrade.timer/
       end
     when 'redhat'
       if release.to_i >= 8
-        its('content') { should match /systemctl enable --now dnf-automatic-install.timer/ }
+        its('content') { should match /systemctl enable dnf-automatic-install.timer/ }
+        its('content') { should match /systemd-run --on-active=30min systemctl start dnf-automatic-install.timer/ }
       else
         its('content') { should match /systemctl enable --now yum-cron.service/ }
       end
     when 'fedora'
-      its('content') { should match /systemctl enable --now dnf-automatic.timer/ }
+      its('content') { should match /systemctl enable dnf-automatic.timer/ }
+      its('content') { should match /systemd-run --on-active=30min systemctl start dnf-automatic.timer/ }
     end
   end
 
@@ -57,6 +61,14 @@ control 'repos' do
     end
 
     describe service 'apt-daily-upgrade.timer' do
+      if packer
+        it { should_not be_enabled }
+      else
+        it { should be_enabled }
+      end
+    end
+
+    describe service 'apt-daily.timer' do
       if packer
         it { should_not be_enabled }
       else

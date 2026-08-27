@@ -325,6 +325,15 @@ elsif platform_family?('debian')
     end
   end
 
+  # Enabled by default in the image; firstboot.sh delays its start 30 minutes
+  service 'apt-daily.timer' do
+    if node['osl-unmanaged']['packer']
+      action [:disable, :stop]
+    else
+      action [:enable, :stop]
+    end
+  end
+
   if platform?('ubuntu')
     filter_lines '/etc/apt/sources.list' do
       filters(
