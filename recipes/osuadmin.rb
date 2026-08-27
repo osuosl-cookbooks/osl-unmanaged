@@ -40,7 +40,7 @@ directory '/var/lib/osuadmin/.ssh' do
 end
 
 file '/etc/sudoers.d/osuadmin' do
-  content '%osuadmin ALL=(ALL) NOPASSWD: ALL'
+  content "%osuadmin ALL=(ALL) NOPASSWD: ALL\n"
 end
 
 # Setup root user initially with our keys
