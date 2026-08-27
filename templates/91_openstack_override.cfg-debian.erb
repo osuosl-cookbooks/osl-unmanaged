@@ -16,3 +16,6 @@ users:
   - default
   - name: root
     lock_passwd: true
+# Keep the installer-written apt sources instead of the cloud-init mirror search
+apt:
+  preserve_sources_list: true

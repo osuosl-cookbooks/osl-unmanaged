@@ -136,6 +136,7 @@ control 'openstack' do
       its('content') { should match /datasource_list: \[OpenStack, None\]/ }
     end
     its('content') { should match %r{metadata_urls: \['http://169.254.169.254'\]} }
+    its('content') { should match /preserve_sources_list: true/ } if os_family == 'debian'
   end
 
   openstack_services.each do |s|
