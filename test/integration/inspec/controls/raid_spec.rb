@@ -40,10 +40,20 @@ control 'raid' do
       end
     end
   elsif megacli
-    describe apt 'https://hwraid.le-vert.net/debian' do
-      it { should exist }
-      it { should be_enabled }
-    end if os_family == 'debian' && release.to_f < 24.04
+    if os_family == 'debian' && release.to_f < 24.04
+      describe apt 'https://hwraid.le-vert.net/debian' do
+        it { should exist }
+        it { should be_enabled }
+      end
+
+      describe file '/etc/apt/keyrings/hwraid.asc' do
+        its('content') { should match /BEGIN PGP PUBLIC KEY BLOCK/ }
+      end
+
+      describe file '/etc/apt/sources.list.d/hwraid.list' do
+        its('content') { should match %r{^deb \[signed-by=/etc/apt/keyrings/hwraid\.asc\] } }
+      end
+    end
 
     describe command 'megacli -v' do
       its('exit_status') { should eq 0 }

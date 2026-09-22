@@ -21,12 +21,23 @@ unless raid_pkg.empty?
   if raid_pkg.include?('megacli')
     if platform_family?('debian')
       return if platform?('ubuntu') && node['platform_version'].to_f >= 24.04
-      apt_repository 'hwraid' do
-        uri 'https://hwraid.le-vert.net/debian'
-        components %w(main)
-        distribution 'bullseye' if platform?('ubuntu') || node['platform_version'].to_i == 12
-        key %w(https://hwraid.le-vert.net/debian/hwraid.le-vert.net.gpg.key)
-        only_if { raid_pkg.include?('megacli') }
+      # Debian 13 dropped apt-key, which apt_repository uses to import repo keys
+      directory '/etc/apt/keyrings'
+
+      remote_file '/etc/apt/keyrings/hwraid.asc' do
+        source 'https://hwraid.le-vert.net/debian/hwraid.le-vert.net.gpg.key'
+        notifies :update, 'apt_update[hwraid]', :immediately
+      end
+
+      file '/etc/apt/sources.list.d/hwraid.list' do
+        content 'deb [signed-by=/etc/apt/keyrings/hwraid.asc] ' \
+                "https://hwraid.le-vert.net/debian #{hwraid_distribution} main\n"
+        notifies :update, 'apt_update[hwraid]', :immediately
+      end
+
+      apt_update 'hwraid' do
+        ignore_failure true
+        action :nothing
       end
     elsif platform_family?('rhel', 'fedora')
       remote_file "#{Chef::Config[:file_cache_path]}/megacli.zip" do

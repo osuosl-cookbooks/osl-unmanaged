@@ -43,6 +43,22 @@ control 'rsct' do
       it { should exist }
       it { should be_enabled }
     end
+
+    describe file '/etc/apt/keyrings/ibmpackages-rsct.asc' do
+      its('content') { should match /BEGIN PGP PUBLIC KEY BLOCK/ }
+    end
+
+    describe file '/etc/apt/sources.list.d/IBM_Power_Tools.list' do
+      its('content') { should match %r{^deb \[signed-by=/etc/apt/keyrings/ibmpackages-rsct\.asc\] } }
+    end
+
+    # Debian's sqv policy rejects the PPA's SHA-1-bound key, so only Ubuntu can
+    # verify this repo
+    describe command('apt-get update -o Dir::Etc::sourcelist=/etc/apt/sources.list.d/IBM_Power_Tools.list ' \
+                     '-o Dir::Etc::sourceparts=/dev/null -o APT::Get::List-Cleanup=0') do
+      its('exit_status') { should eq 0 }
+      its('stderr') { should_not match /NO_PUBKEY|not signed/ }
+    end if os.name == 'ubuntu'
   end
 
   describe command 'lssrc -a' do

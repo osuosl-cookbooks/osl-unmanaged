@@ -46,9 +46,24 @@ if platform_family?('rhel', 'fedora')
     package 'DynamicRM'
   end
 else
-  apt_repository 'IBM_Power_Tools' do
-    uri 'ppa:ibmpackages/rsct'
-    distribution 'focal' if platform?('debian')
+  # Ubuntu 26.04 and Debian 13 dropped apt-key, which apt_repository uses to
+  # import PPA keys
+  directory '/etc/apt/keyrings'
+
+  cookbook_file '/etc/apt/keyrings/ibmpackages-rsct.asc' do
+    notifies :update, 'apt_update[IBM_Power_Tools]', :immediately
+  end
+
+  file '/etc/apt/sources.list.d/IBM_Power_Tools.list' do
+    content 'deb [signed-by=/etc/apt/keyrings/ibmpackages-rsct.asc] ' \
+            "http://ppa.launchpad.net/ibmpackages/rsct/ubuntu #{ibm_ppa_distribution} main\n"
+    notifies :update, 'apt_update[IBM_Power_Tools]', :immediately
+  end
+
+  # Debian 13's sqv policy rejects the PPA's SHA-1-bound signing key
+  apt_update 'IBM_Power_Tools' do
+    ignore_failure true
+    action :nothing
   end
 
   if ppc64le?

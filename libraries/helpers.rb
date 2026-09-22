@@ -115,6 +115,10 @@ module OslUnmanaged
         end
       end
 
+      def ibm_ppa_distribution
+        platform?('debian') ? 'focal' : node['lsb']['codename']
+      end
+
       def ibm_pkgs
         # https://www.ibm.com/docs/en/rsct/3.3?topic=installation-verifying-linux-nodes
         if platform_family?('rhel', 'fedora')
@@ -385,6 +389,14 @@ module OslUnmanaged
         pkgs << 'megacli' if node['kernel']['modules'].key?('megaraid_sas')
         pkgs << 'mdadm' if node.key?('mdadm')
         pkgs
+      end
+
+      def hwraid_distribution
+        if platform?('ubuntu') || node['platform_version'].to_i == 12
+          'bullseye'
+        else
+          node['lsb']['codename']
+        end
       end
 
       def mdadm_conf
