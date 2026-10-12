@@ -70,6 +70,14 @@ Note that Debian 13 rejects the `ibmpackages/rsct` signing key: its `sqv` policy
 refuses the SHA-1 binding signature on that 2015 Launchpad key, so the
 repository is written but cannot be verified there.
 
+### IBM Power Tools signing keys
+
+On the RHEL family the `rsct` recipe uses the keys `ibm-power-repo` installs
+under `/opt/ibm/lop/gpg`. IBM signs its RHEL 8 and 9 repositories with the
+legacy `RPM-GPG-KEY-ibm-power` and its RHEL 10 repository with
+`RPM-GPG-KEY-ibm-power-v2`. EL10 cannot import the legacy key at all, because
+its rpm policy rejects SHA-1 binding signatures.
+
 ## Contributing
 
 1. Fork the repository on Github

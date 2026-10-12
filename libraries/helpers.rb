@@ -115,6 +115,15 @@ module OslUnmanaged
         end
       end
 
+      def ibm_yum_gpgkey
+        # IBM signs the RHEL 10 repo with the v2 key; EL10 rejects the SHA-1 bound legacy key
+        if platform_family?('rhel') && node['platform_version'].to_i >= 10
+          'file:///opt/ibm/lop/gpg/RPM-GPG-KEY-ibm-power-v2'
+        else
+          'file:///opt/ibm/lop/gpg/RPM-GPG-KEY-ibm-power'
+        end
+      end
+
       def ibm_ppa_distribution
         platform?('debian') ? 'focal' : node['lsb']['codename']
       end

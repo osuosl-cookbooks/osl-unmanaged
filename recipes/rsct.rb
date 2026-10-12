@@ -36,7 +36,7 @@ if platform_family?('rhel', 'fedora')
 
   yum_repository 'IBM_Power_Tools' do
     baseurl ibm_yum_repo_url
-    gpgkey 'file:///opt/ibm/lop/gpg/RPM-GPG-KEY-ibm-power'
+    gpgkey ibm_yum_gpgkey
   end
 
   if ppc64le?

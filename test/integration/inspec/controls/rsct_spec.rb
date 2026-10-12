@@ -24,8 +24,13 @@ control 'rsct' do
       if family == 'fedora'
         its('baseurl') { should cmp "https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/Fedora/#{arch}" }
       else
-        its('baseurl') { should cmp "https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/RHEL/8/#{arch}" }
+        its('baseurl') { should cmp "https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/RHEL/#{os.release.to_i}/#{arch}" }
       end
+    end
+
+    gpgkey = family == 'redhat' && os.release.to_i >= 10 ? 'RPM-GPG-KEY-ibm-power-v2' : 'RPM-GPG-KEY-ibm-power'
+    describe file '/etc/yum.repos.d/IBM_Power_Tools.repo' do
+      its('content') { should match %r{^gpgkey=file:///opt/ibm/lop/gpg/#{gpgkey}$} }
     end
   when 'debian'
     %w(

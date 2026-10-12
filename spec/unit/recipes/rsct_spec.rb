@@ -59,8 +59,38 @@ describe 'osl-unmanaged::rsct' do
     cached(:chef_run) { ChefSpec::SoloRunner.new(platform: 'almalinux', version: '9').converge(described_recipe) }
 
     it 'creates the yum repository and leaves apt alone' do
-      expect(chef_run).to create_yum_repository('IBM_Power_Tools')
+      expect(chef_run).to create_yum_repository('IBM_Power_Tools').with(
+        baseurl: 'https://public.dhe.ibm.com/software/server/POWER/Linux/yum/OSS/RHEL/$releasever/$basearch',
+        gpgkey: 'file:///opt/ibm/lop/gpg/RPM-GPG-KEY-ibm-power'
+      )
       expect(chef_run).to_not create_file('/etc/apt/sources.list.d/IBM_Power_Tools.list')
+    end
+
+    it 'does not install packages on a non-ppc64le node' do
+      expect(chef_run).to_not install_package(%w(rsct.basic rsct.core src))
+    end
+  end
+
+  context 'almalinux 10' do
+    cached(:chef_run) { ChefSpec::SoloRunner.new(platform: 'almalinux', version: '10').converge(described_recipe) }
+
+    it 'trusts the v2 signing key' do
+      expect(chef_run).to create_yum_repository('IBM_Power_Tools').with(
+        gpgkey: 'file:///opt/ibm/lop/gpg/RPM-GPG-KEY-ibm-power-v2'
+      )
+    end
+  end
+
+  context 'almalinux 10 on ppc64le' do
+    cached(:chef_run) do
+      ChefSpec::SoloRunner.new(platform: 'almalinux', version: '10') do |node|
+        node.automatic['kernel']['machine'] = 'ppc64le'
+      end.converge(described_recipe)
+    end
+
+    it 'installs the rsct packages, then DynamicRM' do
+      expect(chef_run).to install_package(%w(rsct.basic rsct.core src))
+      expect(chef_run).to install_package('DynamicRM')
     end
   end
 end
